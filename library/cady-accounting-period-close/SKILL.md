@@ -1,19 +1,19 @@
 ---
 name: "cady-accounting-period-close"
-description: "Month-end and period close. Use when: Run a month, quarter or year-end close checklist in the company's own ledger and hand exceptions to its bookkeeper. Not for: Preparing a tax return (use `cady-finance-tax-cycle`), budgets or runway, posting entries or locking the ledger without its owner, or audit sign-off."
+description: "Month-end and period close. Use when: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper. Not for: Preparing a tax return (use `cady-finance-tax-cycle`), budgets or runway, posting entries or locking the ledger without its owner, or audit sign-off."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.accounting.period_close"
-  version: "ba0077c91b7ff193dbff3c98d8ed6bfaaa38b57f92e786dc58faba6b5cde3a11"
-  library: "3beca7fa80e90672"
+  version: "94f4b64433838e36907b99e99b89d03b4d0264932982b2ccb59b9f318470aa19"
+  library: "fed32b12fc15ae44"
   function: "accounting"
 ---
 # Month-end and period close
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "ba0077c91b7ff193dbff3c98d8ed6bfaaa38b57f92e786dc58faba6b5cde3a11"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "94f4b64433838e36907b99e99b89d03b4d0264932982b2ccb59b9f318470aa19"}})`
 
-Run a month, quarter or year-end close checklist in the company's own ledger and hand exceptions to its bookkeeper.
+Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
 
 **Not for:** Preparing a tax return (use `cady-finance-tax-cycle`), budgets or runway, posting entries or locking the ledger without its owner, or audit sign-off.
 

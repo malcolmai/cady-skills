@@ -1,21 +1,21 @@
 ---
 name: "cady-gtm-reply"
-description: "Reply in a live thread. Use when: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop. Not for: First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups (use `cady-gtm-warm-email`)."
+description: "Reply in a live thread. Use when: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop. Not for: First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups to someone who has not replied (email: `cady-gtm-warm-email`; LinkedIn: `cady-gtm-linkedin-message`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "967274eacfebba9b3d4e7275710f1dfbe11d19e8e84dd7657a5b20a1b399b489"
-  library: "3beca7fa80e90672"
+  version: "54cda1e65b37b561c35201ef2fc30893e33582ec5439a5d95e5cc71e84e2dc6f"
+  library: "fed32b12fc15ae44"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "967274eacfebba9b3d4e7275710f1dfbe11d19e8e84dd7657a5b20a1b399b489"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "54cda1e65b37b561c35201ef2fc30893e33582ec5439a5d95e5cc71e84e2dc6f"}})`
 
 Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop.
 
-**Not for:** First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups (use `cady-gtm-warm-email`).
+**Not for:** First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups to someone who has not replied (email: `cady-gtm-warm-email`; LinkedIn: `cady-gtm-linkedin-message`).
 
 **Unit of work:** one work item per thread. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
@@ -38,14 +38,14 @@ Answer an inbound reply in a live email or LinkedIn thread: a question, interest
 ## Procedure
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
-2. Scan replies with crm.list_parties mode interactions; read the thread with crm.find_communications and crm.get_communication, then crm.get_party. Exclude and explain anything the permission rules block.
+2. Find new replies with the outcome check (message rules, outcome_check); read the thread with crm.find_communications and crm.get_communication, then crm.get_party. Exclude and explain anything the permission rules block.
 3. Triage the newest inbound message before drafting anything. Pick one class; when several apply, stop wins, then wrong person, then objection over positive. File it with crm.record_interactions (sourceRef the provider message id) if outcome_check has not.
 
 | Class | Next action | Timing | Permission effect |
 |---|---|---|---|
 | Positive or question | Answer exactly what was asked. Offer one dated next step only if they signalled one ("happy to talk", "send times"). | Same business day, ideally within a few hours | Recorded reply makes the party engaged and holds follow-ups; set no stage the user has not stated; a party with no track needs motion customer and a user-stated stage before any crm.set_track |
 | Objection | Answer it with the objection step below; one question at most. | Within one business day | None |
-| Referral ("talk to X") | Thank them in one line; ask whether they will introduce you or you may mention them. | Same day | X is a new party with no permission of their own: cold rules apply unless the referrer introduces you in a thread (kind intro) |
+| Referral ("talk to X") | Thank them in one line; ask whether they will introduce you (double opt-in, `../../references/intro-request.md`) or you may mention them. | Same day | X is a new party with no permission of their own: cold rules apply unless the referrer introduces you in a thread (kind intro) |
 | Not now | One short line acknowledging it; no pitch, no "just in case" material. | Once, then hold | crm.set_track outcome paused, recontact on their date, else '3m' |
 | No or not a fit | Optional one-line thanks if they wrote more than a word; no rebuttal. | Once or not at all | crm.set_track outcome disqualified with outcomeReason, recontact 'unless_changed' |
 | Out of office or auto-reply | Send nothing. Note any return date; a named alternative contact is a referral. | No reply | File as kind note, not reply: it is not engagement and does not hold the follow-up |
@@ -57,6 +57,7 @@ Answer an inbound reply in a live email or LinkedIn thread: a question, interest
 
 ## Acceptance
 
+- [ ] a positive reply or question is answered the same business day; an objection within one business day
 - [ ] the reply class, its next action and any permission effect are stated for this thread
 - [ ] a stop request or auto-reply gets no reply; a stop is filed as opt_out
 - [ ] one review prepared and readable for this thread

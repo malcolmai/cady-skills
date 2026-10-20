@@ -1,19 +1,6 @@
----
-name: "cady-gtm-content-production"
-description: "Text content craft. Create, edit or review public written content. Use when: the user needs a post (LinkedIn, X or blog), article, script, caption or website copy. Not for: a direct message to one person (use `cady-gtm-linkedin-message`), visual design (use `cady-design-method`) or other outreach."
-license: "MPL-2.0"
-compatibility: "Requires Cady (app.cadyworks.com/mcp)"
-metadata:
-  cady-id: "execution.topic.content_production"
-  version: "b81e524e2b7aaceb11d899d2663d88a9b9ea2fac5549aa5eccd6075bc38fd488"
-  library: "3beca7fa80e90672"
-  function: "gtm"
----
 # Text content craft
 
-**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.content_production": "b81e524e2b7aaceb11d899d2663d88a9b9ea2fac5549aa5eccd6075bc38fd488"}})`
-
-Create, edit or review public written content. Use when: the user needs a post (LinkedIn, X or blog), article, script, caption or website copy. Not for: a direct message to one person (use `cady-gtm-linkedin-message`), visual design (use `cady-design-method`) or other outreach.
+Create, edit or review public written content.
 
 ## Content production
 

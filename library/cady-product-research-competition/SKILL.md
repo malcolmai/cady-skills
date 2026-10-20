@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_competition"
-  version: "d3767019ce69c14bd864bcbc197fa130893bba586b8a32590cc1f94ae5b325d6"
-  library: "3beca7fa80e90672"
+  version: "70a7efc5ddf2c77958ee744ecda3a8d376cb14488c4e0795fcee39f1605e8599"
+  library: "fed32b12fc15ae44"
   function: "product"
 ---
 # Competition research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_competition": "d3767019ce69c14bd864bcbc197fa130893bba586b8a32590cc1f94ae5b325d6"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_competition": "70a7efc5ddf2c77958ee744ecda3a8d376cb14488c4e0795fcee39f1605e8599"}})`
 
 Find who the competitors and alternatives are and how they price, position and win, for a product or pricing question.
 
@@ -37,7 +37,7 @@ Find who the competitors and alternatives are and how they price, position and w
 
 1. Apply `cady-product-research-shared`. Define the customer, buying/use circumstance, job and boundary of the comparison; name the dimension being examined, such as workflow, capability, price, distribution or switching cost.
 2. Identify actual alternatives available in that circumstance: named competitors where evidenced, adjacent substitutes, internal/manual workarounds, and doing nothing or staying put. A company is an alternative only when customers can plausibly choose it for the scoped job.
-3. Compare like with like on dated evidence. Prefer observed customer behavior, current product/pricing documentation, filings, direct tests and credible independent sources. Record geography, segment, plan/version and date where they affect comparability. Separate observed fact from vendor positioning and your inference.
+3. Compare like with like on dated evidence. Prefer observed customer behavior, current product/pricing documentation, filings, direct tests and credible independent sources. Record geography, segment, plan/version and date where they affect comparability. Separate observed fact from vendor positioning and your inference. For alternatives, profile depth, provenance, retrieval and keeping the result current, follow the competitor profile (`../../references/competitor-profile.md`).
 4. Include evidence against the leading interpretation: cases where an alternative is not chosen, performs differently, or serves another segment; expose unknowns and source gaps. Do not infer preference from feature counts, web visibility, or market share alone.
 5. Close with what the evidence could imply for this product's positioning, differentiation, parity or exposure, and which uncertainty matters next. Keep strategic implications conditional and attributable; the owner makes the decision.
 
@@ -63,4 +63,5 @@ Find who the competitors and alternatives are and how they price, position and w
 - **Transition:** verified updated or newly scoped library piece
 
 ## References
+- [Competitor profile](../../references/competitor-profile.md)
 - Apply `cady-product-research-shared` (`../cady-product-research-shared/SKILL.md`).

@@ -1,21 +1,21 @@
 ---
 name: "cady-engineering-debugging"
-description: "Debugging and incident response. Use when: Find and fix the root cause of a bug, failing check or production incident, from reproduction to regression test. Not for: Rating severity or triaging a flaky test (use `cady-qa-triage`), reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`)."
+description: "Debugging and incident response. Use when: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. Not for: Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
-  version: "5310ae8c5a70e1e6802f922b9d6c7be2c44c0af3ae68fd3293faea646497dbc7"
-  library: "3beca7fa80e90672"
+  version: "7da4c496a679b29deb40ec105cd57644f02fb77ca7b8c6787cc8e683f5f05928"
+  library: "fed32b12fc15ae44"
   function: "engineering"
 ---
 # Debugging and incident response
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "5310ae8c5a70e1e6802f922b9d6c7be2c44c0af3ae68fd3293faea646497dbc7"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "7da4c496a679b29deb40ec105cd57644f02fb77ca7b8c6787cc8e683f5f05928"}})`
 
-Find and fix the root cause of a bug, failing check or production incident, from reproduction to regression test.
+Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 
-**Not for:** Rating severity or triaging a flaky test (use `cady-qa-triage`), reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`).
+**Not for:** Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`).
 
 **Unit of work:** one failure or incident, from first signal to verified fix. **Kind:** execution. **Parallel:** no. **Can release:** no. 
 

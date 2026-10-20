@@ -1,21 +1,21 @@
 ---
 name: "cady-finance-budget-review"
-description: "Budget and cash review. Use when: Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations. Not for: Burn and runway questions (use `cady-finance-runway`), posting ledger entries, reserving money or authorizing payment; use `cady-accounting-method` for close work."
+description: "Budget and cash review. Use when: Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations. Not for: Burn, runway and when to cut, posting ledger entries, reserving money or authorizing payment; use `cady-accounting-method` for close work."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "ce45993e9bb20afb089e63e904ddc69f0561d36199478b9fbc752bf63bb37067"
-  library: "3beca7fa80e90672"
+  version: "6617a005fb5c440f6722dd94f264a15a559f8bb9bec1c47cc808380f69694e87"
+  library: "fed32b12fc15ae44"
   function: "finance"
 ---
 # Budget and cash review
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "ce45993e9bb20afb089e63e904ddc69f0561d36199478b9fbc752bf63bb37067"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "6617a005fb5c440f6722dd94f264a15a559f8bb9bec1c47cc808380f69694e87"}})`
 
 Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations.
 
-**Not for:** Burn and runway questions (use `cady-finance-runway`), posting ledger entries, reserving money or authorizing payment; use `cady-accounting-method` for close work.
+**Not for:** Burn, runway and when to cut, posting ledger entries, reserving money or authorizing payment; use `cady-accounting-method` for close work.
 
 **Unit of work:** one decision horizon and current Finance plan. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
 

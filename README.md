@@ -22,7 +22,7 @@ Run your whole company across Claude and ChatGPT. These are the skills your agen
 
 Cady is your agent orchestrator. Connect your Claude, ChatGPT, Gemini or Grok account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
 
-This repository is Cady's **method library**: 63 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
+This repository is Cady's **method library**: 61 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
 
 ## How it works
 
@@ -32,32 +32,33 @@ This repository is Cady's **method library**: 63 skills for running a company, f
 
 ## Quick start
 
+This library is a best-practice baseline that your company **forks**. Your orchestrator agent edits the fork with your company's own reasoning; Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.
+
+1. **Fork** `malcolmai/cady-skills` into your organisation on GitHub (private is fine), or copy a release into a repository or folder of your own.
+2. **Record the baseline**: the release tag you started from. Every `SKILL.md` names it in `metadata.library`; also write it to a `BASELINE` file at the root of the fork.
+3. **Point the front door at your fork**: in `plugins/cady/skills/cady/SKILL.md`, set the `Library source:` line to your fork's raw URL and branch, for example `https://raw.githubusercontent.com/<your-org>/<your-fork>/main/`.
+4. **Install from your fork**, then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
+
 **Claude Code**
 
 ```bash
-claude plugin marketplace add malcolmai/cady-skills
+claude plugin marketplace add <your-org>/<your-fork>
 claude plugin install cady@cady
 ```
 
-The plugin adds the Cady MCP server and one skill; it loads library skills from this repository by URL at the plugin's release tag.
+The plugin adds the Cady MCP server and one skill; that skill loads library skills from the `Library source:` you set.
 
 **Codex**
 
 ```bash
-git clone https://github.com/malcolmai/cady-skills
+git clone https://github.com/<your-org>/<your-fork> cady-skills
 mkdir -p .agents/skills/cady && cp -R cady-skills/plugins/cady/skills/cady/. cady-skills/library cady-skills/references .agents/skills/cady/
 codex mcp add cady --url https://app.cadyworks.com/mcp && codex mcp login cady
 ```
 
 **claude.ai**
 
-Upload `cady.zip` from the [latest release](https://github.com/malcolmai/cady-skills/releases) as a skill, then add Cady as a custom connector: Settings > Connectors > Add custom connector, URL `https://app.cadyworks.com/mcp`.
-
-**Any host with web access**
-
-Read the index at `https://raw.githubusercontent.com/malcolmai/cady-skills/<tag>/INDEX.md` and fetch `library/<name>/SKILL.md` at the same tag.
-
-Then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
+Build the skill zip from your fork (`cady/` holding the front door with `library/` and `references/` beside it, the shape of the release's `cady.zip`) and upload it as a skill, then add Cady as a custom connector: Settings > Connectors > Add custom connector, URL `https://app.cadyworks.com/mcp`. An unedited fork can upload `cady.zip` from its baseline release.
 
 ## What's inside
 
@@ -66,14 +67,34 @@ Then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in y
 | [`INDEX.md`](INDEX.md) | Every skill with one line on when to use it and its path |
 | `library/` | The skills: function role cards, task skills and run guides |
 | `references/` | Shared references several skills load on demand |
-| `plugins/cady/` | The Claude Code plugin: the Cady MCP server and one skill that loads the library by URL at this tag |
+| `plugins/cady/` | The Claude Code plugin: the Cady MCP server and one skill that loads the library from its `Library source:` |
 | `.claude-plugin/marketplace.json` | The marketplace entry that installs `plugins/cady` |
 | [`examples/`](examples/README.md) | Three example agents (GTM, finance, orchestrator), each preloading its role's method |
+| [`CHANGELOG.md`](CHANGELOG.md) | What changed in each release; the monthly upstream check reads it |
 | `manifest.json` | The library version and each skill's version |
 
-## Updating
+## Edit your fork
 
-Updates are manual and optional, led by your orchestrator agent or by you. Each skill records the library version it came from in `metadata.library`. Compare it with the tag in the library index URL the Cady MCP server instructions give; if they give none, use the [latest release](https://github.com/malcolmai/cady-skills/releases/latest). If they differ, update when it helps: `claude plugin update cady@cady`, re-copy the folders for Codex, or re-upload the zip for claude.ai. An older version keeps working.
+Your orchestrator edits skills in the fork when your company's evidence says a method should differ: one commit per change, with the reason in the message. Keep company facts (names, prices, people, decisions) in Cady, not in a skill: methods come from skills, and context is company state.
+
+## Merge upstream once a month
+
+Once a month your orchestrator checks upstream by hand:
+
+```bash
+git remote add upstream https://github.com/malcolmai/cady-skills   # once
+git fetch upstream --tags
+git diff "$(cat BASELINE)" <latest-tag> --stat                     # what upstream changed since your baseline
+git merge <latest-tag>                                              # resolve conflicts, keeping your deliberate edits
+echo <latest-tag> > BASELINE
+```
+
+1. Compare `BASELINE` with the [latest release](https://github.com/malcolmai/cady-skills/releases/latest). If they match, there is nothing to do.
+2. Read the [CHANGELOG.md](CHANGELOG.md) entries after your baseline: which skills are new, dropped or changed, and which parts changed.
+3. Merge what helps. Where upstream changed a part you edited on purpose, keep your version or combine them, and say why in the merge commit. Skipping a release is a valid choice.
+4. Update `BASELINE`, reinstall from your fork, and record the decision (taken, partly taken or skipped, and why) in Cady as a decision item.
+
+There is no auto-merge and no plugin auto-update: a fork only changes when your orchestrator merges.
 
 ## Privacy and security
 
@@ -85,7 +106,7 @@ Updates are manual and optional, led by your orchestrator agent or by you. Each 
 
 ## Contributing
 
-Pull requests are welcome. Edit the skill under `library/` and say what it improves; see [CONTRIBUTING.md](CONTRIBUTING.md). The files are generated from Cady's method source, so maintainers carry accepted changes upstream and credit you.
+Improvements that would help every company are welcome upstream: open a pull request from your fork; see [CONTRIBUTING.md](CONTRIBUTING.md). Company-specific choices stay in your fork.
 
 ## License
 

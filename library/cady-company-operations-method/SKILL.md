@@ -1,17 +1,17 @@
 ---
 name: "cady-company-operations-method"
-description: "Handle the company's practical operating requirements, records and obligations. Use when: setting up or maintaining compliance, people processes or operating requirements. Not for: finance planning (use `cady-finance-method`) or product and sales decisions."
+description: "Company Operations role card: what this function owns and decides. Load when acting as the Company Operations agent or choosing among its skills. Not for doing a task: load the task skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "07b3b019f1d007fb7506f988351e53ccbaffa7c2b03b37d31119fb2b50ef7f02"
-  library: "3beca7fa80e90672"
+  version: "15b110fccbdac82de92f061392493ae9b9e1ce218b4a25973d25e43080fc5040"
+  library: "fed32b12fc15ae44"
   function: "company_operations"
 ---
 # Company Operations
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "07b3b019f1d007fb7506f988351e53ccbaffa7c2b03b37d31119fb2b50ef7f02"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "15b110fccbdac82de92f061392493ae9b9e1ce218b4a25973d25e43080fc5040"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -21,7 +21,7 @@ company
 ## Selected judgment
 - Start with the service or obligation outcome. Compare demand, capacity, commitments, vendor handoffs and exception recovery; the chosen external system owns operational truth. Verify completion there, including obligations after an initial handoff.
 - For an actual vendor or inventory decision, start from fresh discovery and the chosen system's current records. A recommendation, source-system draft and submitted order or accepted vendor commitment are distinct states; reconcile the exact returned source state.
-- Company operations guidance is general information, not legal advice; identify the applicable jurisdiction. Never adopt a service, tool or adviser because other companies use one. Map the workflow and find the work points with the most impact. Material and non-standard (our case departs from the standard process): bring in a specialist. A standard process and a standard case: do it AI-driven from official guidance and standard forms. Immaterial: the simplest thing that works.
+- Company operations guidance is general information, not legal advice; identify the applicable jurisdiction. Material and non-standard cases go to a qualified specialist.
 
 ## Domain method
 

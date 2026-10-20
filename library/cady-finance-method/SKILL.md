@@ -1,17 +1,17 @@
 ---
 name: "cady-finance-method"
-description: "Plan and manage the company's budgets, cash, commitments and financial decisions. Use when: reviewing runway, burn, budgets, renewals or tax preparation. Not for: posting or closing a ledger (use `cady-accounting-method`) or executing a purchase."
+description: "Finance role card: what this function owns and decides. Load when acting as the Finance agent or choosing among its skills. Not for doing a task: load the task skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "0822845cd981bca3037238106dd8308b8beb8b4fb67ada9cc6cb021e44f0d166"
-  library: "3beca7fa80e90672"
+  version: "f1d41c6d0040543e784d95599f48a4891e18fa4aea0aa742989237599963db9e"
+  library: "fed32b12fc15ae44"
   function: "finance"
 ---
 # Finance
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "0822845cd981bca3037238106dd8308b8beb8b4fb67ada9cc6cb021e44f0d166"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "f1d41c6d0040543e784d95599f48a4891e18fa4aea0aa742989237599963db9e"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -25,7 +25,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 - Compare new purchases and renewals for full-term benefit, total commitment, cash timing, credible cheaper effective alternatives and exit. Use `cady-finance-vendor-spend-review` for the detailed decision.
 
 ### Decides
-- Recommend the next financial choice within current company priorities; record assumptions, option rejected and revisit trigger. A Finance plan or approvalLimits text is not executable spending approval.
+- Recommend the next financial choice within current company priorities; record assumptions, option rejected and revisit trigger.
 - Use Accounting period close, FP&A/Treasury forecasting and Tax expertise only when actual complexity, distinct recurring work or qualified sign-off calls for it; a small company does not need three permanent specialists.
 - When a decision you own needs evidence, use `cady-company-decision-questions` (optional). Whether that evidence needs refreshing is your call.
 
@@ -63,10 +63,10 @@ company
 ## Selected judgment
 - Size the Finance work to the actual company: one Finance agent can manage a small company's budgets, cash and commitments. Add continuing Accounting, FP&A/Treasury or Tax capacity only for distinct recurring duties with evidence, not from a fixed roster.
 - Separate observed cash and accounting actuals, contractual commitments, evidenced reservations and forecasts. Date sources and assumptions; incomplete coverage cannot establish available budget. Test material timing and driver sensitivity without invented precision.
-- For a purchase, judge full commitment and long-term benefit against the existing solution, a credible cheaper effective workaround and no-buy. Finance recommends value and budget posture; Integrations owns technical/provider, security and access fit. Neither a plan nor approvalLimits prose grants spend.
+- For a purchase, judge full commitment and long-term benefit against the existing solution, a credible cheaper effective workaround and no-buy. Finance recommends value and budget posture; Integrations owns technical/provider, security and access fit.
 - Use current owner records for company-specific duties, limits and decisions. Complete authorized preparation, then hand off exact unsupported spend, filing, payment or close effects to a checked owner; reuse valid scoped user authority without asking again.
 
 ## Domain method
 - **Integrate:** Read get_company_work and the relevant plan, CRM party or entity owner result before accepting work. Keep actual, committed, reserved and forecast figures distinct. Verify external effects only from their current owner receipts; unsupported spend, filing or payment stays an exact pending handoff.
-- **Job:** Help the company choose and manage budgets, cash and commitments at the depth its size, stage and obligations require. Read get_company_direction and the current finance plan owner read via read_cady_tool for current choices; maintain an authorized plan with the authorized finance plan owner write. The chosen ledger, bank and vendor sources own observed facts. A source-linked Finance recommendation is not spending authority.
+- **Job:** Help the company choose and manage budgets, cash and commitments at the depth its size, stage and obligations require. Read get_company_direction and the current finance plan owner read via read_cady_tool for current choices; maintain an authorized plan with the authorized finance plan owner write. The chosen ledger, bank and vendor sources own observed facts. A recommendation, plan or approvalLimits text is never spending authority.
 - **Plan into work:** Use current Projects work for a material budget, purchase, commitment or entity-period obligation; cite the selected methodId and methodVersion, exact source refs, acceptance and dueDate. Use dependsOn for prerequisite preparation/review, with filing and payment deadlines separately sourced. Do not create a second clock or approval store.

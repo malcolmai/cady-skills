@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "fe98112016280a13c3866f20a9e908942755e3963e9ab491bfefb80d2a6386a5"
-  library: "3beca7fa80e90672"
+  version: "977161b6b7a6540b32e71215bab222392c9b708f19de285c28a3ede835faca28"
+  library: "fed32b12fc15ae44"
   function: "product"
 ---
 # Customer discovery interviews
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "fe98112016280a13c3866f20a9e908942755e3963e9ab491bfefb80d2a6386a5"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "977161b6b7a6540b32e71215bab222392c9b708f19de285c28a3ede835faca28"}})`
 
 Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 
@@ -29,7 +29,7 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 ## Procedure
 
 1. Start from the decision. Name the question or hypothesis item it serves (`cady-company-decision-questions`) and write the two or three things you must learn and which answers would change the decision. Without that, do not schedule interviews.
-2. Recruit people who had the problem recently and acted on it, not friends, fans or people who only fit a profile. Five to eight per segment usually show the pattern; stop when new interviews stop changing it. Requests to talk are outreach and go through its checks.
+2. Recruit people who had the problem recently and acted on it, not friends, fans or people who only fit a profile. Five to eight per segment usually show the pattern; stop when new interviews stop changing it. Requests to talk are outreach: an engaged contact through `cady-gtm-warm-email`, a LinkedIn connection through `cady-gtm-linkedin-message`, an introduction as `../../references/intro-request.md` says, and a cold person only in a cold cycle whose template is a plain research ask (the topic, about 20 minutes, no pitch).
 3. Ask about specific past behaviour. 'Tell me about the last time you...', 'What did you do next?', 'What did you try before that?', 'What did it cost you in time or money?', 'Who else was involved?', 'Why then?'. Ask to be shown the spreadsheet, workaround or tool they use. Let silences run.
 4. Do not ask hypotheticals ('would you use', 'would you pay'), leading questions ('isn't X frustrating?'), yes or no questions, or for their solution. Do not pitch: describing your idea turns the rest of the interview into politeness. Spend the interview mostly listening.
 5. Steer away from bad data. A compliment carries no information; move on. A generalisation ('I always', 'usually') gets 'when was the last time?'. A feature request gets 'what would that let you do?' and 'how do you handle it today?'. An opinion on price is tested by behaviour, never taken as demand.
@@ -57,3 +57,6 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the decision owner reads the synthesis against the question it serves
+
+## References
+- [Introduction request](../../references/intro-request.md)

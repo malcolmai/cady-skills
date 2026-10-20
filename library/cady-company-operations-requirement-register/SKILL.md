@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
-  version: "8efff1955c090b410e992b43ce3e7f7c7615c1f5e72fa7bca4b26d36c234e25e"
-  library: "3beca7fa80e90672"
+  version: "9ffa7fd20e94980d87897ff6dd5e2b30b2c3f95282fd310b6ae5fe3222213ef5"
+  library: "fed32b12fc15ae44"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "8efff1955c090b410e992b43ce3e7f7c7615c1f5e72fa7bca4b26d36c234e25e"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "9ffa7fd20e94980d87897ff6dd5e2b30b2c3f95282fd310b6ae5fe3222213ef5"}})`
 
 Research, independently check and record one compliance requirement as a Cady Projects decision.
 

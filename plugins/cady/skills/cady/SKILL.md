@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "3beca7fa80e9067229e5f39f420401ec770c71e93d4799dd0fd7ce05ce9d0963"
-  library: "3beca7fa80e90672"
+  version: "fed32b12fc15ae4412df015efbfca72718ccafab53b6cb9d387b2137b6bb437d"
+  library: "fed32b12fc15ae44"
   function: "core"
 ---
 # Cady
@@ -48,12 +48,15 @@ Then follow cady-core-run-sequence.
 
 Use installed skills when you have them: Codex, claude.ai and other copied installs keep `library/` and `references/` inside this skill's folder, so read `library/<name>/SKILL.md` relative to this file, then any reference it links.
 
-Otherwise (for example the Claude Code plugin) fetch from the index at this release tag (`3beca7fa80e90672`): `https://raw.githubusercontent.com/malcolmai/cady-skills/3beca7fa80e90672/INDEX.md` lists each skill with its path; fetch `library/<name>/SKILL.md` and the references it links from the same tag.
+Otherwise (for example the Claude Code plugin) fetch from the library source below: `INDEX.md` there lists each skill with its path; fetch `library/<name>/SKILL.md` and the references it links from the same source.
 
-## Updates
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/fed32b12fc15ae44/
 
-Updates are manual and led by your orchestrator (or you): `claude plugin update cady@cady`; re-copy the folders for Codex or re-upload the zip for claude.ai.
-Recency is one field: compare `metadata.library` in any installed SKILL.md with the tag in the library index URL the Cady MCP server instructions give; if they give none, use the latest release at github.com/malcolmai/cady-skills. If they differ, the orchestrator may update; updating is optional and the installed version keeps working. Plugin auto-update is not relied on.
+That line is the upstream baseline at this release tag. A company's fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
+
+## Your fork
+
+This library is a best-practice baseline. Each company forks it into its own git repository or a local copy, and its orchestrator edits that fork with the company's own reasoning; Cady stores no skills. Nothing updates a fork automatically: once a month the orchestrator compares the fork's baseline tag (`metadata.library`) with the latest upstream release, reads that release's CHANGELOG.md, merges what helps by hand and records the decision. The README at github.com/malcolmai/cady-skills has the steps.
 
 ## Library
 
@@ -62,72 +65,70 @@ Recency is one field: compare `metadata.library` in any installed SKILL.md with 
 - `cady-core-execution`: a skill points here, or before an effect, credential use, retry or recovery.
 - `cady-core-run-sequence`: the user wants a task carried through to a recorded outcome.
 - `cady-core-scheduling`: the user wants a scheduled or repeatable task.
-- `cady-core-selected-delivery`: a decided cross-functional delivery needs checks and owner readback.
 - `cady-core-skill-index`: choosing which task skill fits, or binding an agent's installed skills
-- `cady-orchestrator-method`: acting as the host orchestrator.
+- `cady-orchestrator-method`: Orchestrator role card: what this function owns and decides
 
 ### company
 - `cady-company-decision-check`: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
-- `cady-company-executive-review`: The Executive frames, decides and records one founder- or executive-level decision, or reviews the allocation.
+- `cady-company-executive-review`: Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-company-launch`: the company is defining its initial customer, offer and smallest test.
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
-- `cady-company-method`: the company needs shared direction, setup or cross-functional context.
-- `cady-company-operations-compliance-register`: Which statutory and registry filings the company owes and when: find, verify and record them, or review what is due.
-- `cady-company-operations-method`: setting up or maintaining compliance, people processes or operating requirements.
-- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access a hire, role change or leaver needs.
+- `cady-company-method`: Company role card: what this function owns and decides
+- `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
+- `cady-company-operations-method`: Company Operations role card: what this function owns and decides
+- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
 - `cady-company-review`: a company needs an evidence-based operating review or first setup.
-- `cady-company-taste-review`: Judging or choosing between artifacts, agent designs or prompt changes where quality depends on judgment.
+- `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 
 ### gtm
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
-- `cady-customer-success-method`: a customer needs onboarding, recovery, adoption or renewal support.
+- `cady-customer-success-method`: Customer Success role card: what this function owns and decides
 - `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
-- `cady-gtm-cold-email-cycle`: Prepare a cold email cycle for parties CRM verifies as cold.
-- `cady-gtm-content-production`: the user needs a post (LinkedIn, X or blog), article, script, caption or website copy.
+- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
 - `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
 - `cady-gtm-launch`: the company is starting a growth motion.
-- `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its single follow-up.
-- `cady-gtm-method`: choosing a go-to-market motion or progressing qualified commercial work.
+- `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
+- `cady-gtm-method`: GTM role card: what this function owns and decides
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
 - `cady-gtm-reply`: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop.
-- `cady-gtm-tam-map`: First-pass List of N sourced, reachable accounts for the current ICP or segment hypothesis; not the whole universe.
-- `cady-gtm-warm-email`: Continue an engaged relationship, or follow up a released cold touch that got no reply.
-- `cady-marketing-method`: planning content, channels, audience response or campaign learning.
+- `cady-gtm-tam-map`: Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
+- `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
+- `cady-marketing-method`: Marketing role card: what this function owns and decides
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
-- `cady-sales-method`: assessing a deal, next commitment, proposal, close or loss reason.
+- `cady-sales-method`: Sales role card: what this function owns and decides
 
 ### finance
-- `cady-accounting-method`: reconciling a period or handing exceptions to the bookkeeper.
-- `cady-accounting-period-close`: Run a month, quarter or year-end close checklist in the company's own ledger and hand exceptions to its bookkeeper.
+- `cady-accounting-method`: Accounting role card: what this function owns and decides
+- `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
 - `cady-finance-budget-review`: Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations.
-- `cady-finance-method`: reviewing runway, burn, budgets, renewals or tax preparation.
+- `cady-finance-method`: Finance role card: what this function owns and decides
 - `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
 - `cady-finance-tax-cycle`: Plan or review an entity's tax obligations, filing preparation and material strategy changes.
 - `cady-finance-vendor-spend-review`: Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.
-- `cady-fundraise-investor-list`: A financing decision calls for a sourced investor pool before contact.
-- `cady-fundraise-method`: deciding whether to raise, preparing investor materials or organizing financing evidence.
+- `cady-fundraise-investor-list`: Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
+- `cady-fundraise-investor-outreach`: Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
+- `cady-fundraise-method`: Fundraise role card: what this function owns and decides
 - `cady-fundraise-raise-materials`: Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
-- `cady-fundraise-raise-plan`: Decide whether, when and how much to raise, on a SAFE, note or priced round, and run the process to close.
+- `cady-fundraise-raise-plan`: Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
 
 ### product
-- `cady-design-method`: a product surface, marketing page, visual, deck or motion needs audience-fit design and inspection.
+- `cady-design-method`: Design role card: what this function owns and decides
 - `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 - `cady-product-manage`: Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
-- `cady-product-method`: deciding what to build, for whom, why and when to release.
+- `cady-product-method`: Product role card: what this function owns and decides
 - `cady-product-research-competition`: Find who the competitors and alternatives are and how they price, position and win, for a product or pricing question.
 - `cady-product-research-shared`: Create or update a company-library research piece in Competition or Technology.
 - `cady-product-research-technology`: Assess technologies or technical approaches for a concrete product use case.
 
 ### engineering
-- `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, from reproduction to regression test.
+- `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 - `cady-engineering-independent-review`: a change needs review before merge, or a lead coordinates native helpers.
 - `cady-engineering-integrations`: comparing, choosing or connecting a tool, data source or account.
-- `cady-engineering-method`: building, reviewing, releasing or changing a bounded technical system.
+- `cady-engineering-method`: Engineering role card: what this function owns and decides
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
-- `cady-qa-method`: testing a change, investigating a failure or checking a release candidate.
+- `cady-qa-method`: QA role card: what this function owns and decides
 - `cady-qa-triage`: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.

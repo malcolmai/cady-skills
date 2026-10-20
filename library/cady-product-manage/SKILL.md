@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "1c2738566abf1c1c4984862dd2226128b764b573df6356a1147dbe3cf5dc421a"
-  library: "3beca7fa80e90672"
+  version: "507bef67c4b2c883aa680c3a276ed84b7f85faef4fc151ed536ef5eafaf4c27e"
+  library: "fed32b12fc15ae44"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "1c2738566abf1c1c4984862dd2226128b764b573df6356a1147dbe3cf5dc421a"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "507bef67c4b2c883aa680c3a276ed84b7f85faef4fc151ed536ef5eafaf4c27e"}})`
 
 Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
 
@@ -43,7 +43,7 @@ Decide what to build, for whom and why; run discovery and hypotheses; plan each 
 3. Get evidence for the hypothesis with `cady-company-decision-questions` (route) and `cady-company-experiment` (pre-registered tests), as Projects work bound to the hypothesis (evidenceRefs company:work:<hypothesisId>); run interviews with `cady-product-customer-interview`. If the evidence needs calls and no pipeline is getting the ICP onto calls, hand it to the Executive as the binding constraint rather than adding product work.
 4. Keep evidence tied to the offering. Keep interview notes, observations and raw source material in Files through files.upload with mode "begin" and files.upload with mode "complete", citing each as file:<fileId> from the hypothesis or work item. Put curated Competition or Technology analysis in the Research library using the matching specialist card, which includes shared research craft; preserve and link existing direction, decisions and work context rather than replacing it. Never paste evidence into direction or a work statement, or create another record to hold learning.
 5. When evidence settles a hypothesis or product choice, use subject hypothesis.outcome:<slug> or product.choice:<slug> respectively. Record it with submit_company_work_checkpoint: statement is the decision, status COMPLETE, decision {kind: "decision", subject, rationale, authority, decidedBy, supersedes: [the hypothesis or earlier decision workIds]}. For your own choice use authority "agent" and omit decidedBy, source and quote; for a person use their exact words as source "chat" and quote, or a verified source "grant" with grantId. Raise a choice reserved to the founder as a BLOCKED decision item addressed to the owner, with the question as nextAction; it reaches them as asksForYou. Propose an accepted ICP or bet for direction only through update_company_direction.
-6. Scope from the ranked gap list against the bar; subtract before adding. Rank with the lightest frame that separates the options: for a few items, cost of delay (what each week of waiting loses in revenue, risk, learning or a deadline) divided by effort, highest first; RICE (reach x impact x confidence / effort) only for a longer list with comparable reach data. Label each estimate measured, evidence-based or guess, and never let precise-looking scores hide guesses; a fixed deadline or a blocker on a critical path overrides the score. Record the ranking rationale on the work item. Bind product work to the offering with the company product owner and productId. Plan a release with `cady-core-selected-delivery` as a work item with release {stage, buildBy, qaDays, thresholds}.
+6. Scope from the ranked gap list against the bar; subtract before adding. Rank with the lightest frame that separates the options: for a few items, cost of delay (what each week of waiting loses in revenue, risk, learning or a deadline) divided by effort, highest first; RICE (reach x impact x confidence / effort) only for a longer list with comparable reach data. Label each estimate measured, evidence-based or guess, and never let precise-looking scores hide guesses; a fixed deadline or a blocker on a critical path overrides the score. Record the ranking rationale on the work item. Bind product work to the offering with the company product owner and productId. Plan each release as a work item with release {stage, buildBy, qaDays, thresholds}, per the release plan (`../../references/release-plan.md`).
 7. Check release thresholds against exact QA, engineering and customer evidence on the release work item. Go: record the go decision there under subject release.go:<workId>, with evidence refs and nextAction 'ready to release'; keep release stage 'qa'. No-go: status BLOCKED with the unmet threshold and next action, through transition_company_work(action: 'checkpoint', status: 'BLOCKED', nextAction) when you hold the claim. The release owner sets stage 'released' only after verifying the deployed artifact and target, citing the deploy receipt.
 
 ## Acceptance
@@ -67,3 +67,6 @@ Decide what to build, for whom and why; run discovery and hypotheses; plan each 
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the claim holder reports the decision, hypothesis or release verdict and its evidence
+
+## References
+- [Release plan](../../references/release-plan.md)

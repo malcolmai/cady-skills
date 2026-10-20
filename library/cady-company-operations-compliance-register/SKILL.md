@@ -1,19 +1,19 @@
 ---
 name: "cady-company-operations-compliance-register"
-description: "Compliance register and monthly filing review. Use when: Which statutory and registry filings the company owes and when: find, verify and record them, or review what is due. Not for: Preparing one tax return (`cady-finance-tax-cycle`), submitting any filing or payment, or legal advice."
+description: "Compliance register and monthly filing review. Use when: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports). Not for: Preparing one tax return (`cady-finance-tax-cycle`), submitting any filing or payment, or legal advice."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
-  version: "1a633d0e071250495eefa65b1d77e882c9a6b6957fe10df2a9e19fbdc9069705"
-  library: "3beca7fa80e90672"
+  version: "68f3146b6b813e8a30336e9a1792501fde2b18f9adfa6eb899cf8e822daf7e2a"
+  library: "fed32b12fc15ae44"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "1a633d0e071250495eefa65b1d77e882c9a6b6957fe10df2a9e19fbdc9069705"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "68f3146b6b813e8a30336e9a1792501fde2b18f9adfa6eb899cf8e822daf7e2a"}})`
 
-Which statutory and registry filings the company owes and when: find, verify and record them, or review what is due.
+What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 
 **Not for:** Preparing one tax return (`cady-finance-tax-cycle`), submitting any filing or payment, or legal advice.
 

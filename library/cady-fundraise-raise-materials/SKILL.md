@@ -1,21 +1,21 @@
 ---
 name: "cady-fundraise-raise-materials"
-description: "Raise materials, data room and investor updates. Use when: Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder. Not for: Deciding amount, instrument or terms (use `cady-fundraise-raise-plan`), investor targeting (use `cady-fundraise-investor-list`), sending, or recording share issues."
+description: "Raise materials, data room and investor updates. Use when: Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder. Not for: Deciding amount, instrument or terms (use `cady-fundraise-raise-plan`), choosing which investors to pitch, sending, or recording share issues."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "38c54af08789c191ce53cf3d79cda34c01a5dabe4564dc15b22857c46611e069"
-  library: "3beca7fa80e90672"
+  version: "7ea9d27460cb8ad00fe14ad1dd61d60a0f75e20b572caec6a6fd7e342f3cbd23"
+  library: "fed32b12fc15ae44"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "38c54af08789c191ce53cf3d79cda34c01a5dabe4564dc15b22857c46611e069"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "7ea9d27460cb8ad00fe14ad1dd61d60a0f75e20b572caec6a6fd7e342f3cbd23"}})`
 
 Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
 
-**Not for:** Deciding amount, instrument or terms (use `cady-fundraise-raise-plan`), investor targeting (use `cady-fundraise-investor-list`), sending, or recording share issues.
+**Not for:** Deciding amount, instrument or terms (use `cady-fundraise-raise-plan`), choosing which investors to pitch, sending, or recording share issues.
 
 **Unit of work:** one work item per commissioned material or tightly coupled set. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
@@ -40,7 +40,7 @@ Draft or revise an investor memo, deck narrative, data room or monthly investor 
 4. Data room, ready before priced-round diligence (lighter for a SAFE): incorporation and governing documents, board and shareholder consents; fully diluted cap table reconciled to the share register and every SAFE, note and option grant with its board approval; IP assignments from every founder, employee and contractor; key customer, supplier and financing contracts; monthly financials for the last 12 to 24 months and the model; metric definitions; team and option list; material filings and disputes. Common gaps that stall a close: a missing IP assignment, an unapproved option grant, a cap table that does not match the register, or no evidence that a US 83(b) election was filed in time (the deadline cannot be cured later).
 5. Reconcile every material number and claim to an exact dated source. Make the narrative and export usable to its audience. Use the sender's voice pack only for addressed material; do not create a separate voice card. Check placeholders, stale figures and unsupported traction.
 6. Save the document through the host Files route using files.upload with mode "begin", files.upload with mode "validate" and files.upload with mode "complete" where available. Give it a meaningful name and location, and relate its exact ref to this claimed work through transition_company_work(action: 'checkpoint'); Cady does not classify documents. Read back with get_company_work and files.read_text when supported.
-7. Report checked File refs, missing evidence and the next founder decision with transition_company_work(action: 'report_result'). A monthly update remains a draft until separately reviewed under an authorized communication route.
+7. Report checked File refs, missing evidence and the next founder decision with transition_company_work(action: 'report_result'). A monthly update remains a draft until it is sent through `cady-fundraise-investor-outreach`.
 
 ## Acceptance
 

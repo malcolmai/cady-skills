@@ -1,0 +1,67 @@
+# Changelog
+
+What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
+
+## fed32b12fc15ae44 · 2026-10-20
+
+Since 3beca7fa80e90672: 1 new, 3 dropped, 48 changed.
+
+New:
+- `cady-fundraise-investor-outreach`
+
+Dropped (merged elsewhere or retired; check the new skills above):
+- cady-company-launch
+- cady-core-selected-delivery
+- cady-gtm-content-production
+
+Changed (the parts that differ):
+- `cady`: Load a library skill, new Your fork, Library, removed Updates
+- `cady-accounting-method`: description, new Role card, Selected judgment
+- `cady-accounting-period-close`: description, intro
+- `cady-company-executive-review`: description, intro, Procedure, Result, new References
+- `cady-company-manage-agents`: intro, Procedure, Acceptance, Owner checks, new References, removed Inputs, removed Result, reference inputs.md, reference result.md
+- `cady-company-method`: description, Role card, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-company-operations-compliance-register`: description, intro
+- `cady-company-operations-method`: description, Selected judgment
+- `cady-company-operations-people-lifecycle`: description, intro, Procedure, References
+- `cady-company-review`: description, intro, Company review, new References, reference setup.md
+- `cady-company-taste-review`: description, intro, Procedure, Result, new References, reference written-content.md
+- `cady-core-execution`: intro, Credentials, Recurrence, removed Risk first, removed Selection, reference delivery-completion.md, reference risk-first.md, reference selection.md
+- `cady-core-run-sequence`: description, intro, Run sequence, new References, reference refusals.md, reference reporting.md
+- `cady-core-skill-index`: company, gtm, finance, engineering
+- `cady-customer-success-lifecycle`: Procedure
+- `cady-customer-success-method`: description, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-design-method`: description, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-engineering-debugging`: description, intro
+- `cady-engineering-independent-review`: description, intro
+- `cady-engineering-integrations`: intro, removed Integrations, reference integrations.md, reference reads.md
+- `cady-engineering-method`: description, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-engineering-system-cycle`: intro, Acceptance, removed Always, removed Inputs, removed Owner checks, removed Result, reference always.md, reference inputs.md, reference owner-checks.md, reference result.md
+- `cady-finance-budget-review`: description, intro
+- `cady-finance-method`: description, Role card, Selected judgment, Domain method
+- `cady-finance-vendor-spend-review`: Procedure, Result, new References
+- `cady-fundraise-investor-list`: description, intro, Procedure, Acceptance
+- `cady-fundraise-method`: description, Domain method
+- `cady-fundraise-raise-materials`: description, intro, Procedure
+- `cady-fundraise-raise-plan`: description, intro, Procedure
+- `cady-gtm-calls`: Procedure, References, reference shared-core.md
+- `cady-gtm-cold-email-cycle`: description, intro, Procedure, Acceptance, References, reference copy.md
+- `cady-gtm-events`: Procedure, Result, new References
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-linkedin-message`: description, intro, Procedure
+- `cady-gtm-method`: description, Role card, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-pipeline-pass`: description, intro, Procedure
+- `cady-gtm-reply`: description, intro, Procedure, Acceptance
+- `cady-gtm-tam-map`: description, intro, Procedure, Result, new References, removed Inputs, reference inputs.md
+- `cady-gtm-warm-email`: description, intro, Procedure
+- `cady-marketing-method`: description, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-orchestrator-method`: description, Role card, removed Parent function, removed Selected judgment, removed Domain method, reference domain-method.md, reference parent-function.md, reference selected-judgment.md
+- `cady-product-customer-interview`: Procedure, Result, new References
+- `cady-product-manage`: Procedure, Result, new References
+- `cady-product-method`: description, Role card, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-product-research-competition`: Procedure, References
+- `cady-qa-method`: description, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-sales-method`: description
+
+Shared references changed: adopt-scheduled-task.md, allocation-and-initiatives.md, call-follow-up.md, call-prep.md, cold-deliverability.md, competitor-profile.md, events-attend.md, events-host.md, intro-request.md, outreach-message-rules.md, people-checklists.md, release-plan.md, role-card-common.md, tam-map-import.md, vendor-purchase.md, vendor-renewal.md.

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "beb1295d7f500e2eab5c4c93d395e64d3bcbc9647b699eb0309cc8e5a0e57dea"
-  library: "3beca7fa80e90672"
+  version: "1e5e7f0848d9190f8f38debf7e04f8cdc9a392375d97e177b0b775f51829e3b7"
+  library: "fed32b12fc15ae44"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "beb1295d7f500e2eab5c4c93d395e64d3bcbc9647b699eb0309cc8e5a0e57dea"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "1e5e7f0848d9190f8f38debf7e04f8cdc9a392375d97e177b0b775f51829e3b7"}})`
 
 Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 
@@ -19,27 +19,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 
 **Unit of work:** one cycle of one product: its map, dimension register and the review, build and hunt motions. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
-## Always
-
-- Journey goals are user outcomes, not features or implementation decisions.
-- Development tests find and prove; this cycle adds no gate. CI gates follow the company's recorded stage, and an exposed security, isolation or authority defect still blocks its path.
-
-## Inputs
-
-### Evidence refs
-
-- company direction and current decisions
-- your system map and dimension register, kept beside the product's source
-- open findings and the last review checkpoint
-- file:<fileId> research notes
-
-### Statement fields
-
-- cycle scope (dimensions or overall)
-- motion
-- ranked findings or delivered items
-- next owner action
-
+See [Always](references/always.md).
 ## Procedure
 
 1. Map once, update in place. Keep one system map beside the product's source (a File for non-software): journey goals as user outcomes in lifecycle order and architecture as one simple diagram. Features and implementation choices are decisions, not goals. Read get_company_direction and current get_company_work decisions first; never restate what a decision already holds.
@@ -60,17 +40,4 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 - [ ] each pass names why it reviewed, engineered or hunted, and ends with a checkpoint: ranked review, reviewed delivery or a deduplicated finding list
 - [ ] each review reports its top changes with the goal each serves, cross-product tradeoffs with why each lasts, and the decision needed
 
-## Owner checks
-
-- current direction and decisions read before mapping
-- every dimension has one owner, one question and a label that is decided or raised to Product
-- differentiating dimensions have a dated research scan and a reviewed design
-- findings are deduplicated against open items before filing
-
-## Result
-
-### Artifact refs
-
-- company:work:<workId>
-- file:<fileId>
-- **Transition:** each motion's claim holder checkpoints its result on the cycle work item
+See [Owner checks](references/owner-checks.md).

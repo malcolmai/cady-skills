@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "8824824eb29bc291d22c84d80318d8008701b0cf00a836ff9a9eed3221d9ea62"
-  library: "3beca7fa80e90672"
+  version: "cdcca6ef6f9d55bd0f8d0522640e91cadf7ca7c78bb5d752920406da285ba85e"
+  library: "fed32b12fc15ae44"
   function: "company"
 ---
 # Decision layers and second look
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "8824824eb29bc291d22c84d80318d8008701b0cf00a836ff9a9eed3221d9ea62"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "cdcca6ef6f9d55bd0f8d0522640e91cadf7ca7c78bb5d752920406da285ba85e"}})`
 
 Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
 

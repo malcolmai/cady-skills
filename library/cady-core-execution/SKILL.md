@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "a87569cf4daf5d1a89093e659578de4f4f3140ff9f016bb9b541bb05329fc866"
-  library: "3beca7fa80e90672"
+  version: "ed96c03ffe95f69a6dfebb553ac06a100b623d6db0cb6e90993f9a468680d589"
+  library: "fed32b12fc15ae44"
   function: "core"
 ---
 # Execution guidance
@@ -15,7 +15,7 @@ metadata:
 
 Shared execution rules: authority, blockers, credentials, effects and receipts, recurrence and model choice. Use when: a skill points here, or before an effect, credential use, retry or recovery. Not for: choosing what work to do.
 - **Application:** Use this method when complex work, execution design, integrations or recovery need it; reuse it within the task. Combine the shared method with only the relevant use-case guidance and current company/task context. Read missing context that could change the approach; refresh authority and mutable targets before effects. Apply controls proportionately to consequence and uncertainty, not as a checklist for every chat. Save only material decisions, changed facts or continuation state at the existing owner; keep implementation details in the chosen project.
-- **Authority:** Advisory method; verify current executor, account, capability and authority before effects.
+- **Authority:** Advisory method; verify current executor, account, capability and authority before effects. Admin or owner invitations and payments always need the person.
 - **Blockers:** A blocker stops progress without being an external risk: a missing or unauthenticated tool, a stale document, an ambiguous specification, a failing check, an empty helper result. Work around it and record the route: the next strongest native path or a script; the reading a careful colleague would take; the cause of a failing check, never its assertion; one new prompt to an empty helper, then one fresh helper of the same class; do only a small remainder yourself, and record any move to a stronger class as an exception. An unauthenticated connection is a blocked capability, not a reason to use another environment or account. Never work around an authorisation wall, a denied permission, a provider challenge or a safety refusal; those stop that channel while the rest of the work finishes. For a product or method defect found during an authorized outcome, record expected versus observed behavior with exact evidence in the existing task or claim and route bounded repair to the owner of that product or method under current authority. Verify the repair, then continue the original operation through its supported owner transition; if none exists, hold an exact actionable handoff. A code fix alone does not complete that outcome. Keep unrelated work moving, and preserve access/provider holds, uncertain-effect reconciliation and review/release gates.
 
 ## Credentials
@@ -24,29 +24,13 @@ Shared execution rules: authority, blockers, credentials, effects and receipts, 
 - Provider credentials for effects Cady governs (email, LinkedIn and other outbound communication, provider writes) never reach the host agent: Cady holds API and OAuth credentials server-side, and Cady's own signed local executor (the cady CLI) holds device credentials in the OS keychain. Never request, read, store or script those credentials, and never write a script that sends with them; pass execution ticket ids to the executor instead. For tools you run yourself, keep Keychain on macOS. Repeated access prompts need locked-vault/access-control/signing diagnosis, not plaintext fallback or blanket access. CLI keyring access may be attributed to its Python interpreter; stable signed packaging is a separate qualification requirement.
 - Ask once. Gather every account to connect or provision, key to create (console link, exact steps, scope names and where the owner stores it, never its value) and agent or plan to review into one setup session: record each with record_company_work_setup (call_cady_tool; a BLOCKED Projects item whose boundary, of the kind that fits, carries the setup step), so Cady shows the owner one ordered packet of about 30 minutes. Listing an item grants nothing; each approval, access grant and spend keeps its own route. After the owner's session, do not come back mid-run for a credential or connection: record a newly found need as another such ask for the next packet and keep preparing.
 - **Decision standard:** Direction and existing grants govern action; reversible work in scope needs no ask. Use get_company_direction for accepted choices. For a choice that belongs in direction, update it with update_company_direction and a one-line summary (the owner is notified and can edit or revert); a bet enters direction only from the owner's own words, otherwise record it as a hypothesis with its recommendation, alternatives and source refs. For a blocked action, record the missing choice and next action in a BLOCKED Projects work item through submit_company_work_checkpoint; cite that item from get_company_work in the chat close. An ask without a held item is not asked. Record the answer in its owner before resuming. Keep independent authorized work moving; silence never approves an external or irreversible effect.
-- **Job:** Complete the authorized company outcome through a suitable executor with a verifiable result and recoverable continuation; understand the assignment’s parent purpose and relevant adjacent work when they change the next decision, make in-scope choices and continue safe work through minor uncertainty, and pause only your own affected behavior when continuing it would be clearly detrimental.
 
-See [Native orchestration](references/native-orchestration.md).
+See [Delivery completion](references/delivery-completion.md).
 ## Recurrence
 
 - Recurring work: company_scheduling below. Every run of every agent follows `cady-core-run-sequence`. Waiting work records nextAction and a dueDate and relies on the host's next wake; there is no separate wake mechanism.
 
-## Risk first
-
-- Before code, name consequential effects, the company's critical paths and worst failures; derive focused edge-case and security tests, then implement the smallest controls.
-- For two emails, journal each logical message separately before dispatch; key by company, operation and message identity. After first success and second timeout, retain the first receipt and reconcile the second with the provider. Never rerun the whole batch or blindly resend an uncertain effect. A local lock alone cannot guarantee exactly-once delivery.
-- For effectful integrations, cover relevant failure boundaries: duplicate delivery, crash near provider acceptance, partial success, timeout, rate limit, cancellation, revoked permission and wrong account/tenant. Select tests for changed behavior and plausible consequence; reuse existing evidence where it suffices. Use provider idempotency where supported; otherwise stop ambiguous sends for reconciliation.
-- Where untrusted input reaches execution, test relevant source/model manipulation, shell/path/URL injection and secret leakage. Use argument arrays, validated paths/destinations, schema validation, least privilege and redacted receipts. Dry runs must have no external effects; cap calls, tokens, cost, runtime and concurrency.
-
-See [Scheduled model selection](references/scheduled-model-selection.md).
-## Selection
-
-| Mode | When |
-|---|---|
-| script | Known steps and deterministic rules; no LLM needed. |
-| fixed_llm_pipeline | Known stages with bounded model calls or map/batch work; choose stage boundaries by distinct judgment and handoff, not an arbitrary call count. Validate output schemas; code owns branching, tools and effects. |
-| agent | The work needs adaptive planning, tool selection or investigation. Bound tool scope and escalation by the outcome and actual host/provider limits. |
-
+See [Risk first](references/risk-first.md).
 ## Surfaces
 
 - **Cady desktop:** Use the company's approved sign-in and work interface. Never substitute a user token or claim an execution grant that has not been verified.

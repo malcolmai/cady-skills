@@ -1,17 +1,17 @@
 ---
 name: "cady-sales-method"
-description: "Judge and progress commercial opportunities from qualification through a decision and handoff. Use when: assessing a deal, next commitment, proposal, close or loss reason. Not for: drafting messages (use the relevant GTM outreach skill) or setting broad offer strategy (use `cady-gtm-offer-and-segments`)."
+description: "Sales role card: what this function owns and decides. Load when acting as the Sales agent or choosing among its skills. Not for doing a task: load the task skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "0f07522199fc353deb59085fb2b2dc01289db631b1a06a4a6dcdb62f9cf140ed"
-  library: "3beca7fa80e90672"
+  version: "ba3d31f0a38c38762f70fe99102fd0febf2c5813af798374a9080e3f8f705323"
+  library: "fed32b12fc15ae44"
   function: "sales"
 ---
 # Sales
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "0f07522199fc353deb59085fb2b2dc01289db631b1a06a4a6dcdb62f9cf140ed"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "ba3d31f0a38c38762f70fe99102fd0febf2c5813af798374a9080e3f8f705323"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 

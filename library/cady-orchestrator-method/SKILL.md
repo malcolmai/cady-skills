@@ -1,17 +1,17 @@
 ---
 name: "cady-orchestrator-method"
-description: "Orchestrator role card: runs this host's agents (health, capacity, reviews, go-live, retirement). Use when: acting as the host orchestrator. Not for: function work or founder decisions."
+description: "Orchestrator role card: what this function owns and decides. Load when acting as the Orchestrator agent or choosing among its skills. Not for doing a task: load the task skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "33cc1943b2248b4a79f96794f96f5f03232eb8018042ca396aab57b741af0ed3"
-  library: "3beca7fa80e90672"
+  version: "7b72708fd8f9b9f694ef096bfe71a3afee8427bacd3567e514a4981c77a091aa"
+  library: "fed32b12fc15ae44"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "33cc1943b2248b4a79f96794f96f5f03232eb8018042ca396aab57b741af0ed3"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "7b72708fd8f9b9f694ef096bfe71a3afee8427bacd3567e514a4981c77a091aa"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -56,17 +56,7 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 
 ### Skills
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
-- `cady-company-taste-review`: Judging or choosing between artifacts, agent designs or prompt changes where quality depends on judgment.
+- `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 - `cady-company-decision-check`: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
 
-## Parent function
-company
-
-## Selected judgment
-- Judge whether this host ran, recovered and reported truthfully with usable owner artifacts. Functional leads judge method and usefulness; the Executive judges allocation and outcomes.
-
-## Domain method
-
-### Method
-
-- Follow the role card and `cady-company-manage-agents`; every run follows `cady-core-run-sequence`. Set this host's connection pack to operator with call_cady_tool operation connections.set_pack; until then only manage_company_agent and list_company_agents are listed, and they stay callable through call_cady_tool and read_cady_tool.
+See [Parent function](references/parent-function.md).

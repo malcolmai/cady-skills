@@ -1,21 +1,21 @@
 ---
 name: "cady-gtm-warm-email"
-description: "Warm email. Use when: Continue an engaged relationship, or follow up a released cold touch that got no reply. Not for: A first cold touch (use `cady-gtm-cold-email-cycle`), or unverified engagement. Do not treat missing history as proof that a party is cold."
+description: "Warm email and follow-ups. Use when: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship. Not for: A first touch to a cold party, a reply in a live thread, or LinkedIn. Missing history is not proof that a party is cold."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "89862c7ff86559d0aec393bf2b94a4240deb8a0bbf2302719afb00c2fce9270e"
-  library: "3beca7fa80e90672"
+  version: "9cf387bf23b67cb2f9b0daa0b2000a4bed6f2c4853f29655c0f382e23ed41fe8"
+  library: "fed32b12fc15ae44"
   function: "gtm"
 ---
-# Warm email
+# Warm email and follow-ups
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "89862c7ff86559d0aec393bf2b94a4240deb8a0bbf2302719afb00c2fce9270e"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "9cf387bf23b67cb2f9b0daa0b2000a4bed6f2c4853f29655c0f382e23ed41fe8"}})`
 
-Continue an engaged relationship, or follow up a released cold touch that got no reply.
+Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
 
-**Not for:** A first cold touch (use `cady-gtm-cold-email-cycle`), or unverified engagement. Do not treat missing history as proof that a party is cold.
+**Not for:** A first touch to a cold party, a reply in a live thread, or LinkedIn. Missing history is not proof that a party is cold.
 
 **Unit of work:** one work item per party or small cohort. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
@@ -35,11 +35,11 @@ Continue an engaged relationship, or follow up a released cold touch that got no
 ## Procedure
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
-2. The scheduled pass is `cady-gtm-pipeline-pass`.
+2. The scheduled pass is `cady-gtm-pipeline-pass`. Vendor, supplier and partner messages use this skill too: a CRM role vendor or partner, a business purpose, and for a cancellation, order or commitment the exact user review `cady-finance-vendor-spend-review` requires (a standing outreach grant does not substitute).
 3. Confirm engagement from a readable thread or CRM interaction and state it; missing history is not proof the party is cold. Attribution links record human and non-human clicks separately and only human clicks count as engagement; file external clicks with crm.record_interactions.
 4. Read the exchange with crm.find_communications and crm.get_communication. For a product link, check sign-up first with crm.get_party; if they signed up, respond to that.
-5. Draft following the copy rules. A follow-up comes after the previous touch, adds something useful and new, and stops on a reply, no, opt-out or suppression; an engaged, interested lead has no count limit and is never dropped. A non-responder to a cold touch gets 1-2 follow-ups only, within the grant's followUps (delayDays 3 or more), only after outcome_check finds no reply, counted in the cold daily cap. Recheck permission before every review.
-6. Scan replies via crm.list_parties mode interactions; read crm.get_party. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare with crm.prepare_outreach_review, read crm.get_outreach_review, then follow release.
+5. Draft following the copy rules. Name which follow-up this is and apply the follow-up rule (message rules, follow_up): a follow-up to an unengaged non-replier is at most 2, at least 3 days apart and counted toward the cold email quota; one to an engaged recipient is paced to the thread's tempo, not counted and never dropped. Each adds something useful and new. Recheck permission before every review.
+6. Before any follow-up run the outcome check (message rules, outcome_check), then read crm.get_party. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare with crm.prepare_outreach_review (a follow-up carries followUp {delayDays, nonRepliersOnly: true}), read crm.get_outreach_review, then follow release.
 
 ## Acceptance
 

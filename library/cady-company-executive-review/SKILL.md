@@ -1,19 +1,19 @@
 ---
 name: "cady-company-executive-review"
-description: "Executive decision review. Use when: The Executive frames, decides and records one founder- or executive-level decision, or reviews the allocation. Not for: Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`."
+description: "Executive decision review. Use when: Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes. Not for: Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "1be15b69ba80b5c934876074c991ec65e6dfb16cde0af38760cc02d906ddb4f6"
-  library: "3beca7fa80e90672"
+  version: "9676b7ab817db40d99abde82a0642464ccbac4fe044e1a4960080d4fa5d4cc6d"
+  library: "fed32b12fc15ae44"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "1be15b69ba80b5c934876074c991ec65e6dfb16cde0af38760cc02d906ddb4f6"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "9676b7ab817db40d99abde82a0642464ccbac4fe044e1a4960080d4fa5d4cc6d"}})`
 
-The Executive frames, decides and records one founder- or executive-level decision, or reviews the allocation.
+Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes.
 
 **Not for:** Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`.
 
@@ -47,8 +47,8 @@ The Executive frames, decides and records one founder- or executive-level decisi
 10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File through files.upload mode "begin" then "complete", and a decision item through submit_company_work_checkpoint with decision {kind: "decision", subject, layer (L2 strategy with a keyAssumption, L3 execution), rationale, alternatives, reversal, reviewBy, authority, decidedBy} citing file:<fileId>. For your own choice use authority "agent" and omit decidedBy: Cady records it as your agent, never as the person (no source or quote). A person's choice needs source "chat" with their exact words in quote and decidedBy (or a verified source "grant" with grantId); Cady marks agent-recorded person decisions viaAgent. Keep the item's summary within its 2000-byte limit.
 11. Hand next steps to the orchestrator or suitable existing agent as exact Projects tasks: statement, brief {acceptance: 1-5 tagged checks with must, finishLine}, nextAction and evidence refs, with goalId, agentId, dependsOn or productId only when real. Current allocation is priority evidence, not task identity or effect authority; a direct one-off needs no invented allocation, and allocation grants no effects. Read the reported result and accept with your own per-criterion verdicts, recording the owner's chat words in acceptance.quote, before judging outcomes; never do the function work yourself.
 12. At reviewBy, compare the outcome with the prediction, score it hit or miss, then keep, change or stop; record what you learned as a decision that supersedes the old one. Before the next comparable decision, read the scored records.
-13. Allocation: Keep one current allocation as a decision item with subject allocation:current: the frame used; for each outcome (a priority or bet) its share, ceiling (expected actual cost, or unknown), founder minutes, reviewBy, stop condition and strongest alternative (including stopping); and the weakest assumption. Never name agents, tiers or cadence; those are the orchestrator's. Supersede it only when a bet's status changed, a stop or reversal condition is met, a reviewBy date passed, direction changed or the founder asked; otherwise end with 'allocation stands' and write nothing. Its full frame and per-outcome lines go in the cited File.
-14. Initiatives: Follow every founder idea through as an initiative: one decision item with subject initiative:<slug>, status OPEN and a reviewBy date, recording its key driver (why we are doing it) and the driver's size at intake. Never drop one silently; work around blockers under the blockers rule, because a blocker alone never stops an initiative. Stop one only for one of three reasons, recorded as a COMPLETE decision with subject initiative.stop:<slug> (never initiative:<slug>) that supersedes it, with stop {reason, evidenceRefs (1 to 8), driverComparison (at most 400 characters)}: unexpected_cost (a non-obvious cost or complication nobody anticipated; obvious costs count as already factored in); tradeoff_reversed (a trade-off review against the original key driver and its size shows a materially worse cost/return; time or effort alone never qualifies); one_sided_backlash (heavy, one-sided backlash weighed against actual behaviour such as engagement and customers; ordinary backlash does not count). An initiative with no follow-up by its reviewBy date becomes an attention item. Before any stop, run steps 3-8 on the stop itself and fill driverComparison from the intake driver and its size.
+13. Allocation: keep one current allocation as a decision item with subject allocation:current, superseded only on a trigger (`../../references/allocation-and-initiatives.md`); otherwise end with 'allocation stands' and write nothing.
+14. Initiatives: follow every founder idea as an initiative:<slug> decision item and stop one only for a recorded reason, as `../../references/allocation-and-initiatives.md` says.
 
 ## Acceptance
 
@@ -70,3 +70,6 @@ The Executive frames, decides and records one founder- or executive-level decisi
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the Executive records the decision; the orchestrator and agents take the next steps
+
+## References
+- [Allocation and initiatives](../../references/allocation-and-initiatives.md)
