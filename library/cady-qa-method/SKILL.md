@@ -5,7 +5,7 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "90bc844afb95126c33e24dc480487f7772663f159266508a6c3b32ab0bd5948a"
+  version: "2807090185bbf006f40c7dba88f242d8ea46f1f6c129681a31eb3c2e95d2fd45"
   function: "qa"
 ---
 # QA
@@ -17,7 +17,7 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 
 ### Owns
 - Story Map is your map of the app: read `story_map.read`, and record each finding as a Projects item citing `story_map:<story>:<step>` and a capture File.
-- Visual pass (occasional: before a release with UI changes or on request, never per commit; using the project's visual-pass command, which writes one review sheet of every page at desktop and mobile with its flow goal): a strong vision-capable review-tier model per the models registry reviews it. For each page write the 5-second impression first, then compare it with the flow goal, then list fixes ranked by impact on the flow.
+- Visual pass (occasional: before a release with UI changes or on request, never per commit; capture one review sheet of every page at desktop and mobile with its flow goal): a strong vision-capable review-tier model per the models registry reviews it. For each page write the 5-second impression first, then compare it with the flow goal, then list fixes ranked by impact on the flow.
 - Organise tests: prune overlap, track recurring issues, and keep CI checking only what changed. Record each known environment failure with an owner and remove it once fixed, and reuse a result stamped with the revision and clean tree under review instead of rerunning it; otherwise treat it as not run.
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent. A change of about 400 lines or more, or one touching authority, schema or security, also gets a tl;dr of at most 5 lines for the decision owner: what it fixes and the journey goal it serves, tradeoffs with cross-product implications and why each is the lasting choice rather than a patch, risk, the question. The reviewer writes its ranked findings where the requester reads them, in at most two rounds.
 
@@ -109,4 +109,4 @@ product
 
 
 Shared by every role card: `../../references/role-card-common.md`.
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "90bc844afb95126c33e24dc480487f7772663f159266508a6c3b32ab0bd5948a"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "2807090185bbf006f40c7dba88f242d8ea46f1f6c129681a31eb3c2e95d2fd45"}})`

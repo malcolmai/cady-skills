@@ -5,7 +5,7 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "7402b29aa28c800c64855171580b73ad30441c698b6329e4f79b6a1be5602539"
+  version: "ff09879e0b70536756301725e6743b43b51c71294727504d6a4850a060c36922"
   function: "core"
 ---
 # Cady

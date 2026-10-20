@@ -2,12 +2,12 @@
   "schema": "cady.skills-export.v1",
   "generatedAt": "2026-10-20T00:00:00Z",
   "bundle": {
-    "version": "7402b29aa28c800c64855171580b73ad30441c698b6329e4f79b6a1be5602539",
-    "pluginVersion": "2026.10.20-7402b29a"
+    "version": "ff09879e0b70536756301725e6743b43b51c71294727504d6a4850a060c36922",
+    "pluginVersion": "2026.10.20-ff09879e"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.20-7402b29a"
+    "version": "2026.10.20-ff09879e"
   },
   "sharedReferences": {
     "references/shared-core.md": "9582a3d68c4f6cc5a0a9e45ef56c45e89cb375c49491edfbb6c40e705a0246df",
@@ -21,9 +21,9 @@
       "name": "cady",
       "path": "skills/cady",
       "cadyId": "cady.front-door",
-      "version": "7402b29aa28c800c64855171580b73ad30441c698b6329e4f79b6a1be5602539",
+      "version": "ff09879e0b70536756301725e6743b43b51c71294727504d6a4850a060c36922",
       "files": {
-        "SKILL.md": "b1eae02cea6535d5becdf5927026125b2ae0800920c2f48141d3c75446fe59d8"
+        "SKILL.md": "c1064209a492c502084a70d72e04f6cbc9c6f2984f8c62bf06d27e73b98c4fcc"
       }
     },
     {
@@ -560,9 +560,9 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "90bc844afb95126c33e24dc480487f7772663f159266508a6c3b32ab0bd5948a",
+      "version": "2807090185bbf006f40c7dba88f242d8ea46f1f6c129681a31eb3c2e95d2fd45",
       "files": {
-        "SKILL.md": "72711ddea7a4c361d0ac0ba834ab08dc7079786eb0a9b0c2ef1dbc17297c85db"
+        "SKILL.md": "243a18645e25fa33434c5a4e9819189beca21e257bd85176d57b1027aa95af16"
       }
     },
     {
