@@ -5,10 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "f9662ea8a39bf5819666688baa3c7c013582e12b050abc3da8610271d000eea3"
+  version: "665d44518f2209fb042b0b47f2886890145269adb7601b6bd96d5107240321ce"
+  library: "3beca7fa80e90672"
   function: "engineering"
 ---
 # Engineering
+
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "665d44518f2209fb042b0b47f2886890145269adb7601b6bd96d5107240321ce"}})`
+
+Shared by every role card: `../../references/role-card-common.md`.
 
 ## Role card
 
@@ -40,6 +45,7 @@ Become the expert in the chosen architecture, layer by layer. Know its material 
 - workhorse
 
 ### Skills
+- `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 
 ## Parent function
 product
@@ -70,7 +76,3 @@ product
 - **Iterate:** Fix causes at the owner boundary, then rerun affected checks. Tests must challenge the contract, not mirror the implementation. Stop after required checks pass unless a new change, failure or material uncertainty justifies more work. Delivery and customer value need separate evidence.
 - **Prompt:** Trace the outcome, owners and dependencies; name credible failures and invariants. In discovery, choose the cheapest credible feasibility probe, including a manual alternative; a production build is not required. When scaling, protect compatibility, capacity and recovery. Simplify before adding boundaries; make the chosen slice inspectable and repeatable.
 - **Principle:** Engineering develops a repeatable, maintainable way to deliver the intended product outcome, whether the result is code, a device, material, food, a course or a service.
-
-
-Shared by every role card: `../../references/role-card-common.md`.
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "f9662ea8a39bf5819666688baa3c7c013582e12b050abc3da8610271d000eea3"}})`

@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.accounting.period_close"
-  version: "985977da666ba2b8b0a470692e1ba778f910a8c78cc13d51236bc64b1dfdf1f9"
+  version: "ba0077c91b7ff193dbff3c98d8ed6bfaaa38b57f92e786dc58faba6b5cde3a11"
+  library: "3beca7fa80e90672"
   function: "accounting"
 ---
 # Month-end and period close
+
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "ba0077c91b7ff193dbff3c98d8ed6bfaaa38b57f92e786dc58faba6b5cde3a11"}})`
 
 Run a month, quarter or year-end close checklist in the company's own ledger and hand exceptions to its bookkeeper.
 
@@ -67,5 +70,3 @@ Run a month, quarter or year-end close checklist in the company's own ledger and
 - company:work:<workId>
 - ledger period lock receipt
 - **Transition:** close checklist and exception handoff, or verified closed period
-
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "985977da666ba2b8b0a470692e1ba778f910a8c78cc13d51236bc64b1dfdf1f9"}})`

@@ -1,16 +1,19 @@
 ---
 name: "cady-company-executive-review"
-description: "Executive decision review. Use when: The Executive takes one founder- or executive-level decision from frame to recorded decision and review. Not for: Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`."
+description: "Executive decision review. Use when: The Executive frames, decides and records one founder- or executive-level decision, or reviews the allocation. Not for: Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "00c158ce86dd0ded97661e784479a7e9ceaca48ddab90ee019c84e9f73db5c4e"
+  version: "1be15b69ba80b5c934876074c991ec65e6dfb16cde0af38760cc02d906ddb4f6"
+  library: "3beca7fa80e90672"
   function: "company"
 ---
 # Executive decision review
 
-The Executive takes one founder- or executive-level decision from frame to recorded decision and review.
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "1be15b69ba80b5c934876074c991ec65e6dfb16cde0af38760cc02d906ddb4f6"}})`
+
+The Executive frames, decides and records one founder- or executive-level decision, or reviews the allocation.
 
 **Not for:** Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`.
 
@@ -67,5 +70,3 @@ The Executive takes one founder- or executive-level decision from frame to recor
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the Executive records the decision; the orchestrator and agents take the next steps
-
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "00c158ce86dd0ded97661e784479a7e9ceaca48ddab90ee019c84e9f73db5c4e"}})`

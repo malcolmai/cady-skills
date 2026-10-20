@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
-  version: "945ccd2ec48753cef2293c0b3c5056e2b344c4ae2c1bbbfcdcf5a31e89900ffa"
+  version: "5310ae8c5a70e1e6802f922b9d6c7be2c44c0af3ae68fd3293faea646497dbc7"
+  library: "3beca7fa80e90672"
   function: "engineering"
 ---
 # Debugging and incident response
+
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "5310ae8c5a70e1e6802f922b9d6c7be2c44c0af3ae68fd3293faea646497dbc7"}})`
 
 Find and fix the root cause of a bug, failing check or production incident, from reproduction to regression test.
 
@@ -57,5 +60,3 @@ Find and fix the root cause of a bug, failing check or production incident, from
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the fix goes to independent review; QA verifies the original failure before close
-
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "945ccd2ec48753cef2293c0b3c5056e2b344c4ae2c1bbbfcdcf5a31e89900ffa"}})`

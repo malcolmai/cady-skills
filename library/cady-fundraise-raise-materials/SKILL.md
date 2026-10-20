@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "e760975e5360dfa55f9868565326cd6860c666cca9561ad05205866cc1b19ded"
+  version: "38c54af08789c191ce53cf3d79cda34c01a5dabe4564dc15b22857c46611e069"
+  library: "3beca7fa80e90672"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
+
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "38c54af08789c191ce53cf3d79cda34c01a5dabe4564dc15b22857c46611e069"}})`
 
 Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
 
@@ -31,14 +34,13 @@ Draft or revise an investor memo, deck narrative, data room or monthly investor 
 
 ## Procedure
 
-1. Claim this work item with transition_company_work(action: 'claim') (the server fills attemptId and claimProof); on CONFLICT stop and report the holder.
-2. Read get_company_direction, existing work with get_company_work and exact source documents with files.read_text. Separate accepted facts, founder choices, bets, dated metrics, inferred claims and missing evidence. Ask only for a decision that changes the commissioned material.
-3. Draft only the requested kind. A memo makes a checkable investor case; a deck narrative states each slide's question, claim, proof and limit. Keep internal choices distinct from investor-facing claims. Define each metric once and use it everywhere (MRR versus ARR, bookings versus revenue, logo versus net revenue retention, cohort start rule); investors check that the deck, model and data room agree. For cash and burn figures use `cady-finance-runway` and state each figure's basis (assumption or observed); name the plan file if one exists; Cady never classifies files.
-4. Monthly investor update, drafted for a fixed send day: subject with company, month and one-line headline; 1) highlights (2 to 3 wins with numbers); 2) metrics table, same rows every month (revenue or MRR, growth, customers, burn, runway months, cash); 3) lowlights and what you are doing about them; 4) asks, specific and actionable (an intro to a named role, a hire, a customer type); 5) thanks. Under 400 words; bad news early and plainly; never change a metric definition without saying so.
-5. Data room, ready before priced-round diligence (lighter for a SAFE): incorporation and governing documents, board and shareholder consents; fully diluted cap table reconciled to the share register and every SAFE, note and option grant with its board approval; IP assignments from every founder, employee and contractor; key customer, supplier and financing contracts; monthly financials for the last 12 to 24 months and the model; metric definitions; team and option list; material filings and disputes. Common gaps that stall a close: a missing IP assignment, an unapproved option grant, a cap table that does not match the register, or no evidence that a US 83(b) election was filed in time (the deadline cannot be cured later).
-6. Reconcile every material number and claim to an exact dated source. Make the narrative and export usable to its audience. Use the sender's voice pack only for addressed material; do not create a separate voice card. Check placeholders, stale figures and unsupported traction.
-7. Save the document through the host Files route using files.upload with mode "begin", files.upload with mode "validate" and files.upload with mode "complete" where available. Give it a meaningful name and location, and relate its exact ref to this claimed work through transition_company_work(action: 'checkpoint'); Cady does not classify documents. Read back with get_company_work and files.read_text when supported.
-8. Report checked File refs, missing evidence and the next founder decision with transition_company_work(action: 'report_result'). A monthly update remains a draft until separately reviewed under an authorized communication route.
+1. Read get_company_direction, existing work with get_company_work and exact source documents with files.read_text. Separate accepted facts, founder choices, bets, dated metrics, inferred claims and missing evidence. Ask only for a decision that changes the commissioned material.
+2. Draft only the requested kind. A memo makes a checkable investor case; a deck narrative states each slide's question, claim, proof and limit. Keep internal choices distinct from investor-facing claims. Define each metric once and use it everywhere (MRR versus ARR, bookings versus revenue, logo versus net revenue retention, cohort start rule); investors check that the deck, model and data room agree. For cash and burn figures use `cady-finance-runway` and state each figure's basis (assumption or observed); name the plan file if one exists; Cady never classifies files.
+3. Monthly investor update, drafted for a fixed send day: subject with company, month and one-line headline; 1) highlights (2 to 3 wins with numbers); 2) metrics table, same rows every month (revenue or MRR, growth, customers, burn, runway months, cash); 3) lowlights and what you are doing about them; 4) asks, specific and actionable (an intro to a named role, a hire, a customer type); 5) thanks. Under 400 words; bad news early and plainly; never change a metric definition without saying so.
+4. Data room, ready before priced-round diligence (lighter for a SAFE): incorporation and governing documents, board and shareholder consents; fully diluted cap table reconciled to the share register and every SAFE, note and option grant with its board approval; IP assignments from every founder, employee and contractor; key customer, supplier and financing contracts; monthly financials for the last 12 to 24 months and the model; metric definitions; team and option list; material filings and disputes. Common gaps that stall a close: a missing IP assignment, an unapproved option grant, a cap table that does not match the register, or no evidence that a US 83(b) election was filed in time (the deadline cannot be cured later).
+5. Reconcile every material number and claim to an exact dated source. Make the narrative and export usable to its audience. Use the sender's voice pack only for addressed material; do not create a separate voice card. Check placeholders, stale figures and unsupported traction.
+6. Save the document through the host Files route using files.upload with mode "begin", files.upload with mode "validate" and files.upload with mode "complete" where available. Give it a meaningful name and location, and relate its exact ref to this claimed work through transition_company_work(action: 'checkpoint'); Cady does not classify documents. Read back with get_company_work and files.read_text when supported.
+7. Report checked File refs, missing evidence and the next founder decision with transition_company_work(action: 'report_result'). A monthly update remains a draft until separately reviewed under an authorized communication route.
 
 ## Acceptance
 
@@ -60,5 +62,3 @@ Draft or revise an investor memo, deck narrative, data room or monthly investor 
 - file:<fileId>
 - company:work:<workId>
 - **Transition:** the claim holder reports the result
-
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "e760975e5360dfa55f9868565326cd6860c666cca9561ad05205866cc1b19ded"}})`

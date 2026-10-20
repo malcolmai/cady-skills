@@ -1,16 +1,19 @@
 ---
 name: "cady-core-context"
-description: "Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill from the front door."
+description: "Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "8d88b9eabaa2f2b48011f85f0cbce6a0fd7b94732c82aaef8e28047be572481d"
+  version: "fb0577e90d84f26cda342ecf3761d3e11460a9b1eadcbaeec0b86e123a472bc9"
+  library: "3beca7fa80e90672"
   function: "core"
 ---
 # Company context
 
-Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill from the front door.
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "fb0577e90d84f26cda342ecf3761d3e11460a9b1eadcbaeec0b86e123a472bc9"}})`
+
+Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
 ## Company practice
 
@@ -32,14 +35,5 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 ## Orientation
 
-- Find the decision's layer. L1, the owner's: goals with a target and date, ICP and offer, stage and quality bar, spend and authority envelope, anything irreversible or externally visible at scale. Propose it with options and a recommendation as one batched ask, and keep working on everything that does not wait on it.
-- L2, yours if you head the function: how the function pursues an L1 goal. Restate the outcome one level up from the parent goal, company direction and current decisions (get_company_work decisions; filter by subject when known), choose, and record a decision with alternatives, the key assumption and what would reverse it; for an important one, take a fresh second look (`cady-company-decision-check`) and note it in rechecked. L3, any agent's: how one task is done; take the decided change narrowly, with the owner's exact constraints and finish line, and flag evidence it is wrong rather than reopen it. Asking the owner an L2 or L3 question is a stall, not caution; decisions that conflict at L2 or L3 are yours to resolve by recording a decision that cites both, and only a conflict touching an L1 item becomes one ask while work continues on everything else.
-- Why: owner time is the scarcest input and wrong agent decisions compound; layers put each choice with the cheapest competent decider, and the check catches oversimplification before it spreads. Current owner records, not this static guidance, decide L1 direction; an L2 choice that contradicts or extends an L1 one is an L1 question.
+- Decide at the right layer: L1 the owner's (goals, ICP and offer, stage, spend and authority, anything irreversible or visible at scale), L2 the function head's, L3 the task's. Asking the owner an L2 or L3 question is a stall; `cady-company-decision-check` has the rules and the second look.
 - Before a risky action (payments, admin or owner access, permission changes, deleting or exporting company data, irreversible or bulk external actions not already covered by a current owner approval or grant), verify the facts and get the user's explicit yes in chat; record their words as the approval quote. Routine actions, and actions a current grant covers, need no ask.
-
-## Reference
-
-- **Tool:** get_execution_guide
-- **Use when:** Execution/model choice by topic: selected_delivery, independent_review, company_review, executive, company_launch, gtm_launch, run_sequence, integrations (also any vendor or paid-tool choice), scheduling; omit for all.
-
-**Company context:** `get_cady_context({"area": "<area>", "task": "<what you are about to do, in one sentence>"})`

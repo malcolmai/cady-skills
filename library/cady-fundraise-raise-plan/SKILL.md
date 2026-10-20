@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "431d91f1615f50b14a4c56530454920b55f60883de34f9357aba704603880937"
+  version: "97565747c41bdafe537b642100a288fb711dc40cc3113ebb17eda09f4c06867a"
+  library: "3beca7fa80e90672"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
+
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "97565747c41bdafe537b642100a288fb711dc40cc3113ebb17eda09f4c06867a"}})`
 
 Decide whether, when and how much to raise, on a SAFE, note or priced round, and run the process to close.
 
@@ -65,5 +68,3 @@ Decide whether, when and how much to raise, on a SAFE, note or priced round, and
 
 - company:work:<workId>
 - **Transition:** recommended raise plan or the next founder decision
-
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "431d91f1615f50b14a4c56530454920b55f60883de34f9357aba704603880937"}})`

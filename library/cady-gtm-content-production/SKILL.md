@@ -1,16 +1,19 @@
 ---
 name: "cady-gtm-content-production"
-description: "Text content craft. Create, edit or review written content. Use when: the user needs copy, an article, post, script or caption. Not for: visual design (use `cady-design-method`) or channel-specific outreach."
+description: "Text content craft. Create, edit or review public written content. Use when: the user needs a post (LinkedIn, X or blog), article, script, caption or website copy. Not for: a direct message to one person (use `cady-gtm-linkedin-message`), visual design (use `cady-design-method`) or other outreach."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.content_production"
-  version: "510047ab796ee0f3e8bc87ee7ad0ae85e52819d52f4e35e6ce93bf863f939a0a"
+  version: "b81e524e2b7aaceb11d899d2663d88a9b9ea2fac5549aa5eccd6075bc38fd488"
+  library: "3beca7fa80e90672"
   function: "gtm"
 ---
 # Text content craft
 
-Create, edit or review written content. Use when: the user needs copy, an article, post, script or caption. Not for: visual design (use `cady-design-method`) or channel-specific outreach.
+**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.content_production": "b81e524e2b7aaceb11d899d2663d88a9b9ea2fac5549aa5eccd6075bc38fd488"}})`
+
+Create, edit or review public written content. Use when: the user needs a post (LinkedIn, X or blog), article, script, caption or website copy. Not for: a direct message to one person (use `cady-gtm-linkedin-message`), visual design (use `cady-design-method`) or other outreach.
 
 ## Content production
 
@@ -21,5 +24,3 @@ Create, edit or review written content. Use when: the user needs copy, an articl
 - **Scope:** Company-neutral craft for written text: posts, articles, copy, scripts and captions. This is a text subset, not a full media method. Use the selected host and existing owners for media production, strategy and publication.
 - **Tool delivery:** Honor chosen tools and reuse sufficient host guidance; choose additional tooling for a material fidelity, control or delivery need. Give each operation relevant sources, reference roles, intended result and preservation constraints. Keep useful editable masters and exact delivery versions. Verify changed content and affected dependencies in the receiving format; an export is not an update to its external source. State unresolved limits accurately; production does not establish publication, acceptance or audience impact.
 - **Writing:** Make the subject and reason to care clear without assuming the reader knows the request. Deliver the opening's promise; organize around consequential reader questions. Use audience language supported by evidence. Distinguish attributed remarks, recurring findings and hypotheses; frequency alone does not establish the strongest message. For persuasion, connect desired change, advantage and proof; address relevant hesitation without invented urgency. Advice needs an executable method, example or decision criterion. Change weak arguments before polishing. Remove repetition and adjacent material that dilutes the purpose; preserve necessary qualifications. Reuse current writing references or company context's canonical-source reads. Apply user/company rules to body, titles, captions and notes. Use concrete actors, actions and consequences. Cut hype, filler and forced patterns while retaining useful comparisons, natural lists and personality. Check meaning, rhythm and voice in placement; preserve copy that works.
-
-**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>"})`

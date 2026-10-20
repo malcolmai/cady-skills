@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "ebb87aa0ea5b3d7842b5e088c9d43d6e7ee8529146beac8d9961fdead6e65ea1"
+  version: "4a87c8cb14835354b04242dff943b740daae0e05aa0d65f990744333ea3439f5"
+  library: "3beca7fa80e90672"
   function: "engineering"
 ---
 # Independent review and native helper orchestration
+
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "4a87c8cb14835354b04242dff943b740daae0e05aa0d65f990744333ea3439f5"}})`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge, or a lead coordinates native helpers. Not for: root-causing a bug (use `cady-engineering-debugging`) or triaging a bug report (use `cady-qa-triage`).
 
@@ -30,5 +33,3 @@ Independently review a diff or artifact: rerun its checks, rank findings and ret
 ## Shared execution sections
 
 Read these sections of `cady-core-execution`: Execution guidance.
-
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>"})`

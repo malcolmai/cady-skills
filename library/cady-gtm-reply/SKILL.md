@@ -1,16 +1,19 @@
 ---
 name: "cady-gtm-reply"
-description: "Reply in a live thread. Use when: Triage and answer an inbound reply in a live email or LinkedIn thread: interest, objection, referral, not now or stop. Not for: First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups (use `cady-gtm-warm-email`)."
+description: "Reply in a live thread. Use when: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop. Not for: First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups (use `cady-gtm-warm-email`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "24634d2f3e89c8c601a50923700a318c6b2a159d5542409a846e82318006bf72"
+  version: "967274eacfebba9b3d4e7275710f1dfbe11d19e8e84dd7657a5b20a1b399b489"
+  library: "3beca7fa80e90672"
   function: "gtm"
 ---
 # Reply in a live thread
 
-Triage and answer an inbound reply in a live email or LinkedIn thread: interest, objection, referral, not now or stop.
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "967274eacfebba9b3d4e7275710f1dfbe11d19e8e84dd7657a5b20a1b399b489"}})`
+
+Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop.
 
 **Not for:** First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups (use `cady-gtm-warm-email`).
 
@@ -18,8 +21,6 @@ Triage and answer an inbound reply in a live email or LinkedIn thread: interest,
 
 ## Always
 
-- Read the sender's voice pack first (crm.manage_voice_pack, mode read) and write in it.
-- On LinkedIn and WhatsApp write as people chat: a few short messages, one thought each; never split one thought or merge replies. A connection note is one message.
 - In a review body, put a line with only --- between messages.
 
 ## Inputs
@@ -36,7 +37,7 @@ Triage and answer an inbound reply in a live email or LinkedIn thread: interest,
 
 ## Procedure
 
-1. Work this item under the run sequence (claim, checkpoint, close); read `cady-core-run-sequence` if it is not in your context.
+1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
 2. Scan replies with crm.list_parties mode interactions; read the thread with crm.find_communications and crm.get_communication, then crm.get_party. Exclude and explain anything the permission rules block.
 3. Triage the newest inbound message before drafting anything. Pick one class; when several apply, stop wins, then wrong person, then objection over positive. File it with crm.record_interactions (sourceRef the provider message id) if outcome_check has not.
 
@@ -77,9 +78,4 @@ Triage and answer an inbound reply in a live email or LinkedIn thread: interest,
 
 ## References
 - [Copy](references/copy.md)
-- [Outcome check](../../references/outcome-check.md)
-- [Permission](../../references/permission.md)
-- [Release](../../references/release.md)
-- [Shared core](../../references/shared-core.md)
-
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "24634d2f3e89c8c601a50923700a318c6b2a159d5542409a846e82318006bf72"}})`
+- [Outreach message rules](../../references/outreach-message-rules.md)

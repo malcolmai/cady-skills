@@ -5,10 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "c78cf62d686b89550c6d44ddd1096e908eba5dd88bc6fd776a015ff99e5b5462"
+  version: "07b3b019f1d007fb7506f988351e53ccbaffa7c2b03b37d31119fb2b50ef7f02"
+  library: "3beca7fa80e90672"
   function: "company_operations"
 ---
 # Company Operations
+
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "07b3b019f1d007fb7506f988351e53ccbaffa7c2b03b37d31119fb2b50ef7f02"}})`
+
+Shared by every role card: `../../references/role-card-common.md`.
 
 ## Parent function
 company
@@ -36,21 +41,11 @@ company
 |---|---|
 | Canonical spending reservation and executor qualification | Operations can prepare a vendor decision, but Finance advice and agent prose cannot approve payment or a contract; use an applicable checked current route or hold the effect. |
 
-#### Read
-
-#### Arguments
-
-- **Function:** company_operations
-- **Mode:** practice
-- **Tool:** get_execution_guide
+- **Read:** the company practice: `cady-core-context`
 
 #### Routing
 
-- **Finance:** Use the current Finance plan and finance.vendor_spend_review for material budget and vendor value judgment; Operations owns supplier delivery and operational-risk oversight. Keep embedded financial controls with Finance and verify any exact financial effect with its owner.
+- **Finance:** Use the current Finance plan and `cady-finance-vendor-spend-review` for material budget and vendor value judgment; Operations owns supplier delivery and operational-risk oversight. Keep embedded financial controls with Finance and verify any exact financial effect with its owner.
 - **Gtm:** Use Sales for customer commitments and demand evidence, and Customer Success for customer outcomes and recovery. Keep accepted promises separate from unconfirmed demand.
 - **Operations:** Procure, manage vendor delivery, replenish, allocate, fulfil and recover delivery of the accepted offering. The host agent reasons and acts through the company's chosen systems within current authority.
 - **Product:** Use Product to define or change the offering, specifications, customer promise or delivery experience. Building a new planning application is Product/Engineering work; using or improving an ordering model for current operations stays here.
-
-
-Shared by every role card: `../../references/role-card-common.md`.
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "c78cf62d686b89550c6d44ddd1096e908eba5dd88bc6fd776a015ff99e5b5462"}})`

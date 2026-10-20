@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_shared"
-  version: "493e1bb15bb0ffa230d2390514d7df8c61d47cc9c34c2f9e9478907101068d90"
+  version: "0efed96bb179f8c6a6c7fe153a44ef6b9d07853bbc2587ea60482870864fa4a3"
+  library: "3beca7fa80e90672"
   function: "product"
 ---
 # Research craft
+
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "0efed96bb179f8c6a6c7fe153a44ef6b9d07853bbc2587ea60482870864fa4a3"}})`
 
 Create or update a company-library research piece in Competition or Technology.
 
@@ -59,5 +62,3 @@ Create or update a company-library research piece in Competition or Technology.
 - research piece reference
 - source references
 - **Transition:** updated library piece with verified owner receipt
-
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "493e1bb15bb0ffa230d2390514d7df8c61d47cc9c34c2f9e9478907101068d90"}})`

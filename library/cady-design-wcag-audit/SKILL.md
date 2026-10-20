@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.design.wcag_audit"
-  version: "85787025f70eec0f5e71b3fb8cdb5351c13caa55b7860261bc180277a34814b4"
+  version: "74a70854d40ac222441e163983a2c881ed055dd66368b96d0f9c129a19bb23c8"
+  library: "3beca7fa80e90672"
   function: "design"
 ---
 # Accessibility audit (WCAG 2.2 AA)
+
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "74a70854d40ac222441e163983a2c881ed055dd66368b96d0f9c129a19bb23c8"}})`
 
 Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 
@@ -59,5 +62,3 @@ Audit a web or app interface against WCAG 2.2 AA with real tools and report rank
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** findings go to the design or engineering owner; QA verifies each fix
-
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "85787025f70eec0f5e71b3fb8cdb5351c13caa55b7860261bc180277a34814b4"}})`

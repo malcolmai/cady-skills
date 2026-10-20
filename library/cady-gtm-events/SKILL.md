@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "83921fcff131853b1682995f56a58deee753178e1d009422949d8a3af3765a35"
+  version: "88325f9e87bfedf618a24e9df0ea4a688c145c355d508816ac89fb09616fcc9e"
+  library: "3beca7fa80e90672"
   function: "gtm"
 ---
 # Events: attend or host
+
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "88325f9e87bfedf618a24e9df0ea4a688c145c355d508816ac89fb09616fcc9e"}})`
 
 Choose, prepare for or host an event that can advance the company purpose through real conversations.
 
@@ -76,5 +79,3 @@ Choose, prepare for or host an event that can advance the company purpose throug
 
 - receipt:<importCompletionReceiptId> when a CRM List is promised
 - **Transition:** the claim holder reports preparation and, after the event, learning
-
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "83921fcff131853b1682995f56a58deee753178e1d009422949d8a3af3765a35"}})`

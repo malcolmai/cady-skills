@@ -5,10 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "e9130d05b06074306a3c2c9c0a1f0702041d7d9a6b6c9801fbb9e57091727101"
+  version: "715c54454eb52f60ef42a2781d624af7ffdb2d7c56b516e6aae8b13c175810ba"
+  library: "3beca7fa80e90672"
   function: "customer_success"
 ---
 # Customer Success
+
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "715c54454eb52f60ef42a2781d624af7ffdb2d7c56b516e6aae8b13c175810ba"}})`
+
+Shared by every role card: `../../references/role-card-common.md`.
 
 ## Parent function
 gtm
@@ -62,13 +67,10 @@ gtm
 |---|---|---|---|---|---|
 | Separate an unachieved promised outcome from successful completion with no need for frequent use; renewal timing alone does not distinguish them. | Re-read the owner result and relevant customer outcome at a suitable time. Record resolved, still unknown or accepted residual risk with the accountable owner, source refs and next decision; do not infer success from task completion. | Act only under the selected owner's authority and real capacity. A customer reply follows its existing conversation; the method does not send, schedule check-ins or start a watcher. | If delivery failed, route a bounded remedy to its delivery/Product owner; if only evidence is missing, ask the owner for one discriminating check. Keep any commercial next action with Sales and any task/result with Company Work. | A renewal is approaching after a one-off customer job should have completed. | Read the current agreement or Sales commitment, CRM identity, permitted Interaction/support history, and the Product or delivery outcome evidence. Missing or stale evidence means value is unknown, not failed. |
 
+- **Rule:** Frameworks are scoped perspectives, never universal truth, authority or personalities to imitate. Owner evidence controls. Prefer directional learning criteria over false precision. Select for the decision, including unlisted methods. ACTIVE status or populated fields cannot validate hypotheses. Preserve sound accepted choices unless the request or evidence warrants revision. Questions and outputs guide the work; they are not required record fields. Advice alone needs no persisted state; retain material decisions through their existing owner when warranted. For CUSTOMER outreach, use the matching `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`; otherwise match the motion's described use case.
 
 ### Orientation
 
 - Define expected value for the relevant participants in context; judge outcomes, not usage alone.
 - Decide whether value is realized, uncertain or missing; explain gaps and choose a feasible response, including no action or exit.
 - Verify the response and route material learning to the owner able to change its cause, with a disposition and verification point.
-
-
-Shared by every role card: `../../references/role-card-common.md`.
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "e9130d05b06074306a3c2c9c0a1f0702041d7d9a6b6c9801fbb9e57091727101"}})`

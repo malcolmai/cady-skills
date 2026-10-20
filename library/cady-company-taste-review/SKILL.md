@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "c9eb115f6bbb46c98d1b63876f880e09432f58069a27f2ad0a255c8d9936c8d5"
+  version: "f346045709137d20e5ceca656a7f54045e3cee07780985216072cf21bf3ebab9"
+  library: "3beca7fa80e90672"
   function: "company"
 ---
 # Taste review
+
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "f346045709137d20e5ceca656a7f54045e3cee07780985216072cf21bf3ebab9"}})`
 
 Judging or choosing between artifacts, agent designs or prompt changes where quality depends on judgment.
 
@@ -61,5 +64,3 @@ Judging or choosing between artifacts, agent designs or prompt changes where qua
 - company:work:<workId>
 - decision:taste:<medium>-<key>
 - **Transition:** the judgment is recorded on the item under review; a preference becomes a taste decision
-
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "c9eb115f6bbb46c98d1b63876f880e09432f58069a27f2ad0a255c8d9936c8d5"}})`

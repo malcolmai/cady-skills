@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "245e5e3c2a6a91750bdb4d0f4cbc8f55d296a48000ce423f9a8c524dd8bc4cf4"
+  version: "ce45993e9bb20afb089e63e904ddc69f0561d36199478b9fbc752bf63bb37067"
+  library: "3beca7fa80e90672"
   function: "finance"
 ---
 # Budget and cash review
+
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "ce45993e9bb20afb089e63e904ddc69f0561d36199478b9fbc752bf63bb37067"}})`
 
 Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations.
 
@@ -57,5 +60,3 @@ Draft or update a budget, spend allocation or decision forecast sized to the com
 - company:plan:finance_plan
 - company:work:<workId>
 - **Transition:** return a recommendation or verified plan update; spending remains separate
-
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "245e5e3c2a6a91750bdb4d0f4cbc8f55d296a48000ce423f9a8c524dd8bc4cf4"}})`

@@ -1,16 +1,19 @@
 ---
 name: "cady-company-review"
-description: "Company strategy and operating review. Review company setup, direction, allocation and progress. Use when: a company needs an evidence-based operating review or first setup. Not for: one executive decision (use company.executive_review)."
+description: "Company strategy and operating review. Review company setup, direction, allocation and progress. Use when: a company needs an evidence-based operating review or first setup. Not for: one executive decision (use `cady-company-executive-review`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.company_review"
-  version: "9d653d82ac95971bedc6ed3fa42464ac54fb37cab371c69989502470720859e7"
+  version: "5d196af906af84580b4f0e1090d43fc1d7ccaf709add039dd1bab26ce986ead0"
+  library: "3beca7fa80e90672"
   function: "company"
 ---
 # Company strategy and operating review
 
-Review company setup, direction, allocation and progress. Use when: a company needs an evidence-based operating review or first setup. Not for: one executive decision (use company.executive_review).
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.company_review": "5d196af906af84580b4f0e1090d43fc1d7ccaf709add039dd1bab26ce986ead0"}})`
+
+Review company setup, direction, allocation and progress. Use when: a company needs an evidence-based operating review or first setup. Not for: one executive decision (use `cady-company-executive-review`).
 
 ## Company review
 
@@ -23,7 +26,7 @@ Review company setup, direction, allocation and progress. Use when: a company ne
 - **Comparison:** For fair authorized evaluation use equivalent representative tasks and inputs; record plan/version, date, environment, human assistance, failures and recovery where material. Expert or agent inspection is not customer validation. Product tests, contacts, purchases and publication require their existing owner authority; this method grants none.
 - **Profile:** At useful depth compare customer job and audience, promise, mechanism and workflow, material capabilities and boundaries, outcomes and proof, plan/access/commercial terms, demonstrated strengths, why customers stay and switching friction. Separate observed, source-reported, inferred and unknown claims; include the strongest credible counterevidence and where a rival may win. Not observed in a test or plan differs from nonexistent. Do not invent differentiation or a moat from architecture or a feature list.
 - **Provenance:** Keep exact source-owner refs and passage or media locators, including screenshot state and video/audio timestamps. Distinguish original observation or publication date from capture date; retain tested edition, plan and version where relevant. A screenshot and transcription of the same post are one source. File updated_at or version does not prove current rival capability or price. Refresh consequential changeable facts within the decision scope, or qualify/hold the claim when the original cannot be checked; no universal expiry cutoff. A qualified historical claim can stand; do not require current-price or capability refresh before a narrow edit or render check that makes no currentness claim.
-- **Result:** Before handoff or adoption, check material comparisons against exact sources, preserving reported versus observed evidence and source refs; repair affected claims and artifacts. Use a bounded independent review when consequence or doubt warrants it. Keep a reviewable profile and synthesis in the chosen existing document system: decision scope and as-of date, exact sources, qualified claims, uncertainty and counterevidence, relevant domain conclusion, reversal evidence and next action. Cite it from current work or strategy; update the same current artifact and retain superseded history rather than creating a competing profile or backlog. Stop at sufficient scoped evidence or name the exact unresolved dependency. Do not add scheduled monitoring unless the decision owner chooses to keep that evidence fresh (`cady-company-decision-questions`).
+- **Result:** Before handoff or adoption, check material comparisons against exact sources, preserving reported versus observed evidence and source refs; repair affected claims and artifacts. Use a bounded independent review when consequence or doubt warrants it. Keep a reviewable profile and synthesis in the chosen existing document system: decision scope and as-of date, exact sources, qualified claims, uncertainty and counterevidence, relevant domain conclusion, reversal evidence and next action. Cite it from current work or strategy; update the same current artifact and retain superseded history rather than creating a competing profile or backlog. Stop at sufficient scoped evidence or name the exact unresolved dependency. Do not add scheduled monitoring unless the decision owner chooses to keep that evidence fresh.
 - **Retrieval:** Use an existing neutral Competitors CRM list if present and exact source refs; CRM keeps identity and refs, not source bodies. Read exact accessible file refs with files.read_text; a find-by-person Files operation is not served. Metadata search is not OCR, indexing or transcription; search_platform covers only its supported index, so reopen the original through its source owner when needed. An empty list is not evidence of no competitors and does not require list creation. Received email bodies stay with Interactions or the mailbox; original screenshots and media stay with Files or Drive.
 - **Scope:** For a material strategy choice, assess which customer alternatives could change it. Start with the decision, offering, customer job, comparison scope and what a finding could change. Read the current scoped synthesis and trace exact sources first; reuse sufficient work. A narrow factual copyedit or artifact correction does not reopen strategy or require competitor research, testing or list creation; capture-only, retrieval and other bounded tasks also stay within their requested scope.
 - **Evidence:** Start with current Company direction, intended economics, obligations and selected scope. Read relevant get_company_work goals, tasks and results across the company, then material domain/source evidence. An empty current-session work list or no due expectation is not absence of ready work; inspect bounded ready finite tasks, recoverable claims, agent repair and maintenance under existing authority. Follow relevant pagination or disclose incomplete coverage. Reuse sufficient context; inspect changes since the last successful review and outstanding commitments. Compare actual results and dates to intended conditions, deadlines and dependencies; task counts, active status and file creation do not establish business effectiveness.
@@ -44,5 +47,3 @@ Review company setup, direction, allocation and progress. Use when: a company ne
 ## Shared execution sections
 
 Read these sections of `cady-core-execution`: Execution guidance.
-
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>"})`

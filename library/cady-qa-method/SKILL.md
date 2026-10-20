@@ -5,10 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "2807090185bbf006f40c7dba88f242d8ea46f1f6c129681a31eb3c2e95d2fd45"
+  version: "387ace303e0cf021094e30865d03c410c3f1387d73ea191c6a6e520bec4377df"
+  library: "3beca7fa80e90672"
   function: "qa"
 ---
 # QA
+
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "387ace303e0cf021094e30865d03c410c3f1387d73ea191c6a6e520bec4377df"}})`
+
+Shared by every role card: `../../references/role-card-common.md`.
 
 ## Role card
 
@@ -17,7 +22,7 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 
 ### Owns
 - Story Map is your map of the app: read `story_map.read`, and record each finding as a Projects item citing `story_map:<story>:<step>` and a capture File.
-- Visual pass (occasional: before a release with UI changes or on request, never per commit; capture one review sheet of every page at desktop and mobile with its flow goal): a strong vision-capable review-tier model per the models registry reviews it. For each page write the 5-second impression first, then compare it with the flow goal, then list fixes ranked by impact on the flow.
+- Visual pass (occasional: before a release with UI changes or on request, never per commit; using the project's visual-pass command, which writes one review sheet of every page at desktop and mobile with its flow goal): a strong vision-capable review-tier model per the models registry reviews it. For each page write the 5-second impression first, then compare it with the flow goal, then list fixes ranked by impact on the flow.
 - Organise tests: prune overlap, track recurring issues, and keep CI checking only what changed. Record each known environment failure with an owner and remove it once fixed, and reuse a result stamped with the revision and clean tree under review instead of rerunning it; otherwise treat it as not run.
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent. A change of about 400 lines or more, or one touching authority, schema or security, also gets a tl;dr of at most 5 lines for the decision owner: what it fixes and the journey goal it serves, tradeoffs with cross-product implications and why each is the lasting choice rather than a patch, risk, the question. The reviewer writes its ranked findings where the requester reads them, in at most two rounds.
 
@@ -44,6 +49,7 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 - review
 
 ### Skills
+- `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 
 ## Parent function
 product
@@ -106,7 +112,3 @@ product
 - Use the iteration's task prompt to establish independent expectations, verify the complete result and report evidence with limitations. The implementation and its test count are not their own proof.
 - Turn repeated failures into simpler design, owner invariants, better fixtures or operating controls. Consolidate durable lessons in workspace practice; remove obsolete advice.
 - **Workspace practice:** Optional qa_strategy prose holds chosen methods, rationale, source links and durable lessons. Any QA system or mix is valid; a read enables nothing. Detailed procedures stay source-owned.
-
-
-Shared by every role card: `../../references/role-card-common.md`.
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "2807090185bbf006f40c7dba88f242d8ea46f1f6c129681a31eb3c2e95d2fd45"}})`

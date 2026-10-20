@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
-  version: "57889cea4354221e9ec8e354274feecddd2f142f5a9c8e46a275ab474bd311ae"
+  version: "8efff1955c090b410e992b43ce3e7f7c7615c1f5e72fa7bca4b26d36c234e25e"
+  library: "3beca7fa80e90672"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
+
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "8efff1955c090b410e992b43ce3e7f7c7615c1f5e72fa7bca4b26d36c234e25e"}})`
 
 Research, independently check and record one compliance requirement as a Cady Projects decision.
 
@@ -57,5 +60,3 @@ Research, independently check and record one compliance requirement as a Cady Pr
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** current requirement decision or hypothesis with a dated review
-
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "57889cea4354221e9ec8e354274feecddd2f142f5a9c8e46a275ab474bd311ae"}})`

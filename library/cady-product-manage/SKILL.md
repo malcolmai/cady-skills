@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "14e7bdccccc944838af41f2b0ae3cc13a33ea2a61fecf5a044a7ad64bcb8cfee"
+  version: "1c2738566abf1c1c4984862dd2226128b764b573df6356a1147dbe3cf5dc421a"
+  library: "3beca7fa80e90672"
   function: "product"
 ---
 # Product management and discovery
+
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "1c2738566abf1c1c4984862dd2226128b764b573df6356a1147dbe3cf5dc421a"}})`
 
 Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
 
@@ -64,5 +67,3 @@ Decide what to build, for whom and why; run discovery and hypotheses; plan each 
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the claim holder reports the decision, hypothesis or release verdict and its evidence
-
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "14e7bdccccc944838af41f2b0ae3cc13a33ea2a61fecf5a044a7ad64bcb8cfee"}})`

@@ -1,14 +1,19 @@
 ---
 name: "cady-design-method"
-description: "Design and review user-facing experiences, visual direction and rendered artifacts. Use when: a product surface, marketing page, visual, deck or motion needs audience-fit design and inspection. Not for: a WCAG accessibility audit (use `cady-design-wcag-audit`), copywriting (use the content production guide) or functional QA (use `cady-qa-method`)."
+description: "Design and review user-facing experiences, visual direction and rendered artifacts. Use when: a product surface, marketing page, visual, deck or motion needs audience-fit design and inspection. Not for: a WCAG accessibility audit (use `cady-design-wcag-audit`), copywriting (use `cady-gtm-content-production`) or functional QA (use `cady-qa-method`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "f4f6505e96074e597d05c73d1aa4f5a7deb9f4daa8880bd19139a04e58e3b0f3"
+  version: "3dff874889c0b49660005a987177658b8afa2425b3206f20531d0be00270ae61"
+  library: "3beca7fa80e90672"
   function: "design"
 ---
 # Design
+
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "3dff874889c0b49660005a987177658b8afa2425b3206f20531d0be00270ae61"}})`
+
+Shared by every role card: `../../references/role-card-common.md`.
 
 ## Role card
 
@@ -20,6 +25,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 
 ### Decides
 - Make design decisions yourself; take product questions to the PM.
+- When a decision you own needs evidence, use `cady-company-decision-questions` (optional). Whether that evidence needs refreshing is your call.
 
 ### Escalates
 
@@ -118,8 +124,3 @@ product
 | Generate an image, illustration or poster; edit an image background, direct artwork and review rendered text. | generated_asset | Generated visual asset |
 | Design motion or video for audience understanding, standalone media or website embeds. | motion_video | Motion or video |
 | Design an investor pitch deck or fundraising presentation with a coherent investment argument. | fundraising_deck | Investor fundraising deck |
-
-
-
-Shared by every role card: `../../references/role-card-common.md`.
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "f4f6505e96074e597d05c73d1aa4f5a7deb9f4daa8880bd19139a04e58e3b0f3"}})`

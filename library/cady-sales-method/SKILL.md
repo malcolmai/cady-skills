@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "8206de5a9de814932250b170171c4b0eb2ae7335e21aab97bd6f0ad6147acc76"
+  version: "0f07522199fc353deb59085fb2b2dc01289db631b1a06a4a6dcdb62f9cf140ed"
+  library: "3beca7fa80e90672"
   function: "sales"
 ---
 # Sales
+
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "0f07522199fc353deb59085fb2b2dc01289db631b1a06a4a6dcdb62f9cf140ed"}})`
+
+Shared by every role card: `../../references/role-card-common.md`.
 
 ## Parent function
 gtm
 
 ## Selected judgment
+- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership before message preparation; use `cady-gtm-tam-map` for the reviewed import, completion receipt and membership readback. Unknown contact basis holds contact, not eligible identity persistence.
 - Establish the actual buying trigger, current alternative, buyer, user and approver, budget and switching barriers. For outreach, bind the exact relationship, recipient, thread and source to current contact permission. Qualification and permission are different decisions; a plausible buyer is not a permitted send.
 
 ## Domain method
@@ -56,6 +62,7 @@ gtm
 | Christensen Institute — Jobs to Be Done |  | https://www.christenseninstitute.org/theory/jobs-to-be-done/ |
 
 - **Use when:** Problem, segment or value mechanism is uncertain; useful for people, companies and aggregate audiences.
+- **Rule:** Frameworks are scoped perspectives, never universal truth, authority or personalities to imitate. Owner evidence controls. Prefer directional learning criteria over false precision. Select for the decision, including unlisted methods. ACTIVE status or populated fields cannot validate hypotheses. Preserve sound accepted choices unless the request or evidence warrants revision. Questions and outputs guide the work; they are not required record fields. Advice alone needs no persisted state; retain material decisions through their existing owner when warranted. For CUSTOMER outreach, use the matching `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`; otherwise match the motion's described use case.
 
 ### Stakeholder decision
 
@@ -94,7 +101,4 @@ gtm
 | Winning by Design — SPICED | Commercial methodology; a complete record is not evidence of buyer commitment. |  | https://winningbydesign.com/spiced-framework/ |
 
 - **Use when:** An identified customer or stakeholder conversation needs structured discovery and a credible next commitment.
-
-
-Shared by every role card: `../../references/role-card-common.md`.
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "8206de5a9de814932250b170171c4b0eb2ae7335e21aab97bd6f0ad6147acc76"}})`
+- **Rule:** Frameworks are scoped perspectives, never universal truth, authority or personalities to imitate. Owner evidence controls. Prefer directional learning criteria over false precision. Select for the decision, including unlisted methods. ACTIVE status or populated fields cannot validate hypotheses. Preserve sound accepted choices unless the request or evidence warrants revision. Questions and outputs guide the work; they are not required record fields. Advice alone needs no persisted state; retain material decisions through their existing owner when warranted. For CUSTOMER outreach, use the matching `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`; otherwise match the motion's described use case.

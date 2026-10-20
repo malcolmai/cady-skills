@@ -1,6 +1,6 @@
 # Contributing
 
-Pull requests are welcome. Edit the skill under `library/` (or the front door under `skills/cady/`)
+Pull requests are welcome. Edit the skill under `library/` (or the front door under `plugins/cady/skills/cady/`)
 and say what the change improves.
 
 These files are generated from Cady's own method source and rewritten on every release. When a pull

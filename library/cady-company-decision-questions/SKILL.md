@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
-  version: "21508fd6beec1ca00e54bc3be75cfb28ecc34d00c83c9bc2471601680d1a47aa"
+  version: "6d60ab76816dd65bc406d84bbc1aa6a6fa393951f4c35da85c994ad92b7e510e"
+  library: "3beca7fa80e90672"
   function: "company"
 ---
 # Key questions and research
+
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "6d60ab76816dd65bc406d84bbc1aa6a6fa393951f4c35da85c994ad92b7e510e"}})`
 
 A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 
@@ -54,5 +57,3 @@ A goal or decision you own needs evidence: frame its key questions and pick the 
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the decision owner acts on the answer; strategy implications go to the Executive
-
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "21508fd6beec1ca00e54bc3be75cfb28ecc34d00c83c9bc2471601680d1a47aa"}})`

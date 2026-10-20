@@ -1,18 +1,21 @@
 ---
 name: "cady-company-decision-check"
-description: "Decision second look. Use when: You recorded an important decision others will build on. Not for: L3 execution or re-deciding the question; use `cady-company-executive-review` for an executive decision."
+description: "Decision layers and second look. Use when: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it. Not for: The Executive's full founder-level decision process (`cady-company-executive-review`) or re-deciding a settled question."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "0b4a4004599c826afd42db08b51d1665074d5421e741f2584901d058e8420952"
+  version: "8824824eb29bc291d22c84d80318d8008701b0cf00a836ff9a9eed3221d9ea62"
+  library: "3beca7fa80e90672"
   function: "company"
 ---
-# Decision second look
+# Decision layers and second look
 
-You recorded an important decision others will build on.
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "8824824eb29bc291d22c84d80318d8008701b0cf00a836ff9a9eed3221d9ea62"}})`
 
-**Not for:** L3 execution or re-deciding the question; use `cady-company-executive-review` for an executive decision.
+Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
+
+**Not for:** The Executive's full founder-level decision process (`cady-company-executive-review`) or re-deciding a settled question.
 
 **Unit of work:** one recorded decision. **Kind:** strategy. **Parallel:** yes. **Can release:** no. 
 
@@ -25,10 +28,13 @@ You recorded an important decision others will build on.
 
 ## Procedure
 
-1. Take one fresh look before acting, with a fresh-context subagent if available (the same model is fine). Give it the decision record only: goal served, chosen option, alternatives, key assumption, evidence cited.
-2. Ask four things: does it make sense, is it well justified, does it consider nuance, and does it avoid diluting focus beyond the current goals and decisions.
-3. Fix what the look finds, record what it found or changed in the decision's rechecked field (one short note), and act. Nothing waits on the look.
-4. Raise an owner ask only if the look finds something it cannot resolve.
+1. Find the decision's layer. L1 is the owner's: goals with a target and date, ICP and offer, stage and quality bar, spend and authority envelope, anything irreversible or visible at scale. Propose it with options and a recommendation as one batched ask and keep working on everything that does not wait on it. Current owner records decide L1; an L2 choice that contradicts or extends an L1 one is an L1 question.
+2. L2 is the function head's: how the function pursues an L1 goal. Restate the outcome one level up from the parent goal, company direction and current decisions (get_company_work decisions, filtered by subject when known), choose, and record a decision with alternatives, the key assumption and what would reverse it. L3 is any agent's: how one task is done; take the decided change narrowly with the owner's exact constraints and finish line, and flag evidence it is wrong rather than reopen it. Asking the owner an L2 or L3 question is a stall, not caution. Resolve an L2 or L3 conflict by recording a decision that cites both; only a conflict touching L1 becomes one ask.
+3. For an important decision others will build on, take the second look below; layers put each choice with the cheapest competent decider, and the look catches oversimplification before it spreads.
+4. Take one fresh look before acting, with a fresh-context subagent if available (the same model is fine). Give it the decision record only: goal served, chosen option, alternatives, key assumption, evidence cited.
+5. Ask four things: does it make sense, is it well justified, does it consider nuance, and does it avoid diluting focus beyond the current goals and decisions.
+6. Fix what the look finds, record what it found or changed in the decision's rechecked field (one short note), and act. Nothing waits on the look.
+7. Raise an owner ask only if the look finds something it cannot resolve.
 
 ## Acceptance
 
@@ -46,5 +52,3 @@ You recorded an important decision others will build on.
 
 - company:work:<workId>
 - **Transition:** fix what was found and act; ask the owner only for what cannot be resolved
-
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "0b4a4004599c826afd42db08b51d1665074d5421e741f2584901d058e8420952"}})`

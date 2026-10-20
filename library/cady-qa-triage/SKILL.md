@@ -5,10 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
-  version: "ae7d1d38d8a49a4ab546da30ee15cf9a1934b75b37eb988a72952bc89cfa9fba"
+  version: "87364a26ec80e6f4faa11bbe6749ee00cae7174aba5bd7c3a66a355ce58ccead"
+  library: "3beca7fa80e90672"
   function: "qa"
 ---
 # Bug and flaky-test triage
+
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "87364a26ec80e6f4faa11bbe6749ee00cae7174aba5bd7c3a66a355ce58ccead"}})`
 
 Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.
 
@@ -54,5 +57,3 @@ Rate a bug's severity, write a reproducible report, triage a flaky test, or veri
 - company:work:<workId>
 - file:<fileId>
 - **Transition:** the finding goes to its fix owner with severity and dueDate; QA records the close verdict
-
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "ae7d1d38d8a49a4ab546da30ee15cf9a1934b75b37eb988a72952bc89cfa9fba"}})`

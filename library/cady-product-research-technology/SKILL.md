@@ -1,18 +1,21 @@
 ---
 name: "cady-product-research-technology"
-description: "Technology research. Use when: Assess technologies or technical approaches for a concrete product use case. Not for: Technology selection policy, implementation plans without authorization, or vendor summaries; use skill.integration_vendor for company tool choice."
+description: "Technology research. Use when: Assess technologies or technical approaches for a concrete product use case. Not for: Technology selection policy, implementation plans without authorization, or vendor summaries; use `cady-engineering-integrations` (references/vendor.md) for company tool choice."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_technology"
-  version: "ce3e0352491369fd39733190fbe32f26c456cd182e8c1ac228cee045d6cbd57e"
+  version: "1a48a9468c1ae3bf5c8d0060f8df5c837f3620ce230c91f8a7cb69a23bee3028"
+  library: "3beca7fa80e90672"
   function: "product"
 ---
 # Technology research
 
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "1a48a9468c1ae3bf5c8d0060f8df5c837f3620ce230c91f8a7cb69a23bee3028"}})`
+
 Assess technologies or technical approaches for a concrete product use case.
 
-**Not for:** Technology selection policy, implementation plans without authorization, or vendor summaries; use skill.integration_vendor for company tool choice.
+**Not for:** Technology selection policy, implementation plans without authorization, or vendor summaries; use `cady-engineering-integrations` (references/vendor.md) for company tool choice.
 
 **Unit of work:** one product use case and technology question. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
 
@@ -61,5 +64,3 @@ Assess technologies or technical approaches for a concrete product use case.
 
 ## References
 - Apply `cady-product-research-shared` (`../cady-product-research-shared/SKILL.md`).
-
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "ce3e0352491369fd39733190fbe32f26c456cd182e8c1ac228cee045d6cbd57e"}})`

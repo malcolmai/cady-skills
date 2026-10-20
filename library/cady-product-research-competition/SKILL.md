@@ -1,16 +1,19 @@
 ---
 name: "cady-product-research-competition"
-description: "Competition research. Use when: Understand the actual alternatives customers use or could choose for a relevant product question. Not for: A vendor directory, generic market-size estimate, or policy for how the company must compete; use `cady-product-manage` for product direction."
+description: "Competition research. Use when: Find who the competitors and alternatives are and how they price, position and win, for a product or pricing question. Not for: A vendor directory, generic market-size estimate, or policy for how the company must compete; use `cady-product-manage` for product direction."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_competition"
-  version: "e06a2f453631236a7128d5ecaf46c2e11afa89c46730b7c4c1dafdb3c0f5cfcf"
+  version: "d3767019ce69c14bd864bcbc197fa130893bba586b8a32590cc1f94ae5b325d6"
+  library: "3beca7fa80e90672"
   function: "product"
 ---
 # Competition research
 
-Understand the actual alternatives customers use or could choose for a relevant product question.
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_competition": "d3767019ce69c14bd864bcbc197fa130893bba586b8a32590cc1f94ae5b325d6"}})`
+
+Find who the competitors and alternatives are and how they price, position and win, for a product or pricing question.
 
 **Not for:** A vendor directory, generic market-size estimate, or policy for how the company must compete; use `cady-product-manage` for product direction.
 
@@ -61,5 +64,3 @@ Understand the actual alternatives customers use or could choose for a relevant 
 
 ## References
 - Apply `cady-product-research-shared` (`../cady-product-research-shared/SKILL.md`).
-
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_competition": "e06a2f453631236a7128d5ecaf46c2e11afa89c46730b7c4c1dafdb3c0f5cfcf"}})`

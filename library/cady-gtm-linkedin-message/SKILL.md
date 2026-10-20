@@ -1,25 +1,26 @@
 ---
 name: "cady-gtm-linkedin-message"
-description: "LinkedIn message. Use when: Prepare a connection note, a first message to a connection, or its single follow-up. Not for: Email or an active email thread; replies in a live thread use `cady-gtm-reply`, and cold email uses `cady-gtm-cold-email-cycle`."
+description: "LinkedIn message. Use when: Draft a LinkedIn connection note or direct message to one person, or its single follow-up. Not for: Public LinkedIn posts (written content craft), email or an active email thread; replies in a live thread use `cady-gtm-reply`, and cold email uses `cady-gtm-cold-email-cycle`."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "a0d1bc80a9c5a17557f92e1646e0fc90dbaaec74a4be9364792cbe35e8db0243"
+  version: "936fa605c17276e3b622eee4d8c969ff5cbdd26623d6827ccb2ecee896391656"
+  library: "3beca7fa80e90672"
   function: "gtm"
 ---
 # LinkedIn message
 
-Prepare a connection note, a first message to a connection, or its single follow-up.
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "936fa605c17276e3b622eee4d8c969ff5cbdd26623d6827ccb2ecee896391656"}})`
 
-**Not for:** Email or an active email thread; replies in a live thread use `cady-gtm-reply`, and cold email uses `cady-gtm-cold-email-cycle`.
+Draft a LinkedIn connection note or direct message to one person, or its single follow-up.
+
+**Not for:** Public LinkedIn posts (written content craft), email or an active email thread; replies in a live thread use `cady-gtm-reply`, and cold email uses `cady-gtm-cold-email-cycle`.
 
 **Unit of work:** one work item per cohort of 20 or fewer. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
 ## Always
 
-- Read the sender's voice pack first (crm.manage_voice_pack, mode read) and write in it.
-- On LinkedIn and WhatsApp write as people chat: a few short messages, one thought each; never split one thought or merge replies. A connection note is one message.
 - In a review body, put a line with only --- between messages.
 
 ## Inputs
@@ -37,7 +38,7 @@ Prepare a connection note, a first message to a connection, or its single follow
 
 ## Procedure
 
-1. Work this item under the run sequence (claim, checkpoint, close); read `cady-core-run-sequence` if it is not in your context.
+1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
 2. Read the profile and available context. Use genuine common ground such as a shared event, past employer, school or interest in their posts. Mention a mutual connection only when they have identified it. Never invent closeness.
 3. A connection note gives one honest reason to connect, with no pitch, ask or company name. For a first message to an existing connection, use a subtle personal note about what you are working on, why it may be relevant, and that you would be glad to chat sometime. Avoid product names and links.
 4. Read crm.get_party for every recipient. Exclude and explain a recorded opt-out or destination suppression; never overwrite it.
@@ -69,9 +70,4 @@ Prepare a connection note, a first message to a connection, or its single follow
 - **Transition:** the claim holder reports the prepared review
 
 ## References
-- [Outcome check](../../references/outcome-check.md)
-- [Permission](../../references/permission.md)
-- [Release](../../references/release.md)
-- [Shared core](../../references/shared-core.md)
-
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "a0d1bc80a9c5a17557f92e1646e0fc90dbaaec74a4be9364792cbe35e8db0243"}})`
+- [Outreach message rules](../../references/outreach-message-rules.md)
