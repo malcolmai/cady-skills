@@ -1,0 +1,793 @@
+{
+  "schema": "cady.skills-export.v1",
+  "generatedAt": "2026-10-20T00:00:00Z",
+  "bundle": {
+    "version": "7402b29aa28c800c64855171580b73ad30441c698b6329e4f79b6a1be5602539",
+    "pluginVersion": "2026.10.20-7402b29a"
+  },
+  "plugin": {
+    "name": "cady",
+    "version": "2026.10.20-7402b29a"
+  },
+  "sharedReferences": {
+    "references/shared-core.md": "9582a3d68c4f6cc5a0a9e45ef56c45e89cb375c49491edfbb6c40e705a0246df",
+    "references/outcome-check.md": "cde435f29c77aee258f2040866be081ebe0b0a1f1dc14571fb9aa6447f2939af",
+    "references/permission.md": "89c3d7fe20e4ff7a2930e103e2a6cef8705881c3b2826e93c08a98edfcb02570",
+    "references/release.md": "fbfd8cf21850b1f37e0748069cf37bb3e5e6bca88363f56cc4b48559ad677c91",
+    "references/role-card-common.md": "3e7a434659913646d3b9daa5c81832e70542c68a5dbb2677641cecd159540f43"
+  },
+  "skills": [
+    {
+      "name": "cady",
+      "path": "skills/cady",
+      "cadyId": "cady.front-door",
+      "version": "7402b29aa28c800c64855171580b73ad30441c698b6329e4f79b6a1be5602539",
+      "files": {
+        "SKILL.md": "b1eae02cea6535d5becdf5927026125b2ae0800920c2f48141d3c75446fe59d8"
+      }
+    },
+    {
+      "name": "cady-accounting-method",
+      "path": "library/cady-accounting-method",
+      "cadyId": "company.method.accounting",
+      "version": "fdf51150151359d5d08e336cfd08f218337288c78aef094a82a60fbfe37ad34d",
+      "files": {
+        "SKILL.md": "f59018f8fdd762fc14dd07191cfd3a88fbba5328bb3f079ff4a042d7726ee9cd"
+      }
+    },
+    {
+      "name": "cady-accounting-period-close",
+      "path": "library/cady-accounting-period-close",
+      "cadyId": "skill.accounting.period_close",
+      "version": "985977da666ba2b8b0a470692e1ba778f910a8c78cc13d51236bc64b1dfdf1f9",
+      "files": {
+        "SKILL.md": "d863357951785c4ea98e2ea19898b8fd732cf7403af91498661c63196bd8c70f"
+      }
+    },
+    {
+      "name": "cady-company-decision-check",
+      "path": "library/cady-company-decision-check",
+      "cadyId": "skill.company.decision_check",
+      "version": "0b4a4004599c826afd42db08b51d1665074d5421e741f2584901d058e8420952",
+      "files": {
+        "SKILL.md": "375d1b0daeb8fc752e47c356c959b352a33a930b1890beea2e397563076de8f3"
+      }
+    },
+    {
+      "name": "cady-company-decision-questions",
+      "path": "library/cady-company-decision-questions",
+      "cadyId": "skill.company.decision_questions",
+      "version": "21508fd6beec1ca00e54bc3be75cfb28ecc34d00c83c9bc2471601680d1a47aa",
+      "files": {
+        "SKILL.md": "a6362ea8838c11ebe4fde8605724a74e23e8ba2b4633b797ab1f173eb68981ab"
+      }
+    },
+    {
+      "name": "cady-company-executive-review",
+      "path": "library/cady-company-executive-review",
+      "cadyId": "skill.company.executive_review",
+      "version": "00c158ce86dd0ded97661e784479a7e9ceaca48ddab90ee019c84e9f73db5c4e",
+      "files": {
+        "SKILL.md": "cc41d2955e6b87d90b8b43bffd93551da44b3508560161b94a736658814befda"
+      }
+    },
+    {
+      "name": "cady-company-experiment",
+      "path": "library/cady-company-experiment",
+      "cadyId": "skill.company.experiment",
+      "version": "318d1caff189a19f459c607944f71aec70e8de069912ad85b1a4b4b55133538a",
+      "files": {
+        "SKILL.md": "3ae5a015aa0e3b5f0391227690452a3da857875b5fd98536ffc422cff65ec04f"
+      }
+    },
+    {
+      "name": "cady-company-launch",
+      "path": "library/cady-company-launch",
+      "cadyId": "execution.topic.company_launch",
+      "version": "44b9b62c73bc5a596f8d8ef1791b981280d9a732a8bfbac82d0fe2bfb6839d1a",
+      "files": {
+        "SKILL.md": "0074331f0dd1ee3d293c73ef943c4ae581fe29ebf6c9dabcfb1a473def051405"
+      }
+    },
+    {
+      "name": "cady-company-manage-agents",
+      "path": "library/cady-company-manage-agents",
+      "cadyId": "skill.company.manage_agents",
+      "version": "030a629295ddca814d72fdf808b143901918699f41f73149f255670ba062c9eb",
+      "files": {
+        "SKILL.md": "106058d6411867850370c994e4888c5675a51977debf0e6d9b33f6fe7124e808"
+      }
+    },
+    {
+      "name": "cady-company-method",
+      "path": "library/cady-company-method",
+      "cadyId": "company.method.company",
+      "version": "98a3007e56f0b596f66d67745342c3bfe8404984f3e5c123a9933be6718b5a7c",
+      "files": {
+        "SKILL.md": "6e89fa9796013d94df9ca0ac68abf0dda0eae85e8665d133e8e6c6771a445147"
+      }
+    },
+    {
+      "name": "cady-company-operations-compliance-register",
+      "path": "library/cady-company-operations-compliance-register",
+      "cadyId": "skill.company_operations.compliance_register",
+      "version": "d199d4751e18e6e5b825d242e1d15b3667ba22d08adde57c96084184058ef9e1",
+      "files": {
+        "SKILL.md": "b343cc0df10370b772bf48e8e852cf5ae3c5fdeb82454ae3516effbc2385f362"
+      }
+    },
+    {
+      "name": "cady-company-operations-method",
+      "path": "library/cady-company-operations-method",
+      "cadyId": "company.method.company_operations",
+      "version": "c78cf62d686b89550c6d44ddd1096e908eba5dd88bc6fd776a015ff99e5b5462",
+      "files": {
+        "SKILL.md": "7e8e55c81af1134c0ea1b9eef9ff6152e920eacfe39f6c4e6263c2cfcaf278ee"
+      }
+    },
+    {
+      "name": "cady-company-operations-people-lifecycle",
+      "path": "library/cady-company-operations-people-lifecycle",
+      "cadyId": "skill.company_operations.people_lifecycle",
+      "version": "bcf4a63e589d1d5f942e81f7a742d15e6f99b387d7c76a21a5c5b4f85e7162a6",
+      "files": {
+        "SKILL.md": "13f96e246ebe782d886c74ff263bc7d0742fa3438ae35eae115075acce8d999e"
+      }
+    },
+    {
+      "name": "cady-company-operations-requirement-register",
+      "path": "library/cady-company-operations-requirement-register",
+      "cadyId": "skill.company_operations.requirement_register",
+      "version": "57889cea4354221e9ec8e354274feecddd2f142f5a9c8e46a275ab474bd311ae",
+      "files": {
+        "SKILL.md": "808723ddbacaa36c447b59a1cc374763a8e3a723f0f883ff60317f8f4d67765d"
+      }
+    },
+    {
+      "name": "cady-company-review",
+      "path": "library/cady-company-review",
+      "cadyId": "execution.topic.company_review",
+      "version": "9d653d82ac95971bedc6ed3fa42464ac54fb37cab371c69989502470720859e7",
+      "files": {
+        "SKILL.md": "69f842984385b248b5db5af5a64a5955ec7f71f3a96efd2612d18a7376ef8a52"
+      }
+    },
+    {
+      "name": "cady-company-taste-review",
+      "path": "library/cady-company-taste-review",
+      "cadyId": "skill.company.taste_review",
+      "version": "c9eb115f6bbb46c98d1b63876f880e09432f58069a27f2ad0a255c8d9936c8d5",
+      "files": {
+        "SKILL.md": "d324e17511964ca6634d56231a243ef9a2c1309d2369fbcc567ed3fdf559f1d0"
+      }
+    },
+    {
+      "name": "cady-core-context",
+      "path": "library/cady-core-context",
+      "cadyId": "company.context",
+      "version": "8d88b9eabaa2f2b48011f85f0cbce6a0fd7b94732c82aaef8e28047be572481d",
+      "files": {
+        "SKILL.md": "ceef04473f1dfed0dc0b0641a6a3f91df55eb0a0f4eee092aefc4e1b32833937"
+      }
+    },
+    {
+      "name": "cady-core-execution",
+      "path": "library/cady-core-execution",
+      "cadyId": "execution.all",
+      "version": "dbf7b0a02e2b4d37b78ca8c3bd273a16ce3269e2ef50fad3063e9c222a16c14a",
+      "files": {
+        "SKILL.md": "9dc0d51c2798015fa9ece660f28c5482b45ffff4d874072650093aecc06caaf0",
+        "references/native-orchestration.md": "1dfd054a241d1c42b2d13f5eb62fc0d81c15bece696b8dc9dbdcd1273cbcb3c5",
+        "references/scheduled-model-selection.md": "8a30d3b89f601ff786d1599615716de529c3eb6acaf12df1f4321abf5c29c62a"
+      }
+    },
+    {
+      "name": "cady-core-run-sequence",
+      "path": "library/cady-core-run-sequence",
+      "cadyId": "execution.topic.run_sequence",
+      "version": "156c6b12df9c723215f7447ff78bb2aaa774b0219cc2ab6bb60763c49c9e6b9d",
+      "files": {
+        "SKILL.md": "0e98fc9472c886feb226bc98e8907cc71fc8b1e8e3725e7ab68f0c7795d01e38"
+      }
+    },
+    {
+      "name": "cady-core-scheduling",
+      "path": "library/cady-core-scheduling",
+      "cadyId": "execution.topic.scheduling",
+      "version": "19b0874ca097a8d249234d02f1957ffa37912ed13ecf41194b49d010a32e24dd",
+      "files": {
+        "SKILL.md": "fff6ebb55b8f95b05163cd0a48c33d3547241faebd01628361855b08a79e2630"
+      }
+    },
+    {
+      "name": "cady-core-selected-delivery",
+      "path": "library/cady-core-selected-delivery",
+      "cadyId": "execution.topic.selected_delivery",
+      "version": "68829f8d2c5c428b698f4868dc5d6c00c8ab2d3de8364c67efcd15740a157c98",
+      "files": {
+        "SKILL.md": "a29ac35b6f9cb2303e3a5ff103f14bf7541e4c8283dc37f09cafe24aafd3e0ca"
+      }
+    },
+    {
+      "name": "cady-customer-success-lifecycle",
+      "path": "library/cady-customer-success-lifecycle",
+      "cadyId": "skill.customer_success.lifecycle",
+      "version": "fb7b38e27db82aed70c44b479d38a1c7df7b47b168bf2bc3a250e57642a0860c",
+      "files": {
+        "SKILL.md": "f00c4adf0c4ec56704a5ca188547f62bfde2f41787f59a66c47692a1c83f85db"
+      }
+    },
+    {
+      "name": "cady-customer-success-method",
+      "path": "library/cady-customer-success-method",
+      "cadyId": "company.method.customer_success",
+      "version": "e9130d05b06074306a3c2c9c0a1f0702041d7d9a6b6c9801fbb9e57091727101",
+      "files": {
+        "SKILL.md": "ecc9731399db70ffa0cef5f8b71d540e6d7fd0e96c1e47b68a93e374a6e4ab58"
+      }
+    },
+    {
+      "name": "cady-design-method",
+      "path": "library/cady-design-method",
+      "cadyId": "company.method.design",
+      "version": "f4f6505e96074e597d05c73d1aa4f5a7deb9f4daa8880bd19139a04e58e3b0f3",
+      "files": {
+        "SKILL.md": "c847701ddc5e3cd891001aeec7285b480111d9362364238ca34ff6b0b97e0030"
+      }
+    },
+    {
+      "name": "cady-design-wcag-audit",
+      "path": "library/cady-design-wcag-audit",
+      "cadyId": "skill.design.wcag_audit",
+      "version": "85787025f70eec0f5e71b3fb8cdb5351c13caa55b7860261bc180277a34814b4",
+      "files": {
+        "SKILL.md": "1660213e010a85d2b74cec7c82895edde30c7fe4116528d31432ee06b6633f67"
+      }
+    },
+    {
+      "name": "cady-engineering-debugging",
+      "path": "library/cady-engineering-debugging",
+      "cadyId": "skill.engineering.debugging",
+      "version": "945ccd2ec48753cef2293c0b3c5056e2b344c4ae2c1bbbfcdcf5a31e89900ffa",
+      "files": {
+        "SKILL.md": "bbc7b69298e8b67a7c84bfc1236a005efa3920c2e75afbc8e7e0c73c628d0b63"
+      }
+    },
+    {
+      "name": "cady-engineering-independent-review",
+      "path": "library/cady-engineering-independent-review",
+      "cadyId": "execution.topic.independent_review",
+      "version": "ebb87aa0ea5b3d7842b5e088c9d43d6e7ee8529146beac8d9961fdead6e65ea1",
+      "files": {
+        "SKILL.md": "dff190ffb28738a591e2a7e7f40cced85a9c2e4d63a54c8903bacfe00d9b0609"
+      }
+    },
+    {
+      "name": "cady-engineering-integrations",
+      "path": "library/cady-engineering-integrations",
+      "cadyId": "execution.topic.integrations",
+      "version": "37ddb29cbd8f1a69e55b6d4ffddd70a545b47a728944bafaf838fa588251a84f",
+      "files": {
+        "SKILL.md": "b23c24723ed0b255a98ae761dc00b6720a3f85fc1c00a1bbfbd27496d73bc57d",
+        "references/build.md": "e3e4141226bf8b1e87e938fb07e114d179dbd56d374f434452900c2d5c777ebe",
+        "references/reads.md": "49038ca49611742efa39ab91d58d1a1b3e4705f5bfef163a1182060a77ec7fae",
+        "references/vendor.md": "15f074902101341a45c375c6e110b96571637928766132bd6ec25d1eadcf2fbd"
+      }
+    },
+    {
+      "name": "cady-engineering-method",
+      "path": "library/cady-engineering-method",
+      "cadyId": "company.method.engineering",
+      "version": "f9662ea8a39bf5819666688baa3c7c013582e12b050abc3da8610271d000eea3",
+      "files": {
+        "SKILL.md": "ad4b728348f0a640d61d2d3eb81b58134f216cfd2fcc6d6fe9ab2258642200c9"
+      }
+    },
+    {
+      "name": "cady-engineering-system-cycle",
+      "path": "library/cady-engineering-system-cycle",
+      "cadyId": "skill.engineering.system_cycle",
+      "version": "bcf07ba454b58418091ca7b603b7dd1bd6825741b44b0b2c2cf7554a65b04387",
+      "files": {
+        "SKILL.md": "7407ed65a76527b003d42e9f30e77c636691558c507ba9806f313e756bb4bb68"
+      }
+    },
+    {
+      "name": "cady-finance-budget-review",
+      "path": "library/cady-finance-budget-review",
+      "cadyId": "skill.finance.budget_review",
+      "version": "245e5e3c2a6a91750bdb4d0f4cbc8f55d296a48000ce423f9a8c524dd8bc4cf4",
+      "files": {
+        "SKILL.md": "444f58e7479943bc40d44c6213d613e5d42b2843f0792a3483ccbe3ea14779ec"
+      }
+    },
+    {
+      "name": "cady-finance-method",
+      "path": "library/cady-finance-method",
+      "cadyId": "company.method.finance",
+      "version": "4a699a507bcb9ba5c9bfe68981ccf516240d5369ff53780c3f00a5add6224eb8",
+      "files": {
+        "SKILL.md": "77f965bf38947455c4efd655060e8b820d1bcd8f95d56c64f26deeba06d55a8e"
+      }
+    },
+    {
+      "name": "cady-finance-runway",
+      "path": "library/cady-finance-runway",
+      "cadyId": "skill.finance.runway",
+      "version": "dee7f17d3c8fa7de5dbbdfda7b13d53f9be2ad8855f33db9a9755f73eeca2c7f",
+      "files": {
+        "SKILL.md": "b942cc97cc5c40425e2f2f88c1e85f9de28aa69c2a90b0551976fd0cca952e30"
+      }
+    },
+    {
+      "name": "cady-finance-tax-cycle",
+      "path": "library/cady-finance-tax-cycle",
+      "cadyId": "skill.finance.tax_cycle",
+      "version": "62adb96bb9bb3f1ae04f410c5c06bb27c3f650ee50f24f317e3e9aacd15ba614",
+      "files": {
+        "SKILL.md": "929033637f3b9c30e5c7fd7777d1b49b1376937015951ad3539a908bdab09787"
+      }
+    },
+    {
+      "name": "cady-finance-vendor-spend-review",
+      "path": "library/cady-finance-vendor-spend-review",
+      "cadyId": "skill.finance.vendor_spend_review",
+      "version": "6130d4071c1bdf2142b8fa9434f8d10defb9f2a45d8b17ac1fd7a0d54fdec03d",
+      "files": {
+        "SKILL.md": "60eb996d8e8f19326bd72ea8cdb4cb2458939ae364b3729b41dbad6152c17321"
+      }
+    },
+    {
+      "name": "cady-fundraise-investor-list",
+      "path": "library/cady-fundraise-investor-list",
+      "cadyId": "skill.fundraise.investor_list",
+      "version": "badeb6efde8d82c2615ffb05934e4e62e9414894193db50af68f2f4e3fd52808",
+      "files": {
+        "SKILL.md": "53b85621cc3e575a2bb466ba79622173ae3542e8ed4eb3dc0c27823b76a2e993"
+      }
+    },
+    {
+      "name": "cady-fundraise-method",
+      "path": "library/cady-fundraise-method",
+      "cadyId": "company.method.fundraise",
+      "version": "066ed8732e725c516d1d48e25ff7046509ecec3608c89d0027ccc8c125a8cb27",
+      "files": {
+        "SKILL.md": "7be7e78a4ce22948bbe19218b46d2beb01365b252bf0bd2d9ccbd67a7b69c31f"
+      }
+    },
+    {
+      "name": "cady-fundraise-raise-materials",
+      "path": "library/cady-fundraise-raise-materials",
+      "cadyId": "skill.fundraise.raise_materials",
+      "version": "e760975e5360dfa55f9868565326cd6860c666cca9561ad05205866cc1b19ded",
+      "files": {
+        "SKILL.md": "3f4db0902fedef405820f927d8df3a06eeb905f48ffd3f066df7372081f3de1b"
+      }
+    },
+    {
+      "name": "cady-fundraise-raise-plan",
+      "path": "library/cady-fundraise-raise-plan",
+      "cadyId": "skill.fundraise.raise_plan",
+      "version": "431d91f1615f50b14a4c56530454920b55f60883de34f9357aba704603880937",
+      "files": {
+        "SKILL.md": "5fc975c82bcba1c7381cd064af553bc7d9ef9b372468e6716618bdca94bc3737"
+      }
+    },
+    {
+      "name": "cady-gtm-calls",
+      "path": "library/cady-gtm-calls",
+      "cadyId": "skill.gtm.calls",
+      "version": "90b19cea0c3ac44425d984e5369a7abdd508a70f35a96b411f4307d87aa0b7c3",
+      "files": {
+        "SKILL.md": "5d2be24a448f1edbce15ba4a4dc71b6e33a11368f59aad4edb13d27df9af3d7a"
+      }
+    },
+    {
+      "name": "cady-gtm-cold-email-cycle",
+      "path": "library/cady-gtm-cold-email-cycle",
+      "cadyId": "skill.gtm.cold_email_cycle",
+      "version": "c629350213704352539f8d98c26a563e841f7e22911d28861836cfdfca71a52e",
+      "files": {
+        "SKILL.md": "934e973c7b494ce4a87c0452d877c4a49b3fb17acc821ab4209c2d8085a42d39",
+        "references/copy.md": "75b048d28d3e173345bcc262501577f8d00be2080ff63cc30b94f7ee98b6de4e"
+      }
+    },
+    {
+      "name": "cady-gtm-content-production",
+      "path": "library/cady-gtm-content-production",
+      "cadyId": "execution.topic.content_production",
+      "version": "510047ab796ee0f3e8bc87ee7ad0ae85e52819d52f4e35e6ce93bf863f939a0a",
+      "files": {
+        "SKILL.md": "4e0e4ef2a59a77be615fa1ee8e926f3f2bca69483478a1474855dc07114c18fc"
+      }
+    },
+    {
+      "name": "cady-gtm-events",
+      "path": "library/cady-gtm-events",
+      "cadyId": "skill.gtm.events",
+      "version": "83921fcff131853b1682995f56a58deee753178e1d009422949d8a3af3765a35",
+      "files": {
+        "SKILL.md": "32b3cef34261d1a010a077404443b6e0358f872e419b304bbccb27e4473185f2"
+      }
+    },
+    {
+      "name": "cady-gtm-launch",
+      "path": "library/cady-gtm-launch",
+      "cadyId": "execution.topic.gtm_launch",
+      "version": "4a97f515d8f2ce12be9b981f82db92442417f26578b8688f4fc1c1282ae922b1",
+      "files": {
+        "SKILL.md": "2c87712e57691268d0a6f90216a2e115cbfd78ff53289edbb91a9c8f1ae8c38f"
+      }
+    },
+    {
+      "name": "cady-gtm-linkedin-message",
+      "path": "library/cady-gtm-linkedin-message",
+      "cadyId": "skill.gtm.linkedin_message",
+      "version": "a0d1bc80a9c5a17557f92e1646e0fc90dbaaec74a4be9364792cbe35e8db0243",
+      "files": {
+        "SKILL.md": "bfd447548ae9df0122fe26e0211e3d5055fa0a6c57168a568887e3faac37003f"
+      }
+    },
+    {
+      "name": "cady-gtm-method",
+      "path": "library/cady-gtm-method",
+      "cadyId": "company.method.gtm",
+      "version": "6a4a257747144c8a9f0e0c7ff0ca57682be71028e2aec6234123319f849f8185",
+      "files": {
+        "SKILL.md": "66a97a91ca2ac1ab0e69ef940e0efe1b556b84359843e93fb6f6fb56450de7bf"
+      }
+    },
+    {
+      "name": "cady-gtm-offer-and-segments",
+      "path": "library/cady-gtm-offer-and-segments",
+      "cadyId": "skill.gtm.offer_and_segments",
+      "version": "a913308ddc676a999369bea2ceade204a9458d0abf1d4e1e473df9d6f3b7bd49",
+      "files": {
+        "SKILL.md": "5957d24dab9481f68f7602ae493105f328a60cfe9e2b73c3bb46e865dee46e56"
+      }
+    },
+    {
+      "name": "cady-gtm-pipeline-pass",
+      "path": "library/cady-gtm-pipeline-pass",
+      "cadyId": "skill.gtm.pipeline_pass",
+      "version": "3c8514bcfa17c4afc3030bf3b63f528875e705523787e22b441d383c37b1d118",
+      "files": {
+        "SKILL.md": "399e833506d9369a1a51c9fd2cf1010bcab03aa082bf2c6b918919dafbcd3185"
+      }
+    },
+    {
+      "name": "cady-gtm-reply",
+      "path": "library/cady-gtm-reply",
+      "cadyId": "skill.gtm.reply",
+      "version": "24634d2f3e89c8c601a50923700a318c6b2a159d5542409a846e82318006bf72",
+      "files": {
+        "SKILL.md": "e6380628e0d418b898fd925cb5c761a61f0653a28b850145d9be9dd28511fd42",
+        "references/copy.md": "31a62bef06835a85dadf2d64f3eeed8aece9dcd6375ee6fbb69640ab5cfc8ee8"
+      }
+    },
+    {
+      "name": "cady-gtm-tam-map",
+      "path": "library/cady-gtm-tam-map",
+      "cadyId": "skill.gtm.tam_map",
+      "version": "5e910754e393df17c9cdf6f89c3ed801dd6b020415ac568ee71dc33b11b25a6d",
+      "files": {
+        "SKILL.md": "23b6e452e55dfd32fa64796e93245c22bd33ba80c207aaa99cefff564ff2b130"
+      }
+    },
+    {
+      "name": "cady-gtm-warm-email",
+      "path": "library/cady-gtm-warm-email",
+      "cadyId": "skill.gtm.warm_email",
+      "version": "5330be0f3bd620bf26b7c1980bc6f121371f52658cc3876a4a1272943fcd9e57",
+      "files": {
+        "SKILL.md": "ee8228a46e293032fa6ed04bc838c4b5be8760220b898e00d5a24c3ad9f6454d",
+        "references/copy.md": "f06b5aa40578ae093b899507c6ab1e6728548bbc01eb1fac2ad51044e643264b"
+      }
+    },
+    {
+      "name": "cady-marketing-method",
+      "path": "library/cady-marketing-method",
+      "cadyId": "company.method.marketing",
+      "version": "457946b8d1ff2aa85222aee47997ed96e0b733478dfd4191740ac5b200c0f39e",
+      "files": {
+        "SKILL.md": "831252ac2974bde9bf53d1382c29e1c292deab4a797692d10c0ca70d6a79772d"
+      }
+    },
+    {
+      "name": "cady-orchestrator-method",
+      "path": "library/cady-orchestrator-method",
+      "cadyId": "company.method.orchestrator",
+      "version": "ca5fb3283677b64cf13a9e15c7f9295f763c6b263aaf4f679d5cd8b7af69b6ff",
+      "files": {
+        "SKILL.md": "9f1bbdb8df2b0c6c64b7add9081664ef210ba36795f6f4e4ab408386aef7bd3f"
+      }
+    },
+    {
+      "name": "cady-product-customer-interview",
+      "path": "library/cady-product-customer-interview",
+      "cadyId": "skill.product.customer_interview",
+      "version": "7fac18b9ca16c6c2b8ca755cebb35debb66f42c20c5efcb4e15e4976c3e4ff69",
+      "files": {
+        "SKILL.md": "38964e57bdc492fcdc196abc2d7fee33349a97e20b4a48f53c9179ce80337979"
+      }
+    },
+    {
+      "name": "cady-product-manage",
+      "path": "library/cady-product-manage",
+      "cadyId": "skill.product.manage",
+      "version": "14e7bdccccc944838af41f2b0ae3cc13a33ea2a61fecf5a044a7ad64bcb8cfee",
+      "files": {
+        "SKILL.md": "3afcdd94915eb3d5db3eaac290fad665bf36c9a83d94d81bea923b330b8ceab8"
+      }
+    },
+    {
+      "name": "cady-product-method",
+      "path": "library/cady-product-method",
+      "cadyId": "company.method.product",
+      "version": "59fa4a9d642db0815f201dec915450419717c59b4c8797ad9fb4f9ecb57f1c72",
+      "files": {
+        "SKILL.md": "ff1038e90f67560f8d9a3fecaf3b5275af7e8345e6c6d262e8fdcca4b17493ef"
+      }
+    },
+    {
+      "name": "cady-product-research-competition",
+      "path": "library/cady-product-research-competition",
+      "cadyId": "skill.product.research_competition",
+      "version": "e06a2f453631236a7128d5ecaf46c2e11afa89c46730b7c4c1dafdb3c0f5cfcf",
+      "files": {
+        "SKILL.md": "a84c50141a36a9b852e676f9f3e61d537dd6142569e33a19a3ee86441b4c5c90"
+      }
+    },
+    {
+      "name": "cady-product-research-shared",
+      "path": "library/cady-product-research-shared",
+      "cadyId": "skill.product.research_shared",
+      "version": "493e1bb15bb0ffa230d2390514d7df8c61d47cc9c34c2f9e9478907101068d90",
+      "files": {
+        "SKILL.md": "54ff5c1e8b1ae1481856baa458691a79b47a6f0afabea95c23badb77d608313b"
+      }
+    },
+    {
+      "name": "cady-product-research-technology",
+      "path": "library/cady-product-research-technology",
+      "cadyId": "skill.product.research_technology",
+      "version": "ce3e0352491369fd39733190fbe32f26c456cd182e8c1ac228cee045d6cbd57e",
+      "files": {
+        "SKILL.md": "360ed55cf7c2ed9bac71097c65de356fda259890ab4eb4a27bbe15432f9c436d"
+      }
+    },
+    {
+      "name": "cady-qa-method",
+      "path": "library/cady-qa-method",
+      "cadyId": "company.method.qa",
+      "version": "90bc844afb95126c33e24dc480487f7772663f159266508a6c3b32ab0bd5948a",
+      "files": {
+        "SKILL.md": "72711ddea7a4c361d0ac0ba834ab08dc7079786eb0a9b0c2ef1dbc17297c85db"
+      }
+    },
+    {
+      "name": "cady-qa-triage",
+      "path": "library/cady-qa-triage",
+      "cadyId": "skill.qa.triage",
+      "version": "ae7d1d38d8a49a4ab546da30ee15cf9a1934b75b37eb988a72952bc89cfa9fba",
+      "files": {
+        "SKILL.md": "19a54e835d56246ef2b915b5ac4a9e36dcdc6db3c6ca2a06bbc3073003c1c4dd"
+      }
+    },
+    {
+      "name": "cady-sales-deal-motion",
+      "path": "library/cady-sales-deal-motion",
+      "cadyId": "skill.sales.deal_motion",
+      "version": "31920e70dd165a82bf4d551a1dd6f718824da1c61d56c6d43870deb97dae823f",
+      "files": {
+        "SKILL.md": "7e151abf68c6fd08b475c27d6421aa68c2a38abd9d04b55785e5abcaaa91038c"
+      }
+    },
+    {
+      "name": "cady-sales-method",
+      "path": "library/cady-sales-method",
+      "cadyId": "company.method.sales",
+      "version": "8206de5a9de814932250b170171c4b0eb2ae7335e21aab97bd6f0ad6147acc76",
+      "files": {
+        "SKILL.md": "05f2e5dd3019dfc605905c3f3aceabf11e19762a019dca39023f15040ef6adb1"
+      }
+    }
+  ],
+  "evals": {
+    "files": {
+      "evals/.gitignore": "f370ad043ec0c98a166fd98646c3b94280ed78bc996223b6cca2ba936f7c6781",
+      "evals/discovery.json": "0d4b952cb2f251a6ef70b5fbcc35885f787890025bceefcfc824c4f062fe26a7",
+      "evals/discovery/agent-weekly-pipeline/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/agent-weekly-pipeline/graders/method-loaded.md": "cf735401ca88654f73fd48e828d3f3e73a779f10f0e459bebb69a0124b4c2447",
+      "evals/discovery/agent-weekly-pipeline/prompt.md": "4ce9732fe72cb6a365b2b2d01831b85e6529b2f9a025e868e43121bc7a552868",
+      "evals/discovery/budget-not-runway/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/budget-not-runway/graders/method-loaded.md": "77567c439eb7f15496b5cf5e0830b15aaae47b5a48f534329e7feae73a3f99b6",
+      "evals/discovery/budget-not-runway/graders/not-cady-finance-runway.md": "42539f65f1fafbf1cb51b682585d9e7e764221a9c5e79086ae97243040aad574",
+      "evals/discovery/budget-not-runway/prompt.md": "a4377086b5cafac989ecb50b69d899269c8f324c8d8ad743e37c9a497ad64a75",
+      "evals/discovery/bug-severity-writeup/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/bug-severity-writeup/graders/method-loaded.md": "2774841a879529ae2192286022086614230b63c35351aa90c6cc5efa642211f4",
+      "evals/discovery/bug-severity-writeup/prompt.md": "bd90e526f350e18b3334a05633a06d0e53d7886d807dc5b4deb6f01cf3b6f0ba",
+      "evals/discovery/call-prep-acme/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/call-prep-acme/graders/method-loaded.md": "19a080b3c558759198e1548271ef9f31348fa9fa7dc404d44dba1285466a422d",
+      "evals/discovery/call-prep-acme/prompt.md": "464fd6cf7c1c2c8e7de5515dd53365afd59f91fcada2fa4a6871c050420fed79",
+      "evals/discovery/checkout-down-postmortem/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/checkout-down-postmortem/graders/method-loaded.md": "873374bd4cf401ba441de56ab748a97f591f69050f16ff48316a65bc1f105fd0",
+      "evals/discovery/checkout-down-postmortem/graders/not-cady-qa-triage.md": "cac36891de47e095876f90c80270e30655d1e4db1122ff8968a0894297a63aa5",
+      "evals/discovery/checkout-down-postmortem/prompt.md": "40cf1b1c49246981db199d068c02ada20e854ce06d8b051dd134158fdf9d30c7",
+      "evals/discovery/close-not-tax/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/close-not-tax/graders/method-loaded.md": "3ff6a49e3d44cbbedc03dfe47a0931a8c98fcbf12389ca1da50e36a4bdd964c7",
+      "evals/discovery/close-not-tax/graders/not-cady-finance-tax-cycle.md": "f5f37d0f64e7078374908a59713b596b00f70cc7b454811d3f256b0f6c5bc46d",
+      "evals/discovery/close-not-tax/prompt.md": "f0b195d6fc68fbcbd87160f891aee77e5d27a209ea9faa48860c607fb591b603",
+      "evals/discovery/close-stripe-payouts/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/close-stripe-payouts/graders/method-loaded.md": "3ff6a49e3d44cbbedc03dfe47a0931a8c98fcbf12389ca1da50e36a4bdd964c7",
+      "evals/discovery/close-stripe-payouts/prompt.md": "8c9fe83af80fe6216b438f3df6888873439f1858a3cc505af7700a2c9ef86c30",
+      "evals/discovery/cold-deliverability-bounces/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/cold-deliverability-bounces/graders/method-loaded.md": "bfb89d396eeaa0cb971f3cb9cfb2796ad2f2632a02232998ad6007b5e4952047",
+      "evals/discovery/cold-deliverability-bounces/graders/not-cady-gtm-reply.md": "c9fa98ff1e28e9396c489ec84361b7c97ab00e0e034d1720c09b1946ea535513",
+      "evals/discovery/cold-deliverability-bounces/prompt.md": "9bb8a46b1530d03960d7fdb74c6774c4b0978e132c3d65138b7ab5c206294263",
+      "evals/discovery/cold-fintech-list/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/cold-fintech-list/graders/method-loaded.md": "bfb89d396eeaa0cb971f3cb9cfb2796ad2f2632a02232998ad6007b5e4952047",
+      "evals/discovery/cold-fintech-list/graders/not-cady-gtm-warm-email.md": "e28c6811b35a661f034204bfe43fb338ebf54d182dbc0799cfa21c0ad611224c",
+      "evals/discovery/cold-fintech-list/prompt.md": "856044adb1b2862dc10ab5f5bd63b296431974da06da1cf26d8f15af02d07008",
+      "evals/discovery/competitor-pricing/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/competitor-pricing/graders/method-loaded.md": "968a292b6ed678ea3908261934b636b85c625727c709fadcbee7928fb7c5fe5f",
+      "evals/discovery/competitor-pricing/prompt.md": "62ae65c3e53cbd1e2e791d84a3da810998a8c249690ac0cee2eee1855122070b",
+      "evals/discovery/customer-cancellation/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/customer-cancellation/graders/method-loaded.md": "29914f208be6b4dc8b3e2f0abba4fe9af9a88d0c659c83d1bd45f27b125dedb1",
+      "evals/discovery/customer-cancellation/graders/not-cady-gtm-cold-email-cycle.md": "82ee32023c53e4f695a6d486480750d7285fcef1ae412eb503345a650ef8627a",
+      "evals/discovery/customer-cancellation/prompt.md": "1ab8d82f8115e0742f647cfb125ef9d7f361810e4c2b1e02ab4aca4a7afc29d2",
+      "evals/discovery/customer-onboarding-first-value/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/customer-onboarding-first-value/graders/method-loaded.md": "29914f208be6b4dc8b3e2f0abba4fe9af9a88d0c659c83d1bd45f27b125dedb1",
+      "evals/discovery/customer-onboarding-first-value/graders/not-cady-sales-deal-motion.md": "8f6fd166b517e7161713321b6aa5824d0229d547d542f8d3472e9b8c721dfdfb",
+      "evals/discovery/customer-onboarding-first-value/prompt.md": "69ebd942c69930c4b7f70c09306a515d9f626f32d4b2afe0b22663821a8f025e",
+      "evals/discovery/customer-renewal-usage-drop/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/customer-renewal-usage-drop/graders/method-loaded.md": "29914f208be6b4dc8b3e2f0abba4fe9af9a88d0c659c83d1bd45f27b125dedb1",
+      "evals/discovery/customer-renewal-usage-drop/graders/not-cady-finance-vendor-spend-review.md": "f757c61a10ba22fab7732e3907b1c7dc435becdb3b16ae35ea68e9ab33016b72",
+      "evals/discovery/customer-renewal-usage-drop/prompt.md": "caeb9a6df891534108eebd383ca22acee1182f5d3b59c429e9ed72e9c647accc",
+      "evals/discovery/deal-proposal-after-discovery/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/deal-proposal-after-discovery/graders/method-loaded.md": "d54e7900568eb4421a3305a03a1176bda240061ae425321199564304f5be866e",
+      "evals/discovery/deal-proposal-after-discovery/graders/not-cady-gtm-pipeline-pass.md": "8379a5a8ae54f262f1a854e8a9d13dafa3fc1dfffc9a5b4013108c6b292b4aff",
+      "evals/discovery/deal-proposal-after-discovery/prompt.md": "f886da9762cd09b65d4da11d4b0a6157e733b6a7f5d265ea4747f154d4722bdc",
+      "evals/discovery/deal-qualify-no-budget/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/deal-qualify-no-budget/graders/method-loaded.md": "d54e7900568eb4421a3305a03a1176bda240061ae425321199564304f5be866e",
+      "evals/discovery/deal-qualify-no-budget/prompt.md": "b3d38fb4d271a05915c70605e331f075e5220d5a284dc15b7b6af4e478f545f5",
+      "evals/discovery/debug-500-after-deploy/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/debug-500-after-deploy/graders/method-loaded.md": "873374bd4cf401ba441de56ab748a97f591f69050f16ff48316a65bc1f105fd0",
+      "evals/discovery/debug-500-after-deploy/graders/not-cady-qa-triage.md": "cac36891de47e095876f90c80270e30655d1e4db1122ff8968a0894297a63aa5",
+      "evals/discovery/debug-500-after-deploy/prompt.md": "3987abd932f040b6e0950e02810034a23c1fb44c3e80a951955167b46ea42b9b",
+      "evals/discovery/decide-what-to-research/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/decide-what-to-research/graders/method-loaded.md": "589949f34c77d7cc7a59eccf051bd22d2833ae40909f0dfade5f8466dd2cf7a6",
+      "evals/discovery/decide-what-to-research/graders/not-cady-product-customer-interview.md": "1bb87e2647f6f1684bcd5b0e58522ea886e9de55589b8b62452d8c33182171af",
+      "evals/discovery/decide-what-to-research/prompt.md": "778dd8687a6f61ad6f188dc0928ba772b63d2d6d78822c54b717bdffbf830ca6",
+      "evals/discovery/filing-not-tax-return/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/filing-not-tax-return/graders/method-loaded.md": "0e4beca9bc812b16d77371496730b95a7c73f22693664c86a7aa654bfe758aa2",
+      "evals/discovery/filing-not-tax-return/prompt.md": "84007e036f46d0387604ee8d97809aa1ece94e1dc8bd71c2ffa143b0e0fcbe17",
+      "evals/discovery/flaky-ci-test/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/flaky-ci-test/graders/method-loaded.md": "2774841a879529ae2192286022086614230b63c35351aa90c6cc5efa642211f4",
+      "evals/discovery/flaky-ci-test/graders/not-cady-engineering-debugging.md": "f4d7faabc20f33c1d8f4b4c74bdff0b0e84302dbf22419314a9a4a9b214da267",
+      "evals/discovery/flaky-ci-test/prompt.md": "cfb70baf074b268a3022aeeafb1bccffb32a4fe6a64469a584d54215ffab58a7",
+      "evals/discovery/interview-script/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/interview-script/graders/method-loaded.md": "0c5c997146fc37a0ea71752dbf17f4459a65cc9048d311c02bb86e8d24388098",
+      "evals/discovery/interview-script/graders/not-cady-company-decision-questions.md": "02f1539724cb6cab9caa577420ed7b9d900ff221982339bbfbec5e967cc55a34",
+      "evals/discovery/interview-script/prompt.md": "5971983b83f99dba37df2731093810a46e61b8f000f19373969e7baf267cb5c0",
+      "evals/discovery/investor-update/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/investor-update/graders/method-loaded.md": "74bed3199262ee5a0ef27d38d99176beaf4842a9edb176ecf92a78162e254e57",
+      "evals/discovery/investor-update/graders/not-cady-fundraise-raise-plan.md": "4070139a4b7e7e1d3f6fda7dadbb459013518c0b85b36c6ca208aa06f71f1b34",
+      "evals/discovery/investor-update/prompt.md": "e73f1ae7464b06f6fd49690957d7547960fb901987d3231ba545156ac1ec1908",
+      "evals/discovery/investors-seed/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/investors-seed/graders/method-loaded.md": "39d60a45813c627339b7c1c26ff94c2c41a0cc250894493e1fc175ef57aa5cce",
+      "evals/discovery/investors-seed/graders/not-cady-gtm-tam-map.md": "e7e95d758946ad0410440c62e0cbc609b6839184817a77b0d8aaa98298738081",
+      "evals/discovery/investors-seed/prompt.md": "f6fe62f3b73f437bf25e8a623723af65be6dd3097e00cb28f452047ae05b0ab5",
+      "evals/discovery/joiner-lisbon/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/joiner-lisbon/graders/method-loaded.md": "28c8c7fe69f5617dc86be8987d33939bcdb8630588b382123a9acd228285708e",
+      "evals/discovery/joiner-lisbon/prompt.md": "b91ceb1eb2d9d426244f4e13438ead60f2a1bb01ad4843f0e1831dab1f3182d0",
+      "evals/discovery/keyboard-only-checkout/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/keyboard-only-checkout/graders/method-loaded.md": "49e638f875a45ac74ef0abcc7b105aebb6d0824a2e99c3fb14da4a3b9b43aac8",
+      "evals/discovery/keyboard-only-checkout/graders/not-cady-design-method.md": "1f0916beaa1f07233e6d14fe221221264af630757a23feed94deace0bf18e81f",
+      "evals/discovery/keyboard-only-checkout/graders/not-cady-qa-triage.md": "cac36891de47e095876f90c80270e30655d1e4db1122ff8968a0894297a63aa5",
+      "evals/discovery/keyboard-only-checkout/prompt.md": "4b177f5f7881420fed25c7e5b2e9e4e77003e834bbadf97fb414eb1f4eecd9fc",
+      "evals/discovery/landing-visual-critique/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/landing-visual-critique/graders/method-loaded.md": "3a790cc1ddbf03a7c68cbed4f92c812e18097f26cb7bce81b42652a3bf967538",
+      "evals/discovery/landing-visual-critique/graders/not-cady-design-wcag-audit.md": "848cc6c906bf1c54de19439c44d4263d08a2fa53e39ce7afcaf063848e47423f",
+      "evals/discovery/landing-visual-critique/prompt.md": "e1150b2928814966712099440104dede640dd809e51e4f88d3657b04d2085a58",
+      "evals/discovery/leaver-offboarding/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/leaver-offboarding/graders/method-loaded.md": "28c8c7fe69f5617dc86be8987d33939bcdb8630588b382123a9acd228285708e",
+      "evals/discovery/leaver-offboarding/graders/not-cady-company-operations-compliance-register.md": "9b07229acd15f413f447f7af7c2cdf25664c18c64c712432c758a3c849605406",
+      "evals/discovery/leaver-offboarding/prompt.md": "8ca57a10826be554ce0f21c98fd6f4aafd771d31990b9e58c6ee71c2412401a2",
+      "evals/discovery/linkedin-message-not-post/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/linkedin-message-not-post/graders/method-loaded.md": "65b35e830e5ab58062a3368e9205f7979061f3d01fde13d263e047b50eb05f2a",
+      "evals/discovery/linkedin-message-not-post/graders/not-cady-gtm-content-production.md": "945a3194150bdcb694976b818bee2faacf8338bd17de7f82e6516f97912b0f79",
+      "evals/discovery/linkedin-message-not-post/prompt.md": "37730f876351205410d07ffaa19fa956240284e73ae7455908e91a067b99f3b8",
+      "evals/discovery/linkedin-post-not-message/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/linkedin-post-not-message/graders/method-loaded.md": "354fef7479f4890af1dc7c4e99b3f1fecddd66188fa2828897f0f170f10e3f16",
+      "evals/discovery/linkedin-post-not-message/graders/not-cady-gtm-linkedin-message.md": "33c8d0932e745a39621460215cbc94527b7e6ddb3ae9ff6ee7a303f7946f55bf",
+      "evals/discovery/linkedin-post-not-message/prompt.md": "8f37ab7a2fb2349e5a5a3620c32194017a41a62727667eeaa69356fa7a8d62cb",
+      "evals/discovery/linkedin-weekly-limit/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/linkedin-weekly-limit/graders/method-loaded.md": "65b35e830e5ab58062a3368e9205f7979061f3d01fde13d263e047b50eb05f2a",
+      "evals/discovery/linkedin-weekly-limit/prompt.md": "5172fae7ead603f0acfc42bdc244271db8712c4b92f18b0ab26babd18983f689",
+      "evals/discovery/negative-birthday-email/graders/no-front-door.md": "1f177300daf6e6e8c9c9f0efb5a7b4cf59124dc9a2d50ef365a23032427a3324",
+      "evals/discovery/negative-birthday-email/graders/no-library-skill.md": "846617c0a7280fa67b084b33a237f095d2f52981f2edbbd77d8f1b396476dd6a",
+      "evals/discovery/negative-birthday-email/prompt.md": "fb7a8b3b0fe0ec763532e255e535145d8a908df0997f3438df137d3eab85f0f8",
+      "evals/discovery/negative-jest-test/graders/no-front-door.md": "1f177300daf6e6e8c9c9f0efb5a7b4cf59124dc9a2d50ef365a23032427a3324",
+      "evals/discovery/negative-jest-test/graders/no-library-skill.md": "846617c0a7280fa67b084b33a237f095d2f52981f2edbbd77d8f1b396476dd6a",
+      "evals/discovery/negative-jest-test/prompt.md": "c27deb67ee59816a4f2d1f7350d4c25853c6a79e0161fdab0d346eb5269827ee",
+      "evals/discovery/negative-job-search-email/graders/no-front-door.md": "1f177300daf6e6e8c9c9f0efb5a7b4cf59124dc9a2d50ef365a23032427a3324",
+      "evals/discovery/negative-job-search-email/graders/no-library-skill.md": "846617c0a7280fa67b084b33a237f095d2f52981f2edbbd77d8f1b396476dd6a",
+      "evals/discovery/negative-job-search-email/prompt.md": "85cdec6832024d27cc43b8b56fb4ffb3ca456cf873e7da7395110d45253fa17d",
+      "evals/discovery/negative-python-question/graders/no-front-door.md": "1f177300daf6e6e8c9c9f0efb5a7b4cf59124dc9a2d50ef365a23032427a3324",
+      "evals/discovery/negative-python-question/graders/no-library-skill.md": "846617c0a7280fa67b084b33a237f095d2f52981f2edbbd77d8f1b396476dd6a",
+      "evals/discovery/negative-python-question/prompt.md": "a4ddba98666be6006b2dcbc4c71b858436857f01cf98008232d8be060fc7d960",
+      "evals/discovery/pipeline-pass-not-deal/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/pipeline-pass-not-deal/graders/method-loaded.md": "25f7e1047bbdf296efcb7ae05104611dc27a1a8ed541a131adc37b8ab463fe4f",
+      "evals/discovery/pipeline-pass-not-deal/graders/not-cady-sales-deal-motion.md": "8f6fd166b517e7161713321b6aa5824d0229d547d542f8d3472e9b8c721dfdfb",
+      "evals/discovery/pipeline-pass-not-deal/prompt.md": "e37b30e797d2ead3ec27aff0f8c38de2e2da958e9fea58eba6d788bebca2af67",
+      "evals/discovery/raise-dilution/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/raise-dilution/graders/method-loaded.md": "d1e30933351d91a9be0ca7d0e0da09c6b538cc032684f92636bbf31613919ab4",
+      "evals/discovery/raise-dilution/prompt.md": "02a65228c4db89da02a71463358fc249769bb4630e0336aca706e6aa7b4f3e46",
+      "evals/discovery/raise-plan-not-list/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/raise-plan-not-list/graders/method-loaded.md": "d1e30933351d91a9be0ca7d0e0da09c6b538cc032684f92636bbf31613919ab4",
+      "evals/discovery/raise-plan-not-list/graders/not-cady-fundraise-investor-list.md": "ad469e2d385b69d73f92bb7612f0d856c37d37e1274134f31c968c0e5c770f8d",
+      "evals/discovery/raise-plan-not-list/prompt.md": "f2e9c315802728822d0b46c0f2ed125809b125f73f77cb25bf95cfcd86c74a00",
+      "evals/discovery/reply-objection-in-house/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/reply-objection-in-house/graders/method-loaded.md": "b3e0ac146d8d906d4c6abb64a8d584db987bf0e64c0496326366de03a8f048f1",
+      "evals/discovery/reply-objection-in-house/graders/not-cady-gtm-cold-email-cycle.md": "82ee32023c53e4f695a6d486480750d7285fcef1ae412eb503345a650ef8627a",
+      "evals/discovery/reply-objection-in-house/prompt.md": "9af210c74fb752e486e2bbd1ffb9ad403f73c64b08db1165376986f3fc458221",
+      "evals/discovery/reply-pricing-question/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/reply-pricing-question/graders/method-loaded.md": "b3e0ac146d8d906d4c6abb64a8d584db987bf0e64c0496326366de03a8f048f1",
+      "evals/discovery/reply-pricing-question/graders/not-cady-gtm-cold-email-cycle.md": "82ee32023c53e4f695a6d486480750d7285fcef1ae412eb503345a650ef8627a",
+      "evals/discovery/reply-pricing-question/graders/not-cady-gtm-warm-email.md": "e28c6811b35a661f034204bfe43fb338ebf54d182dbc0799cfa21c0ad611224c",
+      "evals/discovery/reply-pricing-question/prompt.md": "e7e79da879326a69914c59f2c0ec6c98498e0ae4151785ea7a38c69eb2e57ef7",
+      "evals/discovery/reply-triage-mixed/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/reply-triage-mixed/graders/method-loaded.md": "b3e0ac146d8d906d4c6abb64a8d584db987bf0e64c0496326366de03a8f048f1",
+      "evals/discovery/reply-triage-mixed/graders/not-cady-gtm-cold-email-cycle.md": "82ee32023c53e4f695a6d486480750d7285fcef1ae412eb503345a650ef8627a",
+      "evals/discovery/reply-triage-mixed/graders/not-cady-gtm-warm-email.md": "e28c6811b35a661f034204bfe43fb338ebf54d182dbc0799cfa21c0ad611224c",
+      "evals/discovery/reply-triage-mixed/prompt.md": "51dbf63904de0b63819045243aad945f94566146bc71588cb869f40c6bd2590f",
+      "evals/discovery/review-pr-diff/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/review-pr-diff/graders/method-loaded.md": "4454ef9716152514c24c84ab3dbbe809ee0f13b454c946dfa7084294c5020d42",
+      "evals/discovery/review-pr-diff/graders/not-cady-engineering-debugging.md": "f4d7faabc20f33c1d8f4b4c74bdff0b0e84302dbf22419314a9a4a9b214da267",
+      "evals/discovery/review-pr-diff/prompt.md": "e8b3de4d5d89a63909db0e1d14a369c1306dd8c49ff82e438c8f99d0ad77e6c0",
+      "evals/discovery/runway-default-alive/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/runway-default-alive/graders/method-loaded.md": "ef57f852d8138cc319568e856c615e1f44632f24801c7360144cd0f42b70da90",
+      "evals/discovery/runway-default-alive/prompt.md": "ed442385741f02eec42f9c4fb06d41b82d843541a3b7fe5eaa244f797bfdba86",
+      "evals/discovery/runway-months/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/runway-months/graders/method-loaded.md": "ef57f852d8138cc319568e856c615e1f44632f24801c7360144cd0f42b70da90",
+      "evals/discovery/runway-months/graders/not-cady-finance-budget-review.md": "0649cab5d0a3eac8d2758707987cfd972ab6947c82d6581b0967d959c1bafe8f",
+      "evals/discovery/runway-months/prompt.md": "4c4e40233c00b9591abdebee1364c3cff414cd3873971cad37ba9da980d41ceb",
+      "evals/discovery/runway-what-to-cut/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/runway-what-to-cut/graders/method-loaded.md": "ef57f852d8138cc319568e856c615e1f44632f24801c7360144cd0f42b70da90",
+      "evals/discovery/runway-what-to-cut/graders/not-cady-finance-budget-review.md": "0649cab5d0a3eac8d2758707987cfd972ab6947c82d6581b0967d959c1bafe8f",
+      "evals/discovery/runway-what-to-cut/prompt.md": "3f6cd1daa022acb83d940e39ceaa957036e20d5f59411864d8adcd2a42763359",
+      "evals/discovery/smb-to-midmarket/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/smb-to-midmarket/graders/method-loaded.md": "664a3d68f088284354ba0fc5086caad85421d53a2d6feb4e2d08dbaa934f17b5",
+      "evals/discovery/smb-to-midmarket/prompt.md": "e8ecde6d18d95cdc2ea51c11999e45a856916a805ba7e5064ec245e8c5503ad0",
+      "evals/discovery/target-list-germany/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/target-list-germany/graders/method-loaded.md": "c78c754d024cafd3b9df9b5b91a61733aadb8b3413fef7901a7075cc007a7977",
+      "evals/discovery/target-list-germany/prompt.md": "45be8dc0d3ea2a323c89824bbd774ccb35b4c225ffc5214993d9a2ab8e259911",
+      "evals/discovery/tax-return-not-filing/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/tax-return-not-filing/graders/method-loaded.md": "08f81f731b4c3dabf2e2b54f8b5d00a9a1cc927b6151030f236c0ebc7c30ff49",
+      "evals/discovery/tax-return-not-filing/graders/not-cady-accounting-period-close.md": "cec12b5fb87827b2cf0a5204850be72e95e087d0513171866bfe1bad9f81e165",
+      "evals/discovery/tax-return-not-filing/prompt.md": "f1f05c1f82cb23ee1167fa5443cd450b63755222ca3c3c09043177690a7155bd",
+      "evals/discovery/uk-confirmation-statement/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/uk-confirmation-statement/graders/method-loaded.md": "0e4beca9bc812b16d77371496730b95a7c73f22693664c86a7aa654bfe758aa2",
+      "evals/discovery/uk-confirmation-statement/prompt.md": "0a914f0765ea6cecf437222fc692b2ca8b0c9953a13a6eb164b0671c12b8a3aa",
+      "evals/discovery/vendor-choice-not-purchase/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/vendor-choice-not-purchase/graders/method-loaded.md": "01b32f21d1d1628a91a830cbe8fa4908b47db28697aec0590c655abbb8ccef20",
+      "evals/discovery/vendor-choice-not-purchase/prompt.md": "c955073eef1a7db1956b6a4bd742487a6061bbe32e7227bcd9e330980ae869a7",
+      "evals/discovery/vendor-purchase/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/vendor-purchase/graders/method-loaded.md": "1c5f99e3a2dd477fa0dce01d3ab39f337a2194fdecbdea259788d2b85d7e0813",
+      "evals/discovery/vendor-purchase/prompt.md": "d924458854037a8127dcf608f9cc9e641b1a2ccac0de9e7036b3c309a5477485",
+      "evals/discovery/vendor-renewal/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/vendor-renewal/graders/method-loaded.md": "1c5f99e3a2dd477fa0dce01d3ab39f337a2194fdecbdea259788d2b85d7e0813",
+      "evals/discovery/vendor-renewal/graders/not-cady-customer-success-lifecycle.md": "f4057b53ae7cc58f398eb1953a7410c0358e963e9f2c94b994142e158bb9638b",
+      "evals/discovery/vendor-renewal/prompt.md": "15b96ecff3a9717f2a584ff3d5f1444d29e21ccba9e1056b602b993ea42de504",
+      "evals/discovery/warm-not-cold/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/warm-not-cold/graders/method-loaded.md": "18340cd4843670e81816e5d18bac8f745ba98938748e7c6651c87ae57497af0f",
+      "evals/discovery/warm-not-cold/graders/not-cady-gtm-cold-email-cycle.md": "82ee32023c53e4f695a6d486480750d7285fcef1ae412eb503345a650ef8627a",
+      "evals/discovery/warm-not-cold/prompt.md": "fd3b64b127c76635b718e1eef5d1c455f7c82a60b671c10605551d8b3bc18a1b",
+      "evals/discovery/wcag-audit-signup/graders/front-door.md": "4b228128cb3c7f8072f804f0af84369c115a7db6f1eb130e1e091cc447ec75b7",
+      "evals/discovery/wcag-audit-signup/graders/method-loaded.md": "49e638f875a45ac74ef0abcc7b105aebb6d0824a2e99c3fb14da4a3b9b43aac8",
+      "evals/discovery/wcag-audit-signup/graders/not-cady-design-method.md": "1f0916beaa1f07233e6d14fe221221264af630757a23feed94deace0bf18e81f",
+      "evals/discovery/wcag-audit-signup/prompt.md": "dcc2fa6337010ff84337dfd702ed7d7d128f92a9ab5c5c49c634b315fd3157b1"
+    }
+  }
+}
