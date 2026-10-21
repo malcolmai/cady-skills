@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "c74ccc45cffcfb38be12df28ef210343be1ca27fbe59234b0260da9e09690fae"
-  library: "03c0b8460238af95"
+  version: "860cacdb13d5a7cfae8cef06b5782dea34b12b0580cc462c0284de59b2f4bda8"
+  library: "6950bdef5dfadc81"
   function: "company"
 ---
 # Taste review and written content
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "c74ccc45cffcfb38be12df28ef210343be1ca27fbe59234b0260da9e09690fae"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "860cacdb13d5a7cfae8cef06b5782dea34b12b0580cc462c0284de59b2f4bda8"}})`
 
 Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 

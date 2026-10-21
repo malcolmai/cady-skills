@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.accounting.period_close"
-  version: "94f4b64433838e36907b99e99b89d03b4d0264932982b2ccb59b9f318470aa19"
-  library: "03c0b8460238af95"
+  version: "f242fad81d8de32d2b535be6cfef9eab94a74a9d6c6d5dc3713971d655daeee3"
+  library: "6950bdef5dfadc81"
   function: "accounting"
 ---
 # Month-end and period close
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "94f4b64433838e36907b99e99b89d03b4d0264932982b2ccb59b9f318470aa19"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "f242fad81d8de32d2b535be6cfef9eab94a74a9d6c6d5dc3713971d655daeee3"}})`
 
 Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
 

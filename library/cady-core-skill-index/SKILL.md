@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "c9616dc0c567cd5f836452ac5115a2a9a542ae4d31cc48da586faf6d79509da1"
-  library: "03c0b8460238af95"
+  version: "cead4afce7cf183b67a12ebbb59adefd12835172ad092aec993e43fde3f284d6"
+  library: "6950bdef5dfadc81"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "c9616dc0c567cd5f836452ac5115a2a9a542ae4d31cc48da586faf6d79509da1"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "cead4afce7cf183b67a12ebbb59adefd12835172ad092aec993e43fde3f284d6"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -24,6 +24,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
+- `cady-company-operations-inbox-follow-through`: Review a mailbox window or a specific thread for material follow-through and commitments that need tracking.
 - `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
 
@@ -36,7 +37,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
-- `cady-gtm-reply`: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop.
+- `cady-gtm-reply`: Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
 - `cady-gtm-tam-map`: Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 - `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.

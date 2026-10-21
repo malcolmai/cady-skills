@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "03c0b8460238af9524aa10d0451cfb95e04168d3ee708f42b905940eb3a62efa"
-  library: "03c0b8460238af95"
+  version: "6950bdef5dfadc81d296b4c7c582afcec684d829a1eb8bf721cfffc44ce58f82"
+  library: "6950bdef5dfadc81"
   function: "core"
 ---
 # Cady
@@ -50,7 +50,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/03c0b8460238af95/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/6950bdef5dfadc81/
 
 That line is the upstream baseline at this release tag. A company's fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 
@@ -76,6 +76,7 @@ This library is a best-practice baseline. Each company forks it into its own git
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-method`: Company role card: what this function owns and decides
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
+- `cady-company-operations-inbox-follow-through`: Review a mailbox window or a specific thread for material follow-through and commitments that need tracking.
 - `cady-company-operations-method`: Company Operations role card: what this function owns and decides
 - `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
@@ -93,7 +94,7 @@ This library is a best-practice baseline. Each company forks it into its own git
 - `cady-gtm-method`: GTM role card: what this function owns and decides
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
-- `cady-gtm-reply`: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop.
+- `cady-gtm-reply`: Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
 - `cady-gtm-tam-map`: Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 - `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
 - `cady-marketing-method`: Marketing role card: what this function owns and decides

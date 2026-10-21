@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_shared"
-  version: "3e153209da3d4ee557799c8a9bcd66e21f25c949f550b5d164c4c9cad4780d47"
-  library: "03c0b8460238af95"
+  version: "7c496d40435fd8f4d897ef2a5eff7d7fe53918e174d0b94f6929ab1130220bd0"
+  library: "6950bdef5dfadc81"
   function: "product"
 ---
 # Research craft
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "3e153209da3d4ee557799c8a9bcd66e21f25c949f550b5d164c4c9cad4780d47"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "7c496d40435fd8f4d897ef2a5eff7d7fe53918e174d0b94f6929ab1130220bd0"}})`
 
 Create or update a company-library research piece in Competition or Technology.
 

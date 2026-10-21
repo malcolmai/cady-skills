@@ -1,44 +1,29 @@
 ---
 name: "cady-gtm-reply"
-description: "Reply in a live thread. Use when: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop. Not for: First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups to someone who has not replied (email: `cady-gtm-warm-email`; LinkedIn: `cady-gtm-linkedin-message`)."
+description: "Reply in a live thread. Use when: Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop. Not for: First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups to someone who has not replied (email: `cady-gtm-warm-email`; LinkedIn: `cady-gtm-linkedin-message`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "54cda1e65b37b561c35201ef2fc30893e33582ec5439a5d95e5cc71e84e2dc6f"
-  library: "03c0b8460238af95"
+  version: "b514b3bfdd987da1ca3eb55148b572c895b7b10adeb9d3b7155122eb834f96e3"
+  library: "6950bdef5dfadc81"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "54cda1e65b37b561c35201ef2fc30893e33582ec5439a5d95e5cc71e84e2dc6f"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "b514b3bfdd987da1ca3eb55148b572c895b7b10adeb9d3b7155122eb834f96e3"}})`
 
-Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop.
+Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
 
 **Not for:** First touches (use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`) and follow-ups to someone who has not replied (email: `cady-gtm-warm-email`; LinkedIn: `cady-gtm-linkedin-message`).
 
 **Unit of work:** one work item per thread. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
-## Always
-
-- In a review body, put a line with only --- between messages.
-
-## Inputs
-
-### Evidence refs
-
-- crm:party:<partyId>
-- the communication ref being answered
-
-### Statement fields
-
-- channel
-- senderLabel
-
+See [Always](references/always.md).
 ## Procedure
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
-2. Find new replies with the outcome check (message rules, outcome_check); read the thread with crm.find_communications and crm.get_communication, then crm.get_party. Exclude and explain anything the permission rules block.
+2. Read the actual inbound thread through its authorized connector and crm.get_party; for Cady-held email/LinkedIn, use the outcome check and crm.find_communications/crm.get_communication. Keep the same channel and recipient. Other channels use the approved host or device route, never a Cady email account. Exclude anything permission rules block. A channel-specific stop that Cady cannot store remains an explicit no-send hold in the task; do not silently discard it or broaden its scope.
 3. Triage the newest inbound message before drafting anything. Pick one class; when several apply, stop wins, then wrong person, then objection over positive. File it with crm.record_interactions (sourceRef the provider message id) if outcome_check has not.
 
 | Class | Next action | Timing | Permission effect |
@@ -51,9 +36,10 @@ Answer an inbound reply in a live email or LinkedIn thread: a question, interest
 | Out of office or auto-reply | Send nothing. Note any return date; a named alternative contact is a referral. | No reply | File as kind note, not reply: it is not engagement and does not hold the follow-up |
 | Wrong person or left the company | One line: thank them, ask who owns the problem. If they left, the address is dead. | Same day | Filing it as a reply holds follow-ups; a later bounce is filed as a hard bounce; the named owner is a referral |
 | Stop, unsubscribe, remove me, complaint | Send nothing, not even a confirmation. | Immediately | kind opt_out on the channel they named, else all; optOutReason complaint if hostile or a spam report; tell the owner |
-4. Objections: acknowledge in their words, ask the one question that tells a brush-off from a real blocker, answer with evidence, offer one low-effort next step, and accept a second no. "Send me info": send the one item that fits what they said, not a deck. "We use X" or "we built it": ask what works and what does not; name one difference only if it meets that gap. "Too expensive" or "no budget": find whether it is price, value, timing or authority; quote only the accepted offer, and a discount or pilot is the owner's decision. "Not a priority": treat as not now. "Not my call": ask who decides and offer a short summary they can forward. Security, compliance or certification: answer only from company evidence; say you will check rather than guess. "How did you get my address?": state the real source and offer to stop. Never use false urgency, guilt, invented scarcity, a fake "closing your file" email or another ask after a clear no.
-5. Draft one reply following the copy rules: shorter than their message where possible, one question at most, no re-pitch of the cold email, and keep everyone they copied.
-6. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare with crm.prepare_outreach_review on the thread's channel, one recipient and lane "non_marketing", read it with crm.get_outreach_review, then follow release.
+4. Commitments in the thread: keep a simple next step in existing work text when structure adds no useful retrieval. Reuse the existing task or adequate native reminder for the same outcome; do not duplicate it to add metadata, and keep independently fulfilled promises distinct. Keep workKind=task and the existing outcome in the title and optional brief. Add optional obligation metadata only when useful for later retrieval, waiting, due-date queries, deduplication or source-linked fulfillment. Preserve conditions and stated/inferred certainty without upgrading a hedge. Record the source and exact counterparty when supported; a known promisor is distinct from executor, and an unknown promisor stays unknown. A date-only commitment uses the canonical task dueDate; never invent a time or timezone. Use close_company_work for material work reporting with optional obligation/brief on the item; for a focused update to already-owned work, use the exact managed checkpoint route with current revision, generation and claim proof. On OBLIGATION_EXISTS, read the existing work and attach/update the same id. A reply, acknowledgement, delay or partial delivery does not fulfill an owed guide or contract; keep its remainder open. Close only when evidence meets the actual promised outcome; a requested confirmation can be completed by that confirmation. An acknowledged cancellation stops execution but does not fulfill, release or waive the promise. This does not establish a release/waiver lifecycle. The reply still waits for review approval. Route other material takeaways to their owners; do not infer a stage or role.
+5. Objections: acknowledge in their words, ask the one question that tells a brush-off from a real blocker, answer with evidence, offer one low-effort next step, and accept a second no. "Send me info": send the one item that fits what they said, not a deck. "We use X" or "we built it": ask what works and what does not; name one difference only if it meets that gap. "Too expensive" or "no budget": find whether it is price, value, timing or authority; quote only the accepted offer, and a discount or pilot is the owner's decision. "Not a priority": treat as not now. "Not my call": ask who decides and offer a short summary they can forward. Security, compliance or certification: answer only from company evidence; say you will check rather than guess. "How did you get my address?": state the real source and offer to stop. Never use false urgency, guilt, invented scarcity, a fake "closing your file" email or another ask after a clear no.
+6. Draft one reply following the copy rules: shorter than their message where possible, one question at most, no re-pitch of the cold email, and keep everyone they copied.
+7. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare with crm.prepare_outreach_review on the thread's channel, one recipient and lane "non_marketing", read it with crm.get_outreach_review, then follow release.
 
 ## Acceptance
 
@@ -62,21 +48,8 @@ Answer an inbound reply in a live email or LinkedIn thread: a question, interest
 - [ ] a stop request or auto-reply gets no reply; a stop is filed as opt_out
 - [ ] one review prepared and readable for this thread
 - [ ] nothing sent before the review is approved
+- [ ] material commitments remain findable across runs; an ordinary dated next step may stay in the existing work text
 
-## Owner checks
-
-- WORK_NOT_FOUND
-- METHOD_NOT_CURRENT
-- COPY_RULE_FAILED
-- permission recheck at prepare
-
-## Result
-
-### Artifact refs
-
-- crm:outreach_review:<approvalId>
-- **Transition:** the claim holder reports the result
-
-## References
-- [Copy](references/copy.md)
-- [Outreach message rules](../../references/outreach-message-rules.md)
+See [Owner checks](references/owner-checks.md).
+See [Result](references/result.md).
+See [References](references/references.md).

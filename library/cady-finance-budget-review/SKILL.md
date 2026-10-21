@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "6617a005fb5c440f6722dd94f264a15a559f8bb9bec1c47cc808380f69694e87"
-  library: "03c0b8460238af95"
+  version: "b16fd10a2588048f1681a3de6384f088894442cc62913839900a72ad2bc322e1"
+  library: "6950bdef5dfadc81"
   function: "finance"
 ---
 # Budget and cash review
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "6617a005fb5c440f6722dd94f264a15a559f8bb9bec1c47cc808380f69694e87"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "b16fd10a2588048f1681a3de6384f088894442cc62913839900a72ad2bc322e1"}})`
 
 Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations.
 

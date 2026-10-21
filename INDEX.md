@@ -1,6 +1,6 @@
 # Cady skill library
 
-61 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+62 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 ## core
 - `cady-core-context`: deciding who decides, or what to read, before company work. (`library/cady-core-context/SKILL.md`)
@@ -18,6 +18,7 @@
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task. (`library/cady-company-manage-agents/SKILL.md`)
 - `cady-company-method`: Company role card: what this function owns and decides (`library/cady-company-method/SKILL.md`)
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports). (`library/cady-company-operations-compliance-register/SKILL.md`)
+- `cady-company-operations-inbox-follow-through`: Review a mailbox window or a specific thread for material follow-through and commitments that need tracking. (`library/cady-company-operations-inbox-follow-through/SKILL.md`)
 - `cady-company-operations-method`: Company Operations role card: what this function owns and decides (`library/cady-company-operations-method/SKILL.md`)
 - `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving. (`library/cady-company-operations-people-lifecycle/SKILL.md`)
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision. (`library/cady-company-operations-requirement-register/SKILL.md`)
@@ -35,7 +36,7 @@
 - `cady-gtm-method`: GTM role card: what this function owns and decides (`library/cady-gtm-method/SKILL.md`)
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review. (`library/cady-gtm-offer-and-segments/SKILL.md`)
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps. (`library/cady-gtm-pipeline-pass/SKILL.md`)
-- `cady-gtm-reply`: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop. (`library/cady-gtm-reply/SKILL.md`)
+- `cady-gtm-reply`: Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop. (`library/cady-gtm-reply/SKILL.md`)
 - `cady-gtm-tam-map`: Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable. (`library/cady-gtm-tam-map/SKILL.md`)
 - `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship. (`library/cady-gtm-warm-email/SKILL.md`)
 - `cady-marketing-method`: Marketing role card: what this function owns and decides (`library/cady-marketing-method/SKILL.md`)

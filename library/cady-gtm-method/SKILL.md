@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "ad5bb531ff2fcee9a3ab35a67ca9bdc8dee0610d87395138dc3e9101fc50d850"
-  library: "03c0b8460238af95"
+  version: "42667a8bcc210d0edf3ee83c9d27cc152a516b2e81e441c027e4aa18957f9044"
+  library: "6950bdef5dfadc81"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "ad5bb531ff2fcee9a3ab35a67ca9bdc8dee0610d87395138dc3e9101fc50d850"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "42667a8bcc210d0edf3ee83c9d27cc152a516b2e81e441c027e4aa18957f9044"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -50,7 +50,7 @@ You grow demand into delivered value for the current bets by a loop of hypothese
 - `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
-- `cady-gtm-reply`: Answer an inbound reply in a live email or LinkedIn thread: a question, interest, objection, referral, not now or stop.
+- `cady-gtm-reply`: Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
 - `cady-gtm-tam-map`: Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 - `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.

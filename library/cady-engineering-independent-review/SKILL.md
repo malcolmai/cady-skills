@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
   version: "4a87c8cb14835354b04242dff943b740daae0e05aa0d65f990744333ea3439f5"
-  library: "03c0b8460238af95"
+  library: "6950bdef5dfadc81"
   function: "engineering"
 ---
 # Independent review and native helper orchestration
