@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "725c50982aeed34b117129c24ce7d552be8b4771c50b2c27cd042fefaf1f56e0"
-  library: "725c50982aeed34b"
+  version: "8fdc1a430e92c8e2c2558eae4e2e758d764c9cc5bc6c013f01d758bf782bbd36"
+  library: "8fdc1a430e92c8e2"
   function: "core"
 ---
 # Cady
@@ -41,6 +41,7 @@ Then follow cady-core-run-sequence.
 | `ops/agents` | create, schedule, approve and retire agents; what they may do |
 | `ops/legal` | filings, registers, compliance, tax |
 | `ops/records` | recording and consolidating decisions, files and work |
+| `ops/inbox` | mail triage, commitments, follow-ups and what to record |
 | `finance/pricing` | plans, prices, limits, Stripe |
 | `finance/plan` | the finance plan: cash, burn, runway |
 
@@ -50,7 +51,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/725c50982aeed34b/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/8fdc1a430e92c8e2/
 
 That line is the upstream baseline at this release tag. A company's fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 

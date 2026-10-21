@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-21T00:00:00Z",
   "bundle": {
-    "tag": "725c50982aeed34b",
-    "version": "725c50982aeed34b117129c24ce7d552be8b4771c50b2c27cd042fefaf1f56e0",
-    "pluginVersion": "2026.10.21-725c5098"
+    "tag": "8fdc1a430e92c8e2",
+    "version": "8fdc1a430e92c8e2c2558eae4e2e758d764c9cc5bc6c013f01d758bf782bbd36",
+    "pluginVersion": "2026.10.21-8fdc1a43"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.21-725c5098"
+    "version": "2026.10.21-8fdc1a43"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "725c50982aeed34b117129c24ce7d552be8b4771c50b2c27cd042fefaf1f56e0"
+      "version": "8fdc1a430e92c8e2c2558eae4e2e758d764c9cc5bc6c013f01d758bf782bbd36"
     },
     {
       "name": "cady-accounting-method",
@@ -75,13 +75,13 @@
       "name": "cady-company-operations-inbox-follow-through",
       "path": "library/cady-company-operations-inbox-follow-through",
       "cadyId": "skill.company_operations.inbox_follow_through",
-      "version": "8c905a4299180a4c7957340e5c2c7c2174fa7b3851565d98d2ae0e662b95b67d"
+      "version": "065f44aaf4fc38a19b4bc3af3df6262bd53e1b0b544559d9caaf2a4ea051830f"
     },
     {
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "e29d39ed0eb91258ca1f7efb7aef60abfff8b95224dfe4eb57c64c70f339330d"
+      "version": "1b928c6a6701a9b5f4e751a95f725fb117b72d7e53379a0874cca96bf13967c1"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
@@ -255,7 +255,7 @@
       "name": "cady-gtm-calls",
       "path": "library/cady-gtm-calls",
       "cadyId": "skill.gtm.calls",
-      "version": "2dacf88b448e0a1271fa8644a3e01c7331f98dbd842af3bac81cc2d5d19e5c45"
+      "version": "9274f035438ba7d6c36977faabfc36304b92e18b2d9940121b965ceb0d59e3a2"
     },
     {
       "name": "cady-gtm-cold-email-cycle",
@@ -285,7 +285,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "42667a8bcc210d0edf3ee83c9d27cc152a516b2e81e441c027e4aa18957f9044"
+      "version": "b1e8502c2cf46060e345040aa7a839cb36376eaba6a013777a8d8eab1fdd67f9"
     },
     {
       "name": "cady-gtm-offer-and-segments",
@@ -303,7 +303,7 @@
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "b514b3bfdd987da1ca3eb55148b572c895b7b10adeb9d3b7155122eb834f96e3"
+      "version": "2ffe70afc13e65c5ba9945066bbec2c2f9c372b33bd305e540c5b792d938c5a1"
     },
     {
       "name": "cady-gtm-tam-map",
