@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.scheduling"
   version: "bc9a0f9666653b5b884280e81d97076ed6f8420f33672fbc835c010efb297772"
-  library: "6950bdef5dfadc81"
+  library: "725c50982aeed34b"
   function: "core"
 ---
 # Recurring work setup and recovery
