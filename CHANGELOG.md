@@ -2,6 +2,22 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## f4e8ca47d12d38e8 · 2026-10-21
+
+Since fed32b12fc15ae44: 0 new, 0 dropped, 10 changed.
+
+Changed (the parts that differ):
+- `cady`: Load a library skill
+- `cady-company-experiment`: Procedure
+- `cady-company-method`: reference domain-method.md
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-operations-method`: Domain method
+- `cady-company-operations-requirement-register`: Procedure
+- `cady-core-execution`: reference native-orchestration.md, reference scheduled-model-selection.md
+- `cady-core-scheduling`: Company scheduling
+- `cady-marketing-method`: reference domain-method.md
+- `cady-product-manage`: Procedure, Acceptance
+
 ## fed32b12fc15ae44 · 2026-10-20
 
 Since 3beca7fa80e90672: 1 new, 3 dropped, 48 changed.

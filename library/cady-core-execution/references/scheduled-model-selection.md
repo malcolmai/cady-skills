@@ -13,7 +13,7 @@
 | workhorse tier | fit to consequence and reasoning depth | Complex exception or repair |
 | lead tier; bound the research or decision outcome and cadence | deliberate choice | Open-ended strategy or research |
 
-- **Principle:** Apply this section's execution_policy to the scheduled lead and any workers; compare total cost including repair at the required quality. The matrix names tiers, never models; pick models from the model registry (models). Voice, image and video prioritise naturalness and creative fidelity within budget; choose their models separately from the coordinating agent. Use the relevant current design method or multimodal interface for generated assets and motion when available.
+- **Principle:** Apply this section's execution_policy to the scheduled lead and any workers; compare total cost including repair at the required quality. The host owns model and effort selection; preserve explicit user settings and use the host's supported controls. Voice, image and video prioritize naturalness and creative fidelity within budget. Use the relevant current design method or multimodal interface for generated assets and motion when available.
 - **Run bounds:** The orchestrator records actual host/account/provider/spend ceilings and task-specific safety timeouts, including any explicitly configured per-run/period limits or escalation ceiling. Advisory prompts never create a quota or stop useful preparation. Process changes since the last checkpoint. Only a precheck before model invocation avoids a session; quiet notifications do not. Escalate when task difficulty, uncertainty or a quality failure warrants it, within actual authorized limits; checkpoint the affected gap rather than repeatedly retrying full sessions.
 
 ### Usage

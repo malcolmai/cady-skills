@@ -1,21 +1,21 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-10-20T00:00:00Z",
+  "generatedAt": "2026-10-21T00:00:00Z",
   "bundle": {
-    "tag": "fed32b12fc15ae44",
-    "version": "fed32b12fc15ae4412df015efbfca72718ccafab53b6cb9d387b2137b6bb437d",
-    "pluginVersion": "2026.10.20-fed32b12"
+    "tag": "f4e8ca47d12d38e8",
+    "version": "f4e8ca47d12d38e81c57e53d75171a54fdf46072179356ea56589cebe87b7de7",
+    "pluginVersion": "2026.10.21-f4e8ca47"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.20-fed32b12"
+    "version": "2026.10.21-f4e8ca47"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "fed32b12fc15ae4412df015efbfca72718ccafab53b6cb9d387b2137b6bb437d"
+      "version": "f4e8ca47d12d38e81c57e53d75171a54fdf46072179356ea56589cebe87b7de7"
     },
     {
       "name": "cady-accounting-method",
@@ -51,7 +51,7 @@
       "name": "cady-company-experiment",
       "path": "library/cady-company-experiment",
       "cadyId": "skill.company.experiment",
-      "version": "adcf18360ef48551b3c735704248497acd475b4ba9df1fb57212784f216f2a84"
+      "version": "3ce9847d3718543b21581440c1dbc95f40c3626b5d299ef14cb947ec27827569"
     },
     {
       "name": "cady-company-manage-agents",
@@ -63,31 +63,31 @@
       "name": "cady-company-method",
       "path": "library/cady-company-method",
       "cadyId": "company.method.company",
-      "version": "1b7c17161ad8bf9e1b7545d9b0fa2f4635d4dd80157e64b192a285e7e0c0583e"
+      "version": "27647e7b6ab32d4c2c0e7899db9c37ccd6b696b949a407b04237df7f8bcc8ef3"
     },
     {
       "name": "cady-company-operations-compliance-register",
       "path": "library/cady-company-operations-compliance-register",
       "cadyId": "skill.company_operations.compliance_register",
-      "version": "68f3146b6b813e8a30336e9a1792501fde2b18f9adfa6eb899cf8e822daf7e2a"
+      "version": "cfbea1cf1d0b92e8c86895464c755d7ee1542e4846bf6973e6d1772272d52c11"
     },
     {
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "15b110fccbdac82de92f061392493ae9b9e1ce218b4a25973d25e43080fc5040"
+      "version": "08bfb22b4ededeec54c7e96a703a1946a7cb0183e26cb6095f42fcfb1be90ecf"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
       "path": "library/cady-company-operations-people-lifecycle",
       "cadyId": "skill.company_operations.people_lifecycle",
-      "version": "65e4c7dbf4678a9850e718f9a50a6a5c6781e9b2059784695c0d0dbcbe7883e0"
+      "version": "67b1f2342f52e113cf523d9b94e2d29216f787203017d85eaac0eaf6c012b3f8"
     },
     {
       "name": "cady-company-operations-requirement-register",
       "path": "library/cady-company-operations-requirement-register",
       "cadyId": "skill.company_operations.requirement_register",
-      "version": "9ffa7fd20e94980d87897ff6dd5e2b30b2c3f95282fd310b6ae5fe3222213ef5"
+      "version": "f8dcfc7b40ad09f2af11a43d54c3e9e9f5761581eb24ec6f08767dbaed4cd423"
     },
     {
       "name": "cady-company-review",
@@ -111,7 +111,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "ed96c03ffe95f69a6dfebb553ac06a100b623d6db0cb6e90993f9a468680d589"
+      "version": "2a43002125ba3124dd87a28cab9607591f961035683552e1030e2d204768a36b"
     },
     {
       "name": "cady-core-run-sequence",
@@ -123,7 +123,7 @@
       "name": "cady-core-scheduling",
       "path": "library/cady-core-scheduling",
       "cadyId": "execution.topic.scheduling",
-      "version": "da30abc68da8bef5512e109c1234c8d169375e93a920e4370903dadba1b6701f"
+      "version": "bc9a0f9666653b5b884280e81d97076ed6f8420f33672fbc835c010efb297772"
     },
     {
       "name": "cady-core-skill-index",
@@ -315,7 +315,7 @@
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "8d51061393a8af6ef27a1389a02f4cd9920af9e0c0e4579bea803bb1c1dc6abf"
+      "version": "1771847129427a2e4fd1704df3ca667319842c9395def235d2f36ac82e339b28"
     },
     {
       "name": "cady-orchestrator-method",
@@ -333,13 +333,13 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "507bef67c4b2c883aa680c3a276ed84b7f85faef4fc151ed536ef5eafaf4c27e"
+      "version": "3d51050d0762e9009a675da3ab1936a5feef8fee451fa76fa6911363ba19e96b"
     },
     {
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "77f1fced9b89080a1c557904ca03d904325ca1e11c0bb380043895092cd29d2b"
+      "version": "e6211653480b73cd5971d0dd1fc1dbddbce9243159d6cee19b424599d599538a"
     },
     {
       "name": "cady-product-research-competition",

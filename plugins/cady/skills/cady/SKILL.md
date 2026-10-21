@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "fed32b12fc15ae4412df015efbfca72718ccafab53b6cb9d387b2137b6bb437d"
-  library: "fed32b12fc15ae44"
+  version: "f4e8ca47d12d38e81c57e53d75171a54fdf46072179356ea56589cebe87b7de7"
+  library: "f4e8ca47d12d38e8"
   function: "core"
 ---
 # Cady
@@ -46,11 +46,11 @@ Then follow cady-core-run-sequence.
 
 ## Load a library skill
 
-Use installed skills when you have them: Codex, claude.ai and other copied installs keep `library/` and `references/` inside this skill's folder, so read `library/<name>/SKILL.md` relative to this file, then any reference it links.
+Before drafting or recommending, choose the matching skill below and read `library/<name>/SKILL.md` relative to this skill's base directory, then the references it needs. Try that local path on every host, including Claude Code; the host name does not tell you whether the library is installed.
 
-Otherwise (for example the Claude Code plugin) fetch from the library source below: `INDEX.md` there lists each skill with its path; fetch `library/<name>/SKILL.md` and the references it links from the same source.
+Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/fed32b12fc15ae44/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/f4e8ca47d12d38e8/
 
 That line is the upstream baseline at this release tag. A company's fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 

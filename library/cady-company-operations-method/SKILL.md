@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "15b110fccbdac82de92f061392493ae9b9e1ce218b4a25973d25e43080fc5040"
-  library: "fed32b12fc15ae44"
+  version: "08bfb22b4ededeec54c7e96a703a1946a7cb0183e26cb6095f42fcfb1be90ecf"
+  library: "f4e8ca47d12d38e8"
   function: "company_operations"
 ---
 # Company Operations
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "15b110fccbdac82de92f061392493ae9b9e1ce218b4a25973d25e43080fc5040"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "08bfb22b4ededeec54c7e96a703a1946a7cb0183e26cb6095f42fcfb1be90ecf"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -41,7 +41,7 @@ company
 |---|---|
 | Canonical spending reservation and executor qualification | Operations can prepare a vendor decision, but Finance advice and agent prose cannot approve payment or a contract; use an applicable checked current route or hold the effect. |
 
-- **Read:** the company practice: `cady-core-context`
+- **Read:** the installed `cady-core-context` skill for company practice
 
 #### Routing
 

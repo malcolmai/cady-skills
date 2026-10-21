@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "507bef67c4b2c883aa680c3a276ed84b7f85faef4fc151ed536ef5eafaf4c27e"
-  library: "fed32b12fc15ae44"
+  version: "3d51050d0762e9009a675da3ab1936a5feef8fee451fa76fa6911363ba19e96b"
+  library: "f4e8ca47d12d38e8"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "507bef67c4b2c883aa680c3a276ed84b7f85faef4fc151ed536ef5eafaf4c27e"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "3d51050d0762e9009a675da3ab1936a5feef8fee451fa76fa6911363ba19e96b"}})`
 
 Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
 
@@ -45,6 +45,7 @@ Decide what to build, for whom and why; run discovery and hypotheses; plan each 
 5. When evidence settles a hypothesis or product choice, use subject hypothesis.outcome:<slug> or product.choice:<slug> respectively. Record it with submit_company_work_checkpoint: statement is the decision, status COMPLETE, decision {kind: "decision", subject, rationale, authority, decidedBy, supersedes: [the hypothesis or earlier decision workIds]}. For your own choice use authority "agent" and omit decidedBy, source and quote; for a person use their exact words as source "chat" and quote, or a verified source "grant" with grantId. Raise a choice reserved to the founder as a BLOCKED decision item addressed to the owner, with the question as nextAction; it reaches them as asksForYou. Propose an accepted ICP or bet for direction only through update_company_direction.
 6. Scope from the ranked gap list against the bar; subtract before adding. Rank with the lightest frame that separates the options: for a few items, cost of delay (what each week of waiting loses in revenue, risk, learning or a deadline) divided by effort, highest first; RICE (reach x impact x confidence / effort) only for a longer list with comparable reach data. Label each estimate measured, evidence-based or guess, and never let precise-looking scores hide guesses; a fixed deadline or a blocker on a critical path overrides the score. Record the ranking rationale on the work item. Bind product work to the offering with the company product owner and productId. Plan each release as a work item with release {stage, buildBy, qaDays, thresholds}, per the release plan (`../../references/release-plan.md`).
 7. Check release thresholds against exact QA, engineering and customer evidence on the release work item. Go: record the go decision there under subject release.go:<workId>, with evidence refs and nextAction 'ready to release'; keep release stage 'qa'. No-go: status BLOCKED with the unmet threshold and next action, through transition_company_work(action: 'checkpoint', status: 'BLOCKED', nextAction) when you hold the claim. The release owner sets stage 'released' only after verifying the deployed artifact and target, citing the deploy receipt.
+8. When the requested analysis includes validation work, create a scoped Projects item with its acceptance and next action. After verifying a specific successor or confirming the action is complete, update or clear the existing nextAction through its supported current-revision owner transition when allowed; do not leave a superseded action current or create unrequested follow-on work.
 
 ## Acceptance
 
@@ -52,6 +53,7 @@ Decide what to build, for whom and why; run discovery and hypotheses; plan each 
 - [ ] each decision names rationale, authority and the items it supersedes
 - [ ] observations are files linked from work, never a new store
 - [ ] each release has an explicit go or no-go on its own work item with evidence
+- [ ] requested validation work is recorded, and superseded next actions are updated only through a supported owner transition
 
 ## Owner checks
 
