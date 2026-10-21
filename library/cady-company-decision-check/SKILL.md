@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
   version: "cdcca6ef6f9d55bd0f8d0522640e91cadf7ca7c78bb5d752920406da285ba85e"
-  library: "cf93c1d9ce44e1ac"
+  library: "03c0b8460238af95"
   function: "company"
 ---
 # Decision layers and second look

@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-21T00:00:00Z",
   "bundle": {
-    "tag": "cf93c1d9ce44e1ac",
-    "version": "cf93c1d9ce44e1acdf8a25076beb745133d6626d7a915072d9d6003b71c50eac",
-    "pluginVersion": "2026.10.21-cf93c1d9"
+    "tag": "03c0b8460238af95",
+    "version": "03c0b8460238af9524aa10d0451cfb95e04168d3ee708f42b905940eb3a62efa",
+    "pluginVersion": "2026.10.21-03c0b846"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.21-cf93c1d9"
+    "version": "2026.10.21-03c0b846"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "cf93c1d9ce44e1acdf8a25076beb745133d6626d7a915072d9d6003b71c50eac"
+      "version": "03c0b8460238af9524aa10d0451cfb95e04168d3ee708f42b905940eb3a62efa"
     },
     {
       "name": "cady-accounting-method",
@@ -117,7 +117,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "9dce6ff968632ef7bfd149cb230e1afe17a7bcef91e30295093f1b35cbdef886"
+      "version": "0305f3dbefe958b68033285cf9984b6c5deba6326e57eb86d6d4b7bd1d4cd064"
     },
     {
       "name": "cady-core-scheduling",
