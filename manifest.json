@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-22T00:00:00Z",
   "bundle": {
-    "tag": "d51b57f8466a2b20",
-    "version": "d51b57f8466a2b20414da24f004ae00536df8d439e6ba5573b0067d2066bf67e",
-    "pluginVersion": "2026.10.22-d51b57f8"
+    "tag": "e31cc7da45eadf1f",
+    "version": "e31cc7da45eadf1fb9deb6ba74f354ddbc714fa9c9a1f71852b6d8a1b304ce57",
+    "pluginVersion": "2026.10.22-e31cc7da"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.22-d51b57f8"
+    "version": "2026.10.22-e31cc7da"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "d51b57f8466a2b20414da24f004ae00536df8d439e6ba5573b0067d2066bf67e"
+      "version": "e31cc7da45eadf1fb9deb6ba74f354ddbc714fa9c9a1f71852b6d8a1b304ce57"
     },
     {
       "name": "cady-accounting-method",
@@ -345,25 +345,25 @@
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "2928f35963a31ae4803696aa83f097ec0782fbcce9a9b1f4b31d531252c04ccf"
+      "version": "dd295f057307cc66c11a1117b6c006dfcd3a39ec88ffb664e92f8861f8c7416b"
     },
     {
       "name": "cady-product-research-competition",
       "path": "library/cady-product-research-competition",
       "cadyId": "skill.product.research_competition",
-      "version": "30baea9da8b57632e5fb6e465cf27bb8134eb6d62b7f3977b8412f45eed28081"
+      "version": "048ca537f10e75ee78a1d78e49398f2feb404d3b3e35a8b094ab464781a3d55c"
     },
     {
       "name": "cady-product-research-shared",
       "path": "library/cady-product-research-shared",
       "cadyId": "skill.product.research_shared",
-      "version": "db329c2932cd93a5057faa1b69db68567800885cc18b243227a7648ad9c24fb5"
+      "version": "11a83122e67e771615a60d1da632d413b18ce9afe2f114de6f4fcff13e2e4190"
     },
     {
       "name": "cady-product-research-technology",
       "path": "library/cady-product-research-technology",
       "cadyId": "skill.product.research_technology",
-      "version": "742fd8c6546bbb9d7e3d762b8a38b3448ae30001942bd3118df820f4fba53080"
+      "version": "8acfa51d47f80a3b1ba6fb7c25b0a67c6f68b2fbf00b0d4f051fdd11803936c8"
     },
     {
       "name": "cady-qa-method",
