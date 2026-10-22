@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "5600ebe085c2deb7ad4918ad9b033f696e89cede721b7e8d9dd370a5ded93cd3"
-  library: "b7c6052adb03e788"
+  version: "2e527ffb39aa8f0b7b42327a1633ce74a473f551aca3b2d5d2939194a3a71229"
+  library: "d51b57f8466a2b20"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "5600ebe085c2deb7ad4918ad9b033f696e89cede721b7e8d9dd370a5ded93cd3"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "2e527ffb39aa8f0b7b42327a1633ce74a473f551aca3b2d5d2939194a3a71229"}})`
 
 Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes.
 

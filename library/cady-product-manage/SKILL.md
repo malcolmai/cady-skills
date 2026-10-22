@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "976b776412416e5f0a256a161967130f9975a935a473832a08dc4c708adecc2b"
-  library: "b7c6052adb03e788"
+  version: "91f4939b418bcf45da3dc1c57550477ec0c7b07c52c56e4a18d6feb7700d86c8"
+  library: "d51b57f8466a2b20"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "976b776412416e5f0a256a161967130f9975a935a473832a08dc4c708adecc2b"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "91f4939b418bcf45da3dc1c57550477ec0c7b07c52c56e4a18d6feb7700d86c8"}})`
 
 Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
 

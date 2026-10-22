@@ -2,6 +2,15 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## d51b57f8466a2b20 · 2026-10-22
+
+Since b7c6052adb03e788: 0 new, 0 dropped, 1 changed.
+
+Changed (the parts that differ):
+- `cady-company-operations-inbox-follow-through`: Procedure, Acceptance
+
+Shared references changed: inbox-follow-through-details.md.
+
 ## b7c6052adb03e788 · 2026-10-22
 
 Since 8fdc1a430e92c8e2: 0 new, 0 dropped, 5 changed.

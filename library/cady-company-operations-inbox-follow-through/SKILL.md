@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "577810968bf19546d831f31724459b98c9f004feb7fb51c9302dd0afadfe17a3"
-  library: "b7c6052adb03e788"
+  version: "4e70b97c7fe550a20cd1df1b8242d7b160237268c3110c913f3407b470ca3a22"
+  library: "d51b57f8466a2b20"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "577810968bf19546d831f31724459b98c9f004feb7fb51c9302dd0afadfe17a3"}})`
+**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "4e70b97c7fe550a20cd1df1b8242d7b160237268c3110c913f3407b470ca3a22"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 
@@ -30,17 +30,18 @@ See [Inputs](references/inputs.md).
 6. Triage each individually read message on separate fields, never one score: type (question, request, promise, receipt, invoice, notice, social), action (none, reply, do, decide, wait), owner, deadline (absolute date and the zone written in) and importance (the user's own priority). Preserve each actual obligation, payment, contract or security action, even from a marketing sender. A promotional price or countdown is not an obligation; expired no-action reminders may be archived.
 7. For marketing mail, follow the existing inbox:marketing-treatment choice; ask once only for genuinely uncertain useful interest. See [Marketing handling and commitment updates](../../references/inbox-follow-through-details.md) for personalization, archive/unsubscribe separation and exceptional items.
 8. Record only material communication evidence with crm.record_interactions (kind reply for an actual response, note for an observation, provider message id as sourceRef (for pasted mail, a stable host reference or deterministic digest, never a raw subject), sender party, time and one-line outcome). Never put body, subject or attachments in Cady. Resolve an unknown sender using authorized CRM/source evidence; if identity remains unknown, do not invent a party or permission. Create a party through crm.update_party mode=create only when identity is sufficiently evidenced and durable CRM identity is useful; otherwise ask only if the ambiguity changes a consequential next action.
-9. Reuse the existing task or an adequate native reminder for a promised outcome; do not create duplicate work for metadata. Add obligation metadata only when it helps later retrieval, waiting, due-date queries, deduplication or source-linked fulfillment. Preserve source-backed terms and certainty; never infer a promisor, deadline or fulfillment. Use the supported reporting or focused-update route. See [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md) for the conditional owner routes.
-10. Reconcile due awaiting commitments even without new mail: record who acts next and a justified chase date. Awaiting is not blocked or Needs-you without a person action. Keep unfinished outcomes open and completed work terminal; cancellation is not fulfillment. Stop denied mutations and continue independent work. Route material takeaways once; routine mail writes nothing. Use the commitment reference for corrections and CRM-specific routes.
-11. For mailbox maintenance, audit a random 2% of previously suppressed mail (at least 5, or all if fewer). This default is not proof of safety. One that needed action is a misfile: demote that group to read-individually, pull the message out, handle it, and count it as misfiled.
-12. Unread archive rules remain company decisions under inbox.suppress:<sender-or-list-slug>, with sample evidence and reviewBy at most 30 days away. Marketing keep/ignore policy is a separate inbox:marketing-treatment decision; preserve its existing choice, and ask once only when a relevant item exposes a missing decision.
-13. Report user actions (type, owner, deadline, earliest first), owed-by/to items and waits. Include run counters: groups, sampled, pulledOut, suppressed, audited, misfiled, obligations written, superseded, refused.
+9. For material threads, identify outcome and owner/work; check latest counterparty mail against unresolved older requests. Generic status does not complete the goal. Finish useful investigation/preparation within mandate: deliver the assessment or draft, then ask only for the missing decision/approval. No request does not mean done.
+10. Reuse existing work or a native reminder; never create per-email or duplicate work. Add obligation metadata only when useful for retrieval or fulfillment. Preserve source, certainty, promisor and date precision; never infer them. Use the supported reporting or focused-update route. See [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md) for owner routes.
+11. Reconcile due awaiting commitments even without new mail: record who acts next and a justified chase date. Awaiting is not blocked or Needs-you without a person action. Keep unfinished outcomes open and completed work terminal; cancellation is not fulfillment. Stop denied mutations and continue independent work. Route material takeaways once; routine mail writes nothing. Use the commitment reference for corrections and CRM-specific routes.
+12. For mailbox maintenance, audit a random 2% of previously suppressed mail (at least 5, or all if fewer). This default is not proof of safety. One that needed action is a misfile: demote that group to read-individually, pull the message out, handle it, and count it as misfiled.
+13. Unread archive rules remain company decisions under inbox.suppress:<sender-or-list-slug>, with sample evidence and reviewBy at most 30 days away. Marketing keep/ignore policy is a separate inbox:marketing-treatment decision; preserve its existing choice, and ask once only when a relevant item exposes a missing decision.
+14. Report user actions (type, owner, deadline, earliest first), owed-by/to items and waits. Include run counters: groups, sampled, pulledOut, suppressed, audited, misfiled, obligations written, superseded, refused.
 
 ## Acceptance
 
 - [ ] no message was suppressed from headers alone: every suppressed group was sampled and outlier-scanned
 - [ ] known parties, people the user has written to and threads the user is on were read individually
-- [ ] material commitments remain findable through suitable existing work or reminders; optional terms preserve source, known promisor and supplied date precision without duplicating the outcome
+- [ ] material outcomes and dependencies remain open until evidenced complete; work or reminders are reused and optional terms preserve source, known promisor and supplied date precision without duplicating the outcome
 - [ ] an awaiting obligation carries waitingOn and chaseAt and is not in Needs-you
 - [ ] completed work stays terminal on replay; genuinely new commitments use explicit successor lineage, while an erroneous completion follows the supported correction route
 - [ ] takeaways reach their owner only when important: routine mail writes nothing to the CRM or context; a deferral is a track, a stop is a permission, an owner decision is a quoted decision

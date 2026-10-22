@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "d93b4184152129ace9a954f5fa6de35da61a8eceedde7e8240b7e3ecadd395ec"
-  library: "b7c6052adb03e788"
+  version: "35cf138a1dd1f6c53dbb177d0504d91b6e3925f35eed64e8015bc2bc29a24e5a"
+  library: "d51b57f8466a2b20"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "d93b4184152129ace9a954f5fa6de35da61a8eceedde7e8240b7e3ecadd395ec"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "35cf138a1dd1f6c53dbb177d0504d91b6e3925f35eed64e8015bc2bc29a24e5a"}})`
 
 Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 

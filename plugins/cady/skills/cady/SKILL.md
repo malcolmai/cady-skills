@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "b7c6052adb03e788938771aec5dea10346f4d67fed991d9d6f586ac645f24d1a"
-  library: "b7c6052adb03e788"
+  version: "d51b57f8466a2b20414da24f004ae00536df8d439e6ba5573b0067d2066bf67e"
+  library: "d51b57f8466a2b20"
   function: "core"
 ---
 # Cady
@@ -51,7 +51,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/b7c6052adb03e788/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/d51b57f8466a2b20/
 
 That line is the upstream baseline at this release tag. A company's fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 

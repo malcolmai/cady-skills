@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "3daa5c2a44d373f7d50f2489fbdc90dcb2a4082b0d63dd579257a9712251e676"
-  library: "b7c6052adb03e788"
+  version: "22e359ed0f4d9e3b58c7fc415c1cc0fd53cdbfb71dd8fd0297bde7a44224b0cd"
+  library: "d51b57f8466a2b20"
   function: "company"
 ---
 # Manage company agents
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "3daa5c2a44d373f7d50f2489fbdc90dcb2a4082b0d63dd579257a9712251e676"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "22e359ed0f4d9e3b58c7fc415c1cc0fd53cdbfb71dd8fd0297bde7a44224b0cd"}})`
 
 Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 

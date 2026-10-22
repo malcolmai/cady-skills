@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "f9a603b662f581e221e1528a0a1a271d983d33f0026af3489342900c51895d75"
-  library: "b7c6052adb03e788"
+  version: "8a3b7b41a2b05ddf1f237138d86106448835711c90b871028688f93c79231d84"
+  library: "d51b57f8466a2b20"
   function: "design"
 ---
 # Design
 
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "f9a603b662f581e221e1528a0a1a271d983d33f0026af3489342900c51895d75"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "8a3b7b41a2b05ddf1f237138d86106448835711c90b871028688f93c79231d84"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
