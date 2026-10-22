@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "cead4afce7cf183b67a12ebbb59adefd12835172ad092aec993e43fde3f284d6"
-  library: "8fdc1a430e92c8e2"
+  version: "3a0c0d6cba11041dfe38480bc2f090dacf7ba7a03b054fc953851ec4985d1d43"
+  library: "b7c6052adb03e788"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "cead4afce7cf183b67a12ebbb59adefd12835172ad092aec993e43fde3f284d6"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "3a0c0d6cba11041dfe38480bc2f090dacf7ba7a03b054fc953851ec4985d1d43"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -24,7 +24,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
-- `cady-company-operations-inbox-follow-through`: Review a mailbox window or a specific thread for material follow-through and commitments that need tracking.
+- `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 - `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
 

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "8fdc1a430e92c8e2c2558eae4e2e758d764c9cc5bc6c013f01d758bf782bbd36"
-  library: "8fdc1a430e92c8e2"
+  version: "b7c6052adb03e788938771aec5dea10346f4d67fed991d9d6f586ac645f24d1a"
+  library: "b7c6052adb03e788"
   function: "core"
 ---
 # Cady
@@ -51,7 +51,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/8fdc1a430e92c8e2/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/b7c6052adb03e788/
 
 That line is the upstream baseline at this release tag. A company's fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 
@@ -77,7 +77,7 @@ This library is a best-practice baseline. Each company forks it into its own git
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-method`: Company role card: what this function owns and decides
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
-- `cady-company-operations-inbox-follow-through`: Review a mailbox window or a specific thread for material follow-through and commitments that need tracking.
+- `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 - `cady-company-operations-method`: Company Operations role card: what this function owns and decides
 - `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.

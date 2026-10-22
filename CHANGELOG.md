@@ -2,6 +2,19 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## b7c6052adb03e788 · 2026-10-22
+
+Since 8fdc1a430e92c8e2: 0 new, 0 dropped, 5 changed.
+
+Changed (the parts that differ):
+- `cady`: Library
+- `cady-company-manage-agents`: Procedure, Acceptance, removed Owner checks, reference owner-checks.md
+- `cady-company-operations-inbox-follow-through`: description, intro, Procedure, reference owner-checks.md
+- `cady-company-taste-review`: Always, Procedure, References
+- `cady-core-skill-index`: company
+
+Shared references changed: agent-skill-drafting.md, inbox-follow-through-details.md.
+
 ## 8fdc1a430e92c8e2 · 2026-10-21
 
 Since 725c50982aeed34b: 0 new, 0 dropped, 4 changed.
