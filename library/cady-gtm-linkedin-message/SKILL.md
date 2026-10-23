@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "36f69bf746dff5776e376554491d58c9b46a7c6cdab19f64fdef4ea3d54e52f4"
-  library: "b1e7050435d28aef"
+  version: "45292c73550afb79e8af023212ec6664c64203fa2190ee684c6727c2daaf5818"
+  library: "6154b8000f7b47fa"
   function: "gtm"
 ---
 # LinkedIn message
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "36f69bf746dff5776e376554491d58c9b46a7c6cdab19f64fdef4ea3d54e52f4"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "45292c73550afb79e8af023212ec6664c64203fa2190ee684c6727c2daaf5818"}})`
 
 Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
 
@@ -42,7 +42,7 @@ Draft a LinkedIn connection note or direct message to one person, or its one fol
 2. Read the profile and available context. Use genuine common ground such as a shared event, past employer, school or interest in their posts. Mention a mutual connection only when they have identified it. Never invent closeness.
 3. A connection note gives one honest reason to connect, with no pitch, ask or company name. For a first message to an existing connection, use a subtle personal note about what you are working on, why it may be relevant, and that you would be glad to chat sometime. Avoid product names and links.
 4. Read crm.get_party for every recipient. Exclude and explain a recorded opt-out or destination suppression; never overwrite it.
-5. Pace like a person within the company's LinkedIn caps: 20 connection requests per rolling day, 100 per rolling week and 500 in total, spread across working hours (the review holds anything over them); tell the owner which invitations have been pending over three weeks so they can withdraw them; a falling acceptance rate means the targeting or note is wrong, not that volume should rise.
+5. Pace like a person within the company's LinkedIn caps: 20 connection requests per rolling day, and 100 per rolling week, spread across working hours (the review holds anything over them); tell the owner which invitations have been pending over three weeks so they can withdraw them; a falling acceptance rate means the targeting or note is wrong, not that volume should rise.
 6. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare one body per recipient with crm.prepare_outreach_review and read it with crm.get_outreach_review; keep connection notes, first messages and follow-ups in distinct cohorts. Give prepare a one-line justification (why this send now). Then follow release.
 7. LinkedIn send with your own connector, in order: prepare; confirm it (self-approve in notify mode with crm.outreach.confirm, an active grant, or the person's review); only then send exactly the approved text with your own LinkedIn connector, never before and never to a party the confirmed review does not cover; note each send with crm.record_interactions (kind note, approvalId) then schedule the follow-up with crm.set_track so it shows in the due follow-ups view; details as outreach_release says. Cady keeps no release ledger or cap count here, so hold the 20 a day, 100 a week pacing yourself. With no LinkedIn connector, run crm.execute_approved_outreach with executor device and the user's `cady exec <ticket>` sends instead.
 8. Allow one follow-up only, with something new, under the follow-up rule (message rules, follow_up), after the outcome check has read the thread. Anyone who replies leaves follow-up and moves to `cady-gtm-reply`. Recheck permission and suppression before preparing.

@@ -2,6 +2,14 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 6154b8000f7b47fa · 2026-10-23
+
+Since b1e7050435d28aef: 0 new, 0 dropped, 2 changed.
+
+Changed (the parts that differ):
+- `cady-gtm-cold-email-cycle`: Procedure
+- `cady-gtm-linkedin-message`: Procedure
+
 ## b1e7050435d28aef · 2026-10-23
 
 Since 62ae69a6f667e4c1: 0 new, 0 dropped, 0 changed.

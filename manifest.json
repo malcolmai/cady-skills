@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-23T00:00:00Z",
   "bundle": {
-    "tag": "b1e7050435d28aef",
-    "version": "b1e7050435d28aef23b6b106a0a7d1334e4442bf28211b99852ae51649cc2b4c",
-    "pluginVersion": "2026.10.23-b1e70504"
+    "tag": "6154b8000f7b47fa",
+    "version": "6154b8000f7b47fab483b90ce602ed611002e06deb5b252212909319946d1b04",
+    "pluginVersion": "2026.10.23-6154b800"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.23-b1e70504"
+    "version": "2026.10.23-6154b800"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "b1e7050435d28aef23b6b106a0a7d1334e4442bf28211b99852ae51649cc2b4c"
+      "version": "6154b8000f7b47fab483b90ce602ed611002e06deb5b252212909319946d1b04"
     },
     {
       "name": "cady-accounting-method",
@@ -261,7 +261,7 @@
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "fe419f1fb9088ce0fd014928057028f3ef646ee34e60549b9efadf06f83c9bcd"
+      "version": "95db9faee97fa5baf02fe3384228a583f5c82faa7edc9cda6f730e06fb3e35c1"
     },
     {
       "name": "cady-gtm-events",
@@ -279,13 +279,13 @@
       "name": "cady-gtm-linkedin-message",
       "path": "library/cady-gtm-linkedin-message",
       "cadyId": "skill.gtm.linkedin_message",
-      "version": "36f69bf746dff5776e376554491d58c9b46a7c6cdab19f64fdef4ea3d54e52f4"
+      "version": "45292c73550afb79e8af023212ec6664c64203fa2190ee684c6727c2daaf5818"
     },
     {
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "f87ee768f47f4d006e5f179be0687399ab6f47f9fe3c863267153df5907cbd8d"
+      "version": "ca58c7e9e696c64625c8c2d23c8a373c40b9191ac33aa81245dc24f6b1782308"
     },
     {
       "name": "cady-gtm-offer-and-segments",
