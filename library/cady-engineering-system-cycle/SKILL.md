@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "f7167d879366054b3ad96aeef9a5001e1f04b6a48f293c3653c3ee860c4b326a"
-  library: "62ae69a6f667e4c1"
+  version: "2cfb31aa5d0dfdc94bf98fb2f164889baf9f9cb225f96c6c397501072bfedc7f"
+  library: "b1e7050435d28aef"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "f7167d879366054b3ad96aeef9a5001e1f04b6a48f293c3653c3ee860c4b326a"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "2cfb31aa5d0dfdc94bf98fb2f164889baf9f9cb225f96c6c397501072bfedc7f"}})`
 
 Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 

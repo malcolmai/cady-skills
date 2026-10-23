@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "169e1e03b147c8eec584b31dbed56f7842fbe4ea5960566c752e63ae1f9748aa"
-  library: "62ae69a6f667e4c1"
+  version: "723d27872d88e4ce8a9c82879cf015c95fa89f825f90a135e93a5ebf7f406448"
+  library: "b1e7050435d28aef"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "169e1e03b147c8eec584b31dbed56f7842fbe4ea5960566c752e63ae1f9748aa"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "723d27872d88e4ce8a9c82879cf015c95fa89f825f90a135e93a5ebf7f406448"}})`
 
 Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
 

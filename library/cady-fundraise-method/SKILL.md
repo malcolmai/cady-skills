@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "989fe8c3f5dd870f6784a2932cd00d3fcf88e181ecccdccbf31f586c78fd63ee"
-  library: "62ae69a6f667e4c1"
+  version: "9d82c3b040718e488f582275e580009ca1fcd9e423e81a83146b1ca286a6026a"
+  library: "b1e7050435d28aef"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "989fe8c3f5dd870f6784a2932cd00d3fcf88e181ecccdccbf31f586c78fd63ee"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "9d82c3b040718e488f582275e580009ca1fcd9e423e81a83146b1ca286a6026a"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 

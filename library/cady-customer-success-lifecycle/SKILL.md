@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
-  version: "5887710c7ccb50d537e84c1f63f5223968fffa7eb7c69d1762e5a0b3bf222fa4"
-  library: "62ae69a6f667e4c1"
+  version: "9308c62c1c7be98d505667b7d2a882e2444dbff2e35359b01a53d588a42d1514"
+  library: "b1e7050435d28aef"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "5887710c7ccb50d537e84c1f63f5223968fffa7eb7c69d1762e5a0b3bf222fa4"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "9308c62c1c7be98d505667b7d2a882e2444dbff2e35359b01a53d588a42d1514"}})`
 
 Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 

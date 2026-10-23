@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "cdb7103843b1c32156fc406976df162f8be64b8bd25cdea9e238baa2fb8fbbc8"
-  library: "62ae69a6f667e4c1"
+  version: "63e57f7c024e313f87ea858b3f047dea256d3858f0fb2f6f42586d541c3a2f01"
+  library: "b1e7050435d28aef"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "cdb7103843b1c32156fc406976df162f8be64b8bd25cdea9e238baa2fb8fbbc8"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "63e57f7c024e313f87ea858b3f047dea256d3858f0fb2f6f42586d541c3a2f01"}})`
 
 Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
 

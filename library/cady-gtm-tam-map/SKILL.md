@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "dc89f32a43d6bb50bbc4d54b588eecd3b08f143a0e4b76543e57d8bee085157e"
-  library: "62ae69a6f667e4c1"
+  version: "8175840227c68caa9e752e09bcbffb2823b8fe03ef39c937fe02d09f4761c7b0"
+  library: "b1e7050435d28aef"
   function: "gtm"
 ---
 # TAM map
 
-**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "dc89f32a43d6bb50bbc4d54b588eecd3b08f143a0e4b76543e57d8bee085157e"}})`
+**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "8175840227c68caa9e752e09bcbffb2823b8fe03ef39c937fe02d09f4761c7b0"}})`
 
 Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "2fd86f76d0ea512d55503fde4f345349bf52f06f77fbd6c85c90e601d5732d36"
-  library: "62ae69a6f667e4c1"
+  version: "d0a7b08022ef8b24f6c5fd2745cd89fade822e0213a47588ac6a1515b6e9e0b2"
+  library: "b1e7050435d28aef"
   function: "gtm"
 ---
 # Events: attend or host
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "2fd86f76d0ea512d55503fde4f345349bf52f06f77fbd6c85c90e601d5732d36"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "d0a7b08022ef8b24f6c5fd2745cd89fade822e0213a47588ac6a1515b6e9e0b2"}})`
 
 Choose, prepare for or host an event that can advance the company purpose through real conversations.
 
