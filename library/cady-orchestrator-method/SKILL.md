@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "75a89c01909ec2c1d77db32fab4a30f48ba2e3b1c370a356aff703a68280c370"
-  library: "0ff16c1777f932cf"
+  version: "f46d221b7764ad944fbf71e5b474404b52afbf29bd68a267decc43a563964641"
+  library: "f51897f5d80dda9f"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "75a89c01909ec2c1d77db32fab4a30f48ba2e3b1c370a356aff703a68280c370"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "f46d221b7764ad944fbf71e5b474404b52afbf29bd68a267decc43a563964641"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 

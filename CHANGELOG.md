@@ -2,6 +2,34 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## f51897f5d80dda9f · 2026-10-23
+
+Since 0ff16c1777f932cf: 1 new, 0 dropped, 17 changed.
+
+New:
+- `cady-company-operations-contract-checks`
+
+Changed (the parts that differ):
+- `cady`: Library
+- `cady-company-executive-review`: Inputs, Procedure, Acceptance, Owner checks
+- `cady-company-manage-agents`: Procedure, Acceptance, removed References, reference references.md
+- `cady-company-method`: Role card, reference domain-method.md
+- `cady-company-operations-compliance-register`: Procedure, Acceptance
+- `cady-company-operations-method`: new Role card, Selected judgment, removed Domain method, reference domain-method.md
+- `cady-company-operations-people-lifecycle`: description, intro, Procedure, Acceptance, Owner checks, removed Inputs, removed Result, reference inputs.md, reference result.md
+- `cady-company-review`: reference setup.md
+- `cady-core-context`: Company practice
+- `cady-core-skill-index`: company, finance
+- `cady-finance-budget-review`: description, intro, Procedure, Acceptance
+- `cady-finance-method`: Role card, Parent function, removed Selected judgment, reference selected-judgment.md
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-method`: new Role card
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-marketing-method`: new Role card, Selected judgment, reference domain-method.md
+- `cady-sales-deal-motion`: intro, Procedure, removed Inputs, reference inputs.md
+
+Shared references changed: contract-kinds.md, role-card-common.md.
+
 ## 0ff16c1777f932cf · 2026-10-23
 
 Since f1d2ef4c2e226957: 0 new, 0 dropped, 1 changed.

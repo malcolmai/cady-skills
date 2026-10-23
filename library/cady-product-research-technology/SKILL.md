@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_technology"
-  version: "eb27daf315f1fae4b8268130da1a132846a17652cdb6ba144a7afe77f1ddba9c"
-  library: "0ff16c1777f932cf"
+  version: "844103e27d25101217e2aa0676de05c3bf4930abb64161472e63cfb03eefd95e"
+  library: "f51897f5d80dda9f"
   function: "product"
 ---
 # Technology research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "eb27daf315f1fae4b8268130da1a132846a17652cdb6ba144a7afe77f1ddba9c"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "844103e27d25101217e2aa0676de05c3bf4930abb64161472e63cfb03eefd95e"}})`
 
 Assess technologies or technical approaches for a concrete product use case.
 

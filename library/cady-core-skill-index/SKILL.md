@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "d319538cf4cf60b9f85a5dd038b908b356b8e9945b7dc681dff0600b1c318c9d"
-  library: "0ff16c1777f932cf"
+  version: "1b4e806667acad72d02a70e792d351ea85f78df2121250a199e41903e6aab5d5"
+  library: "f51897f5d80dda9f"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "d319538cf4cf60b9f85a5dd038b908b356b8e9945b7dc681dff0600b1c318c9d"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "1b4e806667acad72d02a70e792d351ea85f78df2121250a199e41903e6aab5d5"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -24,8 +24,9 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
+- `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 - `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
-- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
+- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
 
 ## gtm
@@ -45,7 +46,7 @@ Every Cady task skill, with one line on when to use it.
 ## finance
 
 - `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
-- `cady-finance-budget-review`: Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations.
+- `cady-finance-budget-review`: Draft or update a budget or spend allocation, or review last month's spend against it.
 - `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
 - `cady-finance-tax-cycle`: Plan or review an entity's tax obligations, filing preparation and material strategy changes.
 - `cady-finance-vendor-spend-review`: Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.

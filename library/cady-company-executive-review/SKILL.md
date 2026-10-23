@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "978bfdeda101c742f1ad6cdbf0a09371bbcc3fc7ace23414b98cc2d298cba970"
-  library: "0ff16c1777f932cf"
+  version: "b1ae8be708252163fe3d0bc6013f0575c131d555c145c46cf3749daa39446c8d"
+  library: "f51897f5d80dda9f"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "978bfdeda101c742f1ad6cdbf0a09371bbcc3fc7ace23414b98cc2d298cba970"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "b1ae8be708252163fe3d0bc6013f0575c131d555c145c46cf3749daa39446c8d"}})`
 
 Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes.
 
@@ -32,6 +32,7 @@ Make one big company decision (market, direction, pricing, a bet to start or sto
 - the finance plan read (cash, burn, runway)
 - get_company_work decisions {state: "current"}
 - list_recent_changes since your last pass
+- each function head's current situation call
 
 ## Procedure
 
@@ -39,9 +40,9 @@ Make one big company decision (market, direction, pricing, a bet to start or sto
 2. Look it up first: get_company_work decisions {state: "current", subject}. If a current decision exists and no trigger reopens it, use it and stop; never ask the person twice.
 3. Frame it: the decision in one sentence, why now, the deadline or cost of delay, one-way or two-way door, and who decides (you, or the founder for founder-reserved choices). Pick the one frame that fits: expected value for repeatable bets, real options for reversible exploration, constraint analysis for throughput problems, pre-mortem for one-way doors. Proportion the work to the door: a reversible, low-cost (two-way door) decision is decided now with a stated default and reviewed at reviewBy in hindsight; steps 4-8 stay light, and the full pre-mortem and red team (step 8) are for consequential or one-way decisions only.
 4. Compare the strongest feasible alternative and the status quo where relevant. A genuinely binary choice is valid; judge the choice and evidence, not the option count.
-5. Take the outside view first: the reference class and its base rate with a source, or 'none'.
+5. For a consequential or one-way decision, take the outside view first: the reference class and its base rate with a source, or 'none'.
 6. Decide what you need to decide: use `cady-company-decision-questions` for evidence on each uncertainty that would change the choice. Check what owners already hold; request it as bounded work from the orchestrator with a deadline.
-7. Write the prediction before deciding: a range with a confidence, and a kill or reversal condition.
+7. Write the prediction before deciding: for a one-way door a range with a confidence and a kill or reversal condition; for a two-way door the stated default and its reviewBy are enough.
 8. Review before deciding: the strongest alternative and the weakest assumption. Only a consequential or one-way decision also gets a pre-mortem and a fresh red-team subagent (review tier) given the frame and evidence, never your recommendation.
 9. Decide within your authority. For a founder-reserved choice, raise a BLOCKED decision item addressed to the owner with a recommendation and options; it reaches them as asksForYou.
 10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File through files.upload mode "begin" then "complete", and a decision item through submit_company_work_checkpoint with decision {kind: "decision", subject, layer (L2 strategy with a keyAssumption, L3 execution), rationale, alternatives, reversal, reviewBy, authority, decidedBy} citing file:<fileId>. For your own choice use authority "agent" and omit decidedBy: Cady records it as your agent, never as the person (no source or quote). A person's choice needs source "chat" with their exact words in quote and decidedBy (or a verified source "grant" with grantId); Cady marks agent-recorded person decisions viaAgent. Keep the item's summary within its 2000-byte limit.
@@ -52,14 +53,14 @@ Make one big company decision (market, direction, pricing, a bet to start or sto
 
 ## Acceptance
 
-- [ ] one decision recorded with frame, strongest feasible alternative, status quo where relevant, outside view, prediction and reviewBy; a binary choice is valid
+- [ ] one decision recorded with frame, strongest feasible alternative, status quo where relevant and reviewBy, plus outside view and prediction for a one-way door; a binary choice is valid
 - [ ] or 'allocation stands' with nothing written
 - [ ] every stopped initiative has a stop reason, evidence and driverComparison
 
 ## Owner checks
 
 - decisions looked up before asking
-- prediction written before deciding
+- prediction or stated default written before deciding
 - red team never shown the recommendation
 - decision item cites the full record File
 

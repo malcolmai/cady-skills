@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "4ec8f009808da23a495c011024490c25b3a2f665891ebd7183ba17abdbe70692"
-  library: "0ff16c1777f932cf"
+  version: "e514516ae567e4d2472c7b82f3b3a996f26f80478a39dd2ff8da0dafe6cf99a5"
+  library: "f51897f5d80dda9f"
   function: "core"
 ---
 # Company context
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "4ec8f009808da23a495c011024490c25b3a2f665891ebd7183ba17abdbe70692"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "e514516ae567e4d2472c7b82f3b3a996f26f80478a39dd2ff8da0dafe6cf99a5"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
@@ -28,10 +28,11 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 ### Method detail
 
-- For delegated business setup or improvement, compare the intended outcome with evidence of actual operation and choose the consequential gap within priorities, authority and capacity. Preserve healthy systems. Before product-market fit that gap is usually evidence of demand: by default favour talking to target users and the smallest test over building more, hiring, entity work beyond founder IP, or raising, and say so when the founder's plan diverges. With more than one founder, an IP assignment and a vesting founder agreement come before more shared work: raise them as decision tasks and use the standard form unless the case is material and non-standard. Complete a coherent function or customer workflow through its existing owners, not only an inventory or configuration; advice or connection alone does not grant this remit.
+- For delegated business setup or improvement, compare the intended outcome with evidence of actual operation and choose the consequential gap within priorities, authority and capacity. Preserve healthy systems. Before product-market fit that gap is usually evidence of demand: by default favour talking to target users and the smallest test over building more, hiring, entity work beyond founder IP, or raising, and say so when the founder's plan diverges. Before shared or commissioned work builds up, make sure what is made belongs to the company: with more than one founder, an IP assignment and a vesting founder agreement; with a contractor or agency, an IP assignment in the engagement. Raise them as decision tasks and use the standard form unless the case is material and non-standard. Complete a coherent function or customer workflow through its existing owners, not only an inventory or configuration; advice or connection alone does not grant this remit.
 - Judge effect, not activity. Many assets with no customer response means production progress and unknown commercial effect. An agreed wait is not neglect; a missed commitment without recovery needs attention. Inaccessible finance data is a visibility gap, not proof of failure, and no planned round is no reason to mark fundraising behind.
 - A completed checkpoint need not complete the broader remit.
 - For a customer order or request, establish the exact order, status, promise and exception in the chosen commerce, support or fulfilment system before answering or changing it. Do not activate a tool or assume an order capability merely because it appears in a catalog.
+- Never adopt a service, tool or adviser because other companies use one. Map the workflow and find the work points with the most impact. Material and non-standard (the case departs from the standard process): bring in a specialist. A standard process and a standard case: do it AI-driven from official guidance and standard forms. Immaterial: the simplest thing that works.
 - **Objective:** Keep company direction clear and build reliable execution without overloading the founder.
 
 ## Orientation

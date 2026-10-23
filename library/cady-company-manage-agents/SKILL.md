@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "c2a6ba7286f24556ce79936986b47b3e435e464b7177c24d50fef20323c4ce6c"
-  library: "0ff16c1777f932cf"
+  version: "3d2603174cdc7b7d84e1af60cc0a6258c39f53f8f8c8af3d76a5a5b15646b858"
+  library: "f51897f5d80dda9f"
   function: "company"
 ---
 # Manage company agents
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "c2a6ba7286f24556ce79936986b47b3e435e464b7177c24d50fef20323c4ce6c"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "3d2603174cdc7b7d84e1af60cc0a6258c39f53f8f8c8af3d76a5a5b15646b858"}})`
 
 Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 
@@ -23,7 +23,7 @@ See [Inputs](references/inputs.md).
 
 ## Procedure
 
-1. Warranted? An agent is one ongoing responsibility. Due tasks are work items; a one-off is bounded host work or a task for an existing agent. Check list_company_agents, Projects work, direction and this host's automations; reuse before creating.
+1. Warranted? An agent is one ongoing responsibility. Due tasks are work items; a one-off is bounded host work or a task for an existing agent. Check list_company_agents, Projects work, direction and this host's automations; reuse before creating. Scope: one agent per parent function in use, its child role cards and skills installed on it. Split a child out only for a different risk class or grant, a cadence that would wake the parent for nothing, more context than one run holds, or work the parent visibly drops; merge agents whose runs are mostly empty or that keep handing work to each other.
 2. Responsibility and risk class. State the outcome, one measure with its data source (the target lives on the linked goal's brief.target, not on the agent; the agent keeps only stages), a cadence (by duty, deadline, evidence freshness) or trigger, approval limits and its end condition. Pass goalId when it serves a goal; goalPriorityRef is priority evidence, not permission. A research agent's responsibility is named key questions (`cady-company-decision-questions`); the function head keeps the decisions. Critical: the agent can cause a hard-to-undo effect outside the company or reach someone outside it (sending or publishing to non-members, spending or committing money, signing, filing, inviting or sharing data externally, changing external accounts or access, deleting owner records), or its drafts are released automatically by a grant, scheduled task or other agent. Every other agent is standard. Re-class, and prepare-only test the new effect path, on any grant, tool, access or trigger change.
 3. Fit. Read get_cady_context with area ops/agents. Find needed skills in the company's fork INDEX (if absent, fork github.com/malcolmai/cady-skills once and record its baseline tag). Reuse suitable skills unchanged. Adapt only for an evidenced failure, tool mismatch or missing expert judgment; record why in the commit. Install key fork skills, preloading only those used every run. For substantive drafting or adaptation, follow `cady-company-taste-review` step 4 and its conditional drafting reference; skip it for obvious corrections. Facts stay in Cady. Ask once for missing inputs, accounts, grants or scheduler; no secrets in chat.
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Critical: prepare-only, exercising each effect path before anything reaches anyone. Standard: it is the agent's test and touches each tool the duty needs. Give it 1-5 checks tagged must and a finishLine.
@@ -46,5 +46,4 @@ See [Owner checks](references/owner-checks.md).
 
 See [Result](references/result.md).
 
-## References
-- [Adopt an existing scheduled task](../../references/adopt-scheduled-task.md)
+See [References](references/references.md).

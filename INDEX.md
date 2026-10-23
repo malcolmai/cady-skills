@@ -1,6 +1,6 @@
 # Cady skill library
 
-63 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+64 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
 
@@ -20,9 +20,10 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task. (`library/cady-company-manage-agents/SKILL.md`)
 - `cady-company-method`: Company role card: what this function owns and decides (`library/cady-company-method/SKILL.md`)
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports). (`library/cady-company-operations-compliance-register/SKILL.md`)
+- `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts. (`library/cady-company-operations-contract-checks/SKILL.md`)
 - `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking. (`library/cady-company-operations-inbox-follow-through/SKILL.md`)
 - `cady-company-operations-method`: Company Operations role card: what this function owns and decides (`library/cady-company-operations-method/SKILL.md`)
-- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving. (`library/cady-company-operations-people-lifecycle/SKILL.md`)
+- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving. (`library/cady-company-operations-people-lifecycle/SKILL.md`)
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision. (`library/cady-company-operations-requirement-register/SKILL.md`)
 - `cady-company-review`: a company needs an evidence-based operating review or first setup. (`library/cady-company-review/SKILL.md`)
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt. (`library/cady-company-taste-review/SKILL.md`)
@@ -48,7 +49,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 ## finance
 - `cady-accounting-method`: Accounting role card: what this function owns and decides (`library/cady-accounting-method/SKILL.md`)
 - `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper. (`library/cady-accounting-period-close/SKILL.md`)
-- `cady-finance-budget-review`: Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations. (`library/cady-finance-budget-review/SKILL.md`)
+- `cady-finance-budget-review`: Draft or update a budget or spend allocation, or review last month's spend against it. (`library/cady-finance-budget-review/SKILL.md`)
 - `cady-finance-method`: Finance role card: what this function owns and decides (`library/cady-finance-method/SKILL.md`)
 - `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first. (`library/cady-finance-runway/SKILL.md`)
 - `cady-finance-tax-cycle`: Plan or review an entity's tax obligations, filing preparation and material strategy changes. (`library/cady-finance-tax-cycle/SKILL.md`)

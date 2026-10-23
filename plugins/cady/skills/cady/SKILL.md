@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "0ff16c1777f932cfcc73b24010d8d005c4bbcdfd9ac60d6b2728216f1c169abf"
-  library: "0ff16c1777f932cf"
+  version: "f51897f5d80dda9feaf0c3e5af628dc0a261b70fe2e09c99c99d9261adbbc895"
+  library: "f51897f5d80dda9f"
   function: "core"
 ---
 # Cady
@@ -51,7 +51,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/0ff16c1777f932cf/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/f51897f5d80dda9f/
 
 That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 
@@ -77,9 +77,10 @@ Install straight from upstream; fork only when you want company-specific methods
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-method`: Company role card: what this function owns and decides
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
+- `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 - `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 - `cady-company-operations-method`: Company Operations role card: what this function owns and decides
-- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
+- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
 - `cady-company-review`: a company needs an evidence-based operating review or first setup.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
@@ -105,7 +106,7 @@ Install straight from upstream; fork only when you want company-specific methods
 ### finance
 - `cady-accounting-method`: Accounting role card: what this function owns and decides
 - `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
-- `cady-finance-budget-review`: Draft or update a budget, spend allocation or decision forecast sized to the company's stage and obligations.
+- `cady-finance-budget-review`: Draft or update a budget or spend allocation, or review last month's spend against it.
 - `cady-finance-method`: Finance role card: what this function owns and decides
 - `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
 - `cady-finance-tax-cycle`: Plan or review an entity's tax obligations, filing preparation and material strategy changes.
