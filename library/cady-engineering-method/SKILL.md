@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "2d9d94e8cb36c37412119fcc3d83aa20576d92b8c5b09e370a919598a03fdd49"
-  library: "f51897f5d80dda9f"
+  version: "9d8c09308f4f4fdf67b26dfb977a25e1de7d9f358f1f8545ab21a2faa39eefe7"
+  library: "c524ef7ffada6715"
   function: "engineering"
 ---
 # Engineering
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "2d9d94e8cb36c37412119fcc3d83aa20576d92b8c5b09e370a919598a03fdd49"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "9d8c09308f4f4fdf67b26dfb977a25e1de7d9f358f1f8545ab21a2faa39eefe7"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -34,6 +34,7 @@ Become the expert in the chosen architecture, layer by layer. Know its material 
 ### Hands off
 
 ### Receipts
+- Record each material decision as a Projects decision item with a subject, rationale, alternatives and layer, and look it up before asking again; a person's decision also records their words and your inferred reason for it (`cady-company-decision-check` step 6).
 - When a dimension or architecture decision changes the system, update the product's top-level architecture diagram (save a new diagram File, relink it); a scoped diagram covers one dimension and never replaces the overview.
 
 ### Company records

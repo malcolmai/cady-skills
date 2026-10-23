@@ -1,55 +1,63 @@
 ---
 name: "cady-company-decision-check"
-description: "Decision layers and second look. Use when: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it. Not for: The Executive's full founder-level decision process (`cady-company-executive-review`) or re-deciding a settled question."
+description: "Who decides: the decision journey. Use when: Before a choice or an effect: whether it is already decided, who decides, and how to record it. Not for: The Executive's full process for one company decision (`cady-company-executive-review`) or doing the task itself."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "569d28cad731fdc3c2dc714f67c4befc29254356822a2145179301deb700cd76"
-  library: "f51897f5d80dda9f"
+  version: "4e7900a5e926fd125ead00c866242055b8faf7f263ed9546f0c9b939a51541c2"
+  library: "c524ef7ffada6715"
   function: "company"
 ---
-# Decision layers and second look
+# Who decides: the decision journey
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "569d28cad731fdc3c2dc714f67c4befc29254356822a2145179301deb700cd76"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "4e7900a5e926fd125ead00c866242055b8faf7f263ed9546f0c9b939a51541c2"}})`
 
-Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
+Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
-**Not for:** The Executive's full founder-level decision process (`cady-company-executive-review`) or re-deciding a settled question.
+**Not for:** The Executive's full process for one company decision (`cady-company-executive-review`) or doing the task itself.
 
-**Unit of work:** one recorded decision. **Kind:** strategy. **Parallel:** yes. **Can release:** no. 
+**Unit of work:** one choice or effect. **Kind:** strategy. **Parallel:** yes. **Can release:** no. 
+
+## Always
+
+- Check what is decided, and whether it still holds, before deciding; a stated default is never asked back.
+- Effects go through self-approval or a grant first; ask only when neither covers the exact effect.
+- An agent's L1 choice needs a high bar, a written reason, a fresh look and the owner told.
 
 ## Inputs
 
 ### Evidence refs
 
-- the decision item just recorded (decision id)
-- the evidence titles it cites
+- the governing decisions and goal
+- the company permission mode or grant that covers an effect
 
 ## Procedure
 
-1. Find the decision's layer. L1 is the owner's: goals with a target and date, ICP and offer, stage and quality bar, spend and authority envelope, anything irreversible or visible at scale. Propose it with options and a recommendation as one batched ask and keep working on everything that does not wait on it. Current owner records decide L1; an L2 choice that contradicts or extends an L1 one is an L1 question.
-2. L2 is the function head's: how the function pursues an L1 goal. Restate the outcome one level up from the parent goal, company direction and current decisions (get_company_work decisions, filtered by subject when known), choose, and record a decision with alternatives, the key assumption and what would reverse it. L3 is any agent's: how one task is done; take the decided change narrowly with the owner's exact constraints and finish line, and flag evidence it is wrong rather than reopen it. Asking the owner an L2 or L3 question is a stall, not caution. Resolve an L2 or L3 conflict by recording a decision that cites both; only a conflict touching L1 becomes one ask.
-3. For an important decision others will build on, take the second look below; layers put each choice with the cheapest competent decider, and the look catches oversimplification before it spreads.
-4. Take one fresh look before acting, with a fresh-context subagent if available (the same model is fine). Give it the decision record only: goal served, chosen option, alternatives, key assumption, evidence cited.
-5. Ask four things: does it make sense, is it well justified, does it consider nuance, and does it avoid diluting focus beyond the current goals and decisions.
-6. Fix what the look finds, record what it found or changed in the decision's rechecked field (one short note), and act. Nothing waits on the look.
-7. Raise an owner ask only if the look finds something it cannot resolve.
-8. To correct a recorded decision send corrects {ref, as: supersede|wrong, why}; wrong records 'Ruled wrong: ...' on the same subject.
+1. Already decided? Read the governing decisions and goal (get_company_work decisions {state: "current", subject} and the goal). Before following one, check it still holds: past its reviewBy, a premise it names has changed, or it conflicts with newer direction or a newer goal. If it holds, follow it and do not ask again. If not, recheck it at its own layer (step 3) and cite what changed.
+2. An effect (send, spend, sign, file, publish, share, invite, change access, delete or export data, anything irreversible)? First, self-approve it: its category's permission mode decides, and Cady refuses with SELF_APPROVAL_OFF when a person must approve; in notify mode it goes through and the owner is told. Second, does a current grant cover its exact terms (a grant.* decision, an active outreach grant, grant.release)? Either way act and keep the receipt. If neither, prepare the whole effect and ask once as a ready packet (BLOCKED ask: the exact effect, the prepared material, minutes needed and what happens next), and keep working on what does not wait. Payments, signatures and filings are always a person's; prepare them. Grants are the only standing permissions: record none in a goal, decision or role card.
+3. Otherwise it is a choice; find its layer. L1 changes a goal or the company: starting, stopping or reshaping a goal (its target, stop condition or expected cost), ICP and offer, stage and quality bar, a bet, a hire or other material commitment, a spend envelope or a grant. L2 is how a function pursues a goal: its head decides. L3 is how one task is done: any agent decides. An L2 or L3 choice that contradicts or extends an L1 one is L1. Asking the owner an L2 or L3 question is a stall.
+4. L1 by an agent, usually the Executive: only when the company's decisions mode is notify (Cady refuses an agent's L1 decision in approval mode and tells you to ask), and never for a grant, an approval or a payment, which stay the person's (step 2); and the choice clears a high bar. It serves the company as a whole and the user's recorded direction, its reason and strongest alternative are written, and the fresh look (step 5) agrees. Then record it: the owner is told and can reverse it. Otherwise raise it as a BLOCKED ask with a recommendation and options, batched, and keep working on what does not wait.
+5. For an L1 or L2 decision others will build on, take one fresh look before acting: a fresh-context subagent (the same model is fine) given only the record (goal served, choice, alternatives, key assumption, evidence) asks whether it makes sense, is justified, considers nuance and keeps focus. Fix what it finds, note it in rechecked and act; ask only about what it cannot resolve.
+6. Record it in place: for a goal change, an L1 decision with subject goal:<goalId> beside the goal write (a stop is the goal call: goal.call:<goalId> with chosen stop and its stop reason); otherwise a decision item with subject, layer, rationale, alternatives, reversal and reviewBy. Keep provenance. A person's decision carries their exact words (source chat, quote, decidedBy) and, in the rationale, your inference of why they chose it at that time, marked as inferred. Your own carries authority agent.
+7. To correct a recorded decision send corrects {ref, as: supersede|wrong, why}; wrong records 'Ruled wrong: ...' on the same subject. Correcting a person's decision is a discouraged exit hatch: only on new evidence that the reason they chose it no longer holds, with that evidence in why. In approval mode Cady refuses it and you raise a BLOCKED ask; in notify mode it is recorded, the owner is told and can revert it. Never for a grant, an approval or a stop. When in doubt, ask instead.
 
 ## Acceptance
 
-- [ ] a decision item carrying rechecked
-- [ ] for an unresolved finding, one owner ask with options and a recommendation
+- [ ] decisions looked up and checked for currency before deciding
+- [ ] every effect acted on cites its self-approval or grant; otherwise it is one ready-packet ask
+- [ ] every agent L1 choice has its reason, alternative and fresh look on record
+- [ ] a person's decision records their words and the inferred reason
 
 ## Owner checks
 
-- the look ran in fresh context from a short brief
-- what it found or changed is in rechecked
+- the fresh look ran from a short brief, and what it found is in rechecked
+- an effect cites its self-approval mode or grant
+- a correction of a person's decision carries new evidence and reaches the owner
 
 ## Result
 
 ### Artifact refs
 
 - company:work:<workId>
-- **Transition:** fix what was found and act; ask the owner only for what cannot be resolved
+- **Transition:** the choice or effect recorded at its layer, with provenance

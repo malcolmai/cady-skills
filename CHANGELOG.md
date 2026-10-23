@@ -2,6 +2,32 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## c524ef7ffada6715 · 2026-10-23
+
+Since f51897f5d80dda9f: 0 new, 0 dropped, 18 changed.
+
+Changed (the parts that differ):
+- `cady`: Library
+- `cady-company-decision-check`: description, intro, new Always, Inputs, Procedure, Acceptance, Owner checks, Result
+- `cady-company-decision-questions`: description, intro, Procedure
+- `cady-company-executive-review`: description, intro, Procedure, Acceptance, References
+- `cady-company-manage-agents`: Procedure
+- `cady-company-method`: Role card, reference domain-method.md
+- `cady-company-operations-method`: Role card
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-company-review`: description, intro, Company review, reference setup.md
+- `cady-core-context`: Company practice, Orientation
+- `cady-core-execution`: reference delivery-completion.md
+- `cady-core-skill-index`: company
+- `cady-design-method`: Role card
+- `cady-engineering-method`: Role card
+- `cady-gtm-method`: Role card
+- `cady-orchestrator-method`: Role card, reference selected-judgment.md
+- `cady-product-method`: Role card
+- `cady-qa-method`: Role card
+
+Shared references changed: allocation-and-initiatives.md, company-goals.md, role-card-common.md.
+
 ## f51897f5d80dda9f · 2026-10-23
 
 Since 0ff16c1777f932cf: 1 new, 0 dropped, 17 changed.

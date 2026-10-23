@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "7b3db80ae1f482bf77b6f18affc9dc2a3a7067bf78d69b6e9cefbd4974c783cf"
-  library: "f51897f5d80dda9f"
+  version: "74be00acf2897a3a8613994cf94f3a2aceef53bef2ea6bc69f8714384966adb9"
+  library: "c524ef7ffada6715"
   function: "product"
 ---
 # Product
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "7b3db80ae1f482bf77b6f18affc9dc2a3a7067bf78d69b6e9cefbd4974c783cf"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "74be00acf2897a3a8613994cf94f3a2aceef53bef2ea6bc69f8714384966adb9"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -62,7 +62,7 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - `cady-product-manage`: Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
-- `cady-company-decision-check`: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
+- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 - `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
 See [Parent function](../../references/parent-function.md).

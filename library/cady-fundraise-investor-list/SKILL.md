@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "480e9c785c91b638ca9a4fa6812db6eee89023f185afc0050700d1def755e517"
-  library: "f51897f5d80dda9f"
+  version: "608459da509e9ca8b18c00e2180385f992611654570b154cb60fbd114736e90e"
+  library: "c524ef7ffada6715"
   function: "fundraise"
 ---
 # Ranked investor list
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "480e9c785c91b638ca9a4fa6812db6eee89023f185afc0050700d1def755e517"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "608459da509e9ca8b18c00e2180385f992611654570b154cb60fbd114736e90e"}})`
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 

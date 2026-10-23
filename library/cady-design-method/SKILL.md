@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "fc0ca5345eaec4daf075237e3dede98c53b2cdd011b4873d0a5324ccbbfc94b7"
-  library: "f51897f5d80dda9f"
+  version: "289640a104fa48cfec7a349fa0df94208c1e384b2ec770c9c7f2553ae61bdaac"
+  library: "c524ef7ffada6715"
   function: "design"
 ---
 # Design
 
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "fc0ca5345eaec4daf075237e3dede98c53b2cdd011b4873d0a5324ccbbfc94b7"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "289640a104fa48cfec7a349fa0df94208c1e384b2ec770c9c7f2553ae61bdaac"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -32,6 +32,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 ### Hands off
 
 ### Receipts
+- Record each material decision as a Projects decision item with a subject, rationale, alternatives and layer, and look it up before asking again; a person's decision also records their words and your inferred reason for it (`cady-company-decision-check` step 6).
 
 ### Company records
 - the design system Files

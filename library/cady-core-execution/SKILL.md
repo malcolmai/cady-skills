@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "a4acf94a9f80f51556ad75d83518efe0cf831c2a73760243ec7ae1994f4e9da1"
-  library: "f51897f5d80dda9f"
+  version: "1ba582b04e05f5538ad772a769e709541f0f76c3d011f639769b5b70f713422e"
+  library: "c524ef7ffada6715"
   function: "core"
 ---
 # Execution guidance

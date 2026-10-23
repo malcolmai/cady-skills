@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "2acb41276735d96f187305a4bb75ea5f1b70ac838173038b47b92691d2e67fd8"
-  library: "f51897f5d80dda9f"
+  version: "9df1aa386157f9fedfc9f2b6191856ace8c4bd0a69ff2e9de8adc349eec2e7f9"
+  library: "c524ef7ffada6715"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "2acb41276735d96f187305a4bb75ea5f1b70ac838173038b47b92691d2e67fd8"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "9df1aa386157f9fedfc9f2b6191856ace8c4bd0a69ff2e9de8adc349eec2e7f9"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -33,6 +33,7 @@ You grow demand into delivered value for the current bets by a loop of hypothese
 ### Hands off
 
 ### Receipts
+- Record each material decision as a Projects decision item with a subject, rationale, alternatives and layer, and look it up before asking again; a person's decision also records their words and your inferred reason for it (`cady-company-decision-check` step 6).
 
 ### Company records
 - direction and bets
@@ -56,7 +57,7 @@ You grow demand into delivered value for the current bets by a loop of hypothese
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-company-decision-check`: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
+- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
 ## Parent function
 company

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "2a62206b1e450c8594bebadc4aa5ae8159385c235d8b32166de21ada8b6c5450"
-  library: "f51897f5d80dda9f"
+  version: "013a1f7e13798b1ee8d725e71bc486f3f8f5b1ce481ecb0a0b8b7faf371bda25"
+  library: "c524ef7ffada6715"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "2a62206b1e450c8594bebadc4aa5ae8159385c235d8b32166de21ada8b6c5450"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "013a1f7e13798b1ee8d725e71bc486f3f8f5b1ce481ecb0a0b8b7faf371bda25"}})`
 
 Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
 

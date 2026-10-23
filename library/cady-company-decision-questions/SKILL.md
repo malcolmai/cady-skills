@@ -1,21 +1,21 @@
 ---
 name: "cady-company-decision-questions"
-description: "Key questions and research. Use when: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route. Not for: Dashboards, reports or data no decision needs; company strategy and allocation (use `cady-company-executive-review`); deciding the answer for another owner."
+description: "Key questions and research. Use when: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route. Not for: Dashboards, reports or data no decision needs; company goals and strategy (use `cady-company-executive-review`); deciding the answer for another owner."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
-  version: "7516eaae37d7c17f65085ebc7c56641f75594c635d10dc510847b962187aacde"
-  library: "f51897f5d80dda9f"
+  version: "234c94609d77894121df5aae4dac1fae2ec295f490ec8464cdfce0de23aa793a"
+  library: "c524ef7ffada6715"
   function: "company"
 ---
 # Key questions and research
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "7516eaae37d7c17f65085ebc7c56641f75594c635d10dc510847b962187aacde"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "234c94609d77894121df5aae4dac1fae2ec295f490ec8464cdfce0de23aa793a"}})`
 
 A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 
-**Not for:** Dashboards, reports or data no decision needs; company strategy and allocation (use `cady-company-executive-review`); deciding the answer for another owner.
+**Not for:** Dashboards, reports or data no decision needs; company goals and strategy (use `cady-company-executive-review`); deciding the answer for another owner.
 
 **Unit of work:** one key question and the decision it serves. **Kind:** strategy. **Parallel:** yes. **Can release:** no. 
 
@@ -35,7 +35,7 @@ A goal or decision you own needs evidence: frame its key questions and pick the 
 5. Feeds stay with their owners. To have another agent capture something (for example the loss reason and the alternative chosen when a deal closes), ask the orchestrator to change that agent; never edit another agent yourself. Cite facts where they live; never copy them.
 6. Primary research is an outside effect: interview requests go through outreach checks; pages, ads and spend need their existing authority, with a ready packet at that boundary. Be honest about who you are, ask consent before recording, and never seek a rival's confidential information, including from its customers or former staff. Keep notes as dated, attributed Files.
 7. Staff it to its size. One-off synthesis or research: spin up a subagent with fresh context and a self-contained prompt (question, decision, sources, bar, stop conditions, what to return; tiers from the models registry), and check its findings against the sources before relying on them. Evidence that must stay fresh (win/loss on each closed deal, a rival's pricing against a reversal trigger): ask the orchestrator to add it to your own responsibility's duty order and cadence. Many questions or continuous collection: ask the orchestrator for a dedicated agent whose responsibility is those questions; you keep the decisions.
-8. Answer for the decision. Separate observed, reported and inferred evidence; state confidence, the strongest counter-evidence and what would change the answer. Record a settled answer as a COMPLETE decision item (kind "decision", subject "question.answer:<slug>" (needs no layer), supersedes [the question's decision id], authority "agent" and no decidedBy) with the evidence as the checkpoint's evidenceRefs, and say what it means: confirm the decision or change it. A partial answer keeps the question OPEN with what is still unknown and a new reviewBy. If it bears on a decision someone else owns, hand it to that owner; strategy or allocation implications go to the Executive.
+8. Answer for the decision. Separate observed, reported and inferred evidence; state confidence, the strongest counter-evidence and what would change the answer. Record a settled answer as a COMPLETE decision item (kind "decision", subject "question.answer:<slug>" (needs no layer), supersedes [the question's decision id], authority "agent" and no decidedBy) with the evidence as the checkpoint's evidenceRefs, and say what it means: confirm the decision or change it. A partial answer keeps the question OPEN with what is still unknown and a new reviewBy. If it bears on a decision someone else owns, hand it to that owner; strategy or goal implications go to the Executive.
 9. Refresh only for a reason: reviewBy, a reversal trigger or a new decision. Retire questions and sources that never change a decision. Good work: every question traces to a decision, is answered before it is needed, uses the cheapest sufficient evidence and states its confidence.
 
 ## Acceptance

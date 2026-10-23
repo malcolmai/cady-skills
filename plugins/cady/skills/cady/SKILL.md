@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "f51897f5d80dda9feaf0c3e5af628dc0a261b70fe2e09c99c99d9261adbbc895"
-  library: "f51897f5d80dda9f"
+  version: "c524ef7ffada6715993cb5e61e595b8ed3c91191b591fc71771da1064d002a8c"
+  library: "c524ef7ffada6715"
   function: "core"
 ---
 # Cady
@@ -51,7 +51,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/f51897f5d80dda9f/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/c524ef7ffada6715/
 
 That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 
@@ -70,9 +70,9 @@ Install straight from upstream; fork only when you want company-specific methods
 - `cady-orchestrator-method`: Orchestrator role card: what this function owns and decides
 
 ### company
-- `cady-company-decision-check`: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
+- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
-- `cady-company-executive-review`: Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes.
+- `cady-company-executive-review`: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-method`: Company role card: what this function owns and decides

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "5facf81fec27bac2d695b182987e8f349f0bf13c3795abe0f9b57dda2b209154"
-  library: "f51897f5d80dda9f"
+  version: "8afe23233efda487ce3bce90d376c5a21250418100a44b800213abf350b4b6a2"
+  library: "c524ef7ffada6715"
   function: "company_operations"
 ---
 # Company Operations
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "5facf81fec27bac2d695b182987e8f349f0bf13c3795abe0f9b57dda2b209154"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "8afe23233efda487ce3bce90d376c5a21250418100a44b800213abf350b4b6a2"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -22,8 +22,8 @@ You keep the company legally sound and running: obligations and filings, contrac
 
 ### Owns
 - The filing register and its deadlines (`cady-company-operations-compliance-register`), each requirement settled with `cady-company-operations-requirement-register`.
-- Contract checks before signing and after completion (`cady-company-operations-contract-checks`), called by the skill that reaches the contract.
-- People paperwork and access for joiners, movers and leavers (`cady-company-operations-people-lifecycle`), with access:default full unless the owner records restricted.
+- Contract checks before signing and after completion (`cady-company-operations-contract-checks`), called by the skill that reaches the contract; founder share issues and option grants run its equity kind directly.
+- People paperwork and access for joiners, movers and leavers (`cady-company-operations-people-lifecycle`), with member access to every company system by default unless a grant.access-default record says restricted.
 - IP and brand: work made for the company is assigned to it, a name is cleared for trademarks before brand spend, and domains, repositories and key accounts belong to the company.
 - Corporate records and mandatory insurance; Fundraise records share issues.
 

@@ -5,21 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "1b4e806667acad72d02a70e792d351ea85f78df2121250a199e41903e6aab5d5"
-  library: "f51897f5d80dda9f"
+  version: "835c72f8aac90b1f9449b91c698a748fa41b2d492950fecd162fc89fc1367038"
+  library: "c524ef7ffada6715"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "1b4e806667acad72d02a70e792d351ea85f78df2121250a199e41903e6aab5d5"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "835c72f8aac90b1f9449b91c698a748fa41b2d492950fecd162fc89fc1367038"}})`
 
 Every Cady task skill, with one line on when to use it.
 
 ## company
 
-- `cady-company-decision-check`: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
+- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
-- `cady-company-executive-review`: Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes.
+- `cady-company-executive-review`: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.

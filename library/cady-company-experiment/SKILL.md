@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
-  version: "568d54544b81c2e8c0d1bf1b466143836d4e54f3f1908fc55c85553025c911b7"
-  library: "f51897f5d80dda9f"
+  version: "fbc55e44efa37e23bac59485b18175354e0be0148e931e9aab2a9f988dea1155"
+  library: "c524ef7ffada6715"
   function: "company"
 ---
 # Pre-registered experiment
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "568d54544b81c2e8c0d1bf1b466143836d4e54f3f1908fc55c85553025c911b7"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "fbc55e44efa37e23bac59485b18175354e0be0148e931e9aab2a9f988dea1155"}})`
 
 Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 

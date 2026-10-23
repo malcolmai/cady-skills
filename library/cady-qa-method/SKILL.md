@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "b72dc9888fe7312d414d6bd682603241b3599a7f81f89f090d11fc0aef0c7bf7"
-  library: "f51897f5d80dda9f"
+  version: "9e29d3454ad92234ad66736f7f5dece937f99996f200c580b83edb14d447b584"
+  library: "c524ef7ffada6715"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "b72dc9888fe7312d414d6bd682603241b3599a7f81f89f090d11fc0aef0c7bf7"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "9e29d3454ad92234ad66736f7f5dece937f99996f200c580b83edb14d447b584"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -35,6 +35,7 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 ### Hands off
 
 ### Receipts
+- Record each material decision as a Projects decision item with a subject, rationale, alternatives and layer, and look it up before asking again; a person's decision also records their words and your inferred reason for it (`cady-company-decision-check` step 6).
 - Each finding cites story:<slug>#<stepId>@<runId> and its evidence as file:<fileId>.
 
 ### Company records
