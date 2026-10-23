@@ -1,6 +1,6 @@
 # Cady skill library
 
-62 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+63 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 ## core
 - `cady-core-context`: deciding who decides, or what to read, before company work. (`library/cady-core-context/SKILL.md`)
@@ -74,4 +74,5 @@
 - `cady-engineering-method`: Engineering role card: what this function owns and decides (`library/cady-engineering-method/SKILL.md`)
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions. (`library/cady-engineering-system-cycle/SKILL.md`)
 - `cady-qa-method`: QA role card: what this function owns and decides (`library/cady-qa-method/SKILL.md`)
+- `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step. (`library/cady-qa-stories/SKILL.md`)
 - `cady-qa-triage`: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. (`library/cady-qa-triage/SKILL.md`)

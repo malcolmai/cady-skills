@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_shared"
-  version: "11a83122e67e771615a60d1da632d413b18ce9afe2f114de6f4fcff13e2e4190"
-  library: "e31cc7da45eadf1f"
+  version: "947bca8ca27ada05a98127e9eab8753b7c7c03e30f0b045828eb4655cb0f9633"
+  library: "d9d01922e6210604"
   function: "product"
 ---
 # Research craft
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "11a83122e67e771615a60d1da632d413b18ce9afe2f114de6f4fcff13e2e4190"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "947bca8ca27ada05a98127e9eab8753b7c7c03e30f0b045828eb4655cb0f9633"}})`
 
 Create or update a company-library research piece in Competition or Technology.
 
@@ -39,7 +39,7 @@ Create or update a company-library research piece in Competition or Technology.
 2. Search the relevant Competition or Technology category for the same question and dimension. Update that piece when it exists, preserving its history and useful structure; create another only for a distinct question or dimension.
 3. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
 4. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
-5. Prefer a self-contained semantic HTML page with inline CSS, responsive inner padding, readable line lengths, useful headings and accessible tables. Cady supplies the normal title header, navbar and Details; do not duplicate that shell. Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. No scripts or remote embeds. Plain text, Markdown and HTML fragments are also accepted and rendered with defaults: do not delay useful evidence or require a rewrite just for formatting.
+5. Write semantic HTML or Markdown with useful headings and real tables, styled by the preset described in the research.write tool description (do not restate or replace it). Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Do not delay useful evidence or require a rewrite just for formatting.
 6. Before writing, discover the current research operation schemas and revision rules. Never assume operation names or claim a write succeeded without its receipt/readback. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
 
 ## Acceptance

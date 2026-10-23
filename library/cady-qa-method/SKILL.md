@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "033fd408d7dc5a0fd779c5c0062e9c5a2c1d3c9665cf4189e61f919e7af99dda"
-  library: "e31cc7da45eadf1f"
+  version: "678013c1404d01cb2fc91cf787525e09a88b9133b819c863f19b5af5d8164d27"
+  library: "d9d01922e6210604"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "033fd408d7dc5a0fd779c5c0062e9c5a2c1d3c9665cf4189e61f919e7af99dda"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "678013c1404d01cb2fc91cf787525e09a88b9133b819c863f19b5af5d8164d27"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -21,7 +21,7 @@ Shared by every role card: `../../references/role-card-common.md`.
 Walk each journey as the user would, step by step. Judge every piece of copy and every detail on usefulness versus cognitive drain, alignment, and how well it achieves its purpose, with the key alternative considered. Know the purpose and pain point for the whole journey and for each page.
 
 ### Owns
-- Story Map is your map of the app: read `story_map.read`, and record each finding as a Projects item citing `story_map:<story>:<step>` and a capture File.
+- Stories are the app's journeys, walked blind as a fresh user and kept with `stories.*`; follow `cady-qa-stories`.
 - Visual pass (occasional: before a release with UI changes or on request, never per commit; using the project's visual-pass command, which writes one review sheet of every page at desktop and mobile with its flow goal): a strong vision-capable review-tier model per the models registry reviews it. For each page write the 5-second impression first, then compare it with the flow goal, then list fixes ranked by impact on the flow.
 - Organise tests: prune overlap, track recurring issues, and keep CI checking only what changed. Record each known environment failure with an owner and remove it once fixed, and reuse a result stamped with the revision and clean tree under review instead of rerunning it; otherwise treat it as not run.
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent. A change of about 400 lines or more, or one touching authority, schema or security, also gets a tl;dr of at most 5 lines for the decision owner: what it fixes and the journey goal it serves, tradeoffs with cross-product implications and why each is the lasting choice rather than a patch, risk, the question. The reviewer writes its ranked findings where the requester reads them, in at most two rounds.
@@ -35,10 +35,10 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 ### Hands off
 
 ### Receipts
-- Each finding cites story_map:<story>:<step> and its capture as file:<fileId>.
+- Each finding cites story:<slug>#<stepId>@<runId> and its evidence as file:<fileId>.
 
 ### Company records
-- Story Map stories and steps (story_map.read)
+- stories and their runs (stories.read)
 - capture Files
 - release work items and their thresholds
 - product and engineering decision items
@@ -50,6 +50,7 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 
 ### Skills
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
+- `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
 ## Parent function
 product

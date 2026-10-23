@@ -2,6 +2,22 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## d9d01922e6210604 · 2026-10-23
+
+Since e31cc7da45eadf1f: 1 new, 0 dropped, 7 changed.
+
+New:
+- `cady-qa-stories`
+
+Changed (the parts that differ):
+- `cady`: Library
+- `cady-core-skill-index`: engineering
+- `cady-design-wcag-audit`: Inputs, Procedure
+- `cady-product-method`: Role card, Parent function, removed Selected judgment, reference selected-judgment.md
+- `cady-product-research-shared`: Procedure
+- `cady-qa-method`: Role card
+- `cady-qa-triage`: Inputs, Procedure
+
 ## e31cc7da45eadf1f · 2026-10-22
 
 Since d51b57f8466a2b20: 0 new, 0 dropped, 1 changed.
