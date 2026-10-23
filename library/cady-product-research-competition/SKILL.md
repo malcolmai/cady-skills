@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_competition"
   version: "23739a480f270c61414177b4ccfae29904d4bdc84b52a9fe00bce3268071c270"
-  library: "f1d2ef4c2e226957"
+  library: "0ff16c1777f932cf"
   function: "product"
 ---
 # Competition research

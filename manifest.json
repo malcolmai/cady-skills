@@ -2,26 +2,26 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-23T00:00:00Z",
   "bundle": {
-    "tag": "f1d2ef4c2e226957",
-    "version": "f1d2ef4c2e226957715e1b92df4df6e71499448306c40bab58b56389762ac638",
-    "pluginVersion": "2026.10.23-f1d2ef4c"
+    "tag": "0ff16c1777f932cf",
+    "version": "0ff16c1777f932cfcc73b24010d8d005c4bbcdfd9ac60d6b2728216f1c169abf",
+    "pluginVersion": "2026.10.23-0ff16c17"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.23-f1d2ef4c"
+    "version": "2026.10.23-0ff16c17"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "f1d2ef4c2e226957715e1b92df4df6e71499448306c40bab58b56389762ac638"
+      "version": "0ff16c1777f932cfcc73b24010d8d005c4bbcdfd9ac60d6b2728216f1c169abf"
     },
     {
       "name": "cady-accounting-method",
       "path": "library/cady-accounting-method",
       "cadyId": "company.method.accounting",
-      "version": "bada19912fcd2080eea01fbfc5a43d001f0c0ffa60e6d783b45ed8684b29f8f2"
+      "version": "d298c016b0de5b966e620f728c91d50d74a2ff53b7def3e49e0b26b8009d1752"
     },
     {
       "name": "cady-accounting-period-close",
@@ -63,7 +63,7 @@
       "name": "cady-company-method",
       "path": "library/cady-company-method",
       "cadyId": "company.method.company",
-      "version": "ba6a8f6fa3312aafcfa8931f59e7433bd6777faf824b32c2fb708462eb6d611f"
+      "version": "2a06c0ae268de2bca7c5ba495c28e776d0e1ab6526e9ea672dfc7f5985cceffa"
     },
     {
       "name": "cady-company-operations-compliance-register",
@@ -81,7 +81,7 @@
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "df82f26373c5f139208ef7517e92a2d535d9ec77a761c39a7342a2ae881b4657"
+      "version": "f1ba466c7a7877daf004013ee65e6bb12398ddbafbcc3b4f0a23bcf7b5bf970b"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
@@ -111,7 +111,7 @@
       "name": "cady-core-context",
       "path": "library/cady-core-context",
       "cadyId": "company.context",
-      "version": "77357a52c831ae965a6ba6271ac9ebf113e54aa8ad215ba5e9cb2693d4674471"
+      "version": "4ec8f009808da23a495c011024490c25b3a2f665891ebd7183ba17abdbe70692"
     },
     {
       "name": "cady-core-execution",
@@ -147,13 +147,13 @@
       "name": "cady-customer-success-method",
       "path": "library/cady-customer-success-method",
       "cadyId": "company.method.customer_success",
-      "version": "a167f9b0cb3ad35fdc9f3269527e538b675540eca2ee58951f07c8b163f489aa"
+      "version": "c6302577b6f715d5a3338b72e306abd3a9ed7e3d89c1295833fe55e881270d3f"
     },
     {
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "5c881ec4112deca44576062cbfc33d5aec11614dfc4abc66fd6663eb20aa7d61"
+      "version": "b7aaf8756c4925492b00655656f3d320339e95d51ff82e281c012630e5684b16"
     },
     {
       "name": "cady-design-wcag-audit",
@@ -183,7 +183,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "44be7ca52d5d2e246bd5eacddd111a576f7aed45622d0ed1dde91709579e6b9c"
+      "version": "87cbe36b706ce9a07bae248be26f779ed4b1b24a78723a8fd1d8f7beb9d69e98"
     },
     {
       "name": "cady-engineering-system-cycle",
@@ -201,7 +201,7 @@
       "name": "cady-finance-method",
       "path": "library/cady-finance-method",
       "cadyId": "company.method.finance",
-      "version": "59d970abd13c1aa9a03f3598fe6a77201a1c0f8b22c274072c8df0d926c8921f"
+      "version": "3717b10f3dd94d37c195135d59a2b9c54f61b923e8b3d4cb6d4b4c45ecbb07bc"
     },
     {
       "name": "cady-finance-runway",
@@ -237,7 +237,7 @@
       "name": "cady-fundraise-method",
       "path": "library/cady-fundraise-method",
       "cadyId": "company.method.fundraise",
-      "version": "61ca2983ad8d31573b9d2a05d1c65dd5551d72a1991477081393497c90b65473"
+      "version": "a4ab9522238220e8f862d80f7d9b81ca28fecd25db18327ff24ebd02ea670d92"
     },
     {
       "name": "cady-fundraise-raise-materials",
@@ -285,7 +285,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "f49711c2658a256d8d4a84b062e49d4b34dd6a0b3864b92a092fccc95ea4657f"
+      "version": "e15c2ca6d9f73465854541102900b8b7c65cebdb3a78df51813e929f4390c4be"
     },
     {
       "name": "cady-gtm-offer-and-segments",
@@ -321,13 +321,13 @@
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "ea8f8bc8f32bf3bf6bcf691af4074d8ea0183ebe24f6c66e875ef014496704e3"
+      "version": "31985ea0b05b0689db8c4370b1ad4a352869b9e2b2d3db38451b958cb3909f95"
     },
     {
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "6609ac57d72fab77f29b73843a0526504ac61ffc7c0670e5f5f92c85f7856689"
+      "version": "75a89c01909ec2c1d77db32fab4a30f48ba2e3b1c370a356aff703a68280c370"
     },
     {
       "name": "cady-product-customer-interview",
@@ -345,7 +345,7 @@
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "07479cb984b2e670aad0d1d8123a82d354a5f696aa4ce87c19303a91b3f30d6e"
+      "version": "a62fce95f27a8fb0465b816bf245d6d38d2c444adcfc763e1ca4e69cf96faa8e"
     },
     {
       "name": "cady-product-research-competition",
@@ -369,7 +369,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "8c08b5d754f9f2454289b7c4b6637cfcc63e27b6e15b218a5218514c6c4911dd"
+      "version": "b40d2ab6c41284d442635273da29977444415251aff273f9bb9949295cc10596"
     },
     {
       "name": "cady-qa-stories",
@@ -393,7 +393,7 @@
       "name": "cady-sales-method",
       "path": "library/cady-sales-method",
       "cadyId": "company.method.sales",
-      "version": "5615693c7b40651c96a58bc4ea0bed38b744098ea3545eeee1dd64178eebfe4f"
+      "version": "6abc8ab4ef88b812705323a8578550897c791e4d83d3dc0d8ef46d1a26c269ce"
     }
   ]
 }

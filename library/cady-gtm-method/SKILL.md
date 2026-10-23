@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "f49711c2658a256d8d4a84b062e49d4b34dd6a0b3864b92a092fccc95ea4657f"
-  library: "f1d2ef4c2e226957"
+  version: "e15c2ca6d9f73465854541102900b8b7c65cebdb3a78df51813e929f4390c4be"
+  library: "0ff16c1777f932cf"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "f49711c2658a256d8d4a84b062e49d4b34dd6a0b3864b92a092fccc95ea4657f"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "e15c2ca6d9f73465854541102900b8b7c65cebdb3a78df51813e929f4390c4be"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 

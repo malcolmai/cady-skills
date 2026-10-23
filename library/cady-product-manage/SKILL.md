@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
   version: "ec6c9fcd8ea84ce69942a089787a0fc326f800417eeb22c980996caa2e998e75"
-  library: "f1d2ef4c2e226957"
+  library: "0ff16c1777f932cf"
   function: "product"
 ---
 # Product management and discovery
