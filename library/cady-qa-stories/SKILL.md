@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
-  version: "36af914e875a5f7ea7f71ede76d5f4e9695444d8782a4c18419c0a8a82d9f665"
-  library: "73aaf078d0621530"
+  version: "8bde534b88125c35c023008da4af8106d564cbbebeb3e93f45131a011a85d82c"
+  library: "a5c3acb6d834715e"
   function: "qa"
 ---
 # User stories: keep, walk and read
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "36af914e875a5f7ea7f71ede76d5f4e9695444d8782a4c18419c0a8a82d9f665"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "8bde534b88125c35c023008da4af8106d564cbbebeb3e93f45131a011a85d82c"}})`
 
 Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
@@ -30,7 +30,7 @@ Edit or retire a user story, walk one blind as a fresh user, read story status, 
 ## Procedure
 
 1. A story is one user goal in the user's words: actor, goal, start state, entry, then 3 to 12 steps. Each step has do (an action a person takes) and expect (what they see, observable). A hint (route, tool, selector) is optional and only for testers who are stuck; expect never names routes, tools, tables or code. A branch is its own story. Read first with stories.read, then edit; do not duplicate a story that exists.
-2. Change stories with stories.put. A wording fix, step reorder or retirement of a story you own goes in directly with a one-line summary. Adding or removing a story because of beta feedback goes through stories.request (kind, text, askedBy, sourceRef); a person decides, not an agent: any signed-in company member who can edit stories (by default the founder) accepts or declines in the browser with a note, and you ask them to. The put that does the work carries the requestId. Record with stories.request {action:'record', kind, text, askedBy, sourceRef}. Retire, never delete. Pass expectedRevision and re-read on a conflict.
+2. Change stories with stories.put. A wording fix, step reorder or retirement of a story you own goes in directly with a one-line summary. Adding or removing a story because of beta feedback goes through stories.request (kind, text, askedBy, sourceRef); a person decides, not an agent: any signed-in company member who can edit stories (by default the founder) accepts or declines in the browser with a note, and you ask them to. The put that does the work carries the requestId. Record with stories.request {action:'record', kind, text, askedBy, sourceRef}. Open feedback on a story or one of its steps (a request with stepId) is the user's request: read it with stories.read view requests and act on it with a put carrying its requestId, or reply by asking a member to decide it. Retire, never delete. Pass expectedRevision and re-read on a conflict.
 3. Walk blind as a fresh walker: a subagent or person briefed with only the story id, environment and test account, with no repo, PR or earlier report. Act through the real surface, never code or the database. stories.run start returns the first step without hints, status or history. For each step act, then record: result pass, fail, blocked or skipped, and observed (what you saw, no judgement). A fail or blocked needs evidence as file:<fileId> (screenshot or quoted tool output). Reveal a hint only when stuck; a hinted pass is itself a finding and never verifies the story. Finish with the outcome; only then do prior results appear.
 4. Never walk a story you just implemented as if you were fresh. If you must, the run is a self-check and you say so; a separate walker still has to verify it.
 5. Read status from stories.read: verified (latest blind run at this revision passed with no hints), failing or blocked (first bad step shown), disputed (two runs at the same revision and build disagree), stale (the story's step wording changed since the run) and unwalked. Results are never edited. Resolve a dispute with another blind run by a different walker.

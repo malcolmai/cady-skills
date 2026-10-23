@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
   version: "d319538cf4cf60b9f85a5dd038b908b356b8e9945b7dc681dff0600b1c318c9d"
-  library: "73aaf078d0621530"
+  library: "a5c3acb6d834715e"
   function: "core"
 ---
 # Skill index
