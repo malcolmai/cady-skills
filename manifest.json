@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-23T00:00:00Z",
   "bundle": {
-    "tag": "a5c3acb6d834715e",
-    "version": "a5c3acb6d834715ecd1bde1f3e0acac5e7e450a64312bbb4e97bf73a0a88039b",
-    "pluginVersion": "2026.10.23-a5c3acb6"
+    "tag": "62ae69a6f667e4c1",
+    "version": "62ae69a6f667e4c1e515fd147c4136b60e991a15b959b79b92773d5f5f653282",
+    "pluginVersion": "2026.10.23-62ae69a6"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.23-a5c3acb6"
+    "version": "2026.10.23-62ae69a6"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "a5c3acb6d834715ecd1bde1f3e0acac5e7e450a64312bbb4e97bf73a0a88039b"
+      "version": "62ae69a6f667e4c1e515fd147c4136b60e991a15b959b79b92773d5f5f653282"
     },
     {
       "name": "cady-accounting-method",
@@ -261,7 +261,7 @@
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "306991fd6e8ea1609fd54171588861669792ec35363f4893a87b28802c8cfb43"
+      "version": "1b613bc2e46cdb20042aa709edb81c2c83e64dfbaa2e5869562dc0f2b430dc96"
     },
     {
       "name": "cady-gtm-events",
@@ -285,7 +285,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "7558048b0d2bc358975371285935b95e6bd6a3b12209857e319ef493bb7b9be9"
+      "version": "da34a1c51b241cfb9220b16cbf3617aa800485ec474ff1a63e9e724644d058f6"
     },
     {
       "name": "cady-gtm-offer-and-segments",
