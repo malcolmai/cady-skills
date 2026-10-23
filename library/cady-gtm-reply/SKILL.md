@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "a8ace37ca26987f645e1b7f481cf3be8d4cb8e281ab255feecf15e1500a7221c"
-  library: "d9d01922e6210604"
+  version: "e440d5ea4f41b72eb86c3d0f8b9b3f626b5954dfbf8f9ff1e27daa61955f26b4"
+  library: "73aaf078d0621530"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "a8ace37ca26987f645e1b7f481cf3be8d4cb8e281ab255feecf15e1500a7221c"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "e440d5ea4f41b72eb86c3d0f8b9b3f626b5954dfbf8f9ff1e27daa61955f26b4"}})`
 
 Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
 
@@ -23,7 +23,7 @@ See [Always](references/always.md).
 ## Procedure
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
-2. Read the actual inbound thread through its authorized connector and crm.get_party; for Cady-held email/LinkedIn, use the outcome check and crm.find_communications/crm.get_communication. Keep the same channel and recipient. Other channels use the approved host or device route, never a Cady email account. Exclude anything permission rules block. A channel-specific stop that Cady cannot store remains an explicit no-send hold in the task; do not silently discard it or broaden its scope.
+2. Read the actual inbound thread through its authorized connector and crm.get_party; for Cady-held email, use the outcome check and crm.find_communications/crm.get_communication. Keep the same channel and recipient. Other channels use route A or the approved device route, never a Cady email account. Exclude anything permission rules block. A channel-specific stop that Cady cannot store remains an explicit no-send hold in the task; do not silently discard it or broaden its scope.
 3. Triage the newest inbound message before drafting anything. Pick one class; when several apply, stop wins, then wrong person, then objection over positive. File it with crm.record_interactions (sourceRef the provider message id) if outcome_check has not.
 
 | Class | Next action | Timing | Permission effect |

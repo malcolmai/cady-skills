@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "3059f8462b0284e1a215f9f4654e7ba11b41530a7181cf576b04b63b263ffc31"
-  library: "d9d01922e6210604"
+  version: "90dfb1f00d90ab2bf7d10cd3eae195f89dd58720bb6387538e1555c58e8f9256"
+  library: "73aaf078d0621530"
   function: "customer_success"
 ---
 # Customer Success
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "3059f8462b0284e1a215f9f4654e7ba11b41530a7181cf576b04b63b263ffc31"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "90dfb1f00d90ab2bf7d10cd3eae195f89dd58720bb6387538e1555c58e8f9256"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 

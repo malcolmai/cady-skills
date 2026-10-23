@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
   version: "fb0577e90d84f26cda342ecf3761d3e11460a9b1eadcbaeec0b86e123a472bc9"
-  library: "d9d01922e6210604"
+  library: "73aaf078d0621530"
   function: "core"
 ---
 # Company context

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
-  version: "44e51ebff7daf12b25bea8c1d3b361e0d195cc2d040686b53b0cd181ac73cf84"
-  library: "d9d01922e6210604"
+  version: "30f756a8489a50815f0e9d63361d61266eb61feeec353beb2b4eae6aee58758e"
+  library: "73aaf078d0621530"
   function: "company_operations"
 ---
 # Joiners, movers and leavers
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "44e51ebff7daf12b25bea8c1d3b361e0d195cc2d040686b53b0cd181ac73cf84"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "30f756a8489a50815f0e9d63361d61266eb61feeec353beb2b4eae6aee58758e"}})`
 
 Plan, track and verify the paperwork and account access for a new hire, a role change or someone leaving.
 

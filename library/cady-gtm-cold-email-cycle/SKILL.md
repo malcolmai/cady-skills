@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "84247f2e592a0c53e90828d827d95496bcaed3420a488fa5fca4523f95204b11"
-  library: "d9d01922e6210604"
+  version: "306991fd6e8ea1609fd54171588861669792ec35363f4893a87b28802c8cfb43"
+  library: "73aaf078d0621530"
   function: "gtm"
 ---
 # Cold email cycle
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "84247f2e592a0c53e90828d827d95496bcaed3420a488fa5fca4523f95204b11"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "306991fd6e8ea1609fd54171588861669792ec35363f4893a87b28802c8cfb43"}})`
 
 Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
 
@@ -44,7 +44,7 @@ Write and send cold email to people not yet contacted, one template per segment;
 7. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare crm.prepare_outreach_review with mode 'cold_template', cycleKey, segmentKey, variants, proof and listId or partyIds. For a linked template, include trackedLink {destination: '<final https>'}. Do not provide recipientBodies. Cold first touch follows the shared 30-day release cycle per party and channel; cycleKey groups results only. Follow-ups never go in the cycle (the follow-up rule). The company cold email quota is 100 recipients per rolling day, 500 per rolling week and 2,000 in total; above it, use a sender such as Instantly and record its outcomes as outcome_check says.
 8. Read crm.get_outreach_review(approvalId); check samples, exclusions and remaining cap; fix refusals and prepare again.
 9. At mid-cycle and end, read crm.get_outreach_review({cycleKey}). Decide keep, scale or kill by variant with denominators, underpowered flags and receipts on this work item; never scale on small samples or reply noise.
-10. Release: RECIPIENTS_EXCLUDED for no_basis, destination_unverified; RELEASE_PAUSED for platform_paused, company_paused; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, APPROVAL_EXPIRED, GRANT_NOT_ACTIVE, TRACKED_LINKS_OFF. Release as in release. Then read crm.get_outreach_review and put each recipient's minted link in their email, prefixed by the company app origin shown in the tool description. It redirects with UTMs and cref; only human clicks count as engagement. Use descriptive anchor text, never a raw or misleading URL. Record learning before next cycle.
+10. Release: RECIPIENTS_EXCLUDED for no_basis, destination_unverified; RELEASE_PAUSED for platform_paused, company_paused; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, APPROVAL_EXPIRED, GRANT_NOT_ACTIVE, TRACKED_LINKS_OFF. Release as in release. Then read crm.get_outreach_review and put each recipient's minted link in their email, prefixed by the company app origin shown in the tool description. It redirects with UTMs and cref; only human clicks count as engagement. Use descriptive anchor text, never a raw or misleading URL. After a send settles, set each recipient's follow-up with crm.set_track (nextActionDueAt = send time plus 4 days) so the due follow-ups view lists it. Record learning before next cycle.
 11. Pause rules: stop cold sending from the affected mailbox at once, and pause any active grant with crm.manage_outreach_grant action 'pause', when a send shows hard bounces above 2%, spam complaints above 0.1% (0.3% is the large mailbox providers' ceiling, not a target), provider blocks, a blocklist listing or a low reputation reading; then follow the recovery in `../../references/cold-deliverability.md`. Never switch to a fresh domain or mailbox to keep sending the same list.
 
 ## Acceptance
