@@ -7,5 +7,3 @@
 - host schedule readback
 - reviewed receipt
 - anomaly grant gate
-
-See [Result](result.md).

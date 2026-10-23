@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "723d27872d88e4ce8a9c82879cf015c95fa89f825f90a135e93a5ebf7f406448"
-  library: "6154b8000f7b47fa"
+  version: "a4b9f50c7149fab57c3badf7a08fc868204ea56d9a0c9847ec740a8b94f2a0bc"
+  library: "f1d2ef4c2e226957"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "723d27872d88e4ce8a9c82879cf015c95fa89f825f90a135e93a5ebf7f406448"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "a4b9f50c7149fab57c3badf7a08fc868204ea56d9a0c9847ec740a8b94f2a0bc"}})`
 
 Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
 
@@ -47,7 +47,7 @@ Decide whether, when and how much to raise (SAFE, note or priced round), model d
 6. Terms to compare and route to counsel: valuation or cap, discount, most favoured nation, pool size, liquidation preference (1x non-participating is the market default), participation, anti-dilution (broad-based weighted average is standard; full ratchet is off-market), board seats, protective provisions, pro rata, founder vesting and information rights. Back-channel a lead with founders from its portfolio, including ones that struggled.
 7. Process: time-boxed and lead-first. Set a start date and a close target before the first meeting (a common shape is 8 to 12 weeks from first meetings to a lead's term sheet; unverified), and take the ranked pool from `cady-fundraise-investor-list` (seed: often 50 to 100 names, unverified), leads first. Track each investor with crm.set_track and its roundId through target, intro, first meeting, partner meeting, diligence, term sheet, docs, closed or passed with the reason. Batch first meetings into 2 to 3 weeks so interest overlaps; follow up within a day with the next step and date; drop investors who stall rather than chase them. Get a lead, then fill the round, then set a close date. Signal check: after about 15 first meetings with no second meetings (unverified), change the story, amount or timing rather than adding volume. Exclusivity after a signed term sheet commonly runs 30 to 45 days (unverified). Record the round with crm.manage_company_records(action='set_round'). Messages to investors go through `cady-fundraise-investor-outreach`.
 8. Close. Signed documents and money in the bank are separate states; report closed only when funds are received. Before recording shares, list recent issues with crm.manage_company_records(action='list') and verify each investment against its evidence document; record with crm.manage_company_records(action='record_share_issue') only after that receipt, correct only with crm.manage_company_records(action='void_share_issue'), and never count a SAFE as issued shares. A suspected duplicate is refused unless distinctReason explains a separate issuance. Post-close securities and registry filings go to `cady-company-operations-compliance-register`.
-9. Report the recommended amount, instrument, dilution table, timeline, terms needing counsel and the next founder decision; for a work item, use transition_company_work(action: 'report_result'). No investor is contacted from this skill.
+9. Report the recommended amount, instrument, dilution table, timeline, terms needing counsel and the next founder decision; for a work item, use report_company_work. No investor is contacted from this skill.
 
 ## Acceptance
 

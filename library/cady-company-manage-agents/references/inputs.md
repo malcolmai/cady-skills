@@ -13,7 +13,7 @@
 - agent name and function
 - one goal
 - risk class (critical or standard)
-- measure and its data
+- measure and its data (the target and readings live on the goal it serves)
 - cadence or trigger, with why
 - approval limits
 - tool pack

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "3f8f8dd584122f3bd7216d5e408fc14edf7f9f45eef37a9bace6930785655f12"
-  library: "6154b8000f7b47fa"
+  version: "19af530a78d5f6e8bc9b3f32eeeaf0f5da3a7fb5667c07956632244abf4cbdbe"
+  library: "f1d2ef4c2e226957"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "3f8f8dd584122f3bd7216d5e408fc14edf7f9f45eef37a9bace6930785655f12"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "19af530a78d5f6e8bc9b3f32eeeaf0f5da3a7fb5667c07956632244abf4cbdbe"}})`
 
 Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 
@@ -45,7 +45,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 7. Mutual close plan: work back from the date the buyer needs the result, with dated steps each side owns (technical check, security review, legal, procurement, signature, kickoff). Agree it with the buyer's champion; save it with files.put_text. A missed buyer-owned date is the earliest sign of a stalled deal: ask about it directly, once, instead of chasing. No invented deadlines, exploding offers or pressure on a champion to skip their own process.
 8. Won: record the signed order with crm.record_interactions kind deal (sourceRef the order or invoice ref, no document text), set role customer with renewalDate in its own crm.update_party call, and crm.set_track stage won with outcome converted. Write a handoff note with files.put_text: why they bought and how they will judge success, in their words; scope and anything promised beyond standard; people and champion; first-value date; open risks and objections; contract start, renewal and notice dates. Start the customer work item bound to `cady-customer-success-lifecycle` with submit_company_work_checkpoint. Anything sold that the product cannot yet do goes to the product owner now, not at kickoff.
 9. Lost: crm.set_track stage lost, outcome no_longer_relevant (disqualified for a bad fit), outcomeReason, and recontact 'unless_changed' or a date the buyer gave. Ask the buyer once, without pressure, what would have needed to be different, and keep their words apart from your inference. Classify: no decision or status quo, timing, price or value, missing capability, competitor, champion left, poor fit; note the stage it died at. Three or more losses with one reason are a proposed change for `cady-gtm-offer-and-segments`; one loss is not a pivot.
-10. Small self-serve deals skip the proposal and close plan: confirm sign-up and activation, then hand straight to `cady-customer-success-lifecycle`. Report with transition_company_work(action: 'report_result') once the track, files and next action read back.
+10. Small self-serve deals skip the proposal and close plan: confirm sign-up and activation, then hand straight to `cady-customer-success-lifecycle`. Report with report_company_work once the track, files and next action read back.
 
 ## Acceptance
 

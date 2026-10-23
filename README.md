@@ -32,33 +32,37 @@ This repository is Cady's **method library**: 63 skills for running a company, f
 
 ## Quick start
 
-This library is a best-practice baseline that your company **forks**. Your orchestrator agent edits the fork with your company's own reasoning; Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.
-
-1. **Fork** `malcolmai/cady-skills` into your organisation on GitHub (private is fine), or copy a release into a repository or folder of your own.
-2. **Record the baseline**: the release tag you started from. Every `SKILL.md` names it in `metadata.library`; also write it to a `BASELINE` file at the root of the fork.
-3. **Point the front door at your fork**: in `plugins/cady/skills/cady/SKILL.md`, set the `Library source:` line to your fork's raw URL and branch, for example `https://raw.githubusercontent.com/<your-org>/<your-fork>/main/`.
-4. **Install from your fork**, then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
+Install straight from upstream; no fork is needed. Then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
 
 **Claude Code**
 
 ```bash
-claude plugin marketplace add <your-org>/<your-fork>
+claude plugin marketplace add malcolmai/cady-skills
 claude plugin install cady@cady
 ```
 
-The plugin adds the Cady MCP server and one skill; that skill loads library skills from the `Library source:` you set.
+The plugin adds the Cady MCP server and one skill (the front door, `plugins/cady/skills/cady/SKILL.md`); that skill loads library skills from the `Library source:` it names.
 
 **Codex**
 
 ```bash
-git clone https://github.com/<your-org>/<your-fork> cady-skills
-mkdir -p .agents/skills/cady && cp -R cady-skills/plugins/cady/skills/cady/. cady-skills/library cady-skills/references .agents/skills/cady/
+git clone --depth 1 https://github.com/malcolmai/cady-skills
+mkdir -p ~/.codex/skills/cady && cp -R cady-skills/plugins/cady/skills/cady/. cady-skills/library cady-skills/references ~/.codex/skills/cady/
 codex mcp add cady --url https://app.cadyworks.com/mcp && codex mcp login cady
 ```
 
 **claude.ai**
 
-Build the skill zip from your fork (`cady/` holding the front door with `library/` and `references/` beside it, the shape of the release's `cady.zip`) and upload it as a skill, then add Cady as a custom connector: Settings > Connectors > Add custom connector, URL `https://app.cadyworks.com/mcp`. An unedited fork can upload `cady.zip` from its baseline release.
+Upload `cady.zip` from the latest release as a skill (`cady/` holding the front door with `library/` and `references/` beside it), then add Cady as a custom connector: Settings > Connectors > Add custom connector, URL `https://app.cadyworks.com/mcp`.
+
+## Customise for your company (fork)
+
+Optional. Fork when you want company-specific methods; the library is a best-practice baseline, your orchestrator agent edits the fork with your company's own reasoning, and Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.
+
+1. **Fork** `malcolmai/cady-skills` into your organisation on GitHub (private is fine), or copy a release into a repository or folder of your own.
+2. **Record the baseline**: the release tag you started from. Every `SKILL.md` names it in `metadata.library`; also write it to a `BASELINE` file at the root of the fork.
+3. **Point the front door at your fork**: in `plugins/cady/skills/cady/SKILL.md`, set the `Library source:` line to your fork's raw URL and branch, for example `https://raw.githubusercontent.com/<your-org>/<your-fork>/main/`.
+4. **Install from your fork** with the commands above, replacing `malcolmai/cady-skills` and the clone URL with `<your-org>/<your-fork>`. For claude.ai, build the skill zip from your fork in the shape of the release's `cady.zip`.
 
 ## What's inside
 

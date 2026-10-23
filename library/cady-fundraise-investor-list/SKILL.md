@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "4ca36668b0943ebc7b4d97d46d3089bb0f3fec1f8c63182b5928648e245e9834"
-  library: "6154b8000f7b47fa"
+  version: "6f35316e37e580fb41b974e1f5a78db8f6598ff938909b19769f2086a5f80f0b"
+  library: "f1d2ef4c2e226957"
   function: "fundraise"
 ---
 # Ranked investor list
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "4ca36668b0943ebc7b4d97d46d3089bb0f3fec1f8c63182b5928648e245e9834"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "6f35316e37e580fb41b974e1f5a78db8f6598ff938909b19769f2086a5f80f0b"}})`
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 
@@ -37,7 +37,7 @@ Decide who to pitch for a round: a ranked list of named investors and partners, 
 2. Canvass the founder's network and accessible relationship sources, then recent backers of comparable companies and directories. For each real firm, cite its public identity source; a generic thesis page is a proxy, not an activity trigger; never invent a firm, introduction or cheque.
 3. Build the N named, reachable investors in this work item's acceptance criteria (default 10): for each, a named partner or role and a reachable public page, published address or role-level route; whether they lead or follow at this stage; their recent deals (dated, with a source, or a stated proxy); cheque fit; warm path; and unknown fields. Rank by likelihood times value (likelihood: fit, warmth and lead/follow; value: cheque size, ability to lead and help) and state the rule; stop when N meet this bar. Find a public, verifiable source first (registries, filings, directories, company sites); only when none can serve the N, ask the owner once for source access or a dataset as an access boundary with a ready packet; keep unresolved identities out of CRM.
 4. Check crm.list_parties and its mode "lists" for duplicates. Create exact sourced CRM identities with crm.update_party mode "create" if needed; set investor role and read back receipts. Before any message preparation, persist eligible real identities into the selected CRM List. For Cady CRM, reuse `cady-gtm-tam-map` for the reviewed import, completion receipt and actual membership readback; prepare is not import. For another selected CRM, use its authorized reviewed route and keep it canonical.
-5. Record ranked sources, gaps and next qualification step through transition_company_work(action: 'checkpoint'), linked to any list and party refs; read back with get_company_work. Report completion or exact source-access shortfall with transition_company_work(action: 'report_result'). Read back import completion and actual List membership using the canonical method; report researched investors, CRM parties saved/matched and List members separately. Unknown contact basis holds contact, not otherwise eligible identity persistence. List membership grants no investor contact authority. When a List was created, close with the import's receipt (receipt:<receiptId> from crm.run_import or the completion read) in evidenceRefs; the List ref alone does not let you accept. Otherwise cite the shortfall's owner record.
+5. Record ranked sources, gaps and next qualification step through transition_company_work(action: 'checkpoint'), linked to any list and party refs; read back with get_company_work. Report completion or exact source-access shortfall with report_company_work. Read back import completion and actual List membership using the canonical method; report researched investors, CRM parties saved/matched and List members separately. Unknown contact basis holds contact, not otherwise eligible identity persistence. List membership grants no investor contact authority. When a List was created, close with the import's receipt (receipt:<receiptId> from crm.run_import or the completion read) in evidenceRefs; the List ref alone does not let you accept. Otherwise cite the shortfall's owner record.
 
 ## Acceptance
 

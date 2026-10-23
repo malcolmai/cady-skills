@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "0139567582edceed778cd300b7ff0da0de3d1a169e41d068a4d311f0a24ab05a"
-  library: "6154b8000f7b47fa"
+  version: "07479cb984b2e670aad0d1d8123a82d354a5f696aa4ce87c19303a91b3f30d6e"
+  library: "f1d2ef4c2e226957"
   function: "product"
 ---
 # Product
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "0139567582edceed778cd300b7ff0da0de3d1a169e41d068a4d311f0a24ab05a"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "07479cb984b2e670aad0d1d8123a82d354a5f696aa4ce87c19303a91b3f30d6e"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -43,6 +43,7 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - Record each material decision or new company preference once, as a Projects decision item with a subject, rationale, alternatives and what would reopen it; supersede it rather than repeat it, read back the write, and keep inferred lessons as candidates until reviewed.
 - Keep interviews and observations as Files cited from the hypothesis or decision; never copy them into direction.
 - Record release go/no-go only on the release work item.
+- Cady holds goals, decisions, concise research and architecture diagrams; detailed docs stay in the company's repository or doc system, linked by URL or ref.
 
 ### Company records
 - direction and bets
@@ -50,6 +51,7 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - customer evidence Files and CRM interactions
 - offerings (the company product owner read)
 - release work items
+- the product's architecture diagrams: one top-level diagram first, plus scoped diagrams for one dimension each
 
 ### Model tiers
 - review
@@ -63,7 +65,8 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - `cady-company-decision-check`: Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
 - `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
-## Parent function
-company
+See [Parent function](../../references/parent-function.md).
 
 See [Selected judgment](references/selected-judgment.md).
+
+See [Domain method](references/domain-method.md).

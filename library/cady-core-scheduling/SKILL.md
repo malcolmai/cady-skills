@@ -1,19 +1,19 @@
 ---
 name: "cady-core-scheduling"
-description: "Recurring work setup and recovery. Set up recurring work with the right context, host and recovery. Use when: the user wants a scheduled or repeatable task. Not for: one run (use `cady-core-run-sequence`)."
+description: "Recurring work setup and recovery. Set up recurring work with the right context, host and recovery. Use when: the user wants a scheduled or repeatable task. Not for: one run (use the cady-core-run-sequence skill)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.scheduling"
   version: "bc9a0f9666653b5b884280e81d97076ed6f8420f33672fbc835c010efb297772"
-  library: "6154b8000f7b47fa"
+  library: "f1d2ef4c2e226957"
   function: "core"
 ---
 # Recurring work setup and recovery
 
 **Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.scheduling": "bc9a0f9666653b5b884280e81d97076ed6f8420f33672fbc835c010efb297772"}})`
 
-Set up recurring work with the right context, host and recovery. Use when: the user wants a scheduled or repeatable task. Not for: one run (use `cady-core-run-sequence`).
+Set up recurring work with the right context, host and recovery. Use when: the user wants a scheduled or repeatable task. Not for: one run (use the cady-core-run-sequence skill).
 
 ## Company scheduling
 

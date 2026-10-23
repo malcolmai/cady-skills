@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
-  version: "9308c62c1c7be98d505667b7d2a882e2444dbff2e35359b01a53d588a42d1514"
-  library: "6154b8000f7b47fa"
+  version: "52f5f3b5bbd17dd84ab9972b2bc4e12b3f2b93cf84b459518cc700f4e6414bcf"
+  library: "f1d2ef4c2e226957"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "9308c62c1c7be98d505667b7d2a882e2444dbff2e35359b01a53d588a42d1514"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "52f5f3b5bbd17dd84ab9972b2bc4e12b3f2b93cf84b459518cc700f4e6414bcf"}})`
 
 Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 
@@ -44,7 +44,7 @@ Run one customer account after the sale: onboarding to first value, health, risk
 6. Renewal: for an annual contract start 90 days before renewalDate (30 days for a monthly plan), or before the contract's notice deadline if that is earlier. At 90 days review outcomes delivered against the kickoff goal and open risks; at 60 hold the renewal conversation with value in their numbers and any price change, announced no later than the contract's notice period; at 30 complete the paperwork. Send every notice the contract or law requires with no promotion in it, on the lane message rules (lanes) give it, and never let an auto-renewal surprise the customer. Afterwards send crm.update_party role customer with the new renewalDate in its own call, and record kind deal.
 7. Expansion: only once first value is reached and no risk is open. Real triggers are hitting a plan limit, another team asking, or a new use case the customer raised. Ask what result the expansion buys; when it needs a proposal, run it through `cady-sales-deal-motion`.
 8. Cancellation: acknowledge the request the same day and ask once why. Make one save attempt only when a real remedy fits that reason (the fix with a date, a pause, a smaller plan, or terms the owner approved); offer nothing the owner has not approved. If they decline or repeat the decision, honour it by the date they asked: no extra steps, repeated calls or guilt. Confirm in writing the end date, final invoice, access and data export; the cancellation itself is made by the billing owner. Record the reason with crm.record_interactions kind note (no message body), when the contract ends send crm.update_party role other with renewalDate null so the account no longer counts as a customer, and set recontact 'unless_changed' unless they asked for a date. Cancelling is not an opt-out, and not consent to marketing either.
-9. Every customer message goes through `cady-gtm-reply` or `cady-gtm-warm-email`; nothing sends from this skill. The same churn or risk reason across three or more accounts is a proposal to the product owner or `cady-gtm-offer-and-segments`. Report with transition_company_work(action: 'report_result') once records and files read back.
+9. Every customer message goes through `cady-gtm-reply` or `cady-gtm-warm-email`; nothing sends from this skill. The same churn or risk reason across three or more accounts is a proposal to the product owner or `cady-gtm-offer-and-segments`. Report with report_company_work once records and files read back.
 
 ## Acceptance
 

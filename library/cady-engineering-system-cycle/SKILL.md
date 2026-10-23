@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "2cfb31aa5d0dfdc94bf98fb2f164889baf9f9cb225f96c6c397501072bfedc7f"
-  library: "6154b8000f7b47fa"
+  version: "8f1e3e72004303f518ae13ec8c6e33f183dd247b10b99728603ade524cfaafb2"
+  library: "f1d2ef4c2e226957"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "2cfb31aa5d0dfdc94bf98fb2f164889baf9f9cb225f96c6c397501072bfedc7f"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "8f1e3e72004303f518ae13ec8c6e33f183dd247b10b99728603ade524cfaafb2"}})`
 
 Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 
@@ -20,6 +20,9 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 **Unit of work:** one cycle of one product: its map, dimension register and the review, build and hunt motions. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
 See [Always](references/always.md).
+
+See [Inputs](references/inputs.md).
+
 ## Procedure
 
 1. For a material data path (import, transformation, reconciliation or migration), identify the authoritative source and record identity; decide replay/backfill and schema-drift behavior; then reconcile the result against the business outcome and relevant quality or freshness limits. Reuse `cady-engineering-integrations` for provider idempotency. Product or the domain owner defines metric meaning; Engineering owns pipeline correctness and reports unresolved drift. Apply only the judgments the path needs, not a mandatory checklist.
@@ -42,3 +45,5 @@ See [Always](references/always.md).
 - [ ] each review reports its top changes with the goal each serves, cross-product tradeoffs with why each lasts, and the decision needed
 
 See [Owner checks](references/owner-checks.md).
+
+See [Result](references/result.md).

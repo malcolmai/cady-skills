@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "6154b8000f7b47fab483b90ce602ed611002e06deb5b252212909319946d1b04"
-  library: "6154b8000f7b47fa"
+  version: "f1d2ef4c2e226957715e1b92df4df6e71499448306c40bab58b56389762ac638"
+  library: "f1d2ef4c2e226957"
   function: "core"
 ---
 # Cady
@@ -51,13 +51,13 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/6154b8000f7b47fa/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/f1d2ef4c2e226957/
 
-That line is the upstream baseline at this release tag. A company's fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
+That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 
-## Your fork
+## Your fork (optional)
 
-This library is a best-practice baseline. Each company forks it into its own git repository or a local copy, and its orchestrator edits that fork with the company's own reasoning; Cady stores no skills. Nothing updates a fork automatically: once a month the orchestrator compares the fork's baseline tag (`metadata.library`) with the latest upstream release, reads that release's CHANGELOG.md, merges what helps by hand and records the decision. The README at github.com/malcolmai/cady-skills has the steps.
+Install straight from upstream; fork only when you want company-specific methods (Cady's own company uses upstream directly). A fork lives in its own git repository or a local copy, and its orchestrator edits it with the company's own reasoning; Cady stores no skills. Nothing updates a fork automatically: once a month the orchestrator compares the fork's baseline tag (`metadata.library`) with the latest upstream release, reads that release's CHANGELOG.md, merges what helps by hand and records the decision. The README at github.com/malcolmai/cady-skills has the steps.
 
 ## Library
 

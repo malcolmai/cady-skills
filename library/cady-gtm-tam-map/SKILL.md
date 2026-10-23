@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "8175840227c68caa9e752e09bcbffb2823b8fe03ef39c937fe02d09f4761c7b0"
-  library: "6154b8000f7b47fa"
+  version: "740ea710cbfc5ce44cc1cfeadb2a683b896f931d6f11cc0af3a1f100a7090f53"
+  library: "f1d2ef4c2e226957"
   function: "gtm"
 ---
 # TAM map
 
-**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "8175840227c68caa9e752e09bcbffb2823b8fe03ef39c937fe02d09f4761c7b0"}})`
+**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "740ea710cbfc5ce44cc1cfeadb2a683b896f931d6f11cc0af3a1f100a7090f53"}})`
 
 Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 
@@ -20,6 +20,7 @@ Build a list of target companies or accounts to sell to (for a region, segment o
 **Unit of work:** one work item per segment; the work creates its List (step 6), then enriches it and records bases (step 7). **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
 See [Inputs](references/inputs.md).
+
 ## Procedure
 
 1. Read get_company_direction and CRM Lists with crm.list_parties with mode "lists". Define the segment from the accepted ICP or current first-segment hypothesis, and drop accounts its disqualifiers exclude. Match breadth to conviction: while the ICP is a hypothesis with little customer evidence, keep discovery wide; intent, dated triggers and situations that suggest fit rank accounts, never gate them. Narrow only on recorded customer evidence or a current company decision, which governs.

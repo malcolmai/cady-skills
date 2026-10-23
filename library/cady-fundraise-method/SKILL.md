@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "9d82c3b040718e488f582275e580009ca1fcd9e423e81a83146b1ca286a6026a"
-  library: "6154b8000f7b47fa"
+  version: "61ca2983ad8d31573b9d2a05d1c65dd5551d72a1991477081393497c90b65473"
+  library: "f1d2ef4c2e226957"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "9d82c3b040718e488f582275e580009ca1fcd9e423e81a83146b1ca286a6026a"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "61ca2983ad8d31573b9d2a05d1c65dd5551d72a1991477081393497c90b65473"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -24,6 +24,6 @@ finance
 - Produce the smallest useful investor or materials result with source-backed claims and exact owner references. Record the next decision and accountable checkpoint where authorized; verify any saved result and keep uncertain investor responses separate from commitments.
 
 ## Domain method
-- **Integrate:** Read each result with get_company_work and inspect the exact CRM list or Files refs before transition_company_work(action: 'accept_result'). Send the helper one corrected prompt on a miss. Investor contact and update sends go through `cady-fundraise-investor-outreach`; present the copy as unsent until its review and authority are satisfied. Before recording shares, list recent share issues and verify the investment against its evidence document. A SAFE is not issued shares. Issues are automatic plus notify; report issuance only after the receipt. Suspected duplicates are refused unless distinctReason explains a separate issuance. Correct only with a void entry.
+- **Integrate:** Read each result with get_company_work and inspect the exact CRM list or Files refs before relying on it. Send the helper one corrected prompt on a miss. Investor contact and update sends go through `cady-fundraise-investor-outreach`; present the copy as unsent until its review and authority are satisfied. Before recording shares, list recent share issues and verify the investment against its evidence document. A SAFE is not issued shares. Issues are automatic plus notify; report issuance only after the receipt. Suspected duplicates are refused unless distinctReason explains a separate issuance. Correct only with a void entry.
 - **Job:** Help the company decide whether, when and how much capital to raise for named milestones. Read get_company_direction first; distinguish internal strategy, investor fit, materials and contact authority. Manage entities, rounds and issued-share records with crm.manage_company_records(action='set_entity'), crm.manage_company_records(action='set_round'), crm.manage_company_records(action='record_share_issue'), crm.manage_company_records(action='void_share_issue'), crm.manage_company_records(action='list'), crm.manage_company_records(action='get'); crm.set_track and crm.list_parties with mode "tracks" accept roundId.
 - **Plan into work:** Turn each commissioned investor list or material into one Projects work item with submit_company_work_checkpoint: a new workId, expectedRevision null, selected methodId and methodVersion, source refs, statement, acceptance and next action. Do not create an unrequested round or bundle of materials.

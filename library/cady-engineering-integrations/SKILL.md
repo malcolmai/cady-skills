@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.integrations"
   version: "1993b2ff17063daed59db08877acba35846e88c14113748932ecf1a97ac079aa"
-  library: "6154b8000f7b47fa"
+  library: "f1d2ef4c2e226957"
   function: "engineering"
 ---
 # Integrations
@@ -16,6 +16,7 @@ metadata:
 Choose, operate or build a company integration: compare and pick a tool or vendor to connect (the vendor reference), operate a chosen connector (the connector reference) or build one (the build reference). Use when: comparing, choosing or connecting a tool, data source or account. Not for: a purchase or renewal decision on cost (use `cady-finance-vendor-spend-review`).
 
 See [Integrations](references/integrations.md).
+
 ## Pick the job
 
 - [Choose or compare a tool or vendor](references/vendor.md)

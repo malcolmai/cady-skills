@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "bb73690d6cd5a9d0491c2ab3a35a9c61ea665fc33cc1ddff9797f8b2a47f1aae"
-  library: "6154b8000f7b47fa"
+  version: "44be7ca52d5d2e246bd5eacddd111a576f7aed45622d0ed1dde91709579e6b9c"
+  library: "f1d2ef4c2e226957"
   function: "engineering"
 ---
 # Engineering
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "bb73690d6cd5a9d0491c2ab3a35a9c61ea665fc33cc1ddff9797f8b2a47f1aae"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "44be7ca52d5d2e246bd5eacddd111a576f7aed45622d0ed1dde91709579e6b9c"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -34,9 +34,10 @@ Become the expert in the chosen architecture, layer by layer. Know its material 
 ### Hands off
 
 ### Receipts
+- When a dimension or architecture decision changes the system, update the product's top-level architecture diagram (save a new diagram File, relink it); a scoped diagram covers one dimension and never replaces the overview.
 
 ### Company records
-- a system map File
+- the product's top-level architecture diagram (Product context) and scoped dimension diagrams
 - engineering decision items
 
 ### Model tiers

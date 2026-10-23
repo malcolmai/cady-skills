@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "63e116894ccefd6b32e3d001c55a038ba92c6927199e90e869fc86531840281f"
-  library: "6154b8000f7b47fa"
+  version: "a00d1da7e706e4799f754e0ff2249d8849a3fc1e8911aeceef31c88143918e3d"
+  library: "f1d2ef4c2e226957"
   function: "company"
 ---
 # Decision layers and second look
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "63e116894ccefd6b32e3d001c55a038ba92c6927199e90e869fc86531840281f"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "a00d1da7e706e4799f754e0ff2249d8849a3fc1e8911aeceef31c88143918e3d"}})`
 
 Deciding a choice's layer (owner, function head or task), or rechecking it before others build on it.
 
@@ -35,6 +35,7 @@ Deciding a choice's layer (owner, function head or task), or rechecking it befor
 5. Ask four things: does it make sense, is it well justified, does it consider nuance, and does it avoid diluting focus beyond the current goals and decisions.
 6. Fix what the look finds, record what it found or changed in the decision's rechecked field (one short note), and act. Nothing waits on the look.
 7. Raise an owner ask only if the look finds something it cannot resolve.
+8. To correct a recorded decision send corrects {ref, as: supersede|wrong, why}; wrong records 'Ruled wrong: ...' on the same subject.
 
 ## Acceptance
 

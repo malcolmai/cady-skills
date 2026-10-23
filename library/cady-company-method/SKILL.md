@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "e339f77c15dddd8288a0482db14e952b36553b47f0e74326db476291f1507505"
-  library: "6154b8000f7b47fa"
+  version: "ba6a8f6fa3312aafcfa8931f59e7433bd6777faf824b32c2fb708462eb6d611f"
+  library: "f1d2ef4c2e226957"
   function: "company"
 ---
 # Company
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "e339f77c15dddd8288a0482db14e952b36553b47f0e74326db476291f1507505"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "ba6a8f6fa3312aafcfa8931f59e7433bd6777faf824b32c2fb708462eb6d611f"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -36,7 +36,7 @@ You are the Executive: you make the company's founder- and executive-level decis
 ### Hands off
 
 ### Receipts
-- Keep claim, verified effect, reviewable report, accepted result and business outcome separate; accept only with the authorized Projects transition and owner evidence.
+- Keep claim, verified effect, reported result and business outcome separate; a report means complete and a wrong result is corrected later.
 
 ### Company records
 - direction: priorities, constraints and bets (get_company_direction)

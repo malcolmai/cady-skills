@@ -2,5 +2,5 @@
 
 - Journey goals are user outcomes, not features or implementation decisions.
 - Development tests find and prove; this cycle adds no gate. CI gates follow the company's recorded stage, and an exposed security, isolation or authority defect still blocks its path.
-
-See [Inputs](inputs.md).
+- Before starting a lane, search open Cady work and open PRs (`gh pr list` plus file overlap) for the same thing; extend or coordinate rather than duplicate.
+- Raise a decision you need as a Cady ask and keep working on what doesn't depend on it; never block waiting in chat.

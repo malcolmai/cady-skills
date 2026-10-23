@@ -29,7 +29,6 @@
 - **Managed work:** MANAGED_WORK
 - **Method not current:** METHOD_NOT_CURRENT
 - **Must criterion not passed:** MUST_CRITERION_NOT_PASSED
-- **Overlaps person decision:** OVERLAPS_PERSON_DECISION
 - **Owner not member:** OWNER_NOT_MEMBER
 - **Parent cycle:** PARENT_CYCLE
 - **Party in other lane:** PARTY_IN_OTHER_LANE

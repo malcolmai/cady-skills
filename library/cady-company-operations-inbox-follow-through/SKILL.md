@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "dfe1b01b7fec16d18280192de2e41cac7e0667e4aab066edb180d22431921230"
-  library: "6154b8000f7b47fa"
+  version: "0219b9135fcb48dd08d3bf8f8b895e6a4923587065e66c626ed21257dd120d6c"
+  library: "f1d2ef4c2e226957"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "dfe1b01b7fec16d18280192de2e41cac7e0667e4aab066edb180d22431921230"}})`
+**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "0219b9135fcb48dd08d3bf8f8b895e6a4923587065e66c626ed21257dd120d6c"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 
@@ -20,6 +20,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 **Unit of work:** the requested thread or bounded mailbox sweep; reuse existing work or an adequate native reminder, adding commitment metadata only when later due, waiting, deduplication or source-linked fulfillment needs it. **Kind:** execution. **Parallel:** no. **Can release:** no. 
 
 See [Inputs](references/inputs.md).
+
 ## Procedure
 
 1. Write material internal records without asking. Prepare consequential actions (money, time or an important counterparty) for review; never send without explicit owner approval. Other outside effects use Cady with a one-line justification and self-approval quality check; neither replaces owner, grant or channel checks. Unreadable/403 sources yield no takeaway. Record one interaction per material takeaway and cite its returned ref.
@@ -47,4 +48,7 @@ See [Inputs](references/inputs.md).
 - [ ] takeaways reach their owner only when important: routine mail writes nothing to the CRM or context; a deferral is a track, a stop is a permission, an owner decision is a quoted decision
 
 See [Owner checks](references/owner-checks.md).
+
+See [Result](references/result.md).
+
 See [References](references/references.md).

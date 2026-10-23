@@ -2,6 +2,40 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## f1d2ef4c2e226957 · 2026-10-23
+
+Since 6154b8000f7b47fa: 0 new, 0 dropped, 26 changed.
+
+Changed (the parts that differ):
+- `cady`: Load a library skill, new Your fork (optional), removed Your fork
+- `cady-company-decision-check`: Procedure
+- `cady-company-executive-review`: Procedure
+- `cady-company-manage-agents`: intro, Procedure, Acceptance, reference inputs.md, reference owner-checks.md
+- `cady-company-method`: Role card, reference domain-method.md
+- `cady-company-operations-inbox-follow-through`: intro, Acceptance, reference owner-checks.md, reference result.md
+- `cady-core-context`: Company practice
+- `cady-core-execution`: intro, Recurrence, new Risk first, new Selection, removed Credentials, reference credentials.md, reference delivery-completion.md, reference native-orchestration.md, reference risk-first.md, reference selection.md
+- `cady-core-run-sequence`: Run sequence, reference refusals.md, reference reporting.md
+- `cady-core-scheduling`: description, intro
+- `cady-customer-success-lifecycle`: Procedure
+- `cady-engineering-integrations`: intro
+- `cady-engineering-method`: Role card, reference domain-method.md
+- `cady-engineering-system-cycle`: intro, Acceptance, reference always.md, reference owner-checks.md
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-method`: Domain method
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-calls`: Procedure
+- `cady-gtm-reply`: intro, Procedure, Acceptance, reference always.md
+- `cady-gtm-tam-map`: intro
+- `cady-orchestrator-method`: Role card, reference parent-function.md, reference selected-judgment.md
+- `cady-product-method`: Role card, removed Parent function, reference domain-method.md, reference selected-judgment.md
+- `cady-qa-stories`: Procedure
+- `cady-sales-deal-motion`: Procedure
+
+Shared references changed: inbox-follow-through-details.md, outreach-message-rules.md, parent-function.md, release-plan.md, role-card-common.md.
+
 ## 6154b8000f7b47fa · 2026-10-23
 
 Since b1e7050435d28aef: 0 new, 0 dropped, 2 changed.

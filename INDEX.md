@@ -2,6 +2,8 @@
 
 63 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
+Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
+
 ## core
 - `cady-core-context`: deciding who decides, or what to read, before company work. (`library/cady-core-context/SKILL.md`)
 - `cady-core-execution`: a skill points here, or before an effect, credential use, retry or recovery. (`library/cady-core-execution/SKILL.md`)

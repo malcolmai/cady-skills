@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "e02521ed0b4727fe7f409f614f24a8d9e9d02a7440ec466a2dab3832d2e01c07"
-  library: "6154b8000f7b47fa"
+  version: "978bfdeda101c742f1ad6cdbf0a09371bbcc3fc7ace23414b98cc2d298cba970"
+  library: "f1d2ef4c2e226957"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "e02521ed0b4727fe7f409f614f24a8d9e9d02a7440ec466a2dab3832d2e01c07"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "978bfdeda101c742f1ad6cdbf0a09371bbcc3fc7ace23414b98cc2d298cba970"}})`
 
 Make one big company decision (market, direction, pricing, a bet to start or stop) or review where effort goes.
 
@@ -45,7 +45,7 @@ Make one big company decision (market, direction, pricing, a bet to start or sto
 8. Review before deciding: the strongest alternative and the weakest assumption. Only a consequential or one-way decision also gets a pre-mortem and a fresh red-team subagent (review tier) given the frame and evidence, never your recommendation.
 9. Decide within your authority. For a founder-reserved choice, raise a BLOCKED decision item addressed to the owner with a recommendation and options; it reaches them as asksForYou.
 10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File through files.upload mode "begin" then "complete", and a decision item through submit_company_work_checkpoint with decision {kind: "decision", subject, layer (L2 strategy with a keyAssumption, L3 execution), rationale, alternatives, reversal, reviewBy, authority, decidedBy} citing file:<fileId>. For your own choice use authority "agent" and omit decidedBy: Cady records it as your agent, never as the person (no source or quote). A person's choice needs source "chat" with their exact words in quote and decidedBy (or a verified source "grant" with grantId); Cady marks agent-recorded person decisions viaAgent. Keep the item's summary within its 2000-byte limit.
-11. Hand next steps to the orchestrator or suitable existing agent as exact Projects tasks: statement, brief {acceptance: 1-5 tagged checks with must, finishLine}, nextAction and evidence refs, with goalId, agentId, dependsOn or productId only when real. Current allocation is priority evidence, not task identity or effect authority; a direct one-off needs no invented allocation, and allocation grants no effects. Read the reported result and accept with your own per-criterion verdicts, recording the owner's chat words in acceptance.quote, before judging outcomes; never do the function work yourself.
+11. Hand next steps to the orchestrator or suitable existing agent as exact Projects tasks: statement, brief {doneWhen: 1-5 plain lines}, nextAction and evidence refs, with goalId, agentId, dependsOn or productId only when real. Current allocation is priority evidence, not task identity or effect authority; a direct one-off needs no invented allocation, and allocation grants no effects. Read the reported result and accept with your own per-criterion verdicts, recording the owner's chat words in acceptance.quote, before judging outcomes; never do the function work yourself.
 12. At reviewBy, compare the outcome with the prediction, score it hit or miss, then keep, change or stop; record what you learned as a decision that supersedes the old one. Before the next comparable decision, read the scored records.
 13. Allocation: keep one current allocation as a decision item with subject allocation:current, superseded only on a trigger (`../../references/allocation-and-initiatives.md`); otherwise end with 'allocation stands' and write nothing.
 14. Initiatives: follow every founder idea as an initiative:<slug> decision item and stop one only for a recorded reason, as `../../references/allocation-and-initiatives.md` says.
