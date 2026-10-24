@@ -1,21 +1,21 @@
 ---
 name: "cady-qa-triage"
-description: "Bug and flaky-test triage. Use when: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. Not for: Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use `cady-engineering-independent-review`) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides)."
+description: "Bug and flaky-test triage. Use when: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. Not for: Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use the installed Cady skill for independent_review) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
-  version: "eb4e6dc0bbb048dbb1c7452c719d9414eb90fac6d682ffc1f828c65e16bd16d7"
-  library: "c524ef7ffada6715"
+  version: "94acc89d1841d0b739981f77c726361fe7a6df884ebec51dbdff0fa6169c2c64"
+  library: "bee76862d99c83e9"
   function: "qa"
 ---
 # Bug and flaky-test triage
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "eb4e6dc0bbb048dbb1c7452c719d9414eb90fac6d682ffc1f828c65e16bd16d7"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "94acc89d1841d0b739981f77c726361fe7a6df884ebec51dbdff0fa6169c2c64"}})`
 
 Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.
 
-**Not for:** Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use `cady-engineering-independent-review`) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides).
+**Not for:** Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use the installed Cady skill for independent_review) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides).
 
 **Unit of work:** one reported failure, from report to verified close. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 

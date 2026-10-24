@@ -6,7 +6,7 @@
 
 ### Operations topics
 
-- **Boundary:** Methods guide the host; external systems own operational records. For entity or filing work, check the applicable legal entity and actual obligation; use crm.manage_company_records(action='set_entity'), action='list' or action='get' for entity facts where authorized. Finance tax-cycle work uses Projects dueDate and dependsOn for preparation before separately sourced filing and payment deadlines; Operations oversees operational risk and follow-through, while Finance retains financial controls. Retain evidence references, not file bodies. When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's setup), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- **Boundary:** Methods guide the host; external systems own operational records. For entity or filing work, check the applicable legal entity and actual obligation; use crm.manage_company_records(action='set_entity'), action='list' or action='get' for entity facts where authorized. Finance tax-cycle work uses Projects dueDate and dependsOn for preparation before separately sourced filing and payment deadlines; Operations oversees operational risk and follow-through, while Finance retains financial controls. Retain evidence references, not file bodies. When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 - **Content hash:** 139eb0e37434eda0b51cb995cc0febed66e85da9ca526fce9089587c6a3801bf
 - **Owner:** company_operations
 

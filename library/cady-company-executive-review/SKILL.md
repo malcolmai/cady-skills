@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "c16c13844241592a56dcb1b62d6cafa103f59dca8b9e3a8eb8665daef69f5144"
-  library: "c524ef7ffada6715"
+  version: "45e301a0d3346d4ea6f14e50b25f7fe189923c01f0b92f17f8050bb630f0acc9"
+  library: "bee76862d99c83e9"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "c16c13844241592a56dcb1b62d6cafa103f59dca8b9e3a8eb8665daef69f5144"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "45e301a0d3346d4ea6f14e50b25f7fe189923c01f0b92f17f8050bb630f0acc9"}})`
 
 Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 
@@ -28,7 +28,7 @@ Make one company-level decision (a goal to start, reshape or stop, market, prici
 
 ### Sources
 
-- get_company_direction
+- read_cady company:direction
 - the finance plan read (cash, burn, runway)
 - get_company_work decisions {state: "current"}
 - list_recent_changes since your last pass

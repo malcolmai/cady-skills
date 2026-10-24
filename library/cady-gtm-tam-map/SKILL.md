@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "db06c6e73e5e1d39e8d693c046af2349c775d579741367a341b0468d1d0cd452"
-  library: "c524ef7ffada6715"
+  version: "1d5476649afdbde4505f2c0826af6be166355fae7c2489abcd1628a90cec8202"
+  library: "bee76862d99c83e9"
   function: "gtm"
 ---
 # TAM map
 
-**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "db06c6e73e5e1d39e8d693c046af2349c775d579741367a341b0468d1d0cd452"}})`
+**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "1d5476649afdbde4505f2c0826af6be166355fae7c2489abcd1628a90cec8202"}})`
 
 Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 
@@ -23,7 +23,7 @@ See [Inputs](references/inputs.md).
 
 ## Procedure
 
-1. Read get_company_direction and CRM Lists with crm.list_parties with mode "lists". Define the segment from the accepted ICP or current first-segment hypothesis, and drop accounts its disqualifiers exclude. Match breadth to conviction: while the ICP is a hypothesis with little customer evidence, keep discovery wide; intent, dated triggers and situations that suggest fit rank accounts, never gate them. Narrow only on recorded customer evidence or a current company decision, which governs.
+1. Read read_cady company:direction and CRM Lists with crm.list_parties with mode "lists". Define the segment from the accepted ICP or current first-segment hypothesis, and drop accounts its disqualifiers exclude. Match breadth to conviction: while the ICP is a hypothesis with little customer evidence, keep discovery wide; intent, dated triggers and situations that suggest fit rank accounts, never gate them. Narrow only on recorded customer evidence or a current company decision, which governs.
 2. Build named accounts toward N, the list target from plan_into_work in the gtm method unless this work item's acceptance names another number, from sources you can open: public, verifiable ones first (registries, filings, directories, company sites, web search), then the owner's files, Lists, CRM and connected stores. Give each account its identity source (an http(s) URL, a Cady file as file:<fileId> or a Cady list as crm:list:<listId>), a named person or role with a reachable public route, and an explicit "unknown" for every field you cannot source. General knowledge is a hypothesis to source, not a list: a name you cannot source stays out of the CRM and goes in the sourcing plan. Give each account a one-line reason it fits, with its source, or mark it unknown; distinguish sourced facts from inference. Source about 1.5-2x N so N remain eligible after attrition. Stop at N eligible accounts that meet this bar; do not pad. A shortfall against N first widens the segment, sources and criteria within the ICP and direction, then reports; the report is an input to the goal call, not a stop.
 3. With no way to look things up (no web search and no source files), the first result is the segment decision plus a sourcing plan: the segments, the criteria, where each segment's names will come from (directories, registers, exports, the owner's contacts) and who will fetch them. It lists no company or person names. Report it as the work result and ask once for the sources or the owner's export as an access boundary with a ready packet, stating your default for everything else (for example the region) as a choice, not a question.
 4. Check identity with crm.list_parties or crm.get_party. Use crm.update_party to record company_name, industry and approved customer proof where sourced. Read permission and engagement with crm.get_party; record observed engagement with crm.record_interactions.

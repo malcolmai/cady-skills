@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "1ba582b04e05f5538ad772a769e709541f0f76c3d011f639769b5b70f713422e"
-  library: "c524ef7ffada6715"
+  version: "0c06bf64166ecca9d68297b555f982658eb6d98d9058eb8cbf694e059764bc50"
+  library: "bee76862d99c83e9"
   function: "core"
 ---
 # Execution guidance
@@ -26,7 +26,7 @@ See [Native orchestration](references/native-orchestration.md).
 
 ## Recurrence
 
-- Recurring work: company_scheduling below. Every run of every agent follows `cady-core-run-sequence`. Waiting work records nextAction and a dueDate and relies on the host's next wake; there is no separate wake mechanism.
+- Recurring work: company_scheduling below. Every run of every agent follows the run sequence (skill cady-core-run-sequence). Waiting work records nextAction and a dueDate and relies on the host's next wake; there is no separate wake mechanism.
 
 ## Risk first
 

@@ -1,21 +1,21 @@
 ---
 name: "cady-engineering-debugging"
-description: "Debugging and incident response. Use when: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. Not for: Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`)."
+description: "Debugging and incident response. Use when: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. Not for: Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use the installed Cady skill for independent_review) or recurring backlog review (use `cady-engineering-system-cycle`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
-  version: "bce8a0427e5bb455383aa1c545de09b07eb83db84f67c1e81817ce85e666f1bb"
-  library: "c524ef7ffada6715"
+  version: "8d40dfad484f43c811bbb09a13e148b6e0a5547777debddf52efbbab019d2b49"
+  library: "bee76862d99c83e9"
   function: "engineering"
 ---
 # Debugging and incident response
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "bce8a0427e5bb455383aa1c545de09b07eb83db84f67c1e81817ce85e666f1bb"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "8d40dfad484f43c811bbb09a13e148b6e0a5547777debddf52efbbab019d2b49"}})`
 
 Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 
-**Not for:** Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`).
+**Not for:** Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use the installed Cady skill for independent_review) or recurring backlog review (use `cady-engineering-system-cycle`).
 
 **Unit of work:** one failure or incident, from first signal to verified fix. **Kind:** execution. **Parallel:** no. **Can release:** no. 
 

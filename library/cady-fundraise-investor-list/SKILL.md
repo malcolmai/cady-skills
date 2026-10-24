@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "608459da509e9ca8b18c00e2180385f992611654570b154cb60fbd114736e90e"
-  library: "c524ef7ffada6715"
+  version: "c844f0367c17f44913a3a7403c08455bcddef5b794eb2d2b2e38af2cc25b9d6e"
+  library: "bee76862d99c83e9"
   function: "fundraise"
 ---
 # Ranked investor list
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "608459da509e9ca8b18c00e2180385f992611654570b154cb60fbd114736e90e"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "c844f0367c17f44913a3a7403c08455bcddef5b794eb2d2b2e38af2cc25b9d6e"}})`
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 
@@ -33,7 +33,7 @@ Decide who to pitch for a round: a ranked list of named investors and partners, 
 
 ## Procedure
 
-1. Read get_company_direction and the exact financing objective, cash timing, milestone proof and founder constraints. State stage, cheque range, geography, thesis and warmth as hypotheses unless accepted; no active round does not create overdue outreach.
+1. Read read_cady company:direction and the exact financing objective, cash timing, milestone proof and founder constraints. State stage, cheque range, geography, thesis and warmth as hypotheses unless accepted; no active round does not create overdue outreach.
 2. Canvass the founder's network and accessible relationship sources, then recent backers of comparable companies and directories. For each real firm, cite its public identity source; a generic thesis page is a proxy, not an activity trigger; never invent a firm, introduction or cheque.
 3. Build the N named, reachable investors in this work item's acceptance criteria (default 10): for each, a named partner or role and a reachable public page, published address or role-level route; whether they lead or follow at this stage; their recent deals (dated, with a source, or a stated proxy); cheque fit; warm path; and unknown fields. Rank by likelihood times value (likelihood: fit, warmth and lead/follow; value: cheque size, ability to lead and help) and state the rule; stop when N meet this bar. Find a public, verifiable source first (registries, filings, directories, company sites); only when none can serve the N, ask the owner once for source access or a dataset as an access boundary with a ready packet; keep unresolved identities out of CRM.
 4. Check crm.list_parties and its mode "lists" for duplicates. Create exact sourced CRM identities with crm.update_party mode "create" if needed; set investor role and read back receipts. Before any message preparation, persist eligible real identities into the selected CRM List. For Cady CRM, reuse `cady-gtm-tam-map` for the reviewed import, completion receipt and actual membership readback; prepare is not import. For another selected CRM, use its authorized reviewed route and keep it canonical.

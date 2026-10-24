@@ -4,7 +4,7 @@
 - **Experiment guidance:** Variant shares are set in `cady-gtm-cold-email-cycle`; test a channel or message with `cady-company-experiment` before scaling it.
 - **Funnel review:** Review the funnel weekly with denominators, by segment and variant: sent, delivered, replied, positive replies, meetings, opportunities and customers, plus bounce and complaint rates; change the ICP or message, not the volume, when a stage underperforms.
 - **Integrate:** Read results with get_company_work; verify prepared outreach with crm.get_outreach_review before accepting work. Show prepared reviews. Release only through the skill procedure under current authority.
-- **Job:** Grow demand into delivered value for the current bets. Read direction first (get_company_direction); it decides conflicts with this method.
+- **Job:** Grow demand into delivered value for the current bets. Read direction first (read_cady company:direction); it decides conflicts with this method.
 
 ### Motions
 

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "835c72f8aac90b1f9449b91c698a748fa41b2d492950fecd162fc89fc1367038"
-  library: "c524ef7ffada6715"
+  version: "53ae3c5ab989f987e2f23cb57b839975847b03855a779f0058a775492bbf7b5f"
+  library: "bee76862d99c83e9"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "835c72f8aac90b1f9449b91c698a748fa41b2d492950fecd162fc89fc1367038"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "53ae3c5ab989f987e2f23cb57b839975847b03855a779f0058a775492bbf7b5f"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -21,7 +21,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 - `cady-company-executive-review`: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
+- `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 - `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.

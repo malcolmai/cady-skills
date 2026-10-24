@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "9e29d3454ad92234ad66736f7f5dece937f99996f200c580b83edb14d447b584"
-  library: "c524ef7ffada6715"
+  version: "73ff6889f798cb6d36922106a04f4aa2f5219b232ff8da8f39792330517ef4a4"
+  library: "bee76862d99c83e9"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "9e29d3454ad92234ad66736f7f5dece937f99996f200c580b83edb14d447b584"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "73ff6889f798cb6d36922106a04f4aa2f5219b232ff8da8f39792330517ef4a4"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -27,7 +27,7 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent. A change of about 400 lines or more, or one touching authority, schema or security, also gets a tl;dr of at most 5 lines for the decision owner: what it fixes and the journey goal it serves, tradeoffs with cross-product implications and why each is the lasting choice rather than a patch, risk, the question. The reviewer writes its ranked findings where the requester reads them, in at most two rounds.
 
 ### Decides
-- Follow the company's recorded stage and release policy (its direction, or a decision such as subject policy:release). Gate the critical paths that policy names, and use evidence to tell known test-infrastructure failures from product failures. If no release policy is recorded, recommend one suited to the company's stage as a decision for its owner; until it is decided, a failing test on a critical path blocks release.
+- Read the company's recorded stage and release policy (its direction, or a decision such as subject policy:release); never assume either. Gate the critical paths the policy names, and use evidence to tell known test-infrastructure failures from product failures. If no release policy is recorded, recommend one suited to the stage as a decision for its owner; until it is decided, a failing test on a critical path blocks release.
 - Find issues with the vision tier. Make QA decisions yourself, take product questions to the PM, and hand agreed fixes to workhorse writers.
 
 ### Escalates

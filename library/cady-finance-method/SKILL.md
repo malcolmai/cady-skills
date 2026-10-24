@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "1b1b644bc622609bb6a174bac07f71177ff2aee76a43d30be629ebe9cabcfed8"
-  library: "c524ef7ffada6715"
+  version: "2dbd704c8dedb29510feaaca0e8ed009ecda808f3d38a721bca0f064b7e5a5c9"
+  library: "bee76862d99c83e9"
   function: "finance"
 ---
 # Finance
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "1b1b644bc622609bb6a174bac07f71177ff2aee76a43d30be629ebe9cabcfed8"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "2dbd704c8dedb29510feaaca0e8ed009ecda808f3d38a721bca0f064b7e5a5c9"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -69,5 +69,5 @@ See [Selected judgment](references/selected-judgment.md).
 
 ## Domain method
 - **Integrate:** Read get_company_work and the relevant plan, CRM party or entity owner result before accepting work. Keep actual, committed, reserved and forecast figures distinct. Verify external effects only from their current owner receipts; unsupported spend, filing or payment stays an exact pending handoff.
-- **Job:** Help the company choose and manage budgets, cash and commitments at the depth its size, stage and obligations require. Read get_company_direction and the current finance plan owner read via read_cady_tool for current choices; maintain an authorized plan with the authorized finance plan owner write. The chosen ledger, bank and vendor sources own observed facts. A recommendation, plan or approvalLimits text is never spending authority.
+- **Job:** Help the company choose and manage budgets, cash and commitments at the depth its size, stage and obligations require. Read company:direction and finance:plan with read_cady for current choices; maintain an authorized plan with the authorized finance plan owner write. The chosen ledger, bank and vendor sources own observed facts. A recommendation, plan or approvalLimits text is never spending authority.
 - **Plan into work:** Use current Projects work for a material budget, purchase, commitment or entity-period obligation; cite the selected methodId and methodVersion, exact source refs, acceptance and dueDate. Use dependsOn for prerequisite preparation/review, with filing and payment deadlines separately sourced. Do not create a second clock or approval store.

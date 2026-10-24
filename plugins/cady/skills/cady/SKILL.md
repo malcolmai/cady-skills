@@ -1,17 +1,17 @@
 ---
 name: "cady"
-description: "Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and setting up or scheduling company agents. Not for personal tasks or coding with no company context. Requires a Cady account."
+description: "Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling company agents. Not for personal tasks or coding with no company context. Requires a..."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "c524ef7ffada6715993cb5e61e595b8ed3c91191b591fc71771da1064d002a8c"
-  library: "c524ef7ffada6715"
+  version: "bee76862d99c83e93842608cd67c53502ec6ec0c904c5c0fbca5f5283fe84efe"
+  library: "bee76862d99c83e9"
   function: "core"
 ---
 # Cady
 
-Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and setting up or scheduling company agents. Not for personal tasks or coding with no company context.
+Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling company agents. Not for personal tasks or coding with no company context.
 
 ## Connect
 
@@ -25,7 +25,7 @@ In Claude Code the first Cady call, or `/mcp`, starts sign-in; in Codex run `cod
 Add "agentId" when you run as a registered Cady agent, "workId" to resume a work item, and
 "knownMethods" {cady-id: version} (up to 8) for the library skills you hold, so Cady returns company
 content without re-sending their text. Product areas take the id from get_company_product in place of <productId>.
-Then follow cady-core-run-sequence.
+Then follow cady-core-run-sequence. A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-review`).
 
 | Area | For |
 |---|---|
@@ -39,6 +39,7 @@ Then follow cady-core-run-sequence.
 | `product/<productId>/engineering` | infrastructure, data model, MCP interface, code |
 | `product/<productId>/release` | merge, gates, staging and production |
 | `ops/agents` | create, schedule, approve and retire agents; what they may do |
+| `ops/onboarding` | a new company's first review: understand its evidence and functions, install guidance, propose first goals |
 | `ops/legal` | filings, registers, compliance, tax |
 | `ops/records` | recording and consolidating decisions, files and work |
 | `ops/inbox` | mail triage, commitments, follow-ups and what to record |
@@ -51,7 +52,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/c524ef7ffada6715/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/bee76862d99c83e9/
 
 That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 
@@ -74,7 +75,7 @@ Install straight from upstream; fork only when you want company-specific methods
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 - `cady-company-executive-review`: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-company-manage-agents`: Set up, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
+- `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-method`: Company role card: what this function owns and decides
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 - `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
@@ -82,7 +83,7 @@ Install straight from upstream; fork only when you want company-specific methods
 - `cady-company-operations-method`: Company Operations role card: what this function owns and decides
 - `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
-- `cady-company-review`: a company needs an evidence-based operating review or first setup.
+- `cady-company-review`: a company needs an evidence-based operating review or onboarding.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 
 ### gtm

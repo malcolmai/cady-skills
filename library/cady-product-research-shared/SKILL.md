@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_shared"
-  version: "bd6d66af4916c236545a68c68b93107eb29cbd1f9c770bc5eac82c0408ff2665"
-  library: "c524ef7ffada6715"
+  version: "e755cc079737590da29b87231e835f92e0df7d5237242d8204dc55988d79c9dc"
+  library: "bee76862d99c83e9"
   function: "product"
 ---
 # Research craft
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "bd6d66af4916c236545a68c68b93107eb29cbd1f9c770bc5eac82c0408ff2665"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_shared": "e755cc079737590da29b87231e835f92e0df7d5237242d8204dc55988d79c9dc"}})`
 
 Create or update a company-library research piece in Competition or Technology.
 
@@ -40,7 +40,7 @@ Create or update a company-library research piece in Competition or Technology.
 3. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
 4. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
 5. Write semantic HTML or Markdown with useful headings and real tables, styled by the preset described in the research.write tool description (do not restate or replace it). Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Do not delay useful evidence or require a rewrite just for formatting.
-6. Before writing, discover the current research operation schemas and revision rules. Never assume operation names or claim a write succeeded without its receipt/readback. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
+6. Find the same-question piece in the research namespace (find_cady_tools), read it with read_cady research:<id> (with its revision) and research.write (create or update) through find_cady_tools; check their current schemas and revision rules before writing. Customer evidence (interviews, observations) is not a library piece yet: keep it in Files and record a CRM interaction until a customer category exists. Never assume operation names or claim a write succeeded without its receipt/readback. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
 
 ## Acceptance
 

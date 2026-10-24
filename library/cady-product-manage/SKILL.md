@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "ef2755bed0f32ba426773f279283e7678a51ad979bef31374ddb809d96f6b2df"
-  library: "c524ef7ffada6715"
+  version: "f8d100d42a387bf2eab7c4d8e83ad1c70ad8c2de1bd6e23ccdf36dadb5e9491b"
+  library: "bee76862d99c83e9"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "ef2755bed0f32ba426773f279283e7678a51ad979bef31374ddb809d96f6b2df"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "f8d100d42a387bf2eab7c4d8e83ad1c70ad8c2de1bd6e23ccdf36dadb5e9491b"}})`
 
 Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
 
@@ -38,7 +38,7 @@ Decide what to build, for whom and why; run discovery and hypotheses; plan each 
 
 ## Procedure
 
-1. Read get_company_direction, then get_cady_context for recent decisions and get_company_work with decisions {state: "current"} for every current decision and hypothesis. Read the Files and CRM evidence they cite before judging; unknown stays unknown.
+1. Read read_cady company:direction, then get_cady_context for recent decisions and get_company_work with decisions {state: "current"} for every current decision and hypothesis. Read the Files and CRM evidence they cite before judging; unknown stays unknown.
 2. Discovery is part of the job. If no customer has given direction (no accepted ICP in direction, no current hypothesis and no customer evidence in CRM), do not wait and do not build on a guess. State one assumed ICP (who, circumstance, observable signals) and one problem hypothesis (the job, current alternative, what they pay in money, time or risk), with what would prove it wrong. Record it with submit_company_work_checkpoint: statement is the hypothesis, status OPEN, decision {kind: "hypothesis", subject: "hypothesis:<slug>", rationale, authority: "agent" and no decidedBy}, evidenceRefs to the sources used. Tell the person it is an assumption they can replace.
 3. Get evidence for the hypothesis with `cady-company-decision-questions` (route) and `cady-company-experiment` (pre-registered tests), as Projects work bound to the hypothesis (evidenceRefs company:work:<hypothesisId>); run interviews with `cady-product-customer-interview`. If the evidence needs calls and no pipeline is getting the ICP onto calls, hand it to the Executive as the binding constraint rather than adding product work.
 4. Keep evidence tied to the offering. Keep interview notes, observations and raw source material in Files through files.upload with mode "begin" and files.upload with mode "complete", citing each as file:<fileId> from the hypothesis or work item. Put curated Competition or Technology analysis in the Research library using the matching specialist card, which includes shared research craft; preserve and link existing direction, decisions and work context rather than replacing it. Never paste evidence into direction or a work statement, or create another record to hold learning.

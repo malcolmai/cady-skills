@@ -1,21 +1,21 @@
 ---
 name: "cady-product-research-technology"
-description: "Technology research. Use when: Assess technologies or technical approaches for a concrete product use case. Not for: Technology selection policy, implementation plans without authorization, or vendor summaries; use `cady-engineering-integrations` (references/vendor.md) for company tool choice."
+description: "Technology research. Use when: Assess technologies or technical approaches for a concrete product use case. Not for: Technology selection policy, implementation plans without authorization, or vendor summaries; use the installed Cady skill for integration_vendor for company tool choice."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_technology"
-  version: "54d4f18cb47841c2e224134239beb0cb636052ee01828957a2bb88b06f3420a5"
-  library: "c524ef7ffada6715"
+  version: "f9149ef29c1f41f25d4777a4a296fd8a698444a2775fe917bcf966518ca7b07e"
+  library: "bee76862d99c83e9"
   function: "product"
 ---
 # Technology research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "54d4f18cb47841c2e224134239beb0cb636052ee01828957a2bb88b06f3420a5"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "f9149ef29c1f41f25d4777a4a296fd8a698444a2775fe917bcf966518ca7b07e"}})`
 
 Assess technologies or technical approaches for a concrete product use case.
 
-**Not for:** Technology selection policy, implementation plans without authorization, or vendor summaries; use `cady-engineering-integrations` (references/vendor.md) for company tool choice.
+**Not for:** Technology selection policy, implementation plans without authorization, or vendor summaries; use the installed Cady skill for integration_vendor for company tool choice.
 
 **Unit of work:** one product use case and technology question. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
 

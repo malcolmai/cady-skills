@@ -2,6 +2,45 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## bee76862d99c83e9 · 2026-10-24
+
+Since c524ef7ffada6715: 0 new, 0 dropped, 31 changed.
+
+Changed (the parts that differ):
+- `cady`: description, intro, Start every run, Library
+- `cady-company-decision-questions`: Procedure
+- `cady-company-executive-review`: Inputs
+- `cady-company-manage-agents`: description, intro, Procedure
+- `cady-company-method`: Role card, removed Selected judgment, reference selected-judgment.md
+- `cady-company-operations-method`: reference domain-method.md
+- `cady-company-review`: description, intro, Company review, References, reference setup.md
+- `cady-company-taste-review`: Procedure
+- `cady-core-execution`: Recurrence, reference credentials.md
+- `cady-core-run-sequence`: Run sequence
+- `cady-core-scheduling`: Company scheduling
+- `cady-core-skill-index`: company
+- `cady-engineering-debugging`: description, intro
+- `cady-engineering-system-cycle`: Procedure
+- `cady-finance-method`: Domain method
+- `cady-finance-runway`: Procedure
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-method`: Domain method
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-tam-map`: Procedure
+- `cady-orchestrator-method`: Role card, reference domain-method.md
+- `cady-product-manage`: Procedure
+- `cady-product-method`: Role card, reference domain-method.md
+- `cady-product-research-shared`: Procedure
+- `cady-product-research-technology`: description, intro
+- `cady-qa-method`: Role card
+- `cady-qa-triage`: description, intro
+
+Shared references changed: role-card-common.md.
+
 ## c524ef7ffada6715 · 2026-10-23
 
 Since f51897f5d80dda9f: 0 new, 0 dropped, 18 changed.
