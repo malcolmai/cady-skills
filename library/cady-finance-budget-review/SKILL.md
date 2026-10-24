@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "9104ed51f99821f3bc6fa439ebb87cdc30e76804915abb4ab6e130798356fefb"
-  library: "9a524e526102a3c5"
+  version: "ff4eaab6dfba5209e371b6cb38b0d53826edd37570ea951c116d359f82e930c8"
+  library: "c4b98ee2d7bd8432"
   function: "finance"
 ---
 # Budget and cost review
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "9104ed51f99821f3bc6fa439ebb87cdc30e76804915abb4ab6e130798356fefb"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "ff4eaab6dfba5209e371b6cb38b0d53826edd37570ea951c116d359f82e930c8"}})`
 
 Draft or update a budget or spend allocation, or review last month's spend against it.
 

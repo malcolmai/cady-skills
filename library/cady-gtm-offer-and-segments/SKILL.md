@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "2751efeac6451efd7157712350be95ab465bebfb97ae4dfe34190de659c4062d"
-  library: "9a524e526102a3c5"
+  version: "6168ce64bd83ef1b768189663099469a7f63e3e34a468c047d27215f14caef09"
+  library: "c4b98ee2d7bd8432"
   function: "gtm"
 ---
 # Offer and segments
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "2751efeac6451efd7157712350be95ab465bebfb97ae4dfe34190de659c4062d"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "6168ce64bd83ef1b768189663099469a7f63e3e34a468c047d27215f14caef09"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 

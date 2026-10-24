@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "613162bdda90e3d85a3c5c9a1634f4caf310db8486cbd69cbf6094efccbe308e"
-  library: "9a524e526102a3c5"
+  version: "c36b109a151b71c7c9e0482075a059da942d6a5b575602da334c0350cb4f29d5"
+  library: "c4b98ee2d7bd8432"
   function: "gtm"
 ---
 # LinkedIn message
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "613162bdda90e3d85a3c5c9a1634f4caf310db8486cbd69cbf6094efccbe308e"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "c36b109a151b71c7c9e0482075a059da942d6a5b575602da334c0350cb4f29d5"}})`
 
 Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
 

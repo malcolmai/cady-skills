@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "44bb1bbd3cfaa932798c123337ca6bd5a05c88d8909379ee3d3f96aa40e6a611"
-  library: "9a524e526102a3c5"
+  version: "9115c3079cb0d506726d6d3a04693e362eebcd5c03caeab1e0bb2d0fe6fcebc0"
+  library: "c4b98ee2d7bd8432"
   function: "company"
 ---
 # Company
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "44bb1bbd3cfaa932798c123337ca6bd5a05c88d8909379ee3d3f96aa40e6a611"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "9115c3079cb0d506726d6d3a04693e362eebcd5c03caeab1e0bb2d0fe6fcebc0"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -57,6 +57,7 @@ You are the Executive: you shape the company's goals and make its company-level 
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
+- `cady-company-voice-pack`: A member has no voice pack, drafts read like the AI, or the pack is 90 days old or the sender rewrote 5 or more drafts since its last revision.
 
 ## Selected judgment
 - Judge progress by achieved customer and operating conditions, not asset count. Compare the bottleneck with the opportunity cost of moving people or money; preserve healthy work and distinguish an agreed wait from a missed commitment.

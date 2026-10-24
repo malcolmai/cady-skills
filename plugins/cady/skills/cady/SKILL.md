@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "9a524e526102a3c5ebf46bb299ce2cc805f00b0f3e6d8705f9feee71f9ae22f6"
-  library: "9a524e526102a3c5"
+  version: "c4b98ee2d7bd84326a6c48c7629315cafb70ca3ea4146af77439442a2efd7360"
+  library: "c4b98ee2d7bd8432"
   function: "core"
 ---
 # Cady
@@ -52,7 +52,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/9a524e526102a3c5/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/c4b98ee2d7bd8432/
 
 That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 
@@ -85,6 +85,7 @@ Install straight from upstream; fork only when you want company-specific methods
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
 - `cady-company-review`: a company needs an evidence-based operating review or onboarding.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
+- `cady-company-voice-pack`: A member has no voice pack, drafts read like the AI, or the pack is 90 days old or the sender rewrote 5 or more drafts since its last revision.
 
 ### gtm
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.

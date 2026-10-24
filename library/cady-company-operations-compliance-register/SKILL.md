@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
-  version: "4e7e7f84c6ebf4c2fa7136cc8201ad6224e4e2f57eb907248375d385f7405c6f"
-  library: "9a524e526102a3c5"
+  version: "ce17721f7c13d449bfaed93648bb8e0e9efeec72d4ee73f5fe3a9cc9b54ed8cf"
+  library: "c4b98ee2d7bd8432"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "4e7e7f84c6ebf4c2fa7136cc8201ad6224e4e2f57eb907248375d385f7405c6f"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "ce17721f7c13d449bfaed93648bb8e0e9efeec72d4ee73f5fe3a9cc9b54ed8cf"}})`
 
 What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 

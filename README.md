@@ -22,7 +22,7 @@ Run your whole company across Claude and ChatGPT. These are the skills your agen
 
 Cady is your agent orchestrator. Connect your Claude, ChatGPT, Gemini or Grok account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
 
-This repository is Cady's **method library**: 64 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
+This repository is Cady's **method library**: 65 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
 
 ## How it works
 

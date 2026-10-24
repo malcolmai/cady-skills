@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "1da82c34b095a77fa2f3e2bdedafdbe5abee2b10b035c2686186e18f2c8468be"
-  library: "9a524e526102a3c5"
+  version: "393e035b92deb203692c4fe98d035a428e2f59ee78d78ff40dfed06b61afdfa3"
+  library: "c4b98ee2d7bd8432"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "1da82c34b095a77fa2f3e2bdedafdbe5abee2b10b035c2686186e18f2c8468be"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "393e035b92deb203692c4fe98d035a428e2f59ee78d78ff40dfed06b61afdfa3"}})`
 
 Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.
 
