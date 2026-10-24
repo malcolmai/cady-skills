@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_competition"
-  version: "fbb1431ee9e361ec877309000be49ce4ba6680135d5fcd3a361ffd2c29a0e46a"
-  library: "bee76862d99c83e9"
+  version: "08e763f677ba8048733b2da0e427a9146ebafd8f15b432bab5df89c69651dceb"
+  library: "9a524e526102a3c5"
   function: "product"
 ---
 # Competition research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_competition": "fbb1431ee9e361ec877309000be49ce4ba6680135d5fcd3a361ffd2c29a0e46a"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_competition": "08e763f677ba8048733b2da0e427a9146ebafd8f15b432bab5df89c69651dceb"}})`
 
 Find who the competitors and alternatives are and how they price, position and win, for a product or pricing question.
 

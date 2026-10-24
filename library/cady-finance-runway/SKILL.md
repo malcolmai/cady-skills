@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.runway"
-  version: "627b296c59d67cdce20b53416899e231acd46f24bf2b2052723a021f5df2366d"
-  library: "bee76862d99c83e9"
+  version: "e11feb798ae56d28dbf46c301bf853129f08b9847fb558df16ff228c9b6e083a"
+  library: "9a524e526102a3c5"
   function: "finance"
 ---
 # Burn and runway
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.runway": "627b296c59d67cdce20b53416899e231acd46f24bf2b2052723a021f5df2366d"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.runway": "e11feb798ae56d28dbf46c301bf853129f08b9847fb558df16ff228c9b6e083a"}})`
 
 Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
 

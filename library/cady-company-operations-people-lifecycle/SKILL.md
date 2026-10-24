@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
-  version: "a0859a88e1dfbb2952b47326a0294270116a13db47cd9c478e4ccf66478ce2f2"
-  library: "bee76862d99c83e9"
+  version: "6f4f24274dd6485f0a088da3f9110d462b5f7a71318c8afc2e9d07a4fdccac15"
+  library: "9a524e526102a3c5"
   function: "company_operations"
 ---
 # Joiners, movers and leavers
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "a0859a88e1dfbb2952b47326a0294270116a13db47cd9c478e4ccf66478ce2f2"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "6f4f24274dd6485f0a088da3f9110d462b5f7a71318c8afc2e9d07a4fdccac15"}})`
 
 Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 
@@ -19,7 +19,19 @@ Plan, track and verify the paperwork and access for a new hire or contractor, a 
 
 **Unit of work:** one joiner, mover or leaver event tracked as one Projects work item. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
-See [Inputs](references/inputs.md).
+## Inputs
+
+### Evidence refs
+
+- CRM party and employing entity
+- current hr: and access: decisions
+- system-of-record links
+
+### Statement fields
+
+- event and worker type; for a leaver, planned or immediate
+- role (old role for a mover), manager, employing entity and work jurisdiction
+- start date, change date or last day
 
 ## Procedure
 
@@ -43,7 +55,13 @@ See [Inputs](references/inputs.md).
 - no sensitive personal data or credentials in work text
 - done states only from system readback
 
-See [Result](references/result.md).
+## Result
+
+### Artifact refs
+
+- company:work:<workId>
+- crm:party:<partyId>
+- **Transition:** event with evidenced, dated steps
 
 ## References
 - [People lifecycle checklists](../../references/people-checklists.md)

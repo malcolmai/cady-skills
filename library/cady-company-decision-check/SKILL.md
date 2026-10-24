@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "4e7900a5e926fd125ead00c866242055b8faf7f263ed9546f0c9b939a51541c2"
-  library: "bee76862d99c83e9"
+  version: "51c65d4d38c9d8b5406d9bd0f84df1748fadac4a27e4314367f03edbff9036e3"
+  library: "9a524e526102a3c5"
   function: "company"
 ---
 # Who decides: the decision journey
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "4e7900a5e926fd125ead00c866242055b8faf7f263ed9546f0c9b939a51541c2"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "51c65d4d38c9d8b5406d9bd0f84df1748fadac4a27e4314367f03edbff9036e3"}})`
 
 Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 

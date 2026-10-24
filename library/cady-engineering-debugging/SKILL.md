@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
-  version: "8d40dfad484f43c811bbb09a13e148b6e0a5547777debddf52efbbab019d2b49"
-  library: "bee76862d99c83e9"
+  version: "ba603b44245aef83b7ebda2d57377edac81cc4f6c64a2d2d476c194afca78978"
+  library: "9a524e526102a3c5"
   function: "engineering"
 ---
 # Debugging and incident response
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "8d40dfad484f43c811bbb09a13e148b6e0a5547777debddf52efbbab019d2b49"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "ba603b44245aef83b7ebda2d57377edac81cc4f6c64a2d2d476c194afca78978"}})`
 
 Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 

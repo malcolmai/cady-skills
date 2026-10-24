@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "4a309d523edffee85066e14220a65e109dbc7940efc7cd30a2efa84b2a3b882c"
-  library: "bee76862d99c83e9"
+  version: "4f7f51d8010875f6620d5352ba6fc61e16858e468e48cfb6ecd5c5a8d6d71419"
+  library: "9a524e526102a3c5"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "4a309d523edffee85066e14220a65e109dbc7940efc7cd30a2efa84b2a3b882c"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "4f7f51d8010875f6620d5352ba6fc61e16858e468e48cfb6ecd5c5a8d6d71419"}})`
 
 Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 
@@ -19,7 +19,20 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 
 **Unit of work:** one work item per opportunity: one customer party and its track. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
-See [Inputs](references/inputs.md).
+## Inputs
+
+### Evidence refs
+
+- crm:party:<partyId>
+- crm:relationship_track:<trackId>
+- accepted offer and price
+- call notes, communication and file refs
+
+### Statement fields
+
+- buyer's problem in their words
+- stage the user stated
+- next step and date
 
 ## Procedure
 

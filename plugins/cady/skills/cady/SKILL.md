@@ -1,17 +1,17 @@
 ---
 name: "cady"
-description: "Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling company agents. Not for personal tasks or coding with no company context. Requires a..."
+description: "Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), drafting a reply, message or material for a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling..."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "bee76862d99c83e93842608cd67c53502ec6ec0c904c5c0fbca5f5283fe84efe"
-  library: "bee76862d99c83e9"
+  version: "9a524e526102a3c5ebf46bb299ce2cc805f00b0f3e6d8705f9feee71f9ae22f6"
+  library: "9a524e526102a3c5"
   function: "core"
 ---
 # Cady
 
-Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling company agents. Not for personal tasks or coding with no company context.
+Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), drafting a reply, message or material for a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling company agents. Not for personal tasks or coding with no company context.
 
 ## Connect
 
@@ -52,7 +52,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/bee76862d99c83e9/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/9a524e526102a3c5/
 
 That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 

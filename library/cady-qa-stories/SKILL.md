@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
-  version: "492d7f9e9f0e1b2e9439b676652a2322fd3ac0d03063615a26ee5121d95427df"
-  library: "bee76862d99c83e9"
+  version: "c60c5d17c5ad77fe8dac4920050ace2291fcf96a1b436e1d967d7d6b863b0724"
+  library: "9a524e526102a3c5"
   function: "qa"
 ---
 # User stories: keep, walk and read
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "492d7f9e9f0e1b2e9439b676652a2322fd3ac0d03063615a26ee5121d95427df"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "c60c5d17c5ad77fe8dac4920050ace2291fcf96a1b436e1d967d7d6b863b0724"}})`
 
 Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 

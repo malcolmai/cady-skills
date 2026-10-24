@@ -2,6 +2,30 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 9a524e526102a3c5 · 2026-10-24
+
+Since bee76862d99c83e9: 0 new, 0 dropped, 16 changed.
+
+Changed (the parts that differ):
+- `cady`: description, intro
+- `cady-company-manage-agents`: Acceptance, new References, reference references.md
+- `cady-company-method`: Role card, new Selected judgment, reference selected-judgment.md
+- `cady-company-operations-people-lifecycle`: intro, new Inputs, Owner checks, new Result, reference inputs.md, reference result.md
+- `cady-core-execution`: reference credentials.md
+- `cady-core-run-sequence`: Run sequence, reference reporting.md
+- `cady-engineering-integrations`: reference integrations.md
+- `cady-engineering-method`: Role card
+- `cady-engineering-system-cycle`: Procedure, Acceptance, reference always.md
+- `cady-finance-method`: Parent function, new Selected judgment, reference selected-judgment.md
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-gtm-tam-map`: intro, new Inputs, Procedure, reference inputs.md
+- `cady-product-customer-interview`: Inputs, Procedure
+- `cady-product-manage`: Procedure, Acceptance, Owner checks
+- `cady-product-method`: Role card, reference domain-method.md
+- `cady-sales-deal-motion`: intro, new Inputs, reference inputs.md
+
+Shared references changed: outreach-message-rules.md.
+
 ## bee76862d99c83e9 · 2026-10-24
 
 Since c524ef7ffada6715: 0 new, 0 dropped, 31 changed.

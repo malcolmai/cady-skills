@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "dac0434f2aec0830cb923ed801cd1b1a30ff5c1d2a933525e43845f6d6468395"
-  library: "bee76862d99c83e9"
+  version: "c36e52d2bdb390a2eee6867358fe472f60c3f0b699f515ef45eb061b866a399c"
+  library: "9a524e526102a3c5"
   function: "company"
 ---
 # Manage company agents
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "dac0434f2aec0830cb923ed801cd1b1a30ff5c1d2a933525e43845f6d6468395"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "c36e52d2bdb390a2eee6867358fe472f60c3f0b699f515ef45eb061b866a399c"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 
@@ -46,4 +46,5 @@ See [Owner checks](references/owner-checks.md).
 
 See [Result](references/result.md).
 
-See [References](references/references.md).
+## References
+- [Adopt an existing scheduled task](../../references/adopt-scheduled-task.md)

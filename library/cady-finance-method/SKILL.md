@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "2dbd704c8dedb29510feaaca0e8ed009ecda808f3d38a721bca0f064b7e5a5c9"
-  library: "bee76862d99c83e9"
+  version: "5543d6549450809665207d7918855d8f1f3cfeddb82c7abe1830c6f7e87ca768"
+  library: "9a524e526102a3c5"
   function: "finance"
 ---
 # Finance
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "2dbd704c8dedb29510feaaca0e8ed009ecda808f3d38a721bca0f064b7e5a5c9"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "5543d6549450809665207d7918855d8f1f3cfeddb82c7abe1830c6f7e87ca768"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -65,7 +65,11 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 ## Parent function
 company
 
-See [Selected judgment](references/selected-judgment.md).
+## Selected judgment
+- Size the Finance work to the actual company: one Finance agent can manage a small company's budgets, cash and commitments. Add continuing Accounting, FP&A/Treasury or Tax capacity only for distinct recurring duties with evidence, not from a fixed roster.
+- Separate observed cash and accounting actuals, contractual commitments, evidenced reservations and forecasts. Date sources and assumptions; incomplete coverage cannot establish available budget. Test material timing and driver sensitivity without invented precision.
+- For a purchase, judge full commitment and long-term benefit against the existing solution, a credible cheaper effective workaround and no-buy. Finance recommends value and budget posture; Integrations owns technical/provider, security and access fit.
+- Use current owner records for company-specific duties, limits and decisions. Complete authorized preparation, then hand off exact unsupported spend, filing, payment or close effects to a checked owner; reuse valid scoped user authority without asking again.
 
 ## Domain method
 - **Integrate:** Read get_company_work and the relevant plan, CRM party or entity owner result before accepting work. Keep actual, committed, reserved and forecast figures distinct. Verify external effects only from their current owner receipts; unsupported spend, filing or payment stays an exact pending handoff.

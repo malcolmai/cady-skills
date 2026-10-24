@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "a9ae174ce73ed41c455104ee12605405cd60f03cbb51f90db6eba18d856572fe"
-  library: "bee76862d99c83e9"
+  version: "230afd5ffde55373adeb805034154935a48ef160e9aabe673404532a6f5291f4"
+  library: "9a524e526102a3c5"
   function: "engineering"
 ---
 # Engineering
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "a9ae174ce73ed41c455104ee12605405cd60f03cbb51f90db6eba18d856572fe"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "230afd5ffde55373adeb805034154935a48ef160e9aabe673404532a6f5291f4"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -35,6 +35,7 @@ Become the expert in the chosen architecture, layer by layer. Know its material 
 
 ### Receipts
 - Record each material decision as a Projects decision item with a subject, rationale, alternatives and layer, and look it up before asking again; a person's decision also records their words and your inferred reason for it (`cady-company-decision-check` step 6).
+- Engineering proposes and maintains the dimension register; Product confirms the labels. Raise agent-drafted labels to Product as one batched BLOCKED decision ask with your recommendation, never as separate "Draft:" decisions. ICP, pricing and core scope live in direction and decisions, not in the register.
 - When a dimension or architecture decision changes the system, update the product's top-level architecture diagram (save a new diagram File, relink it); a scoped diagram covers one dimension and never replaces the overview.
 
 ### Company records

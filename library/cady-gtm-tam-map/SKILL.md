@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "1d5476649afdbde4505f2c0826af6be166355fae7c2489abcd1628a90cec8202"
-  library: "bee76862d99c83e9"
+  version: "51c8ac40023ded3a07de063995821fdeb4a7f23068f6b4bd612fe6d12043709e"
+  library: "9a524e526102a3c5"
   function: "gtm"
 ---
 # TAM map
 
-**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "1d5476649afdbde4505f2c0826af6be166355fae7c2489abcd1628a90cec8202"}})`
+**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "51c8ac40023ded3a07de063995821fdeb4a7f23068f6b4bd612fe6d12043709e"}})`
 
 Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 
@@ -19,7 +19,18 @@ Build a list of target companies or accounts to sell to (for a region, segment o
 
 **Unit of work:** one work item per segment; the work creates its List (step 6), then enriches it and records bases (step 7). **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
-See [Inputs](references/inputs.md).
+## Inputs
+
+### Evidence refs
+
+- core:direction ref
+- source refs
+
+### Statement fields
+
+- ICP key
+- segment
+- geography and source scope
 
 ## Procedure
 
@@ -29,7 +40,7 @@ See [Inputs](references/inputs.md).
 4. Check identity with crm.list_parties or crm.get_party. Use crm.update_party to record company_name, industry and approved customer proof where sourced. Read permission and engagement with crm.get_party; record observed engagement with crm.record_interactions.
 5. For sourced accounts, create the segment List with crm.create_list and import them through the selected CRM's reviewed import (for Cady CRM, crm.get_import preview and prepare, then crm.run_import, as the reviewed import reference says: `../../references/tam-map-import.md`). Each row needs a real email, LinkedIn URL or domain plus source; names alone are refused. Read final completion with crm.get_import mode "completion" and actual membership with crm.list_parties; keep the completion receipt in evidenceRefs. If another CRM is selected, use its authorized reviewed route and keep it canonical.
 6. With the List and parties created and the import completion read, enrich the cohort (50 or fewer parties) from lawful sources only: public company sites, registries, filings, professional directories, and connected provider tools within their terms. No scraping behind logins and no guessed addresses; verify a business route with an authorised tool or mark it unknown. Verify emails with the company's host verifier and record results with crm.update_party mode verification {provider, results [{identifier, verdict, evidenceRef?}]}; with no verifier, hand off only the verified or LinkedIn-reachable subset and report "verification unavailable" as the exact blocker for the rest, never guessing. Then decide each party's contact basis from target and jurisdiction and record it with crm.apply_contact_basis {basisKind, source (a cited https:, file: or crm:list: reference), partyIds (batches of up to 100) for the parties that qualify}; use listId only when every eligible party in the List qualifies. Business-role address and relevant B2B offer: legitimate_interest where the jurisdiction allows B2B marketing email. Where prior consent is needed (personal addresses, consent-first jurisdictions) apply no basis: record an exclusion with its reason in the work result exclusions (a crm.update_party fitNote also needs a cited source) or pick another channel. Apply no basis when the jurisdiction is unknown. Never overwrite an opt-out, suppression or existing basis. A basis is not send authority: the owner approves the exact outreach review before release.
-7. In the final reply, name each open hypothesis and how this result moves it. Report researched candidates, CRM parties created or matched, and actual List members separately, with N, target shortfall and coverage limits. Unknown contact basis holds outreach only; persist every otherwise eligible source-backed identity. Link the List and source evidence in the work result. Close with the import completion receipt (receipt:<receiptId>) in evidenceRefs; the List ref alone does not prove import completion or membership.
+7. In the result summary, name each open hypothesis and how this result moves it. Report researched candidates, CRM parties created or matched, and actual List members separately, with N, target shortfall and coverage limits. Unknown contact basis holds outreach only; persist every otherwise eligible source-backed identity. Link the List and source evidence in the work result. Close with the import completion receipt (receipt:<receiptId>) in evidenceRefs; the List ref alone does not prove import completion or membership.
 
 ## Acceptance
 
