@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "13eec8feeea3958af6da"
-  library: "55ee7488e450b058"
+  version: "6573c33a79f3ebb9a784"
+  library: "c5c24622655bf77f"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "13eec8feeea3958af6da@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "6573c33a79f3ebb9a784@c5c24622655bf77f"}})`
 
 Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 
@@ -73,4 +73,4 @@ Make one company-level decision (a goal to start, reshape or stop, market, prici
 - **Transition:** the Executive records the decision; the orchestrator and agents take the next steps
 
 ## References
-- [Company goals](../../references/company-goals.md)
+- Read [Company goals](../../references/company-goals.md) when you start, reshape or stop a goal, or an idea becomes one.

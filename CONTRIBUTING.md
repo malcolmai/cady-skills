@@ -12,3 +12,8 @@ every fork at its next monthly upstream check.
 
 Keep company-specific content out: no company or person names, email addresses or private links.
 Company facts belong in Cady, not in a skill.
+
+## Changing your fork's guidance
+
+Follow the skill `cady-company-change-agent-behaviour`: place the rule at its one home, classify the change,
+test one nearby case, guard it and record the decision.

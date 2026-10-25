@@ -1,0 +1,3 @@
+# Call prep: the call sheet
+
+- **Sheet:** Include an opener with name, role and one line; either a permission-based opening or a short upfront contract; honest intent; mini-SPIN with one segment-specific situation, problem, implication and need-payoff question; qualification criteria taken from the accepted offer; and next-step options of a 15-minute call or information by email. Ground every claim in supplied evidence. An empty calendar ([]), a refused calendar read or "0 calls searched" is not known: say so in the sources line and never state a missing call or meeting as fact. Resolve "Tue" and similar from the date of the note that contains it, and flag when it may already have passed.

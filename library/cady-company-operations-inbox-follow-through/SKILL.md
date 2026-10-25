@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "7f58d7e54792104fb178"
-  library: "55ee7488e450b058"
+  version: "cc553759378f7a95d127"
+  library: "c5c24622655bf77f"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "7f58d7e54792104fb178@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "cc553759378f7a95d127@c5c24622655bf77f"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 
@@ -64,7 +64,6 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 - host mail connector only; no mail body, subject or attachment stored in Cady
 - existing inbox:marketing-treatment choice; do not ask again for a recorded preference
 - exact CRM party before an obligation names a counterparty
-- OBLIGATION_EXISTS, OBLIGATION_SOURCE_DENIED, OBLIGATION_INVALID
 - inbox.suppress: decision with reviewBy for every unread archive rule
 
 ## Result
@@ -77,4 +76,4 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 - **Transition:** report the useful outcome, material remainder and next owner through report_company_work; include counters only in optional observed run output, never create a run just to hold them
 
 ## References
-- [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md)
+- Read [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md) when a material inbox outcome, commitment or takeaway needs owner-routed follow-through.

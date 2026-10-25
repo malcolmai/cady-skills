@@ -1,29 +1,24 @@
 ---
 name: "cady"
-description: "Reads the company's context in Cady, then loads the matching method. Use when the work is a company's sales and outreach (email, LinkedIn, replies, calls, pipeline), drafting to a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and company agents. Not for personal tasks or coding with no company context. Requires a Cady account."
+description: "Reads the company's context in Cady, then loads the matching skill. Use when the work is a company's sales and outreach, drafting to a person (read the sender's voice pack first), posts, competitors and pricing, tools and integrations, budget, fundraising, filings and hiring, product and engineering work, and company agents. Not for personal tasks or coding with no company context. Requires a Cady account."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "187a4ca255584322d43e"
-  library: "55ee7488e450b058"
+  version: "5b3f58da932139b252f0"
+  library: "c5c24622655bf77f"
   function: "core"
 ---
 # Cady
 
-Reads the company's context in Cady, then loads the matching method. Use when the work is a company's sales and outreach (email, LinkedIn, replies, calls, pipeline), drafting to a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and company agents. Not for personal tasks or coding with no company context.
-
-## Connect
-
-Connecting opens Cady in your browser; create an account there (email code or passkey) if you don't have one.
-In Claude Code the first Cady call, or `/mcp`, starts sign-in; in Codex run `codex mcp login cady`.
+Reads the company's context in Cady, then loads the matching skill. Use when the work is a company's sales and outreach, drafting to a person (read the sender's voice pack first), posts, competitors and pricing, tools and integrations, budget, fundraising, filings and hiring, product and engineering work, and company agents. Not for personal tasks or coding with no company context.
 
 ## Start every run
 
     get_cady_context({"area": "<area>", "task": "<what you are about to do, in one sentence>"})
 
 Add "agentId" when you run as a registered Cady agent, "workId" to resume a work item, and
-"knownMethods" {cady-id: version} (up to 8) for the library skills you hold, so Cady returns company
+"knownMethods" {cady-id: version} (up to 8) for the skills you hold, so Cady returns company
 content without re-sending their text. Product areas take the id from get_company_product in place of <productId>.
 Then follow cady-core-run-sequence. A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-review`).
 
@@ -47,95 +42,14 @@ Then follow cady-core-run-sequence. A new company, or one with no direction yet,
 | `finance/pricing` | plans, prices, limits, Stripe |
 | `finance/plan` | the finance plan: cash, burn, runway |
 
-## Load a library skill
+## Add or change an agent
 
-Before drafting or recommending, choose the matching skill below and read `library/<name>/SKILL.md` relative to this skill's base directory, then the references it needs. Try that local path on every host, including Claude Code; the host name does not tell you whether the library is installed.
+Read `list_company_agents` first (through `read_cady_tool` where your host does not list it). If an agent already owns the outcome, reuse or update it instead of creating a second one. To create, bind or schedule one, load `cady-company-manage-agents`; its worked recipe for a go-to-market agent is [`references/agent-recipe-gtm.md`](references/agent-recipe-gtm.md).
 
-Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
+## Load a skill
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/55ee7488e450b058/
+Invoke the installed skill by name; `cady-core-skill-index` (also `INDEX.md`) lists them. Where the library sits beside this skill, read `library/<name>/SKILL.md`. Otherwise fetch the skill and its linked references from the source below. If no route works, say the method is unavailable and hold company writes.
 
-That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/c5c24622655bf77f/
 
-## Your fork (optional)
-
-Install straight from upstream; fork only when you want company-specific methods (Cady's own company uses upstream directly). A fork lives in its own git repository or a local copy, and its orchestrator edits it with the company's own reasoning; Cady stores no skills. Nothing updates a fork automatically: once a month the orchestrator compares the fork's baseline tag (`metadata.library`) with the latest upstream release, reads that release's CHANGELOG.md, merges what helps by hand and records the decision. The README at github.com/malcolmai/cady-skills has the steps.
-
-## Library
-
-### core
-- `cady-core-context`: deciding who decides, or what to read, before company work.
-- `cady-core-execution`: a skill points here, or before an effect, credential use, retry or recovery.
-- `cady-core-run-sequence`: the user wants a task carried through to a recorded outcome.
-- `cady-core-scheduling`: the user wants a scheduled or repeatable task.
-- `cady-core-skill-index`: choosing which task skill fits, or binding an agent's installed skills
-- `cady-orchestrator-method`: Orchestrator role card: what this function owns and decides
-
-### company
-- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
-- `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
-- `cady-company-executive-review`: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
-- `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
-- `cady-company-method`: Company role card: what this function owns and decides
-- `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
-- `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
-- `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
-- `cady-company-operations-method`: Company Operations role card: what this function owns and decides
-- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
-- `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
-- `cady-company-review`: a company needs an evidence-based operating review or onboarding.
-- `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
-- `cady-company-voice-pack`: The owner asks to set up or refresh how their messages sound, or drafts read generic or like AI. Builds the pack from their own sent messages.
-
-### gtm
-- `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
-- `cady-customer-success-method`: Customer Success role card: what this function owns and decides
-- `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
-- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
-- `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
-- `cady-gtm-launch`: the company is starting a growth motion.
-- `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
-- `cady-gtm-method`: GTM role card: what this function owns and decides
-- `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
-- `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
-- `cady-gtm-reply`: Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
-- `cady-gtm-tam-map`: Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
-- `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
-- `cady-marketing-method`: Marketing role card: what this function owns and decides
-- `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
-- `cady-sales-method`: Sales role card: what this function owns and decides
-
-### finance
-- `cady-accounting-method`: Accounting role card: what this function owns and decides
-- `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
-- `cady-finance-budget-review`: Draft or update a budget or spend allocation, or review last month's spend against it.
-- `cady-finance-method`: Finance role card: what this function owns and decides
-- `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
-- `cady-finance-tax-cycle`: Plan or review an entity's tax obligations, filing preparation and material strategy changes.
-- `cady-finance-vendor-spend-review`: Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.
-- `cady-fundraise-investor-list`: Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
-- `cady-fundraise-investor-outreach`: Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
-- `cady-fundraise-method`: Fundraise role card: what this function owns and decides
-- `cady-fundraise-raise-materials`: Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
-- `cady-fundraise-raise-plan`: Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
-
-### product
-- `cady-design-method`: Design role card: what this function owns and decides
-- `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
-- `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
-- `cady-product-manage`: Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
-- `cady-product-method`: Product role card: what this function owns and decides
-- `cady-product-research-competition`: Find who the competitors and alternatives are and how they price, position and win, for a product or pricing question.
-- `cady-product-research-shared`: Create or update a company-library research piece in Competition or Technology.
-- `cady-product-research-technology`: Assess technologies or technical approaches for a concrete product use case.
-
-### engineering
-- `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
-- `cady-engineering-independent-review`: a change needs review before merge, or a lead coordinates native helpers.
-- `cady-engineering-integrations`: comparing, choosing or connecting a tool, data source or account.
-- `cady-engineering-method`: Engineering role card: what this function owns and decides
-- `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
-- `cady-qa-method`: QA role card: what this function owns and decides
-- `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
-- `cady-qa-triage`: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.
+A fork changes that line to its own raw URL and branch.

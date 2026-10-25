@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "642d77aaa04706c9b932"
-  library: "55ee7488e450b058"
+  version: "3c454acc2389c8f6c784"
+  library: "c5c24622655bf77f"
   function: "gtm"
 ---
 # LinkedIn message
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "642d77aaa04706c9b932@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "3c454acc2389c8f6c784@c5c24622655bf77f"}})`
 
 Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
 
@@ -40,7 +40,7 @@ Draft a LinkedIn connection note or direct message to one person, or its one fol
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
 2. Read the profile and available context. Use genuine common ground such as a shared event, past employer, school or interest in their posts. Mention a mutual connection only when they have identified it. Never invent closeness.
-3. A connection note gives one honest reason to connect, with no pitch, ask or company name. For a first message to an existing connection, use a subtle personal note about what you are working on, why it may be relevant, and that you would be glad to chat sometime. Avoid product names and links.
+3. A connection note gives one honest reason to connect, with no pitch, ask or company name. For a first message to an existing connection, use a subtle personal note about what you are working on, why it may be relevant, and that you would be glad to chat sometime. Avoid product names and links. Judge it with the taste check (../../references/taste-check.md, message part) before review.
 4. Read crm.get_party for every recipient. Exclude and explain a recorded opt-out or destination suppression; never overwrite it.
 5. Pace like a person within the company's LinkedIn caps: 20 connection requests per rolling day, and 100 per rolling week, spread across working hours (the review holds anything over them); tell the owner which invitations have been pending over three weeks so they can withdraw them; a falling acceptance rate means the targeting or note is wrong, not that volume should rise.
 6. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare one body per recipient with crm.prepare_outreach_review and read it with crm.get_outreach_review; keep connection notes, first messages and follow-ups in distinct cohorts. Give prepare a one-line justification (why this send now). Then follow release.
@@ -50,18 +50,15 @@ Draft a LinkedIn connection note or direct message to one person, or its one fol
 
 ## Acceptance
 
-- [ ] copy uses real common ground without invented familiarity
-- [ ] connection note has no pitch, ask or company name
-- [ ] at most one new follow-up is prepared
-- [ ] any challenge, restriction or limit notice stopped all work on the account and the owner was told
+- [ ] (fresh) copy uses real common ground without invented familiarity
+- [ ] (check) connection note has no pitch, ask or company name
+- [ ] (check) at most one new follow-up is prepared
+- [ ] (check) any challenge, restriction or limit notice stopped all work on the account and the owner was told
+- [ ] (person) nothing is released before the person, or a grant covering the exact text, has approved it
 
 ## Owner checks
 
-- WORK_NOT_FOUND
-- METHOD_NOT_CURRENT
-- SKILL_CHANNEL_MISMATCH
 - current contact permission
-- COPY_RULE_FAILED
 
 ## Result
 
@@ -71,4 +68,5 @@ Draft a LinkedIn connection note or direct message to one person, or its one fol
 - **Transition:** the claim holder reports the prepared review
 
 ## References
-- [Outreach message rules](../../references/outreach-message-rules.md)
+- Read [Outreach message rules](../../references/outreach-message-rules.md) when you draft, review or prepare any message (read first).
+- Read [Taste check](../../references/taste-check.md) when judging a draft or design before review.

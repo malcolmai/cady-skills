@@ -20,9 +20,9 @@ Run your whole company across Claude and ChatGPT. These are the skills your agen
 
 ## What is Cady?
 
-Cady is your agent orchestrator. Connect your Claude, ChatGPT, Gemini or Grok account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
+Cady is your agent orchestrator. Connect your Claude Code, Codex, Claude or ChatGPT account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
 
-This repository is Cady's **method library**: 65 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
+This repository is Cady's **method library**: 63 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
 
 ## How it works
 
@@ -39,9 +39,10 @@ Install straight from upstream; no fork is needed. Then ask your agent: **"Set u
 ```bash
 claude plugin marketplace add malcolmai/cady-skills
 claude plugin install cady@cady
+claude plugin install cady-core@cady
 ```
 
-The plugin adds the Cady MCP server and one skill (the front door, `plugins/cady/skills/cady/SKILL.md`); that skill loads library skills from the `Library source:` it names.
+`cady` adds the Cady MCP server and the front door skill. Each `cady-<group>` plugin ships that group's skills, so install `cady-core`, then only the groups your agents use (cady-company, cady-gtm, cady-finance, cady-product, cady-engineering) with `claude plugin install <group>@cady`: every installed skill's description joins the host's skill list.
 
 **Codex**
 
@@ -62,8 +63,10 @@ Cady's first answer in a run says whether your skills match the release it serve
 **Claude Code**
 
 ```bash
-claude plugin marketplace update cady && claude plugin update cady@cady
+claude plugin marketplace update cady && claude plugin update cady@cady && claude plugin update cady-core@cady
 ```
+
+Also run `claude plugin update <group>@cady` for each group plugin you installed.
 
 Then: Restart Claude Code.
 
@@ -89,6 +92,8 @@ If Claude Code reports your skills are newer than Cady's release (after a rollba
 claude plugin uninstall cady@cady && claude plugin install cady@cady
 ```
 
+Also uninstall and reinstall each group plugin you installed (`claude plugin install <group>@cady`).
+
 ## Customise for your company (fork)
 
 Optional. Fork when you want company-specific methods; the library is a best-practice baseline, your orchestrator agent edits the fork with your company's own reasoning, and Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.
@@ -105,8 +110,9 @@ Optional. Fork when you want company-specific methods; the library is a best-pra
 | [`INDEX.md`](INDEX.md) | Every skill with one line on when to use it and its path |
 | `library/` | The skills: function role cards, task skills and run guides |
 | `references/` | Shared references several skills load on demand |
-| `plugins/cady/` | The Claude Code plugin: the Cady MCP server and one skill that loads the library from its `Library source:` |
-| `.claude-plugin/marketplace.json` | The marketplace entry that installs `plugins/cady` |
+| `plugins/cady/` | The Claude Code plugin: the Cady MCP server and the front door skill |
+| `plugins/cady-<group>/` | One Claude Code plugin per skill group, each shipping its skills and the references they link |
+| `.claude-plugin/marketplace.json` | The marketplace entries for `plugins/cady` and the group plugins |
 | [`examples/`](examples/README.md) | Three example agents (GTM, finance, orchestrator), each preloading its role's method |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed in each release; the monthly upstream check reads it |
 | `manifest.json` | The library version and each skill's version |
@@ -117,13 +123,13 @@ Your orchestrator edits skills in the fork when your company's evidence says a m
 
 ## Merge upstream once a month
 
-Once a month your orchestrator checks upstream by hand:
+Once a month your orchestrator checks upstream by hand. Add the upstream remote once, then fetch, look at what changed since your baseline with `git diff`, merge the latest tag (resolve conflicts, keeping your deliberate edits) and record it as the new baseline:
 
 ```bash
-git remote add upstream https://github.com/malcolmai/cady-skills   # once
+git remote add upstream https://github.com/malcolmai/cady-skills
 git fetch upstream --tags
-git diff "$(cat BASELINE)" <latest-tag> --stat                     # what upstream changed since your baseline
-git merge <latest-tag>                                              # resolve conflicts, keeping your deliberate edits
+git diff "$(cat BASELINE)" <latest-tag> --stat
+git merge <latest-tag>
 echo <latest-tag> > BASELINE
 ```
 

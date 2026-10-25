@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "261e8c2d78fc7b284505"
-  library: "55ee7488e450b058"
+  version: "2358683c1e1f885e2cb8"
+  library: "c5c24622655bf77f"
   function: "fundraise"
 ---
 # Ranked investor list
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "261e8c2d78fc7b284505@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "2358683c1e1f885e2cb8@c5c24622655bf77f"}})`
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 
@@ -48,8 +48,6 @@ Decide who to pitch for a round: a ranked list of named investors and partners, 
 
 ## Owner checks
 
-- WORK_NOT_FOUND
-- METHOD_NOT_CURRENT
 - real identity and source per CRM party
 - CRM create, role and import receipts
 
