@@ -39,10 +39,10 @@ Install straight from upstream; no fork is needed. Then ask your agent: **"Set u
 ```bash
 claude plugin marketplace add malcolmai/cady-skills
 claude plugin install cady@cady
-claude plugin install cady-core@cady   # then the groups your agents use: cady-company, cady-gtm, cady-finance, cady-product, cady-engineering
+claude plugin install cady-core@cady
 ```
 
-`cady` adds the Cady MCP server and the front door skill. Each `cady-<group>` plugin ships that group's skills, so install `cady-core` and only the groups your agents use: every installed skill's description joins the host's skill list.
+`cady` adds the Cady MCP server and the front door skill. Each `cady-<group>` plugin ships that group's skills, so install `cady-core`, then only the groups your agents use (cady-company, cady-gtm, cady-finance, cady-product, cady-engineering) with `claude plugin install <group>@cady`: every installed skill's description joins the host's skill list.
 
 **Codex**
 
@@ -63,8 +63,10 @@ Cady's first answer in a run says whether your skills match the release it serve
 **Claude Code**
 
 ```bash
-claude plugin marketplace update cady && claude plugin update cady@cady && claude plugin update cady-core@cady   # and each group you installed
+claude plugin marketplace update cady && claude plugin update cady@cady && claude plugin update cady-core@cady
 ```
+
+Also run `claude plugin update <group>@cady` for each group plugin you installed.
 
 Then: Restart Claude Code.
 
@@ -87,8 +89,10 @@ Then: Start a new conversation.
 If Claude Code reports your skills are newer than Cady's release (after a rollback), reinstall instead:
 
 ```bash
-claude plugin uninstall cady@cady && claude plugin install cady@cady   # and each group plugin you installed
+claude plugin uninstall cady@cady && claude plugin install cady@cady
 ```
+
+Also uninstall and reinstall each group plugin you installed (`claude plugin install <group>@cady`).
 
 ## Customise for your company (fork)
 
@@ -119,13 +123,13 @@ Your orchestrator edits skills in the fork when your company's evidence says a m
 
 ## Merge upstream once a month
 
-Once a month your orchestrator checks upstream by hand:
+Once a month your orchestrator checks upstream by hand. Add the upstream remote once, then fetch, look at what changed since your baseline with `git diff`, merge the latest tag (resolve conflicts, keeping your deliberate edits) and record it as the new baseline:
 
 ```bash
-git remote add upstream https://github.com/malcolmai/cady-skills   # once
+git remote add upstream https://github.com/malcolmai/cady-skills
 git fetch upstream --tags
-git diff "$(cat BASELINE)" <latest-tag> --stat                     # what upstream changed since your baseline
-git merge <latest-tag>                                              # resolve conflicts, keeping your deliberate edits
+git diff "$(cat BASELINE)" <latest-tag> --stat
+git merge <latest-tag>
 echo <latest-tag> > BASELINE
 ```
 
