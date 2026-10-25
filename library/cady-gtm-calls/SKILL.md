@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
-  version: "e90e4f089bb7599bbe506c07640e5361449a1760c375c2781b582df6578f620c"
-  library: "c4b98ee2d7bd8432"
+  version: "bf06445c4227a0e39e84eea0ab5592f39e72f83c2e4403f002c193177651cff9"
+  library: "e963b3e399742c0d"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "e90e4f089bb7599bbe506c07640e5361449a1760c375c2781b582df6578f620c"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "bf06445c4227a0e39e84eea0ab5592f39e72f83c2e4403f002c193177651cff9"}})`
 
 Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
 

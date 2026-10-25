@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.design.wcag_audit"
-  version: "e780e8f1ed4e4dd565859636e15a30442b08ee848e1e6a5079009eef438df7c3"
-  library: "c4b98ee2d7bd8432"
+  version: "3ec1d61547d6ed4ad340f5683d927db27db2aca8c94df537526bfa4ffa7b0542"
+  library: "e963b3e399742c0d"
   function: "design"
 ---
 # Accessibility audit (WCAG 2.2 AA)
 
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "e780e8f1ed4e4dd565859636e15a30442b08ee848e1e6a5079009eef438df7c3"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "3ec1d61547d6ed4ad340f5683d927db27db2aca8c94df537526bfa4ffa7b0542"}})`
 
 Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 

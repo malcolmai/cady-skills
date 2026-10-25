@@ -27,7 +27,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision. (`library/cady-company-operations-requirement-register/SKILL.md`)
 - `cady-company-review`: a company needs an evidence-based operating review or onboarding. (`library/cady-company-review/SKILL.md`)
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt. (`library/cady-company-taste-review/SKILL.md`)
-- `cady-company-voice-pack`: A member has no voice pack, drafts read like the AI, or the pack is 90 days old or the sender rewrote 5 or more drafts since its last revision. (`library/cady-company-voice-pack/SKILL.md`)
+- `cady-company-voice-pack`: The owner asks to set up or refresh how their messages sound, or drafts read generic or like AI. Builds the pack from their own sent messages. (`library/cady-company-voice-pack/SKILL.md`)
 
 ## gtm
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation. (`library/cady-customer-success-lifecycle/SKILL.md`)

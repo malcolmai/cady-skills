@@ -2,6 +2,19 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## e963b3e399742c0d · 2026-10-25
+
+Since c4b98ee2d7bd8432: 0 new, 0 dropped, 5 changed.
+
+Changed (the parts that differ):
+- `cady`: Library
+- `cady-company-method`: Role card
+- `cady-company-voice-pack`: description, intro, new Always, Inputs, Procedure, Acceptance, Result, new References, reference tells.md
+- `cady-core-skill-index`: company
+- `cady-gtm-cold-email-cycle`: reference copy.md
+
+Shared references changed: outreach-message-rules.md.
+
 ## c4b98ee2d7bd8432 · 2026-10-24
 
 Since 9a524e526102a3c5: 1 new, 0 dropped, 3 changed.

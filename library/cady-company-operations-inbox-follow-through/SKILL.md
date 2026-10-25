@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "f948b2c055fb8105c770e0503bf1584115f5b3262edec294d64b5d9f6a0a1964"
-  library: "c4b98ee2d7bd8432"
+  version: "f9c7895cda86df704f2ec042684be3d2efcafd2486302858627aa95ef00ef280"
+  library: "e963b3e399742c0d"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "f948b2c055fb8105c770e0503bf1584115f5b3262edec294d64b5d9f6a0a1964"}})`
+**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "f9c7895cda86df704f2ec042684be3d2efcafd2486302858627aa95ef00ef280"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 

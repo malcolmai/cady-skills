@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "9bb8b89f620f706e02597b634fe3d2d3f3a0b21f91eaae29568a35d6ae4e001c"
-  library: "c4b98ee2d7bd8432"
+  version: "2178fdb2e7ab20ed10f82b94e90446772699889481ddeafaa6fed09c4d9011dd"
+  library: "e963b3e399742c0d"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "9bb8b89f620f706e02597b634fe3d2d3f3a0b21f91eaae29568a35d6ae4e001c"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "2178fdb2e7ab20ed10f82b94e90446772699889481ddeafaa6fed09c4d9011dd"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -23,7 +23,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
-- `cady-company-voice-pack`: A member has no voice pack, drafts read like the AI, or the pack is 90 days old or the sender rewrote 5 or more drafts since its last revision.
+- `cady-company-voice-pack`: The owner asks to set up or refresh how their messages sound, or drafts read generic or like AI. Builds the pack from their own sent messages.
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 - `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 - `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
