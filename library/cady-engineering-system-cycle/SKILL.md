@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "5c0ed4356d4addcfc89f"
-  library: "fb0ed0826641a359"
+  version: "d4757fd0d7a9f6c69cf1"
+  library: "55ee7488e450b058"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "5c0ed4356d4addcfc89f"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "d4757fd0d7a9f6c69cf1@55ee7488e450b058"}})`
 
 Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 
@@ -19,9 +19,27 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 
 **Unit of work:** one cycle of one product: its map, dimension register and the review, build and hunt motions. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 
-See [Always](references/always.md).
+## Always
 
-See [Inputs](references/inputs.md).
+- Journey goals are user outcomes, not features or implementation decisions.
+- Development tests find and prove; this cycle adds no gate. CI gates follow the company's recorded stage, and an exposed security, isolation or authority defect still blocks its path.
+- Before starting a lane, search open Cady work and open PRs (`gh pr list` plus file overlap) for the same thing; extend or coordinate rather than duplicate.
+
+## Inputs
+
+### Evidence refs
+
+- company direction and current decisions
+- your system map and dimension register, kept beside the product's source
+- open findings and the last review checkpoint
+- file:<fileId> research notes
+
+### Statement fields
+
+- cycle scope (dimensions or overall)
+- motion
+- ranked findings or delivered items
+- next owner action
 
 ## Procedure
 
@@ -33,7 +51,7 @@ See [Inputs](references/inputs.md).
 6. Route each pass from current state; motions are conditions, not a fixed rotation. Review when there is no ranked direction, when the goals, a dimension label or a research scan changed since it was written, or when findings contradict it. Engineer when the direction is current and ready items exist, under the engineering role card. Hunt, under the QA role card and by an agent that did not build what it hunts, after a dimension closes, across seams after the end-to-end tests (step 7), or when the finding list is empty or stale. With a short queue one agent reviews and engineers in the same pass, and its diffs still get the engineering role's independent review; give a motion its own agent only when its queue justifies it, and never let two agents share a claim.
 7. Review once from Product (journey goals, user alternative, best in class) and Engineering (dimension architecture, research gaps, size, lifecycle and ownership). Give every touched dimension and the whole a verdict (right, right but over-built, or wrong shape), best alternative, gap and deletion. Extend the last review rather than redo it, checkpoint the verdict, and return ranked direction to Product, whose scope decisions stand. Update each touched dimension's goal and acceptance, and deduplicate hunting findings against open items.
 8. Dimensions first, then the whole. Test, fix and review each dimension until its narrow tests pass and the review finds nothing material; dimensions may run in tandem. Then run the core end-to-end tests and an overall hunt across dimension seams. A failure there that a dimension test should have caught gets that dimension test added.
-9. Record each motion's result as a checkpoint on the cycle's work item: findings as Projects items citing the dimension, journey goal and evidence; delivered items with the reviewed commit; the review with its scores and ranked direction. Persist each dimension and end-to-end run as a File cited from that work item (dimension, test, failure signature, commit, date), deduplicated by signature. A signature that persists across three runs or three days becomes an architecture finding for the next review, not a test to re-run until its work lands. Schedule recurring motions with the installed Cady skill for scheduling under an owner binding; this skill grants no schedule, send or spend authority.
+9. Record each motion's result as a checkpoint on the cycle's work item: findings as Projects items citing the dimension, journey goal and evidence; delivered items with the reviewed commit; the review with its scores and ranked direction. Persist each dimension and end-to-end run as a File cited from that work item (dimension, test, failure signature, commit, date), deduplicated by signature. A signature that persists across three runs or three days becomes an architecture finding for the next review, not a test to re-run until its work lands. Schedule recurring motions with `cady-core-scheduling` under an owner binding; this skill grants no schedule, send or spend authority.
 
 ## Acceptance
 
@@ -43,6 +61,17 @@ See [Inputs](references/inputs.md).
 - [ ] each pass ends with a checkpoint: ranked review, reviewed delivery or a deduplicated finding list
 - [ ] each review reports its top changes with the goal each serves, cross-product tradeoffs with why each lasts, and the decision needed
 
-See [Owner checks](references/owner-checks.md).
+## Owner checks
 
-See [Result](references/result.md).
+- current direction and decisions read before mapping
+- every dimension has one owner, one question and a label that is decided or raised to Product
+- differentiating dimensions have a dated research scan and a reviewed design
+- findings are deduplicated against open items before filing
+
+## Result
+
+### Artifact refs
+
+- company:work:<workId>
+- file:<fileId>
+- **Transition:** each motion's claim holder checkpoints its result on the cycle work item

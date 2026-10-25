@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "3e595f2d5aa9be245ff1"
-  library: "fb0ed0826641a359"
+  version: "49a5bbb2620a532dae37"
+  library: "55ee7488e450b058"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "3e595f2d5aa9be245ff1"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "49a5bbb2620a532dae37@55ee7488e450b058"}})`
 
 Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
 
@@ -19,9 +19,21 @@ Answer an inbound reply in a live email, LinkedIn or host-connected message thre
 
 **Unit of work:** one work item per thread. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
-See [Always](references/always.md).
+## Always
 
-See [Inputs](references/inputs.md).
+- In a review body, put a line with only --- between messages.
+
+## Inputs
+
+### Evidence refs
+
+- crm:party:<partyId>
+- the communication ref being answered
+
+### Statement fields
+
+- channel
+- senderLabel
 
 ## Procedure
 
@@ -54,8 +66,21 @@ See [Inputs](references/inputs.md).
 - [ ] nothing sent before the review is approved
 - [ ] material commitments remain findable across runs; an ordinary dated next step may stay in the existing work text
 
-See [Owner checks](references/owner-checks.md).
+## Owner checks
 
-See [Result](references/result.md).
+- WORK_NOT_FOUND
+- METHOD_NOT_CURRENT
+- COPY_RULE_FAILED
+- permission recheck at prepare
+- OBLIGATION_EXISTS, OBLIGATION_SOURCE_DENIED, OBLIGATION_INVALID
 
-See [References](references/references.md).
+## Result
+
+### Artifact refs
+
+- crm:outreach_review:<approvalId>
+- **Transition:** the claim holder reports the result
+
+## References
+- [Copy](references/copy.md)
+- [Outreach message rules](../../references/outreach-message-rules.md)

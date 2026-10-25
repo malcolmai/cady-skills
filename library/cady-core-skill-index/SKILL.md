@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "83fb417e89b5c4b510c9"
-  library: "fb0ed0826641a359"
+  version: "3c66ecec0517e5ddfe09"
+  library: "55ee7488e450b058"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "83fb417e89b5c4b510c9"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "3c66ecec0517e5ddfe09@55ee7488e450b058"}})`
 
 Every Cady task skill, with one line on when to use it.
 

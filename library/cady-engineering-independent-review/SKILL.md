@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "fde8001845a47669e7c9"
-  library: "fb0ed0826641a359"
+  version: "7225fdedbce02c20ed71"
+  library: "55ee7488e450b058"
   function: "engineering"
 ---
 # Independent review and native helper orchestration
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "fde8001845a47669e7c9"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "7225fdedbce02c20ed71@55ee7488e450b058"}})`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge, or a lead coordinates native helpers. Not for: root-causing a bug or triaging a bug report.
 

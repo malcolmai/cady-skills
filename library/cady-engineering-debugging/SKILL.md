@@ -1,21 +1,21 @@
 ---
 name: "cady-engineering-debugging"
-description: "Debugging and incident response. Use when: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. Not for: Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use the installed Cady skill for independent_review) or recurring backlog review (use `cady-engineering-system-cycle`)."
+description: "Debugging and incident response. Use when: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. Not for: Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
-  version: "b666168cbb1162e46965"
-  library: "fb0ed0826641a359"
+  version: "10a1a2143b5f8599c5b0"
+  library: "55ee7488e450b058"
   function: "engineering"
 ---
 # Debugging and incident response
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "b666168cbb1162e46965"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "10a1a2143b5f8599c5b0@55ee7488e450b058"}})`
 
 Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 
-**Not for:** Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use the installed Cady skill for independent_review) or recurring backlog review (use `cady-engineering-system-cycle`).
+**Not for:** Rating a bug's severity or triaging a flaky test, reviewing someone's diff (use `cady-engineering-independent-review`) or recurring backlog review (use `cady-engineering-system-cycle`).
 
 **Unit of work:** one failure or incident, from first signal to verified fix. **Kind:** execution. **Parallel:** no. **Can release:** no. 
 

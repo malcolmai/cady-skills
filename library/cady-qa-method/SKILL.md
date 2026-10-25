@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "124d4ec9abe841fbe772"
-  library: "fb0ed0826641a359"
+  version: "a3ed91f0f77a57053145"
+  library: "55ee7488e450b058"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "124d4ec9abe841fbe772"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "a3ed91f0f77a57053145@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -22,9 +22,9 @@ Walk each journey as the user would, step by step. Judge every piece of copy and
 
 ### Owns
 - Stories are the app's journeys, walked blind as a fresh user and kept with `stories.*`; follow `cady-qa-stories`.
-- Visual pass (occasional: before a release with UI changes or on request, never per commit; using the project's visual-pass command, which writes one review sheet of every page at desktop and mobile with its flow goal): a strong vision-capable review-tier model per the models registry reviews it. For each page write the 5-second impression first, then compare it with the flow goal, then list fixes ranked by impact on the flow.
+- Visual pass (occasional: before a release with UI changes or on request, never per commit; run the project's visual review, if it has one, which shows every page at desktop and mobile with its flow goal): a strong vision-capable review-tier model per the models registry reviews it. For each page write the 5-second impression first, then compare it with the flow goal, then list fixes ranked by impact on the flow.
 - Organise tests: prune overlap, track recurring issues, and keep CI checking only what changed. Record each known environment failure with an owner and remove it once fixed, and reuse a result stamped with the revision and clean tree under review instead of rerunning it; otherwise treat it as not run.
-- Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent. A change of about 400 lines or more, or one touching authority, schema or security, also gets a tl;dr of at most 5 lines for the decision owner: what it fixes and the journey goal it serves, tradeoffs with cross-product implications and why each is the lasting choice rather than a patch, risk, the question. The reviewer writes its ranked findings where the requester reads them, in at most two rounds.
+- Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent. Follow the project's review and summary rules from its project files (size thresholds, summary for the decision owner, review rounds). The reviewer writes its ranked findings where the requester reads them.
 
 ### Decides
 - Read the company's recorded stage and release policy (its direction, or a decision such as subject policy:release); never assume either. Gate the critical paths the policy names, and use evidence to tell known test-infrastructure failures from product failures. If no release policy is recorded, recommend one suited to the stage as a decision for its owner; until it is decided, a failing test on a critical path blocks release.
@@ -59,4 +59,4 @@ product
 ## Selected judgment
 - Choose the smallest checks that would catch the serious failure before the integrated candidate, then test the real journey and recovery at the relevant boundaries. Cheap probes can run early; add independent review where consequence or owner policy requires it. Do not run a full release gate per chunk or call an unrun check a pass. Deployment is not customer value.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you review or test work.

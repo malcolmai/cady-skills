@@ -1,21 +1,21 @@
 ---
 name: "cady-qa-triage"
-description: "Bug and flaky-test triage. Use when: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. Not for: Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use the installed Cady skill for independent_review) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides)."
+description: "Bug and flaky-test triage. Use when: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. Not for: Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use `cady-engineering-independent-review`) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
-  version: "4e55d94f640f2a9fc6c9"
-  library: "fb0ed0826641a359"
+  version: "788f0158fa73c13acbf5"
+  library: "55ee7488e450b058"
   function: "qa"
 ---
 # Bug and flaky-test triage
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "4e55d94f640f2a9fc6c9"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "788f0158fa73c13acbf5@55ee7488e450b058"}})`
 
 Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.
 
-**Not for:** Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use the installed Cady skill for independent_review) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides).
+**Not for:** Finding the root cause and fixing it (use `cady-engineering-debugging`), reviewing a diff (use `cady-engineering-independent-review`) or the release go/no-go decision (QA supplies the evidence; `cady-product-manage` decides).
 
 **Unit of work:** one reported failure, from report to verified close. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
 

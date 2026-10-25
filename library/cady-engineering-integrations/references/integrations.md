@@ -1,3 +1,5 @@
+# Integrations
+
 ## Integrations
 
 - **Authentication:** Reuse the host's established provider auth flow and secret store where suitable. Verify the actual account and destination with a bounded read, and confirm the signed-in or paired account is the one the company named for that job; inspect granted scopes and endpoint requirements for writes. A successful read does not prove write access. Authorized client emulation may bridge a missing interface, but cannot bypass permissions or access controls; label undocumented surfaces as fragile and verify their behavior. Keep credential handling out of generated business logic. For effects Cady governs, the credential belongs to Cady or the cady CLI, never to the host agent.

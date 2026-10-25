@@ -4,7 +4,7 @@
 - Characters: an em dash in a chat message; curly quotes in a channel where the person types straight ones; an ellipsis character where they type three dots.
 - Openers and closers (quote exactly): "I hope this finds you well", "hope you're doing well", "looking forward to hearing", "Let me know if you have any questions", "Great question", "Absolutely!".
 - Eager hedges and diminished asks: "happy to", "feel free to", "no worries if not", "quick chat", "quick call", "pick your brain".
-- Self-introduction before relevance: "I'm building", "I'm the founder of" as the opening move.
+- Self-introduction before relevance: a self-introduction or company pitch as the opening paragraph, ahead of the reason it matters to them. A one-clause honest reason is not a tell.
 - Trend words: delve, leverage, foster, crucial, seamless, robust, "excited to", thrilled.
 - Structure: a group of three, "not X but Y", "it's not just X", a closing summary line, a rhetorical question, bold or bullets in a chat.
 - Two or more of these together: uniform sentence length with perfect punctuation in a chat, curly quotes, trend words.

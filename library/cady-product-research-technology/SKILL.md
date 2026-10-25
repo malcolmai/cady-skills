@@ -1,21 +1,21 @@
 ---
 name: "cady-product-research-technology"
-description: "Technology research. Use when: Assess technologies or technical approaches for a concrete product use case. Not for: Technology selection policy, implementation plans without authorization, or vendor summaries; use the installed Cady skill for integration_vendor for company tool choice."
+description: "Technology research. Use when: Assess technologies or technical approaches for a concrete product use case. Not for: Technology selection policy, implementation plans without authorization, or vendor summaries; use `cady-engineering-integrations` (vendor reference) for company tool choice."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research_technology"
-  version: "e1a4e036d6f1568c59b3"
-  library: "fb0ed0826641a359"
+  version: "eae0c9b4bcc4cda29102"
+  library: "55ee7488e450b058"
   function: "product"
 ---
 # Technology research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "e1a4e036d6f1568c59b3"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research_technology": "eae0c9b4bcc4cda29102@55ee7488e450b058"}})`
 
 Assess technologies or technical approaches for a concrete product use case.
 
-**Not for:** Technology selection policy, implementation plans without authorization, or vendor summaries; use the installed Cady skill for integration_vendor for company tool choice.
+**Not for:** Technology selection policy, implementation plans without authorization, or vendor summaries; use `cady-engineering-integrations` (vendor reference) for company tool choice.
 
 **Unit of work:** one product use case and technology question. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
 

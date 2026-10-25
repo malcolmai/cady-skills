@@ -1,4 +1,5 @@
-## Domain method
+# Domain method
+
 - **Accountability:** The release owner decides; QA independently challenges the evidence; a qualified specialist owns applicable regulatory, safety or domain judgment.
 
 ### Iteration

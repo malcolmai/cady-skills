@@ -2,6 +2,42 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 55ee7488e450b058 · 2026-10-25
+
+Since fb0ed0826641a359: 0 new, 0 dropped, 28 changed.
+
+Changed (the parts that differ):
+- `cady`: description, intro
+- `cady-accounting-method`: Selected judgment, removed Domain method, reference domain-method.md
+- `cady-company-decision-questions`: Procedure
+- `cady-company-manage-agents`: intro, new Inputs, Procedure, Acceptance, new Owner checks, new Result, reference inputs.md, reference owner-checks.md, reference result.md
+- `cady-company-method`: Selected judgment, reference domain-method.md
+- `cady-company-operations-inbox-follow-through`: intro, new Inputs, Acceptance, new Owner checks, new Result, reference inputs.md, reference owner-checks.md, reference result.md
+- `cady-company-operations-method`: Selected judgment, reference domain-method.md
+- `cady-company-taste-review`: Procedure
+- `cady-company-voice-pack`: reference tells.md
+- `cady-core-execution`: intro, Recurrence, Surfaces, new References, removed Risk first, reference blockers.md, reference credentials.md, reference decision-standard.md, reference delivery-completion.md, reference native-orchestration.md, reference quality-check.md, reference risk-first.md, reference scheduled-model-selection.md
+- `cady-core-scheduling`: Company scheduling
+- `cady-customer-success-method`: Selected judgment, reference domain-method.md
+- `cady-design-method`: Selected judgment, reference domain-method.md
+- `cady-engineering-debugging`: description, intro
+- `cady-engineering-integrations`: intro, reference integrations.md
+- `cady-engineering-method`: Role card, Selected judgment, reference domain-method.md
+- `cady-engineering-system-cycle`: intro, new Always, new Inputs, Procedure, Acceptance, new Owner checks, new Result, reference always.md, reference inputs.md, reference owner-checks.md, reference result.md
+- `cady-finance-method`: Selected judgment, removed Domain method, reference domain-method.md
+- `cady-fundraise-method`: Selected judgment, removed Domain method, reference domain-method.md
+- `cady-gtm-method`: Selected judgment, reference domain-method.md
+- `cady-gtm-reply`: intro, new Always, new Inputs, Acceptance, new Owner checks, new Result, new References, reference always.md, reference inputs.md, reference owner-checks.md, reference references.md, reference result.md
+- `cady-marketing-method`: Selected judgment, reference domain-method.md
+- `cady-orchestrator-method`: Parent function, reference domain-method.md, reference selected-judgment.md
+- `cady-product-method`: Role card, new Parent function, reference domain-method.md, reference parent-function.md, reference selected-judgment.md
+- `cady-product-research-technology`: description, intro
+- `cady-qa-method`: Role card, Selected judgment, reference domain-method.md
+- `cady-qa-triage`: description, intro
+- `cady-sales-method`: Selected judgment, removed Domain method, reference domain-method.md
+
+Shared references changed: outreach-message-rules.md, role-card-common.md, tam-map-import.md.
+
 ## fb0ed0826641a359 · 2026-10-25
 
 Since e963b3e399742c0d: 0 new, 0 dropped, 5 changed.

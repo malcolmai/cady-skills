@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "fb733596f96c476d5c18"
-  library: "fb0ed0826641a359"
+  version: "1f9b6ebd619c111fa70a"
+  library: "55ee7488e450b058"
   function: "product"
 ---
 # Customer discovery interviews
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "fb733596f96c476d5c18"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "1f9b6ebd619c111fa70a@55ee7488e450b058"}})`
 
 Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 

@@ -1,17 +1,17 @@
 ---
 name: "cady"
-description: "Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), drafting a reply, message or material for a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling..."
+description: "Reads the company's context in Cady, then loads the matching method. Use when the work is a company's sales and outreach (email, LinkedIn, replies, calls, pipeline), drafting to a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and company agents. Not for personal tasks or coding with no company context. Requires a Cady account."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "b2d43f174d54680783ce"
-  library: "fb0ed0826641a359"
+  version: "187a4ca255584322d43e"
+  library: "55ee7488e450b058"
   function: "core"
 ---
 # Cady
 
-Reads the company's context and approvals in Cady, then loads the matching method. Use when the work is a company's sales and outreach (cold or warm email, LinkedIn messages, replies, calls, pipeline), drafting a reply, message or material for a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and creating, binding or scheduling company agents. Not for personal tasks or coding with no company context.
+Reads the company's context in Cady, then loads the matching method. Use when the work is a company's sales and outreach (email, LinkedIn, replies, calls, pipeline), drafting to a person (read the sender's voice pack first), public posts, competitors and pricing, buying or renewing tools, choosing integrations, budget and runway, fundraising, filings and hiring, product and engineering work, and company agents. Not for personal tasks or coding with no company context.
 
 ## Connect
 
@@ -53,7 +53,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/fb0ed0826641a359/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/55ee7488e450b058/
 
 That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 

@@ -5,19 +5,19 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.scheduling"
-  version: "b90eb45f65bd705bdc17"
-  library: "fb0ed0826641a359"
+  version: "6868f6e15c55f0de738b"
+  library: "55ee7488e450b058"
   function: "core"
 ---
 # Recurring work setup and recovery
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.scheduling": "b90eb45f65bd705bdc17"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.scheduling": "6868f6e15c55f0de738b@55ee7488e450b058"}})`
 
 Set up recurring work with the right context, host and recovery. Use when: the user wants a scheduled or repeatable task. Not for: one run (use the cady-core-run-sequence skill).
 
 ## Company scheduling
 
-- **Cadence:** Reuse the authorized cadence and actual host or spend limits; otherwise fit cadence to evidence freshness and deadlines without inventing a time quota. Actionable work continues until accepted or an actual limit; waiting work checks near the expected reply or deadline and backs off empty checks; with no ready work, stop the run and keep the next useful trigger. Coalesce or skip missed runs; never replay a backlog of external effects.
+- **Cadence:** Reuse the authorized cadence and actual host or spend limits; otherwise fit cadence to evidence freshness and deadlines without inventing a time quota. Actionable work continues until done or an actual limit; waiting work checks near the expected reply or deadline and backs off empty checks; with no ready work, stop the run and keep the next useful trigger. Coalesce or skip missed runs; never replay a backlog of external effects.
 - **Models:** The host owns model and effort selection. Preserve explicit user settings and use supported host controls; when selection is unavailable, use the configured executor.
 - **Principle:** Wake for a useful action or signal, not to keep an agent busy. The host schedules and executes; Cady runs no scheduler and holds the work, checkpoints and results. Only host readback establishes a configured recurrence, and only a reported result proves a run.
 - **Run:** Every run of every agent follows the run sequence (skill cady-core-run-sequence). Waiting work records nextAction and a dueDate and relies on the host's next wake; there is no separate wake mechanism.

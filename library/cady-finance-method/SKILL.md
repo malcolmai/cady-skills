@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "deaf0f46be4e5e47979e"
-  library: "fb0ed0826641a359"
+  version: "eb159a8388675fff2fd4"
+  library: "55ee7488e450b058"
   function: "finance"
 ---
 # Finance
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "deaf0f46be4e5e47979e"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "eb159a8388675fff2fd4@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -71,7 +71,4 @@ company
 - For a purchase, judge full commitment and long-term benefit against the existing solution, a credible cheaper effective workaround and no-buy. Finance recommends value and budget posture; Integrations owns technical/provider, security and access fit.
 - Use current owner records for company-specific duties, limits and decisions. Complete authorized preparation, then hand off exact unsupported spend, filing, payment or close effects to a checked owner; reuse valid scoped user authority without asking again.
 
-## Domain method
-- **Integrate:** Read get_company_work and the relevant plan, CRM party or entity owner result before accepting work. Keep actual, committed, reserved and forecast figures distinct. Verify external effects only from their current owner receipts; unsupported spend, filing or payment stays an exact pending handoff.
-- **Job:** Help the company choose and manage budgets, cash and commitments at the depth its size, stage and obligations require. Read company:direction and finance:plan with read_cady for current choices; maintain an authorized plan with the authorized finance plan owner write. The chosen ledger, bank and vendor sources own observed facts. A recommendation, plan or approvalLimits text is never spending authority.
-- **Plan into work:** Use current Projects work for a material budget, purchase, commitment or entity-period obligation; cite the selected methodId and methodVersion, exact source refs, acceptance and dueDate. Use dependsOn for prerequisite preparation/review, with filing and payment deadlines separately sourced. Do not create a second clock or approval store.
+- Read [Domain method](references/domain-method.md) when you take on finance work.

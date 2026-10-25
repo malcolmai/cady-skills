@@ -1,9 +1,9 @@
-## Scheduled model selection
+# Scheduled model selection
 
 - **Execution policy:** Complete useful authorized work to acceptance. The host orchestrator oversees aggregate usage and cost, chooses the least expensive capable execution for routine work and scheduled checks, and respects actual concurrency, memory, account, provider and authorized spend limits. When the host exposes model or effort choice, set it explicitly; never inherit a premium model by omission. Keep small work direct; delegate when a bounded helper saves total work or materially improves the result. AI minutes are vastly faster and cheaper than equivalent human minutes; actual latency and cost vary, so measure them and never convert human effort into an AI time quota. When repetition pays, suggest bounded automation sparingly, without activating it. Prefer tools or scripts for deterministic work and pass helpers only relevant context. Preserve explicit user settings. When selection is unavailable, use the configured executor. Stronger models require existing authorization or a bounded escalation decision, never automatic promotion after routine failure or a rate limit. Check an actual hard cap or unknown metered paid API exposure before the affected action; hold that action if its limit or spend authority cannot be established. Unknown aggregate usage alone does not block useful authorized internal work. Continue independent work around a justified wait; stop at acceptance or an actual limit affecting the next action, and report that specific condition. Host controls enforce settings and quotas; prompt text cannot. Recheck transient capacity and account access before dispatch; distinguish unknown usage from an unavailable host. Account for retries, repair, review and other scheduled work against observed allowances without inventing a per-task quota. An offline or unsupported host cannot be treated as a running worker.
 - **Host mapping:** Select model/effort only when the host permits it and selection is delegated; otherwise retain host defaults. Read saved settings before updates; preserve user changes, including stronger models/effort, unless asked to change them. Resolve supported IDs/effort from the host and verify scheduler settings; prompt text cannot set them. Disclose unavailable models or inherited settings without silently substituting a model or scheduler kind.
 
-### Matrix
+## Matrix
 
 | Model | Thinking | Work |
 |---|---|---|
@@ -16,7 +16,7 @@
 - **Principle:** Apply this section's execution_policy to the scheduled lead and any workers; compare total cost including repair at the required quality. The host owns model and effort selection; preserve explicit user settings and use the host's supported controls. Voice, image and video prioritize naturalness and creative fidelity within budget. Use the relevant current design method or multimodal interface for generated assets and motion when available.
 - **Run bounds:** The orchestrator records actual host/account/provider/spend ceilings and task-specific safety timeouts, including any explicitly configured per-run/period limits or escalation ceiling. Advisory prompts never create a quota or stop useful preparation. Process changes since the last checkpoint. Only a precheck before model invocation avoids a session; quiet notifications do not. Escalate when task difficulty, uncertainty or a quality failure warrants it, within actual authorized limits; checkpoint the affected gap rather than repeatedly retrying full sessions.
 
-### Usage
+## Usage
 
 - For recurrence, the host orchestrator compares observed aggregate usage, including retries and escalations, with actual allowance/reset windows, other schedules and interactive-work reserve. Keep host, API and Cady allowances separate; unknown usage stays unknown. Without telemetry, measure a bounded run before promising metered or unattended capacity; useful authorized internal preparation can continue.
 - If constrained, narrow or batch work, or propose lower frequency while preserving required timing and quality. Do not buy credits or consume resets without explicit authority.

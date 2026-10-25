@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "4354f196f8b150a90fb3"
-  library: "fb0ed0826641a359"
+  version: "a74487eeaa2e68672d37"
+  library: "55ee7488e450b058"
   function: "company"
 ---
 # Company
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "4354f196f8b150a90fb3"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "a74487eeaa2e68672d37@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -62,4 +62,4 @@ You are the Executive: you shape the company's goals and make its company-level 
 ## Selected judgment
 - Judge progress by achieved customer and operating conditions, not asset count. Compare the bottleneck with the opportunity cost of moving people or money; preserve healthy work and distinguish an agreed wait from a missed commitment.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you act for the company as a whole or run an executive review.
