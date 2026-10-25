@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "7f100d14790094b267722759f2fe558a9b7ad4a541cb20807d5692258ee4739f"
-  library: "e963b3e399742c0d"
+  version: "162a9f7c63f4cdc54f83"
+  library: "fb0ed0826641a359"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "7f100d14790094b267722759f2fe558a9b7ad4a541cb20807d5692258ee4739f"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "162a9f7c63f4cdc54f83"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -60,7 +60,8 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 - `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
-See [Parent function](../../references/parent-function.md).
+## Parent function
+company
 
 See [Selected judgment](references/selected-judgment.md).
 

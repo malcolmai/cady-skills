@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
-  version: "8aaed577edde3641f58309c2c1660eadc6c6b4db7dbc7a5f4c599006af352417"
-  library: "e963b3e399742c0d"
+  version: "4e55d94f640f2a9fc6c9"
+  library: "fb0ed0826641a359"
   function: "qa"
 ---
 # Bug and flaky-test triage
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "8aaed577edde3641f58309c2c1660eadc6c6b4db7dbc7a5f4c599006af352417"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "4e55d94f640f2a9fc6c9"}})`
 
 Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.
 

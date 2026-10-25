@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "f9c7895cda86df704f2ec042684be3d2efcafd2486302858627aa95ef00ef280"
-  library: "e963b3e399742c0d"
+  version: "2cb72a9e5b0cb3f3ef2a"
+  library: "fb0ed0826641a359"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "f9c7895cda86df704f2ec042684be3d2efcafd2486302858627aa95ef00ef280"}})`
+**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "2cb72a9e5b0cb3f3ef2a"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 
@@ -51,4 +51,5 @@ See [Owner checks](references/owner-checks.md).
 
 See [Result](references/result.md).
 
-See [References](references/references.md).
+## References
+- [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md)

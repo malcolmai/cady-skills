@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "f0bf4366b19d98822bf7d180bf5c856b0458a5aed03c360f8c0fbc68683f9d39"
-  library: "e963b3e399742c0d"
+  version: "b48d777d6bb2c0c56539"
+  library: "fb0ed0826641a359"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "f0bf4366b19d98822bf7d180bf5c856b0458a5aed03c360f8c0fbc68683f9d39"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "b48d777d6bb2c0c56539"}})`
 
 Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 
