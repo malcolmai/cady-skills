@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.scheduling"
-  version: "1c54ee97c10e979b325d79693b833fc5790bb2a2a8063b57d83a78cecaf96725"
-  library: "e963b3e399742c0d"
+  version: "b90eb45f65bd705bdc17"
+  library: "fb0ed0826641a359"
   function: "core"
 ---
 # Recurring work setup and recovery
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.scheduling": "1c54ee97c10e979b325d79693b833fc5790bb2a2a8063b57d83a78cecaf96725"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.scheduling": "b90eb45f65bd705bdc17"}})`
 
 Set up recurring work with the right context, host and recovery. Use when: the user wants a scheduled or repeatable task. Not for: one run (use the cady-core-run-sequence skill).
 

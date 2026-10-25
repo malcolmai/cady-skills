@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "e963b3e399742c0d6c0f55d2467f9d60e136671296fec40b85292cf6220570e3"
-  library: "e963b3e399742c0d"
+  version: "b2d43f174d54680783ce"
+  library: "fb0ed0826641a359"
   function: "core"
 ---
 # Cady
@@ -38,6 +38,7 @@ Then follow cady-core-run-sequence. A new company, or one with no direction yet,
 | `product/<productId>/context` | how context and records are written, served and cleaned up |
 | `product/<productId>/engineering` | infrastructure, data model, MCP interface, code |
 | `product/<productId>/release` | merge, gates, staging and production |
+| `product/<productId>/methods` | methods and agent behaviour the product ships: skills, role cards, run sequence, guidance placement and cues, evals |
 | `ops/agents` | create, schedule, approve and retire agents; what they may do |
 | `ops/onboarding` | a new company's first review: understand its evidence and functions, install guidance, propose first goals |
 | `ops/legal` | filings, registers, compliance, tax |
@@ -52,7 +53,7 @@ Before drafting or recommending, choose the matching skill below and read `libra
 
 Only if that local file is unavailable, fetch from the library source below: `INDEX.md` lists each skill with its path. Fetch the skill and its linked references from that same source. If neither local reading nor fetching is available, say the method is unavailable.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/e963b3e399742c0d/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/fb0ed0826641a359/
 
 That line is the upstream baseline at this release tag. A fork changes it to the fork's own raw URL and branch, so its edited skills are the ones that load.
 

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
-  version: "18b47a24458c51a17bf23a123450f9df15951a6c40891a4e8f607a7f2e20c4f5"
-  library: "e963b3e399742c0d"
+  version: "5bf86d5ca0d5474e3e58"
+  library: "fb0ed0826641a359"
   function: "gtm"
 ---
 # Warm pipeline pass
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "18b47a24458c51a17bf23a123450f9df15951a6c40891a4e8f607a7f2e20c4f5"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "5bf86d5ca0d5474e3e58"}})`
 
 Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
 

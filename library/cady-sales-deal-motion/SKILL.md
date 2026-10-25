@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "812698036315e376a1ebd3f7a3ef6ec0b535987ceee3573a29fd827c2f6e23aa"
-  library: "e963b3e399742c0d"
+  version: "b74dc2c17c7906739131"
+  library: "fb0ed0826641a359"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "812698036315e376a1ebd3f7a3ef6ec0b535987ceee3573a29fd827c2f6e23aa"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "b74dc2c17c7906739131"}})`
 
 Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 

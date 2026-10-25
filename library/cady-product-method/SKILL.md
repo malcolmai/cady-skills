@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "ae6ef8d25a38b8b56de1d8af8ac5d0df5d9019c83b99ebd04295f4fbbb4f11cd"
-  library: "e963b3e399742c0d"
+  version: "26e39148d2c721855e15"
+  library: "fb0ed0826641a359"
   function: "product"
 ---
 # Product
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "ae6ef8d25a38b8b56de1d8af8ac5d0df5d9019c83b99ebd04295f4fbbb4f11cd"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "26e39148d2c721855e15"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -65,7 +65,7 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 - `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
-See [Parent function](../../references/parent-function.md).
+See [Parent function](references/parent-function.md).
 
 See [Selected judgment](references/selected-judgment.md).
 

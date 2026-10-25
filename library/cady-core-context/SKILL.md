@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "251e7c2a0aa63d539e7eb1ae6216a9c5e25c6fbd39f7e43f827c28c56f1ece58"
-  library: "e963b3e399742c0d"
+  version: "5a85661a97d97a03fbb6"
+  library: "fb0ed0826641a359"
   function: "core"
 ---
 # Company context
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "251e7c2a0aa63d539e7eb1ae6216a9c5e25c6fbd39f7e43f827c28c56f1ece58"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "5a85661a97d97a03fbb6"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
