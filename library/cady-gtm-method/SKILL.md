@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "d29e322d7d07245903fb"
-  library: "fb0ed0826641a359"
+  version: "3be6c8519f4a7c3926dc"
+  library: "55ee7488e450b058"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "d29e322d7d07245903fb"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "3be6c8519f4a7c3926dc@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -66,4 +66,4 @@ company
 - When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership before message preparation; use `cady-gtm-tam-map` for the reviewed import, completion receipt and membership readback. Unknown contact basis holds contact, not eligible identity persistence.
 - Focus the bottleneck; compare exposure, response, retention and capacity before scaling.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you plan or run go-to-market work.

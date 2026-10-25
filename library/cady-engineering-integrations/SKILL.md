@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.integrations"
-  version: "4041e91da425d5ba36ee"
-  library: "fb0ed0826641a359"
+  version: "8f34733147b078241f51"
+  library: "55ee7488e450b058"
   function: "engineering"
 ---
 # Integrations
@@ -15,7 +15,7 @@ metadata:
 
 Choose, operate or build a company integration: compare and pick a tool or vendor to connect (the vendor reference), operate a chosen connector (the connector reference) or build one (the build reference). Use when: comparing, choosing or connecting a tool, data source or account. Not for: a purchase or renewal decision on cost (use `cady-finance-vendor-spend-review`).
 
-See [Integrations](references/integrations.md).
+- Read [Integration rules](references/integrations.md) when you connect, call or change any integration and need the shared rules for authentication, scope, permissions, retries and upkeep.
 
 ## Pick the job
 

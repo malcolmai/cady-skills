@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "988b5d5a705a855cbab2"
-  library: "fb0ed0826641a359"
+  version: "6f6bf3e530544bfe2b23"
+  library: "55ee7488e450b058"
   function: "accounting"
 ---
 # Accounting
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "988b5d5a705a855cbab2"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "6f6bf3e530544bfe2b23@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -57,5 +57,4 @@ finance
 - Use the chosen ledger and reconciliations; identify dated exceptions. Cash observations and a Finance preview do not close a ledger period.
 - Hand a source-linked exception list to the authorized bookkeeper or provider owner. Only that owner's posted correction and period status verifies the close. Bring in a qualified accountant for a consequential, non-standard interpretation.
 
-## Domain method
-- **Job:** Prepare a qualified period close from the chosen ledger and exact sources; the selected provider or bookkeeper owns posting, lock and close receipt. Use `cady-accounting-period-close`.
+- Read [Domain method](references/domain-method.md) when you take on accounting work.

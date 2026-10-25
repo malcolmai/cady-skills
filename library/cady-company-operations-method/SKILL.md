@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "b71fdbb9953ddca333c7"
-  library: "fb0ed0826641a359"
+  version: "e7b6b0495dfc968fd79a"
+  library: "55ee7488e450b058"
   function: "company_operations"
 ---
 # Company Operations
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "b71fdbb9953ddca333c7"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "e7b6b0495dfc968fd79a@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -65,4 +65,4 @@ company
 - For an actual vendor or inventory decision, start from fresh discovery and the chosen system's current records. A recommendation, source-system draft and submitted order or accepted vendor commitment are distinct states; reconcile the exact returned source state.
 - Company operations guidance is general information, not legal advice; identify the applicable jurisdiction. Material and non-standard cases go to a qualified specialist.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you run an operations task.

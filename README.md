@@ -46,14 +46,48 @@ The plugin adds the Cady MCP server and one skill (the front door, `plugins/cady
 **Codex**
 
 ```bash
-git clone --depth 1 https://github.com/malcolmai/cady-skills
-mkdir -p ~/.codex/skills/cady && cp -R cady-skills/plugins/cady/skills/cady/. cady-skills/library cady-skills/references ~/.codex/skills/cady/
+git clone --depth 1 https://github.com/malcolmai/cady-skills ~/.codex/cady-skills
+mkdir -p ~/.codex/skills/cady && cp -R ~/.codex/cady-skills/plugins/cady/skills/cady/. ~/.codex/cady-skills/library ~/.codex/cady-skills/references ~/.codex/skills/cady/
 codex mcp add cady --url https://app.cadyworks.com/mcp && codex mcp login cady
 ```
 
 **claude.ai**
 
 Upload `cady.zip` from the latest release as a skill (`cady/` holding the front door with `library/` and `references/` beside it), then add Cady as a custom connector: Settings > Connectors > Add custom connector, URL `https://app.cadyworks.com/mcp`.
+
+## Update
+
+Cady's first answer in a run says whether your skills match the release it serves and, when they do not, names the command for your host. You can run it any time. Starting a new session or conversation also refreshes the connection's instructions.
+
+**Claude Code**
+
+```bash
+claude plugin marketplace update cady && claude plugin update cady@cady
+```
+
+Then: Restart Claude Code.
+
+**Codex**
+
+```bash
+git -C ~/.codex/cady-skills pull --ff-only && rm -rf ~/.codex/skills/cady && mkdir -p ~/.codex/skills/cady && cp -R ~/.codex/cady-skills/plugins/cady/skills/cady/. ~/.codex/cady-skills/library ~/.codex/cady-skills/references ~/.codex/skills/cady/
+```
+
+Then: Start a new Codex session.
+
+**claude.ai**
+
+Download cady.zip from github.com/malcolmai/cady-skills/releases/latest and upload it again as the cady skill.
+
+Then: Start a new conversation.
+
+**Other hosts**: Reinstall from github.com/malcolmai/cady-skills (README, Update).
+
+If Claude Code reports your skills are newer than Cady's release (after a rollback), reinstall instead:
+
+```bash
+claude plugin uninstall cady@cady && claude plugin install cady@cady
+```
 
 ## Customise for your company (fork)
 

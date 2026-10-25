@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "8d62b113a0c54fcba373"
-  library: "fb0ed0826641a359"
+  version: "c8745d60e5c69a214a72"
+  library: "55ee7488e450b058"
   function: "design"
 ---
 # Design
 
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "8d62b113a0c54fcba373"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "c8745d60e5c69a214a72@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -49,4 +49,4 @@ product
 ## Selected judgment
 - Design the complete user flow through understanding, action, feedback, accessibility, failure and recovery. Test representative use and trust at consequential steps; a finished feature or attractive screen alone does not prove the intended experience.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you design or review a surface.

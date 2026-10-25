@@ -1,4 +1,4 @@
-## Domain method
+# Domain method
 
 ### Content system
 

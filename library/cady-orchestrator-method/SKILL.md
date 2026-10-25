@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "162a9f7c63f4cdc54f83"
-  library: "fb0ed0826641a359"
+  version: "67514b8929ff43e7b45c"
+  library: "55ee7488e450b058"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "162a9f7c63f4cdc54f83"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "67514b8929ff43e7b45c@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -63,6 +63,6 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 ## Parent function
 company
 
-See [Selected judgment](references/selected-judgment.md).
+- Read [Selected judgment](references/selected-judgment.md) when you judge whether an agent's claimed work is done.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you dispatch or verify another agent's work.

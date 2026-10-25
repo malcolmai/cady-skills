@@ -1,4 +1,4 @@
-## Domain method
+# Domain method
 
 ### Architecture and chunk reads
 

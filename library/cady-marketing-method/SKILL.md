@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "97f916c412fa9433661a"
-  library: "fb0ed0826641a359"
+  version: "388d1b83737247647ae7"
+  library: "55ee7488e450b058"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "97f916c412fa9433661a"}})`
+**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "388d1b83737247647ae7@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -61,4 +61,4 @@ gtm
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
 - When choosing a channel rather than executing an accepted one, retrieve the current GTM channel experiment detail after registered discovery. Distinguish exposure and qualified response from causal lift; keep content claims bound to source proof.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you plan or publish marketing content or SEO.

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "1e8880c2b13c2bb7783a"
-  library: "fb0ed0826641a359"
+  version: "e091500a7dfe9dfd6ba3"
+  library: "55ee7488e450b058"
   function: "customer_success"
 ---
 # Customer Success
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "1e8880c2b13c2bb7783a"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "e091500a7dfe9dfd6ba3@55ee7488e450b058"}})`
 
 Shared by every role card: `../../references/role-card-common.md`.
 
@@ -21,4 +21,4 @@ gtm
 ## Selected judgment
 - Reconcile the promised outcome with adoption, unresolved delivery failure and retention evidence. Identify the owner of the failing step, recovery and verification. A support note or CRM reply is not a refund, shipment, fix or resolved customer outcome.
 
-See [Domain method](references/domain-method.md).
+- Read [Domain method](references/domain-method.md) when you take on customer success work.
