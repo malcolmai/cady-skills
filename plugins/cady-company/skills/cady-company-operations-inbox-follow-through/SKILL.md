@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "cc553759378f7a95d127"
-  library: "c5c24622655bf77f"
+  version: "81d846ccd04fb438c243"
+  library: "457f4d559b15c7f7"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "cc553759378f7a95d127@c5c24622655bf77f"}})`
+**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "81d846ccd04fb438c243@457f4d559b15c7f7"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 
@@ -36,7 +36,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 ## Procedure
 
 1. Write material internal records without asking. Prepare consequential actions (money, time or an important counterparty) for review; never send without explicit owner approval. Other outside effects use Cady with a one-line justification and self-approval quality check; neither replaces owner, grant or channel checks. Unreadable/403 sources yield no takeaway. Record one interaction per material takeaway and cite its returned ref.
-2. For mailbox maintenance, read current inbox.suppress: and inbox:marketing-treatment decisions and relevant recent communication references, then read only headers (sender and domain, List-Id, List-Unsubscribe, Precedence: bulk, subject, To versus BCC, reply-to, attachment flag) through the host's own mail connector. For a one-thread request, read only that thread and the owner records it needs. If the required connector or account is unavailable, stop and say so; never read mail through Cady.
+2. For mailbox maintenance, read current inbox.suppress: and inbox:marketing-treatment decisions and relevant recent communication references, then read only headers (sender and domain, List-Id, List-Unsubscribe, Precedence: bulk, subject, To versus BCC, reply-to, attachment flag) through the host's own mail connector. For a one-thread request, read only that thread and the owner records it needs. If the required connector or account is unavailable, stop and say so; never read mail through Cady. The one exception is replies, opt-outs and bounces to mail Cady itself sent: if the company sends outreach from a connected Cady mailbox, start the sweep with crm.record_interactions mode capture; mail it records needs no second filing.
 3. Group by sender domain or List-Id plus subject template. Bulk requires List-Unsubscribe, Precedence: bulk, BCC or a large To list. Read known CRM parties with open commitments, prior correspondents, and actual personal exchanges or unresolved requests individually, even if sent through a newsletter tool; mere receipt is not personal. A one-thread request needs no sweep.
 4. Sample about three homogeneous, low-consequence messages (newest, oldest, random; all if few). Samples and the 2% audit are defaults, not proof. Read mixed or consequential items individually; never suppress unread messages without credible outlier coverage. See [grouping details](../../references/inbox-follow-through-details.md) for personal-request and sample rules.
 5. Scan unsampled members for consequential outliers: a personal request or exchange, different reply-to, attachment, or an actual invoice, contract, deadline, renewal or security action. A name or personalization token alone is not an outlier. Read each hit individually and count it as pulledOut.
