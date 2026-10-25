@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "0214ae726401d469ea7a"
-  library: "55ee7488e450b058"
+  version: "54de753f828498ffa377"
+  library: "c12a0049c780a024"
   function: "company"
 ---
 # Who decides: the decision journey
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "0214ae726401d469ea7a@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "54de753f828498ffa377@c12a0049c780a024"}})`
 
 Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
@@ -35,7 +35,7 @@ Before a choice or an effect: whether it is already decided, who decides, and ho
 ## Procedure
 
 1. Already decided? Read the governing decisions and goal (get_company_work decisions {state: "current", subject} and the goal). Before following one, check it still holds: past its reviewBy, a premise it names has changed, or it conflicts with newer direction or a newer goal. If it holds, follow it and do not ask again. If not, recheck it at its own layer (step 3) and cite what changed.
-2. An effect (send, spend, sign, file, publish, share, invite, change access, delete or export data, anything irreversible)? First, self-approve it: its category's permission mode decides, and Cady refuses with SELF_APPROVAL_OFF when a person must approve; in notify mode it goes through and the owner is told. Second, does a current grant cover its exact terms (a grant.* decision, an active outreach grant, grant.release)? Either way act and keep the receipt. If neither, prepare the whole effect and ask once as a ready packet (BLOCKED ask: the exact effect, the prepared material, minutes needed and what happens next), and keep working on what does not wait. Payments, signatures and filings are always a person's; prepare them. Grants are the only standing permissions: record none in a goal, decision or role card.
+2. An effect (send, spend, sign, file, publish, share, invite, change access, delete or export data, anything irreversible)? First, self-approve it: its category's permission mode decides, and Cady refuses when a person must approve; in notify mode it goes through and the owner is told. Second, does a current grant cover its exact terms (a grant.* decision, an active outreach grant, grant.release)? Either way act and keep the receipt. If neither, prepare the whole effect and ask once as a ready packet (BLOCKED ask: the exact effect, the prepared material, minutes needed and what happens next), and keep working on what does not wait. Payments, signatures and filings are always a person's; prepare them. Grants are the only standing permissions: record none in a goal, decision or role card.
 3. Otherwise it is a choice; find its layer. L1 changes a goal or the company: starting, stopping or reshaping a goal (its target, stop condition or expected cost), ICP and offer, stage and quality bar, a bet, a hire or other material commitment, a spend envelope or a grant. L2 is how a function pursues a goal: its head decides. L3 is how one task is done: any agent decides. An L2 or L3 choice that contradicts or extends an L1 one is L1. Asking the owner an L2 or L3 question is a stall.
 4. L1 by an agent, usually the Executive: only when the company's decisions mode is notify (Cady refuses an agent's L1 decision in approval mode and tells you to ask), and never for a grant, an approval or a payment, which stay the person's (step 2); and the choice clears a high bar. It serves the company as a whole and the user's recorded direction, its reason and strongest alternative are written, and the fresh look (step 5) agrees. Then record it: the owner is told and can reverse it. Otherwise raise it as a BLOCKED ask with a recommendation and options, batched, and keep working on what does not wait.
 5. For an L1 or L2 decision others will build on, take one fresh look before acting: a fresh-context subagent (the same model is fine) given only the record (goal served, choice, alternatives, key assumption, evidence) asks whether it makes sense, is justified, considers nuance and keeps focus. Fix what it finds, note it in rechecked and act; ask only about what it cannot resolve.

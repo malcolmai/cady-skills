@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
-  version: "648885cd2f2c9727e621"
-  library: "55ee7488e450b058"
+  version: "c4b021f06e25f0d642fe"
+  library: "c12a0049c780a024"
   function: "gtm"
 ---
 # Warm pipeline pass
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "648885cd2f2c9727e621@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "c4b021f06e25f0d642fe@c12a0049c780a024"}})`
 
 Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
 
@@ -36,7 +36,7 @@ Review the pipeline: a scheduled or requested pass over due customer tracks and 
 2. Call crm.list_parties({mode: 'tracks', motion: 'customer', dueBefore: now}) and work every due track. Reply, prepare warm email, LinkedIn or post-call follow-up, or update crm.set_track when no contact action fits. Never infer a stage. Set each touched party's next action and due date.
 3. For a cold or not-interested lead, set crm.set_track recontact only on a lost or paused track: never means Never contact; unless_changed means Do not contact unless circumstances change; 1m, 2m, 3m, 6m or a lead-suggested date create a Plan re-contact action seven days before the due date. An interested lead is never dropped. Each follow-up follows the follow-up rule in the outreach message rules (an engaged recipient is paced to the thread's tempo and not counted; an unengaged non-replier gets at most 2, counted); check permission, release through outreach review, and reopen a held track only with an explicit reason.
 4. Product sign-up sync: record signup or activation with crm.record_interactions. Match by email and use each product event id as sourceRef (up to 25 per call); preserve sourceRef on retries for idempotency. Pass the captured cref to attribute the sign-up to email, click and variant. Keep UTMs in your own product analytics; no site script is needed. Cady does not run the sync: the user's agent or automation does.
-5. Schedule a host recurring task named 'Warm pipeline (<Company>)' weekly or at the user's chosen cadence. Each run starts with get_cady_context and reads due tracks. Review stale items; never replay a backlog of external sends blindly.
+5. Schedule it as a host recurring task named 'Warm pipeline (<Company>)' (cadence and install: `cady-company-manage-agents`, reference scheduling). Each run starts with get_cady_context and reads due tracks. Review stale items; never replay a backlog of external sends blindly.
 6. The pass updates each touched CRM track and keeps its exact review receipt without Projects work state.
 
 ## Acceptance
@@ -46,7 +46,6 @@ Review the pipeline: a scheduled or requested pass over due customer tracks and 
 
 ## Owner checks
 
-- METHOD_NOT_CURRENT
 - current contact permission
 - product sign-up checked before a trial nudge
 

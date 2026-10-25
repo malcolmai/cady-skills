@@ -5,15 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "6f6bf3e530544bfe2b23"
-  library: "55ee7488e450b058"
+  version: "73a26a5da99583f385f6"
+  library: "c12a0049c780a024"
   function: "accounting"
 ---
 # Accounting
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "6f6bf3e530544bfe2b23@55ee7488e450b058"}})`
-
-Shared by every role card: `../../references/role-card-common.md`.
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "73a26a5da99583f385f6@c12a0049c780a024"}})`
 
 ## Role card
 
@@ -33,9 +31,11 @@ You keep the books true to their sources: you prepare each period close from the
 
 ### Hands off
 - Budgets, runway and tax planning go to Finance; filings and registers go to Company Operations.
+- Finish every step that is not a human boundary yourself, including the decisions that are yours. L2 and L3 decisions are never brought to the person (policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - Claim a closed period only from the ledger owner's posted correction and period status.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
 - the chosen ledger and its period status (by reference)

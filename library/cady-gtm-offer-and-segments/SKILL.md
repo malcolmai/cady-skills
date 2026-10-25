@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "b0e073a9c6959b71a3aa"
-  library: "55ee7488e450b058"
+  version: "8d02ed4fab090d3d2e49"
+  library: "c12a0049c780a024"
   function: "gtm"
 ---
 # Offer and segments
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "b0e073a9c6959b71a3aa@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "8d02ed4fab090d3d2e49@c12a0049c780a024"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 
@@ -34,7 +34,7 @@ Choose or revise the target segment, offer or message angle from evidence, befor
 
 ## Procedure
 
-1. Read read_cady company:direction and relevant accepted work. Keep a hypothesis register (offer, segment, trigger) as hypothesis decisions with subject hypothesis:gtm.<key> (get_company_work decisions {state: "current", subjectPrefix: "hypothesis:gtm."}; continue, never duplicate) and carry the current ones into the direction revision. Each hypothesis: statement; status (open, supported, weakened, rejected); evidence for and against, each with type and strength on the direction_rule ladder; the next cheapest test; the reversal or kill condition. Find the evidence that could most change the decision, desk evidence first; run the test that could most change the decision with `cady-company-experiment` and frame questions with `cady-company-decision-questions` rather than repeating them here.
+1. Read read_cady company:direction and relevant accepted work. Keep a hypothesis register (offer, segment, trigger) as hypothesis decisions with subject hypothesis:gtm.<slug> (the convention in `cady-company-decision-questions` step 3) (get_company_work decisions {state: "current", subjectPrefix: "hypothesis:gtm."}; continue, never duplicate) and carry the current ones into the direction revision. Each hypothesis: statement; status (open, supported, weakened, rejected); evidence for and against, each with type and strength on the direction_rule ladder; the next cheapest test; the reversal or kill condition. Find the evidence that could most change the decision, desk evidence first; run the test that could most change the decision with `cady-company-experiment` and frame questions with `cady-company-decision-questions` rather than repeating them here.
 2. State the ICP with at least two disqualifiers (who it is not for and why) and its hypothesis status. Define segments by pain or buying trigger as hypotheses. For each state fit, evidence for and against, exclusion and what would change the choice. Do not require a dated trigger. Never use a weakly supported hypothesis as a filter, stop rule or fact; no sign of the claimed pain counts against it.
 3. Choose a few distinct angles and compare them with angles already prominent in current direction and work. Avoid repeating an overused angle without a reason.
 4. Inventory real, permissioned customer proof by problem and outcome; how proof is chosen for a message is in the cold email copy rules (`cady-gtm-cold-email-cycle`). Omit proof when none fits.
@@ -51,8 +51,6 @@ Choose or revise the target segment, offer or message angle from evidence, befor
 
 ## Owner checks
 
-- WORK_NOT_FOUND
-- METHOD_NOT_CURRENT
 - direction review and acceptance remain separate
 
 ## Result

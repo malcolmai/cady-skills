@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "76f6ddc7142d012880f4"
-  library: "55ee7488e450b058"
+  version: "53012499c40c96c69bf0"
+  library: "c12a0049c780a024"
   function: "gtm"
 ---
 # TAM map
 
-**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "76f6ddc7142d012880f4@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "53012499c40c96c69bf0@c12a0049c780a024"}})`
 
 Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 
@@ -53,8 +53,6 @@ Build a list of target companies or accounts to sell to (for a region, segment o
 
 ## Owner checks
 
-- WORK_NOT_FOUND
-- METHOD_NOT_CURRENT
 - CRM import completion
 - source and fit evidence per candidate
 
@@ -70,4 +68,4 @@ Build a list of target companies or accounts to sell to (for a region, segment o
 - **Transition:** the claim holder reports the map and coverage
 
 ## References
-- [Reviewed CRM import](../../references/tam-map-import.md)
+- Read [Reviewed CRM import](../../references/tam-map-import.md) when you save sourced accounts into a CRM List.

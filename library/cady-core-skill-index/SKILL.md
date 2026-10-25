@@ -5,25 +5,26 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "3c66ecec0517e5ddfe09"
-  library: "55ee7488e450b058"
+  version: "ee0a9392e35b5f5b093f"
+  library: "c12a0049c780a024"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "3c66ecec0517e5ddfe09@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "ee0a9392e35b5f5b093f@c12a0049c780a024"}})`
 
 Every Cady task skill, with one line on when to use it.
 
 ## company
 
+- `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 - `cady-company-executive-review`: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design, binding and first task.
-- `cady-company-taste-review`: Write, edit or judge a public post (LinkedIn, X, blog), article, script or web copy, or critique a design or prompt.
-- `cady-company-voice-pack`: The owner asks to set up or refresh how their messages sound, or drafts read generic or like AI. Builds the pack from their own sent messages.
+- `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
+- `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
+- `cady-company-voice-pack`: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 - `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 - `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
@@ -39,7 +40,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
-- `cady-gtm-reply`: Answer an inbound reply in a live email, LinkedIn or host-connected message thread: a question, interest, objection, referral, not now or stop.
+- `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 - `cady-gtm-tam-map`: Build a list of target companies or accounts to sell to (for a region, segment or ICP), sourced and reachable.
 - `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
@@ -61,9 +62,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 - `cady-product-manage`: Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
-- `cady-product-research-competition`: Find who the competitors and alternatives are and how they price, position and win, for a product or pricing question.
-- `cady-product-research-shared`: Create or update a company-library research piece in Competition or Technology.
-- `cady-product-research-technology`: Assess technologies or technical approaches for a concrete product use case.
+- `cady-product-research`: Create or update a company-library research piece on competitors and alternatives, or on a technology approach.
 
 ## engineering
 

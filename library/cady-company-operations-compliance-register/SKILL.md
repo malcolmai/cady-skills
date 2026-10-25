@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
-  version: "6328e716ec4df368c304"
-  library: "55ee7488e450b058"
+  version: "3c71b048e863ce0977da"
+  library: "c12a0049c780a024"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "6328e716ec4df368c304@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "3c71b048e863ce0977da@c12a0049c780a024"}})`
 
 What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 
@@ -64,4 +64,4 @@ What statutory and registry filings the company owes and when (annual returns, c
 - **Transition:** reviewed filing register with dated next review
 
 ## References
-- Apply `cady-company-operations-requirement-register` (`../cady-company-operations-requirement-register/SKILL.md`).
+- Apply `cady-company-operations-requirement-register` (`../cady-company-operations-requirement-register/SKILL.md`) when you research or record one requirement's rule, exemptions and sources.

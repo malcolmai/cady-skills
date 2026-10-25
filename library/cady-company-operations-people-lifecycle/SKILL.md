@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
-  version: "d19de96a023be8fa45b6"
-  library: "55ee7488e450b058"
+  version: "14b0a059498978feddc1"
+  library: "c12a0049c780a024"
   function: "company_operations"
 ---
 # Joiners, movers and leavers
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "d19de96a023be8fa45b6@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "14b0a059498978feddc1@c12a0049c780a024"}})`
 
 Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 
@@ -64,5 +64,5 @@ Plan, track and verify the paperwork and access for a new hire or contractor, a 
 - **Transition:** event with evidenced, dated steps
 
 ## References
-- [People lifecycle checklists](../../references/people-checklists.md)
-- Apply `cady-company-operations-requirement-register` (`../cady-company-operations-requirement-register/SKILL.md`).
+- Read [People lifecycle checklists](../../references/people-checklists.md) when you build the system inventory or the joiner and leaver steps.
+- Apply `cady-company-operations-requirement-register` (`../cady-company-operations-requirement-register/SKILL.md`) when you record or check a paperwork requirement.

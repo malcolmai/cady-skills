@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "5490437181414eb35e96"
-  library: "55ee7488e450b058"
+  version: "bbb78f1771123320680b"
+  library: "c12a0049c780a024"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "5490437181414eb35e96@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "bbb78f1771123320680b@c12a0049c780a024"}})`
 
 Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.
 
@@ -59,8 +59,6 @@ Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actua
 - current entitlement and applicable executor authority
 - separate provider/access/security checks
 - no payment or contract effect from advisory method
-- WORK_NOT_FOUND
-- METHOD_NOT_CURRENT
 - CRM provider role and renewal receipt
 - dated evidence and notice recheck
 - exact user review before any cancellation effect
@@ -74,5 +72,5 @@ Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actua
 - **Transition:** decision recommendation or blocked exact authority handoff
 
 ## References
-- [New purchase review](../../references/vendor-purchase.md)
-- [Renewal, trial or cancellation](../../references/vendor-renewal.md)
+- Read [New purchase review](../../references/vendor-purchase.md) when you decide a new paid tool or vendor purchase.
+- Read [Renewal, trial or cancellation](../../references/vendor-renewal.md) when you decide a renewal, trial end or cancellation.

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "a23d7601884a0f42b61d"
-  library: "55ee7488e450b058"
+  version: "fc153c9b1f9a7d127022"
+  library: "c12a0049c780a024"
   function: "gtm"
 ---
 # Events: attend or host
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "a23d7601884a0f42b61d@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "fc153c9b1f9a7d127022@c12a0049c780a024"}})`
 
 Choose, prepare for or host an event that can advance the company purpose through real conversations.
 
@@ -56,8 +56,6 @@ Choose, prepare for or host an event that can advance the company purpose throug
 
 ## Owner checks
 
-- WORK_NOT_FOUND
-- METHOD_NOT_CURRENT
 - source and fit evidence
 - actual conversation before warm routing
 - Projects work readback
@@ -78,5 +76,5 @@ Choose, prepare for or host an event that can advance the company purpose throug
 - **Transition:** the claim holder reports preparation and, after the event, learning
 
 ## References
-- [Attending an event](../../references/events-attend.md)
-- [Hosting an event](../../references/events-host.md)
+- Read [Attending an event](../../references/events-attend.md) when you attend an event.
+- Read [Hosting an event](../../references/events-host.md) when you host an event.

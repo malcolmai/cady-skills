@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
-  version: "87270081496f8bbb5b37"
-  library: "55ee7488e450b058"
+  version: "c84757ddac4b9f2051e7"
+  library: "c12a0049c780a024"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "87270081496f8bbb5b37@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "c84757ddac4b9f2051e7@c12a0049c780a024"}})`
 
 A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 
@@ -70,5 +70,5 @@ A contract that commits the company is about to be signed or was just signed: wh
 - **Transition:** contract:<kind>:<ref> decision with plan choices or dated obligations
 
 ## References
-- [Contract kinds](../../references/contract-kinds.md)
-- Apply `cady-company-operations-requirement-register` (`../cady-company-operations-requirement-register/SKILL.md`).
+- Read [Contract kinds](../../references/contract-kinds.md) when the contract's kind may add points to the shared ones.
+- Apply `cady-company-operations-requirement-register` (`../cady-company-operations-requirement-register/SKILL.md`) when you settle an obligation the contract starts.

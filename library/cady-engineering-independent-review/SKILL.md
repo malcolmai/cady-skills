@@ -1,19 +1,19 @@
 ---
 name: "cady-engineering-independent-review"
-description: "Independent review and native helper orchestration. Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge, or a lead coordinates native helpers. Not for: root-causing a bug or triaging a bug report."
+description: "Independent review. Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "7225fdedbce02c20ed71"
-  library: "55ee7488e450b058"
+  version: "e7019b6629da742883d7"
+  library: "c12a0049c780a024"
   function: "engineering"
 ---
-# Independent review and native helper orchestration
+# Independent review
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "7225fdedbce02c20ed71@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "e7019b6629da742883d7@c12a0049c780a024"}})`
 
-Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge, or a lead coordinates native helpers. Not for: root-causing a bug or triaging a bug report.
+Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
 
 ## Independent review
 

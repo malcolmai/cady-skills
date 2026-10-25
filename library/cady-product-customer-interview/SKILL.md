@@ -1,21 +1,21 @@
 ---
 name: "cady-product-customer-interview"
-description: "Customer discovery interviews. Use when: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. Not for: Choosing which question needs evidence or its research route (use `cady-company-decision-questions`), competitor research (use `cady-product-research-competition`) or a sales call (use `cady-gtm-calls`)."
+description: "Customer discovery interviews. Use when: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. Not for: Choosing which question needs evidence or its research route (use `cady-company-decision-questions`), competitor research (use `cady-product-research`) or a sales call (use `cady-gtm-calls`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "1f9b6ebd619c111fa70a"
-  library: "55ee7488e450b058"
+  version: "db70b427de8795392d0e"
+  library: "c12a0049c780a024"
   function: "product"
 ---
 # Customer discovery interviews
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "1f9b6ebd619c111fa70a@55ee7488e450b058"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "db70b427de8795392d0e@c12a0049c780a024"}})`
 
 Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 
-**Not for:** Choosing which question needs evidence or its research route (use `cady-company-decision-questions`), competitor research (use `cady-product-research-competition`) or a sales call (use `cady-gtm-calls`).
+**Not for:** Choosing which question needs evidence or its research route (use `cady-company-decision-questions`), competitor research (use `cady-product-research`) or a sales call (use `cady-gtm-calls`).
 
 **Unit of work:** one interview round for one question or hypothesis. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
 
@@ -60,4 +60,4 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 - **Transition:** the decision owner reads the synthesis against the question it serves
 
 ## References
-- [Introduction request](../../references/intro-request.md)
+- Read [Introduction request](../../references/intro-request.md) when you recruit through an introduction.
