@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "246e385574b7c1de7129"
-  library: "c5c24622655bf77f"
+  version: "aae180f19a64b04ef271"
+  library: "457f4d559b15c7f7"
   function: "gtm"
 ---
 # Cold email cycle
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "246e385574b7c1de7129@c5c24622655bf77f"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "aae180f19a64b04ef271@457f4d559b15c7f7"}})`
 
 Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
 

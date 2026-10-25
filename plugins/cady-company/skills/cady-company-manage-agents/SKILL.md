@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
   version: "ecb26bcce5d347754626"
-  library: "c5c24622655bf77f"
+  library: "457f4d559b15c7f7"
   function: "company"
 ---
 # Manage company agents
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "ecb26bcce5d347754626@c5c24622655bf77f"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "ecb26bcce5d347754626@457f4d559b15c7f7"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 
