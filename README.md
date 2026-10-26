@@ -143,7 +143,7 @@ There is no auto-merge and no plugin auto-update: a fork only changes when your 
 ## Privacy and security
 
 - No file here holds company facts. Each skill names the exact `get_cady_context` call for its work.
-- Installing the plugin adds a remote MCP server (`app.cadyworks.com/mcp`). Sending email or LinkedIn messages, publishing and spending follow your company's approval rules in Cady, and every effect leaves a record you can inspect.
+- The plugin carries skills only. Connect Cady once, as a connector in your AI app or with `claude mcp add` in Claude Code (`app.cadyworks.com/mcp`), never both. Sending email or LinkedIn messages, publishing and spending follow your company's approval rules in Cady, and every effect leaves a record you can inspect.
 - Agents report run results and usage to Cady. They never upload transcripts.
 - On Codex, only if the owner opts the host in, the run sequence checks whether your most recent other local Codex session ended on a usage limit or sign-in error, and reports only that status.
 - There are no scripts or install hooks in this library: it is text only.
