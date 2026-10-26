@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
   version: "5b3f58da932139b252f0"
-  library: "6fd9a2b92a9cc69a"
+  library: "83b4e016aaf66612"
   function: "core"
 ---
 # Cady
@@ -50,6 +50,6 @@ Read `list_company_agents` first (through `read_cady_tool` where your host does 
 
 Invoke the installed skill by name; `cady-core-skill-index` (also `INDEX.md`) lists them. Where the library sits beside this skill, read `library/<name>/SKILL.md`. Otherwise fetch the skill and its linked references from the source below. If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/6fd9a2b92a9cc69a/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/83b4e016aaf66612/
 
 A fork changes that line to its own raw URL and branch.
