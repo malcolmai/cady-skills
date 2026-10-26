@@ -65,7 +65,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-design-method`: Design role card: what this function owns and decides (`library/cady-design-method/SKILL.md`)
 - `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings. (`library/cady-design-wcag-audit/SKILL.md`)
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. (`library/cady-product-customer-interview/SKILL.md`)
-- `cady-product-manage`: Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go. (`library/cady-product-manage/SKILL.md`)
+- `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done. (`library/cady-product-manage/SKILL.md`)
 - `cady-product-method`: Product role card: what this function owns and decides (`library/cady-product-method/SKILL.md`)
 - `cady-product-research`: Create or update a company-library research piece on competitors and alternatives, or on a technology approach. (`library/cady-product-research/SKILL.md`)
 

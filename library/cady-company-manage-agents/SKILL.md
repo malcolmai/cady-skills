@@ -1,21 +1,21 @@
 ---
 name: "cady-company-manage-agents"
-description: "Manage company agents. Use when: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task. Not for: Native helpers, subagents, one-off work items and agents on another host."
+description: "Manage company agents. Use when: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task. Not for: Native helpers, subagents, one-off work items and agents on a host that is in contact (step 12 covers a silent one)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "ecb26bcce5d347754626"
-  library: "457f4d559b15c7f7"
+  version: "3286689f1aab99bd945d"
+  library: "23f51ba2f726595e"
   function: "company"
 ---
 # Manage company agents
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "ecb26bcce5d347754626@457f4d559b15c7f7"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "3286689f1aab99bd945d@23f51ba2f726595e"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 
-**Not for:** Native helpers, subagents, one-off work items and agents on another host.
+**Not for:** Native helpers, subagents, one-off work items and agents on a host that is in contact (step 12 covers a silent one).
 
 **Unit of work:** one company agent and one judged goal. **Kind:** execution. **Parallel:** no. **Can release:** no. 
 
@@ -55,6 +55,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 9. Keep the library current. An upstream install updates with the host's own update command. If the company keeps a fork, once a month compare its baseline tag with the latest cady-skills release; if newer, read its CHANGELOG.md and merge what helps by hand, keeping the company's deliberate edits. Re-check affected agents, bind what you install, update the baseline and record the decision (taken, partly or skipped, and why) as a decision item. Nothing merges automatically.
 10. Retire only a confirmed obsolete agent or one that met its end condition; stop its host task too and read both back.
 11. To adopt an existing company scheduled task (secrets in its prompt: tell the owner, never upload them), follow the adoption reference (`../../references/adopt-scheduled-task.md`).
+12. A silent host's agents. Look at your other hosts at most once a day (list_company_agents: each host's lastContactAt and, for a host silent 72 hours or more, each live agent's moveTo). A host in contact: skip its agents unless you detect and confirm a severe risk (for example an agent sending out poor content); then pause that agent first and tell the owner. A silent host's agent: if moveTo.here is true (moveTo is your host), move it here (mode='move', targetAgentId, expectedRevision), set up its host task at its stored cadence, read it back (mode='bind' with hostTaskRef, readBackAt, scheduleKind) in the same run, and tell the owner in one line; if moveTo is another host, skip it; if moveTo is null, pause it (mode='pause' with a reason) and raise one ask to its owner to pause or retire (moveWhy says why). The server takes a move only from the host moveTo names, which is the target host's orchestrator (that is you when moveTo.here is true); in the web app the owner moves an agent. Retire only an obsolete agent.
 
 ## Acceptance
 
