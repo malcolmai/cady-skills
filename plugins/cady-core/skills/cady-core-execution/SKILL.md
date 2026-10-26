@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "cb669b8f0539d4e2554c"
-  library: "591145ab2187b638"
+  version: "85cd0fa5f8cb16469cf9"
+  library: "6fd9a2b92a9cc69a"
   function: "core"
 ---
 # Execution guidance
@@ -15,7 +15,7 @@ metadata:
 
 Shared execution rules: authority, blockers, credentials, effects and receipts, recurrence and model choice. Use when: a skill points here, or before an effect, credential use, retry or recovery. Not for: choosing what work to do.
 - **Application:** Use this method when complex work, execution design, integrations or recovery need it; reuse it within the task. Combine the shared method with only the relevant use-case guidance and current company/task context. Read missing context that could change the approach; refresh authority and mutable targets before effects. Apply controls proportionately to consequence and uncertainty, not as a checklist for every chat. Save only material decisions, changed facts or continuation state at the existing owner; keep implementation details in the chosen project.
-- **Authority:** Advisory method; verify current executor, account, capability and authority before effects. Admin or owner invitations and payments always need the person.
+- **Authority:** Advisory method; verify current executor, account, capability and authority before effects. Admin invitations and payments always need the person.
 - **Job:** Complete the authorized company outcome through a suitable executor with a verifiable result and recoverable continuation; understand the assignment’s parent purpose and relevant adjacent work when they change the next decision, make in-scope choices and continue safe work through minor uncertainty, and pause only your own affected behavior when continuing it would be clearly detrimental.
 
 ## Recurrence

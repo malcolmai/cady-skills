@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-26T00:00:00Z",
   "bundle": {
-    "tag": "591145ab2187b638",
-    "version": "591145ab2187b6382261e81bceb0a309e214e388b60f786e366caf9bebed335f",
-    "pluginVersion": "2026.10.26-591145ab"
+    "tag": "6fd9a2b92a9cc69a",
+    "version": "6fd9a2b92a9cc69a42082c4fbec4ddebbbff1047ede8a732a4edb3b99e094c39",
+    "pluginVersion": "2026.10.26-6fd9a2b9"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.26-591145ab"
+    "version": "2026.10.26-6fd9a2b9"
   },
   "skills": [
     {
@@ -75,7 +75,7 @@
       "name": "cady-company-operations-compliance-register",
       "path": "library/cady-company-operations-compliance-register",
       "cadyId": "skill.company_operations.compliance_register",
-      "version": "3c71b048e863ce0977da"
+      "version": "ad58ea4e5ff9deadb94e"
     },
     {
       "name": "cady-company-operations-contract-checks",
@@ -93,13 +93,13 @@
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "0d621048812f5c33ba0c"
+      "version": "f19b12b118f04f97bc93"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
       "path": "library/cady-company-operations-people-lifecycle",
       "cadyId": "skill.company_operations.people_lifecycle",
-      "version": "14b0a059498978feddc1"
+      "version": "152a45ffbc18b008615c"
     },
     {
       "name": "cady-company-operations-requirement-register",
@@ -135,7 +135,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "cb669b8f0539d4e2554c"
+      "version": "85cd0fa5f8cb16469cf9"
     },
     {
       "name": "cady-core-run-sequence",

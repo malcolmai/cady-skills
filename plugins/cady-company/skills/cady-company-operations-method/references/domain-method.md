@@ -2,7 +2,7 @@
 
 ### Method detail
 
-- To change the company profile (name, website, description, logo) read get_cady_context for company.profileRevision, save a logo (PNG or JPEG, small) through files.upload with mode "image" and base64 bytes you fetched yourself, or mode "begin" and "complete" for a larger file, then call company.profile.update with expectedRevision; omit idempotencyKey (server-filled). A refusal carries reason, message and recovery and nothing was saved: for a field refusal such as DESCRIPTION_TOO_LONG fix the field and omit the key; for REVISION_CONFLICT re-read, reapply and retry; for ACCESS_DENIED_COMPANY_ADMIN hand the change to an owner or admin or have them reconnect the agent.
+- To change the company profile (name, website, description, logo) read get_cady_context for company.profileRevision, save a logo (PNG or JPEG, small) through files.upload with mode "image" and base64 bytes you fetched yourself, or mode "begin" and "complete" for a larger file, then call company.profile.update with expectedRevision; omit idempotencyKey (server-filled). A refusal carries reason, message and recovery and nothing was saved: for a field refusal such as DESCRIPTION_TOO_LONG fix the field and omit the key; for REVISION_CONFLICT re-read, reapply and retry; for ACCESS_DENIED_COMPANY_ADMIN hand the change to an admin or have them reconnect the agent.
 
 ### Operations topics
 

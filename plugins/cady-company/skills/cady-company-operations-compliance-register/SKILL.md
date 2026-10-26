@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
-  version: "3c71b048e863ce0977da"
-  library: "591145ab2187b638"
+  version: "ad58ea4e5ff9deadb94e"
+  library: "6fd9a2b92a9cc69a"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "3c71b048e863ce0977da@591145ab2187b638"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "ad58ea4e5ff9deadb94e@6fd9a2b92a9cc69a"}})`
 
 What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 
@@ -39,7 +39,7 @@ What statutory and registry filings the company owes and when (annual returns, c
 3. For each applicable requirement, record how to file: the authority, portal or form, who may sign and file, the credentials needed (never stored in Cady) and the fee. Record what it means commercially: the cost, the late penalty and how it escalates, and the effect on other obligations (accounts before tax, a notice tied to the next close, good standing, loss of an exemption). Work back from the deadline to a preparation start with buffer.
 4. Check and record each new or changed requirement with requirement_register steps 4 and 5. Give the checker the common mistakes: wrong entity or period, a missed trigger, a misread exemption, the wrong clock. Use subject filing:<jurisdiction>-<authority>-<obligation> (illustrative: filing:<country>-<registry>-annual-return). statement: the entity, jurisdiction, authority, and the due date or rule. rationale: exemptions considered, how to file and the implications. Set reviewBy at the preparation start, sooner if the rule or the facts it depends on are likely to change, and tomorrow if the start has passed.
 5. Each upcoming occurrence is Projects work with dueDate at the preparation start and dependsOn for evidence, review and the filer; reuse existing work. Create it with submit_company_work_checkpoint, with methodId and methodVersion from get_cady_context selectedMethod for company_operations (pass function "company_operations" if yours differs), so Ops Deadlines lists the work and marks it overdue. Tax returns follow `cady-finance-tax-cycle`, one return-period each. Agents submit no government filing or payment: set the step BLOCKED for the person or adviser who files, raise an ask alone (kind "send", readyRefs citing the step), and verify filed or paid only from the authority's receipt.
-6. Close with a filing:register decision whose decision.supersedes names the current filing:register workId, if any. It lists the entities, jurisdictions and categories covered, the changes found and the open questions, with reviewBy at most a month away. A filing: decision past its reviewBy shows on Needs you as a missed review, for its decider or, when an agent decided it, for owners and admins. Report each requirement's state (settled, hypothesis or with a specialist), its next due date and the pending action.
+6. Close with a filing:register decision whose decision.supersedes names the current filing:register workId, if any. It lists the entities, jurisdictions and categories covered, the changes found and the open questions, with reviewBy at most a month away. A filing: decision past its reviewBy shows on Needs you as a missed review, for its decider or, when an agent decided it, for admins. Report each requirement's state (settled, hypothesis or with a specialist), its next due date and the pending action.
 
 ## Acceptance
 

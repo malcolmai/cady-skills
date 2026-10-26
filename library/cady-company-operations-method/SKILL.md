@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "0d621048812f5c33ba0c"
-  library: "591145ab2187b638"
+  version: "f19b12b118f04f97bc93"
+  library: "6fd9a2b92a9cc69a"
   function: "company_operations"
 ---
 # Company Operations
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "0d621048812f5c33ba0c@591145ab2187b638"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "f19b12b118f04f97bc93@6fd9a2b92a9cc69a"}})`
 
 ## Role card
 
