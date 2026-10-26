@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-26T00:00:00Z",
   "bundle": {
-    "tag": "23f51ba2f726595e",
-    "version": "23f51ba2f726595e2ac7f7a78b4c689f384bb32316443ef38a4f2e3f0edad1b5",
-    "pluginVersion": "2026.10.26-23f51ba2"
+    "tag": "83b4e016aaf66612",
+    "version": "83b4e016aaf666128c811a24c6a2a8bd3624b6bbd7ff69ebb6b8b7a77deb3e17",
+    "pluginVersion": "2026.10.26-83b4e016"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.26-23f51ba2"
+    "version": "2026.10.26-83b4e016"
   },
   "skills": [
     {
@@ -63,7 +63,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "3286689f1aab99bd945d"
+      "version": "fe70b9bf5c6ca1994e23"
     },
     {
       "name": "cady-company-method",
@@ -75,7 +75,7 @@
       "name": "cady-company-operations-compliance-register",
       "path": "library/cady-company-operations-compliance-register",
       "cadyId": "skill.company_operations.compliance_register",
-      "version": "3c71b048e863ce0977da"
+      "version": "ad58ea4e5ff9deadb94e"
     },
     {
       "name": "cady-company-operations-contract-checks",
@@ -93,13 +93,13 @@
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "0d621048812f5c33ba0c"
+      "version": "f19b12b118f04f97bc93"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
       "path": "library/cady-company-operations-people-lifecycle",
       "cadyId": "skill.company_operations.people_lifecycle",
-      "version": "14b0a059498978feddc1"
+      "version": "152a45ffbc18b008615c"
     },
     {
       "name": "cady-company-operations-requirement-register",
@@ -135,13 +135,13 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "cb669b8f0539d4e2554c"
+      "version": "85cd0fa5f8cb16469cf9"
     },
     {
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "cd89310cd64e76080425"
+      "version": "8f315693afaef3c67add"
     },
     {
       "name": "cady-core-skill-index",
@@ -339,7 +339,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "f7197cba6c93cab3b825"
+      "version": "55d9a2b08bd39914c0c2"
     },
     {
       "name": "cady-product-customer-interview",
