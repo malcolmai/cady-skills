@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-26T00:00:00Z",
   "bundle": {
-    "tag": "23f51ba2f726595e",
-    "version": "23f51ba2f726595e2ac7f7a78b4c689f384bb32316443ef38a4f2e3f0edad1b5",
-    "pluginVersion": "2026.10.26-23f51ba2"
+    "tag": "591145ab2187b638",
+    "version": "591145ab2187b6382261e81bceb0a309e214e388b60f786e366caf9bebed335f",
+    "pluginVersion": "2026.10.26-591145ab"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.26-23f51ba2"
+    "version": "2026.10.26-591145ab"
   },
   "skills": [
     {
@@ -63,7 +63,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "3286689f1aab99bd945d"
+      "version": "fe70b9bf5c6ca1994e23"
     },
     {
       "name": "cady-company-method",
@@ -141,7 +141,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "cd89310cd64e76080425"
+      "version": "8f315693afaef3c67add"
     },
     {
       "name": "cady-core-skill-index",
@@ -339,7 +339,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "f7197cba6c93cab3b825"
+      "version": "55d9a2b08bd39914c0c2"
     },
     {
       "name": "cady-product-customer-interview",

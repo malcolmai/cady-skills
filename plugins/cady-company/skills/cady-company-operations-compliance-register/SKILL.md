@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
   version: "3c71b048e863ce0977da"
-  library: "23f51ba2f726595e"
+  library: "591145ab2187b638"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "3c71b048e863ce0977da@23f51ba2f726595e"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "3c71b048e863ce0977da@591145ab2187b638"}})`
 
 What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 
