@@ -12,6 +12,7 @@
 
 ## Shared core
 
+- **Audience:** Outreach is for people outside the company. Company members and contractors are inside the company, so do not message them as outreach.
 - **Booking:** Offer one concrete next step. Offer specific slots only from the sender's real availability in the evidence (a calendar read or the owner's stated times); otherwise ask the owner for times in the review notes. Once the recipient has replied asking to meet, the sender's booking link may go in that reply (Cady stores no booking link: ask the owner for it once, or take it from a message they wrote, and put it in the review for their approval); the copy check blocks a calendar link in a first message or nudge. Never invent the sender's times. If the recipient asked for information, provide it without adding a call.
 - **Claims:** Make every commercial claim precise and supportable within the product's current capability and evidence. Do not promise a result, imply customer approval, turn a hypothesis into a fact or use proof that is not real and relevant.
 - **Deliverable:** The message or sheet contains only what the recipient reads. Report unavailable steps, missing tools and status to the person outside the deliverable.
