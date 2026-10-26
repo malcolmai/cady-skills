@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "8f315693afaef3c67add"
-  library: "83b4e016aaf66612"
+  version: "4ddaf9a2f95c8fac85b3"
+  library: "58091c89f54a2355"
   function: "core"
 ---
 # Agent run sequence
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "8f315693afaef3c67add@83b4e016aaf66612"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "4ddaf9a2f95c8fac85b3@58091c89f54a2355"}})`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
 
