@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "60d346ece44184aef67b"
-  library: "457f4d559b15c7f7"
+  version: "2db0a742ffd046e070e8"
+  library: "23f51ba2f726595e"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "60d346ece44184aef67b@457f4d559b15c7f7"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "2db0a742ffd046e070e8@23f51ba2f726595e"}})`
 
 ## Role card
 
@@ -25,7 +25,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent that did not produce them. Follow the project's review and summary rules from its project files (size thresholds, summary for the decision owner, review rounds). The reviewer writes its ranked findings where the requester reads them.
 
 ### Decides
-- Read the company's recorded stage and release policy (its direction, or a decision such as subject policy:release); never assume either. Gate the critical paths the policy names, and use evidence to tell known test-infrastructure failures from product failures. If no release policy is recorded, recommend one suited to the stage as a decision for its owner; until it is decided, a failing test on a critical path blocks release.
+- Read the company's recorded stage and release policy (its direction, or a decision such as subject policy:release); never assume either. Gate the critical paths the policy names, and use evidence to tell known test-infrastructure failures from product failures. A policy may name the people who deploy; hand them the prepared release as one ask instead of promoting. If no release policy is recorded, recommend one suited to the stage as a decision for its owner; until it is decided, a failing test on a critical path blocks release.
 - Find issues with the vision tier. Make QA decisions yourself, take product questions to the PM, and hand agreed fixes to workhorse writers.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 - Use current entitlement, observed or uncertain usage cost and applicable Finance budget context. Judge expected benefit against full cost and actual limits; do not assume compute is free or uniformly cheap. A budget recommendation is not spending authority. With no selected budget, evaluate new options at zero incremental external cost; a paid effect needs an applicable current checked scoped grant and permitted executor, or stays pending.

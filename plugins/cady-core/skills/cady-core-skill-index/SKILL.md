@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "ee0a9392e35b5f5b093f"
-  library: "457f4d559b15c7f7"
+  version: "288b9e6eb37cde8258f4"
+  library: "23f51ba2f726595e"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "ee0a9392e35b5f5b093f@457f4d559b15c7f7"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "288b9e6eb37cde8258f4@23f51ba2f726595e"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -61,7 +61,7 @@ Every Cady task skill, with one line on when to use it.
 
 - `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
-- `cady-product-manage`: Decide what to build, for whom and why; run discovery and hypotheses; plan each release and run its go/no-go.
+- `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done.
 - `cady-product-research`: Create or update a company-library research piece on competitors and alternatives, or on a technology approach.
 
 ## engineering
