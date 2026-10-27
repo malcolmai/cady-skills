@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
   version: "b1cc0951dbe767c409d3"
-  library: "dbd01ca4ec2c8070"
+  library: "6b1ea9adc2f4463d"
   function: "finance"
 ---
 # Budget and cost review
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "b1cc0951dbe767c409d3@dbd01ca4ec2c8070"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "b1cc0951dbe767c409d3@6b1ea9adc2f4463d"}})`
 
 Draft or update a budget or spend allocation, or review last month's spend against it.
 
