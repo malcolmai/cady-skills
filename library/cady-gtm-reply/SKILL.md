@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "0e4a6d21a9a5365335b8"
-  library: "6b1ea9adc2f4463d"
+  version: "76703c7e29c17a3e07d3"
+  library: "6b2144cc84140252"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "0e4a6d21a9a5365335b8@6b1ea9adc2f4463d"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "76703c7e29c17a3e07d3@6b2144cc84140252"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 
@@ -54,7 +54,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 4. Commitments in the thread: keep a simple next step in existing work text when structure adds no useful retrieval. Reuse the existing task or adequate native reminder for the same outcome; do not duplicate it to add metadata, and keep independently fulfilled promises distinct. Keep workKind=task and the existing outcome in the title and optional brief. Add optional obligation metadata only when useful for later retrieval, waiting, due-date queries, deduplication or source-linked fulfillment. Preserve conditions and stated/inferred certainty without upgrading a hedge. Record the source and exact counterparty when supported; a known promisor is distinct from executor, and an unknown promisor stays unknown. A date-only commitment uses the canonical task dueDate; never invent a time or timezone. Use report_company_work for material work reporting with optional obligation/brief on the item; for a focused update to already-owned work, use the exact managed checkpoint route with current revision, generation and claim proof. If the same obligation already exists, read the existing work and attach/update the same id. A reply, acknowledgement, delay or partial delivery does not fulfill an owed guide or contract; keep its remainder open. Close only when evidence meets the actual promised outcome; a requested confirmation can be completed by that confirmation. An acknowledged cancellation stops execution but does not fulfill, release or waive the promise. The reply still waits for review approval. Route other material takeaways to their owners; do not infer a stage or role.
 5. Objections: acknowledge in their words, ask the one question that tells a brush-off from a real blocker, answer with evidence, offer one low-effort next step, and accept a second no. "Send me info": send the one item that fits what they said, not a deck. "We use X" or "we built it": ask what works and what does not; name one difference only if it meets that gap. "Too expensive" or "no budget": find whether it is price, value, timing or authority; quote only the accepted offer, and a discount or pilot is the owner's decision. "Not a priority": treat as not now. "Not my call": ask who decides and offer a short summary they can forward. Security, compliance or certification: answer only from company evidence; say you will check rather than guess. "How did you get my address?": state the real source and offer to stop. Never use false urgency, guilt, invented scarcity, a fake "closing your file" email or another ask after a clear no.
 6. Draft one reply following the copy rules: shorter than their message where possible, one question at most, no re-pitch of the cold email, and keep everyone they copied. Judge it with the taste check (../../references/taste-check.md, message part) before review.
-7. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare with crm.prepare_outreach_review on the thread's channel, one recipient and lane "non_marketing", read it with crm.get_outreach_review, then follow release.
+7. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare with crm.prepare_outreach_review on the thread's channel, one recipient and lane "non_marketing", read it with crm.get_outreach_review, then follow release.
 8. Act versus ask: follow `cady-company-operations-inbox-follow-through`.
 
 ## Acceptance
