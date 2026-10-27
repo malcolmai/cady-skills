@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.runway"
-  version: "e17e9e8f816d6c5432a4"
-  library: "eb71c73617ce326b"
+  version: "d717a4f274d80caa38da"
+  library: "a9ede08c00c06027"
   function: "finance"
 ---
 # Burn and runway
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.runway": "e17e9e8f816d6c5432a4@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.runway": "d717a4f274d80caa38da@a9ede08c00c06027"}})`
 
 Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
 
@@ -31,7 +31,7 @@ Work out burn, runway months and default alive or dead from actual cash, then de
 - bank, card and payment processor statements for the last 3 to 6 months
 - payroll register, signed contracts, committed hires and known annual or quarterly bills
 
-### Statement fields
+### Work fields
 
 - as-of date and reporting currency
 - decision the runway figure informs

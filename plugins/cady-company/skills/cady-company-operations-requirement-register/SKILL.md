@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
-  version: "0f2e4605b35c8cddc6ff"
-  library: "eb71c73617ce326b"
+  version: "18aa4ca40e37ff5332a2"
+  library: "a9ede08c00c06027"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "0f2e4605b35c8cddc6ff@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "18aa4ca40e37ff5332a2@a9ede08c00c06027"}})`
 
 Research, independently check and record one compliance requirement as a Cady Projects decision.
 
@@ -27,7 +27,7 @@ Research, independently check and record one compliance requirement as a Cady Pr
 - official guidance, statute or form
 - the company facts the requirement depends on
 
-### Statement fields
+### Work fields
 
 - subject prefix
 - jurisdiction and who the requirement binds

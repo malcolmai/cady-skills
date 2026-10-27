@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "fc153c9b1f9a7d127022"
-  library: "eb71c73617ce326b"
+  version: "ad3b0751aa518e14348b"
+  library: "a9ede08c00c06027"
   function: "gtm"
 ---
 # Events: attend or host
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "fc153c9b1f9a7d127022@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "ad3b0751aa518e14348b@a9ede08c00c06027"}})`
 
 Choose, prepare for or host an event that can advance the company purpose through real conversations.
 
@@ -28,7 +28,7 @@ Choose, prepare for or host an event that can advance the company purpose throug
 - event URL or ID
 - event platform URL or ID
 
-### Statement fields
+### Work fields
 
 - event purpose
 - target conversations

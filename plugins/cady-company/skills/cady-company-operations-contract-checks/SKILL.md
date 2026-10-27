@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
-  version: "c84757ddac4b9f2051e7"
-  library: "eb71c73617ce326b"
+  version: "021b82543d0671241eeb"
+  library: "a9ede08c00c06027"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "c84757ddac4b9f2051e7@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "021b82543d0671241eeb@a9ede08c00c06027"}})`
 
 A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 
@@ -33,7 +33,7 @@ A contract that commits the company is about to be signed or was just signed: wh
 - the contract's terms or its existing work item
 - current filing:, hr:, legal: and contract: decisions
 
-### Statement fields
+### Work fields
 
 - contract kind and counterparty
 - phase, and the completion date once signed

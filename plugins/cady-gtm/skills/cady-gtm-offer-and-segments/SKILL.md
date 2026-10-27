@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "8d02ed4fab090d3d2e49"
-  library: "eb71c73617ce326b"
+  version: "38d93271b5a1aea0fead"
+  library: "a9ede08c00c06027"
   function: "gtm"
 ---
 # Offer and segments
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "8d02ed4fab090d3d2e49@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "38d93271b5a1aea0fead@a9ede08c00c06027"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 
@@ -26,7 +26,7 @@ Choose or revise the target segment, offer or message angle from evidence, befor
 - core:direction ref
 - current company and customer evidence refs
 
-### Statement fields
+### Work fields
 
 - cycle
 - current bet

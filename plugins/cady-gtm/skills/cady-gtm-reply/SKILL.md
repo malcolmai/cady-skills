@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "76703c7e29c17a3e07d3"
-  library: "eb71c73617ce326b"
+  version: "85e2c2d4bb5d22a99db9"
+  library: "a9ede08c00c06027"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "76703c7e29c17a3e07d3@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "85e2c2d4bb5d22a99db9@a9ede08c00c06027"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 
@@ -30,7 +30,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 - crm:party:<partyId>
 - the communication ref being answered
 
-### Statement fields
+### Work fields
 
 - channel
 - senderLabel

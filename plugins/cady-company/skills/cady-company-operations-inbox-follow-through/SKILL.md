@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "81d846ccd04fb438c243"
-  library: "eb71c73617ce326b"
+  version: "34ab7cef0ea9d0e429b2"
+  library: "a9ede08c00c06027"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "81d846ccd04fb438c243@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "34ab7cef0ea9d0e429b2@a9ede08c00c06027"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 
@@ -27,7 +27,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 - crm:interaction:<interactionId> or the provider message id
 - current inbox.suppress: decisions
 
-### Statement fields
+### Work fields
 
 - mail account and window
 - what counts as urgent

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "84a461a4ea23afc34ed6"
-  library: "eb71c73617ce326b"
+  version: "2bdaea57775cf90ab11e"
+  library: "a9ede08c00c06027"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "84a461a4ea23afc34ed6@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "2bdaea57775cf90ab11e@a9ede08c00c06027"}})`
 
 Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
 
@@ -32,7 +32,7 @@ Decide whether, when and how much to raise (SAFE, note or priced round), model d
 - cap table, existing SAFEs, notes and option pool
 - milestone and traction sources
 
-### Statement fields
+### Work fields
 
 - next milestone and what it proves
 - jurisdiction of the issuing entity

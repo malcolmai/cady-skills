@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "d29ebdac283d9bffa553"
-  library: "eb71c73617ce326b"
+  version: "490731acaf9cea2e01a2"
+  library: "a9ede08c00c06027"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "d29ebdac283d9bffa553@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "490731acaf9cea2e01a2@a9ede08c00c06027"}})`
 
 Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 
@@ -27,7 +27,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 - the round record and the accepted raise plan
 - file:<fileId> for the blurb, deck or update
 
-### Statement fields
+### Work fields
 
 - roundId
 - senderLabel
