@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "2358683c1e1f885e2cb8"
-  library: "eb71c73617ce326b"
+  version: "aa94328b828f5c4f8242"
+  library: "a9ede08c00c06027"
   function: "fundraise"
 ---
 # Ranked investor list
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "2358683c1e1f885e2cb8@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "aa94328b828f5c4f8242@a9ede08c00c06027"}})`
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 
@@ -26,7 +26,7 @@ Decide who to pitch for a round: a ranked list of named investors and partners, 
 - company financing objective and milestone refs
 - existing CRM investor parties or list refs
 
-### Statement fields
+### Work fields
 
 - round stage and target pool size
 - stage, cheque, geography and thesis hypotheses

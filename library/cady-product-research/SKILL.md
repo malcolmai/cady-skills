@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "06296c9b81bbb0f11330"
-  library: "eb71c73617ce326b"
+  version: "d3de4502d9c25208d7b8"
+  library: "a9ede08c00c06027"
   function: "product"
 ---
 # Research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "06296c9b81bbb0f11330@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "d3de4502d9c25208d7b8@a9ede08c00c06027"}})`
 
 Create or update a company-library research piece on competitors and alternatives, or on a technology approach.
 
@@ -27,7 +27,7 @@ Create or update a company-library research piece on competitors and alternative
 - existing research piece
 - dated source references
 
-### Statement fields
+### Work fields
 
 - question
 - scope

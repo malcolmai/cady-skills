@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.accounting.period_close"
-  version: "e8ff9b61f20559f254e2"
-  library: "eb71c73617ce326b"
+  version: "1defff08e87854a16d00"
+  library: "a9ede08c00c06027"
   function: "accounting"
 ---
 # Month-end and period close
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "e8ff9b61f20559f254e2@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "1defff08e87854a16d00@a9ede08c00c06027"}})`
 
 Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
 
@@ -31,7 +31,7 @@ Close the books for a month, quarter or year: reconcile bank, payouts and revenu
 - the company's ledger for the period
 - bank, card, payment processor, payroll, invoice and bill sources
 
-### Statement fields
+### Work fields
 
 - entity, period and accounting basis (cash or accrual)
 - ledger, preparer and reviewer

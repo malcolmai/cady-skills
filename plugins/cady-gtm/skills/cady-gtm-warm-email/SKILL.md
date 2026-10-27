@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "207dc939207f76cc995a"
-  library: "eb71c73617ce326b"
+  version: "16d9c76342f9825d2ad6"
+  library: "a9ede08c00c06027"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "207dc939207f76cc995a@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "16d9c76342f9825d2ad6@a9ede08c00c06027"}})`
 
 Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
 
@@ -26,7 +26,7 @@ Write a follow-up email (to a non-replier or an engaged contact) or the next not
 - crm:party:<partyId>
 - readable communication or relationship-track ref
 
-### Statement fields
+### Work fields
 
 - senderLabel
 - relationship evidence

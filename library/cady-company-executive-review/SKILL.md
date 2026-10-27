@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "6573c33a79f3ebb9a784"
-  library: "eb71c73617ce326b"
+  version: "24786c98418ce7f0aaab"
+  library: "a9ede08c00c06027"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "6573c33a79f3ebb9a784@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "24786c98418ce7f0aaab@a9ede08c00c06027"}})`
 
 Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 
@@ -46,7 +46,7 @@ Make one company-level decision (a goal to start, reshape or stop, market, prici
 8. Review before deciding: the strongest alternative and the weakest assumption. Only a consequential or one-way decision also gets a pre-mortem and a fresh red-team subagent (review tier) given the frame and evidence, never your recommendation.
 9. Decide within your authority. An L1 choice you may make yourself only in notify mode and above the bar in `cady-company-decision-check` step 4; record it and the owner is told. Otherwise raise a BLOCKED decision item addressed to the owner with a recommendation and options; it reaches them as asksForYou.
 10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File through files.upload mode "begin" then "complete", and a decision item through submit_company_work_checkpoint with decision {kind: "decision", subject, layer (L1 for a company-level choice under `cady-company-decision-check`, L2 strategy with a keyAssumption, L3 execution), rationale, alternatives, reversal, reviewBy, authority, decidedBy} citing file:<fileId>. For your own choice use authority "agent" and omit decidedBy: Cady records it as your agent, never as the person (no source or quote). A person's choice needs source "chat" with their exact words in quote and decidedBy (or a verified source "grant" with grantId); Cady marks agent-recorded person decisions viaAgent. Keep the item's summary within its 2000-byte limit.
-11. Hand next steps to the orchestrator or suitable existing agent as exact Projects tasks: statement, brief {doneWhen: 1-5 plain lines}, nextAction and evidence refs, with goalId, agentId, dependsOn or productId only when real. A goal is priority evidence, not task identity or effect authority; a direct one-off needs no invented goal, and a goal grants no effects. Read the reported result before judging outcomes, and correct a wrong one with corrects; never do the function work yourself.
+11. Hand next steps to the orchestrator or suitable existing agent as exact Projects tasks: headline, brief {doneWhen: 1-5 plain lines}, nextAction and evidence refs, with goalId, agentId, dependsOn or productId only when real. A goal is priority evidence, not task identity or effect authority; a direct one-off needs no invented goal, and a goal grants no effects. Read the reported result before judging outcomes, and correct a wrong one with corrects; never do the function work yourself.
 12. At reviewBy, compare the outcome with the prediction, score it hit or miss, then keep, change or stop; record what you learned as a decision that supersedes the old one. Before the next comparable decision, read the scored records.
 13. Goals: keep the company's priorities as open goal work items (`../../references/company-goals.md`), each with its reason, target, stop condition, expected cost and strongest alternative. Start, reshape or stop one only on a trigger from step 1; otherwise end with 'goals stand' and write nothing.
 14. Founder ideas: record each as a proposed goal with its reason and the reason's size at intake, and never drop one silently; stop a goal only with a recorded reason, as `../../references/company-goals.md` says.

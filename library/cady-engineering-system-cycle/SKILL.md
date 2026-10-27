@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "18886d2fb851a888d396"
-  library: "eb71c73617ce326b"
+  version: "34ea993a87093d8ce406"
+  library: "a9ede08c00c06027"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "18886d2fb851a888d396@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "34ea993a87093d8ce406@a9ede08c00c06027"}})`
 
 Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 
@@ -34,7 +34,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 - open findings and the last review checkpoint
 - file:<fileId> research notes
 
-### Statement fields
+### Work fields
 
 - cycle scope (dimensions or overall)
 - motion

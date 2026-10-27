@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "b1cc0951dbe767c409d3"
-  library: "eb71c73617ce326b"
+  version: "495d48f9fc693faf658b"
+  library: "a9ede08c00c06027"
   function: "finance"
 ---
 # Budget and cost review
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "b1cc0951dbe767c409d3@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "495d48f9fc693faf658b@a9ede08c00c06027"}})`
 
 Draft or update a budget or spend allocation, or review last month's spend against it.
 
@@ -26,7 +26,7 @@ Draft or update a budget or spend allocation, or review last month's spend again
 - current Finance plan and source file
 - dated cash, ledger, receivable and obligation sources where available
 
-### Statement fields
+### Work fields
 
 - decision and horizon
 - company scale and material drivers

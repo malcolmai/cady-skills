@@ -2,6 +2,46 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## a9ede08c00c06027 · 2026-10-27
+
+Since eb71c73617ce326b: 0 new, 0 dropped, 34 changed.
+
+Changed (the parts that differ):
+- `cady-accounting-period-close`: Inputs
+- `cady-company-executive-review`: Procedure
+- `cady-company-operations-compliance-register`: Inputs, Procedure
+- `cady-company-operations-contract-checks`: Inputs
+- `cady-company-operations-inbox-follow-through`: Inputs
+- `cady-company-operations-people-lifecycle`: Inputs, Procedure
+- `cady-company-operations-requirement-register`: Inputs
+- `cady-core-execution`: reference delivery-completion.md
+- `cady-core-run-sequence`: Run sequence
+- `cady-customer-success-lifecycle`: Inputs, Procedure
+- `cady-engineering-system-cycle`: Inputs
+- `cady-finance-budget-review`: Inputs
+- `cady-finance-runway`: Inputs
+- `cady-finance-tax-cycle`: Inputs
+- `cady-finance-vendor-spend-review`: Inputs
+- `cady-fundraise-investor-list`: Inputs
+- `cady-fundraise-investor-outreach`: Inputs
+- `cady-fundraise-method`: reference domain-method.md
+- `cady-fundraise-raise-materials`: Inputs
+- `cady-fundraise-raise-plan`: Inputs
+- `cady-gtm-calls`: Inputs
+- `cady-gtm-cold-email-cycle`: Inputs, Procedure
+- `cady-gtm-events`: Inputs
+- `cady-gtm-linkedin-message`: Inputs
+- `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-offer-and-segments`: Inputs
+- `cady-gtm-pipeline-pass`: Inputs, Procedure
+- `cady-gtm-reply`: Inputs
+- `cady-gtm-tam-map`: Inputs
+- `cady-gtm-warm-email`: Inputs
+- `cady-product-manage`: Inputs, Procedure
+- `cady-product-research`: Inputs
+- `cady-qa-triage`: Procedure
+- `cady-sales-deal-motion`: Inputs, Procedure
+
 ## eb71c73617ce326b · 2026-10-27
 
 Since d0d7a4ecb1120309: 0 new, 0 dropped, 0 changed.

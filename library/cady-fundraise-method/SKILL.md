@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "ea005ac5290d56093308"
-  library: "eb71c73617ce326b"
+  version: "e0ca9d4ee85ecb84ce25"
+  library: "a9ede08c00c06027"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "ea005ac5290d56093308@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "e0ca9d4ee85ecb84ce25@a9ede08c00c06027"}})`
 
 ## Role card
 

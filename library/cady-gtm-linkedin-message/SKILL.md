@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "9f67f045a0ff2dc4d90d"
-  library: "eb71c73617ce326b"
+  version: "7ed58946267f43b8e780"
+  library: "a9ede08c00c06027"
   function: "gtm"
 ---
 # LinkedIn message
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "9f67f045a0ff2dc4d90d@eb71c73617ce326b"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "7ed58946267f43b8e780@a9ede08c00c06027"}})`
 
 Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
 
@@ -30,7 +30,7 @@ Draft a LinkedIn connection note or direct message to one person, or its one fol
 - crm:list:<listId> or crm:party:<partyId>
 - profile or shared-context refs
 
-### Statement fields
+### Work fields
 
 - relationship state
 - senderLabel
