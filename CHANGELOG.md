@@ -2,6 +2,12 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## eb71c73617ce326b · 2026-10-27
+
+Since d0d7a4ecb1120309: 0 new, 0 dropped, 0 changed.
+
+No skill text changed; release metadata only.
+
 ## d0d7a4ecb1120309 · 2026-10-27
 
 Since 9f22976155458e5f: 0 new, 0 dropped, 0 changed.
