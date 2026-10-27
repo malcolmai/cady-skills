@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.integrations"
   version: "8f34733147b078241f51"
-  library: "6b2144cc84140252"
+  library: "9f22976155458e5f"
   function: "engineering"
 ---
 # Integrations
