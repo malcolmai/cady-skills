@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
   version: "78a1f8815cd3382b8a82"
-  library: "d0d7a4ecb1120309"
+  library: "eb71c73617ce326b"
   function: "customer_success"
 ---
 # Customer Success
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "78a1f8815cd3382b8a82@d0d7a4ecb1120309"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "78a1f8815cd3382b8a82@eb71c73617ce326b"}})`
 
 ## Parent function
 gtm
