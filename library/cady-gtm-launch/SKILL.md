@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
   version: "4d068d4ac378c9ede5fa"
-  library: "a9ede08c00c06027"
+  library: "c1163138b58a08ad"
   function: "gtm"
 ---
 # GTM launch session
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "4d068d4ac378c9ede5fa@a9ede08c00c06027"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "4d068d4ac378c9ede5fa@c1163138b58a08ad"}})`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing segments (use `cady-gtm-offer-and-segments`) or drafting outreach.
 

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "85e2c2d4bb5d22a99db9"
-  library: "a9ede08c00c06027"
+  version: "abc04cdbcf1e083b5bf0"
+  library: "c1163138b58a08ad"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "85e2c2d4bb5d22a99db9@a9ede08c00c06027"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "abc04cdbcf1e083b5bf0@c1163138b58a08ad"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 
@@ -47,7 +47,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 | Objection | Answer it with the objection step below; one question at most. | The next run | None |
 | Referral ("talk to X") | Thank them in one line; ask whether they will introduce you (double opt-in, `../../references/intro-request.md`) or you may mention them. | The first run that finds it | X is a new party with no permission of their own: cold rules apply unless the referrer introduces you in a thread (kind intro) |
 | Not now | One short line acknowledging it; no pitch, no "just in case" material. | Once, then hold | crm.set_track outcome paused, recontact on their date, else '3m' |
-| No or not a fit | Optional one-line thanks if they wrote more than a word; no rebuttal. | Once or not at all | crm.set_track outcome disqualified with outcomeReason, recontact 'unless_changed' |
+| No or not a fit | Optional one-line thanks if they wrote more than a word; no rebuttal. | Once or not at all | crm.set_track outcome disqualified with reason, recontact 'unless_changed' |
 | Out of office or auto-reply | Send nothing. Note any return date; a named alternative contact is a referral. | No reply | File as kind note, not reply: it is not engagement and does not hold the follow-up |
 | Wrong person or left the company | One line: thank them, ask who owns the problem. If they left, the address is dead. | The first run that finds it | Filing it as a reply holds follow-ups; a later bounce is filed as a hard bounce; the named owner is a referral |
 | Stop, unsubscribe, remove me, complaint | Send nothing, not even a confirmation. | Immediately | kind opt_out on the channel they named, else all; optOutReason complaint if hostile or a spam report; tell the owner |
