@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "05c58a17aa056e99167c"
-  library: "6b1ea9adc2f4463d"
+  version: "d29ebdac283d9bffa553"
+  library: "6b2144cc84140252"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "05c58a17aa056e99167c@6b1ea9adc2f4463d"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "d29ebdac283d9bffa553@6b2144cc84140252"}})`
 
 Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 
@@ -40,7 +40,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 3. First note: one partner per note. Give a sourced, dated reason this partner (a recent deal, a stated thesis or portfolio fit), what the company does for its customer and the result so far in the reader's terms: describe the result, not the work; mechanism waits until they ask how. One ask suited to their process (a 20-minute first meeting, or whether to send the deck). Within Cady's copy check, no attachment, a link only if asked. If a product or buyer fact is missing, keep the draft with that exact gap rather than inventing it. Judge it with the taste check (../../references/taste-check.md, investor part) before review.
 4. Pace the round from the raise plan: send first notes and intro asks as one batch so first meetings land in its 2 to 3 week window. After a meeting, follow up within a day with the next step and date (an engaged recipient, paced); an investor who never replied gets the unengaged follow-up rule (message rules, follow_up). On a pass, record the reason with crm.set_track and stop. Move each investor's track through its stage with crm.set_track and roundId.
 5. Monthly update: send the update drafted with `cady-fundraise-raise-materials` on the plan's fixed send day as one reviewed batch with the same body. Every recipient goes on the marketing lane with a one-line opt-out (message rules, lanes). Answer each reply through `cady-gtm-reply`.
-6. Preparation: RECIPIENTS_EXCLUDED for no_basis, destination_unverified, destination_invalid, opted_out, suppressed, deferred, recent_contact; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, REPLIED_SINCE_RELEASE, CAP_REACHED, TRACKED_LINKS_OFF. Not held by platform_paused, company_paused, executor_unavailable. Prepare each batch with crm.prepare_outreach_review (recipientBodies, one per investor; a follow-up carries followUp {delayDays, nonRepliersOnly: true}), read crm.get_outreach_review, then follow release. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies as the outcome check says.
+6. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare each batch with crm.prepare_outreach_review (recipientBodies, one per investor; a follow-up carries followUp {delayDays, nonRepliersOnly: true}), read crm.get_outreach_review, then follow release. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies as the outcome check says.
 
 ## Acceptance
 

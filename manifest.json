@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-27T00:00:00Z",
   "bundle": {
-    "tag": "6b1ea9adc2f4463d",
-    "version": "6b1ea9adc2f4463d60883fadb32053cd2a390cf9c9416850d9b73c58c7234180",
-    "pluginVersion": "2026.10.27-6b1ea9ad"
+    "tag": "6b2144cc84140252",
+    "version": "6b2144cc84140252d7de6b48659e047e9a091678d6caa6f88e5b5ccd69d8bd34",
+    "pluginVersion": "2026.10.27-6b2144cc"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.27-6b1ea9ad"
+    "version": "2026.10.27-6b2144cc"
   },
   "skills": [
     {
@@ -243,7 +243,7 @@
       "name": "cady-fundraise-investor-outreach",
       "path": "library/cady-fundraise-investor-outreach",
       "cadyId": "skill.fundraise.investor_outreach",
-      "version": "05c58a17aa056e99167c"
+      "version": "d29ebdac283d9bffa553"
     },
     {
       "name": "cady-fundraise-method",
@@ -273,7 +273,7 @@
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "b7aacc47ae9d12ed4a9c"
+      "version": "fd66528b101748b62dd1"
     },
     {
       "name": "cady-gtm-events",
@@ -291,7 +291,7 @@
       "name": "cady-gtm-linkedin-message",
       "path": "library/cady-gtm-linkedin-message",
       "cadyId": "skill.gtm.linkedin_message",
-      "version": "872c0afa49edb5baee1c"
+      "version": "9f67f045a0ff2dc4d90d"
     },
     {
       "name": "cady-gtm-method",
@@ -315,7 +315,7 @@
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "0e4a6d21a9a5365335b8"
+      "version": "76703c7e29c17a3e07d3"
     },
     {
       "name": "cady-gtm-tam-map",
@@ -327,7 +327,7 @@
       "name": "cady-gtm-warm-email",
       "path": "library/cady-gtm-warm-email",
       "cadyId": "skill.gtm.warm_email",
-      "version": "ef5efaf525ea018bf75e"
+      "version": "207dc939207f76cc995a"
     },
     {
       "name": "cady-marketing-method",
