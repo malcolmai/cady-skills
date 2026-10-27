@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
   version: "55d9a2b08bd39914c0c2"
-  library: "6b2144cc84140252"
+  library: "9f22976155458e5f"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "55d9a2b08bd39914c0c2@6b2144cc84140252"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "55d9a2b08bd39914c0c2@9f22976155458e5f"}})`
 
 ## Role card
 
