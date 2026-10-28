@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-28T00:00:00Z",
   "bundle": {
-    "tag": "f2ab4ebd3a461f29",
-    "version": "f2ab4ebd3a461f2978cee9d40def05ef1d942c96679a311b7966b297f25c1cfd",
-    "pluginVersion": "2026.10.28-f2ab4ebd"
+    "tag": "4146ecf1b22e29fb",
+    "version": "4146ecf1b22e29fb97cb6a57c7d0f795229b10a5bcc1661342ea53ada74c2ae6",
+    "pluginVersion": "2026.10.28-4146ecf1"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.28-f2ab4ebd"
+    "version": "2026.10.28-4146ecf1"
   },
   "skills": [
     {
@@ -147,7 +147,7 @@
       "name": "cady-core-skill-index",
       "path": "library/cady-core-skill-index",
       "cadyId": "cady.skill_index",
-      "version": "288b9e6eb37cde8258f4"
+      "version": "f1781992fb374df5fdc4"
     },
     {
       "name": "cady-customer-success-lifecycle",
@@ -297,7 +297,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "ff839068d12c87750a68"
+      "version": "fbe425c416da3f1c631d"
     },
     {
       "name": "cady-gtm-offer-and-segments",
@@ -321,7 +321,7 @@
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "0e6bcb9208fcbd388d02"
+      "version": "f72552361abe13870a9b"
     },
     {
       "name": "cady-gtm-warm-email",
