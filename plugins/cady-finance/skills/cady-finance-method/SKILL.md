@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
   version: "a494c2d94cecfefa25e5"
-  library: "4146ecf1b22e29fb"
+  library: "aca77ac0d7b88a6d"
   function: "finance"
 ---
 # Finance
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "a494c2d94cecfefa25e5@4146ecf1b22e29fb"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "a494c2d94cecfefa25e5@aca77ac0d7b88a6d"}})`
 
 ## Role card
 

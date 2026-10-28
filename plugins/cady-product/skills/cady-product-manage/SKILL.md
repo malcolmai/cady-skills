@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "09a515d29112990bbf7a"
-  library: "4146ecf1b22e29fb"
+  version: "1075d15976c8df378527"
+  library: "aca77ac0d7b88a6d"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "09a515d29112990bbf7a@4146ecf1b22e29fb"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "1075d15976c8df378527@aca77ac0d7b88a6d"}})`
 
 Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done.
 
@@ -39,7 +39,7 @@ Decide what to build and why; run discovery; plan each release and its go/no-go;
 ## Procedure
 
 1. Objective. Decide what to build, for whom and why, from evidence, and keep one record per decision. The minimum is an offering, an assumed ICP with a problem hypothesis and one goal; everything else waits for a decision that needs it.
-2. Read read_cady company:direction, then get_cady_context for recent decisions and get_company_work with decisions {state: "current"} for every current decision and hypothesis. Read the Files and CRM evidence they cite before judging; unknown stays unknown.
+2. Read read_cady company:direction, then get_cady_context for recent decisions and get_company_work with decisions {state: "current"} for every current decision and hypothesis. Read the Files and CRM evidence they cite before judging; unknown stays unknown. On a direction change, make each open goal's call; supersede or withdraw decisions that assumed the old offer, citing the new direction; close CRM tracks for audiences the new direction drops (crm.set_track no_longer_relevant).
 3. Minimum first session: (a) if the company has no offering, create it first (confirm none exists with get_cady_context), then manage_company_product with expectedRevision null and links []; the product area needs the productId only it creates. (b) Discovery is part of the job: if no customer has given direction (no accepted ICP in direction, no current hypothesis, no customer evidence in CRM), do not wait or treat a guess as validated. State one assumed ICP (who, circumstance, observable signals) and one problem hypothesis (the job, current alternative, what they pay in money, time or risk), with what would prove it wrong. Record it with submit_company_work_checkpoint: headline is the hypothesis in one short sentence (the job, alternative, what they pay and what would prove it wrong go in rationale), status OPEN, decision {kind: "hypothesis", subject: "hypothesis:product.<slug>", rationale, authority: "agent" and no decidedBy}, evidenceRefs to the sources used. Tell the person it is an assumption they can replace. (c) Then one goal record with brief.target under `../../references/company-goals.md`, as `cady-company-executive-review` step 13 defines. Defer dimensions, maps, stories, research and module choices until a decision needs them, except on the crux.
 4. Record hypotheses as `cady-company-decision-questions` step 3 does. Get evidence for the hypothesis with that skill (route) and `cady-company-experiment` (pre-registered tests), as Projects work bound to the hypothesis (evidenceRefs company:work:<hypothesisId>); run interviews with `cady-product-customer-interview`. If the evidence needs calls and no pipeline is getting the ICP onto calls, hand it to the Executive as the binding constraint and continue independent product work under the Product card’s depth judgement.
 5. Keep evidence tied to the offering. Keep interview notes, observations and raw source material in Files through files.upload with mode "begin" and files.upload with mode "complete", citing each as file:<fileId> from the hypothesis or work item. Put curated Competition or Technology analysis in the Research library with `cady-product-research`; preserve and link existing direction, decisions and work context rather than replacing it. Never paste evidence into direction or a work headline, or create another record to hold learning.

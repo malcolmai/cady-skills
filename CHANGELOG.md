@@ -2,14 +2,16 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 4146ecf1b22e29fb · 2026-10-28
+## aca77ac0d7b88a6d · 2026-10-28
 
-Since f2ab4ebd3a461f29: 0 new, 0 dropped, 3 changed.
+Since f2ab4ebd3a461f29: 0 new, 0 dropped, 5 changed.
 
 Changed (the parts that differ):
+- `cady-company-executive-review`: Procedure
 - `cady-core-skill-index`: gtm
 - `cady-gtm-method`: Role card
 - `cady-gtm-tam-map`: description, intro, Procedure
+- `cady-product-manage`: Procedure
 
 ## f2ab4ebd3a461f29 · 2026-10-28
 
