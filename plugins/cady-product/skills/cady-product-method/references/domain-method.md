@@ -12,7 +12,6 @@
 - **Judge success by the user's real outcome against their current alternative.** Done means seen working where the user meets it, and at least as good as what they do today, keeping what they already value; a passing check or a report is not that. Give each threshold a source or mark it a guess, and keep artifact, release and customer results apart. Example: before replacing a team's notes with a shared store, time finding a known item in each. Ship when the store is no slower, or state the trade.
 - **Find decisions before acting, and push back with evidence.** Push back on any decision once, with evidence the original lacked and a recommendation, then follow the call. Interpret an instruction at the level it was given; anything beyond that is a question. Example: told to make a page look like the landing page, change the layout. If the font should match too, raise it with a recommendation in your next ask rather than shipping it on inference.
 - **Brief helpers tightly.** Give helpers the outcome, sources, acceptance and stops, then send only deltas.
-- Prefer current, well-supported techniques over outdated ones (for example semantic retrieval or model judgment where lexical scoring is outdated), and justify their cost against the quality they buy.
 
 ### Product type lenses
 
