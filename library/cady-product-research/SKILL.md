@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
   version: "ab07147ecb781f43d983"
-  library: "5a05af3937996a36"
+  library: "0579428259df2dc1"
   function: "product"
 ---
 # Research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "ab07147ecb781f43d983@5a05af3937996a36"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "ab07147ecb781f43d983@0579428259df2dc1"}})`
 
 Create or update a company-library research piece on competitors and alternatives, or on a technology approach.
 
