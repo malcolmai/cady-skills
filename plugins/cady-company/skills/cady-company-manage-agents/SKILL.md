@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "5021d010ae7457e92675"
-  library: "22d8dd2a8b1a4e83"
+  version: "c4664c6244af8f4cb8a4"
+  library: "4a5babaf71a2f47a"
   function: "company"
 ---
 # Manage company agents
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "5021d010ae7457e92675@22d8dd2a8b1a4e83"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "c4664c6244af8f4cb8a4@4a5babaf71a2f47a"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 
@@ -44,7 +44,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 ## Procedure
 
-1. Warranted? An agent is one ongoing responsibility. Due tasks are work items; a one-off is bounded host work or a task for an existing agent. Read list_company_agents first, then Projects work, direction and this host's automations: if an agent already owns the outcome (same goal, area or function), reuse it or change it with mode='update' (rebind if its host changed) and stop here; a second agent on one goal and one contact list doubles sends and splits records. Create only when none owns it. Scope: one agent per parent function in use, its child role cards and skills installed on it. Split a child out only for a different risk class or grant, a cadence that would wake the parent for nothing, more context than one run holds, or work the parent visibly drops; merge agents whose runs are mostly empty or that keep handing work to each other.
+1. Warranted? An agent is one ongoing responsibility. Due tasks are work items; a one-off is bounded host work or a task for an existing agent. Read list_company_agents first, then Projects work, direction and this host's automations: if an agent already owns the outcome (same goal, area or function) and no safety-isolation exception below applies, reuse it or change it with mode='update' (rebind if its host changed) and stop here; a second agent on one goal and one contact list doubles sends and splits records. Create only when none owns it or the safety-isolation exception below applies. Scope: the default is one registered agent per function in use, with its child role cards and skills installed on it; parallel sessions are runs of that agent, not new agents. Split a child agent out only for a different risk class or grant, or a different cadence or host; parallel work alone is not a reason to split.
 2. Responsibility and risk class. State the outcome, one measure with its data source (the target lives on the linked goal's brief.target, not on the agent; the agent keeps only stages), a cadence (by duty, deadline, evidence freshness) or trigger, approval limits and its end condition. Pass goalId when it serves a goal; goalPriorityRef is priority evidence, not permission. A research agent's responsibility is named key questions (`cady-company-decision-questions`); the function head keeps the decisions. Critical: the agent can cause a hard-to-undo effect outside the company or reach someone outside it (sending or publishing to non-members, spending or committing money, signing, filing, inviting or sharing data externally, changing external accounts or access, deleting owner records), or its drafts are released automatically by a grant, scheduled task or other agent. Every other agent is standard. Re-class, and prepare-only test the new effect path, on any grant, tool, access or trigger change.
 3. Fit. Read get_cady_context with area ops/agents. Find needed skills in the installed library's INDEX. A fork is optional: fork github.com/malcolmai/cady-skills only when the company needs a deliberate edit, and then record its baseline tag. Reuse suitable skills unchanged. Adapt only for an evidenced failure, tool mismatch or missing expert judgment; record why in the commit. Install key fork skills, preloading only those used every run. For substantive drafting or adaptation, follow `cady-company-taste-review` step 3 and its conditional drafting reference; skip it for obvious corrections. Facts stay in Cady. Ask once for missing inputs, accounts, grants or scheduler; no secrets in chat.
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Critical: prepare-only, exercising each effect path before anything reaches anyone. Standard: it is the agent's test and touches each tool the duty needs.
