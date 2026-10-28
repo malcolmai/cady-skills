@@ -1,17 +1,17 @@
 ---
 name: "cady-company-method"
-description: "Company role card: what this function owns and decides. Load when acting as the Company agent or choosing among its skills. Not for doing a task: load the task skill."
+description: "Company role card: what this function owns and decides. Load when acting as the Executive agent or choosing among its skills. Not for doing a task: load the task skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "513560f9ee6d26714a38"
-  library: "f2ab4ebd3a461f29"
+  version: "de9397b10067255bdc5b"
+  library: "0579428259df2dc1"
   function: "company"
 ---
 # Company
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "513560f9ee6d26714a38@f2ab4ebd3a461f29"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "de9397b10067255bdc5b@0579428259df2dc1"}})`
 
 ## Role card
 

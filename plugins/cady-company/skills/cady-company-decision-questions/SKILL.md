@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
-  version: "8f5bd4934fc4463547f8"
-  library: "f2ab4ebd3a461f29"
+  version: "8d2dbd3603e6ac1774bd"
+  library: "0579428259df2dc1"
   function: "company"
 ---
 # Key questions and research
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "8f5bd4934fc4463547f8@f2ab4ebd3a461f29"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "8d2dbd3603e6ac1774bd@0579428259df2dc1"}})`
 
 A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 
@@ -30,7 +30,7 @@ A goal or decision you own needs evidence: frame its key questions and pick the 
 
 1. Ownership. The Executive owns strategy: which goals and decisions matter. You own your function's decisions, including whether their evidence is fresh enough. This skill is method only; it decides nothing.
 2. Start from the decision, not the data. Name the few questions whose answers would change a goal or decision you own: what must be true, what would reverse it, and by when you need to know. Drop a question no decision depends on. Look up existing ones first with get_company_work decisions {state: "current", subject: "question:<slug>"} and continue them; never record one twice.
-3. Record each question as a hypothesis decision item (submit_company_work_checkpoint, status OPEN, decision {kind: "hypothesis", subject: "question:<slug>", rationale, reviewBy, reversal, authority "agent" and no decidedBy: Cady records it as your agent}). The rationale names the decision or goal it serves (company:work:<id>), your current belief and confidence, and which answer would change the decision; reviewBy is when the decision needs the answer. Keep it short and cite a File for detail. One subject convention for every record: an open question is question:<slug>; a hypothesis or experiment (`cady-company-experiment` tests one answer to a question) is hypothesis:<function>.<slug>, for example hypothesis:gtm.smb-pain, citing the question it tests; the settled forms are question.answer:<slug> and hypothesis.outcome:<function>.<slug>. Continue a record already held under its recorded subject.
+3. Record each question as a hypothesis decision item (submit_company_work_checkpoint, status OPEN, decision {kind: "hypothesis", subject: "question:<slug>", rationale, reviewBy, reversal, authority "agent" and no decidedBy: Cady records it as your agent}). The rationale names the decision or goal it serves (company:work:<id>), your current belief and confidence, and which answer would change the decision; reviewBy is when the decision needs the answer. Keep it short and cite a File for detail. One subject convention for every record: an open question is question:<slug>; a hypothesis or experiment (`cady-company-experiment` tests one answer to a question) is hypothesis:<function>.<slug>, for example hypothesis:gtm.smb-pain, citing the question it tests; the settled forms are question.answer:<slug> and hypothesis.outcome:<function>.<slug>. Continue a record already held under its recorded subject. A company-direction bet cites its current recorded person decision and links the hypothesis; its outcome supplies the bet status (open: held, supported: validated, refuted: refuted). Keep missing owner facts in asks and research questions in tasks, not company-context unknowns.
 4. Take the cheapest route that could settle it: evidence the company already holds (decisions, Files, CRM interactions, the company's analytics or finance tools through this host), then a feed from work already happening, then desk research, then primary research. Fit the route to the question: why people buy, stay, leave or switch needs interviews about what they actually did, not opinions; whether they will act needs a behavioural test (waitlist, fake door, landing or pricing page) pre-registered with `cady-company-experiment`; how many or how much needs data or a sample big enough to tell; what the alternatives offer follows competitor_intelligence in `cady-company-review`. With little traffic, prefer interviews and behavioural tests to A/B tests the sample cannot settle.
 5. Feeds stay with their owners. To have another agent capture something (for example the loss reason and the alternative chosen when a deal closes), ask the orchestrator to change that agent; never edit another agent yourself. Cite facts where they live; never copy them.
 6. Primary research is an outside effect: interview requests go through outreach checks; pages, ads and spend need their existing authority, with a ready packet at that boundary. Be honest about who you are, ask consent before recording, and never seek a rival's confidential information, including from its customers or former staff. Keep notes as dated, attributed Files.
