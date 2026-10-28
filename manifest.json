@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-28T00:00:00Z",
   "bundle": {
-    "tag": "aca77ac0d7b88a6d",
-    "version": "aca77ac0d7b88a6d91a4b30870fa33af336e9fb00f3a7b5169514d31d36a1d0c",
-    "pluginVersion": "2026.10.28-aca77ac0"
+    "tag": "5a05af3937996a36",
+    "version": "5a05af3937996a36990ae86fb251d23da79e689bd3599dd0996479b4f5aa9273",
+    "pluginVersion": "2026.10.28-5a05af39"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.28-aca77ac0"
+    "version": "2026.10.28-5a05af39"
   },
   "skills": [
     {
@@ -321,7 +321,7 @@
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "f72552361abe13870a9b"
+      "version": "97087068871e67dd2f62"
     },
     {
       "name": "cady-gtm-warm-email",
