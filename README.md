@@ -47,8 +47,8 @@ claude plugin install cady-core@cady
 **Codex**
 
 ```bash
-git clone --depth 1 https://github.com/malcolmai/cady-skills ~/.codex/cady-skills
-mkdir -p ~/.codex/skills/cady && cp -R ~/.codex/cady-skills/plugins/cady/skills/cady/. ~/.codex/cady-skills/library ~/.codex/cady-skills/references ~/.codex/skills/cady/
+git clone --depth 1 https://github.com/malcolmai/cady-skills "${CODEX_HOME:-$HOME/.codex}/cady-skills"
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/cady" && cp -R "${CODEX_HOME:-$HOME/.codex}/cady-skills/plugins/cady/skills/cady/." "${CODEX_HOME:-$HOME/.codex}/cady-skills/library" "${CODEX_HOME:-$HOME/.codex}/cady-skills/references" "${CODEX_HOME:-$HOME/.codex}/skills/cady/"
 codex mcp add cady --url https://app.cadyworks.com/mcp && codex mcp login cady
 ```
 
@@ -70,13 +70,17 @@ Also run `claude plugin update <group>@cady` for each group plugin you installed
 
 Then: Restart Claude Code.
 
+On a host with a shell and the Cady CLI, run `cady usage read --host claude-code --session <current session when known> --started-at <run start ISO>` at close and report usage only when `cady usage read` exits 0; otherwise omit run.usage. Never reconstruct missing usage.
+
 **Codex**
 
 ```bash
-git -C ~/.codex/cady-skills pull --ff-only && rm -rf ~/.codex/skills/cady && mkdir -p ~/.codex/skills/cady && cp -R ~/.codex/cady-skills/plugins/cady/skills/cady/. ~/.codex/cady-skills/library ~/.codex/cady-skills/references ~/.codex/skills/cady/
+git -C "${CODEX_HOME:-$HOME/.codex}/cady-skills" pull --ff-only && rm -rf "${CODEX_HOME:-$HOME/.codex}/skills/cady" && mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/cady" && cp -R "${CODEX_HOME:-$HOME/.codex}/cady-skills/plugins/cady/skills/cady/." "${CODEX_HOME:-$HOME/.codex}/cady-skills/library" "${CODEX_HOME:-$HOME/.codex}/cady-skills/references" "${CODEX_HOME:-$HOME/.codex}/skills/cady/"
 ```
 
 Then: Start a new Codex session.
+
+On a host with a shell and the Cady CLI, run `cady usage read --host codex --session <current session when known> --started-at <run start ISO>` at close and report usage only when `cady usage read` exits 0; otherwise omit run.usage. Never reconstruct missing usage.
 
 **claude.ai**
 

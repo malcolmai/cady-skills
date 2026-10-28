@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-10-27T00:00:00Z",
+  "generatedAt": "2026-10-28T00:00:00Z",
   "bundle": {
-    "tag": "c1163138b58a08ad",
-    "version": "c1163138b58a08adfcc82ca88ac4c90b089ce3d2e3ad2d39dd1292ff0bf10941",
-    "pluginVersion": "2026.10.27-c1163138"
+    "tag": "22d8dd2a8b1a4e83",
+    "version": "22d8dd2a8b1a4e83f6bf27eee7172e861bfb7ab77ed55acefe9ed6ae230b4e74",
+    "pluginVersion": "2026.10.28-22d8dd2a"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.27-c1163138"
+    "version": "2026.10.28-22d8dd2a"
   },
   "skills": [
     {
@@ -105,7 +105,7 @@
       "name": "cady-company-operations-requirement-register",
       "path": "library/cady-company-operations-requirement-register",
       "cadyId": "skill.company_operations.requirement_register",
-      "version": "18aa4ca40e37ff5332a2"
+      "version": "a96f1658959cad97afa4"
     },
     {
       "name": "cady-company-review",
@@ -129,7 +129,7 @@
       "name": "cady-core-context",
       "path": "library/cady-core-context",
       "cadyId": "company.context",
-      "version": "8f3d340f588ec2f15096"
+      "version": "1431463fc92fcc59cbb3"
     },
     {
       "name": "cady-core-execution",
@@ -141,7 +141,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "6d5b8ec46f1501db2580"
+      "version": "8b055788418b7a9fae8a"
     },
     {
       "name": "cady-core-skill-index",
@@ -249,7 +249,7 @@
       "name": "cady-fundraise-method",
       "path": "library/cady-fundraise-method",
       "cadyId": "company.method.fundraise",
-      "version": "e0ca9d4ee85ecb84ce25"
+      "version": "4bd2a0dd0da27a5ebaf6"
     },
     {
       "name": "cady-fundraise-raise-materials",
@@ -261,7 +261,7 @@
       "name": "cady-fundraise-raise-plan",
       "path": "library/cady-fundraise-raise-plan",
       "cadyId": "skill.fundraise.raise_plan",
-      "version": "2bdaea57775cf90ab11e"
+      "version": "573326f1a8a1b6cf1922"
     },
     {
       "name": "cady-gtm-calls",
@@ -285,7 +285,7 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "4d068d4ac378c9ede5fa"
+      "version": "b13db51a4bd8e651c65b"
     },
     {
       "name": "cady-gtm-linkedin-message",
@@ -351,7 +351,7 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "798a39ace6d18622e797"
+      "version": "1a45e80e5a38a8e02972"
     },
     {
       "name": "cady-product-method",

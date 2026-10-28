@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "4d068d4ac378c9ede5fa"
-  library: "c1163138b58a08ad"
+  version: "b13db51a4bd8e651c65b"
+  library: "22d8dd2a8b1a4e83"
   function: "gtm"
 ---
 # GTM launch session
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "4d068d4ac378c9ede5fa@c1163138b58a08ad"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "b13db51a4bd8e651c65b@22d8dd2a8b1a4e83"}})`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing segments (use `cady-gtm-offer-and-segments`) or drafting outreach.
 
@@ -22,7 +22,7 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 
 ### Steps
 
-- 1. Read get_cady_context with the area you are working in (omit it for the map) and get_company_work. If no work item fits, create one with submit_company_work_checkpoint using a new workId, expectedRevision null and a current methodId. Keep company priorities in direction through update_company_direction; goals are goal work items. Split substantial independent channel/cohort work only within host and plan limits.
+- 1. Read get_cady_context with the area you are working in (omit it for the map) and get_company_work. If no work item fits, create one with submit_company_work_checkpoint, letting the server mint the workId, with a current methodId. Keep company priorities in direction through update_company_direction; goals are goal work items. Split substantial independent channel/cohort work only within host and plan limits.
 - 2. State each channel's audience, offer, proof, stop and review condition. Verify the sending account and its executor (Cady's server for API channels, the local cady executor for the rest) before treating a channel as operational; missing access holds that channel while independent work continues.
 - 3. If the CRM of record is undecided, apply the first-use rule from get_cady_context (company.modules): check the tools you can access, record external or native with company.modules.set, and ask the sponsor only if you cannot look. Do not hold work for it; no unsupported CRM readiness read is implied.
 - 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing outreach. For Cady CRM use the existing reviewed identity/List import, receipt, recovery and membership readback in the tam-map import reference (`../../references/tam-map-import.md`); keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall. Unknown contact basis holds contact, not otherwise eligible identity persistence; prepare no send without the existing permission, review and release authority.

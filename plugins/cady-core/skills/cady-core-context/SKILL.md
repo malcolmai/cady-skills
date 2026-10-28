@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "8f3d340f588ec2f15096"
-  library: "c1163138b58a08ad"
+  version: "1431463fc92fcc59cbb3"
+  library: "22d8dd2a8b1a4e83"
   function: "core"
 ---
 # Company context
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "8f3d340f588ec2f15096@c1163138b58a08ad"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "1431463fc92fcc59cbb3@22d8dd2a8b1a4e83"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
@@ -37,4 +37,4 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 ## Orientation
 
-- Before any choice or effect, follow `cady-company-decision-check`: check what is decided and still holds; for an effect, self-approve or use a grant before asking (payments, signatures and filings stay a person's); for a choice, find its layer: L1 goals, offer, stage, bets, hires and grants (an agent decides only in notify mode above a high bar, owner told; otherwise asks), L2 a function's approach (its head, one fresh look), L3 a task (any agent). Asking the owner an L2 or L3 question is a stall.
+- Ask the owner only L1 choices (goals, offer, stage, bets, hires, grants) and facts only they hold; decide L2/L3 yourself, record it and say so (`cady-company-decision-check`).
