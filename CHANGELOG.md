@@ -2,6 +2,15 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## e9d240df89fd3ed3 · 2026-10-29
+
+Since 3cff3ea9351c22bc: 0 new, 0 dropped, 3 changed.
+
+Changed (the parts that differ):
+- `cady-gtm-method`: Role card, reference domain-method.md
+- `cady-gtm-tam-map`: Inputs, Procedure, Acceptance
+- `cady-orchestrator-method`: Role card
+
 ## 3cff3ea9351c22bc · 2026-10-29
 
 Since 0579428259df2dc1: 0 new, 0 dropped, 16 changed.
