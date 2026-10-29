@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "c1dff4ddec5d7909ab0c"
-  library: "0579428259df2dc1"
+  version: "3a0663b9850b672bae9b"
+  library: "3cff3ea9351c22bc"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "c1dff4ddec5d7909ab0c@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "3a0663b9850b672bae9b@3cff3ea9351c22bc"}})`
 
 ## Role card
 
@@ -55,7 +55,7 @@ You create and test demand for the current bets: content, search, events and pai
 gtm
 
 ## Selected judgment
-- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership before message preparation; use `cady-gtm-tam-map` for the reviewed import, completion receipt and membership readback. Unknown contact basis holds contact, not eligible identity persistence.
+- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation. Unknown contact basis holds release, not eligible identity persistence or held review preparation.
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
 - When choosing a channel rather than executing an accepted one, retrieve the current GTM channel experiment detail after registered discovery. Distinguish exposure and qualified response from causal lift; keep content claims bound to source proof.
 

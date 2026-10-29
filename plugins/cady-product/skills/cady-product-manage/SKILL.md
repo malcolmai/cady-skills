@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "1075d15976c8df378527"
-  library: "0579428259df2dc1"
+  version: "2706dcddd6a3f612cf6c"
+  library: "3cff3ea9351c22bc"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "1075d15976c8df378527@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "2706dcddd6a3f612cf6c@3cff3ea9351c22bc"}})`
 
 Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done.
 
@@ -47,7 +47,7 @@ Decide what to build and why; run discovery; plan each release and its go/no-go;
 7. Scope from the ranked gap list against the bar; subtract before adding. Rank with the lightest frame that separates the options: for a few items, cost of delay (what each week of waiting loses in revenue, risk, learning or a deadline) divided by effort, highest first; RICE (reach x impact x confidence / effort) only for a longer list with comparable reach data. Label each estimate measured, evidence-based or guess, and never let precise-looking scores hide guesses; a fixed deadline or a blocker on a critical path overrides the score. Record the ranking rationale on the work item. Bind product work to the offering with the company product owner and productId. Plan each release as a work item with release {stage, buildBy, qaDays, thresholds}, per the release plan (`../../references/release-plan.md`).
 8. Check release thresholds against exact QA, engineering and customer evidence on the release work item. Go: record the go decision there under subject release.go:<workId>, with evidence refs and nextAction 'ready to release'; keep release stage 'qa'. No-go: status BLOCKED with the unmet threshold and next action, through transition_company_work(action: 'checkpoint', status: 'BLOCKED', nextAction) when you hold the claim. Stage 'released' is set by the agent that owns the release, once the deploy receipt reads back the deployed artifact and target, citing the receipt; whoever deployed.
 9. When the requested analysis includes validation work, create a scoped Projects item with its acceptance and next action. After verifying a specific successor or confirming the action is complete, update or clear the existing nextAction through its supported current-revision owner transition when allowed; do not leave a superseded action current or create unrequested follow-on work.
-10. Dimension maps: link one top-level map on the offering by the recipe in the product card.
+10. Dimension maps: use the map recipe in the product card.
 11. Run to done (the loop for a goal owner; only f ends it). a) Work the goal's ranked items (step 7) through Engineering and QA. b) Raise each L1 decision or owner-only fact the roadmap needs once in this run, each with options, your recommendation, unlocks and `blocks` naming its own item (run sequence step 5); decide L2/L3 yourself and record it, and build what does not depend on it. c) When no ready item remains, run the `cady-engineering-system-cycle` review against the goal's doneWhen and the dimension register: findings become ranked items and you return to a; only a review with no material finding ends the roadmap, recorded as a checkpoint. d) Release per policy: read policy:release and grant.release:<company> (`cady-company-decision-check` step 2). Under a covering grant, promote through the company's release route yourself; where the policy names who deploys, prepare the exact release (SHA, checks, rollback) and raise one approval ask to that person; with no policy, raise one ask recommending one. Never widen a grant. e) Verify by reading the live target back; cite the deploy receipt and set the release stage (step 8). f) Close the goal: read the target's source (its definition or sourceRef, for example a usage report) and record a reading from it (measure {value, at, sourceRef}); never record a count you did not read. If the release is live, doneWhen holds and the goal's target count is met: the goal call stop {reason: met, evidenceRefs: [review checkpoint, release receipt]}; confirm no OPEN or BLOCKED own items or unresolved effects remain; raise one ask 'Goal <name> is done and live. What next?' with options, and end the run reporting the goal done. The agent is then idle. If the release is live and doneWhen holds but the target count is not yet met: keep the goal open, report the release done, and make driving the target (users, sends, the unit the target counts) the next ranked item; do not stop the goal as met.
 
 ## Acceptance

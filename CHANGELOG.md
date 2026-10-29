@@ -2,6 +2,31 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 3cff3ea9351c22bc · 2026-10-29
+
+Since 0579428259df2dc1: 0 new, 0 dropped, 16 changed.
+
+Changed (the parts that differ):
+- `cady-core-run-sequence`: reference reporting.md
+- `cady-core-skill-index`: gtm
+- `cady-engineering-independent-review`: Independent review
+- `cady-engineering-method`: reference domain-method.md
+- `cady-engineering-system-cycle`: Procedure, Result, new References
+- `cady-gtm-cold-email-cycle`: description, intro, Procedure
+- `cady-gtm-method`: Role card, Selected judgment, reference domain-method.md
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-reply`: description, intro, Procedure
+- `cady-gtm-tam-map`: Procedure, Acceptance
+- `cady-gtm-warm-email`: description, intro, Inputs, Procedure, Acceptance, Owner checks
+- `cady-marketing-method`: Selected judgment
+- `cady-orchestrator-method`: Role card
+- `cady-product-manage`: Procedure
+- `cady-product-method`: reference domain-method.md
+- `cady-sales-method`: Selected judgment
+  Fork merge note: drop step 3's dimension seed list; route software quality through component.quality_classes and keep owner naming in step 3.
+
+Shared references changed: outreach-message-rules.md, quality-classes.md.
+
 ## 0579428259df2dc1 · 2026-10-28
 
 Since f2ab4ebd3a461f29: 0 new, 0 dropped, 11 changed.

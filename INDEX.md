@@ -42,7 +42,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps. (`library/cady-gtm-pipeline-pass/SKILL.md`)
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop. (`library/cady-gtm-reply/SKILL.md`)
 - `cady-gtm-tam-map`: Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts. (`library/cady-gtm-tam-map/SKILL.md`)
-- `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship. (`library/cady-gtm-warm-email/SKILL.md`)
+- `cady-gtm-warm-email`: Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches. (`library/cady-gtm-warm-email/SKILL.md`)
 - `cady-marketing-method`: Marketing role card: what this function owns and decides (`library/cady-marketing-method/SKILL.md`)
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review. (`library/cady-sales-deal-motion/SKILL.md`)
 - `cady-sales-method`: Sales role card: what this function owns and decides (`library/cady-sales-method/SKILL.md`)

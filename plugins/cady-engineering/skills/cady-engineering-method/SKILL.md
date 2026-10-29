@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "0c363b78d7e1add049ad"
-  library: "0579428259df2dc1"
+  version: "46b4f109912d5964d818"
+  library: "3cff3ea9351c22bc"
   function: "engineering"
 ---
 # Engineering
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "0c363b78d7e1add049ad@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "46b4f109912d5964d818@3cff3ea9351c22bc"}})`
 
 ## Role card
 
