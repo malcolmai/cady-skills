@@ -2,6 +2,19 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 54fe8596475dc503 · 2026-10-29
+
+Since 5c758e5ce6d98262: 0 new, 0 dropped, 7 changed.
+
+Changed (the parts that differ):
+- `cady-design-method`: Role card
+- `cady-engineering-method`: Role card, reference domain-method.md
+- `cady-gtm-tam-map`: Procedure
+- `cady-marketing-method`: reference domain-method.md
+- `cady-product-method`: Role card
+- `cady-qa-method`: Role card
+- `cady-qa-stories`: Procedure
+
 ## 5c758e5ce6d98262 · 2026-10-29
 
 Since 058240a4660e244d: 0 new, 0 dropped, 7 changed.
