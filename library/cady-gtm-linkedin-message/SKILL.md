@@ -1,21 +1,21 @@
 ---
 name: "cady-gtm-linkedin-message"
-description: "LinkedIn message. Use when: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits. Not for: Public LinkedIn posts, email, or a reply in a live thread; cold email uses `cady-gtm-cold-email-cycle`."
+description: "Social direct message. Use when: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too. Not for: Public posts, email, or a reply in a live thread (`cady-gtm-reply`); cold email uses `cady-gtm-cold-email-cycle`."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "0fcb3e18fe2b59fc8591"
-  library: "010d8211a6a994a9"
+  version: "82b235f2aa63a6f6ef19"
+  library: "058240a4660e244d"
   function: "gtm"
 ---
-# LinkedIn message
+# Social direct message
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "0fcb3e18fe2b59fc8591@010d8211a6a994a9"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "82b235f2aa63a6f6ef19@058240a4660e244d"}})`
 
-Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
+Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
 
-**Not for:** Public LinkedIn posts, email, or a reply in a live thread; cold email uses `cady-gtm-cold-email-cycle`.
+**Not for:** Public posts, email, or a reply in a live thread (`cady-gtm-reply`); cold email uses `cady-gtm-cold-email-cycle`.
 
 **Unit of work:** one work item per cohort of 20 or fewer. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
@@ -40,11 +40,11 @@ Draft a LinkedIn connection note or direct message to one person, or its one fol
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
 2. Read the profile and available context. Use genuine common ground such as a shared event, past employer, school or interest in their posts. Mention a mutual connection only when they have identified it. Never invent closeness.
-3. A connection note gives one honest reason to connect, with no pitch, ask or company name. For a first message to an existing connection, use a subtle personal note about what you are working on, why it may be relevant, and that you would be glad to chat sometime. Avoid product names and links. Judge it with the taste check (../../references/taste-check.md, message part) before review.
+3. A LinkedIn connection note gives one honest reason to connect, with no pitch, ask or company name. For a first direct message, use a subtle personal note about what you are working on, why it may be relevant, and that you would be glad to chat sometime. Avoid product names and links. Judge it with the taste check (../../references/taste-check.md, message part) before review.
 4. Read crm.get_party for every recipient. Exclude and explain a recorded opt-out or destination suppression; never overwrite it.
-5. Pace like a person within the company's LinkedIn caps: 20 connection requests per rolling day, and 100 per rolling week, spread across working hours (the review holds anything over them); tell the owner which invitations have been pending over three weeks so they can withdraw them; a falling acceptance rate means the targeting or note is wrong, not that volume should rise.
+5. Pace like a person within existing channel caps: 20 messages per rolling day and 100 per rolling week, spread across working hours; host sends keep that count too. On LinkedIn, tell the owner which invitations have been pending over three weeks so they can withdraw them; a falling acceptance rate means the targeting or note is wrong, not that volume should rise.
 6. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare one body per recipient with crm.prepare_outreach_review and read it with crm.get_outreach_review; keep connection notes, first messages and follow-ups in distinct cohorts. Give prepare a one-line justification (why this send now). Then follow release.
-7. LinkedIn send with your own connector, in order: prepare; confirm it (self-approve in notify mode with crm.outreach.confirm, an active grant, or the person's review); only then send exactly the approved text with your own LinkedIn connector, never before and never to a party the confirmed review does not cover; note each send with crm.record_interactions (kind note, approvalId) then schedule the follow-up with crm.set_track so it shows in the due follow-ups view; details as outreach_release says. Cady keeps no release ledger or cap count here, so hold the 20 a day, 100 a week pacing yourself. With no LinkedIn connector, run crm.execute_approved_outreach with executor device and the user's `cady exec <ticket>` sends instead.
+7. Social send with your own connector, in order: prepare; confirm it (self-approve in notify mode with crm.outreach.confirm, an active grant, or the person's review); only then send exactly the approved text with your own channel connector, never before and never to a party the confirmed review does not cover; record each explicit outreachOutcome with crm.record_interactions by following readiness.nextAction as outreach_release says, then schedule the follow-up with crm.set_track so it shows in the due follow-ups view. Honor the returned holds and the 20 a day, 100 a week pacing. With no channel connector, run crm.execute_approved_outreach with executor device and the user's `cady exec <ticket>` sends instead.
 8. Allow one follow-up only, with something new, under the follow-up rule (message rules, follow_up), after the outcome check has read the thread. Anyone who replies leaves follow-up and moves to `cady-gtm-reply`. Recheck permission and suppression before preparing.
 9. Stop rule: a security challenge (verify identity, CAPTCHA, forced sign-in), a restriction or warning notice, a weekly-limit or rate-limit message, or an unusual-activity prompt stops all work on that account at once. Prepare and release nothing more on it, pause any active grant with crm.manage_outreach_grant action 'pause', and do not retry, wait it out, or switch tool, account or browser automation. Tell the owner what appeared and when; resume only after the owner confirms the account is clear.
 

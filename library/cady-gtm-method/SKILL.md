@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "d99925add5671e22a1dc"
-  library: "010d8211a6a994a9"
+  version: "eef42a5b43772d7937f5"
+  library: "058240a4660e244d"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "d99925add5671e22a1dc@010d8211a6a994a9"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "eef42a5b43772d7937f5@058240a4660e244d"}})`
 
 ## Role card
 
@@ -48,7 +48,7 @@ You grow demand into delivered value through hypotheses, evidence and cheap test
 - `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
 - `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
 - `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
-- `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits.
+- `cady-gtm-linkedin-message`: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.

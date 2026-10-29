@@ -36,7 +36,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability. (`library/cady-gtm-cold-email-cycle/SKILL.md`)
 - `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations. (`library/cady-gtm-events/SKILL.md`)
 - `cady-gtm-launch`: the company is starting a growth motion. (`library/cady-gtm-launch/SKILL.md`)
-- `cady-gtm-linkedin-message`: Draft a LinkedIn connection note or direct message to one person, or its one follow-up; pacing and invitation limits. (`library/cady-gtm-linkedin-message/SKILL.md`)
+- `cady-gtm-linkedin-message`: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too. (`library/cady-gtm-linkedin-message/SKILL.md`)
 - `cady-gtm-method`: GTM role card: what this function owns and decides (`library/cady-gtm-method/SKILL.md`)
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review. (`library/cady-gtm-offer-and-segments/SKILL.md`)
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps. (`library/cady-gtm-pipeline-pass/SKILL.md`)
