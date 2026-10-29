@@ -2,6 +2,19 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 5c758e5ce6d98262 · 2026-10-29
+
+Since 058240a4660e244d: 0 new, 0 dropped, 7 changed.
+
+Changed (the parts that differ):
+- `cady-fundraise-investor-list`: Procedure
+- `cady-gtm-calls`: Procedure
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-pipeline-pass`: Procedure
+- `cady-gtm-reply`: Procedure
+- `cady-gtm-tam-map`: Procedure
+- `cady-sales-deal-motion`: Procedure
+
 ## 058240a4660e244d · 2026-10-29
 
 Since 010d8211a6a994a9: 0 new, 0 dropped, 4 changed.

@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
   version: "b68ca1bd77841d8f8bc5"
-  library: "058240a4660e244d"
+  library: "5c758e5ce6d98262"
   function: "engineering"
 ---
 # Independent review
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "b68ca1bd77841d8f8bc5@058240a4660e244d"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "b68ca1bd77841d8f8bc5@5c758e5ce6d98262"}})`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
 

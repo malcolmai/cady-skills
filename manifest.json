@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-29T00:00:00Z",
   "bundle": {
-    "tag": "058240a4660e244d",
-    "version": "058240a4660e244d882bbe4991ef8ef59d2d19d02c04a875c4ba35f7744c5ace",
-    "pluginVersion": "2026.10.29-058240a4"
+    "tag": "5c758e5ce6d98262",
+    "version": "5c758e5ce6d982622c84bc169d249a0c4e1a0b53a6e0271949cdf7b05ddb270f",
+    "pluginVersion": "2026.10.29-5c758e5c"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.29-058240a4"
+    "version": "2026.10.29-5c758e5c"
   },
   "skills": [
     {
@@ -237,7 +237,7 @@
       "name": "cady-fundraise-investor-list",
       "path": "library/cady-fundraise-investor-list",
       "cadyId": "skill.fundraise.investor_list",
-      "version": "aa94328b828f5c4f8242"
+      "version": "a421b2199a8deb4bea96"
     },
     {
       "name": "cady-fundraise-investor-outreach",
@@ -267,7 +267,7 @@
       "name": "cady-gtm-calls",
       "path": "library/cady-gtm-calls",
       "cadyId": "skill.gtm.calls",
-      "version": "af70093542cf3d320ff3"
+      "version": "e84648121c919d2d7336"
     },
     {
       "name": "cady-gtm-cold-email-cycle",
@@ -303,25 +303,25 @@
       "name": "cady-gtm-offer-and-segments",
       "path": "library/cady-gtm-offer-and-segments",
       "cadyId": "skill.gtm.offer_and_segments",
-      "version": "79ad8c465984b70ff5a1"
+      "version": "30881fd357d54e224cc6"
     },
     {
       "name": "cady-gtm-pipeline-pass",
       "path": "library/cady-gtm-pipeline-pass",
       "cadyId": "skill.gtm.pipeline_pass",
-      "version": "974d23532dabdd8e71ac"
+      "version": "a01973f846e09ae789da"
     },
     {
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "9fdd900d69a66ecb49a0"
+      "version": "754b7e8d1b329542892a"
     },
     {
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "e4d4bfeaf32447ae95ca"
+      "version": "24dc8e6df7f2d647793e"
     },
     {
       "name": "cady-gtm-warm-email",
@@ -387,7 +387,7 @@
       "name": "cady-sales-deal-motion",
       "path": "library/cady-sales-deal-motion",
       "cadyId": "skill.sales.deal_motion",
-      "version": "18082de4ff8f047e4199"
+      "version": "7a6dcc3c20d5fc1d2c73"
     },
     {
       "name": "cady-sales-method",
