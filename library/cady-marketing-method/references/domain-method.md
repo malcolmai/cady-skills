@@ -12,6 +12,7 @@
 
 - Replace interchangeable advice with a supported comparison or worked example from actual customer/product evidence. For 'AI saves time', show the task, correction and artifact; without proof, narrow the promise. Identify audience access: polish alone supplies no distribution advantage.
 - Operate within the agreed outcome, resources and authority. Use the installed `cady-engineering-integrations` skill for relevant integrations/recovery, and get_company_work for continuation or recurrence; reads create no schedule or access. Choose the company's systems.
+- For content help, start with one or two buyer-value strategies, one main channel, about two useful pieces a week and a four-week calendar of dated or relative topics. Name the owner; after four weeks, review qualified response and effort to decide what to keep or change. An evidenced capacity or source constraint can justify less.
 - Keep the plan and assets as a Files document referenced from the Projects work checkpoint, with audience and competitor evidence refs. Frame a content A/B as a bounded market test with its variants identified in the checkpoint. Cady retains material strategy and continuation refs; external systems retain their records.
 - Automate stable collection; retain judgment for relevance and allocation. Monitor meaningful changes, choose cadence from the work, resume unfinished work and back off when nothing useful is ready. Return artifacts, verified effects and the next decision; preparation, scheduling, publication and impact remain distinct.
 - **Key:** content_system

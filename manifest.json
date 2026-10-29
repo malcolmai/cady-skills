@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-29T00:00:00Z",
   "bundle": {
-    "tag": "5c758e5ce6d98262",
-    "version": "5c758e5ce6d982622c84bc169d249a0c4e1a0b53a6e0271949cdf7b05ddb270f",
-    "pluginVersion": "2026.10.29-5c758e5c"
+    "tag": "54fe8596475dc503",
+    "version": "54fe8596475dc5032365c587af1b19da93cc588ac4c3995c5b756e1f016ce857",
+    "pluginVersion": "2026.10.29-54fe8596"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.29-5c758e5c"
+    "version": "2026.10.29-54fe8596"
   },
   "skills": [
     {
@@ -165,7 +165,7 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "db03562d580110c5a7b7"
+      "version": "4a5abdd1d8284d22c1ca"
     },
     {
       "name": "cady-design-wcag-audit",
@@ -195,7 +195,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "46b4f109912d5964d818"
+      "version": "2291976d556a478ea6d6"
     },
     {
       "name": "cady-engineering-system-cycle",
@@ -321,7 +321,7 @@
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "24dc8e6df7f2d647793e"
+      "version": "4c8c4e06bc10e13befb7"
     },
     {
       "name": "cady-gtm-warm-email",
@@ -333,7 +333,7 @@
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "3a0663b9850b672bae9b"
+      "version": "2121f8723fc349d2fea5"
     },
     {
       "name": "cady-orchestrator-method",
@@ -357,7 +357,7 @@
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "9f6963c0d59ef4cf5484"
+      "version": "94d9f17ba893823b5d2c"
     },
     {
       "name": "cady-product-research",
@@ -369,13 +369,13 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "2db0a742ffd046e070e8"
+      "version": "e2c4a54d5e75b406fde5"
     },
     {
       "name": "cady-qa-stories",
       "path": "library/cady-qa-stories",
       "cadyId": "skill.qa.stories",
-      "version": "83fd1e800da7c0be4e35"
+      "version": "93e17729590575c7baa0"
     },
     {
       "name": "cady-qa-triage",
