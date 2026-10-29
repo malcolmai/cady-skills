@@ -2,6 +2,17 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 2d888919432f63ca · 2026-10-29
+
+Since e9d240df89fd3ed3: 0 new, 0 dropped, 5 changed.
+
+Changed (the parts that differ):
+- `cady-company-decision-check`: Procedure
+- `cady-company-manage-agents`: Procedure
+- `cady-core-run-sequence`: Run sequence
+- `cady-gtm-method`: Role card
+- `cady-orchestrator-method`: Role card
+
 ## e9d240df89fd3ed3 · 2026-10-29
 
 Since 3cff3ea9351c22bc: 0 new, 0 dropped, 3 changed.
