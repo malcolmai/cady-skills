@@ -2,6 +2,16 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 010d8211a6a994a9 · 2026-10-29
+
+Since 2d888919432f63ca: 0 new, 0 dropped, 2 changed.
+
+Changed (the parts that differ):
+- `cady-core-run-sequence`: Run sequence
+- `cady-gtm-tam-map`: Procedure
+
+Shared references changed: tam-map-import.md.
+
 ## 2d888919432f63ca · 2026-10-29
 
 Since e9d240df89fd3ed3: 0 new, 0 dropped, 5 changed.

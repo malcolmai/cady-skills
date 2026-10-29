@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
   version: "021b82543d0671241eeb"
-  library: "2d888919432f63ca"
+  library: "010d8211a6a994a9"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "021b82543d0671241eeb@2d888919432f63ca"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "021b82543d0671241eeb@010d8211a6a994a9"}})`
 
 A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 
