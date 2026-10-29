@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "38d93271b5a1aea0fead"
-  library: "0579428259df2dc1"
+  version: "79ad8c465984b70ff5a1"
+  library: "3cff3ea9351c22bc"
   function: "gtm"
 ---
 # Offer and segments
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "38d93271b5a1aea0fead@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "79ad8c465984b70ff5a1@3cff3ea9351c22bc"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 
@@ -40,7 +40,7 @@ Choose or revise the target segment, offer or message angle from evidence, befor
 4. Inventory real, permissioned customer proof by problem and outcome; how proof is chosen for a message is in the cold email copy rules (`cady-gtm-cold-email-cycle`). Omit proof when none fits.
 5. Use crm.update_party to record company_name, industry and proof approval on their owner records. Read current permission and engagement with crm.get_party; record engagement evidence with crm.record_interactions, never as a free label.
 6. Variant shares and the cold email quota are in `cady-gtm-cold-email-cycle`; do not claim statistical certainty from small samples. Volume beyond the quota needs a sender the owner chooses and authorizes separately; its outcomes are recorded as the outcome check says.
-7. Prepare the recommended direction revision with update_company_direction, including evidence, alternatives and the reversal condition. Read the accepted direction with read_cady company:direction before treating it as current.
+7. Prepare the recommended direction revision with update_company_direction, including evidence, alternatives and the reversal condition. Read the accepted direction with read_cady company:direction before treating it as current. When the chosen audience needs sourcing, carry the GTM plan_into_work identity/List acceptance into `cady-gtm-tam-map` and execute it alongside the open hypothesis test.
 
 ## Acceptance
 

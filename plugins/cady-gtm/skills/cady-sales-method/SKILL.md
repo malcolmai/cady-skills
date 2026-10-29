@@ -5,19 +5,19 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "a16e5671c28366a6cdcd"
-  library: "0579428259df2dc1"
+  version: "621fd0642e90adb8a3bf"
+  library: "3cff3ea9351c22bc"
   function: "sales"
 ---
 # Sales
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "a16e5671c28366a6cdcd@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "621fd0642e90adb8a3bf@3cff3ea9351c22bc"}})`
 
 ## Parent function
 gtm
 
 ## Selected judgment
-- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership before message preparation; use `cady-gtm-tam-map` for the reviewed import, completion receipt and membership readback. Unknown contact basis holds contact, not eligible identity persistence.
+- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation. Unknown contact basis holds release, not eligible identity persistence or held review preparation.
 - Establish the actual buying trigger, current alternative, buyer, user and approver, budget and switching barriers. For outreach, bind the exact relationship, recipient, thread and source to current contact permission. Qualification and permission are different decisions; a plausible buyer is not a permitted send.
 
 - Read [Domain method](references/domain-method.md) when you work a deal.

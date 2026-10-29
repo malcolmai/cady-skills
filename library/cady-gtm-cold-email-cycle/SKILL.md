@@ -1,21 +1,21 @@
 ---
 name: "cady-gtm-cold-email-cycle"
-description: "Cold email cycle. Use when: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability. Not for: Engaged or unverified parties, replies in a live thread, and every follow-up, which goes as its own review through `cady-gtm-warm-email`."
+description: "Cold email cycle. Use when: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability. Not for: Engaged parties, partner or organiser business approaches, replies in a live thread, and every follow-up; use `cady-gtm-warm-email` for partner approaches and follow-ups, or `cady-gtm-reply` for inbound replies. Missing verification holds release, not held preparation."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "11839ecc77b20cf83b60"
-  library: "0579428259df2dc1"
+  version: "a1a365d2183c64a95e37"
+  library: "3cff3ea9351c22bc"
   function: "gtm"
 ---
 # Cold email cycle
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "11839ecc77b20cf83b60@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "a1a365d2183c64a95e37@3cff3ea9351c22bc"}})`
 
 Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
 
-**Not for:** Engaged or unverified parties, replies in a live thread, and every follow-up, which goes as its own review through `cady-gtm-warm-email`.
+**Not for:** Engaged parties, partner or organiser business approaches, replies in a live thread, and every follow-up; use `cady-gtm-warm-email` for partner approaches and follow-ups, or `cady-gtm-reply` for inbound replies. Missing verification holds release, not held preparation.
 
 **Unit of work:** one work item per segment and cycle, cohort of 50 or fewer parties. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
@@ -37,8 +37,8 @@ Write and send cold email to people not yet contacted, one template per segment;
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
 2. Use a work item bound to `cady-gtm-cold-email-cycle`. If starting one, call submit_company_work_checkpoint with this methodId, its current methodVersion, segment, cycle and evidence refs.
-3. Read direction and List, run the outcome check on prior releases (message rules, outcome_check) and read crm.get_party. Exclude opted-out, suppressed, deferred, engaged or unresolved unverified contacts, prior touches and missing names, each with a reason. List hygiene: verify every address before its first send (message rules, permission); keep catch-all a small share of a cohort; skip role inboxes (info, sales, support); never buy a list; re-verify data older than about 90 days.
-4. Check the sender before the first cycle and after any change, as the deliverability reference says (`../../references/cold-deliverability.md`): a secondary sending domain, SPF, DKIM and DMARC passing on a test send, and a warmed-up mailbox. Cady cannot see DNS or reputation, so the user or host checks and you record what was shown. The company quota below still binds.
+3. Read direction and List, run the outcome check on prior releases (message rules, outcome_check) and read crm.get_party. Exclude opted-out, suppressed, engaged contacts, prior touches and missing names, each with a reason. Keep no_basis, deferred and unverified destinations visible as held recipients under the CRM preparation readiness rules. List hygiene: verify every address before its first send (message rules, permission); keep catch-all a small share of a cohort; skip role inboxes (info, sales, support); never buy a list; re-verify data older than about 90 days.
+4. Check the sender before the first release and after any change, as the deliverability reference says (`../../references/cold-deliverability.md`): a secondary sending domain, SPF, DKIM and DMARC passing on a test send, and a warmed-up mailbox. Cady cannot see DNS or reputation, so the user or host checks and you record what was shown. Missing mailbox or verification holds release; continue native review preparation. The company quota below still binds.
 5. Draft two or three framings of an honest reason to contact this segment, then write one plain template with an easy_yes ask. An offer is optional. Personalise at most at the account level, with one sourced reason (a dated, cited fact about the account that explains why now); in cold_template mode that reason belongs to the segment, so give accounts that share it their own segmentKey. No flattery, fake familiarity, person-level trivia or AI personalisation. Plain text, no images or attachments, at most one link. Judge it with the taste check (../../references/taste-check.md, message part) before review.
 6. Choose one to three variants. Shares are guidance: about 40/30/30 early; consider 70/20/10 only after a winner holds for two cycles (a practitioner heuristic, unverified). Small arms are underpowered; favor large reason or angle differences and qualitative reply learning.
 7. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare crm.prepare_outreach_review with mode 'cold_template', cycleKey, segmentKey, variants, proof and listId or partyIds. For a linked template, include trackedLink {destination: '<final https>'}. Do not provide recipientBodies. Cold first touch follows the shared 30-day release cycle per party and channel; cycleKey groups results only. Follow-ups never go in the cycle (the follow-up rule). The company cold email quota is 100 recipients per rolling day and 500 per rolling week, with no lifetime total; above it, use a sender such as Instantly and record its outcomes as outcome_check says.

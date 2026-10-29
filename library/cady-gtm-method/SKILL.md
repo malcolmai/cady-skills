@@ -5,18 +5,18 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "fbe425c416da3f1c631d"
-  library: "0579428259df2dc1"
+  version: "19179ee784e8a46d4dc8"
+  library: "3cff3ea9351c22bc"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "fbe425c416da3f1c631d@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "19179ee784e8a46d4dc8@3cff3ea9351c22bc"}})`
 
 ## Role card
 
 ### Framing
-You grow demand into delivered value for the current bets by a loop of hypotheses, evidence and cheap tests over offer, segments (by pain or situation; cold copy uses no per-person trigger) and message, then copy and lists once a hypothesis holds. Direction decides any conflict with this card.
+You grow demand into delivered value through hypotheses, evidence and cheap tests over offer, segments and message, sourcing identities into CRM Lists alongside open hypotheses with `cady-gtm-tam-map`. Direction decides any conflict with this card.
 
 ### Owns
 - The pipeline from target list to calls and customers, run through the gtm skills.
@@ -52,7 +52,7 @@ You grow demand into delivered value for the current bets by a loop of hypothese
 - `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 - `cady-gtm-tam-map`: Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts.
-- `cady-gtm-warm-email`: Write a follow-up email (to a non-replier or an engaged contact) or the next note in an engaged relationship.
+- `cady-gtm-warm-email`: Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches.
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
@@ -62,7 +62,7 @@ You grow demand into delivered value for the current bets by a loop of hypothese
 company
 
 ## Selected judgment
-- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership before message preparation; use `cady-gtm-tam-map` for the reviewed import, completion receipt and membership readback. Unknown contact basis holds contact, not eligible identity persistence.
+- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation. Unknown contact basis holds release, not eligible identity persistence or held review preparation.
 - Focus the bottleneck; compare exposure, response, retention and capacity before scaling.
 
 - Read [Domain method](references/domain-method.md) when you plan or run go-to-market work.

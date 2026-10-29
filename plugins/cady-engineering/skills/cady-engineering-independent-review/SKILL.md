@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "e7019b6629da742883d7"
-  library: "0579428259df2dc1"
+  version: "b68ca1bd77841d8f8bc5"
+  library: "3cff3ea9351c22bc"
   function: "engineering"
 ---
 # Independent review
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "e7019b6629da742883d7@0579428259df2dc1"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "b68ca1bd77841d8f8bc5@3cff3ea9351c22bc"}})`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
 
@@ -24,7 +24,7 @@ Independently review a diff or artifact: rerun its checks, rank findings and ret
 - **Every change:** Edge cases (empty, null, duplicate, very large, concurrent, retried), error paths, a parallel path that duplicates an existing owner (search the same nouns and verbs), dead code and stale docs.
 - **Tests:** Each new test fails without the change (in a scratch copy or a separate worktree at the base SHA, never the reviewed tree, revert the fix and watch it fail); it asserts the contract, not the implementation; it has no sleeps, order dependence or live provider calls; a deleted, skipped or loosened test carries its reason. Evidence: your rerun counts and, for a bug fix, the regression test failing on the base.
 - **Ui:** Loading, empty, error, denied and long-content states; keyboard operation, labels and focus; representative viewports; copy that says what happened and what to do next. Evidence: rendered captures of the changed states at representative viewports; code reading alone cannot prove a UI change. Accessibility depth follows `cady-design-wcag-audit`.
-- **Checks:** Rerun the checks the producer names, and any you doubt, at the reviewed head on a clean tree, and report your own command and counts. A result from another SHA, a dirty tree or a relayed message is unrun, not passed. Read beyond the changed lines: callers of changed functions, the other writers of the same data, and what is missing (a test, a migration, a doc, a second entry point).
+- **Checks:** Rerun the checks the producer names, and any you doubt, at the reviewed head on a clean tree, and report your own command and counts. A result from another SHA, a dirty tree or a relayed message is unrun, not passed. Read beyond the changed lines: callers of changed functions, the other writers of the same data, and what is missing (a test, a migration, a doc, a second entry point). When a software brief names owner × quality cells, use them as lenses with `../../references/quality-classes.md`; otherwise use the change classes below. Those classes remain the evidence floor.
 - **Findings:** Rank by consequence. Blocker: wrong behaviour, a security, isolation or authority defect, data-loss risk, or a claimed check that does not hold; it must be fixed before merge. Should fix: a real defect or maintenance cost; it lands only with the owner's acceptance and a tracked item. Nit: optional and labelled as such. Each finding gives file:line, what is wrong, the failure it causes and a suggested fix, and says whether it is verified or suspected. Name real strengths briefly; an approval with no findings is valid when the evidence supports it.
 - **Gotchas:** Approving from the summary; nitpicking style while missing an authority hole; reviewing only the diff and not its callers; treating 'tests pass' as proof the tests test anything; one reviewer reviewing their own fix.
 - **Independence:** Refuse a review of work you produced or watched being produced, and say so; the requester finds another reviewer. Start from the brief, acceptance and the exact diff at named base and head SHAs (git diff <base>...<head>), not the producer's summary or verdict; read the producer's reasoning only after your own findings are written.
