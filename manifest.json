@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-29T00:00:00Z",
   "bundle": {
-    "tag": "2d888919432f63ca",
-    "version": "2d888919432f63ca38919b35c04e2faaad920d4035f336dab8f8df3b17a34b70",
-    "pluginVersion": "2026.10.29-2d888919"
+    "tag": "010d8211a6a994a9",
+    "version": "010d8211a6a994a903648646af29728ec0fb0123f7f5dfdaa5864b63f6bbfdb5",
+    "pluginVersion": "2026.10.29-010d8211"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.29-2d888919"
+    "version": "2026.10.29-010d8211"
   },
   "skills": [
     {
@@ -141,7 +141,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "1a01bcca357af87fe33b"
+      "version": "57d4c47b39ed511231f9"
     },
     {
       "name": "cady-core-skill-index",
@@ -285,7 +285,7 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "90155a5c4c10206a4d5e"
+      "version": "bff41e928d85520ff044"
     },
     {
       "name": "cady-gtm-linkedin-message",
@@ -321,7 +321,7 @@
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "b33e8c196d3aee8c69b6"
+      "version": "e4d4bfeaf32447ae95ca"
     },
     {
       "name": "cady-gtm-warm-email",
