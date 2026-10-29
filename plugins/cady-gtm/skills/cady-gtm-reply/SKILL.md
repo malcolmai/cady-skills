@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
   version: "6d2003bccec21723fa84"
-  library: "e9d240df89fd3ed3"
+  library: "2d888919432f63ca"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "6d2003bccec21723fa84@e9d240df89fd3ed3"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "6d2003bccec21723fa84@2d888919432f63ca"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 

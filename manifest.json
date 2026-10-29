@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-29T00:00:00Z",
   "bundle": {
-    "tag": "e9d240df89fd3ed3",
-    "version": "e9d240df89fd3ed32200fc2dc00f3d6279aaa32422bd1953de688750e67004c8",
-    "pluginVersion": "2026.10.29-e9d240df"
+    "tag": "2d888919432f63ca",
+    "version": "2d888919432f63ca38919b35c04e2faaad920d4035f336dab8f8df3b17a34b70",
+    "pluginVersion": "2026.10.29-2d888919"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.29-e9d240df"
+    "version": "2026.10.29-2d888919"
   },
   "skills": [
     {
@@ -39,7 +39,7 @@
       "name": "cady-company-decision-check",
       "path": "library/cady-company-decision-check",
       "cadyId": "skill.company.decision_check",
-      "version": "e5e04ce41a6ba1dacc99"
+      "version": "7b3b4da129c45f65687d"
     },
     {
       "name": "cady-company-decision-questions",
@@ -63,7 +63,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "c4664c6244af8f4cb8a4"
+      "version": "8000278035502480a8d8"
     },
     {
       "name": "cady-company-method",
@@ -141,7 +141,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "257a45f424724386ba9c"
+      "version": "1a01bcca357af87fe33b"
     },
     {
       "name": "cady-core-skill-index",
@@ -297,7 +297,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "97482f2a347e93dc9f15"
+      "version": "d99925add5671e22a1dc"
     },
     {
       "name": "cady-gtm-offer-and-segments",
@@ -339,7 +339,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "06d9f52b3888010d9b6b"
+      "version": "7a171f4d8ae5d2151a8c"
     },
     {
       "name": "cady-product-customer-interview",
