@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "6d2003bccec21723fa84"
-  library: "010d8211a6a994a9"
+  version: "9fdd900d69a66ecb49a0"
+  library: "058240a4660e244d"
   function: "gtm"
 ---
 # Reply in a live thread
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "6d2003bccec21723fa84@010d8211a6a994a9"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "9fdd900d69a66ecb49a0@058240a4660e244d"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 
@@ -37,7 +37,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 
 ## Procedure
 
-1. For a first touch, use `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`; for a follow-up to someone who has not replied, use `cady-gtm-warm-email` for email or `cady-gtm-linkedin-message` for LinkedIn.
+1. For a first touch, use `cady-gtm-cold-email-cycle` for customer cold email or `cady-gtm-warm-email` for other email; for an email no-reply follow-up use `cady-gtm-warm-email`. Non-email first messages and no-reply follow-ups use `cady-gtm-linkedin-message`.
 2. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
 3. Read the actual inbound thread through its authorized connector and crm.get_party; for Cady-held email, use the outcome check and crm.find_communications/crm.get_communication. Keep the same channel and recipient. Other channels use route A or the approved device route, never a Cady email account. Exclude anything permission rules block. A channel-specific stop that Cady cannot store remains an explicit no-send hold in the task; do not silently discard it or broaden its scope.
 4. Triage the newest inbound message before drafting anything. Pick one class; when several apply, stop wins, then wrong person, then objection over positive. File it with crm.record_interactions (sourceRef the provider message id) if outcome_check has not.

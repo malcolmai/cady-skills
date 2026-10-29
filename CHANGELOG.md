@@ -2,6 +2,18 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 058240a4660e244d · 2026-10-29
+
+Since 010d8211a6a994a9: 0 new, 0 dropped, 4 changed.
+
+Changed (the parts that differ):
+- `cady-core-skill-index`: gtm
+- `cady-gtm-linkedin-message`: description, intro, Procedure
+- `cady-gtm-method`: Role card, reference domain-method.md
+- `cady-gtm-reply`: Procedure
+
+Shared references changed: outreach-message-rules.md.
+
 ## 010d8211a6a994a9 · 2026-10-29
 
 Since 2d888919432f63ca: 0 new, 0 dropped, 2 changed.
