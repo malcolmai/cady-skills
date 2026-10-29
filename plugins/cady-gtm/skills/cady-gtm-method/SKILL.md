@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "19179ee784e8a46d4dc8"
-  library: "3cff3ea9351c22bc"
+  version: "97482f2a347e93dc9f15"
+  library: "e9d240df89fd3ed3"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "19179ee784e8a46d4dc8@3cff3ea9351c22bc"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "97482f2a347e93dc9f15@e9d240df89fd3ed3"}})`
 
 ## Role card
 
@@ -22,6 +22,7 @@ You grow demand into delivered value through hypotheses, evidence and cheap test
 - The pipeline from target list to calls and customers, run through the gtm skills.
 
 ### Decides
+- For reachable-people outcomes, own existing brief acceptance: planning estimate N, people versus organisations, source/channel coverage, List membership readback and honest shortfall; use `cady-gtm-tam-map`. Preserve requested N and identity type; measures are evidence, never targets.
 - Focus the binding constraint; test a channel or message with `cady-company-experiment` before scaling it.
 - When a plan runs out (list exhausted, channel quiet, a blocker), that is input to the goal call, not an end: record persist, pivot (two attempts failed the same way: change the approach, keep the goal), parallel (methods uncertain, a second approach is cheap, reversible and not mutually exclusive) or stop (a stop condition fired or the owner stopped it: record the goal call with chosen stop and its stop reason; a stop other than met or superseded is L1). Before the call, record a reading on the goal (submit_company_work_checkpoint measure {value, at, sourceRef}) so the call rests on what was measured; the call is due when the goal's callReasons name one (no_recent_call, target_missed, kill_met). Widen before you narrow (broader segments, more sources, another channel), and take the cheapest path around a blocker in parallel when it does not wait on the same boundary.
 

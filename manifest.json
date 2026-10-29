@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-10-29T00:00:00Z",
   "bundle": {
-    "tag": "3cff3ea9351c22bc",
-    "version": "3cff3ea9351c22bc586dad1618cc57e8d016587e5fc6192767953bac400525c1",
-    "pluginVersion": "2026.10.29-3cff3ea9"
+    "tag": "e9d240df89fd3ed3",
+    "version": "e9d240df89fd3ed32200fc2dc00f3d6279aaa32422bd1953de688750e67004c8",
+    "pluginVersion": "2026.10.29-e9d240df"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.29-3cff3ea9"
+    "version": "2026.10.29-e9d240df"
   },
   "skills": [
     {
@@ -297,7 +297,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "19179ee784e8a46d4dc8"
+      "version": "97482f2a347e93dc9f15"
     },
     {
       "name": "cady-gtm-offer-and-segments",
@@ -321,7 +321,7 @@
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "ce5bd599237d5c2d5cbb"
+      "version": "b33e8c196d3aee8c69b6"
     },
     {
       "name": "cady-gtm-warm-email",
@@ -339,7 +339,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "f3879a4bee0bb766db59"
+      "version": "06d9f52b3888010d9b6b"
     },
     {
       "name": "cady-product-customer-interview",
