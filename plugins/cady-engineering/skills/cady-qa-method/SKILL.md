@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "251b17bb6f132091e622"
-  library: "fe3f13ff23b3e9dc"
+  version: "aad84c8050203df4589f"
+  library: "f44961b8fb7e17b5"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "251b17bb6f132091e622@fe3f13ff23b3e9dc"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "aad84c8050203df4589f@f44961b8fb7e17b5"}})`
 
 ## Role card
 
@@ -21,7 +21,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 ### Owns
 - Stories are the app's journeys, walked blind as a fresh user and kept with `stories.*`; follow `cady-qa-stories`.
 - Visual pass (occasional: before a release with UI changes or on request, never per commit; run the project's visual review, if it has one, which shows every page at desktop and mobile with its flow goal): a vision-capable model reviews it, its tier chosen per the models registry. Judge it with the taste check (../../references/taste-check.md, ui part) before review. Then compare each page with its flow goal and list fixes ranked by impact on the flow.
-- Organise tests: prune overlap, track recurring issues, and keep CI checking only what changed. Record each known environment failure with an owner and remove it once fixed, and reuse a result stamped with the revision and clean tree under review instead of rerunning it; otherwise treat it as not run.
+- Organise tests: prune overlapping proof, track recurring issues and apply the project's verification policy. Reuse evidence under cady-engineering-independent-review. Record each known environment failure with an owner and remove it once fixed.
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent that did not produce them. Follow the project's review and summary rules from its project files (size thresholds, summary for the decision owner, review rounds). The reviewer writes its ranked findings where the requester reads them.
 
 ### Decides
@@ -40,7 +40,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 ### Receipts
 - Record each material decision as a Projects decision item (subject, rationale, alternatives, layer) per `cady-company-decision-check` step 6.
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
-- Each finding cites story:<slug>#<stepId>@<runId> and its evidence as file:<fileId>.
+- For a story walk, follow `cady-qa-stories` for run and evidence references; other findings cite their original check or owner evidence.
 
 ### Company records
 - stories and their runs (stories.read)

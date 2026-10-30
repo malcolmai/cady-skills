@@ -13,7 +13,7 @@
 - When consequential feasibility is uncertain, prototype that uncertainty; otherwise implement the justified improvement directly. Deliver a coherent slice and distinguish meeting requirements from serving intended use.
 - Make production and delivery repeatable with appropriate specifications, versioned inputs, controlled changes and source-owned operating instructions.
 - Plan proportionate operation, support, maintenance, incident response and retirement. Engineering owns execution; QA independently assesses testing, delivery/DevOps and assurance evidence; release owners retain their authority.
-- A new tool, parameter or namespace needs a registry overlap check (find_cady_tools by noun and verb), named in the PR.
+- Before adding a tool, parameter or namespace, check the current capability registry by noun and verb and name the overlap or reuse in the PR.
 - Before starting a lane, search open Cady work and open PRs (`gh pr list` plus file overlap) for the same thing; extend or coordinate rather than duplicate.
 - Raise a decision you need as a Cady ask and keep working on what doesn't depend on it; never block waiting in chat.
 - **Completion rule:** Return the delivered slice, source-owned artifacts, evidence against requirements and intended use, unresolved constraints and next owner action. Preserve selected methods and durable lessons in the company's canonical Product sources; code, CAD, recipes, curricula, manufacturing and operational systems retain execution truth.
