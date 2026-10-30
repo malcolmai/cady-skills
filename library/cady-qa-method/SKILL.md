@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "e2c4a54d5e75b406fde5"
-  library: "54fe8596475dc503"
+  version: "251b17bb6f132091e622"
+  library: "fe3f13ff23b3e9dc"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "e2c4a54d5e75b406fde5@54fe8596475dc503"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "251b17bb6f132091e622@fe3f13ff23b3e9dc"}})`
 
 ## Role card
 

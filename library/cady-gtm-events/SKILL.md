@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
   version: "ad3b0751aa518e14348b"
-  library: "54fe8596475dc503"
+  library: "fe3f13ff23b3e9dc"
   function: "gtm"
 ---
 # Events: attend or host
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "ad3b0751aa518e14348b@54fe8596475dc503"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "ad3b0751aa518e14348b@fe3f13ff23b3e9dc"}})`
 
 Choose, prepare for or host an event that can advance the company purpose through real conversations.
 
