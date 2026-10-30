@@ -2,6 +2,19 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## fe3f13ff23b3e9dc · 2026-10-30
+
+Since 54fe8596475dc503: 0 new, 0 dropped, 5 changed.
+
+Changed (the parts that differ):
+- `cady`: reference agent-recipe-gtm.md
+- `cady-company-manage-agents`: Procedure
+- `cady-engineering-independent-review`: Independent review
+- `cady-engineering-system-cycle`: Procedure
+- `cady-finance-method`: reference domain-method.md
+
+Shared references changed: agent-recipe-gtm.md, models.md.
+
 ## 54fe8596475dc503 · 2026-10-29
 
 Since 5c758e5ce6d98262: 0 new, 0 dropped, 7 changed.

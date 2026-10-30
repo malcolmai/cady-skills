@@ -16,13 +16,17 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 0.25
+- **Cache write long:** 20
+- **Cache write short:** 12.5
 - **Input:** 10
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
 - **Output:** 50
 
 #### Price source
 
-- **Checked:** 2026-10-07
+- **Checked:** 2026-10-30
 - **Url:** https://platform.claude.com/docs/en/about-claude/pricing
 - **Price status:** verified
 - **Provider:** Anthropic
@@ -52,14 +56,18 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 1
+- **Cache write long:** 25
+- **Cache write short:** 12.5
 - **Input:** 10
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
 - **Output:** 50
 
 #### Price source
 
-- **Checked:** 2026-09-26
-- **Url:** https://developers.openai.com/api/docs/models/gpt-6-astra
+- **Checked:** 2026-10-30
+- **Url:** https://developers.openai.com/api/docs/pricing
 - **Price status:** verified
 - **Provider:** OpenAI
 
@@ -88,14 +96,17 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 0.2
+- **Cache write long:** 8
+- **Cache write short:** 5
 - **Input:** 4
-- **Note:** fast mode 8/40
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
 - **Output:** 20
 
 #### Price source
 
-- **Checked:** 2026-10-07
+- **Checked:** 2026-10-30
 - **Url:** https://platform.claude.com/docs/en/about-claude/pricing
 - **Price status:** verified
 - **Provider:** Anthropic
@@ -125,14 +136,18 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 0.1
+- **Cache write long:** 5
+- **Cache write short:** 2.5
 - **Input:** 2
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
 - **Output:** 10
 
 #### Price source
 
-- **Checked:** 2026-10-07
-- **Url:** https://developers.openai.com/api/docs/models/gpt-6.1-sol
+- **Checked:** 2026-10-30
+- **Url:** https://developers.openai.com/api/docs/pricing
 - **Price status:** verified
 - **Provider:** OpenAI
 
@@ -164,13 +179,17 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 0.1
+- **Cache write long:** 4
+- **Cache write short:** 2.5
 - **Input:** 2
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
 - **Output:** 10
 
 #### Price source
 
-- **Checked:** 2026-10-07
+- **Checked:** 2026-10-30
 - **Url:** https://platform.claude.com/docs/en/about-claude/pricing
 - **Price status:** verified
 - **Provider:** Anthropic
@@ -205,14 +224,17 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 0.2
+- **Cache write long:** 4
+- **Cache write short:** 2.5
 - **Input:** 2
-- **Note:** 1M context
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
 - **Output:** 10
 
 #### Price source
 
-- **Checked:** 2026-10-07
+- **Checked:** 2026-10-30
 - **Url:** https://platform.claude.com/docs/en/about-claude/pricing
 - **Price status:** verified
 - **Provider:** Anthropic
@@ -242,12 +264,20 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output; last verified list price, current price unverified
-- **Input:** 2.5
-- **Note:** Unverified: GPT-5.6 list price before a reported 20% cut; current price unverified
-- **Output:** 15.0
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 0.05
+- **Cache write long:** 2.5
+- **Cache write short:** 1.25
+- **Input:** 1
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
+- **Output:** 5
 - **Price of:** GPT-5.6 Terra list price before a reported 20% cut
-- **Price status:** unverified
+
+#### Price source
+
+- **Checked:** 2026-10-30
+- **Url:** https://developers.openai.com/api/docs/pricing
+- **Price status:** verified
 - **Provider:** OpenAI
 
 #### Rating
@@ -275,12 +305,20 @@
 
 #### Price
 
-- **Basis:** USD per 1M tokens, input/output; last verified list price, current price unverified
-- **Input:** 1.0
-- **Note:** Unverified: GPT-5.6 list price before a reported 80% cut; current price unverified
-- **Output:** 6.0
+- **Basis:** USD per 1M tokens; standard short-context API list price
+- **Cache read:** 0.01
+- **Cache write long:** 0.25
+- **Cache write short:** 0.125
+- **Input:** 0.1
+- **Note:** Cache write: 5m/1h for Anthropic; 30m/12h for OpenAI. Service tier, long context, regional and other charges may differ.
+- **Output:** 0.5
 - **Price of:** GPT-5.6 Luna list price before a reported 80% cut
-- **Price status:** unverified
+
+#### Price source
+
+- **Checked:** 2026-10-30
+- **Url:** https://developers.openai.com/api/docs/pricing
+- **Price status:** verified
 - **Provider:** OpenAI
 
 #### Rating

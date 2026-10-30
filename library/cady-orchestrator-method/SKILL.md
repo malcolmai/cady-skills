@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "7a171f4d8ae5d2151a8c"
-  library: "54fe8596475dc503"
+  version: "4fcf1cf1397b1fd95ef7"
+  library: "fe3f13ff23b3e9dc"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "7a171f4d8ae5d2151a8c@54fe8596475dc503"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "4fcf1cf1397b1fd95ef7@fe3f13ff23b3e9dc"}})`
 
 ## Role card
 

@@ -1,21 +1,21 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-10-29T00:00:00Z",
+  "generatedAt": "2026-10-30T00:00:00Z",
   "bundle": {
-    "tag": "54fe8596475dc503",
-    "version": "54fe8596475dc5032365c587af1b19da93cc588ac4c3995c5b756e1f016ce857",
-    "pluginVersion": "2026.10.29-54fe8596"
+    "tag": "fe3f13ff23b3e9dc",
+    "version": "fe3f13ff23b3e9dc3860387d8318f9ea44e05dc244d336f3c9be75ee185e1850",
+    "pluginVersion": "2026.10.30-fe3f13ff"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.10.29-54fe8596"
+    "version": "2026.10.30-fe3f13ff"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "5b3f58da932139b252f0"
+      "version": "e8f4346b2dfbeee3513e"
     },
     {
       "name": "cady-accounting-method",
@@ -63,7 +63,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "8000278035502480a8d8"
+      "version": "a94556e3902bd72c7816"
     },
     {
       "name": "cady-company-method",
@@ -183,7 +183,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "b68ca1bd77841d8f8bc5"
+      "version": "ed8d754540712dde7e5d"
     },
     {
       "name": "cady-engineering-integrations",
@@ -195,13 +195,13 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "2291976d556a478ea6d6"
+      "version": "8819659063eb48911891"
     },
     {
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "e775e14da2e31b88fe6a"
+      "version": "0a38a8cb91d98a704853"
     },
     {
       "name": "cady-finance-budget-review",
@@ -213,7 +213,7 @@
       "name": "cady-finance-method",
       "path": "library/cady-finance-method",
       "cadyId": "company.method.finance",
-      "version": "a494c2d94cecfefa25e5"
+      "version": "40e208b30408195cfd9c"
     },
     {
       "name": "cady-finance-runway",
@@ -339,7 +339,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "7a171f4d8ae5d2151a8c"
+      "version": "4fcf1cf1397b1fd95ef7"
     },
     {
       "name": "cady-product-customer-interview",
@@ -369,7 +369,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "e2c4a54d5e75b406fde5"
+      "version": "251b17bb6f132091e622"
     },
     {
       "name": "cady-qa-stories",

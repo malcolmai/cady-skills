@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
   version: "5d226c66b198c5c0fc52"
-  library: "54fe8596475dc503"
+  library: "fe3f13ff23b3e9dc"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "5d226c66b198c5c0fc52@54fe8596475dc503"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "5d226c66b198c5c0fc52@fe3f13ff23b3e9dc"}})`
 
 Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches.
 

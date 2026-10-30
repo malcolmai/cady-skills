@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
   version: "2121f8723fc349d2fea5"
-  library: "54fe8596475dc503"
+  library: "fe3f13ff23b3e9dc"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "2121f8723fc349d2fea5@54fe8596475dc503"}})`
+**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "2121f8723fc349d2fea5@fe3f13ff23b3e9dc"}})`
 
 ## Role card
 
