@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "d23bfe39f879576ddce3"
-  library: "9f61e773e7a35a17"
+  version: "3abd1f381712999b4e9c"
+  library: "d3506b53442fc915"
   function: "core"
 ---
 # Company context
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "d23bfe39f879576ddce3@9f61e773e7a35a17"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "3abd1f381712999b4e9c@d3506b53442fc915"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
@@ -37,4 +37,4 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 ## Orientation
 
-- Ask the owner only L1 choices (goals, offer, stage, bets, hires, grants) and facts only they hold; decide L2/L3 yourself, record it and say so (`cady-company-decision-check`).
+- Decide when testing and independent review leave you confident; ask the owner only a truly controversial call (no option clearly better by the goals and dimensions), a grant, or a fact only they hold; record it and say so (`cady-company-decision-check`).

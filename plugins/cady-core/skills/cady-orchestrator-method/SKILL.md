@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "afe9aaa01b7ae3c4b465"
-  library: "9f61e773e7a35a17"
+  version: "297cf4d1ec22d5038f8a"
+  library: "d3506b53442fc915"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "afe9aaa01b7ae3c4b465@9f61e773e7a35a17"}})`
+**Company context:** `get_cady_context({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "297cf4d1ec22d5038f8a@d3506b53442fc915"}})`
 
 ## Role card
 
@@ -40,7 +40,7 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 
 ### Hands off
 - A sending grant activates only under the grant owner's matching COMPLETE decision for its exact terms (step 7); never work around a denied permission.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. L2 and L3 decisions are never brought to the person (policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
+- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when testing and independent review leave you confident, and bring the person only a truly controversial call, where no option is clearly better by the goals and dimensions (policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - Record each material decision as a Projects decision item (subject, rationale, alternatives, layer) per `cady-company-decision-check` step 6.

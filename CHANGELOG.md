@@ -2,21 +2,32 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 9f61e773e7a35a17 · 2026-10-31
+## d3506b53442fc915 · 2026-10-31
 
-Since 37a1788863facbce: 0 new, 0 dropped, 10 changed.
+Since 37a1788863facbce: 0 new, 0 dropped, 21 changed.
 
 Changed (the parts that differ):
+- `cady-accounting-method`: Role card
+- `cady-company-decision-check`: Always, Procedure, Acceptance, Owner checks
+- `cady-company-executive-review`: Procedure
 - `cady-company-manage-agents`: reference scheduling.md
 - `cady-company-method`: Role card, reference domain-method.md
+- `cady-company-operations-method`: Role card
 - `cady-company-taste-review`: Procedure
+- `cady-core-context`: Orientation
+- `cady-core-run-sequence`: Run sequence
+- `cady-design-method`: Role card
 - `cady-engineering-independent-review`: Independent review
+- `cady-engineering-method`: Role card
+- `cady-fundraise-method`: Role card
 - `cady-gtm-cold-email-cycle`: Procedure
 - `cady-gtm-method`: Role card
 - `cady-gtm-tam-map`: Procedure
-- `cady-marketing-method`: reference domain-method.md
+- `cady-marketing-method`: Role card, reference domain-method.md
 - `cady-orchestrator-method`: Role card
+- `cady-product-manage`: Procedure
 - `cady-product-method`: Role card
+- `cady-qa-method`: Role card
 
 ## 37a1788863facbce · 2026-10-31
 
