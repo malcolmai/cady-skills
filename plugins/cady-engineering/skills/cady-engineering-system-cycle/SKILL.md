@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
   version: "28a361590142c3bd58e8"
-  library: "f44961b8fb7e17b5"
+  library: "f7ed85a0f29eb359"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "28a361590142c3bd58e8@f44961b8fb7e17b5"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "28a361590142c3bd58e8@f7ed85a0f29eb359"}})`
 
 Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 

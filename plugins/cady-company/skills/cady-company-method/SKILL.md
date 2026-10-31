@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
   version: "de9397b10067255bdc5b"
-  library: "f44961b8fb7e17b5"
+  library: "f7ed85a0f29eb359"
   function: "company"
 ---
 # Company
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "de9397b10067255bdc5b@f44961b8fb7e17b5"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "de9397b10067255bdc5b@f7ed85a0f29eb359"}})`
 
 ## Role card
 
