@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
   version: "bb8df5a14f50bb4b2729"
-  library: "f7ed85a0f29eb359"
+  library: "37a1788863facbce"
   function: "core"
 ---
 # Execution guidance

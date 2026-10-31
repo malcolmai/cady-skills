@@ -2,6 +2,13 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 37a1788863facbce · 2026-10-31
+
+Since f7ed85a0f29eb359: 0 new, 0 dropped, 1 changed.
+
+Changed (the parts that differ):
+- `cady-engineering-system-cycle`: Procedure
+
 ## f7ed85a0f29eb359 · 2026-10-31
 
 Since f44961b8fb7e17b5: 0 new, 0 dropped, 1 changed.
