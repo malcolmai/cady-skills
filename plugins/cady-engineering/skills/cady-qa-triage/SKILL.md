@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
   version: "b1de85f9df42637c49a5"
-  library: "f7ed85a0f29eb359"
+  library: "37a1788863facbce"
   function: "qa"
 ---
 # Bug and flaky-test triage
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "b1de85f9df42637c49a5@f7ed85a0f29eb359"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "b1de85f9df42637c49a5@37a1788863facbce"}})`
 
 Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.
 
