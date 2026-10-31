@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
   version: "4bd2a0dd0da27a5ebaf6"
-  library: "41ece901b7c91b86"
+  library: "9f61e773e7a35a17"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "4bd2a0dd0da27a5ebaf6@41ece901b7c91b86"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "4bd2a0dd0da27a5ebaf6@9f61e773e7a35a17"}})`
 
 ## Role card
 

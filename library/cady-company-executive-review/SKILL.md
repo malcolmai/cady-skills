@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
   version: "99e5cc93180b39e06e7f"
-  library: "41ece901b7c91b86"
+  library: "9f61e773e7a35a17"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "99e5cc93180b39e06e7f@41ece901b7c91b86"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "99e5cc93180b39e06e7f@9f61e773e7a35a17"}})`
 
 Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 
