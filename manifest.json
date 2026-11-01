@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-01T00:00:00Z",
   "bundle": {
-    "tag": "a12ab89eefb526d4",
-    "version": "a12ab89eefb526d4366b950bc0aab6c666341baa46c2ddc29c3af2a54974120f",
-    "pluginVersion": "2026.11.1-a12ab89e"
+    "tag": "8fd0baa9f9cf5502",
+    "version": "8fd0baa9f9cf5502ed4e0b238fae7b32bb92a32c66a8475847bb82c9dbb8e317",
+    "pluginVersion": "2026.11.1-8fd0baa9"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.1-a12ab89e"
+    "version": "2026.11.1-8fd0baa9"
   },
   "skills": [
     {
@@ -249,7 +249,7 @@
       "name": "cady-fundraise-method",
       "path": "library/cady-fundraise-method",
       "cadyId": "company.method.fundraise",
-      "version": "98e05dd28587b82253dc"
+      "version": "52ae34a6817ee807943d"
     },
     {
       "name": "cady-fundraise-raise-materials",
@@ -261,7 +261,7 @@
       "name": "cady-fundraise-raise-plan",
       "path": "library/cady-fundraise-raise-plan",
       "cadyId": "skill.fundraise.raise_plan",
-      "version": "84805e6b14671680ebfb"
+      "version": "434f55b78464cf6586e2"
     },
     {
       "name": "cady-gtm-calls",

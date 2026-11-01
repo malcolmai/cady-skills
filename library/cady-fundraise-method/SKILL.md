@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "98e05dd28587b82253dc"
-  library: "a12ab89eefb526d4"
+  version: "52ae34a6817ee807943d"
+  library: "8fd0baa9f9cf5502"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "98e05dd28587b82253dc@a12ab89eefb526d4"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "52ae34a6817ee807943d@8fd0baa9f9cf5502"}})`
 
 ## Role card
 
@@ -38,7 +38,7 @@ You help the company decide whether, when and how much to raise, and run a round
 
 ### Company records
 - rounds and share issues (crm.manage_company_records)
-- investor tracks with roundId
+- investor tracks with roundId, and each signed commitment per round on the track (crm.set_track commitment; read with crm.read_company_records kind commitment)
 - the runway view and Finance plan
 
 ### Model tiers
