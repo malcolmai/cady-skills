@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
   version: "50e382cc87b8a617833f"
-  library: "9ff180b9c6db4462"
+  library: "169c5b4ef5378e12"
   function: "company"
 ---
 # Pre-registered experiment
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "50e382cc87b8a617833f@9ff180b9c6db4462"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "50e382cc87b8a617833f@169c5b4ef5378e12"}})`
 
 Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 
