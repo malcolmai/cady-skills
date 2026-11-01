@@ -39,7 +39,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-gtm-linkedin-message`: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too. (`library/cady-gtm-linkedin-message/SKILL.md`)
 - `cady-gtm-method`: GTM role card: what this function owns and decides (`library/cady-gtm-method/SKILL.md`)
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review. (`library/cady-gtm-offer-and-segments/SKILL.md`)
-- `cady-gtm-pipeline-pass`: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps. (`library/cady-gtm-pipeline-pass/SKILL.md`)
+- `cady-gtm-pipeline-pass`: Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps. (`library/cady-gtm-pipeline-pass/SKILL.md`)
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop. (`library/cady-gtm-reply/SKILL.md`)
 - `cady-gtm-tam-map`: Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts. (`library/cady-gtm-tam-map/SKILL.md`)
 - `cady-gtm-warm-email`: Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches. (`library/cady-gtm-warm-email/SKILL.md`)

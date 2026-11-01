@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
   version: "970b5ed4a94249ce0385"
-  library: "d3506b53442fc915"
+  library: "1dce451c4581f58b"
   function: "engineering"
 ---
 # Engineering
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "970b5ed4a94249ce0385@d3506b53442fc915"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "970b5ed4a94249ce0385@1dce451c4581f58b"}})`
 
 ## Role card
 

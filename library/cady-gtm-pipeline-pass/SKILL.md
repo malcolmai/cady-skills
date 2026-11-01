@@ -1,19 +1,19 @@
 ---
 name: "cady-gtm-pipeline-pass"
-description: "Warm pipeline pass. Use when: Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps. Not for: Writing one message (use `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`) or working one deal in depth. Keep due relationship tracks consistent."
+description: "Warm pipeline pass. Use when: Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps. Not for: Writing one message (use `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`) or working one deal in depth. Keep due relationship tracks consistent."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
-  version: "a01973f846e09ae789da"
-  library: "d3506b53442fc915"
+  version: "2c6c672f8f96a9053243"
+  library: "1dce451c4581f58b"
   function: "gtm"
 ---
 # Warm pipeline pass
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "a01973f846e09ae789da@d3506b53442fc915"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "2c6c672f8f96a9053243@1dce451c4581f58b"}})`
 
-Review the pipeline: a scheduled or requested pass over due customer tracks and their next steps.
+Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps.
 
 **Not for:** Writing one message (use `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`) or working one deal in depth. Keep due relationship tracks consistent.
 
@@ -29,11 +29,12 @@ Review the pipeline: a scheduled or requested pass over due customer tracks and 
 
 - cadence
 - due tracks
+- motion
 
 ## Procedure
 
 1. The pass uses CRM tracks, not Projects items.
-2. Call crm.list_parties({mode: 'tracks', motion: 'customer', dueBefore: now}) and work every due track. Reply, prepare warm email, LinkedIn or post-call follow-up, or update crm.set_track when no contact action fits. Never infer a stage. Set each touched party's next action and due date. Preserve current persona and Owner while updating the track.
+2. Call crm.list_parties({mode: 'tracks', motion: <the pass's motion>, dueBefore: now}) and work every due track. Reply, prepare warm email, LinkedIn or post-call follow-up, or update crm.set_track when no contact action fits. Never infer a stage. Set each touched party's next action and due date. Preserve current persona and Owner while updating the track.
 3. Close a track only when the buyer gave a definitive answer, in the same crm.set_track call with reason, reasonKind and any evidence (a refusal returns the exact next call). For a cold or not-interested lead, set crm.set_track recontact only on a lost or paused track: never means Never contact; unless_changed means Do not contact unless circumstances change; 1m, 2m, 3m, 6m or a lead-suggested date create a Plan re-contact action seven days before the due date. An interested lead is never dropped. Each follow-up follows the follow-up rule in the outreach message rules (an engaged recipient is paced to the thread's tempo and not counted; an unengaged non-replier gets at most 2, counted); check permission, release through outreach review, and reopen a held track only with an explicit reason.
 4. Product sign-up sync: record signup or activation with crm.record_interactions. Match by email and use each product event id as sourceRef (up to 25 per call); preserve sourceRef on retries for idempotency. Pass the captured cref to attribute the sign-up to email, click and variant. Keep UTMs in your own product analytics; no site script is needed. Cady does not run the sync: the user's agent or automation does.
 5. Schedule it as a host recurring task named 'Warm pipeline (<Company>)' (cadence and install: `cady-company-manage-agents`, reference scheduling). Each run starts with get_cady_context and reads due tracks. Review stale items; never replay a backlog of external sends blindly.
