@@ -2,15 +2,16 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 1cc1e7bbf4a134cb · 2026-11-01
+## cadefeacac8a12cd · 2026-11-01
 
-Since 1dce451c4581f58b: 0 new, 0 dropped, 24 changed.
+Since 1dce451c4581f58b: 0 new, 0 dropped, 25 changed.
 
 Changed (the parts that differ):
 - `cady`: Start every run, Load a skill
 - `cady-company-executive-review`: Procedure
 - `cady-company-manage-agents`: Procedure
 - `cady-company-method`: Role card
+- `cady-company-review`: reference setup.md
 - `cady-core-run-sequence`: Run sequence
 - `cady-design-method`: Role card
 - `cady-engineering-method`: Role card

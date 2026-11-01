@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
   version: "6e38c4d22e0b1263b880"
-  library: "1cc1e7bbf4a134cb"
+  library: "cadefeacac8a12cd"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "6e38c4d22e0b1263b880@1cc1e7bbf4a134cb"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "6e38c4d22e0b1263b880@cadefeacac8a12cd"}})`
 
 Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.
 

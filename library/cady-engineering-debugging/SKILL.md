@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
   version: "10a1a2143b5f8599c5b0"
-  library: "1cc1e7bbf4a134cb"
+  library: "cadefeacac8a12cd"
   function: "engineering"
 ---
 # Debugging and incident response
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "10a1a2143b5f8599c5b0@1cc1e7bbf4a134cb"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "10a1a2143b5f8599c5b0@cadefeacac8a12cd"}})`
 
 Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 

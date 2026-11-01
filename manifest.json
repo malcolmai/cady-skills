@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-01T00:00:00Z",
   "bundle": {
-    "tag": "1cc1e7bbf4a134cb",
-    "version": "1cc1e7bbf4a134cb40a270facc7fd56b70b646566fc3fb0b050df8ea50d5f09c",
-    "pluginVersion": "2026.11.1-1cc1e7bb"
+    "tag": "cadefeacac8a12cd",
+    "version": "cadefeacac8a12cd956f5d1f1586a43100ebeda01da526df83ccd80f0c6436d0",
+    "pluginVersion": "2026.11.1-cadefeac"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.1-1cc1e7bb"
+    "version": "2026.11.1-cadefeac"
   },
   "skills": [
     {
@@ -111,7 +111,7 @@
       "name": "cady-company-review",
       "path": "library/cady-company-review",
       "cadyId": "execution.topic.company_review",
-      "version": "66d59d7d1c619700fb7c"
+      "version": "021866a7e228ac47af2d"
     },
     {
       "name": "cady-company-taste-review",
