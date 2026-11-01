@@ -2,6 +2,16 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 9ff180b9c6db4462 · 2026-11-01
+
+Since 37c71b6709dd7db2: 0 new, 0 dropped, 2 changed.
+
+Changed (the parts that differ):
+- `cady-core-context`: Company practice
+- `cady-marketing-method`: reference domain-method.md
+
+Shared references changed: outreach-message-rules.md.
+
 ## 37c71b6709dd7db2 · 2026-11-01
 
 Since cadefeacac8a12cd: 0 new, 0 dropped, 0 changed.

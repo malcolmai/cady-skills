@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "3abd1f381712999b4e9c"
-  library: "37c71b6709dd7db2"
+  version: "d5a1604a927f60f266a6"
+  library: "9ff180b9c6db4462"
   function: "core"
 ---
 # Company context
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "3abd1f381712999b4e9c@37c71b6709dd7db2"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "d5a1604a927f60f266a6@9ff180b9c6db4462"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
@@ -23,7 +23,7 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 - Verify readiness and authority before consequential effects, and the working result before expansion. An authorized recurring review can be configured before the first execution. Load the cady-company-review skill for operational review, then only relevant function methods.
 - Across sessions, recover the original authorized outcome through get_company_work; empty local claims do not establish that no work exists.
 - A chat observation or CRM note is not an order update, refund, shipment or completed resolution.
-- File properly: when you store a file in Cady Files, give it a clear name, a location, its purpose and the related party or work item. Cady never classifies or labels files for you, so supply these yourself. The host edits files: upload a clearly named new version, not a duplicate. files.read_text returns an excerpt of PDF, DOCX, PPTX and text with page or slide anchors (pass chunk for full text, chunk by chunk; nextDownload names the files.get_download call whose 2-minute URL you fetch with plain GET for the raw bytes); no_extractable_text means a scan, and unavailable means unreadable, never an empty file.
+- File properly: when you store a file in Cady Files, give it a clear name, a location, its purpose and the related party or work item. Cady never classifies or labels files for you, so supply these yourself. The host edits files: upload a clearly named new version, not a duplicate. files.read_text returns PDF, DOCX, PPTX and text a window at a time with page or slide anchors (keep calling with next until it is absent; nextDownload names the files.get_download call whose 2-minute URL you fetch with plain GET for the raw bytes); no_extractable_text means a scan, and unavailable means unreadable, never an empty file.
 - One home per fact: search before creating any record, file, doc or tool and extend the owner; local files are working material, never records.
 
 ### Method detail

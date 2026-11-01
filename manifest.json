@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-01T00:00:00Z",
   "bundle": {
-    "tag": "37c71b6709dd7db2",
-    "version": "37c71b6709dd7db2a85f81e65e63492ff0bfbf3801ed21d222890468fc9b4a11",
-    "pluginVersion": "2026.11.1-37c71b67"
+    "tag": "9ff180b9c6db4462",
+    "version": "9ff180b9c6db4462b9c45a77a31f82751d7009d02dce30cee3f114e43e26f970",
+    "pluginVersion": "2026.11.1-9ff180b9"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.1-37c71b67"
+    "version": "2026.11.1-9ff180b9"
   },
   "skills": [
     {
@@ -129,7 +129,7 @@
       "name": "cady-core-context",
       "path": "library/cady-core-context",
       "cadyId": "company.context",
-      "version": "3abd1f381712999b4e9c"
+      "version": "d5a1604a927f60f266a6"
     },
     {
       "name": "cady-core-execution",
@@ -243,7 +243,7 @@
       "name": "cady-fundraise-investor-outreach",
       "path": "library/cady-fundraise-investor-outreach",
       "cadyId": "skill.fundraise.investor_outreach",
-      "version": "a6dbc5646bb71d2ce639"
+      "version": "db3311e3ae8cb27e208e"
     },
     {
       "name": "cady-fundraise-method",
@@ -267,13 +267,13 @@
       "name": "cady-gtm-calls",
       "path": "library/cady-gtm-calls",
       "cadyId": "skill.gtm.calls",
-      "version": "e84648121c919d2d7336"
+      "version": "d34db4d5e0cb4f0a6ff8"
     },
     {
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "d8217e0a785315aa5b58"
+      "version": "4e00f94294d5086841e2"
     },
     {
       "name": "cady-gtm-events",
@@ -285,13 +285,13 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "a399db67d21b5aa5803c"
+      "version": "d29a3bd6671ce2bf5e44"
     },
     {
       "name": "cady-gtm-linkedin-message",
       "path": "library/cady-gtm-linkedin-message",
       "cadyId": "skill.gtm.linkedin_message",
-      "version": "105cc06f0f48bc24f2ca"
+      "version": "40bfee746466b58f10a7"
     },
     {
       "name": "cady-gtm-method",
@@ -315,7 +315,7 @@
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "e4762dac61d934e7c5cc"
+      "version": "9560e7de1c277a18989c"
     },
     {
       "name": "cady-gtm-tam-map",
@@ -327,13 +327,13 @@
       "name": "cady-gtm-warm-email",
       "path": "library/cady-gtm-warm-email",
       "cadyId": "skill.gtm.warm_email",
-      "version": "e43e663f3e3ebb182419"
+      "version": "7f77710a7484a7f63629"
     },
     {
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "42ade5700f5f5b6be32f"
+      "version": "1fb06b1baff84d43b34c"
     },
     {
       "name": "cady-orchestrator-method",

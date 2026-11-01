@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "105cc06f0f48bc24f2ca"
-  library: "37c71b6709dd7db2"
+  version: "40bfee746466b58f10a7"
+  library: "9ff180b9c6db4462"
   function: "gtm"
 ---
 # Social direct message
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "105cc06f0f48bc24f2ca@37c71b6709dd7db2"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "40bfee746466b58f10a7@9ff180b9c6db4462"}})`
 
 Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
 
