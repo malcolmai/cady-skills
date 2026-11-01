@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "434f55b78464cf6586e2"
-  library: "8dc6242c2a8b8b22"
+  version: "2c61bcb55834a249598f"
+  library: "1cc1e7bbf4a134cb"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "434f55b78464cf6586e2@8dc6242c2a8b8b22"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "2c61bcb55834a249598f@1cc1e7bbf4a134cb"}})`
 
 Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
 
@@ -40,7 +40,7 @@ Decide whether, when and how much to raise (SAFE, note or priced round), model d
 ## Procedure
 
 1. If this runs as a Projects work item, claim it with transition_company_work(action: 'claim') (on CONFLICT stop and report the holder); an interactive question needs no claim. Read read_cady company:direction and the runway view from `cady-finance-runway`.
-2. Whether and how much. Name the milestone that makes the next round or profitability possible (revenue level, retention, a shipped product) and the months to reach it. Default amount: planned net burn to that milestone plus 6 months of buffer, usually 18 to 24 months of runway. Compare cheaper routes: revenue and prepayments, grants and R&D credits, a smaller round, and venture debt only alongside equity or revenue. Not raising is a valid answer when the company is default alive.
+2. Whether and how much. Name the milestone that makes the next round or profitability possible (revenue level, retention, a shipped product) and the months to reach it. Default amount: planned net burn to that milestone plus 6 months of buffer, usually 18 to 24 months of runway. Compare cheaper routes: revenue and prepayments, grants and R&D credits, a smaller round, and venture debt only alongside equity or revenue. Not raising is a valid answer when the company is default alive. Test the amount and milestone as a lead investor would: what they must believe, the objection most likely to stop them, and which investors' theses fit; change the milestone or amount when no evidence answers that objection.
 3. When. Start with at least 9 to 12 months of runway to the floor: a process typically takes 3 to 6 months to cash (unverified). Start just after a milestone proof, not just before it, and avoid launching into local holiday periods.
 4. Instrument. SAFE (post-money): fastest and cheapest, no board, no interest or maturity; a valuation cap and optional discount; the holder's share is fixed at purchase amount divided by the post-money cap, so every further SAFE dilutes founders, not earlier holders. Convertible note: debt with interest (often 4 to 8%) and a maturity date (often 18 to 24 months) that gives holders leverage if no round happens; interest converts too. Priced round: sets a price, issues preferred shares, usually adds a board seat and protective provisions, costs more legal time and fees, and is standard from Series A and common at seed with a lead. Local forms differ (in the UK an advance subscription agreement keeps SEIS and EIS eligibility, which a SAFE does not); confirm the instrument with counsel.
 5. Dilution maths, written out for this round. Post-money = pre-money + new money; new investors own new money / post-money; price per share = pre-money / pre-money fully diluted shares, and the option pool investors require is counted in the pre-money (the option pool shuffle). Worked example: founders hold 8,000,000 shares, no pool; raise 2M at 8M pre-money (10M post), with a 10% post-money pool. Investors 20%, pool 10%, so founders 70%: fully diluted shares 11,428,571; pool 1,142,857; price 8M / 9,142,857 = 0.875; investors buy 2,285,714 shares. Founders' effective pre-money is 7M, not 8M. If a 500k post-money SAFE at a 5M cap (10%) also converts here at its cap price, and the 8M pre-money includes the converted SAFE shares, founders end at 90% x 70% = 63% and the SAFE at 7%. Model every outstanding SAFE and note before quoting founder ownership; have the cap table tool or counsel run the pro forma.

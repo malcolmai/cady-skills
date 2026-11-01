@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-01T00:00:00Z",
   "bundle": {
-    "tag": "8dc6242c2a8b8b22",
-    "version": "8dc6242c2a8b8b228c9f016945be4618af1cc24c6185483a0c568fa22101f24d",
-    "pluginVersion": "2026.11.1-8dc6242c"
+    "tag": "1cc1e7bbf4a134cb",
+    "version": "1cc1e7bbf4a134cb40a270facc7fd56b70b646566fc3fb0b050df8ea50d5f09c",
+    "pluginVersion": "2026.11.1-1cc1e7bb"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.1-8dc6242c"
+    "version": "2026.11.1-1cc1e7bb"
   },
   "skills": [
     {
@@ -63,7 +63,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "d522c01448491458125a"
+      "version": "dd64092ae25862a4073c"
     },
     {
       "name": "cady-company-method",
@@ -141,7 +141,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "bd4f1180dce3f74de61b"
+      "version": "44613c0e0a258d04cecb"
     },
     {
       "name": "cady-core-skill-index",
@@ -219,7 +219,7 @@
       "name": "cady-finance-runway",
       "path": "library/cady-finance-runway",
       "cadyId": "skill.finance.runway",
-      "version": "d717a4f274d80caa38da"
+      "version": "c4bf7012831a38dcd36a"
     },
     {
       "name": "cady-finance-tax-cycle",
@@ -255,13 +255,13 @@
       "name": "cady-fundraise-raise-materials",
       "path": "library/cady-fundraise-raise-materials",
       "cadyId": "skill.fundraise.raise_materials",
-      "version": "8d620af0c70a53bfd90c"
+      "version": "af822393b94fd5718613"
     },
     {
       "name": "cady-fundraise-raise-plan",
       "path": "library/cady-fundraise-raise-plan",
       "cadyId": "skill.fundraise.raise_plan",
-      "version": "434f55b78464cf6586e2"
+      "version": "2c61bcb55834a249598f"
     },
     {
       "name": "cady-gtm-calls",
@@ -375,7 +375,7 @@
       "name": "cady-qa-stories",
       "path": "library/cady-qa-stories",
       "cadyId": "skill.qa.stories",
-      "version": "11b3cb610c3311cbdd97"
+      "version": "2f81bf79540b942234f9"
     },
     {
       "name": "cady-qa-triage",
