@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "ed8d754540712dde7e5d"
-  library: "37a1788863facbce"
+  version: "83d23f91ff6fc7cb6a1f"
+  library: "d3506b53442fc915"
   function: "engineering"
 ---
 # Independent review
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "ed8d754540712dde7e5d@37a1788863facbce"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "83d23f91ff6fc7cb6a1f@d3506b53442fc915"}})`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
 
@@ -28,6 +28,7 @@ Independently review a diff or artifact: rerun its checks, rank findings and ret
 - **Findings:** Rank by consequence. Blocker: wrong behaviour, a security, isolation or authority defect, data-loss risk, or a claimed check that does not hold; it must be fixed before merge. Should fix: a real defect or maintenance cost; it lands only with the owner's acceptance and a tracked item. Nit: optional and labelled as such. Each finding gives file:line, what is wrong, the failure it causes and a suggested fix, and says whether it is verified or suspected. Name real strengths briefly; an approval with no findings is valid when the evidence supports it.
 - **Gotchas:** Approving from the summary; nitpicking style while missing an authority hole; reviewing only the diff and not its callers; treating 'tests pass' as proof the tests test anything; one reviewer reviewing their own fix.
 - **Independence:** Refuse a review of work you produced or watched being produced, and say so; the requester finds another reviewer. Start from the brief, acceptance and actual diff at named baseline and head SHAs, not the producer’s summary or verdict; read the producer’s reasoning only after your own findings are written. Review may build on sound independent coverage of an integrated baseline: inspect the new delta and affected dependencies and seams, so the named integrated head is covered without restarting unchanged review.
+- **Levels:** Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, direction or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why.
 - **Verdict:** End with land, fix (the blockers to clear) or redesign (why the approach is wrong and the alternative). Write ranked findings and a receipt (producer, reviewer, baseline and head SHAs, prior coverage reused, checks and results, verdict) to the file the requester names; the producer never edits it. At most two rounds per lane; review later fixes and affected seams as the integrated state changes.
 
 ## Shared execution sections
