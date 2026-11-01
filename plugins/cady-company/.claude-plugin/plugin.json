@@ -1,5 +1,16 @@
 {
   "name": "cady-company",
-  "version": "2026.11.1-cadefeac",
-  "description": "Cady skills for company direction, decisions, agents and operations. Requires the cady plugin."
+  "version": "2026.11.1-37c71b67",
+  "description": "Cady skills for company direction, decisions, agents and operations. Requires the cady plugin.",
+  "author": {
+    "name": "Cady",
+    "url": "https://cadyworks.com"
+  },
+  "homepage": "https://cadyworks.com/connect/agents/",
+  "repository": "https://github.com/malcolmai/cady-skills",
+  "license": "MPL-2.0",
+  "documentationUrl": "https://cadyworks.com/connect/agents/",
+  "supportUrl": "https://cadyworks.com/support/",
+  "privacyPolicyUrl": "https://cadyworks.com/privacy-policy/",
+  "termsOfServiceUrl": "https://cadyworks.com/terms-of-service/"
 }
