@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "5d226c66b198c5c0fc52"
-  library: "8fd0baa9f9cf5502"
+  version: "e43e663f3e3ebb182419"
+  library: "8dc6242c2a8b8b22"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "5d226c66b198c5c0fc52@8fd0baa9f9cf5502"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "e43e663f3e3ebb182419@8dc6242c2a8b8b22"}})`
 
 Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches.
 
@@ -38,7 +38,7 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 2. The scheduled pass is `cady-gtm-pipeline-pass`. Partner and organiser approaches use this skill even without prior engagement: record the partner purpose and sourced relationship facts, without claiming a prior exchange. Supplier business messages use it too; for a cancellation, order or commitment obtain the exact user review `cady-finance-vendor-spend-review` requires (a standing outreach grant does not substitute). Use a work item bound to `cady-gtm-warm-email` and claim it before preparation.
 3. For an engaged route, confirm engagement from a readable thread or CRM interaction and state it; for a first partner approach, state that no exchange is evidenced; missing history is not proof the party is cold. Attribution links record human and non-human clicks separately and only human clicks count as engagement; file external clicks with crm.record_interactions.
 4. For an existing exchange, read it with crm.find_communications and crm.get_communication. For a product link, check sign-up first with crm.get_party; if they signed up, respond to that.
-5. Draft following the copy rules. For a follow-up, name which one this is and apply the follow-up rule (message rules, follow_up): a follow-up to an unengaged non-replier is at most 2, at least 3 days apart and counted toward the cold email quota; one to an engaged recipient is paced to the thread's tempo, not counted and never dropped. Each adds something useful and new. Recheck permission before every review. Judge it with the taste check (../../references/taste-check.md, message part) before review.
+5. For a customer message: When you plan, rank prospects or write customer copy, start from the customer's buying scenario, 3-5 lines written first: is there a real buying need, what triggers it, where they look then (peers, communities, search, ads, creators) and what they react to. Tag each line with its strongest evidence: a conversation about past behaviour, revealed behaviour, desk evidence, or assumed. The company's own records and calendar describe the sender, not the buyer. Reuse the segment's current scenario from its recorded hypothesis; a fresh helper with no drafting context checks a new one before any copy uses it, and with no helper available you mark it unchecked in the held review and go on. Evidence of no need stops the work and is recorded against that hypothesis; an assumed need makes the work a test of it, not a pitch. A message to one person meets them where they are in the scenario, from their own record or thread; a fact about their company plus a shared pitch does not. Then draft following the copy rules. For a follow-up, name which one this is and apply the follow-up rule (message rules, follow_up): a follow-up to an unengaged non-replier is at most 2, at least 3 days apart and counted toward the cold email quota; one to an engaged recipient is paced to the thread's tempo, not counted and never dropped. Each adds something useful and new. Recheck permission before every review. Judge it with the taste check (../../references/taste-check.md, message part) before review.
 6. Before any follow-up run the outcome check (message rules, outcome_check), then read crm.get_party. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare with crm.prepare_outreach_review (a follow-up carries followUp {delayDays, nonRepliersOnly: true}), read crm.get_outreach_review, then follow release.
 
 ## Acceptance

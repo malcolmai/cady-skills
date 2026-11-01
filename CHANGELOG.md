@@ -2,19 +2,31 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 8fd0baa9f9cf5502 · 2026-11-01
+## 8dc6242c2a8b8b22 · 2026-11-01
 
-Since 1dce451c4581f58b: 0 new, 0 dropped, 8 changed.
+Since 1dce451c4581f58b: 0 new, 0 dropped, 20 changed.
 
 Changed (the parts that differ):
 - `cady`: Start every run, Load a skill
+- `cady-company-executive-review`: Procedure
+- `cady-company-method`: Role card
 - `cady-design-method`: Role card
 - `cady-engineering-method`: Role card
+- `cady-finance-budget-review`: Procedure
 - `cady-fundraise-method`: Role card
 - `cady-fundraise-raise-plan`: Procedure
-- `cady-gtm-method`: Role card
+- `cady-gtm-cold-email-cycle`: Procedure
+- `cady-gtm-linkedin-message`: Procedure
+- `cady-gtm-method`: Role card, reference domain-method.md
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-reply`: Procedure
+- `cady-gtm-tam-map`: Procedure
+- `cady-gtm-warm-email`: Procedure
+- `cady-marketing-method`: Selected judgment, reference domain-method.md
 - `cady-product-method`: Role card
 - `cady-qa-method`: Role card
+- `cady-qa-stories`: Procedure
+- `cady-qa-triage`: Procedure
 
 ## 1dce451c4581f58b · 2026-11-01
 

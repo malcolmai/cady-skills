@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "82b235f2aa63a6f6ef19"
-  library: "8fd0baa9f9cf5502"
+  version: "105cc06f0f48bc24f2ca"
+  library: "8dc6242c2a8b8b22"
   function: "gtm"
 ---
 # Social direct message
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "82b235f2aa63a6f6ef19@8fd0baa9f9cf5502"}})`
+**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "105cc06f0f48bc24f2ca@8dc6242c2a8b8b22"}})`
 
 Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
 
@@ -40,7 +40,7 @@ Draft a first social DM or one no-reply follow-up on any non-email channel; Link
 
 1. Read the shared message rules (`../../references/outreach-message-rules.md`) first: voice pack, consent, release.
 2. Read the profile and available context. Use genuine common ground such as a shared event, past employer, school or interest in their posts. Mention a mutual connection only when they have identified it. Never invent closeness.
-3. A LinkedIn connection note gives one honest reason to connect, with no pitch, ask or company name. For a first direct message, use a subtle personal note about what you are working on, why it may be relevant, and that you would be glad to chat sometime. Avoid product names and links. Judge it with the taste check (../../references/taste-check.md, message part) before review.
+3. For a customer message: When you plan, rank prospects or write customer copy, start from the customer's buying scenario, 3-5 lines written first: is there a real buying need, what triggers it, where they look then (peers, communities, search, ads, creators) and what they react to. Tag each line with its strongest evidence: a conversation about past behaviour, revealed behaviour, desk evidence, or assumed. The company's own records and calendar describe the sender, not the buyer. Reuse the segment's current scenario from its recorded hypothesis; a fresh helper with no drafting context checks a new one before any copy uses it, and with no helper available you mark it unchecked in the held review and go on. Evidence of no need stops the work and is recorded against that hypothesis; an assumed need makes the work a test of it, not a pitch. A message to one person meets them where they are in the scenario, from their own record or thread; a fact about their company plus a shared pitch does not. A LinkedIn connection note gives one honest reason to connect, with no pitch, ask or company name. For a first direct message, use a subtle personal note about what you are working on, why it may matter where they are now, and that you would be glad to chat sometime. Avoid product names and links. Judge it with the taste check (../../references/taste-check.md, message part) before review.
 4. Read crm.get_party for every recipient. Exclude and explain a recorded opt-out or destination suppression; never overwrite it.
 5. Pace like a person within existing channel caps: 20 messages per rolling day and 100 per rolling week, spread across working hours; host sends keep that count too. On LinkedIn, tell the owner which invitations have been pending over three weeks so they can withdraw them; a falling acceptance rate means the targeting or note is wrong, not that volume should rise.
 6. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare one body per recipient with crm.prepare_outreach_review and read it with crm.get_outreach_review; keep connection notes, first messages and follow-ups in distinct cohorts. Give prepare a one-line justification (why this send now). Then follow release.

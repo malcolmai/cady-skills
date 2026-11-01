@@ -1,6 +1,6 @@
 {
   "name": "cady",
-  "version": "2026.11.1-8fd0baa9",
+  "version": "2026.11.1-8dc6242c",
   "description": "Cady's method library for company agents. Everything here relies on Cady and needs a Cady account.",
   "mcpServers": {
     "cady": {

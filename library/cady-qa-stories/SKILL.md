@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
-  version: "93e17729590575c7baa0"
-  library: "8fd0baa9f9cf5502"
+  version: "11b3cb610c3311cbdd97"
+  library: "8dc6242c2a8b8b22"
   function: "qa"
 ---
 # User stories: keep, walk and read
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "93e17729590575c7baa0@8fd0baa9f9cf5502"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "11b3cb610c3311cbdd97@8dc6242c2a8b8b22"}})`
 
 Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
@@ -34,7 +34,7 @@ Edit or retire a user story, walk one blind as a fresh user, read story status, 
 3. Walk blind as a fresh walker: a subagent or person briefed with only the story id, environment, target build/version and test account before starting. Read no work context, repo, PR or earlier report. Act through the real surface, never code or the database. stories.run action='start' takes that target build (omit it if unknown, never use Cady’s service SHA) and returns the first step without hints, status or history. For each step act, then record: result pass, fail, blocked or skipped, and observed (what you saw, no judgement). A fail or blocked needs evidence as file:<fileId> (screenshot or quoted tool output). Reveal a hint only when stuck; a hinted pass is itself a finding and never verifies the story. Finish with the outcome; only then do prior results appear.
 4. Never walk a story you just implemented as if you were fresh. If you must, the run is a self-check and you say so; a separate walker still has to verify it.
 5. After a release you were told cites a story (release.stories on its work item, shipped), the story reads rewalkDue until a blind walk starts after it: walk it again. Read status from stories.read: verified (latest blind run at this revision passed with no hints), failing or blocked (first bad step shown), disputed (two runs at the same revision and build disagree), stale (the story's step wording changed since the run) and unwalked. Results are never edited. Resolve a dispute with another blind run by a different walker.
-6. File each failure after finishing, as a Projects item citing story:<slug>#<stepId>@<runId> (slug is the story id from stories.read, stepId the step id, runId the run from stories.run; leave out @<runId> when no run applies) with the evidence file. Rate it with `cady-qa-triage`. Close it by a new blind run of that story at the fixed build, not by the producer's word; a reported fix awaits that passing rewalk. Finish returns unfiledFindings with the next Projects call; a blocked step becomes an owner ask. Review notes on walks are open Projects work exposed in stories.read: pick them up directly; only story-change requests need a person’s decision.
+6. Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, direction or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why. The detail level is the blind walk and its filed failures. File each failure after finishing, as a Projects item citing story:<slug>#<stepId>@<runId> (slug is the story id from stories.read, stepId the step id, runId the run from stories.run; leave out @<runId> when no run applies) with the evidence file. Rate it with `cady-qa-triage`. Close it by a new blind run of that story at the fixed build, not by the producer's word; a reported fix awaits that passing rewalk. Finish returns unfiledFindings with the next Projects call; a blocked step becomes an owner ask. Review notes on walks are open Projects work exposed in stories.read: pick them up directly; only story-change requests need a person’s decision.
 
 ## Acceptance
 
