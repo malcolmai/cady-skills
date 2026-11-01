@@ -2,6 +2,20 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 1dce451c4581f58b · 2026-11-01
+
+Since d3506b53442fc915: 0 new, 0 dropped, 8 changed.
+
+Changed (the parts that differ):
+- `cady-core-skill-index`: gtm
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-cold-email-cycle`: intro, Procedure
+- `cady-gtm-method`: Role card
+- `cady-gtm-pipeline-pass`: description, intro, Inputs, Procedure
+- `cady-gtm-tam-map`: Procedure
+
 ## d3506b53442fc915 · 2026-10-31
 
 Since 37a1788863facbce: 0 new, 0 dropped, 21 changed.

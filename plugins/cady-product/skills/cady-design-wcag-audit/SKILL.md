@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.design.wcag_audit"
   version: "48a484c03628939409e9"
-  library: "d3506b53442fc915"
+  library: "1dce451c4581f58b"
   function: "design"
 ---
 # Accessibility audit (WCAG 2.2 AA)
 
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "48a484c03628939409e9@d3506b53442fc915"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "48a484c03628939409e9@1dce451c4581f58b"}})`
 
 Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 

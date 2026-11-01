@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "e70877e54962f550993c"
-  library: "d3506b53442fc915"
+  version: "6e38c4d22e0b1263b880"
+  library: "1dce451c4581f58b"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "e70877e54962f550993c@d3506b53442fc915"}})`
+**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "6e38c4d22e0b1263b880@1dce451c4581f58b"}})`
 
 Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.
 
@@ -39,7 +39,7 @@ Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actua
 
 ## Procedure
 
-1. Name the decision: a new purchase, or a renewal, trial end or cancellation. Follow the matching reference (`../../references/vendor-purchase.md` or `../../references/vendor-renewal.md`) for evidence, comparison and commitment. Route provider capability, security, access and credential fit to Integrations or the relevant owner. Reuse a current value review for unchanged need, vendor, terms and usage; a small covered request needs a scope/limit check, not another vendor study.
+1. Name the decision: a new purchase, or a renewal, trial end or cancellation. Keep a shortlist of several vendors as a List created with purpose vendor and mark each chosen or rejected with crm.update_list_members (fit or excluded) and a reason; a vendor List never starts a pipeline. Follow the matching reference (`../../references/vendor-purchase.md` or `../../references/vendor-renewal.md`) for evidence, comparison and commitment. Route provider capability, security, access and credential fit to Integrations or the relevant owner. Reuse a current value review for unchanged need, vendor, terms and usage; a small covered request needs a scope/limit check, not another vendor study.
 2. Keep cost views distinct: annualized run-rate, full-term commitment and period cash timing. Unknown amount is not zero; annual equivalent is not booked spend; a register line is evidence, not a reservation.
 3. Continue authorized research and preparation. For any dependent paid effect without an applicable verified scoped user grant and permitted executor, checkpoint a BLOCKED Projects item with exact vendor, amount, currency, term, decision owner, terms and next action. A future delegated envelope needs owner-enforced limits, reservation, expiry and receipt; do not claim it exists now. Reuse unchanged valid exact authority without another ask. No cancellation is sent and no money is reserved from this skill. When the commitment is a contract with a term (annual software, an agency, a lease), its terms go through `cady-company-operations-contract-checks` (vendor commitment); this skill judges value.
 4. Report the recommendation or register and dated next action with report_company_work after CRM and work readback. A sent notice is not vendor acknowledgement; an acknowledged future effective end is not ended service. Keep work open for dated outcome evidence.
