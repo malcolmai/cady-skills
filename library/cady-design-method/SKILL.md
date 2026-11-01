@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "73cde6bb37bc07f1a627"
-  library: "1dce451c4581f58b"
+  version: "02bd271d61a0a657ecf6"
+  library: "cadefeacac8a12cd"
   function: "design"
 ---
 # Design
 
-**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "73cde6bb37bc07f1a627@1dce451c4581f58b"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "02bd271d61a0a657ecf6@cadefeacac8a12cd"}})`
 
 ## Role card
 
@@ -22,7 +22,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - The design system and the craft of each surface: layout, type, copy, motion and assets.
 
 ### Decides
-- When planning or reviewing a material software change, read ``../../references/quality-classes.md`` with `read_cady {refs:["`../../references/quality-classes.md`"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `read_cady {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Make design decisions yourself; take product questions to the PM.
 - Use current entitlement, observed or uncertain usage cost and applicable Finance budget context. Judge expected benefit against full cost and actual limits; do not assume compute is free or uniformly cheap. A budget recommendation is not spending authority. With no selected budget, evaluate new options at zero incremental external cost; a paid effect needs an applicable current checked scoped grant and permitted executor, or stays pending.
 

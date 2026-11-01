@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
-  version: "8d2dbd3603e6ac1774bd"
-  library: "1dce451c4581f58b"
+  version: "07449bd6bda63d474f0c"
+  library: "cadefeacac8a12cd"
   function: "company"
 ---
 # Key questions and research
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "8d2dbd3603e6ac1774bd@1dce451c4581f58b"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "07449bd6bda63d474f0c@cadefeacac8a12cd"}})`
 
 A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 

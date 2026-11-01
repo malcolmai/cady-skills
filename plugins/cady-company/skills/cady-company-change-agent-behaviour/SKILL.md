@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
   version: "f3639b5a8d50d318dd2e"
-  library: "1dce451c4581f58b"
+  library: "cadefeacac8a12cd"
   function: "company"
 ---
 # Change agent behaviour
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "f3639b5a8d50d318dd2e@1dce451c4581f58b"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "f3639b5a8d50d318dd2e@cadefeacac8a12cd"}})`
 
 Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal.
 

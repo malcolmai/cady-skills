@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "30881fd357d54e224cc6"
-  library: "1dce451c4581f58b"
+  version: "d29982f8ed0cdaa06461"
+  library: "cadefeacac8a12cd"
   function: "gtm"
 ---
 # Offer and segments
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "30881fd357d54e224cc6@1dce451c4581f58b"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "d29982f8ed0cdaa06461@cadefeacac8a12cd"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 
@@ -35,7 +35,7 @@ Choose or revise the target segment, offer or message angle from evidence, befor
 ## Procedure
 
 1. Read read_cady company:direction and relevant accepted work. Keep a hypothesis register (offer, segment, trigger) as hypothesis decisions with subject hypothesis:gtm.<slug> (the convention in `cady-company-decision-questions` step 3) (get_company_work decisions {state: "current", subjectPrefix: "hypothesis:gtm."}; continue, never duplicate) and carry the current ones into the direction revision. Each hypothesis: statement; status (open, supported, weakened, rejected); evidence for and against, each with type and strength on the direction_rule ladder; the next cheapest test; the reversal or kill condition. Find the evidence that could most change the decision, desk evidence first; run the test that could most change the decision with `cady-company-experiment` and frame questions with `cady-company-decision-questions` rather than repeating them here.
-2. State the ICP with at least two disqualifiers (who it is not for and why) and its hypothesis status. Define segments by pain or buying trigger as hypotheses. For each state fit, evidence for and against, exclusion and what would change the choice. Do not require a dated trigger. Never use a weakly supported hypothesis as a filter, stop rule or fact; no sign of the claimed pain counts against it.
+2. State the ICP with at least two disqualifiers (who it is not for and why) and its hypothesis status. Define each segment as a hypothesis by its buying scenario and record the scenario on that hypothesis so drafting and sourcing reuse it. When you plan, rank prospects or write customer copy, start from the customer's buying scenario, 3-5 lines written first: is there a real buying need, what triggers it, where they look then (peers, communities, search, ads, creators) and what they react to. Tag each line with its strongest evidence: a conversation about past behaviour, revealed behaviour, desk evidence, or assumed. The company's own records and calendar describe the sender, not the buyer. Reuse the segment's current scenario from its recorded hypothesis; a fresh helper with no drafting context checks a new one before any copy uses it, and with no helper available you mark it unchecked in the held review and go on. Evidence of no need stops the work and is recorded against that hypothesis; an assumed need makes the work a test of it, not a pitch. A message to one person meets them where they are in the scenario, from their own record or thread; a fact about their company plus a shared pitch does not. For each segment state fit, evidence for and against, exclusion and what would change the choice. Do not require a dated trigger. Never use a weakly supported hypothesis as a filter, stop rule or fact; no sign of the claimed pain counts against it.
 3. Choose a few distinct angles and compare them with angles already prominent in current direction and work. Avoid repeating an overused angle without a reason.
 4. Inventory real, permissioned customer proof by problem and outcome; how proof is chosen for a message is in the cold email copy rules (`cady-gtm-cold-email-cycle`). Omit proof when none fits.
 5. Use crm.update_party to record company_name, industry and proof approval on their owner records. Read current permission and engagement with crm.get_party; record engagement evidence with crm.record_interactions, never as a free label.

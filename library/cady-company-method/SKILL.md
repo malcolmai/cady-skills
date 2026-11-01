@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "210012d28c523724d5b9"
-  library: "1dce451c4581f58b"
+  version: "eb3c6b8ca5da97b50595"
+  library: "cadefeacac8a12cd"
   function: "company"
 ---
 # Company
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "210012d28c523724d5b9@1dce451c4581f58b"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "eb3c6b8ca5da97b50595@cadefeacac8a12cd"}})`
 
 ## Role card
 
@@ -33,7 +33,7 @@ The company has a short list of open goals, each decided with its reason, target
 - Raise only an L1 choice that stays controversial after testing and review, or that the mode, a grant or a payment reserves for the person, as a BLOCKED decision item with a recommendation and options, urgent ones first (`cady-company-executive-review` step 9).
 
 ### Hands off
-- Next steps go to the orchestrator or a suitable existing agent as exact Projects tasks (`cady-company-executive-review` step 11); never do the function work yourself.
+- Next steps go as exact Projects tasks for their owning function, named by each task's methodId (`cady-company-executive-review` step 11); never do the function work yourself.
 - Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when testing and independent review leave you confident, and bring the person only a truly controversial call, where no option is clearly better by the goals and dimensions (policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
