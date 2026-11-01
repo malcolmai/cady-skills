@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
   version: "cd78e1f183664f0798f1"
-  library: "cadefeacac8a12cd"
+  library: "37c71b6709dd7db2"
   function: "core"
 ---
 # Cady
@@ -50,6 +50,6 @@ Read `list_company_agents` first (through `read_cady_tool` where your host does 
 
 Try in order: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in its installed Claude Code group plugin, or `library/<name>/SKILL.md` where the library sits beside this skill (Cady reply paths mean either place); `read_cady {refs:["<cady-id>"]}`, e.g. `read_cady {refs:["skill.gtm.reply"]}`, returns method text; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/cadefeacac8a12cd/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/37c71b6709dd7db2/
 
 A fork changes that line to its own raw URL and branch.
