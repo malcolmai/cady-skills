@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "e8f4346b2dfbeee3513e"
-  library: "1dce451c4581f58b"
+  version: "cd78e1f183664f0798f1"
+  library: "a12ab89eefb526d4"
   function: "core"
 ---
 # Cady
@@ -18,7 +18,7 @@ Reads the company's context in Cady, then loads the matching skill. Use when the
     get_cady_context({"area": "<area>", "task": "<what you are about to do, in one sentence>"})
 
 Add "agentId" when you run as a registered Cady agent, "workId" to resume a work item, and
-"knownMethods" {cady-id: version} (up to 8) for the skills you hold, so Cady returns company
+"knownMethods" {cady-id: version} (up to 32) for the skills you hold, so Cady returns company
 content without re-sending their text. Product areas take the id from get_company_product in place of <productId>.
 Then follow cady-core-run-sequence. A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-review`).
 
@@ -48,8 +48,8 @@ Read `list_company_agents` first (through `read_cady_tool` where your host does 
 
 ## Load a skill
 
-Invoke the installed skill by name; `cady-core-skill-index` (also `INDEX.md`) lists them. Where the library sits beside this skill, read `library/<name>/SKILL.md`. Otherwise fetch the skill and its linked references from the source below. If no route works, say the method is unavailable and hold company writes.
+Try in order: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in its installed Claude Code group plugin, or `library/<name>/SKILL.md` where the library sits beside this skill (Cady reply paths mean either place); `read_cady {refs:["<cady-id>"]}`, e.g. `read_cady {refs:["skill.gtm.reply"]}`, returns method text; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/1dce451c4581f58b/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/a12ab89eefb526d4/
 
 A fork changes that line to its own raw URL and branch.

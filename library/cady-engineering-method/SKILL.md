@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "970b5ed4a94249ce0385"
-  library: "1dce451c4581f58b"
+  version: "e9c03b93a9f335e07f54"
+  library: "a12ab89eefb526d4"
   function: "engineering"
 ---
 # Engineering
 
-**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "970b5ed4a94249ce0385@1dce451c4581f58b"}})`
+**Company context:** `get_cady_context({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "e9c03b93a9f335e07f54@a12ab89eefb526d4"}})`
 
 ## Role card
 
@@ -24,7 +24,7 @@ Read your system map and the architecture decisions in `company_records` before 
 - Release is part of done: take independent work to merged and, where release authority covers it, live; otherwise end at the exact handoff. Before editing, read the live artifact and confirm which source deploys it. Take branching, required checks and promotion from the company's repository guidance (its AGENTS.md or CONTRIBUTING) or its recorded release policy. Call something live only after reading it back from the live target (fetched page, version id); list the rest as not verified.
 
 ### Decides
-- When planning or reviewing a material software change, read ``../../references/quality-classes.md`` with `read_cady {refs:["`../../references/quality-classes.md`"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `read_cady {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Focus on using the very latest cutting-edge technology within resource constraints, don't match to older solutions. Justify cost against the quality it buys.
 - Make engineering decisions yourself. Raise a cleanliness issue only when it blocks work or keeps recurring; extend the canonical owner rather than adding parallel paths.
 - Delegate per the native orchestration rules (split only substantial orthogonal work; never a reviewer who produced the change); clean up what you started; re-brief a failed helper once, then replace it.
