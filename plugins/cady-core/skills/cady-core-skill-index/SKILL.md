@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "7ff5d1968ff51aeb4c69"
-  library: "c8b387c68af98e70"
+  version: "136c2e49f5f9682c292f"
+  library: "77b2da60520f8542"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "7ff5d1968ff51aeb4c69@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "136c2e49f5f9682c292f@77b2da60520f8542"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -35,15 +35,16 @@ Every Cady task skill, with one line on when to use it.
 
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 - `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
-- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
-- `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
-- `cady-gtm-linkedin-message`: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
+- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, using one template per segment.
+- `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations.
+- `cady-gtm-linkedin-message`: Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-persona-profile`: Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy.
 - `cady-gtm-pipeline-pass`: Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps.
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 - `cady-gtm-tam-map`: Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts.
 - `cady-gtm-warm-email`: Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches.
+- `cady-marketing-post`: Create or edit one post for the audience, topic and placement chosen in the brief.
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 
 ## finance

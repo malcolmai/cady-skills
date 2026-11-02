@@ -1,4 +1,4 @@
-# Copy
+# Warm email copy
 
 - **Click:** A human click on a reply or call ask gets one personal note that never mentions the click or tracking.
 - **Goal:** Continue a real relationship with one personal note that makes the next step easy.

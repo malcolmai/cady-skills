@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "d61edda167e7d13373c6"
-  library: "c8b387c68af98e70"
+  version: "d6402ca7e175c9e22269"
+  library: "77b2da60520f8542"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "d61edda167e7d13373c6@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "d6402ca7e175c9e22269@77b2da60520f8542"}})`
 
 ## Role card
 
@@ -49,7 +49,7 @@ You create and test demand for the current bets: content, search, events and pai
 - `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
-- `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
+- `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations.
 
 ## Parent function
 gtm
@@ -57,6 +57,6 @@ gtm
 ## Selected judgment
 - When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation. Unknown contact basis holds release, not eligible identity persistence or held review preparation.
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
-- When choosing a channel rather than executing an accepted one, retrieve the current GTM channel experiment detail after registered discovery.
+- When choosing a channel rather than executing an accepted one, read `../../references/gtm-channels.md` after registered discovery.
 
 - Read [Domain method](references/domain-method.md) when you plan or publish marketing content or SEO.

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "f897dc0edbefc44caf4b"
-  library: "c8b387c68af98e70"
+  version: "df28414d86ac141da793"
+  library: "77b2da60520f8542"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "f897dc0edbefc44caf4b@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "df28414d86ac141da793@77b2da60520f8542"}})`
 
 Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
 
@@ -38,7 +38,7 @@ Draft or revise an investor memo, deck narrative, data room or monthly investor 
 2. Draft only the requested kind. A memo makes a checkable investor case; a deck narrative states each slide's question, claim, proof and limit. Keep internal choices distinct from investor-facing claims. Define each metric once and use it everywhere (MRR versus ARR, bookings versus revenue, logo versus net revenue retention, cohort start rule); investors check that the deck, model and data room agree. For cash and burn figures use `cady-finance-runway` and state each figure's basis (assumption or observed); name the plan file if one exists; Cady never classifies files. Then read it as the target investor would: the three objections they would raise first, each answered in the draft with its evidence (quotes exact) or named as an open risk, and how the round fits their thesis (stage, sector, check size) from their own record, labelled assumed where unsourced. Judge it with the taste check (../../references/taste-check.md, investor part) before review.
 3. Monthly investor update, drafted for a fixed send day: subject with company, month and one-line headline; 1) highlights (2 to 3 wins with numbers); 2) metrics table, same rows every month (revenue or MRR, growth, customers, burn, runway months, cash); 3) lowlights and what you are doing about them; 4) asks, specific and actionable (an intro to a named role, a hire, a customer type); 5) thanks. Under 400 words; bad news early and plainly; never change a metric definition without saying so.
 4. Data room, ready before priced-round diligence (lighter for a SAFE): incorporation and governing documents, board and shareholder consents; fully diluted cap table reconciled to the share register and every SAFE, note and option grant with its board approval; IP assignments from every founder, employee and contractor; key customer, supplier and financing contracts; monthly financials for the last 12 to 24 months and the model; metric definitions; team and option list; material filings and disputes. Common gaps that stall a close: a missing IP assignment, an unapproved option grant, a cap table that does not match the register, or no evidence that a US 83(b) election was filed in time (the deadline cannot be cured later).
-5. Reconcile every material number and claim to an exact dated source. Make the narrative and export usable to its audience. Draft to people in your voice pack (message rules, sender_voice); do not create a separate voice card. Check placeholders, stale figures and unsupported traction.
+5. Reconcile every material number and claim to an exact dated source. Make the narrative and export usable to its audience. Draft to people in your voice pack (`../../references/outreach-drafting.md`, sender_voice); do not create a separate voice card. Check placeholders, stale figures and unsupported traction.
 6. Save the document through the host Files route using files_update or files_create with mode "begin", files_update or files_create with mode "validate" and files_update or files_create with mode "complete" where available. Give it a meaningful name and location, and relate its exact ref to this claimed work through work_change(action: 'checkpoint'); Cady does not classify documents. Read back with work_read and files.read_text when supported.
 7. Report checked File refs, missing evidence and the next founder decision with work_report. A monthly update remains a draft until it is sent through `cady-fundraise-investor-outreach`.
 

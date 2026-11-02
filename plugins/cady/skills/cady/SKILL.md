@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "3f907e1852ef4980efdd"
-  library: "c8b387c68af98e70"
+  version: "9273ec2b20f5cc3441e3"
+  library: "77b2da60520f8542"
   function: "core"
 ---
 # Cady
@@ -44,12 +44,12 @@ Then follow cady-core-run-sequence. A new company, or one with no direction yet,
 
 ## Add or change an agent
 
-Read `agents_read` first (through `read_cady_tool` where your host does not list it). If an agent already owns the outcome, reuse or update it instead of creating a second one. To create, bind or schedule one, load `cady-company-manage-agents`; its worked recipe for a go-to-market agent is [`references/agent-recipe-gtm.md`](references/agent-recipe-gtm.md).
+Read `agents_read` first (through `read_cady_tool` where your host does not list it). If an agent already owns the outcome, reuse or update it instead of creating a second one. To create, bind or schedule one, load `cady-company-manage-agents`; its channel execution agent brief is [`references/execution-agent-brief.md`](references/execution-agent-brief.md).
 
 ## Load a skill
 
 Try in order: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in its installed Claude Code group plugin, or `library/<name>/SKILL.md` where the library sits beside this skill (Cady reply paths mean either place); `records_read {refs:["<cady-id>"]}`, e.g. `records_read {refs:["skill.gtm.reply"]}`, returns method text; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/c8b387c68af98e70/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/77b2da60520f8542/
 
 A fork changes that line to its own raw URL and branch.

@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
   version: "1dd9a4fb1a1178cb6fd0"
-  library: "c8b387c68af98e70"
+  library: "77b2da60520f8542"
   function: "company"
 ---
 # Key questions and research
 
-**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "1dd9a4fb1a1178cb6fd0@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "1dd9a4fb1a1178cb6fd0@77b2da60520f8542"}})`
 
 A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 
