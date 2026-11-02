@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "34ab7cef0ea9d0e429b2"
-  library: "e3b6df6bae57d0af"
+  version: "cfb5a13ba95a49468234"
+  library: "f6f95523d66c641b"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `get_cady_context({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "34ab7cef0ea9d0e429b2@e3b6df6bae57d0af"}})`
+**Company context:** `context_read({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "cfb5a13ba95a49468234@f6f95523d66c641b"}})`
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 
@@ -42,7 +42,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 5. Scan unsampled members for consequential outliers: a personal request or exchange, different reply-to, attachment, or an actual invoice, contract, deadline, renewal or security action. A name or personalization token alone is not an outlier. Read each hit individually and count it as pulledOut.
 6. Triage each individually read message on separate fields, never one score: type (question, request, promise, receipt, invoice, notice, social), action (none, reply, do, decide, wait), owner, deadline (absolute date and the zone written in) and importance (the user's own priority). Preserve each actual obligation, payment, contract or security action, even from a marketing sender. A promotional price or countdown is not an obligation; expired no-action reminders may be archived.
 7. For marketing mail, follow the existing inbox:marketing-treatment choice; ask once only for genuinely uncertain useful interest. See [Marketing handling and commitment updates](../../references/inbox-follow-through-details.md) for personalization, archive/unsubscribe separation and exceptional items.
-8. Record only material communication evidence with crm.record_interactions (kind reply for an actual response, note for an observation, provider message id as sourceRef (for pasted mail, a stable host reference or deterministic digest, never a raw subject), sender party, time and one-line outcome). Never put body, subject or attachments in Cady. Resolve an unknown sender using authorized CRM/source evidence; if identity remains unknown, do not invent a party or permission. Create a party through crm.update_party mode=create only when identity is sufficiently evidenced and durable CRM identity is useful; otherwise ask only if the ambiguity changes a consequential next action.
+8. Record only material communication evidence with crm_interactions_create (kind reply for an actual response, note for an observation, provider message id as sourceRef (for pasted mail, a stable host reference or deterministic digest, never a raw subject), sender party, time and one-line outcome). Never put body, subject or attachments in Cady. Resolve an unknown sender using authorized CRM/source evidence; if identity remains unknown, do not invent a party or permission. Create a party through crm_parties_update or crm_parties_create mode=create only when identity is sufficiently evidenced and durable CRM identity is useful; otherwise ask only if the ambiguity changes a consequential next action.
 9. For material threads, identify outcome and owner/work; check latest counterparty mail against unresolved older requests. Generic status does not complete the goal. Finish useful investigation/preparation within mandate: deliver the assessment or draft, then ask only for the missing decision/approval. No request does not mean done.
 10. Reuse existing work or a native reminder; never create per-email or duplicate work. Add obligation metadata only when useful for retrieval or fulfillment. Preserve source, certainty, promisor and date precision; never infer them. Use the supported reporting or focused-update route. See [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md) for owner routes.
 11. Reconcile due awaiting commitments even without new mail: record who acts next and a justified chase date. Awaiting is not blocked or Needs-you without a person action. Keep unfinished outcomes open and completed work terminal; cancellation is not fulfillment. Stop denied mutations and continue independent work. Route material takeaways once; routine mail writes nothing. Use the commitment reference for corrections and CRM-specific routes.
@@ -73,7 +73,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 - company:work:<workId>
 - crm:interaction:<interactionId>
 - crm:party:<partyId>
-- **Transition:** report the useful outcome, material remainder and next owner through report_company_work; include counters only in optional observed run output, never create a run just to hold them
+- **Transition:** report the useful outcome, material remainder and next owner through work_report; include counters only in optional observed run output, never create a run just to hold them
 
 ## References
 - Read [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md) when a material inbox outcome, commitment or takeaway needs owner-routed follow-through.

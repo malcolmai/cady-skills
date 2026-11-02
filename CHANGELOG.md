@@ -2,22 +2,69 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## e3b6df6bae57d0af · 2026-11-02
+## f6f95523d66c641b · 2026-11-02
 
-Since 3cff931f8bce63f1: 0 new, 0 dropped, 9 changed.
+Since 3cff931f8bce63f1: 0 new, 0 dropped, 56 changed.
 
 Changed (the parts that differ):
+- `cady`: Start every run, Add or change an agent, Load a skill, reference agent-recipe-gtm.md
+- `cady-accounting-method`: Role card
+- `cady-company-change-agent-behaviour`: Procedure
+- `cady-company-decision-check`: Always, Procedure, Acceptance, Owner checks
+- `cady-company-decision-questions`: Procedure
+- `cady-company-executive-review`: Inputs, Procedure
+- `cady-company-experiment`: Procedure
+- `cady-company-manage-agents`: Procedure, reference scheduling.md
+- `cady-company-method`: Role card, reference domain-method.md
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-operations-contract-checks`: Inputs, Procedure
+- `cady-company-operations-inbox-follow-through`: Procedure, Result
+- `cady-company-operations-method`: Role card, reference domain-method.md
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-company-operations-requirement-register`: Procedure
+- `cady-company-review`: Company review, reference setup.md
+- `cady-company-taste-review`: Procedure
+- `cady-company-voice-pack`: description, intro, Always, Procedure, Acceptance
+- `cady-core-context`: Company practice, Orientation
+- `cady-core-execution`: Surfaces, reference credentials.md, reference decision-standard.md, reference delivery-completion.md, reference native-orchestration.md, reference quality-check.md
+- `cady-core-run-sequence`: Run sequence, reference reporting.md
+- `cady-customer-success-lifecycle`: Procedure
+- `cady-design-method`: Role card
+- `cady-engineering-debugging`: Procedure
+- `cady-engineering-method`: Role card
+- `cady-engineering-system-cycle`: Procedure
+- `cady-finance-method`: reference domain-method.md
+- `cady-finance-runway`: Procedure
+- `cady-finance-tax-cycle`: Procedure
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-investor-outreach`: Procedure
+- `cady-fundraise-method`: Role card, reference domain-method.md
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-calls`: Procedure
 - `cady-gtm-cold-email-cycle`: Procedure, Acceptance, reference copy.md
+- `cady-gtm-events`: Procedure
+- `cady-gtm-launch`: Gtm launch
 - `cady-gtm-linkedin-message`: Procedure
-- `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-method`: Role card, reference domain-method.md
 - `cady-gtm-offer-and-segments`: Procedure, Acceptance
+- `cady-gtm-pipeline-pass`: Procedure
 - `cady-gtm-reply`: Procedure
 - `cady-gtm-tam-map`: Procedure
 - `cady-gtm-warm-email`: Procedure
-- `cady-marketing-method`: reference domain-method.md
+- `cady-marketing-method`: Role card, reference domain-method.md
+- `cady-orchestrator-method`: Role card, reference domain-method.md
 - `cady-product-customer-interview`: Procedure
+- `cady-product-manage`: Procedure
+- `cady-product-method`: Role card, reference domain-method.md
+- `cady-product-research`: Procedure
+- `cady-qa-method`: Role card
+- `cady-qa-stories`: Procedure
+- `cady-qa-triage`: Procedure
+- `cady-sales-deal-motion`: Procedure
 
-Shared references changed: outreach-message-rules.md, taste-check.md.
+Shared references changed: agent-recipe-gtm.md, call-follow-up.md, cold-deliverability.md, company-goals.md, events-host.md, inbox-follow-through-details.md, intro-request.md, outreach-message-rules.md, tam-map-import.md, taste-check.md, vendor-renewal.md.
 
 ## 3cff931f8bce63f1 · 2026-11-02
 

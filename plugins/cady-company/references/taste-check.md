@@ -8,7 +8,7 @@
 4. Fresh judge, staged: a separate helper (another model family where available) gets only the artifact and a one-line reader. It records its first impression and answers the tests in the reader's words; only then does it see the owner's taste decisions and the tells. Your reasoning comes after its verdict.
 5. Verdict: concept first, then structure, then detail, against the current version: "A over B for this reader because ..., giving up ...". Keeping it as it is is a valid verdict; a close call is a tie.
 6. The person decides what a model cannot (tone, persuasion, humour, fine visual preference) and anything consequential to a named person or the public: show two unlabelled real alternatives, once. Real responses outrank every judge.
-7. Record an owner correction as a quoted, scoped taste:<medium>-<key> decision (submit_company_work_checkpoint); it is the next judge's reference.
+7. Record an owner correction as a quoted, scoped taste:<medium>-<key> decision (work_create); it is the next judge's reference.
 
 ## Investor
 

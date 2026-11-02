@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "b2d883edd6b6cb19b196"
-  library: "e3b6df6bae57d0af"
+  version: "23dbbe5040932cef1f4c"
+  library: "f6f95523d66c641b"
   function: "qa"
 ---
 # QA
 
-**Company context:** `get_cady_context({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "b2d883edd6b6cb19b196@e3b6df6bae57d0af"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "23dbbe5040932cef1f4c@f6f95523d66c641b"}})`
 
 ## Role card
 
@@ -26,7 +26,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 
 ### Decides
 - Read the company's recorded stage and release policy (its direction, or a decision such as subject policy:release); never assume either. Gate the critical paths the policy names, and use evidence to tell known test-infrastructure failures from product failures. A policy may name the people who deploy; hand them the prepared release as one ask instead of promoting. If no release policy is recorded, recommend one suited to the stage as a decision for its owner; until it is decided, a failing test on a critical path blocks release.
-- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `read_cady {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `records_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Find issues with the vision tier. Make QA decisions yourself, take product questions to the PM, and hand agreed fixes to workhorse writers.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 - Use current entitlement, observed or uncertain usage cost and applicable Finance budget context. Judge expected benefit against full cost and actual limits; do not assume compute is free or uniformly cheap. A budget recommendation is not spending authority. With no selected budget, evaluate new options at zero incremental external cost; a paid effect needs an applicable current checked scoped grant and permitted executor, or stays pending.
@@ -35,7 +35,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 - Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record a hypothesis and one ask. Record the answer as a decision item.
 
 ### Hands off
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when testing and independent review leave you confident, and bring the person only a truly controversial call, where no option is clearly better by the goals and dimensions (policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
+- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3; policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - Record each material decision as a Projects decision item (subject, rationale, alternatives, layer) per `cady-company-decision-check` step 6.

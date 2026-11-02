@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "f3639b5a8d50d318dd2e"
-  library: "e3b6df6bae57d0af"
+  version: "f1213b065a056829f31f"
+  library: "f6f95523d66c641b"
   function: "company"
 ---
 # Change agent behaviour
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "f3639b5a8d50d318dd2e@e3b6df6bae57d0af"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "f1213b065a056829f31f@f6f95523d66c641b"}})`
 
 Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal.
 
@@ -39,7 +39,7 @@ Change what agents do: edit a skill, role card, run sequence, charter line, tool
 3. Kind 1 and kind 3: edit, then independent review of the diff (the review rule, `cady-engineering-independent-review`); no eval. Pruning rule: keep a line if it changes behaviour, prevents a named risk or carries a decision the agent must not guess; cut it if it repeats another line, restates a rule served elsewhere or pads. Cutting a line another served line carries: name the kept line. A cut in always-on text, a hard limit, an external-facing line or a line that prevents a named risk also takes the comparison in step 4. Always-on text is paid for in every session: add a line there only by removing one.
 4. Kind 2: write the expected difference first, as one line at the decision point in positive wording, naming the line it replaces. Prove it with a small eval: the failing case, a thin-evidence variant of it, and a nearby case that must not change; the same model with and without the change, at least 3 trials per arm; a fresh judge scores each case against checks written before the run, one per dimension, never one overall grade. Land it only when it is clearly better and the nearby case is unchanged; a split result extends to 10 trials per arm. Take most care with sends, spend, permissions and anything a customer or recipient sees. A company's fork has a lighter bar: classify the change, run the failing case and one nearby case by hand with and without it, and record a decision naming the line and why. Write the text itself with `cady-company-taste-review` (drafting prompts and skills).
 5. Guard it, so the change is seen later and does not drift. Add a row to the behaviours register for the behaviour (its id, the departure it prevents, its home), a deterministic regression test at the lowest layer that proves it (the served text, the tool result or the code), and, if a cue repeats the rule at another decision point, register that cue against the behaviour id with the eval that justified it. A fork without a register records one decision for the same facts.
-6. Ship and read it back. Upstream guidance ships as a release; a fork commits it with the reason in the message and records the decision; an agent's goal text goes through manage_company_agent with the current revision (`cady-company-manage-agents`). Read the served or installed text back and confirm it is the text you changed.
+6. Ship and read it back. Upstream guidance ships as a release; a fork commits it with the reason in the message and records the decision; an agent's goal text goes through agents_update or agents_create or agents_change with the current revision (`cady-company-manage-agents`). Read the served or installed text back and confirm it is the text you changed.
 
 ## Acceptance
 

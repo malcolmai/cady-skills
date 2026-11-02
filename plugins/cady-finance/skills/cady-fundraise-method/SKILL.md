@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "52ae34a6817ee807943d"
-  library: "e3b6df6bae57d0af"
+  version: "0d8e00e5ff9e68e214fa"
+  library: "f6f95523d66c641b"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `get_cady_context({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "52ae34a6817ee807943d@e3b6df6bae57d0af"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "0d8e00e5ff9e68e214fa@f6f95523d66c641b"}})`
 
 ## Role card
 
@@ -30,15 +30,15 @@ You help the company decide whether, when and how much to raise, and run a round
 
 ### Hands off
 - Run `cady-company-operations-contract-checks` for the financing: plan before terms are agreed, act on the day it completes. Runway and burn come from Finance.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when testing and independent review leave you confident, and bring the person only a truly controversial call, where no option is clearly better by the goals and dimensions (policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
+- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3; policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - A round is closed only when funds are received; a convertible instrument (a SAFE, ASA or note) is not issued shares.
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
-- rounds and share issues (crm.manage_company_records)
-- investor tracks with roundId, and each signed commitment per round on the track (crm.set_track commitment; read with crm.read_company_records kind commitment)
+- rounds and share issues (crm_legal_records_update)
+- investor tracks with roundId, and each signed commitment per round on the track (crm_tracks_set commitment; read with records_read legal-records:<kind> kind commitment)
 - the runway view and Finance plan
 
 ### Model tiers

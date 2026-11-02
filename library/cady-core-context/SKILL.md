@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "d5a1604a927f60f266a6"
-  library: "e3b6df6bae57d0af"
+  version: "0405ecb24ff32d8d14ae"
+  library: "f6f95523d66c641b"
   function: "core"
 ---
 # Company context
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "d5a1604a927f60f266a6@e3b6df6bae57d0af"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "0405ecb24ff32d8d14ae@f6f95523d66c641b"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
@@ -21,7 +21,7 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 - Use recorded direction as the working baseline, including its bets: beliefs the company acts on before evidence settles them. Let a held bet cut options without re-arguing it; surface contrary evidence against the bet it challenges instead of silently working around it. Record a bet only when it cites a current recorded person decision, tagged with the function that will test it; link its hypothesis so the outcome supplies the status. An inferred belief stays a hypothesis linked to the recorded decision it serves. Priorities link to goals; stage belongs to company:stage; rules cite decisions. Route missing owner facts to asks and research questions to tasks, never a company-context unknowns or sources list. Preserve user choices.
 - Verify readiness and authority before consequential effects, and the working result before expansion. An authorized recurring review can be configured before the first execution. Load the cady-company-review skill for operational review, then only relevant function methods.
-- Across sessions, recover the original authorized outcome through get_company_work; empty local claims do not establish that no work exists.
+- Across sessions, recover the original authorized outcome through work_read; empty local claims do not establish that no work exists.
 - A chat observation or CRM note is not an order update, refund, shipment or completed resolution.
 - File properly: when you store a file in Cady Files, give it a clear name, a location, its purpose and the related party or work item. Cady never classifies or labels files for you, so supply these yourself. The host edits files: upload a clearly named new version, not a duplicate. files.read_text returns PDF, DOCX, PPTX and text a window at a time with page or slide anchors (keep calling with next until it is absent; nextDownload names the files.get_download call whose 2-minute URL you fetch with plain GET for the raw bytes); no_extractable_text means a scan, and unavailable means unreadable, never an empty file.
 - One home per fact: search before creating any record, file, doc or tool and extend the owner; local files are working material, never records.
@@ -37,4 +37,4 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 ## Orientation
 
-- Decide when testing and independent review leave you confident; ask the owner only a truly controversial call (no option clearly better by the goals and dimensions), a grant, or a fact only they hold; record it and say so (`cady-company-decision-check`).
+- Decide from a chain from the goal, premises current, once review leaves you confident; ask the owner only top-level judgement (ICP, offer, a bet) or a permission-edge call (a grant, their account, a fact only they hold) (`cady-company-decision-check`).

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "2f383c2f107a5e05221a"
-  library: "e3b6df6bae57d0af"
+  version: "18093304867ff081c9ea"
+  library: "f6f95523d66c641b"
   function: "product"
 ---
 # Research
 
-**Company context:** `get_cady_context({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "2f383c2f107a5e05221a@e3b6df6bae57d0af"}})`
+**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "18093304867ff081c9ea@f6f95523d66c641b"}})`
 
 Create or update a company-library research piece on competitors and alternatives, or on a technology approach.
 
@@ -41,7 +41,7 @@ Create or update a company-library research piece on competitors and alternative
 4. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
 5. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
 6. Write semantic HTML or Markdown with useful headings and real tables, styled by the preset described in the research.write tool description (do not restate or replace it). Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Do not delay useful evidence or require a rewrite just for formatting.
-7. Find the same-question piece in the research namespace (find_cady_tools), read it with read_cady research:<id> (with its revision) and research.write (create or update) through find_cady_tools; check their current schemas and revision rules before writing. Customer evidence (interviews, observations) is not a library piece yet: keep it in Files and record a CRM interaction until a customer category exists. Never assume operation names or claim a write succeeded without its receipt/readback. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
+7. Find the same-question piece in the research namespace (find_cady_tools), read it with records_read research:<id> (with its revision) and research.write (create or update) through find_cady_tools; check their current schemas and revision rules before writing. Customer evidence (interviews, observations) is not a library piece yet: keep it in Files and record a CRM interaction until a customer category exists. Never assume operation names or claim a write succeeded without its receipt/readback. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
 
 ## Acceptance
 
