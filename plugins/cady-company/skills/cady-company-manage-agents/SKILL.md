@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "c475034098561e2e81cd"
-  library: "9c2ba6e6a0d1e0d3"
+  version: "89dda0c1ae0944360cf8"
+  library: "76da591f0f251280"
   function: "company"
 ---
 # Manage company agents
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "c475034098561e2e81cd@9c2ba6e6a0d1e0d3"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "89dda0c1ae0944360cf8@76da591f0f251280"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 

@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
   version: "62922879551ae7dc765f"
-  library: "9c2ba6e6a0d1e0d3"
+  library: "76da591f0f251280"
   function: "gtm"
 ---
 # Offer and segments
 
 **Point:** Turn the persona profile into the right offer, checking first that we understand the customer well enough.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "62922879551ae7dc765f@9c2ba6e6a0d1e0d3"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "62922879551ae7dc765f@76da591f0f251280"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 

@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
   version: "99d1000d0294efa0bb26"
-  library: "9c2ba6e6a0d1e0d3"
+  library: "76da591f0f251280"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "99d1000d0294efa0bb26@9c2ba6e6a0d1e0d3"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "99d1000d0294efa0bb26@76da591f0f251280"}})`
 
 Research, independently check and record one compliance requirement as a Cady Projects decision.
 
