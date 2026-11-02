@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "0a992a8af46752b9",
-    "version": "0a992a8af46752b98d944937dce7ec12c4d388b807769665ff5173b8e3eed5ab",
-    "pluginVersion": "2026.11.2-0a992a8a"
+    "tag": "9c79a655f80c84ea",
+    "version": "9c79a655f80c84eabb9d899e96e0140abf49b67a999265aa48f5d7537b4da08e",
+    "pluginVersion": "2026.11.2-9c79a655"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-0a992a8a"
+    "version": "2026.11.2-9c79a655"
   },
   "skills": [
     {
@@ -339,7 +339,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "fa9e58a1b8bd08c165c7"
+      "version": "7012bfc9aed8f5976d02"
     },
     {
       "name": "cady-product-customer-interview",
