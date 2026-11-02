@@ -5,103 +5,40 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "f19915f2df3225f990d5"
-  library: "82b573cad10ec174"
+  version: "3d00cd808df9fb4031e9"
+  library: "c8b387c68af98e70"
   function: "core"
 ---
 # Agent run sequence
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "f19915f2df3225f990d5@82b573cad10ec174"}})`
+**Point:** One order for every session, so no run acts on stale state, doubles an effect or ends unrecorded.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "3d00cd808df9fb4031e9@c8b387c68af98e70"}})`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
 
 ## Run sequence
 
+**Precedence:** Where guidance disagrees: code and tool results, then the charter, then recorded decisions, then your card and skill, then host files.
+
 - **Applies to:** Every Cady session, every role. Your role card (if any) and skills say what to work on; this says the order.
 
 ### Plan heads
 
-- **Audience:** all
-
-#### Call
-
-#### Arguments
-
-- **Task:** $task
-- **Tool:** context_read
-- **Head:** Read company state
-- **Audience:** agent
-
-#### Call
-
-#### Arguments
-
-- **Work id:** $reconcileWorkId
-- **Tool:** work_read
-- **Head:** Reconcile unresolved effects
-- **Audience:** all
-
-#### Call
-
-#### Arguments
-
-#### Decisions
-
-- **Context type:** goal
-- **State:** current
-
-#### Home page
-
-- **Area:** goals
-- **Filter:** active
-- **Tool:** work_read
-- **Head:** Reconcile uncovered founder outcomes with live work acceptance first
-- **Audience:** agent
-
-#### Call
-
-#### Arguments
-
-- **Action:** claim
-- **Expected generation:** $generation
-- **Expected revision:** $revision
-- **Work id:** $workId
-- **Tool:** work_change
-- **Head:** Claim the selected work
-- **Audience:** all
-
-#### Call
-
-#### Arguments
-
-#### Decisions
-
-- **State:** current
-- **Tool:** work_read
-- **Head:** Do the work: check decisions first
-- **Audience:** all
-
-#### Call
-
-#### Arguments
-
-#### Items
-
-| Claim | Result summary |
-|---|---|
-| done | <checked outcome> |
-
-- **Tool:** work_report
-- **Head:** Close with the checked outcome
-- **Precedence:** Where guidance disagrees: code and tool results, then the charter, then recorded decisions, then your card and skill, then host files.
+- Read company state: `context_read {"task": "$task"}`
+- Reconcile unresolved effects: `work_read {"workId": "$reconcileWorkId"}` (agents)
+- Reconcile uncovered founder outcomes with live work acceptance first: `work_read {"decisions": {"contextType": "goal", "state": "current"}, "homePage": {"area": "goals", "filter": "active"}}`
+- Claim the selected work: `work_change {"action": "claim", "expectedGeneration": "$generation", "expectedRevision": "$revision", "workId": "$workId"}` (agents)
+- Check current decisions, then do the work: `work_read {"decisions": {"state": "current"}}`
+- Close with the checked outcome: `work_report {"items": [{"claim": "done", "resultSummary": "<checked outcome>"}]}`
 
 ### Steps
 
-- 1. Read context_read with your agentId if you are a registered agent (a person's own session omits it), the area you are working in (for example gtm/outreach or product/context) and a task sentence. If you are paused or retired (agent.stop, agentContext.state retired, or an AGENT_PAUSED or AGENT_RETIRED refusal), stop: remove or pause your host trigger as the stop says, make its next call (agents_update or agents_create or agents_change mode=unschedule) and end the run. Agents: pass agentId on every Cady call that accepts it. The read returns the decisions routed to that area's action classes; records_read search covers the rest, its method, live work and refs; read any ref with records_read. Before work, record any new or changed outcome the person states in chat through `cady-company-decision-check` step 6, in their exact words; reuse an existing own-words answer or decision rather than recording it twice.
+- 1. Read context_read with your agentId if you are a registered agent (a person's own session omits it), the area you are working in (for example gtm/outreach or product/context) and a task sentence. If you are paused or retired (agent.stop, agentContext.state retired, or an AGENT_PAUSED or AGENT_RETIRED refusal), stop: remove or pause your host trigger as the stop says, make its next call (agents_update or agents_create or agents_change mode=unschedule) and end the run. Agents: pass agentId on every Cady call that accepts it. The read returns the decisions routed to that area's action classes; records_read search covers the rest, its method, live work and refs; read any ref with records_read. Before work, record any new or changed outcome the person states in chat through `cady-company-decision-check` step 6.
 - 2. Agents: reconcile first. For each reconcileWorkIds item: settle unresolved effects with their owner and call work_change action='report_effect_reconciliation'; an expired claim is no longer held: claim again (step 4) or action='recover' with a recoveryNote. Start no new effect on an item until it is clear.
-- 3. Read open goals and current goal decisions, including the person's recorded words, then their live work and brief.doneWhen; follow page and omitted-detail reads before judging coverage. Surface any open founder outcome no live acceptance covers before routine work. The function owner reconciles stale or missing acceptance and nextAction with that outcome before assignment or continuation: retain the existing item where it fits, claim it before checkpointing its brief, and record the reason and governing outcome ref. If it no longer fits, cancel it with work_change action='request_cancel', recoveryNote saying why and evidenceRef naming the replacement work; a note alone leaves it live. Someone else's live claim waits for its executor to acknowledge. Route a change outside your authority to its owner; a different outcome grants no effect permission. Agents: choose among reconciled work: resumeWorkIds first, then openWorkIds whose dueDate has passed or is empty, in the order served. Also check the asks you filed (asksFiled in your context). For each in waiting, do one quick check if one exists: access, call the tool once; a decision with decides, read that decision; send or sign, read the receipt or interaction. If it is resolved, close it (work_create on its workId, status COMPLETE, decision {kind:decision, authority:agent, layer:L3, rationale:"Resolved: <what you checked>"}) and continue; otherwise keep it and work on the rest. Never assume either way. Act on the answers in answered; an answer of "Handled elsewhere" means a person marked it handled, so verify it the same way and, if the check fails, raise the ask again (the one-ask-per-item guard keeps one row). Also check due standing duties from your current assignment and hostReview; an empty work queue does not cancel those duties. Use the reconciled task headline, brief.doneWhen and current outcome as the working scope; add goal or constraints only when they change the action or acceptance. Create owner work only when needed, and claim before controlled work. Use work tools only for real company work; small fixes and questions need no work item. A finish line names the deliverable, its size rule and what done is; a sample is labelled one and never meets a request for the deliverable; a budget, time-box or access stop closes as partial (delivered N of T). After claim, only the claim holder changes the brief through checkpoint. An ongoing responsibility stays open between runs. When a goal's callReasons or measureDue name a call, record a reading first (work_create measure), then the goal call. If neither work nor a standing duty is due, a goal owner reviews its open goal against the goal's doneWhen and dimensions first (its role method says how); go to step 6 with outcome no_work only when that finds nothing material.
+- 3. Read open goals and current goal decisions, including the person's recorded words, then their live work and brief.doneWhen; follow page and omitted-detail reads before judging coverage. Surface any open founder outcome no live acceptance covers before routine work. The function owner reconciles stale or missing acceptance and nextAction with that outcome before assignment or continuation: retain the existing item where it fits, claim it before checkpointing its brief, and record the reason and governing outcome ref. If it no longer fits, cancel it with work_change action='request_cancel', recoveryNote saying why and evidenceRef naming the replacement work; a note alone leaves it live. Someone else's live claim waits for its executor to acknowledge. Route a change outside your authority to its owner; a different outcome grants no effect permission. Agents: choose among reconciled work: resumeWorkIds first, then openWorkIds whose dueDate has passed or is empty, in the order served. 3b. Asks you filed (asksFiled in your context): For each in waiting, do one quick check if one exists: access, call the tool once; a decision with decides, read that decision; send or sign, read the receipt or interaction. If it is resolved, close it (work_create on its workId, status COMPLETE, decision {kind:decision, authority:agent, layer:L3, rationale:"Resolved: <what you checked>"}) and continue; otherwise keep it and work on the rest. Never assume either way. Act on the answers in answered; an answer of "Handled elsewhere" means a person marked it handled, so verify it the same way and, if the check fails, raise the ask again. Also check due standing duties from your current assignment and hostReview; an empty work queue does not cancel those duties. Use the reconciled task headline, brief.doneWhen and current outcome as the working scope; add goal or constraints only when they change the action or acceptance. Create owner work only when needed, and claim before controlled work. After claim, only the claim holder changes the brief through checkpoint. An ongoing responsibility stays open between runs. When a goal's callReasons or measureDue name a call, record a reading first (work_create measure), then the goal call. If neither work nor a standing duty is due, a goal owner reviews its open goal against the goal's doneWhen and dimensions first (its role method says how); go to step 6 with outcome no_work only when that finds nothing material.
 - 4. Agents: claim one item: work_change action='claim' (omit attemptId and claimProof; the server fills and reuses them on your connection; a claim on BLOCKED work unblocks it). Stop on a live claim conflict. The method follows the work's subject, not the session's area: if the item is bound to another function's method, refile it (action='refile' with methodId and why) and work it under the subject's method. A claim lasts 30 minutes (control.claim.expiresAt on the work item); renew it with action='renew' before it expires.
-- 5. Do the work. Read context_read {agentId, workId: id} for the skill and records. Stay within scope; resolve lane overlap before go_live. Finish every step short of a human boundary yourself and checkpoint at natural boundaries. Near the budget (about four-fifths spent or a host warning), stop starting steps and close with the result or shortfall. Ask only what blocks and what no current record answers; otherwise choose a sensible default and proceed. When a missing owner fact blocks the next step, ask now with work_create {ask} and keep working on the rest. Raise each call that stays controversial after testing and review (`cady-company-decision-check` step 3) or owner-only fact the work needs once, each with options, your recommendation, unlocks and blocks naming its own item; decide the rest yourself and record it. A refused call or a missing tool, connector or permission: fix it yourself if you can; if it needs the person's authority, prepare the fix and raise one ask for approval (kind access) that carries the single action; if the right fix is unclear, raise one ask with the key options and your recommendation. Never hand the person manual steps, and keep working on the rest. A wait on a third party is a nextAction, not an ask. An open hypothesis is the working assumption: treat it as answered, build on it, cite it, and propose a change only with new evidence. decisions.omissions means the list is incomplete; a capped or empty read is not proof of absence. Record decisions per cady-company-decision-check step 6; quote an OPEN pendingConfirmations item back once. Work, results, decisions and notes are company record, read by every member and their agents. Mark a decision or note sensitive (sensitive true, optional sharedWith of member ids) when it holds personal, HR, legal, financial-account or customer-confidential detail; it is then visible only to you, the people you share it with, and admins who have turned on See everything. Your agent's own privacy covers its runs, run results, evaluations, cost, prompt and design only.
+- 5. Do the work. Read context_read {agentId, workId: id} for the skill and records. Stay within scope; resolve lane overlap before go_live. Finish every step short of a human boundary yourself and checkpoint at natural boundaries. Near the budget (about four-fifths spent or a host warning), stop starting steps and close with the result or shortfall. Ask only what blocks and what no current record answers (otherwise choose a sensible default and proceed): when a missing owner fact blocks the next step, ask now with work_create {ask} and keep working on the rest; raise each call that stays controversial after testing and review (`cady-company-decision-check` step 3) or owner-only fact the work needs once, each with options, your recommendation, unlocks and blocks naming its own item; decide the rest yourself and record it. A refused call or a missing tool, connector or permission: fix it yourself if you can; if it needs the person's authority, prepare the fix and raise one ask for approval (kind access) that carries the single action; if the right fix is unclear, raise one ask with the key options and your recommendation. Never hand the person manual steps, and keep working on the rest. A wait on a third party is a nextAction, not an ask. An open hypothesis is the working assumption: treat it as answered, build on it, cite it, and propose a change only with new evidence. decisions.omissions means the list is incomplete; a capped or empty read is not proof of absence. Record decisions per cady-company-decision-check step 6 and mark sensitive records as it says; quote an OPEN pendingConfirmations item back once. Your agent's privacy covers its runs, results, evaluations, cost, prompt and design only, never company work or decisions.
 - 6. Last, close. Two records: a run (agents only, every slot, even no_work) and a work item (anyone, only for an outcome someone would track). Everyone: a reported result is taken as complete and corrected afterwards if wrong (supersede or reopen), not held for acceptance; work that changes what a person or host meets is complete only citing its done story walked blind at the installed build (story:<slug>#<step>@<run>), otherwise report it partial with nextAction 'walk <slug> after release'. Deliver the requested result or verify the effect; preparation is progress unless requested; when the request is to prepare something for a person's review, the prepared, held item is the deliverable: report it done with the review ref. Until live, prepare only. Link owner artifacts; never copy their body. Agents: close with one work_report call (fields, metadata and recovery: the reporting section below). Interactive runs end with asksForYou; report nextRunAt for cadence or runsOn for trigger. When scheduledBy=none, name host setup and raise the owner ask. Before the final reply, turn each question left in your text into an ask if only the owner can answer it (`cady-company-decision-check` steps 2-3), batched; otherwise decide it and say why. Chat points to the ask, never holds the only copy. Agents (agentId): nobody reads your reply, so your whole final reply is the reply line work_report returns, nothing before or after it; notify a person only on failure, an owner action or a goal closed as met.
 
 ## References

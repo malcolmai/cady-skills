@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "6d83c2990ee61fa24af9"
-  library: "82b573cad10ec174"
+  version: "eea7b8b072f44dd72eb3"
+  library: "c8b387c68af98e70"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
 **Point:** Earn first meetings with fitting investors, warm path first, on one sourced reason and true results, never invented traction.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "6d83c2990ee61fa24af9@82b573cad10ec174"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "eea7b8b072f44dd72eb3@c8b387c68af98e70"}})`
 
 Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 
@@ -42,7 +42,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 3. First note: one partner per note, from the investor persona's profile (`cady-gtm-persona-profile`) and the partner's record. Give a sourced, dated reason this partner (a recent deal, a stated thesis or portfolio fit), what the company does for its customer and the result so far in the reader's terms: describe the result, not the work; mechanism waits until they ask how. One ask a partner can answer without preparing anything. Within Cady's copy check, no attachment, a link only if asked. If a product or buyer fact is missing, keep the draft with that exact gap rather than inventing it. Judge it with the taste check (../../references/taste-check.md, investor part) before review.
 4. Pace the round from the raise plan: send first notes and intro asks as one batch so first meetings land in its 2 to 3 week window. After a meeting, follow up within a day with the next step and date; an investor who never replied gets the unengaged follow-up rule (message rules, follow_up). On a pass, record the reason with crm_tracks_set and stop. Move each investor's track through its stage with crm_tracks_set and roundId.
 5. Monthly update: send the update drafted with `cady-fundraise-raise-materials` on the plan's fixed send day as one reviewed batch with the same body. Every recipient goes on the marketing lane with a one-line opt-out (message rules, lanes). Answer each reply through `cady-gtm-reply`.
-6. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare each batch with crm_outreach_review_prepare (recipientBodies, one per investor; a follow-up carries followUp {delayDays, nonRepliersOnly: true}), read records_read review:outreach/<subjectId>, then follow release. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies as the outcome check says.
+6. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare each batch with crm_outreach_review_prepare (recipientBodies, one per investor; a follow-up carries followUp {delayDays, nonRepliersOnly: true}), read the review with records_read review:outreach/<approvalId>, then follow release. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies as the outcome check says.
 
 ## Acceptance
 
