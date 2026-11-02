@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
   version: "793a79112a2809ab161b"
-  library: "76da591f0f251280"
+  library: "4b94798b4498daa7"
   function: "gtm"
 ---
 # Reply in a live thread
 
 **Point:** Learn what they want, honestly judge fit now or later (try; no fit is fine), then follow up without chasing.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "793a79112a2809ab161b@76da591f0f251280"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "793a79112a2809ab161b@4b94798b4498daa7"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 

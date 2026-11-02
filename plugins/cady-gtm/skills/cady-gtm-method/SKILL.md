@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
   version: "717c387117646ef29fb2"
-  library: "76da591f0f251280"
+  library: "4b94798b4498daa7"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "717c387117646ef29fb2@76da591f0f251280"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "717c387117646ef29fb2@4b94798b4498daa7"}})`
 
 ## Role card
 

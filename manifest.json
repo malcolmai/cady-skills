@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "76da591f0f251280",
-    "version": "76da591f0f25128011dc40904ae733904cf4b7775994e08f4ca0f1c13336d281",
-    "pluginVersion": "2026.11.2-76da591f"
+    "tag": "4b94798b4498daa7",
+    "version": "4b94798b4498daa75c0c7b6a2856ab4764b72be011e91a41d55eb1b961033d79",
+    "pluginVersion": "2026.11.2-4b94798b"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-76da591f"
+    "version": "2026.11.2-4b94798b"
   },
   "skills": [
     {
@@ -45,7 +45,7 @@
       "name": "cady-company-decision-questions",
       "path": "library/cady-company-decision-questions",
       "cadyId": "skill.company.decision_questions",
-      "version": "8d7a6a38f91e1d60b4f9"
+      "version": "1dd9a4fb1a1178cb6fd0"
     },
     {
       "name": "cady-company-executive-review",
@@ -57,7 +57,7 @@
       "name": "cady-company-experiment",
       "path": "library/cady-company-experiment",
       "cadyId": "skill.company.experiment",
-      "version": "e6a75e63481175a246e1"
+      "version": "b26e00096df3ffc9e746"
     },
     {
       "name": "cady-company-manage-agents",
@@ -303,13 +303,13 @@
       "name": "cady-gtm-offer-and-segments",
       "path": "library/cady-gtm-offer-and-segments",
       "cadyId": "skill.gtm.offer_and_segments",
-      "version": "62922879551ae7dc765f"
+      "version": "b20f07390363cd28e454"
     },
     {
       "name": "cady-gtm-persona-profile",
       "path": "library/cady-gtm-persona-profile",
       "cadyId": "skill.gtm.persona_profile",
-      "version": "2b7b233bfa598fa04417"
+      "version": "7d3bb0bb5d41b3346931"
     },
     {
       "name": "cady-gtm-pipeline-pass",
