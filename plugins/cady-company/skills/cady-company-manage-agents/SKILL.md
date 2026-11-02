@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "45947e4641498959245f"
-  library: "633b489e153e68a4"
+  version: "abd9c99b60f00edef89d"
+  library: "c8b387c68af98e70"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody owns, proven on a first task; grants only on the person's approval.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "45947e4641498959245f@633b489e153e68a4"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "abd9c99b60f00edef89d@c8b387c68af98e70"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 

@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
   version: "f897dc0edbefc44caf4b"
-  library: "633b489e153e68a4"
+  library: "c8b387c68af98e70"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "f897dc0edbefc44caf4b@633b489e153e68a4"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "f897dc0edbefc44caf4b@c8b387c68af98e70"}})`
 
 Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
 
