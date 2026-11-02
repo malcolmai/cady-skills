@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
   version: "07c02a76cd03ef17356e"
-  library: "f6f95523d66c641b"
+  library: "0a992a8af46752b9"
   function: "gtm"
 ---
 # Warm pipeline pass
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "07c02a76cd03ef17356e@f6f95523d66c641b"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "07c02a76cd03ef17356e@0a992a8af46752b9"}})`
 
 Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps.
 

@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "f6f95523d66c641b",
-    "version": "f6f95523d66c641b78536dd308aaf9aa6d53bbba09a7ddac06d791fd72b52592",
-    "pluginVersion": "2026.11.2-f6f95523"
+    "tag": "0a992a8af46752b9",
+    "version": "0a992a8af46752b98d944937dce7ec12c4d388b807769665ff5173b8e3eed5ab",
+    "pluginVersion": "2026.11.2-0a992a8a"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-f6f95523"
+    "version": "2026.11.2-0a992a8a"
   },
   "skills": [
     {
@@ -303,7 +303,7 @@
       "name": "cady-gtm-offer-and-segments",
       "path": "library/cady-gtm-offer-and-segments",
       "cadyId": "skill.gtm.offer_and_segments",
-      "version": "bd063769316d0087aa09"
+      "version": "e89257e78af3e7b66e9a"
     },
     {
       "name": "cady-gtm-pipeline-pass",

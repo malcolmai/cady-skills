@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
   version: "8bdd9a5fbf8b36d9a38e"
-  library: "f6f95523d66c641b"
+  library: "0a992a8af46752b9"
   function: "fundraise"
 ---
 # Ranked investor list
 
-**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "8bdd9a5fbf8b36d9a38e@f6f95523d66c641b"}})`
+**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "8bdd9a5fbf8b36d9a38e@0a992a8af46752b9"}})`
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "bd063769316d0087aa09"
-  library: "f6f95523d66c641b"
+  version: "e89257e78af3e7b66e9a"
+  library: "0a992a8af46752b9"
   function: "gtm"
 ---
 # Offer and segments
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "bd063769316d0087aa09@f6f95523d66c641b"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "e89257e78af3e7b66e9a@0a992a8af46752b9"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 
@@ -40,7 +40,7 @@ Choose or revise the target segment, offer or message angle from evidence, befor
 4. Inventory credibility for the segment (record part 4): only what is real, current, permitted and checkable by the reader, such as customers, users or partners they would recognise, awards, press or selection they respect, the founder's relevant record, or a number you can source. What counts depends on the reader: a fashion house impresses a dressmaker and means nothing to a founder; a well-known investor is the reverse. Unearned proof (an inflated number, a name or logo used without permission, "trusted by", an implied endorsement) reads as fake and costs more than none. With nothing that fits, claim nothing and show the work instead: one specific, true observation about their situation. How proof enters a message is in the cold email copy rules (`cady-gtm-cold-email-cycle`).
 5. Use crm_parties_update or crm_parties_create to record company_name, industry and proof approval on their owner records. Read current permission and engagement with records_read party:<partyId>; record engagement evidence with crm_interactions_create, never as a free label.
 6. Variant shares and the cold email quota are in `cady-gtm-cold-email-cycle`; do not claim statistical certainty from small samples. Volume beyond the quota needs a sender the owner chooses and authorizes separately; its outcomes are recorded as the outcome check says.
-7. Prepare the recommended direction revision with update_company_direction, including evidence, alternatives and the reversal condition. Read the accepted direction with records_read company:direction before treating it as current. When the chosen audience needs sourcing, carry the GTM plan_into_work identity/List acceptance into `cady-gtm-tam-map` and execute it alongside the open hypothesis test. Map selected recorded segments to a few useful CRM personas with crm_personas_set; keep hypotheses distinct.
+7. Prepare the recommended direction revision with update_company_direction, including evidence, alternatives and the reversal condition. Read the accepted direction with records_read company:direction before treating it as current. When the chosen audience needs sourcing, carry the GTM plan_into_work identity/List acceptance into `cady-gtm-tam-map` and execute it alongside the open hypothesis test. Map selected recorded segments to a few useful CRM personas with crm_fields_set; keep hypotheses distinct.
 
 ## Acceptance
 
