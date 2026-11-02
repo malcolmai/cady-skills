@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
   version: "5c53204ee942c4ec239e"
-  library: "0a992a8af46752b9"
+  library: "9c79a655f80c84ea"
   function: "company"
 ---
 # Writing craft and taste decisions
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "5c53204ee942c4ec239e@0a992a8af46752b9"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "5c53204ee942c4ec239e@9c79a655f80c84ea"}})`
 
 Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 
