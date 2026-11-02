@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "3cff931f8bce63f1",
-    "version": "3cff931f8bce63f122990e5ebed33df0c78309e01b3d225f70045e93b9cc0e75",
-    "pluginVersion": "2026.11.2-3cff931f"
+    "tag": "e3b6df6bae57d0af",
+    "version": "e3b6df6bae57d0af2a32d0f17f98bf96a8eca3bbb4da788f9dbf03bbd763258b",
+    "pluginVersion": "2026.11.2-e3b6df6b"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-3cff931f"
+    "version": "2026.11.2-e3b6df6b"
   },
   "skills": [
     {
@@ -117,13 +117,13 @@
       "name": "cady-company-taste-review",
       "path": "library/cady-company-taste-review",
       "cadyId": "skill.company.taste_review",
-      "version": "2823936ba459a544f996"
+      "version": "1272974a781eb3f60695"
     },
     {
       "name": "cady-company-voice-pack",
       "path": "library/cady-company-voice-pack",
       "cadyId": "skill.company.voice_pack",
-      "version": "869e09b1edb01bcf3b72"
+      "version": "e41cb65e221f92285bf9"
     },
     {
       "name": "cady-core-context",
@@ -153,7 +153,7 @@
       "name": "cady-customer-success-lifecycle",
       "path": "library/cady-customer-success-lifecycle",
       "cadyId": "skill.customer_success.lifecycle",
-      "version": "305dc311b4c12a850797"
+      "version": "017e9ddd5dafe53dcada"
     },
     {
       "name": "cady-customer-success-method",
@@ -165,7 +165,7 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "02bd271d61a0a657ecf6"
+      "version": "703a2eacc2c7ee4a6f36"
     },
     {
       "name": "cady-design-wcag-audit",
@@ -243,7 +243,7 @@
       "name": "cady-fundraise-investor-outreach",
       "path": "library/cady-fundraise-investor-outreach",
       "cadyId": "skill.fundraise.investor_outreach",
-      "version": "db3311e3ae8cb27e208e"
+      "version": "aa3e0acef34f44f0fa9b"
     },
     {
       "name": "cady-fundraise-method",
@@ -255,7 +255,7 @@
       "name": "cady-fundraise-raise-materials",
       "path": "library/cady-fundraise-raise-materials",
       "cadyId": "skill.fundraise.raise_materials",
-      "version": "af822393b94fd5718613"
+      "version": "07471d7f5dfaf29b01f1"
     },
     {
       "name": "cady-fundraise-raise-plan",
@@ -267,13 +267,13 @@
       "name": "cady-gtm-calls",
       "path": "library/cady-gtm-calls",
       "cadyId": "skill.gtm.calls",
-      "version": "d34db4d5e0cb4f0a6ff8"
+      "version": "ed28a860e73b08846f2e"
     },
     {
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "4e00f94294d5086841e2"
+      "version": "6664d94b2f655d60b921"
     },
     {
       "name": "cady-gtm-events",
@@ -285,25 +285,25 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "d29a3bd6671ce2bf5e44"
+      "version": "91f44a90190f77dac6bd"
     },
     {
       "name": "cady-gtm-linkedin-message",
       "path": "library/cady-gtm-linkedin-message",
       "cadyId": "skill.gtm.linkedin_message",
-      "version": "40bfee746466b58f10a7"
+      "version": "6002a8176d992aefc9f3"
     },
     {
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "930ee89622ccc243a118"
+      "version": "1a9ae8f5ff0d81348020"
     },
     {
       "name": "cady-gtm-offer-and-segments",
       "path": "library/cady-gtm-offer-and-segments",
       "cadyId": "skill.gtm.offer_and_segments",
-      "version": "d29982f8ed0cdaa06461"
+      "version": "90d771f9d3ed5388bdc9"
     },
     {
       "name": "cady-gtm-pipeline-pass",
@@ -315,37 +315,37 @@
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "9560e7de1c277a18989c"
+      "version": "07ffcbeeb5ef91a53cb3"
     },
     {
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "a281515ab6f29052759c"
+      "version": "fc653ca6a0b6afa6f1c1"
     },
     {
       "name": "cady-gtm-warm-email",
       "path": "library/cady-gtm-warm-email",
       "cadyId": "skill.gtm.warm_email",
-      "version": "7f77710a7484a7f63629"
+      "version": "40c8ae474e751f55c9cc"
     },
     {
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "1fb06b1baff84d43b34c"
+      "version": "3b5f785a803d9522662b"
     },
     {
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "b93837461c9c997fcd19"
+      "version": "ccc2b689fcdd0577ae1b"
     },
     {
       "name": "cady-product-customer-interview",
       "path": "library/cady-product-customer-interview",
       "cadyId": "skill.product.customer_interview",
-      "version": "db70b427de8795392d0e"
+      "version": "e7697d760ba3e3755725"
     },
     {
       "name": "cady-product-manage",
@@ -369,7 +369,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "85ad3fe401a87260fe7f"
+      "version": "b2d883edd6b6cb19b196"
     },
     {
       "name": "cady-qa-stories",
@@ -387,7 +387,7 @@
       "name": "cady-sales-deal-motion",
       "path": "library/cady-sales-deal-motion",
       "cadyId": "skill.sales.deal_motion",
-      "version": "7a6dcc3c20d5fc1d2c73"
+      "version": "2a83a6ec0b89932206ac"
     },
     {
       "name": "cady-sales-method",

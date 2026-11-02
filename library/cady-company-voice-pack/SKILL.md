@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
-  version: "869e09b1edb01bcf3b72"
-  library: "3cff931f8bce63f1"
+  version: "e41cb65e221f92285bf9"
+  library: "e3b6df6bae57d0af"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "869e09b1edb01bcf3b72@3cff931f8bce63f1"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "e41cb65e221f92285bf9@e3b6df6bae57d0af"}})`
 
 Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
 

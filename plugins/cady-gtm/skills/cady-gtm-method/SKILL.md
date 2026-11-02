@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "930ee89622ccc243a118"
-  library: "3cff931f8bce63f1"
+  version: "1a9ae8f5ff0d81348020"
+  library: "e3b6df6bae57d0af"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "930ee89622ccc243a118@3cff931f8bce63f1"}})`
+**Company context:** `get_cady_context({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "1a9ae8f5ff0d81348020@e3b6df6bae57d0af"}})`
 
 ## Role card
 

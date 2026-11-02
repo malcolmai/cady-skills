@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "2823936ba459a544f996"
-  library: "3cff931f8bce63f1"
+  version: "1272974a781eb3f60695"
+  library: "e3b6df6bae57d0af"
   function: "company"
 ---
 # Writing craft and taste decisions
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "2823936ba459a544f996@3cff931f8bce63f1"}})`
+**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "1272974a781eb3f60695@e3b6df6bae57d0af"}})`
 
 Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 
