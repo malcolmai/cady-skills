@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
   version: "726b17c310d8217ffe1e"
-  library: "4b94798b4498daa7"
+  library: "82b573cad10ec174"
   function: "fundraise"
 ---
 # Ranked investor list
 
 **Point:** Rank real, sourced investors by fit and warmth, so founder time goes to those most likely to fund this round.
 
-**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "726b17c310d8217ffe1e@4b94798b4498daa7"}})`
+**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "726b17c310d8217ffe1e@82b573cad10ec174"}})`
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 

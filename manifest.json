@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "4b94798b4498daa7",
-    "version": "4b94798b4498daa75c0c7b6a2856ab4764b72be011e91a41d55eb1b961033d79",
-    "pluginVersion": "2026.11.2-4b94798b"
+    "tag": "82b573cad10ec174",
+    "version": "82b573cad10ec174759acee904a0062e8a58f7efd9a106d3df0d84a3749b2088",
+    "pluginVersion": "2026.11.2-82b573ca"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-4b94798b"
+    "version": "2026.11.2-82b573ca"
   },
   "skills": [
     {
@@ -93,7 +93,7 @@
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "2590d9b540a1bce8d629"
+      "version": "f392935522adbc97ca03"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
@@ -381,7 +381,7 @@
       "name": "cady-qa-stories",
       "path": "library/cady-qa-stories",
       "cadyId": "skill.qa.stories",
-      "version": "79248253003bc0d97937"
+      "version": "b1b24540295e6f4bf45c"
     },
     {
       "name": "cady-qa-triage",

@@ -2,9 +2,9 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 4b94798b4498daa7 · 2026-11-02
+## 82b573cad10ec174 · 2026-11-02
 
-Since d3edf78d7249b663: 1 new, 0 dropped, 29 changed.
+Since d3edf78d7249b663: 1 new, 0 dropped, 30 changed.
 
 New:
 - `cady-gtm-persona-profile`
@@ -38,6 +38,7 @@ Changed (the parts that differ):
 - `cady-marketing-method`: reference domain-method.md
 - `cady-orchestrator-method`: Role card, reference domain-method.md
 - `cady-product-customer-interview`: Procedure
+- `cady-qa-stories`: Procedure
 - `cady-sales-method`: reference domain-method.md
 
 Shared references changed: agent-recipe-gtm.md, outreach-message-rules.md, tam-map-import.md.
