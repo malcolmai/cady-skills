@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
   version: "cabc4e4d951cef652dd1"
-  library: "c1c41b6e6064f887"
+  library: "d3edf78d7249b663"
   function: "sales"
 ---
 # Sales
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "cabc4e4d951cef652dd1@c1c41b6e6064f887"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "cabc4e4d951cef652dd1@d3edf78d7249b663"}})`
 
 ## Parent function
 gtm

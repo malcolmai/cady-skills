@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "c1c41b6e6064f887",
-    "version": "c1c41b6e6064f88711620e93ea8939a7cc210808b097299e346d3877a483462e",
-    "pluginVersion": "2026.11.2-c1c41b6e"
+    "tag": "d3edf78d7249b663",
+    "version": "d3edf78d7249b66358e55998ce7d6d4b0ad84e886157528781de0891f16714c4",
+    "pluginVersion": "2026.11.2-d3edf78d"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-c1c41b6e"
+    "version": "2026.11.2-d3edf78d"
   },
   "skills": [
     {
@@ -99,7 +99,7 @@
       "name": "cady-company-operations-people-lifecycle",
       "path": "library/cady-company-operations-people-lifecycle",
       "cadyId": "skill.company_operations.people_lifecycle",
-      "version": "b32699c4c0c87f286eba"
+      "version": "80e53cdd642f7bfc4e72"
     },
     {
       "name": "cady-company-operations-requirement-register",
@@ -285,7 +285,7 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "82f32f7c04bff5daacf1"
+      "version": "182f6d571ed8475916e5"
     },
     {
       "name": "cady-gtm-linkedin-message",
@@ -321,7 +321,7 @@
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "92070d6bcc0006a1d49f"
+      "version": "6b659f5532d04a84d668"
     },
     {
       "name": "cady-gtm-warm-email",
