@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
   version: "e89257e78af3e7b66e9a"
-  library: "9c79a655f80c84ea"
+  library: "c1c41b6e6064f887"
   function: "gtm"
 ---
 # Offer and segments
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "e89257e78af3e7b66e9a@9c79a655f80c84ea"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "e89257e78af3e7b66e9a@c1c41b6e6064f887"}})`
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 
