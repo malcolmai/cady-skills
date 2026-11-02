@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
   version: "80e53cdd642f7bfc4e72"
-  library: "d3edf78d7249b663"
+  library: "7aa68a47d133b62d"
   function: "company_operations"
 ---
 # Joiners, movers and leavers
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "80e53cdd642f7bfc4e72@d3edf78d7249b663"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "80e53cdd642f7bfc4e72@7aa68a47d133b62d"}})`
 
 Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 

@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "d3edf78d7249b663",
-    "version": "d3edf78d7249b66358e55998ce7d6d4b0ad84e886157528781de0891f16714c4",
-    "pluginVersion": "2026.11.2-d3edf78d"
+    "tag": "7aa68a47d133b62d",
+    "version": "7aa68a47d133b62de30429185ca1f0baf6aaff72d215981f8f234393b012ddb7",
+    "pluginVersion": "2026.11.2-7aa68a47"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-d3edf78d"
+    "version": "2026.11.2-7aa68a47"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "f1213b065a056829f31f"
+      "version": "2e9533f27ae765e0dfdd"
     },
     {
       "name": "cady-company-decision-check",
@@ -183,7 +183,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "12defcce2fc5cd9ddd07"
+      "version": "7bc2601f5ac008a66697"
     },
     {
       "name": "cady-engineering-integrations",
@@ -201,7 +201,7 @@
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "e4b8d3b421430d4c3a47"
+      "version": "02a6b090fee4a7cf19d4"
     },
     {
       "name": "cady-finance-budget-review",

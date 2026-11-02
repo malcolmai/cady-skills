@@ -2,6 +2,15 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 7aa68a47d133b62d · 2026-11-02
+
+Since d3edf78d7249b663: 0 new, 0 dropped, 3 changed.
+
+Changed (the parts that differ):
+- `cady-company-change-agent-behaviour`: Always, Procedure, Acceptance, Owner checks, Result
+- `cady-engineering-independent-review`: Independent review
+- `cady-engineering-system-cycle`: Procedure
+
 ## d3edf78d7249b663 · 2026-11-02
 
 Since c1c41b6e6064f887: 0 new, 0 dropped, 2 changed.
