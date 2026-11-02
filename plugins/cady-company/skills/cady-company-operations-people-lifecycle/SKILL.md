@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
-  version: "80e53cdd642f7bfc4e72"
-  library: "d3edf78d7249b663"
+  version: "f088dac1537403646366"
+  library: "82b573cad10ec174"
   function: "company_operations"
 ---
 # Joiners, movers and leavers
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "80e53cdd642f7bfc4e72@d3edf78d7249b663"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "f088dac1537403646366@82b573cad10ec174"}})`
 
 Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 
@@ -35,7 +35,7 @@ Plan, track and verify the paperwork and access for a new hire or contractor, a 
 
 ## Procedure
 
-1. Resolve the person with crm_parties_read and records_read party:<partyId> or, if missing, add name and work email only through the reviewed CRM import (crm_imports_read preview and prepare, then crm_imports_run). Resolve the employing entity with crm_legal_records_update (action 'list', then 'get'). Each document lives in its system of record (HRIS, payroll or benefits provider, or Files); Cady keeps references, status and dates only. Never write government ID or tax numbers, bank details, salary or pay, health, disability or leave reasons, reason for leaving, disciplinary, performance or grievance detail, background-check results, immigration details, home address or date of birth into any work text, ask or File; cite the record by its system link or file:<fileId>.
+1. Resolve the person with crm_parties_read and records_read party:<partyId> or, if missing, add name and work email only through the reviewed CRM import (crm_imports_read preview and prepare, then crm_imports_run). Resolve the employing entity with records_read legal-records:<kind> kind entity. Each document lives in its system of record (HRIS, payroll or benefits provider, or Files); Cady keeps references, status and dates only. Never write government ID or tax numbers, bank details, salary or pay, health, disability or leave reasons, reason for leaving, disciplinary, performance or grievance detail, background-check results, immigration details, home address or date of birth into any work text, ask or File; cite the record by its system link or file:<fileId>.
 2. Read the grant.access-default record and the current hr: and access: decisions (requirement_register step 1). With no grant.access-default record, prepare member access to every company system on the inventory for a joiner, the startup default (step 6 says who grants it); if it says restricted, use one access:role-<role> record per role (each system and level, least privilege), a hypothesis until the register check settles it. Admin access is always a named, reasoned exception. If the person gets or holds system access and access:systems is missing or stale, inventory every system with owner, admins, grant route and removal readback (`../../references/people-checklists.md`, systems inventory), upload it (files_update or files_create) and record access:systems citing it, reviewBy at most three months away; an unknown owner is a gap. A contractor with no access needs no inventory. For a mover, list removals and additions. Only an admin changes the default, as a grant.access-default record (full or restricted) in their own words.
 3. Per jurisdiction and worker type, check every paperwork category in the checklists (`../../references/people-checklists.md`, paperwork categories); a category that does not apply is recorded with the reason. The engagement contract itself (offer, contract or statement of work) goes through `cady-company-operations-contract-checks`: plan before it is signed, act at the start.
 4. Research, check and record each new or changed requirement with requirement_register steps 2 to 5. Use subject hr:<jurisdiction>-<worker type>-<requirement> (illustrative: hr:<country>-employee-eligibility-check). headline: what is required, in one short sentence; rationale: when relative to the event, who completes it, exemptions, system of record and proof of completion. Set reviewBy at most six months away. Common mistakes for the checker: eligibility after the start, wrong worker type, missed enrolment or registration deadlines, outdated forms, no IP assignment, wrong retention. For access: records it looks for missed systems, excess access and wrong owners, or a system owner checks. Visa sponsorship, a worker abroad, a dismissal or dispute, or classification risk goes to an employment adviser.

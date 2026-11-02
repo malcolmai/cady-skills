@@ -2,6 +2,47 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 82b573cad10ec174 · 2026-11-02
+
+Since d3edf78d7249b663: 1 new, 0 dropped, 30 changed.
+
+New:
+- `cady-gtm-persona-profile`
+
+Changed (the parts that differ):
+- `cady`: reference agent-recipe-gtm.md
+- `cady-company-change-agent-behaviour`: intro, Always, Procedure, Acceptance, Owner checks, Result
+- `cady-company-decision-questions`: Procedure
+- `cady-company-experiment`: Procedure
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-operations-contract-checks`: Procedure
+- `cady-company-operations-method`: reference domain-method.md
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-company-review`: reference setup.md
+- `cady-core-run-sequence`: Run sequence
+- `cady-core-skill-index`: gtm
+- `cady-engineering-independent-review`: Independent review
+- `cady-engineering-system-cycle`: Procedure
+- `cady-finance-tax-cycle`: Procedure
+- `cady-fundraise-investor-list`: intro, Procedure
+- `cady-fundraise-investor-outreach`: intro, Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-cold-email-cycle`: intro, Procedure, Acceptance, reference copy.md
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-linkedin-message`: intro, Procedure
+- `cady-gtm-method`: Role card, reference domain-method.md
+- `cady-gtm-offer-and-segments`: intro, Procedure, Acceptance
+- `cady-gtm-reply`: intro, Procedure, Acceptance, reference copy.md
+- `cady-gtm-tam-map`: intro, Procedure
+- `cady-gtm-warm-email`: intro, Procedure, reference copy.md
+- `cady-marketing-method`: reference domain-method.md
+- `cady-orchestrator-method`: Role card, reference domain-method.md
+- `cady-product-customer-interview`: Procedure
+- `cady-qa-stories`: Procedure
+- `cady-sales-method`: reference domain-method.md
+
+Shared references changed: agent-recipe-gtm.md, outreach-message-rules.md, tam-map-import.md.
+
 ## d3edf78d7249b663 · 2026-11-02
 
 Since c1c41b6e6064f887: 0 new, 0 dropped, 2 changed.

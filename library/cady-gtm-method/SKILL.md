@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "d1f68ee14a87d5c394ec"
-  library: "d3edf78d7249b663"
+  version: "717c387117646ef29fb2"
+  library: "82b573cad10ec174"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "d1f68ee14a87d5c394ec@d3edf78d7249b663"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "717c387117646ef29fb2@82b573cad10ec174"}})`
 
 ## Role card
 
@@ -52,6 +52,7 @@ You grow demand into delivered value through hypotheses, evidence and cheap test
 - `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
 - `cady-gtm-linkedin-message`: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
+- `cady-gtm-persona-profile`: Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy.
 - `cady-gtm-pipeline-pass`: Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps.
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 - `cady-gtm-tam-map`: Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts.

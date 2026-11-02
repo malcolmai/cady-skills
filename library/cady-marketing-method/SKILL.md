@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "29f851e5e9bff41a57a4"
-  library: "d3edf78d7249b663"
+  version: "03023211706f8aaf9aec"
+  library: "82b573cad10ec174"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "29f851e5e9bff41a57a4@d3edf78d7249b663"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "03023211706f8aaf9aec@82b573cad10ec174"}})`
 
 ## Role card
 

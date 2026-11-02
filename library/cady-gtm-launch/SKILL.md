@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "182f6d571ed8475916e5"
-  library: "d3edf78d7249b663"
+  version: "f871f79858a582626bde"
+  library: "82b573cad10ec174"
   function: "gtm"
 ---
 # GTM launch session
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "182f6d571ed8475916e5@d3edf78d7249b663"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "f871f79858a582626bde@82b573cad10ec174"}})`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing segments (use `cady-gtm-offer-and-segments`) or drafting outreach.
 
@@ -26,7 +26,7 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 - 2. State each channel's audience, offer, proof, stop and review condition. Verify the sending account and its executor (Cady's server for API channels, the local cady executor for the rest) before treating a channel as operational; missing access holds that channel while independent work continues.
 - 3. If the CRM of record is undecided, apply the first-use rule from context_read (company.modules): check the tools you can access, record external or native with company.modules.set, and ask the sponsor only if you cannot look. Do not hold work for it; no unsupported CRM readiness read is implied.
 - 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing outreach. For Cady CRM use the existing reviewed identity/List import, receipt, recovery and membership readback in the tam-map import reference (`../../references/tam-map-import.md`); keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall. Unknown contact basis holds contact, not otherwise eligible identity persistence; prepare no send without the existing permission, review and release authority.
-- 5. Prepare one crm_outreach_review_prepare per eligible cohort of at most 50 parties, under a live Projects claim and a matching skill for its channel. Read crm.get_outreach_review and report the approvalId. Approve and release only as outreach_release in `../../references/outreach-message-rules.md` says (send nothing unapproved), and never ask for addresses, bodies or credentials.
+- 5. Prepare one crm_outreach_review_prepare per eligible cohort of at most 50 parties, under a live Projects claim and a matching skill for its channel. Read records_read review:outreach/<subjectId> and report the approvalId. Approve and release only as outreach_release in `../../references/outreach-message-rules.md` says (send nothing unapproved), and never ask for addresses, bodies or credentials.
 
 ## Shared execution sections
 
