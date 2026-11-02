@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
   version: "f99ed6dcb4f89a094d93"
-  library: "c1c41b6e6064f887"
+  library: "d3edf78d7249b663"
   function: "company"
 ---
 # Who decides: the decision journey
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "f99ed6dcb4f89a094d93@c1c41b6e6064f887"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "f99ed6dcb4f89a094d93@d3edf78d7249b663"}})`
 
 Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
