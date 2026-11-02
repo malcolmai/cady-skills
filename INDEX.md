@@ -1,6 +1,6 @@
 # Cady skill library
 
-64 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+65 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
 
@@ -33,10 +33,10 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation. (`library/cady-customer-success-lifecycle/SKILL.md`)
 - `cady-customer-success-method`: Customer Success role card: what this function owns and decides (`library/cady-customer-success-method/SKILL.md`)
 - `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step. (`library/cady-gtm-calls/SKILL.md`)
-- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability. (`library/cady-gtm-cold-email-cycle/SKILL.md`)
-- `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations. (`library/cady-gtm-events/SKILL.md`)
+- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, using one template per segment. (`library/cady-gtm-cold-email-cycle/SKILL.md`)
+- `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations. (`library/cady-gtm-events/SKILL.md`)
 - `cady-gtm-launch`: the company is starting a growth motion. (`library/cady-gtm-launch/SKILL.md`)
-- `cady-gtm-linkedin-message`: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too. (`library/cady-gtm-linkedin-message/SKILL.md`)
+- `cady-gtm-linkedin-message`: Draft a first social DM, LinkedIn connection note or one no-reply follow-up. (`library/cady-gtm-linkedin-message/SKILL.md`)
 - `cady-gtm-method`: GTM role card: what this function owns and decides (`library/cady-gtm-method/SKILL.md`)
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review. (`library/cady-gtm-offer-and-segments/SKILL.md`)
 - `cady-gtm-persona-profile`: Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy. (`library/cady-gtm-persona-profile/SKILL.md`)
@@ -45,6 +45,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-gtm-tam-map`: Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts. (`library/cady-gtm-tam-map/SKILL.md`)
 - `cady-gtm-warm-email`: Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches. (`library/cady-gtm-warm-email/SKILL.md`)
 - `cady-marketing-method`: Marketing role card: what this function owns and decides (`library/cady-marketing-method/SKILL.md`)
+- `cady-marketing-post`: Create or edit one post for the audience, topic and placement chosen in the brief. (`library/cady-marketing-post/SKILL.md`)
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review. (`library/cady-sales-deal-motion/SKILL.md`)
 - `cady-sales-method`: Sales role card: what this function owns and decides (`library/cady-sales-method/SKILL.md`)
 

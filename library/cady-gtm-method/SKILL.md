@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "a7dfa219b43f679581ce"
-  library: "2a0e1b4de8671cec"
+  version: "ead6c30c57dabeab35be"
+  library: "74d98e825b54225d"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "a7dfa219b43f679581ce@2a0e1b4de8671cec"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "ead6c30c57dabeab35be@74d98e825b54225d"}})`
 
 ## Role card
 
@@ -48,9 +48,9 @@ You grow demand into delivered value through hypotheses, evidence and cheap test
 
 ### Skills
 - `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
-- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
-- `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
-- `cady-gtm-linkedin-message`: Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
+- `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, using one template per segment.
+- `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations.
+- `cady-gtm-linkedin-message`: Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-persona-profile`: Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy.
 - `cady-gtm-pipeline-pass`: Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps.

@@ -1,21 +1,23 @@
 ---
 name: "cady-gtm-events"
-description: "Events: attend or host. Use when: Choose, prepare for or host an event that can advance the company purpose through real conversations. Not for: Treating an attendee directory as intent; use `cady-gtm-tam-map` for research and `cady-gtm-warm-email` or `cady-gtm-linkedin-message` for separate messages."
+description: "Events: attend or host. Use when: Prepare for or host the event named in the brief to advance the company through real conversations. Not for: Choosing an event or treating an attendee directory as intent."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "001ec6d61592991c18b9"
-  library: "2a0e1b4de8671cec"
+  version: "5ebba7091fe6ec6e0e15"
+  library: "74d98e825b54225d"
   function: "gtm"
 ---
 # Events: attend or host
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "001ec6d61592991c18b9@2a0e1b4de8671cec"}})`
+**Point:** Turn one chosen event into real conversations and personal follow-ups, never a bulk list.
 
-Choose, prepare for or host an event that can advance the company purpose through real conversations.
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "5ebba7091fe6ec6e0e15@74d98e825b54225d"}})`
 
-**Not for:** Treating an attendee directory as intent; use `cady-gtm-tam-map` for research and `cady-gtm-warm-email` or `cady-gtm-linkedin-message` for separate messages.
+Prepare for or host the event named in the brief to advance the company through real conversations.
+
+**Not for:** Choosing an event or treating an attendee directory as intent.
 
 **Unit of work:** one work item per event. **Kind:** execution. **Parallel:** no. **Can release:** no. 
 
@@ -23,36 +25,35 @@ Choose, prepare for or host an event that can advance the company purpose throug
 
 ### Evidence refs
 
-- company direction ref
-- CRM List refs
 - event URL or ID
 - event platform URL or ID
+- CRM List ref
+- governing decision refs
 
 ### Work fields
 
-- event purpose
-- target conversations
-- next-step goal
-- co-host
-- date and venue
+- event mode (attend or host)
+- conversation target
+- co-host, date and venue when hosting
+- doneWhen
+- stopIf
 
 ## Procedure
 
-1. Claim the event work item with work_change(action: 'claim') (the server fills attemptId and claimProof).
-2. Choose the mode. Attend: choose by fit and likely conversation density, cost and founder time; set a target for substantive conversations and next steps; directory presence alone is not intent. Host: establish the event purpose, co-host, date and venue for a small event that creates a useful community for the company and co-host. Then follow that mode's reference (`../../references/events-attend.md` or `../../references/events-host.md`).
-3. During sourcing, persist source-backed eligible speakers, attendees, co-hosts and guests in the selected CRM List through the applicable reviewed import method (for Cady CRM, `cady-gtm-tam-map`); read import completion and actual membership. Report researched, saved and member counts separately; shortfalls remain explicit, and people remain cold until a real readable relationship exists.
-4. After the event, use crm_interactions_create for a one-to-one meeting the user actually attended (kind meeting) or a substantive conversation (kind event_conversation), with occurredAt the interaction time and sourceRef the event platform ID or event slug plus date. These actual interactions make the party engaged and route to a personal follow-up. Keep the event platform authoritative for attendance and RSVPs; listed attendees stay cold, never bulk-message the attendee List, respect current opt-outs and suppression, and deliver promised items.
-5. Record one short keep-or-drop learning note on the event work item.
+1. Claim the event work item with work_change(action: 'claim'); read the brief and its refs. Follow its event, mode and conversation target; if any is missing, stop and report.
+2. Follow `../../references/events-attend.md` when attending or `../../references/events-host.md` when hosting; for a host cohort use `../../references/intro-request.md` where useful. The event platform remains the RSVP source of truth.
+3. Persist source-backed eligible speakers, attendees, co-hosts and guests in the brief's CRM List through the reviewed import (`../../references/tam-map-import.md`); read completion and actual membership. Report researched, saved and member counts separately and make shortfalls explicit.
+4. After the event, record each actual one-to-one meeting with crm_interactions_create as kind meeting, or substantive conversation as kind event_conversation, with occurredAt and sourceRef the event platform ID or event slug plus date. Directory presence alone is not intent: listed attendees stay cold and the attendee List is never bulk-messaged.
+5. For each person actually met, record one specific follow-up hook on the work item and route a personal follow-up to a separate `cady-gtm-warm-email` or `cady-gtm-linkedin-message` work item. Deliver promised items; record one short keep-or-drop learning note on the event work item.
+6. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance
 
-- [ ] event choice has a conversation goal
-- [ ] eligible sourced speakers, attendees, co-hosts and guests are persisted in the selected CRM List with import completion and membership readback; shortfalls are explicit
-- [ ] researched candidates, saved parties and List members are reported separately
-- [ ] only actual conversations route to warm follow-up
-- [ ] event platform remains RSVP source of truth
-- [ ] Files contain a checked run of show and guest questions when hosting
-- [ ] in-person hosting remains the user's action
+- [ ] (check) The brief names the event, mode and conversation target.
+- [ ] (check) Eligible source-backed people are imported into the brief’s List; completion, membership, separate counts and shortfalls are recorded.
+- [ ] (check) Only actual conversations route to personal follow-up; the attendee List is never bulk-messaged.
+- [ ] (check) The event platform remains the RSVP source of truth.
+- [ ] (person) Hosting has a checked run of show and guest questions in Files; the user hosts in person.
 
 ## Owner checks
 
@@ -76,5 +77,8 @@ Choose, prepare for or host an event that can advance the company purpose throug
 - **Transition:** the claim holder reports preparation and, after the event, learning
 
 ## References
-- Read [Attending an event](../../references/events-attend.md) when you attend an event.
-- Read [Hosting an event](../../references/events-host.md) when you host an event.
+- Read [Agent stop](../../references/agent-stop.md) when before acting and whenever a stop condition arises.
+- Read [Attending an event](../../references/events-attend.md) when attending the event.
+- Read [Hosting an event](../../references/events-host.md) when hosting the event.
+- Read [Introduction request](../../references/intro-request.md) when requesting an introduction for a host cohort.
+- Read [Reviewed CRM import](../../references/tam-map-import.md) when adding sourced people to the brief’s List.

@@ -5,21 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "61dba81462c4d9017509"
-  library: "2a0e1b4de8671cec"
+  version: "feae3539a35ac982e8c1"
+  library: "74d98e825b54225d"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
-**Point:** Maintain the real relationship respectfully, subtly make clear what we do, and follow up on strong buying or interest signals.
+**Point:** Keep each relationship moving with a useful email and a next step paced to the person.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "61dba81462c4d9017509@2a0e1b4de8671cec"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "feae3539a35ac982e8c1@74d98e825b54225d"}})`
 
 Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches.
 
 **Not for:** A customer cold first touch, a reply in a live thread, or LinkedIn. Missing history is not proof that a party is cold.
 
-**Unit of work:** one work item per party or small cohort. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
+**Unit of work:** one work item per person. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
 
 ## Inputs
 
@@ -27,29 +27,35 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 
 - crm:party:<partyId>
 - readable communication or relationship-track ref, or sourced partner/supplier purpose for a first approach
+- profileRef
+- governing decision ref for a partner or supplier purpose
 
 ### Work fields
 
 - senderLabel
-- relationship or first-approach purpose evidence
+- relationship type
 - next action
+- grant ref
+- voice and brand pack subjects
+- doneWhen
+- stopIf
 
 ## Procedure
 
-1. The scheduled pass is `cady-gtm-pipeline-pass`. Partner and organiser approaches use this skill even without prior engagement: record the partner purpose and sourced relationship facts, without claiming a prior exchange. Supplier business messages use it too; for a cancellation, order or commitment obtain the exact user review `cady-finance-vendor-spend-review` requires (a standing outreach grant does not substitute). Use a work item bound to `cady-gtm-warm-email` and claim it before preparation.
-2. For an engaged route, confirm engagement from a readable thread or CRM interaction and state it; for a first partner approach, state that no exchange is evidenced; missing history is not proof the party is cold. File external clicks with crm_interactions_create.
-3. For an existing exchange, read it with crm_communications_find and crm.get_communication. For a product link, check sign-up first with records_read party:<partyId>; if they signed up, respond to that.
-4. For a customer message: When you plan, rank prospects or write customer copy, start from the persona's profile and insight (`cady-gtm-persona-profile`; write it there first if none) and write in its words, not the company's; the company's records and calendar describe the sender, not the buyer. A profile not yet checked by a fresh helper is marked unchecked in the held review before copy uses it. Name the persona's profile in the review's justification with any inferred or unknown line the message leans on; that line becomes the message's question, never a claim about the recipient. Each recipient is a member of the persona who passes its disqualifiers, reached by a private route; someone who sells to the persona is not a member of it, so its copy and evidence do not apply, but may be a candidate persona of their own, approached only as a partner or competitor, with that purpose; a public comment, reply or post is publishing, not outreach. Write as the named sender; if only a company name is known, say so in the review. A message to one person meets them where they are in that profile, from their own record or thread, not a company fact plus a shared pitch. Run the draft check in `../../references/outreach-drafting.md` before the taste check. For a follow-up, name which one this is and apply the follow-up rule (`../../references/outreach-release.md`, follow_up). Recheck permission before every review. Judge it with the message taste check (`../../references/taste-message.md`) before review.
-5. Each note gives them something useful or new, makes what we do clear in a natural clause, not a pitch, and meets a buying or interest signal (a question, sign-up, stated need) with one concrete next step.
-6. Before any follow-up run the outcome check (`../../references/outreach-release.md`, outcome_check), then read records_read party:<partyId>. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare with crm_outreach_review_prepare (a follow-up carries followUp {delayDays, nonRepliersOnly: true}), read the review with records_read review:outreach/<approvalId>, then follow release.
+1. Read the party and its record or thread to establish the relationship: confirm engagement or an introduction from evidence; a partner or supplier first approach may proceed even without prior engagement using its sourced purpose, without claiming an exchange. Missing history is not proof that a party is cold.
+2. Read the existing exchange with crm_communications_find and records_read communication:<id>. Before a trial nudge about a product link, check sign-up with records_read party:<partyId> and respond to it. Do routine track work; ask the owner for a price, commitment, availability or relationship call. For a supplier cancellation, order or commitment, obtain the exact user review required by `cady-finance-vendor-spend-review`; an outreach grant does not substitute.
+3. For a follow-up, say which follow-up this is (first or second), run the outcome check (`../../references/outreach-release.md`, Outcome check) first, then apply `../../references/outreach-release.md`, Follow up. For an introduction request, use `../../references/intro-request.md`. For a human click nudge, use the warm_email copy reference. File external clicks with crm_interactions_create.
+4. Draft one message per person, meeting them where they are in their own record or thread. Use `../../references/outreach-drafting.md`, Brief, Sender voice, Framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; the relationship type carried by the review decides the lane. Run the draft check in `../../references/outreach-drafting.md` before `../../references/taste-message.md`. Say what we do in a natural clause, not a pitch.
+5. Prepare and read back the review as `../../references/outreach-release.md` (Preparation, Release) says; act on each hold; then report the review and the track update.
+6. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance
 
-- [ ] (check) readable CRM evidence supports the relationship or partner/supplier business route
-- [ ] (check) one personal next step is prepared per recipient
-- [ ] (fresh) a reader who sees only the draft and the thread can say what is new in it and what next step it asks for
-- [ ] (check) track stage and next action remain evidence-backed
-- [ ] (person) nothing is released before the person, or a grant covering the exact text, has approved it
+- [ ] (check) readable evidence supports the relationship or sourced partner/supplier purpose, and sign-up is checked before a trial nudge
+- [ ] (check) each recipient has one personal message and next step grounded in their record or thread
+- [ ] (check) a follow-up has an outcome check and follows `../../references/outreach-release.md`, Follow up
+- [ ] (check) the review carries the relationship type and the track stage and next action are evidence-backed
+- [ ] (person) release follows `../../references/outreach-release.md`, Release
 
 ## Owner checks
 
@@ -66,7 +72,9 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 - **Transition:** the claim holder reports prepared reviews and track updates
 
 ## References
-- Read [Copy](references/copy.md) when you draft the follow-up.
-- Read [Outreach drafting](../../references/outreach-drafting.md) when you draft, review or prepare any message (read first).
-- Read [Outreach release](../../references/outreach-release.md) when you prepare, release or check outreach.
-- Read [Taste check: message](../../references/taste-message.md) when judging a message draft before review.
+- Read [Warm email copy](references/warm-email-copy.md) when drafting a warm email or click nudge.
+- Read [Agent stop](../../references/agent-stop.md) when throughout the run.
+- Read [Introduction request](../../references/intro-request.md) when asking for an introduction.
+- Read [Outreach drafting](../../references/outreach-drafting.md) when before drafting or preparing a message.
+- Read [Outreach release](../../references/outreach-release.md) when before preparing, releasing or checking outreach and before follow-ups.
+- Read [Taste check: message](../../references/taste-message.md) when after the draft check and before review.

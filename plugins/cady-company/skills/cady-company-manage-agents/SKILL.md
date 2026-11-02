@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
   version: "a614f9610f8a0b7e2411"
-  library: "2a0e1b4de8671cec"
+  library: "74d98e825b54225d"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody owns, proven on a first task; grants only on the person's approval.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "a614f9610f8a0b7e2411@2a0e1b4de8671cec"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "a614f9610f8a0b7e2411@74d98e825b54225d"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 

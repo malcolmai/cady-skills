@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
-  version: "3d2b68877c92bd92bb14"
-  library: "2a0e1b4de8671cec"
+  version: "0df3933808bf84890fca"
+  library: "74d98e825b54225d"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "3d2b68877c92bd92bb14@2a0e1b4de8671cec"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "0df3933808bf84890fca@74d98e825b54225d"}})`
 
 Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 
@@ -40,8 +40,8 @@ Run one customer account after the sale: onboarding to first value, health, risk
 2. Read the account: records_read party:<partyId> (role customer, renewalDate), its won track via crm.list_parties mode tracks, the sales handoff note with files.read_text, and interactions such as signup, activation, meeting and note. Missing evidence is unknown, not failure: ask before judging. Go to the moment the account is in.
 3. Onboarding: at kickoff, restate the goal from the handoff so the customer does not repeat the sales conversation, then agree in their words the first value: the first observable result they bought for, such as a first report delivered or a first batch processed, and a date. Default 30 days for an assisted setup and 14 for self-serve. List the few setup steps with an owner each; clear your side's blockers first. Record crm_interactions_create kind activation when the result is observed, not when an account is created. Past the date without first value, the account is at risk however friendly the customer is.
 4. Health: judge four dimensions separately, never as one score. Outcome: are they getting the result they bought? Adoption: the necessary use, by the right people, at the job's natural cadence. Relationship: champion present and engaged, sponsor known, sentiment in their words. Commercial: payment on time, usage or seats against the contract, renewal distance. Early risk signals: champion left or quiet, use missing for two natural cycles, a serious issue open over a week, a reorganisation, acquisition or budget cut, questions about export, terms or notice period, a failed payment.
-5. At risk: within a week of a signal, name the one risk, its evidence and the likely cause. Speak to the customer directly with a specific question, not "just checking in". Agree a recovery plan: the outcome, steps each side owns and a check date, saved with files_create and set as the track's nextAction and nextActionDueAt. Own a delivery failure plainly: what happened, the fix and its date. Send product defects to the product owner with evidence. A discount does not fix a value problem. If their need changed or they have decided to leave, go to cancellation. Judge it with the message taste check (`../../references/taste-message.md`) before review.
-6. Renewal: for an annual contract start 90 days before renewalDate (30 days for a monthly plan), or before the contract's notice deadline if that is earlier. At 90 days review outcomes delivered against the kickoff goal and open risks; at 60 hold the renewal conversation with value in their numbers and any price change, announced no later than the contract's notice period; at 30 complete the paperwork. Send every notice the contract or law requires with no promotion in it, on the lane message rules (lanes) give it, and never let an auto-renewal surprise the customer. Afterwards send crm_parties_update or crm_parties_create role customer with the new renewalDate in its own call, and record the signed renewal with crm_interactions_create kind note (sourceRef the order or invoice ref, no document text).
+5. At risk: within a week of a signal, name the one risk, its evidence and the likely cause. Speak to the customer directly with a specific question, not “just checking in”, using `../../references/outreach-drafting.md`, Easy yes. Agree a recovery plan: the outcome, steps each side owns and a check date, saved with files_create and set as the track's nextAction and nextActionDueAt. Own a delivery failure plainly: what happened, the fix and its date. Send product defects to the product owner with evidence. A discount does not fix a value problem. If their need changed or they have decided to leave, go to cancellation. Run `../../references/outreach-drafting.md`, Draft check before `../../references/taste-message.md`; route preparation and release through `../../references/outreach-release.md`.
+6. Renewal: for an annual contract start 90 days before renewalDate (30 days for a monthly plan), or before the contract's notice deadline if that is earlier. At 90 days review outcomes delivered against the kickoff goal and open risks; at 60 hold the renewal conversation with value in their numbers and any price change, announced no later than the contract's notice period; at 30 complete the paperwork. Send every notice the contract or law requires with no promotion in it, using `../../references/outreach-drafting.md`, opt_out, and never let an auto-renewal surprise the customer. Afterwards send crm_parties_update or crm_parties_create role customer with the new renewalDate in its own call, and record the signed renewal with crm_interactions_create kind note (sourceRef the order or invoice ref, no document text).
 7. Expansion: only once first value is reached and no risk is open. Real triggers are hitting a plan limit, another team asking, or a new use case the customer raised. Ask what result the expansion buys; when it needs a proposal, run it through `cady-sales-deal-motion`.
 8. Cancellation: acknowledge the request the same day and ask once why. Make one save attempt only when a real remedy fits that reason (the fix with a date, a pause, a smaller plan, or terms the owner approved); offer nothing the owner has not approved. If they decline or repeat the decision, honour it by the date they asked: no extra steps, repeated calls or guilt. Confirm in writing the end date, final invoice, access and data export; the cancellation itself is made by the billing owner. Record the reason with crm_interactions_create kind note (no message body), when the contract ends send crm_parties_update or crm_parties_create role other with renewalDate null so the account no longer counts as a customer, and set recontact 'unless_changed' unless they asked for a date. Cancelling is not an opt-out, and not consent to marketing either.
 9. Every customer message goes through `cady-gtm-reply` or `cady-gtm-warm-email`; nothing sends from this skill. The same churn or risk reason across three or more accounts is a proposal to the product owner or `cady-gtm-offer-and-segments`. Report with work_report once records and files read back.
@@ -63,7 +63,7 @@ Run one customer account after the sale: onboarding to first value, health, risk
 - contract renewal and notice dates
 - owner-approved retention offer
 - Files readback
-- contact permission before any message
+- contact permission under `../../references/outreach-release.md`, Permission before any message
 
 ## Result
 
@@ -76,4 +76,6 @@ Run one customer account after the sale: onboarding to first value, health, risk
 - **Transition:** the claim holder reports the account moment, its evidence and the next dated action
 
 ## References
+- Read [Outreach drafting](../../references/outreach-drafting.md) when preparing customer message copy.
+- Read [Outreach release](../../references/outreach-release.md) when checking permission or routing a customer message for preparation and release.
 - Read [Taste check: message](../../references/taste-message.md) when judging a message draft before review.

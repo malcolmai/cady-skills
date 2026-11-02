@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "54c558ff38447d0ed563"
-  library: "2a0e1b4de8671cec"
+  version: "d6402ca7e175c9e22269"
+  library: "74d98e825b54225d"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "54c558ff38447d0ed563@2a0e1b4de8671cec"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "d6402ca7e175c9e22269@74d98e825b54225d"}})`
 
 ## Role card
 
@@ -49,7 +49,7 @@ You create and test demand for the current bets: content, search, events and pai
 - `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
-- `cady-gtm-events`: Choose, prepare for or host an event that can advance the company purpose through real conversations.
+- `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations.
 
 ## Parent function
 gtm

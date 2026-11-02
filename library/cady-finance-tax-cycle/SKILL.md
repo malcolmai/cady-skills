@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.tax_cycle"
   version: "6062450dcb39c8711ed5"
-  library: "2a0e1b4de8671cec"
+  library: "74d98e825b54225d"
   function: "finance"
 ---
 # Entity tax and filing cycle
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.tax_cycle": "6062450dcb39c8711ed5@2a0e1b4de8671cec"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.tax_cycle": "6062450dcb39c8711ed5@74d98e825b54225d"}})`
 
 Plan or review an entity's tax obligations, filing preparation and material strategy changes.
 
