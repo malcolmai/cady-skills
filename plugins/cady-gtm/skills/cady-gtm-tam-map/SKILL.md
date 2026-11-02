@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
   version: "92070d6bcc0006a1d49f"
-  library: "9c79a655f80c84ea"
+  library: "c1c41b6e6064f887"
   function: "gtm"
 ---
 # TAM map
 
-**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "92070d6bcc0006a1d49f@9c79a655f80c84ea"}})`
+**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "92070d6bcc0006a1d49f@c1c41b6e6064f887"}})`
 
 Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts.
 

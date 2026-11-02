@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
   version: "c4917fd53ae293d2e11b"
-  library: "9c79a655f80c84ea"
+  library: "c1c41b6e6064f887"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "c4917fd53ae293d2e11b@9c79a655f80c84ea"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "c4917fd53ae293d2e11b@c1c41b6e6064f887"}})`
 
 Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 

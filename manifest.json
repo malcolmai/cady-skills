@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "9c79a655f80c84ea",
-    "version": "9c79a655f80c84eabb9d899e96e0140abf49b67a999265aa48f5d7537b4da08e",
-    "pluginVersion": "2026.11.2-9c79a655"
+    "tag": "c1c41b6e6064f887",
+    "version": "c1c41b6e6064f88711620e93ea8939a7cc210808b097299e346d3877a483462e",
+    "pluginVersion": "2026.11.2-c1c41b6e"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-9c79a655"
+    "version": "2026.11.2-c1c41b6e"
   },
   "skills": [
     {
@@ -273,7 +273,7 @@
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "1457d3af93e8cb4d1103"
+      "version": "e46ba275366c15a3e2f9"
     },
     {
       "name": "cady-gtm-events",

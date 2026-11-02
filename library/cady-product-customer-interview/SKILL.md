@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
   version: "22d752adbe5bf8f7c341"
-  library: "9c79a655f80c84ea"
+  library: "c1c41b6e6064f887"
   function: "product"
 ---
 # Customer discovery interviews
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "22d752adbe5bf8f7c341@9c79a655f80c84ea"}})`
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "22d752adbe5bf8f7c341@c1c41b6e6064f887"}})`
 
 Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 
