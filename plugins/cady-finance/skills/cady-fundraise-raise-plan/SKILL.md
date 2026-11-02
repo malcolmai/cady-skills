@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
   version: "31f9bf7178dde25915b5"
-  library: "82b573cad10ec174"
+  library: "12d3967af31af210"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "31f9bf7178dde25915b5@82b573cad10ec174"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "31f9bf7178dde25915b5@12d3967af31af210"}})`
 
 Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
 

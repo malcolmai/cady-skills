@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.persona_profile"
   version: "7d3bb0bb5d41b3346931"
-  library: "82b573cad10ec174"
+  library: "12d3967af31af210"
   function: "gtm"
 ---
 # Persona profile
 
 **Point:** Understand one persona deeply (what they use, praise, hate, move toward) so positioning, sourcing and copy start from them.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.persona_profile": "7d3bb0bb5d41b3346931@82b573cad10ec174"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.persona_profile": "7d3bb0bb5d41b3346931@12d3967af31af210"}})`
 
 Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy.
 

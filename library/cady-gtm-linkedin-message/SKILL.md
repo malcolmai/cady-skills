@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
   version: "0589f43e6dc815b30003"
-  library: "82b573cad10ec174"
+  library: "12d3967af31af210"
   function: "gtm"
 ---
 # Social direct message
 
 **Point:** Open a real conversation on a social channel with one honest reason, paced so the account stays safe.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "0589f43e6dc815b30003@82b573cad10ec174"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "0589f43e6dc815b30003@12d3967af31af210"}})`
 
 Draft a first social DM or one no-reply follow-up on any non-email channel; LinkedIn connection notes too.
 

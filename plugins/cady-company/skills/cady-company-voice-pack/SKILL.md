@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
   version: "abdffb9f6e2011b609b3"
-  library: "82b573cad10ec174"
+  library: "12d3967af31af210"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "abdffb9f6e2011b609b3@82b573cad10ec174"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "abdffb9f6e2011b609b3@12d3967af31af210"}})`
 
 Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
 
