@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "de7c29303a9ba079d819"
-  library: "bd82e1a78db1644c"
+  version: "991988dd29f1367b72cb"
+  library: "2a0e1b4de8671cec"
   function: "gtm"
 ---
 # Cold email cycle
 
 **Point:** Earn replies from strangers with one honest, segment-true reason, learning each cycle what works, without harming sender reputation.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "de7c29303a9ba079d819@bd82e1a78db1644c"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "991988dd29f1367b72cb@2a0e1b4de8671cec"}})`
 
 Write and send cold email to people not yet contacted, one template per segment; fix bounces, spam or deliverability.
 
@@ -45,7 +45,7 @@ Write and send cold email to people not yet contacted, one template per segment;
 6. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare crm_outreach_review_prepare with mode 'cold_template', cycleKey, segmentKey, variants, proof and listId or partyIds. For a linked template, include trackedLink {destination: '<final https>'}. Do not provide recipientBodies. Cold first touch follows the shared 30-day release cycle per party and channel; cycleKey groups results only. For follow-ups, see the due follow-ups view and `../../references/outreach-release.md` follow_up; never put them in the cycle. The company cold email quota is 100 recipients per rolling day and 500 per rolling week, with no lifetime total; above it, use a sender the owner chooses and authorizes and record its outcomes as outcome_check says.
 7. Read the review with records_read review:outreach/<approvalId>; check samples, exclusions and remaining cap; fix refusals and prepare again.
 8. At mid-cycle and end, read crm.get_outreach_review({cycleKey}). Each variant, segment and channel row counts sends to closed parties as touched and advancing (a definitive result followed before the next send), plus won and lost parties; these are counts, not shares. Decide keep, scale or kill by variant with denominators, underpowered flags and receipts on this work item; never scale on small samples or reply noise.
-9. Release: RELEASE_PAUSED for platform_paused, company_paused; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, NO_CONTACT_BASIS, QUOTE_UNVERIFIED, SENDER_MISSING, DESTINATION_UNVERIFIED, CONTACT_DEFERRED, RECENT_CONTACT, REPLIED_SINCE_RELEASE, ALREADY_SENT_IN_CYCLE, CAP_REACHED, APPROVAL_EXPIRED, GRANT_NOT_ACTIVE, TRACKED_LINKS_OFF. Release as in release: a release is first contact and creates the Prospect track if missing. Server and device executors add each recipient's tracked link and unsubscribe header; never edit them. Sending with your own connector (route A), put the minted link from records_read review:outreach/<approvalId> in the email with descriptive anchor text. Record learning before next cycle.
+9. Release: RELEASE_PAUSED for platform_paused, company_paused; held by SENDING_ACCOUNT_NOT_CONFIRMED, skill_required, claim_required, claim_expired, NO_CONTACT_BASIS, QUOTE_UNVERIFIED, SENDER_MISSING, DESTINATION_UNVERIFIED, CONTACT_DEFERRED, RECENT_CONTACT, REPLIED_SINCE_RELEASE, ALREADY_SENT_IN_CYCLE, CAP_REACHED, APPROVAL_EXPIRED, GRANT_NOT_ACTIVE, TRACKED_LINKS_OFF. Release as in release: a release is first contact and puts each recipient on the customer board (Prospect for a persona segmentKey, else parked as not for now); the motion field of crm_outreach_review_prepare owns the rule. Server and device executors add each recipient's tracked link and unsubscribe header; never edit them. Sending with your own connector (route A), put the minted link from records_read review:outreach/<approvalId> in the email with descriptive anchor text. Record learning before next cycle.
 10. Pause rules: stop cold sending from the affected mailbox at once, and pause any active grant with crm_outreach_grants_update action 'pause', when a send shows hard bounces above 2%, spam complaints above 0.1% (0.3% is the large mailbox providers' ceiling, not a target), provider blocks, a blocklist listing or a low reputation reading; then follow the recovery in `../../references/cold-deliverability.md`. Never switch to a fresh domain or mailbox to keep sending the same list.
 
 ## Acceptance

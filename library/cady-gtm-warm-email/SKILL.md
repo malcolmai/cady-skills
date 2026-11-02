@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "9b07815ce5341dd18296"
-  library: "bd82e1a78db1644c"
+  version: "61dba81462c4d9017509"
+  library: "2a0e1b4de8671cec"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
 **Point:** Maintain the real relationship respectfully, subtly make clear what we do, and follow up on strong buying or interest signals.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "9b07815ce5341dd18296@bd82e1a78db1644c"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "61dba81462c4d9017509@2a0e1b4de8671cec"}})`
 
 Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches.
 

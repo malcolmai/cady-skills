@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "4dfa3e4b25fcd9c8e8c8"
-  library: "bd82e1a78db1644c"
+  version: "f441062c9fda96aa3c7a"
+  library: "2a0e1b4de8671cec"
   function: "gtm"
 ---
 # Reply in a live thread
 
 **Point:** Learn what they want, judge fit honestly now or later, answer only that, honour stops, let them set the pace.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "4dfa3e4b25fcd9c8e8c8@bd82e1a78db1644c"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "f441062c9fda96aa3c7a@2a0e1b4de8671cec"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 
@@ -44,7 +44,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 
 | Class | Next action | Timing | Permission effect |
 |---|---|---|---|
-| Positive or question | Answer exactly what was asked. Offer one dated next step only if they explicitly asked for or offered one. | The first run that finds it | Recorded reply makes the party engaged and holds follow-ups; set only a stage the user stated (crm_tracks_set; a party with no track needs crm_tracks_set with motion customer) |
+| Positive or question | Answer exactly what was asked. Offer one dated next step only if they explicitly asked for or offered one. | The first run that finds it | Recorded reply makes the party engaged and holds follow-ups; set only a stage the user stated (crm_tracks_set; a party with no track needs crm_tracks_set with the thread's motion) |
 | Objection | Answer it with the objection step below; one question at most. | The next run | None |
 | Referral ("talk to X") | Thank them in one line; ask whether they will introduce you (double opt-in, `../../references/intro-request.md`) or you may mention them. | The first run that finds it | X is a new party with no permission of their own: cold rules apply unless the referrer introduces you in a thread (kind intro) |
 | Not now | One short line acknowledging it; no pitch, no "just in case" material. | Once, then hold | crm_tracks_set outcome paused, recontact on their date, else '3m' |

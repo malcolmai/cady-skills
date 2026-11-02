@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
   version: "0e6e5f92c2d22022bd08"
-  library: "bd82e1a78db1644c"
+  library: "2a0e1b4de8671cec"
   function: "qa"
 ---
 # User stories: keep, walk and read
 
 **Point:** Keep stories true to a real user goal, walk them blind, and read status only from blind runs.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "0e6e5f92c2d22022bd08@bd82e1a78db1644c"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "0e6e5f92c2d22022bd08@2a0e1b4de8671cec"}})`
 
 Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
