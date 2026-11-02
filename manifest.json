@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-01T00:00:00Z",
+  "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "169c5b4ef5378e12",
-    "version": "169c5b4ef5378e12a7758e476e22b6b1f7e61b9966b7f68b79f1fe7b0412c957",
-    "pluginVersion": "2026.11.1-169c5b4e"
+    "tag": "3cff931f8bce63f1",
+    "version": "3cff931f8bce63f122990e5ebed33df0c78309e01b3d225f70045e93b9cc0e75",
+    "pluginVersion": "2026.11.2-3cff931f"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.1-169c5b4e"
+    "version": "2026.11.2-3cff931f"
   },
   "skills": [
     {
@@ -135,7 +135,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "bb8df5a14f50bb4b2729"
+      "version": "ec1eceb1ef2d6e5ed11a"
     },
     {
       "name": "cady-core-run-sequence",
@@ -339,7 +339,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "297cf4d1ec22d5038f8a"
+      "version": "b93837461c9c997fcd19"
     },
     {
       "name": "cady-product-customer-interview",
