@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "b111cdc077fea6d3b88c"
-  library: "74d98e825b54225d"
+  version: "95196a2daf22dddad2b3"
+  library: "77b2da60520f8542"
   function: "gtm"
 ---
 # Reply in a live thread
 
 **Point:** Learn what they want, judge fit honestly now or later, answer only that, honour stops, let them set the pace.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "b111cdc077fea6d3b88c@74d98e825b54225d"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "95196a2daf22dddad2b3@77b2da60520f8542"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 

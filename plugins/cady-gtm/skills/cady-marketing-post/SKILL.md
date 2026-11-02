@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.marketing.post"
   version: "d22d646cad253562516a"
-  library: "74d98e825b54225d"
+  library: "77b2da60520f8542"
   function: "marketing"
 ---
 # Post one piece
 
 **Point:** Publish one useful, true piece for the brief's audience, judged in placement, only after approval.
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.marketing.post": "d22d646cad253562516a@74d98e825b54225d"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.marketing.post": "d22d646cad253562516a@77b2da60520f8542"}})`
 
 Create or edit one post for the audience, topic and placement chosen in the brief.
 
