@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "abd9c99b60f00edef89d"
-  library: "c8b387c68af98e70"
+  version: "a614f9610f8a0b7e2411"
+  library: "bd82e1a78db1644c"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody owns, proven on a first task; grants only on the person's approval.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "abd9c99b60f00edef89d@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "a614f9610f8a0b7e2411@bd82e1a78db1644c"}})`
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 
@@ -89,4 +89,4 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 - Read [Scheduling](references/scheduling.md) when you install, change or review a recurring host task, or choose a cadence, runtime or model for scheduled work.
 - Read [Silent hosts](references/silent-hosts.md) when you are the orchestrator checking other hosts for agents whose host has gone silent.
 - Read [Adopt an existing scheduled task](../../references/adopt-scheduled-task.md) when a company's existing host scheduled task is to be brought under Cady.
-- Read [GTM agent recipe](../../references/agent-recipe-gtm.md) when the agent is for the gtm function (demand, outreach, posting); it shows one worked design to copy the shape of.
+- Read [Execution agent brief](../../references/execution-agent-brief.md) when you set up a channel execution agent.

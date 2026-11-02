@@ -2,6 +2,31 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## bd82e1a78db1644c · 2026-11-02
+
+Since c8b387c68af98e70: 0 new, 0 dropped, 17 changed.
+
+Changed (the parts that differ):
+- `cady`: Add or change an agent, reference agent-recipe-gtm.md, reference agent-stop.md, reference execution-agent-brief.md, reference outreach-release.md
+- `cady-company-manage-agents`: References
+- `cady-company-taste-review`: Procedure, References
+- `cady-company-voice-pack`: description, intro, References
+- `cady-customer-success-lifecycle`: Procedure, References
+- `cady-fundraise-investor-outreach`: Procedure, References
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-gtm-calls`: Procedure, References
+- `cady-gtm-cold-email-cycle`: Procedure, References, reference copy.md
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-linkedin-message`: Procedure, References
+- `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-pipeline-pass`: Procedure
+- `cady-gtm-reply`: Procedure, References
+- `cady-gtm-warm-email`: Procedure, References
+- `cady-marketing-method`: Selected judgment, reference domain-method.md
+- `cady-sales-deal-motion`: Procedure, References
+
+Shared references changed: agent-recipe-gtm.md, agent-stop.md, call-follow-up.md, call-prep.md, cold-deliverability.md, contract-kinds.md, events-attend.md, events-host.md, execution-agent-brief.md, gtm-channels.md, inbox-follow-through-details.md, intro-request.md, outreach-drafting.md, outreach-message-rules.md, outreach-release.md, people-checklists.md, release-plan.md, taste-check.md, taste-message.md, taste-post.md, vendor-purchase.md, vendor-renewal.md.
+
 ## c8b387c68af98e70 · 2026-11-02
 
 Since 82b573cad10ec174: 0 new, 0 dropped, 16 changed.

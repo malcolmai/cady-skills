@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "ccad3a63a589a81281a9"
-  library: "c8b387c68af98e70"
+  version: "4dfa3e4b25fcd9c8e8c8"
+  library: "bd82e1a78db1644c"
   function: "gtm"
 ---
 # Reply in a live thread
 
 **Point:** Learn what they want, judge fit honestly now or later, answer only that, honour stops, let them set the pace.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "ccad3a63a589a81281a9@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "4dfa3e4b25fcd9c8e8c8@bd82e1a78db1644c"}})`
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 
@@ -40,7 +40,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 ## Procedure
 
 1. Read the actual inbound thread through its authorized connector and records_read party:<partyId>; for Cady-held email, use the outcome check and crm.find_communications/crm.get_communication. Keep the same channel and recipient. Other channels use route A or the approved device route, never a Cady email account. Exclude anything permission rules block. A stop Cady cannot store stays an explicit no-send hold in the task.
-2. Triage the newest inbound message before drafting anything. For every class except stop and auto-reply, first understand what they want and whether we fit now or later; try to fit, and if we do not, say so honestly and note what would change that. Pick one class; when several apply, stop wins, then wrong person, then objection over positive. After your reply the next move is theirs; if they go quiet, a follow-up keeps the thread's tempo (message rules, engaged recipient), never sooner. File it with crm_interactions_create (sourceRef the provider message id) if outcome_check has not.
+2. Triage the newest inbound message before drafting anything. For every class except stop and auto-reply, first understand what they want and whether we fit now or later; try to fit, and if we do not, say so honestly and note what would change that. Pick one class; when several apply, stop wins, then wrong person, then objection over positive. After your reply the next move is theirs; if they go quiet, a follow-up keeps the thread's tempo (`../../references/outreach-release.md`, follow_up), never sooner. File it with crm_interactions_create (sourceRef the provider message id) if outcome_check has not.
 
 | Class | Next action | Timing | Permission effect |
 |---|---|---|---|
@@ -54,7 +54,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 | Stop, unsubscribe, remove me, complaint | Send nothing, not even a confirmation. | Immediately | kind opt_out on the channel they named, else all; optOutReason complaint if hostile or a spam report; tell the owner |
 3. Commitments and act-versus-ask follow `cady-company-operations-inbox-follow-through`: reuse the existing task; a reply, delay or partial delivery fulfils nothing; route other takeaways to their owners.
 4. Objections: acknowledge in their words, ask the one question that tells a brush-off from a real blocker, answer with evidence, offer one low-effort next step, and accept a second no. "Send me info": send the one item that fits what they said, not a deck. "We use X" or "we built it": ask what works and what does not; name one difference only if it meets that gap. "Too expensive" or "no budget": find whether it is price, value, timing or authority; quote only the accepted offer, and a discount or pilot is the owner's decision. "Not a priority": treat as not now. "Not my call": ask who decides and offer a short summary they can forward. Security, compliance or certification: answer only from company evidence; say you will check rather than guess. "How did you get my address?": state the real source and offer to stop. Record what an objection or not-now shows, in the words they used, on the persona's profile against its hypothesis (`cady-gtm-persona-profile`), outside the reply. Never use false urgency, guilt, invented scarcity, a fake "closing your file" email or another ask after a clear no.
-5. Draft one reply following the copy rules: shorter than their message where possible, one question at most, no re-pitch of the cold email, and keep everyone they copied. Judge it with the taste check (../../references/taste-check.md, message part) before review.
+5. Draft one reply following the copy rules: shorter than their message where possible, one question at most, no re-pitch of the cold email, and keep everyone they copied. Judge it with the message taste check (`../../references/taste-message.md`) before review.
 6. Preparation: RECIPIENTS_EXCLUDED for destination_invalid, opted_out, suppressed; held by skill_required, claim_required, claim_expired, CAP_REACHED, TRACKED_LINKS_OFF. Not held by no_basis, platform_paused, company_paused, SENDING_ACCOUNT_NOT_CONFIRMED, sender_missing, destination_unverified, deferred, recent_contact, replied_since_release, already_sent_in_cycle, executor_unavailable. Prepare with crm_outreach_review_prepare on the thread's channel, one recipient and lane "non_marketing", read it with records_read review:outreach/<approvalId>, then follow release.
 
 ## Acceptance
@@ -80,5 +80,6 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 
 ## References
 - Read [Copy](references/copy.md) when you draft the reply.
-- Read [Outreach message rules](../../references/outreach-message-rules.md) when you draft, review or prepare any message (read first).
-- Read [Taste check](../../references/taste-check.md) when judging a draft or design before review.
+- Read [Outreach drafting](../../references/outreach-drafting.md) when you draft, review or prepare any message (read first).
+- Read [Outreach release](../../references/outreach-release.md) when you prepare, release or check outreach.
+- Read [Taste check: message](../../references/taste-message.md) when judging a message draft before review.

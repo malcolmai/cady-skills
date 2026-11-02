@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "d61edda167e7d13373c6"
-  library: "c8b387c68af98e70"
+  version: "54c558ff38447d0ed563"
+  library: "bd82e1a78db1644c"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "d61edda167e7d13373c6@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "54c558ff38447d0ed563@bd82e1a78db1644c"}})`
 
 ## Role card
 
@@ -57,6 +57,6 @@ gtm
 ## Selected judgment
 - When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation. Unknown contact basis holds release, not eligible identity persistence or held review preparation.
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
-- When choosing a channel rather than executing an accepted one, retrieve the current GTM channel experiment detail after registered discovery.
+- When choosing a channel rather than executing an accepted one, read `../../references/gtm-channels.md` after registered discovery.
 
 - Read [Domain method](references/domain-method.md) when you plan or publish marketing content or SEO.

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
-  version: "b87256a5369630789a21"
-  library: "c8b387c68af98e70"
+  version: "bbfe26f105a2251e7ae6"
+  library: "bd82e1a78db1644c"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "b87256a5369630789a21@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "bbfe26f105a2251e7ae6@bd82e1a78db1644c"}})`
 
 Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
 
@@ -44,7 +44,7 @@ Prepare for a sales or customer call (account brief, agenda, questions), then re
 1. Before the call: read the accepted offer and segment evidence, then records_read party:<partyId> for each exact person. Keep cold and warm context distinct; do not infer a relationship from missing history. For cold calls, remind the user that Cady is a processor and the user decides lawfulness; UK numbers may need TPS/CTPS screening. This is a reminder, not a Cady rule or clearance.
 2. Before the call: prepare one call sheet per segment and person as the call prep reference says (`../../references/call-prep.md`). Save it to Files with files_update or files_create with mode "begin" and files_update or files_create with mode "complete"; verify the completed file receipt and reference it on this work item. Cady never dials and never records audio. Keep tool status and unavailable steps out of the sheet; report them to the user outside it.
 3. After the call: once the user has made each call, record it with crm_interactions_create, kind call, occurredAt the call time, and sourceRef the call ID or a date plus number-free label. Put only connected/not connected, qualified yes/no, and the next step in note. Never store a transcript, phone number, or audio. Preserve identical sourceRef values when retrying. Keep an ordinary next step in the existing work text when no cross-run retrieval, due-date query or waiting follow-up benefits from structure. Reuse the existing task or adequate native reminder for the same promised outcome; attach optional obligation metadata to that same task when useful, never duplicate it merely for typing. Keep independently fulfilled commitments distinct. Keep workKind=task and the existing outcome in the title and optional brief. Preserve conditions and stated/inferred certainty. The source-backed promisor, when known, is distinct from executor; leave unknown when not evidenced. A date-only commitment uses canonical task dueDate; never invent a time or timezone. Use work_report for ordinary reporting; for a focused update to existing owned work use its exact managed checkpoint route with current revision/generation/claim proof. Read back the exact selected task. A reply or partial delivery does not fulfill an owed guide or contract; close only when evidence meets the doneWhen lines (an actual requested confirmation can complete a confirmation task). Acknowledged cancellation stops execution, not the promise, and does not establish release/waiver lifecycle. Route a stated role, employer change, lasting preference or deferral to its owner.
-4. After the call: match the note to the party, separate what the buyer said from inference, and draft the follow-up as the call follow-up reference says (`../../references/call-follow-up.md`). Show the exact unsent proposal for user review; a material change in source, relationship state or copy needs a fresh review under the relevant outreach skill. Judge it with the taste check (../../references/taste-check.md, message part) before review.
+4. After the call: match the note to the party, separate what the buyer said from inference, and draft the follow-up as the call follow-up reference says (`../../references/call-follow-up.md`). Show the exact unsent proposal for user review; a material change in source, relationship state or copy needs a fresh review under the relevant outreach skill. Judge it with the message taste check (`../../references/taste-message.md`) before review.
 5. After the call: report the prepared outcome and linked work/source references with work_report after checking their owner readbacks; do not report a checkpoint as a completed outcome. Carry supported ICP learning as a proposed change with contrasting evidence and a reversal condition. A connected conversation makes the party engaged; only when the user states a stage, use crm_tracks_set for a first start or crm_tracks_set for an existing track; never infer one. Send the follow-up email through `cady-gtm-warm-email`.
 6. Act versus ask: follow `cady-company-operations-inbox-follow-through`.
 
@@ -80,5 +80,6 @@ Prepare for a sales or customer call (account brief, agenda, questions), then re
 ## References
 - Read [Call follow-up](../../references/call-follow-up.md) when you record a call and draft its follow-up.
 - Read [Call prep: the call sheet](../../references/call-prep.md) when you prepare a call sheet before a call.
-- Read [Outreach message rules](../../references/outreach-message-rules.md) when you prepare a message after the call (read first).
-- Read [Taste check](../../references/taste-check.md) when judging a draft or design before review.
+- Read [Outreach drafting](../../references/outreach-drafting.md) when you prepare a message after the call (read first).
+- Read [Outreach release](../../references/outreach-release.md) when you prepare, release or check outreach.
+- Read [Taste check: message](../../references/taste-message.md) when judging a message draft before review.

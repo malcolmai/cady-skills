@@ -1,21 +1,21 @@
 ---
 name: "cady-company-voice-pack"
-description: "Build or refresh a texture-only voice pack. Use when: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages. Not for: Drafting rules (relationship, substance, ask: the shared message rules, sender_voice), reviewing or sending outreach (crm_outreach_review_prepare), company brand voice (`cady-company-taste-review`)."
+description: "Build or refresh a texture-only voice pack. Use when: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages. Not for: Drafting rules (relationship, substance, ask: `../../references/outreach-drafting.md`, sender_voice), reviewing or sending outreach (crm_outreach_review_prepare), company brand voice (`cady-company-taste-review`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
-  version: "abdffb9f6e2011b609b3"
-  library: "c8b387c68af98e70"
+  version: "b9ec0aa2699819665a75"
+  library: "bd82e1a78db1644c"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "abdffb9f6e2011b609b3@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "b9ec0aa2699819665a75@bd82e1a78db1644c"}})`
 
 Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
 
-**Not for:** Drafting rules (relationship, substance, ask: the shared message rules, sender_voice), reviewing or sending outreach (crm_outreach_review_prepare), company brand voice (`cady-company-taste-review`).
+**Not for:** Drafting rules (relationship, substance, ask: `../../references/outreach-drafting.md`, sender_voice), reviewing or sending outreach (crm_outreach_review_prepare), company brand voice (`cady-company-taste-review`).
 
 **Unit of work:** one member's pack. **Kind:** execution. **Parallel:** no. **Can release:** no. 
 
@@ -65,3 +65,5 @@ Owner sets up or refreshes how their messages sound, or drafts read generic. Bui
 ## References
 - Read [Avoid and contrast](references/avoid-and-contrast.md) when writing the avoid lines or the with/without draft check.
 - Read [Taste check](../../references/taste-check.md) when flagging possible AI writing in the owner's samples.
+- Read [Taste check: message](../../references/taste-message.md) when judging a message draft before review.
+- Read [Taste check: post](../../references/taste-post.md) when judging a post draft before review.

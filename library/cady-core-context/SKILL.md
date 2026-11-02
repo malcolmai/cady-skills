@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
   version: "0405ecb24ff32d8d14ae"
-  library: "c8b387c68af98e70"
+  library: "bd82e1a78db1644c"
   function: "core"
 ---
 # Company context
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "0405ecb24ff32d8d14ae@c8b387c68af98e70"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "0405ecb24ff32d8d14ae@bd82e1a78db1644c"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
