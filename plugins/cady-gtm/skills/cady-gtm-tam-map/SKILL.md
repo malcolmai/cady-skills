@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
   version: "86b07e0c6b996759e297"
-  library: "12d3967af31af210"
+  library: "633b489e153e68a4"
   function: "gtm"
 ---
 # TAM map
 
 **Point:** Find people who clearly fit a persona; prefer several narrow personas over one broad, weakly fitting offer.
 
-**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "86b07e0c6b996759e297@12d3967af31af210"}})`
+**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "86b07e0c6b996759e297@633b489e153e68a4"}})`
 
 Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts.
 

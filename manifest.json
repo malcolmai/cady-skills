@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-02T00:00:00Z",
   "bundle": {
-    "tag": "12d3967af31af210",
-    "version": "12d3967af31af210b171a1eab8f852b21e02f59af29d70436143464ff8e44183",
-    "pluginVersion": "2026.11.2-12d3967a"
+    "tag": "633b489e153e68a4",
+    "version": "633b489e153e68a4c38a34ce5f9863219d0b9f8bd025a4dbc112cc9946ef2f8b",
+    "pluginVersion": "2026.11.2-633b489e"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.2-12d3967a"
+    "version": "2026.11.2-633b489e"
   },
   "skills": [
     {
@@ -237,7 +237,7 @@
       "name": "cady-fundraise-investor-list",
       "path": "library/cady-fundraise-investor-list",
       "cadyId": "skill.fundraise.investor_list",
-      "version": "726b17c310d8217ffe1e"
+      "version": "912058757c41c98f9c2b"
     },
     {
       "name": "cady-fundraise-investor-outreach",
@@ -309,7 +309,7 @@
       "name": "cady-gtm-persona-profile",
       "path": "library/cady-gtm-persona-profile",
       "cadyId": "skill.gtm.persona_profile",
-      "version": "7d3bb0bb5d41b3346931"
+      "version": "7f2c480edcf3c76df784"
     },
     {
       "name": "cady-gtm-pipeline-pass",
@@ -321,7 +321,7 @@
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "793a79112a2809ab161b"
+      "version": "87db9e9397d392fdf5fd"
     },
     {
       "name": "cady-gtm-tam-map",
@@ -381,7 +381,7 @@
       "name": "cady-qa-stories",
       "path": "library/cady-qa-stories",
       "cadyId": "skill.qa.stories",
-      "version": "b1b24540295e6f4bf45c"
+      "version": "0e6e5f92c2d22022bd08"
     },
     {
       "name": "cady-qa-triage",

@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
   version: "16b3aea59de74dfbb92d"
-  library: "12d3967af31af210"
+  library: "633b489e153e68a4"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "16b3aea59de74dfbb92d@12d3967af31af210"}})`
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "16b3aea59de74dfbb92d@633b489e153e68a4"}})`
 
 Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done.
 

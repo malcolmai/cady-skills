@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.company_review"
   version: "93f1b6f623fb6ffc5ba8"
-  library: "12d3967af31af210"
+  library: "633b489e153e68a4"
   function: "company"
 ---
 # Company strategy and operating review
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.company_review": "93f1b6f623fb6ffc5ba8@12d3967af31af210"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.company_review": "93f1b6f623fb6ffc5ba8@633b489e153e68a4"}})`
 
 Review company direction, goals and progress, including onboarding a new company: its first offering and route to customers. Use when: a company needs an evidence-based operating review or onboarding. Not for: one executive decision (use `cady-company-executive-review`).
 
