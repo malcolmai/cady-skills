@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "e407e8e6853f9fd49352"
-  library: "3cff931f8bce63f1"
+  version: "1f17bd46d1789a2be592"
+  library: "f6f95523d66c641b"
   function: "gtm"
 ---
 # Events: attend or host
 
-**Company context:** `get_cady_context({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "e407e8e6853f9fd49352@3cff931f8bce63f1"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "1f17bd46d1789a2be592@f6f95523d66c641b"}})`
 
 Choose, prepare for or host an event that can advance the company purpose through real conversations.
 
@@ -38,10 +38,10 @@ Choose, prepare for or host an event that can advance the company purpose throug
 
 ## Procedure
 
-1. Claim the event work item with transition_company_work(action: 'claim') (the server fills attemptId and claimProof).
+1. Claim the event work item with work_change(action: 'claim') (the server fills attemptId and claimProof).
 2. Choose the mode. Attend: choose by fit and likely conversation density, cost and founder time; set a target for substantive conversations and next steps; directory presence alone is not intent. Host: establish the event purpose, co-host, date and venue for a small event that creates a useful community for the company and co-host. Then follow that mode's reference (`../../references/events-attend.md` or `../../references/events-host.md`).
 3. During sourcing, persist source-backed eligible speakers, attendees, co-hosts and guests in the selected CRM List through the applicable reviewed import method (for Cady CRM, `cady-gtm-tam-map`); read import completion and actual membership. Report researched, saved and member counts separately; shortfalls remain explicit, and people remain cold until a real readable relationship exists.
-4. After the event, use crm.record_interactions for a one-to-one meeting the user actually attended (kind meeting) or a substantive conversation (kind event_conversation), with occurredAt the interaction time and sourceRef the event platform ID or event slug plus date. These actual interactions make the party engaged and route to a personal follow-up. Keep the event platform authoritative for attendance and RSVPs; listed attendees stay cold, never bulk-message the attendee List, respect current opt-outs and suppression, and deliver promised items.
+4. After the event, use crm_interactions_create for a one-to-one meeting the user actually attended (kind meeting) or a substantive conversation (kind event_conversation), with occurredAt the interaction time and sourceRef the event platform ID or event slug plus date. These actual interactions make the party engaged and route to a personal follow-up. Keep the event platform authoritative for attendance and RSVPs; listed attendees stay cold, never bulk-message the attendee List, respect current opt-outs and suppression, and deliver promised items.
 5. Record one short keep-or-drop learning note on the event work item.
 
 ## Acceptance

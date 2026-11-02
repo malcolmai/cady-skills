@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "db70b427de8795392d0e"
-  library: "3cff931f8bce63f1"
+  version: "22d752adbe5bf8f7c341"
+  library: "f6f95523d66c641b"
   function: "product"
 ---
 # Customer discovery interviews
 
-**Company context:** `get_cady_context({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "db70b427de8795392d0e@3cff931f8bce63f1"}})`
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "22d752adbe5bf8f7c341@f6f95523d66c641b"}})`
 
 Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 
@@ -36,8 +36,8 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 5. Steer away from bad data. A compliment carries no information; move on. A generalisation ('I always', 'usually') gets 'when was the last time?'. A feature request gets 'what would that let you do?' and 'how do you handle it today?'. An opinion on price is tested by behaviour, never taken as demand.
 6. End with a real commitment that costs them something: a follow-up session, an introduction to the person who owns the budget, sample data, a pilot or a pre-payment. Record whether they accepted, declined or deflected; that is the strongest signal in the interview.
 7. Conduct: a person runs the live interview; the agent prepares the guide, recruits through approved channels and synthesises, and runs an interview itself only in an async or written format the participant agreed to. Say who is asking, ask consent before recording and keep notes within the hour. Mark verbatim quotes as quotes and keep observed behaviour separate from your interpretation.
-8. One File per interview (files.upload): date, role and context, the last real instance, current workaround and what it costs, quotes, and the commitment outcome; cite crm:party:<partyId>.
-9. Synthesise across interviews: count each pattern as n of m rather than citing the most vivid story, keep the disconfirming cases and state your confidence. Update the question or hypothesis item with the File refs. Interest, enthusiasm or 'I would buy that' is not validation; a repeated costly workaround or an accepted commitment is evidence.
+8. One File per interview (files_update or files_create): date, role and context, the last real instance, current workaround and what it costs, quotes, and the commitment outcome; cite crm:party:<partyId>.
+9. Synthesise across interviews: count each pattern as n of m rather than citing the most vivid story, keep the disconfirming cases and state your confidence. Update the question or hypothesis item with the File refs, and add their verbatim phrases to the segment's customer record (`cady-gtm-offer-and-segments` step 2). Interest, enthusiasm or 'I would buy that' is not validation; a repeated costly workaround or an accepted commitment is evidence.
 
 ## Acceptance
 

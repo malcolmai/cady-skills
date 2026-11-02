@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "ec1eceb1ef2d6e5ed11a"
-  library: "3cff931f8bce63f1"
+  version: "98fe4902c6eb65859e85"
+  library: "f6f95523d66c641b"
   function: "core"
 ---
 # Execution guidance
 
-**Company context:** `get_cady_context({"area": "ops/records", "task": "<what you are about to do, in one sentence>"})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>"})`
 
 Shared execution rules: authority, blockers, credentials, effects and receipts, recurrence and model choice. Use when: a skill points here, or before an effect, credential use, retry or recovery. Not for: choosing what work to do.
 - **Application:** Use this method when complex work, execution design, integrations or recovery need it; reuse it within the task. Combine the shared method with only the relevant use-case guidance and current company/task context. Read missing context that could change the approach; refresh authority and mutable targets before effects. Apply controls proportionately to consequence and uncertainty, not as a checklist for every chat. Save only material decisions, changed facts or continuation state at the existing owner; keep implementation details in the chosen project.
@@ -33,7 +33,7 @@ Shared execution rules: authority, blockers, credentials, effects and receipts, 
 ## Surfaces
 
 - **Cady desktop:** Use the company's approved sign-in and work interface. Never substitute a user token or claim an execution grant that has not been verified.
-- **Cady server:** Domain owners retain their supported background processing, authority and receipts. Dated reminders (renewals, notice deadlines, filings) are due items in company work: record the dated row with its owner; the selected host task reads them through get_company_work. Use the company agent-management method when a host task must be configured. Discover an actual executor before promising execution.
+- **Cady server:** Domain owners retain their supported background processing, authority and receipts. Dated reminders (renewals, notice deadlines, filings) are due items in company work: record the dated row with its owner; the selected host task reads them through work_read. Use the company agent-management method when a host task must be configured. Discover an actual executor before promising execution.
 - **Local host:** The selected ChatGPT, Codex, Claude or equivalent host manages its execution permissions. Verify actual tools, persistence and scheduler before promising unattended work; Cady still enforces company authority. Prefer CLI JSON/file inputs for scripted Cady calls when available, MCP for agent discovery; both use the same owner contracts.
 
 ## References

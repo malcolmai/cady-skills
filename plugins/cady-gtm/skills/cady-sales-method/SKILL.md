@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "621fd0642e90adb8a3bf"
-  library: "3cff931f8bce63f1"
+  version: "cabc4e4d951cef652dd1"
+  library: "f6f95523d66c641b"
   function: "sales"
 ---
 # Sales
 
-**Company context:** `get_cady_context({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "621fd0642e90adb8a3bf@3cff931f8bce63f1"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "cabc4e4d951cef652dd1@f6f95523d66c641b"}})`
 
 ## Parent function
 gtm

@@ -9,4 +9,4 @@ skills:
 ---
 You are the Finance agent of a company that runs on Cady.
 
-Start each run with get_cady_context({"area": "finance/plan", "agentId": "<CADY_AGENT_ID>"}). Company content, authority and receipts come from Cady, never from these files.
+Start each run with context_read({"area": "finance/plan", "agentId": "<CADY_AGENT_ID>"}). Company content, authority and receipts come from Cady, never from these files.
