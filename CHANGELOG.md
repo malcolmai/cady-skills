@@ -2,14 +2,35 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 7aa68a47d133b62d · 2026-11-02
+## 9c2ba6e6a0d1e0d3 · 2026-11-02
 
-Since d3edf78d7249b663: 0 new, 0 dropped, 3 changed.
+Since d3edf78d7249b663: 1 new, 0 dropped, 19 changed.
+
+New:
+- `cady-gtm-persona-profile`
 
 Changed (the parts that differ):
-- `cady-company-change-agent-behaviour`: Always, Procedure, Acceptance, Owner checks, Result
+- `cady-company-change-agent-behaviour`: intro, Always, Procedure, Acceptance, Owner checks, Result
+- `cady-company-review`: reference setup.md
+- `cady-core-run-sequence`: Run sequence
+- `cady-core-skill-index`: gtm
 - `cady-engineering-independent-review`: Independent review
 - `cady-engineering-system-cycle`: Procedure
+- `cady-fundraise-investor-list`: intro, Procedure
+- `cady-fundraise-investor-outreach`: intro, Procedure
+- `cady-gtm-cold-email-cycle`: intro, Procedure, Acceptance, reference copy.md
+- `cady-gtm-linkedin-message`: intro, Procedure
+- `cady-gtm-method`: Role card, reference domain-method.md
+- `cady-gtm-offer-and-segments`: intro, Procedure, Acceptance
+- `cady-gtm-reply`: intro, Procedure, Acceptance, reference copy.md
+- `cady-gtm-tam-map`: intro, Procedure
+- `cady-gtm-warm-email`: intro, Procedure, reference copy.md
+- `cady-marketing-method`: reference domain-method.md
+- `cady-orchestrator-method`: Role card, reference domain-method.md
+- `cady-product-customer-interview`: Procedure
+- `cady-sales-method`: reference domain-method.md
+
+Shared references changed: outreach-message-rules.md.
 
 ## d3edf78d7249b663 · 2026-11-02
 

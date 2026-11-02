@@ -4,7 +4,7 @@
 
 #### Frameworks
 
-- **Avoid when:** Do not replace observed situations with demographics, personas or feature requests.
+- **Avoid when:** Do not replace observed situations with demographics, labels or feature requests.
 - **Decision:** Which customer progress is important enough to build around?
 - **Evidence bar:** Prefer observed behavior, commitment and outcomes over stated preference; keep industry independent unless evidence makes it a real boundary. A specific audience and situation, current approach, desired progress and obstacles are hypotheses until supported by customer evidence.
 
