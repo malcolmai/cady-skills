@@ -1,5 +1,7 @@
 # Agent stop
 
+**Point:** Stop on real risk or an uncertain write, so harm stays on one account until the owner fixes the cause.
+
 ## Recognise
 
 - Stop when continuing could harm a person or the account, or when you cannot tell whether a write happened, for example an identity check, restriction or rate-limit notice; bounces, complaints, a blocklist or provider block in send results; a refusal that names no next call. A hold or refusal that names a next call is not a stop: take that call and carry on.

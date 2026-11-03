@@ -1,5 +1,7 @@
 # Execution agent brief
 
+**Point:** Brief a channel agent by reference, prepare-only at first, so it acts on current decisions and releases nothing unreviewed.
+
 ## Record
 
 - Agent record: agents_set with this channel's own sub-goal as goalId (one agent per goal; it creates the agent when the sub-goal has none). Name '<Channel> (<Company>)'; function 'gtm'; riskClass 'critical'; effects ['send'] (['publish'] for a posting agent); goalId and parentAgentId (the GTM strategy agent). State the split reason in each record: this channel has its own sending account and grant, so an account stop is isolated.

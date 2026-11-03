@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "538e3dddc0cbddcadfe0"
-  library: "2a94b0b4645d6de9"
+  version: "188d0cf0487a7c311c1d"
+  library: "b14f38171b325388"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody owns, proven on a first task; grants only on the person's approval.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "538e3dddc0cbddcadfe0@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "188d0cf0487a7c311c1d@b14f38171b325388"}})`
 
 **Bets** (where this differs from the default):
 - An agent is one recurring responsibility tied to one goal; reuse or update the agent that owns the outcome before creating one. Instead of: Create a new agent for each new need or parallel stream of work.

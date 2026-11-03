@@ -1,5 +1,7 @@
 # New purchase review
 
+**Point:** Buy a tool only when its full commitment beats a cheaper option and doing nothing, so spend earns its outcome.
+
 - **Need:** establish the actual outcome, scale and constraint; ask what current tool, manual workaround or no-buy path can achieve it. Free alone is neither a business case nor permission to create an account. Route provider capability, security, access and credential fit to Integrations or the relevant owner. Reuse a current value review for unchanged need, vendor, terms and usage; a small covered request needs a scope/limit check, not another vendor study.
 - **Compare:** compare the proposed vendor with one credible cheaper effective alternative and doing nothing or deferring. Check benefit and evidence at expected use, failure consequences, switching and maintenance burden, lock-in and exit; prefer the best justified net outcome, not the lowest sticker price.
 - **Commitment:** source the full commitment by currency and period: setup, seats, usage caps and overages, trial conversion, contract minimum, tax or FX where relevant, renewal escalation, cancellation/notice and exit. Distinguish annualized run-rate, full-term obligation and period cash timing.

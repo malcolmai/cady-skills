@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
   version: "c53340cf26894722efd1"
-  library: "2a94b0b4645d6de9"
+  library: "b14f38171b325388"
   function: "company"
 ---
 # Key questions and research
 
 **Point:** Ask only questions whose answers would change a decision, and settle each by the cheapest sufficient evidence.
 
-**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "c53340cf26894722efd1@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "c53340cf26894722efd1@b14f38171b325388"}})`
 
 **Bets** (where this differs from the default):
 - Start from the decision: name the answer that would reverse it and when it is needed, and drop any question no decision depends on. Instead of: Research the topic broadly, then see which decisions the findings inform.

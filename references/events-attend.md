@@ -1,5 +1,7 @@
 # Attending an event
 
+**Point:** Turn an event into a few real conversations, each with a specific hook, so a personal follow-up is welcome.
+
 - **People:** After sourcing, choose 10 to 15 priority people.
 - **Prepare:** prepare a one-line introduction, a few discovery questions by segment and one useful item to offer; ask organisers about speaking, volunteering or a side dinner. Prepare a soft pre-event LinkedIn note only when genuine common ground supports it.
 - **During:** the user attends and has conversations, listening for current work and pain rather than pitching.

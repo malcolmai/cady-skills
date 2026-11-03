@@ -1,5 +1,7 @@
 # Outreach release
 
+**Point:** Release only reviewed, authorized exact copy and check the outcome, so no message leaves without permission or a receipt.
+
 - **Permission:** Read the party with records_read party:<partyId> before drafting, including its fit, engagement and destination. Follow readiness.nextAction and act on each hold or refusal’s next call; never guess around it or clear an opt-out or suppression. An active deferral or an invalid verification blocks approval and release. Unknown verification can be approved but is held at release. For unverified destinations, use the verifier the owner names, or ask the owner which provider to use. Record a contact basis only when a governing decision states it; otherwise report the hold. The holds no_basis, sender_missing and destination_unverified block release, not preparation: prepare the review anyway.
 
 ## Preparation

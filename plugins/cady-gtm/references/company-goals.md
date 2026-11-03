@@ -1,5 +1,7 @@
 # Company goals
 
+**Point:** Keep each priority a measured goal with a timely persist, pivot or stop call, so effort follows evidence, not momentum.
+
 - **Goals:** Keep the company's priorities as open goal work items (work_create with workKind "goal"). Each carries in its brief: why (the driver and its size in one line), target {count, unit, by, definition}, stopIf {below?, by?, text?}, expectedCost (context for judging it, never authority to spend) and alternative (the strongest alternative, including stopping). A goal is reviewed when loop-core's goal call says why (see the goal call reasons), not on a date. Direction keeps the priorities, constraints and bets in the owner's words; each goal is a measurable outcome serving one of them and names it in why. The set of open goals is where effort goes; never name agents, tiers or cadence in a goal, which are the orchestrator's. Starting, reshaping or stopping a goal is L1 (`cady-company-decision-check` steps 3 and 4): record it as an L1 decision with subject goal:<goalId> beside the goal write; in notify mode the owner is told, in approval mode raise that decision as an ask with your recommendation and write the goal once the owner confirms. Persistent permissions are grants, never goal fields.
 - **Goal call:** When a plan runs out, record a reading on the goal, then make the goal call: persist, pivot, parallel or stop.
 - Persist: keep the approach while it still has a credible path and the next attempt adds information.

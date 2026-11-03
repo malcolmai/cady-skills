@@ -1,5 +1,7 @@
 # Hosting an event
 
+**Point:** Host a small event that gives a focused cohort real common ground, so each guest welcomes a personal follow-up.
+
 - **Cohort:** Build a focused cohort of about 20, rank by fit and real common ground, and request introductions with a ready-to-forward blurb where useful (`intro-request.md`).
 - **Partnership:** offer a low-effort partnership—the user handles venue, event page, follow-up and costs; the co-host invites a small group and shares hosting. Expect 20 to 40 personal asks before the first yes. Use the event platform as the RSVP system of record; set a date about six weeks out, meet the co-host every two weeks, invite about ten people to seat six to eight, and plan milestones at six, four and two weeks before, the Friday before, event day and three days after.
 - **Invitations:** route each co-host request to a separate work item bound to the appropriate email or LinkedIn skill. Invitations come from the co-host and are sent by the user; do not imply Cady sends them. Keep the run of show and guest question sheet in Files using files_update or files_create with mode "begin" and files_update or files_create with mode "complete". Prepare them for the co-host on the Friday before and retain the completion receipt in the event work item.

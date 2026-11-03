@@ -1,5 +1,7 @@
 # Taste check
 
+**Point:** Judge work as its reader meets it, with checking tools and a fresh judge, since makers misjudge their own.
+
 - **Check:** You cannot reliably perceive how a person will take your work, and you favour your own style. Route the judgment; rereading your own work is not judging it.
 
 1. Before making it: name the reader, what the work must get them to do, and 2 to 4 yes/no reader tests a stranger could answer (can they tell it is AI? is it theirs? do they get it at a glance?). A number is a test only if it names the reader's failure. If the concept is open, make two or three different candidates.

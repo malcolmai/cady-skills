@@ -1,5 +1,7 @@
 # People lifecycle checklists
 
+**Point:** Take each joiner, role change and leaver through every system and document, so access starts and ends on time.
+
 - **Systems inventory:** Inventory every system: identity provider, email and calendar, chat, code hosting, cloud hosting, domains and DNS, finance, banking and payroll, HRIS, CRM, Cady, password manager, devices, shared and vendor accounts. For each: owner, admins, how access is granted and how removal is read back.
 - **Paperwork categories:** Check every category per jurisdiction and worker type: worker classification under that jurisdiction's test; the engagement document and its required terms; the right-to-work or eligibility check and when it is due; pre-employment checks needing consent (background, references, licences); tax and payroll registration; benefits and pension or retirement enrolment, including any automatic enrolment duty; policies to acknowledge; confidentiality and IP assignment, explicit for a contractor; what a new role, hours, location or entity triggers; for a leaver, final pay timing with accrued leave and expenses, notices, certificates or statements, benefits exit, return of property and record retention.
 - **Joiner steps:** Joiner steps finish before the start: identity account and work email, each system on the role list, device ordered and enrolled, Cady membership only if the role needs it, security setup, paperwork by its deadline.

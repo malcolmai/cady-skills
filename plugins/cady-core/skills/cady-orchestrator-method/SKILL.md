@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "f72277374e96fb221aa2"
-  library: "2a94b0b4645d6de9"
+  version: "e36465514f8a73a46882"
+  library: "b14f38171b325388"
   function: "orchestrator"
 ---
 # Orchestrator
 
 **Point:** Turn open goals into one healthy, goal-bound agent each on this host, and verify every claim against owner state.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "f72277374e96fb221aa2@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "e36465514f8a73a46882@b14f38171b325388"}})`
 
 **Bets** (where this differs from the default):
 - One recurring agent per goal; a new need becomes a task for that agent or a bounded non-recurring helper, never a second agent. Instead of: Spin up a new specialised agent for each new piece of work or parallel stream.
