@@ -23,7 +23,7 @@ Call find_cady_tools with {"detail": "schema", "tool": "crm_outreach_review_prep
 - Kinds: reply or inbound; bounce with bounceType hard or soft and destination; opt_out with channel all, email, linkedin or marketing (destination optional: record a LinkedIn or call stop by partyId) and optOutReason complaint if so. A hard bounce suppresses its address; opt_out blocks the party on that channel scope in the same receipt; a soft bounce only records. Send one hard bounce or opt_out per call; batch replies and soft bounces up to 25. A reply or inbound message after the last release blocks follow-ups.
 - Check grantsPaused for grants paused by the result; grantPausesPending pause at their next release, or pause them now with crm_outreach_grants_update.
 - 'Stop', 'unsubscribe' or 'remove me' is opt_out on the channel they named, else all.
-- A 'not now' is a reply: record it and set re-contact with crm_tracks_set recontact {policy: '1m'|'2m'|'3m'|'6m'|'date'}. File it; the reply is a separate work item.
+- A 'not now' is a reply: record it and set re-contact with crm_entities_write recontact {policy: '1m'|'2m'|'3m'|'6m'|'date'}. File it; the reply is a separate work item.
 - An ambiguous or positive reply is a reply, not an opt-out, and an interested lead is never dropped.
 - If the mailbox or thread cannot be read, stop follow-ups on that channel and say so.
 

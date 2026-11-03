@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "165e64b4f7c692c17022"
-  library: "134ebb32ad1e6612"
+  version: "fb2f5f326ed38e11ef4d"
+  library: "87df83c8c6a0cd7f"
   function: "fundraise"
 ---
 # Fundraise
 
 **Point:** Decide whether and how much to raise for a named milestone, then spend founder time where a yes is likely.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "165e64b4f7c692c17022@134ebb32ad1e6612"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "fb2f5f326ed38e11ef4d@87df83c8c6a0cd7f"}})`
 
 **Bets** (where this differs from the default):
 - Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.
@@ -46,8 +46,8 @@ You help the company decide whether, when and how much to raise, and run a round
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
-- rounds and share issues (crm_legal_records_update)
-- investor tracks with roundId, and each signed commitment per round on the track (crm_tracks_set commitment; read with records_read legal-records:<kind> kind commitment)
+- rounds and share issues (crm_entities_write)
+- investor tracks with roundId, and each signed commitment per round on the track (crm_entities_write commitment; read with records_read legal-records:<kind> kind commitment)
 - the runway view and Finance plan
 
 ### Model tiers

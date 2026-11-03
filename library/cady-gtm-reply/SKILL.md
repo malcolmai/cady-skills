@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "7053d92b233555e3f53f"
-  library: "134ebb32ad1e6612"
+  version: "98fb93a58c9c529f5aa3"
+  library: "87df83c8c6a0cd7f"
   function: "gtm"
 ---
 # Reply in a live thread
 
 **Point:** Learn what they want, judge fit honestly now or later, answer only that, honour stops, let them set the pace.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "7053d92b233555e3f53f@134ebb32ad1e6612"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "98fb93a58c9c529f5aa3@87df83c8c6a0cd7f"}})`
 
 **Bets** (where this differs from the default):
 - A stop gets nothing back, not even a confirmation; one more message after a stop is the costliest failure. Instead of: Confirm the unsubscribe or ask once more whether they are sure.
@@ -55,12 +55,12 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 
 | Class | Next action | Permission effect |
 |---|---|---|
-| Positive or question | Answer exactly what was asked in the first run that finds it. Offer one dated next step only if they asked for or offered one. | Recorded reply makes the party engaged and holds follow-ups; set only a stage the user stated (crm_tracks_set; a party with no track needs crm_tracks_set with the thread's motion). |
+| Positive or question | Answer exactly what was asked in the first run that finds it. Offer one dated next step only if they asked for or offered one. | Recorded reply makes the party engaged and holds follow-ups; set only a stage the user stated (crm_entities_write; a party with no track needs crm_entities_write with the thread's motion). |
 | Ambiguous | Ambiguous and the answer changes what you send: ask the owner; otherwise treat as not now. | Hold until clarified when the answer changes the send. |
 | Objection | Answer with evidence and at most one question; if they say no again, accept it. | None. |
 | Referral | Thank them and ask for an introduction or permission to mention them (`../../references/intro-request.md`, intro). | The referred person is a new party: cold rules apply unless introduced in a thread. |
-| Not now | Defer; acknowledge briefly without a pitch. | crm_tracks_set outcome paused, recontact on their date, else '3m'. |
-| No or not a fit | Optionally thank them once; do not rebut. | crm_tracks_set outcome disqualified with reason, recontact 'unless_changed'. |
+| Not now | Defer; acknowledge briefly without a pitch. | crm_entities_write outcome paused, recontact on their date, else '3m'. |
+| No or not a fit | Optionally thank them once; do not rebut. | crm_entities_write outcome disqualified with reason, recontact 'unless_changed'. |
 | Out of office or auto-reply | Send nothing; note a return date. A named alternative is a referral. | File as kind note, not reply: it is not engagement and does not hold the follow-up. |
 | Wrong person or left the company | Thank them and ask who owns the problem; a departed person's address is dead. | A reply holds follow-ups; file a later bounce as a hard bounce. A named owner is a referral. |
 | Stop, unsubscribe, remove me, complaint | Send nothing, not even a confirmation; tell the owner. | Apply `../../references/outreach-release.md`, Outcome check. |

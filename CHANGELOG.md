@@ -2,9 +2,9 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 134ebb32ad1e6612 · 2026-11-03
+## 87df83c8c6a0cd7f · 2026-11-03
 
-Since 2a94b0b4645d6de9: 0 new, 0 dropped, 34 changed.
+Since 2a94b0b4645d6de9: 0 new, 0 dropped, 38 changed.
 
 Changed (the parts that differ):
 - `cady`: reference agent-stop.md, reference execution-agent-brief.md
@@ -14,8 +14,9 @@ Changed (the parts that differ):
 - `cady-company-manage-agents`: Procedure
 - `cady-company-method`: intro, Role card, reference domain-method.md
 - `cady-company-operations-compliance-register`: Procedure
-- `cady-company-operations-contract-checks`: Procedure
+- `cady-company-operations-contract-checks`: Inputs, Procedure
 - `cady-company-operations-inbox-follow-through`: Procedure, Result
+- `cady-company-operations-method`: Role card, reference domain-method.md
 - `cady-company-operations-people-lifecycle`: Procedure
 - `cady-company-operations-requirement-register`: Procedure
 - `cady-company-review`: reference setup.md
@@ -28,7 +29,8 @@ Changed (the parts that differ):
 - `cady-engineering-debugging`: Procedure
 - `cady-finance-vendor-spend-review`: Procedure
 - `cady-fundraise-investor-list`: Procedure
-- `cady-fundraise-method`: reference domain-method.md
+- `cady-fundraise-investor-outreach`: Procedure
+- `cady-fundraise-method`: Role card, reference domain-method.md
 - `cady-fundraise-raise-materials`: Procedure
 - `cady-fundraise-raise-plan`: Procedure
 - `cady-gtm-calls`: Procedure
@@ -36,6 +38,8 @@ Changed (the parts that differ):
 - `cady-gtm-events`: Procedure
 - `cady-gtm-launch`: Gtm launch
 - `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-pipeline-pass`: Procedure
+- `cady-gtm-reply`: Procedure
 - `cady-gtm-tam-map`: Procedure
 - `cady-orchestrator-method`: Role card
 - `cady-product-manage`: Procedure
