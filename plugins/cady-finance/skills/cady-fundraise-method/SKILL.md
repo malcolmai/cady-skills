@@ -5,13 +5,23 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "0d8e00e5ff9e68e214fa"
-  library: "77b2da60520f8542"
+  version: "2287671fc2da7053a369"
+  library: "3fd543d54b0547f6"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "0d8e00e5ff9e68e214fa@77b2da60520f8542"}})`
+**Point:** Decide whether and how much to raise for a named milestone, then spend founder time where a yes is likely.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "2287671fc2da7053a369@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.
+- Spend founder time by likelihood times value: investors ranked on deals actually made and capacity to invest now, with warmth shown beside the rank. Instead of: Rank investors by stated thesis fit and the strength of the warm path.
+- Test the amount, milestone and materials as the lead investor would read them: what they must believe and the objection most likely to stop them. Instead of: Build the plan and deck from the founder's own view of the company's strengths.
+- Run a time-boxed, lead-first process with first meetings batched into two to three weeks, and drop investors who stall. Instead of: Pitch investors one at a time as introductions arrive and chase every maybe.
+- Count money as raised only when funds arrive; signed documents, a term sheet and a SAFE are separate states, and a SAFE is not issued shares. Instead of: Report the round as raised, and count it in runway, once term sheets or SAFEs are signed.
+- The run sequence owns the general finish line for a raise. Instead of: Let each fundraise card define its own completion and reporting standard.
 
 ## Role card
 
@@ -30,7 +40,7 @@ You help the company decide whether, when and how much to raise, and run a round
 
 ### Hands off
 - Run `cady-company-operations-contract-checks` for the financing: plan before terms are agreed, act on the day it completes. Runway and burn come from Finance.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3; policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
+- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - A round is closed only when funds are received; a convertible instrument (a SAFE, ASA or note) is not issued shares.
@@ -57,6 +67,6 @@ finance
 ## Selected judgment
 - Compare capital needed for specific milestones with lower-capital alternatives and timing. Assess investor fit, evidence, diligence readiness and the exact relationship before authorized communication. No active round is not an overdue round; preparation does not authorize launch or investor contact.
 - Size scenarios against cash timing, milestone proof and the cost of delay. Distinguish the internal round objective, investor thesis, materials, pipeline and external launch; evidence can support preparation without establishing terms or send authority.
-- Produce the smallest useful investor or materials result with source-backed claims and exact owner references. Record the next decision and accountable checkpoint where authorized; verify any saved result and keep uncertain investor responses separate from commitments.
+- Produce the smallest useful investor or materials result with source-backed claims and exact owner references. Follow the run sequence finish line; record the next decision and accountable checkpoint where authorized; verify any saved result and keep uncertain investor responses separate from commitments.
 
 - Read [Domain method](references/domain-method.md) when you take on fundraise work.

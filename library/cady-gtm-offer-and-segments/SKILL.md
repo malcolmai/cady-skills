@@ -1,21 +1,28 @@
 ---
 name: "cady-gtm-offer-and-segments"
-description: "Offer and segments. Use when: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review. Not for: Preparing or releasing a message; use `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`."
+description: "Offer and persona. Use when: Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review. Not for: Preparing or releasing a message; use `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "b20f07390363cd28e454"
-  library: "77b2da60520f8542"
+  version: "3bc1d70c76a157e4e1a6"
+  library: "3fd543d54b0547f6"
   function: "gtm"
 ---
-# Offer and segments
+# Offer and persona
 
 **Point:** Turn the persona profile into the right offer, checking first that we understand the customer well enough.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "b20f07390363cd28e454@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "3bc1d70c76a157e4e1a6@3fd543d54b0547f6"}})`
 
-Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
+**Bets** (where this differs from the default):
+- Write the promise as the customer would say it, against what they do today; keep a sender term only where they use it. Instead of: Write the value proposition in the company's language: category, mechanism, 'AI-powered platform'.
+- Where the product does not yet beat today's alternative, the promise is a test to run, not a claim to make. Instead of: Claim the advantage the roadmap or pitch deck promises.
+- With no proof this reader already respects, claim nothing and show one specific, true observation about their situation. Instead of: Borrow credibility: 'trusted by', rounded numbers, logos or press used without permission.
+- Let a fresh reader given only the customer's quotes pick the promise that sounds like them. Instead of: Pick the promise the writer or founder likes best.
+- If the profile cannot yet support an offer, go back to understanding the customer before positioning. Instead of: Position from the founder's view and fill the gaps with assumptions.
+
+Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review.
 
 **Not for:** Preparing or releasing a message; use `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email`, `cady-gtm-reply` or `cady-gtm-linkedin-message`.
 
@@ -36,17 +43,18 @@ Choose or revise the target segment, offer or message angle from evidence, befor
 
 ## Procedure
 
-1. Read records_read company:direction and relevant accepted work. Keep the hypothesis register (offer, segment, trigger) as hypothesis decisions with subject hypothesis:persona.<persona_key>. Read any existing hypothesis:gtm.<persona_key> (or hypothesis:<persona_key>) for this persona and continue it under its recorded subject; do not register a second one under persona. (`cady-company-decision-questions` step 3; work_read decisions {state: "current", subjectPrefix: "hypothesis:"}; continue, never duplicate) and carry the current ones into the direction revision. Each has a statement, status, evidence for and against with its reliability and how widely it holds, the next cheapest test (`cady-company-experiment`) and the reversal condition.
-2. State the ICP with at least two disqualifiers (who it is not for and why) and its hypothesis status. Define each segment as a persona (crm_fields_set define_persona, key = slug) with a hypothesis. This skill adapts the persona's profile and does no customer research of its own: check the profile supports an offer (an insight that holds widely enough, their words, what they use now and its cost, the unknowns that could change the offer); if it is thin or missing, use `cady-gtm-persona-profile` first. Make a persona narrow enough that one message reads as written to each person in it; split it rather than generalise the copy.
-3. Position from the profile's insight. Write the promise as the customer would say it: what they get, in their words (part 2), against what they do today (part 3), with why it beats that for them; promise only what the product does now, and where it does not yet beat the alternative, the promise is a test, not a claim. For a home-sewing pattern tool, "turn any idea, inspiration or photograph into a pattern, fitted to your body", not "we use AI to help you make dresses". Write two or three distinct promises and compare them with those already prominent in direction, brand packs and work; keep a sender term (the category, the mechanism, "AI", "platform") only where the customer uses it. A fresh reader given only the profile's quotes and the promises picks the one that sounds like the customer. Record the chosen promise and the others on the persona's hypothesis; a brand pack's positioning cites it.
-4. Inventory credibility for the persona (profile part 4: whom they trust): only what is real, current, permitted and checkable by the reader, such as customers or partners they would recognise, awards or press they respect, the founder's relevant record, or a sourced number. What counts is what this reader already respects. Unearned proof (an inflated number, a name or logo used without permission, "trusted by", an implied endorsement) reads as fake and costs more than none. With nothing that fits, claim nothing and show the work instead: one specific, true observation about their situation. How proof enters a message is in the cold email copy rules (`cady-gtm-cold-email-cycle`).
-5. Prepare the recommended direction revision with update_company_direction, including evidence, alternatives and the reversal condition. Read the accepted direction with records_read company:direction before treating it as current. When the chosen audience needs sourcing, carry the GTM plan_into_work identity/List acceptance into `cady-gtm-tam-map` and execute it alongside the open hypothesis test.
+1. Read records_read company:direction and relevant accepted work. Read current hypotheses (work_read decisions {state: "current", subjectPrefix: "hypothesis:"}; cady-company-decision-questions step 3), continue them rather than duplicate, and carry them into the direction revision. Each has a statement, status, evidence for and against handled as in `cady-gtm-persona-profile`, the next cheapest test (`cady-company-experiment`) and the reversal condition. Each kept piece of evidence carries its link or ref (URL, File id or interview note id) next to it.
+2. First check the profile supports an offer; if thin, use cady-gtm-persona-profile first. This skill does no customer research of its own. That check covers an insight that holds widely enough, their words, what they use now and its cost, and the unknowns that could change the offer. State the ICP with at least two disqualifiers (who it is not for and why) and its hypothesis status. Propose each persona with a hypothesis; ask the owner to approve the ICP, promise and disqualifiers before recording them with crm_fields_set define_persona (key = slug). Make a persona narrow enough that one message reads as written to each person in it; split it rather than generalise the copy.
+3. Position from the profile's insight. Write the promise as the customer would say it: what they get, in their words, against what they use now, with why it beats that for them; promise only what the product does now, and where it does not yet beat the alternative, the promise is a test, not a claim. For a home-sewing pattern tool, "turn any idea, inspiration or photograph into a pattern, fitted to your body", not "we use AI to help you make dresses". Write two or three distinct promises and compare them with those already prominent in direction, brand packs and work; keep a sender term (the category, the mechanism, "AI", "platform") only where the customer uses it. A fresh reader given only the profile's quotes and the promises picks the one that sounds like the customer. Propose the promise and alternatives for owner approval; after approval record them on the persona's hypothesis, which a brand pack's positioning cites. Next to each piece of evidence the offer leans on, say where it was read (the File id, the interview or note, or the URL), and how widely it holds in one phrase; a reliability label or a count is not a substitute.
+4. Inventory credibility for the persona (whom they trust): only what is real, current, permitted and checkable by the reader, such as customers or partners they would recognise, awards or press they respect, the founder's relevant record, or a sourced number. What counts is what this reader already respects. Unearned proof (an inflated number, a name or logo used without permission, "trusted by", an implied endorsement) reads as fake and costs more than none. With nothing that fits, claim nothing and show the work instead: one specific, true observation about their situation. How proof enters a message is in the cold email copy rules (`cady-gtm-cold-email-cycle`).
+5. Prepare the recommended direction revision with update_company_direction, including evidence, alternatives and the reversal condition. When the chosen audience needs sourcing, carry the requested size and identity of the List into cady-gtm-tam-map and execute it alongside the open hypothesis test.
 
 ## Acceptance
 
-- [ ] a hypothesis register with status, evidence for and against by reliability and how widely it holds, next cheapest test and kill condition
+- [ ] a hypothesis register with status, evidence handled as in `cady-gtm-persona-profile`, next cheapest test and reversal condition
 - [ ] each persona's profile was checked as good enough to craft the offer, or the work returned to it; the chosen promise is in the customer's words and a credibility inventory is kept; unearned proof is omitted
-- [ ] direction revision is prepared without claiming acceptance
+- [ ] direction revision and persona choice are proposed for owner approval; record the choice only after approval
+- [ ] (check) the promise names what they do today and marks any unproven advantage as a test
 
 ## Owner checks
 

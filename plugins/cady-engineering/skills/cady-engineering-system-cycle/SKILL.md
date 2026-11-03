@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "02a6b090fee4a7cf19d4"
-  library: "77b2da60520f8542"
+  version: "99f28ee729339a4376d4"
+  library: "3fd543d54b0547f6"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "02a6b090fee4a7cf19d4@77b2da60520f8542"}})`
+**Point:** Route each pass to review, build or hunt from current state, so work tracks the goal, not a rotation.
+
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "99f28ee729339a4376d4@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Choose the motion from current state: review when direction is stale, engineer when ready items exist, hunt after a dimension closes. Instead of: Run a fixed rotation of review, build and test phases each cycle.
+- Label each dimension differentiating or not; take the standard approach on the rest and give the differentiators reviewed design and research. Instead of: Give every part of the system the same review and research depth.
+- Group several issues into families by architectural cause and fix each family at the lowest owner that can hold the target. Instead of: Fix each reported issue on its own, in the order filed.
+- A failure signature that persists across three runs or three days becomes an architecture finding, not another rerun. Instead of: Keep rerunning the failing check until it passes.
+- Hunt with an agent that did not build what it hunts. Instead of: Let the building agent test its own work at the end of the pass.
 
 Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
 

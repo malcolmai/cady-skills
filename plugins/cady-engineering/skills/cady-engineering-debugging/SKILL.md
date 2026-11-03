@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
-  version: "c8d33f53c18e52efc232"
-  library: "77b2da60520f8542"
+  version: "16bf76ff5a93207332d7"
+  library: "3fd543d54b0547f6"
   function: "engineering"
 ---
 # Debugging and incident response
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "c8d33f53c18e52efc232@77b2da60520f8542"}})`
+**Point:** Find the real cause from evidence and fix it at its owner, so the bug and its siblings stay fixed.
+
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "16bf76ff5a93207332d7@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Read the full error, the first failure in the log and what changed since it last worked before forming any theory. Instead of: Form a hypothesis from the symptom and start editing code.
+- Confirm the code you think is running is running: build, branch, environment, cache and migrations. Instead of: Assume the running build matches the source being read.
+- After three failed hypotheses, stop and re-read the error and your assumptions instead of trying a fourth variation. Instead of: Keep trying variations until something passes.
+- Never reach green with a sleep, a longer timeout, a blanket retry, a swallowed error or a loosened test. Instead of: Add a retry or a timeout so the failing check passes, and move on.
+- In an incident, mitigate first, usually by rolling back the correlated change, and find the root cause after users are protected. Instead of: Debug forward in production while users stay affected.
 
 Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 

@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "fbae7299ab6c455918bb"
-  library: "77b2da60520f8542"
+  version: "02b3c7260994c3e20770"
+  library: "3fd543d54b0547f6"
   function: "customer_success"
 ---
 # Customer Success
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "fbae7299ab6c455918bb@77b2da60520f8542"}})`
+**Point:** Make sure each customer reaches the outcome they bought, because delivered value, not activity, is what keeps them.
+
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "02b3c7260994c3e20770@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Judge outcome, adoption, relationship and commercial health separately, each from its own evidence. Instead of: Blend usage, satisfaction and payment into one health score with thresholds.
+- Check the customer actually got the promised outcome; usage, satisfaction, payment and renewal are proxies. Instead of: Read high usage or a renewal as proof of value.
+- A support note or CRM reply is not a fix; close a gap only when the owner's effect is verified. Instead of: Mark an issue handled once the customer has been answered.
+- Route a recurring or consequential failure to the owner who can change its cause: promise, product, delivery or terms. Instead of: Absorb failures account by account with goodwill gestures and check-ins.
 
 ## Parent function
 gtm

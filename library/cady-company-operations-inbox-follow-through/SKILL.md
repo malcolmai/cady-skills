@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "9d85df71e7f1e68769de"
-  library: "77b2da60520f8542"
+  version: "1a685f8f00daf6162323"
+  library: "3fd543d54b0547f6"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
-**Company context:** `context_read({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "9d85df71e7f1e68769de@77b2da60520f8542"}})`
+**Point:** Pull real obligations and commitments out of the inbox and track them through, without reading every message individually.
+
+**Company context:** `context_read({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "1a685f8f00daf6162323@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Group bulk mail by sender and template, sample a few, and scan the rest for consequential outliers (an invoice, contract, deadline or security action). Instead of: Read and summarise every message, or filter by sender alone.
+- Triage each message on separate fields (type, action, owner, deadline, importance), never one priority score. Instead of: Rank messages by a single urgency score.
+- Audit a random 2% of suppressed mail and demote any group that hid a needed action. Instead of: Trust a suppression rule once it is set.
+- Reconcile awaiting commitments with a next actor and chase date even when no new mail arrives. Instead of: Track only threads with new activity.
 
 Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 

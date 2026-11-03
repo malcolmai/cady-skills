@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "a04af92bd4c79384228f"
-  library: "77b2da60520f8542"
+  version: "5df152146c1250bb4a11"
+  library: "3fd543d54b0547f6"
   function: "gtm"
 ---
 # Cold email cycle
 
 **Point:** Earn replies from strangers with one honest, segment-true reason, without harming sender reputation.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "a04af92bd4c79384228f@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "5df152146c1250bb4a11@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Open with the recipient's situation in their words; never a self-introduction, praise or an invented reaction. Instead of: Open with 'I'm X from Y' or a compliment on their recent post.
+- An inferred or unknown line becomes the message's question, never a claim about the recipient. Instead of: State the guessed pain as fact ('you're struggling with X').
+- Size the ask to the evidence: with only title and company size, ask for a one-word reply or offer a link, not a call. Instead of: Ask every cold prospect for a 15-minute call.
+- Protect the sending domain before volume: verify addresses, keep catch-all small, never buy a list. Instead of: Send to a bought or scraped list and clean up bounces afterwards.
 
 Write and send cold email to people not yet contacted, using one template per segment.
 

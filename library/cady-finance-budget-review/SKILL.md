@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "15d889100735634917cd"
-  library: "77b2da60520f8542"
+  version: "217fc7b0bbcb01f66203"
+  library: "3fd543d54b0547f6"
   function: "finance"
 ---
 # Budget and cost review
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "15d889100735634917cd@77b2da60520f8542"}})`
+**Point:** Allocate money to the few drivers that change a decision, from dated actuals, so spend follows what works.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "217fc7b0bbcb01f66203@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Budget the few drivers that move cash (payroll, usage-based services, paid acquisition) at a depth set by stage and the decision at hand. Instead of: Build a full line-item budget by department and month.
+- Rest the return on any allocation only on existing or secured revenue; forecasts stay scenarios, and a cost without one is the owner's call with no return claim. Instead of: Justify an allocation with a forecast ROI.
+- Raise in the monthly review only what can change a decision: the largest movers, renewals inside their notice window, metered lines against ceiling, overdue receivables. Instead of: Walk every line of budget against actual each month.
+- Report a source with no records as unknown coverage. Instead of: Treat a category with no transactions found as zero spend or available balance.
 
 Draft or update a budget or spend allocation, or review last month's spend against it.
 

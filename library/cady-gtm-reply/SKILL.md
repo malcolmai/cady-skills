@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "95196a2daf22dddad2b3"
-  library: "77b2da60520f8542"
+  version: "f81545eddeec51989d43"
+  library: "3fd543d54b0547f6"
   function: "gtm"
 ---
 # Reply in a live thread
 
 **Point:** Learn what they want, judge fit honestly now or later, answer only that, honour stops, let them set the pace.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "95196a2daf22dddad2b3@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "f81545eddeec51989d43@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- A stop gets nothing back, not even a confirmation; one more message after a stop is the costliest failure. Instead of: Confirm the unsubscribe or ask once more whether they are sure.
+- Judge fit both ways; if we do not fit, say so and name what would change it. Instead of: Treat every reply as a lead to convert and keep pitching.
+- Answer exactly what they asked, shorter than their message, with at most one question. Instead of: Use the reply to re-pitch the full offer and push for a call.
+- After you reply, the next move is theirs. Instead of: Follow up a live conversation on the cold cadence to keep momentum.
 
 Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.
 

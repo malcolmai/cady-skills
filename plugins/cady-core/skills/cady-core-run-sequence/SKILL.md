@@ -5,17 +5,28 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "3d00cd808df9fb4031e9"
-  library: "77b2da60520f8542"
+  version: "07f4ef4a866573fbd110"
+  library: "3fd543d54b0547f6"
   function: "core"
 ---
 # Agent run sequence
 
 **Point:** One order for every session, so no run acts on stale state, doubles an effect or ends unrecorded.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "3d00cd808df9fb4031e9@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "07f4ef4a866573fbd110@3fd543d54b0547f6"}})`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
+
+## Bets
+
+- Read current company state and settle unresolved effects before starting anything new. Instead of: Act from the prompt, memory or a previous run's summary, starting with the newest or most interesting task.
+- Surface any founder outcome no live work covers before routine work. Instead of: Work the existing queue in order, trusting it reflects what the founder wants.
+- One holder claims, scopes and finishes each item; a claim expires so a dead session cannot block it. Instead of: Let any session that sees an item work on it.
+- Ask little, ask once, and keep working on everything the ask does not block. Instead of: Stop and wait for the owner whenever unsure.
+- Trust a reported result and correct it afterwards, except work a user meets, which completes only once walked. Instead of: Hold every result for owner acceptance before it counts.
+- End research or drafting with a recommended company move, and close through the report call, not chat. Instead of: End with findings for the owner to interpret, summarised in the final reply.
+- Treat a failure of the run's own environment (dead links, stale dependencies, memory or slot pressure, missing test data) as a defect: fix its cause once, sweep for the same fault, continue. Instead of: Retry, work around it for this run only, or call it unrelated to the task and stop.
+- External effects use the one approval rule and the one message-sending rule in execution authority; channel skills keep only their route mechanics. Instead of: Let each channel restate approval and sending, or let a local route diverge from the approved review.
 
 ## Run sequence
 

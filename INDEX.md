@@ -1,6 +1,6 @@
 # Cady skill library
 
-65 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+66 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
 
@@ -33,12 +33,13 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation. (`library/cady-customer-success-lifecycle/SKILL.md`)
 - `cady-customer-success-method`: Customer Success role card: what this function owns and decides (`library/cady-customer-success-method/SKILL.md`)
 - `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step. (`library/cady-gtm-calls/SKILL.md`)
+- `cady-gtm-channel-plan`: Turn accepted persona, offer and chosen channels into channel plays and execution briefs. (`library/cady-gtm-channel-plan/SKILL.md`)
 - `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, using one template per segment. (`library/cady-gtm-cold-email-cycle/SKILL.md`)
 - `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations. (`library/cady-gtm-events/SKILL.md`)
 - `cady-gtm-launch`: the company is starting a growth motion. (`library/cady-gtm-launch/SKILL.md`)
 - `cady-gtm-linkedin-message`: Draft a first social DM, LinkedIn connection note or one no-reply follow-up. (`library/cady-gtm-linkedin-message/SKILL.md`)
 - `cady-gtm-method`: GTM role card: what this function owns and decides (`library/cady-gtm-method/SKILL.md`)
-- `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review. (`library/cady-gtm-offer-and-segments/SKILL.md`)
+- `cady-gtm-offer-and-segments`: Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review. (`library/cady-gtm-offer-and-segments/SKILL.md`)
 - `cady-gtm-persona-profile`: Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy. (`library/cady-gtm-persona-profile/SKILL.md`)
 - `cady-gtm-pipeline-pass`: Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps. (`library/cady-gtm-pipeline-pass/SKILL.md`)
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop. (`library/cady-gtm-reply/SKILL.md`)

@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "9005b0bf985bf9127406"
-  library: "77b2da60520f8542"
+  version: "5d841aa024c78f1b03b6"
+  library: "3fd543d54b0547f6"
   function: "product"
 ---
 # Product management and discovery
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "9005b0bf985bf9127406@77b2da60520f8542"}})`
+**Point:** Decide what to build from evidence and run each goal to a live, measured result, because plans are not outcomes.
+
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "5d841aa024c78f1b03b6@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Start with one offering, one assumed ICP and problem hypothesis with its disproof, and one first-value goal; defer everything else. Instead of: Build the full product model first: personas, roadmap, dimensions, research and stories.
+- Rank with the lightest frame that separates the options, labelling each estimate measured, evidence-based or guess. Instead of: Score every item with RICE or a weighted matrix.
+- Decide product calls yourself and record them; ask the owner only a call still controversial after testing, or a fact only they hold. Instead of: Ask the founder to approve each product choice before building.
+- When no ready item remains, review the system against the goal; only a review with no material finding ends the roadmap. Instead of: Report done when the backlog is empty.
+- End a goal only with a reading from its own source and the release live; delivered work with the target unmet keeps the goal open. Instead of: Close the goal when its items ship or the release goes out.
 
 Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done.
 

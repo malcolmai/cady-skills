@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
-  version: "956df2768e741776f8c2"
-  library: "77b2da60520f8542"
+  version: "7149e1d2e53805197305"
+  library: "3fd543d54b0547f6"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "956df2768e741776f8c2@77b2da60520f8542"}})`
+**Point:** Know every filing the company owes and start each early enough, so no deadline becomes a penalty or lost standing.
+
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "7149e1d2e53805197305@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Re-scan when an event changes the facts (a financing, new officers, a hire, a new state, a threshold crossed), not only on the calendar. Instead of: Keep last year's list of filings and check it once a year.
+- Check every category for each entity and jurisdiction, and record each one that does not apply with its reason. Instead of: List the filings the founder already knows about, or the ones a quick search surfaces.
+- Date the work at the preparation start, worked back from the deadline with buffer for its dependencies. Instead of: Track the legal due date as the deadline.
+- Record what each filing means commercially: cost, how the late penalty escalates and what it knocks on (good standing, an exemption, the next filing). Instead of: Record only what is due and when.
 
 What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).
 

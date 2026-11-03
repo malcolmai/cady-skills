@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
-  version: "b26e00096df3ffc9e746"
-  library: "77b2da60520f8542"
+  version: "a80c29d21d92d6ace30f"
+  library: "3fd543d54b0547f6"
   function: "company"
 ---
 # Pre-registered experiment
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "b26e00096df3ffc9e746@77b2da60520f8542"}})`
+**Point:** Test the riskiest assumption against pass and fail lines set beforehand, so the result changes a decision, not a story.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "a80c29d21d92d6ace30f@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Test first the assumption that would most change the plan if wrong and that you are least sure of. Instead of: Test what is easiest to measure, or what the team is already building.
+- Fix the metric, the pass and fail lines and the decision each triggers before any work starts. Instead of: Run the test, look at the data, then interpret what it means.
+- Measure what people do (sign up, pay, return, reply), not what they say. Instead of: Count interview enthusiasm, survey intent or likes as demand.
+- A result between the lines on too small a sample is inconclusive, not a fail; settle it with a pre-registered larger rerun. Instead of: Call it a fail and move on, or re-cut the data until it passes.
+- For demand, run conversations, then a manual or concierge test, then a build; a measured build is the smallest test only for a feasibility crux. Instead of: Build an MVP to find out whether people want it.
 
 Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 

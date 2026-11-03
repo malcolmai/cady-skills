@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "d6402ca7e175c9e22269"
-  library: "77b2da60520f8542"
+  version: "ab9ddc109d11b7883a1d"
+  library: "3fd543d54b0547f6"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "d6402ca7e175c9e22269@77b2da60520f8542"}})`
+**Point:** Create and test demand with truthful promises, judged on qualified response, after diagnosing where the funnel actually breaks.
+
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "ab9ddc109d11b7883a1d@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Diagnose first: no response, response without conversion, and conversion with churn each need different work. Instead of: Answer weak results by producing more content or posting on more channels.
+- Plan 2-4 pillars, each one specific idea tied to a buying moment, with its mechanism and what would surprise the buyer. Instead of: Plan by generic topics and formats (tips, case studies, behind the scenes) on a posting calendar.
+- Prove a claim with a worked example from real customer or product evidence; without proof, narrow the promise. Instead of: State the benefit ('AI saves time') and let production quality carry it.
+- Judge each channel on qualified response and business outcome, kept apart from exposure. Instead of: Judge content by views, likes and follower growth.
+- Before product-market fit, treat paid spend as a capped demand test with its stop rule written before the first spend. Instead of: Buy reach to grow once something shows some traction.
 
 ## Role card
 
@@ -30,7 +39,7 @@ You create and test demand for the current bets: content, search, events and pai
 
 ### Hands off
 - Messages to named people go to Sales through `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email` and `cady-gtm-linkedin-message`; budgets go to Finance.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3; policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
+- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - Published or spent only with the channel's receipt; keep exposure, response and business outcome separate.
@@ -48,14 +57,14 @@ You create and test demand for the current bets: content, search, events and pai
 ### Skills
 - `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
+- `cady-gtm-offer-and-segments`: Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations.
 
 ## Parent function
 gtm
 
 ## Selected judgment
-- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation. Unknown contact basis holds release, not eligible identity persistence or held review preparation.
+- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation.
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
 - When choosing a channel rather than executing an accepted one, read `../../references/gtm-channels.md` after registered discovery.
 

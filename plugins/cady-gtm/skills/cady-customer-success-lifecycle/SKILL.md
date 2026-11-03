@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
-  version: "3bd9c4b296c52c071144"
-  library: "77b2da60520f8542"
+  version: "27a4c5bab4abfb2f3a45"
+  library: "3fd543d54b0547f6"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "3bd9c4b296c52c071144@77b2da60520f8542"}})`
+**Point:** Get each customer to the first result they bought by a date, then keep, grow or end the account honestly.
+
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "27a4c5bab4abfb2f3a45@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- At kickoff agree first value in the customer's words with a date; past it without the result, the account is at risk. Instead of: Measure onboarding by account setup, logins and a warm kickoff.
+- Within a week of a risk signal, ask the customer one specific question about it. Instead of: Send a 'just checking in' note or wait for the next scheduled review.
+- Fix delivery or change the arrangement; a discount does not fix a value problem. Instead of: Offer a discount or credit to keep an unhappy customer.
+- On cancellation make one save attempt only when a real remedy fits their reason, then honour it by their date. Instead of: Run a retention flow with repeated offers, calls and extra steps.
 
 Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 

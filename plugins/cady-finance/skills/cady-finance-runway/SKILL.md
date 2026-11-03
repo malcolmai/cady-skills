@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.runway"
-  version: "2d2f1f0b3c9434e39dfb"
-  library: "77b2da60520f8542"
+  version: "538c5dba153f59b203b1"
+  library: "3fd543d54b0547f6"
   function: "finance"
 ---
 # Burn and runway
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.runway": "2d2f1f0b3c9434e39dfb@77b2da60520f8542"}})`
+**Point:** Show when cash runs out and whether growth gets there first, so cuts or a raise start in time.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.runway": "538c5dba153f59b203b1@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Measure burn from bank cash out and net it of cash collected, excluding unfunded SAFEs, undrawn credit and tax collected but owed. Instead of: Compute burn from the P&L as expenses minus booked revenue, and count signed or available money as cash.
+- Report runway to a floor of about three months of gross burn, plus the date the raise must start (floor minus 9 to 12 months). Instead of: Report months to zero as cash divided by burn.
+- When burn is changing, build a month-by-month cash table for 18 to 24 months with hires, annual bills, payroll runs and tax payments in the months they are paid. Instead of: Divide cash by an average monthly burn.
+- Answer default alive or dead: hold expenses, grow collections at the trailing rate, state the growth rate needed and the concentration and recurrence behind it. Instead of: Report runway months alone, or grow revenue at the plan's assumed rate.
+- Cut once, deep enough to reach default alive or 18 months: tools, agencies and unmeasured spend first, hires and founder pay next, headcount last, protecting what brings in cash. Instead of: Make a series of small cuts as runway shrinks.
 
 Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
 

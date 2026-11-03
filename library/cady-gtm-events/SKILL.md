@@ -5,15 +5,20 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "5ebba7091fe6ec6e0e15"
-  library: "77b2da60520f8542"
+  version: "b4453a784a2227fe7ad3"
+  library: "3fd543d54b0547f6"
   function: "gtm"
 ---
 # Events: attend or host
 
 **Point:** Turn one chosen event into real conversations and personal follow-ups, never a bulk list.
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "5ebba7091fe6ec6e0e15@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "b4453a784a2227fe7ad3@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- An attendee directory is a source, not a relationship: listed people stay cold and the list is never bulk-messaged. Instead of: Import the attendee list as warm leads and message them all after the event.
+- Follow up each person actually met with one specific hook from the conversation. Instead of: Send one 'great to meet you' template to everyone met.
+- Judge an event by real conversations against its target, then record a keep-or-drop decision. Instead of: Judge an event by badge scans, leads collected or attendance.
 
 Prepare for or host the event named in the brief to advance the company through real conversations.
 

@@ -5,13 +5,20 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
-  version: "7967037f541494ab8e44"
-  library: "77b2da60520f8542"
+  version: "7e9d13e68d107b3764c6"
+  library: "3fd543d54b0547f6"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "7967037f541494ab8e44@77b2da60520f8542"}})`
+**Point:** Before signing, surface the few terms dear to change later; after, start every clock the contract triggers.
+
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "7e9d13e68d107b3764c6@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Before signing, keep only the points that get harder or dearer to change afterwards, usually one to five, each with a default and the credible alternative. Instead of: Review every clause and report all the issues found.
+- Compute every deadline from the actual completion date as the authority states it; ask for the date first if it is unknown. Instead of: Use the typical timeline or the example date in guidance.
+- Record the points ruled out in one line, and report only the applicable ones to the owner. Instead of: Show the owner the full checklist so they can see the diligence done.
 
 A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts.
 

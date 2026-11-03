@@ -2,6 +2,12 @@
 
 Create, edit or review public written content.
 
+## Bets
+
+- Fix a weak argument or missing proof before editing sentences. Instead of: Polish the wording, rhythm and tone of the draft as given.
+- For a bounded edit, change only the requested part and keep accepted structure and copy that works. Instead of: Rewrite the whole piece in the writer's own style.
+- In a review, recommend only changes that would alter the reader's response; unchanged can be the right verdict. Instead of: Return a long list of suggestions to show thoroughness.
+
 ## Content production
 
 - **Create:** Use the accepted purpose and available evidence to produce the requested artifact. Resolve only missing decisions that materially change it; choose and finish within delegated scope.
@@ -11,3 +17,4 @@ Create, edit or review public written content.
 - **Scope:** Company-neutral craft for written text: posts, articles, copy, scripts and captions. This is a text subset, not a full media method. Use the selected host and existing owners for media production, strategy and publication.
 - **Tool delivery:** Honor chosen tools and reuse sufficient host guidance; choose additional tooling for a material fidelity, control or delivery need. Give each operation relevant sources, reference roles, intended result and preservation constraints. Keep useful editable masters and exact delivery versions. Verify changed content and affected dependencies in the receiving format; an export is not an update to its external source. State unresolved limits accurately; production does not establish publication, acceptance or audience impact.
 - **Writing:** Make the subject and reason to care clear without assuming the reader knows the request. Deliver the opening's promise; organize around consequential reader questions. Use audience language supported by evidence. Distinguish attributed remarks, recurring findings and hypotheses; frequency alone does not establish the strongest message. For persuasion, connect desired change, advantage and proof; address relevant hesitation without invented urgency. Advice needs an executable method, example or decision criterion. Change weak arguments before polishing. Remove repetition and adjacent material that dilutes the purpose; preserve necessary qualifications. Reuse current writing references or company context's canonical-source reads. Apply user/company rules to body, titles, captions and notes. Use concrete actors, actions and consequences. Cut hype, filler and forced patterns while retaining useful comparisons, natural lists and personality. Check meaning, rhythm and voice in placement; preserve copy that works.
+- **Point:** Make written text land for a reader who never saw the request, by fixing arguments before polishing words.

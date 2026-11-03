@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "b9d47ee33e6d47c11ed4"
-  library: "77b2da60520f8542"
+  version: "d9e5d686dc731e020323"
+  library: "3fd543d54b0547f6"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "b9d47ee33e6d47c11ed4@77b2da60520f8542"}})`
+**Point:** Decide each purchase or renewal on full commitment against no-buy and cheaper workarounds, so money goes where use proves value.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "d9e5d686dc731e020323@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Compare every purchase against no-buy, the existing tool and a cheaper workaround, listing the free or zero-incremental option first. Instead of: Compare paid vendors with each other and pick the best value among them.
+- Price the full-term commitment and when the cash leaves (setup, minimums, overages, prepay, escalation, notice) beside the annualized run-rate. Instead of: Compare headline monthly prices.
+- Decide a renewal on actual use (active seats, usage against tier) inside its notice window. Instead of: Renew by default while the tool is still in use somewhere.
+- Reuse a current value review when need, vendor, terms and usage are unchanged; a small covered request gets a scope and limit check. Instead of: Run a fresh vendor study for every request.
 
 Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actual use, alternatives and commitment.
 

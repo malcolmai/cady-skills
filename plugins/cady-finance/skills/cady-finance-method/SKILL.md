@@ -5,13 +5,24 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "ed0166e1466d6ef7ff0f"
-  library: "77b2da60520f8542"
+  version: "25bf9050658280c017cb"
+  library: "3fd543d54b0547f6"
   function: "finance"
 ---
 # Finance
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "ed0166e1466d6ef7ff0f@77b2da60520f8542"}})`
+**Point:** Judge each spend, cut and raise as return against cost from real cash, so the plan fits the company's runway.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "25bf9050658280c017cb@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Diagnose the stage first and size Finance work to it: runway and commitments pre-revenue, collections and margin at first revenue, budget against actuals once growing. Instead of: Install a standard finance stack for every company: annual budget, monthly variance pack, three-statement model and separate specialist agents.
+- Rest a paid option's return only on existing or secured revenue; with none, recommend the adequate free option or leave the cost as the owner's call with no return claim. Instead of: Justify spend with a projected ROI built from forecast revenue, conversion or growth assumptions.
+- Before revenue, fund spend as a small staged test with a stop signal set in advance, and release the next tranche only on measured signal. Instead of: Allocate the whole budget up front across channels or tools according to the plan.
+- Keep actual, committed, reserved and forecast money as separate figures, and treat a source with no records as unknown coverage. Instead of: Net everything into one available-budget figure, counting a category with no records found as zero spend.
+- Give each metered line (cloud, AI APIs, ads) a monthly ceiling that triggers a review, with the provider-side alert owned by whoever runs the account. Instead of: Either set a hard cap that stops the service, or set no ceiling and find the overrun when the bill arrives.
+- Treat a plan allocation or recommendation as decision context only; every paid commitment waits for a person's approval of that exact spend. Instead of: Treat an approved budget line as standing permission to buy within it.
+- The run sequence owns the general finish line for financial work. Instead of: Let each finance card define its own completion and reporting standard.
 
 ## Role card
 
@@ -24,7 +35,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 - Compare new purchases and renewals for full-term benefit, total commitment, cash timing, credible cheaper effective alternatives and exit. Use `cady-finance-vendor-spend-review` for the detailed decision.
 
 ### Decides
-- Recommend the next financial choice within current company priorities; record assumptions, option rejected and revisit trigger.
+- Recommend the next financial choice within current company priorities; follow the run sequence finish line and record financial assumptions, option rejected and revisit trigger.
 - Set a monthly ceiling for each metered line as a review trigger, not a hold; Engineering or the account owner sets the provider-side alert. Give Marketing the gross margin that paid acquisition is judged against.
 - Use Accounting period close, forecasting and Tax expertise only when actual complexity, distinct recurring work or qualified sign-off calls for it; a small company does not need three permanent specialists.
 

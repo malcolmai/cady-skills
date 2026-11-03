@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
-  version: "1dd9a4fb1a1178cb6fd0"
-  library: "77b2da60520f8542"
+  version: "c53340cf26894722efd1"
+  library: "3fd543d54b0547f6"
   function: "company"
 ---
 # Key questions and research
 
-**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "1dd9a4fb1a1178cb6fd0@77b2da60520f8542"}})`
+**Point:** Ask only questions whose answers would change a decision, and settle each by the cheapest sufficient evidence.
+
+**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_questions": "c53340cf26894722efd1@3fd543d54b0547f6"}})`
+
+**Bets** (where this differs from the default):
+- Start from the decision: name the answer that would reverse it and when it is needed, and drop any question no decision depends on. Instead of: Research the topic broadly, then see which decisions the findings inform.
+- Take the cheapest route that could settle it: evidence the company holds, then a feed from work already happening, then desk research, then primary research. Instead of: Commission new research (a survey, interviews, a broad search) first, since fresh data feels more rigorous.
+- Fit the method to the question: interviews about past behaviour for why, a pre-registered behavioural test for whether they will act, a sample for how many. Instead of: Ask customers what they want or whether they would buy.
+- Answer with observed, reported and inferred evidence separated, a confidence, the strongest counter-evidence and what would change it; a partial answer stays open. Instead of: Present the findings as a conclusion.
 
 A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
 

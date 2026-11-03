@@ -16,7 +16,7 @@
 - Before adding a tool, parameter or namespace, check the current capability registry by noun and verb and name the overlap or reuse in the PR.
 - Before starting a lane, search open Cady work and open PRs (`gh pr list` plus file overlap) for the same thing; extend or coordinate rather than duplicate.
 - Raise a decision you need as a Cady ask and keep working on what doesn't depend on it; never block waiting in chat.
-- **Completion rule:** Return the delivered slice, source-owned artifacts, evidence against requirements and intended use, unresolved constraints and next owner action. Preserve selected methods and durable lessons in the company's canonical Product sources; code, CAD, recipes, curricula, manufacturing and operational systems retain execution truth.
+- **Completion rule:** Follow the run sequence finish line; return the delivered slice, source-owned artifacts, evidence against requirements and intended use, unresolved constraints and next owner action. Preserve selected methods and durable lessons in the company's canonical Product sources; code, CAD, recipes, curricula, manufacturing and operational systems retain execution truth.
 
 ### Iteration
 
