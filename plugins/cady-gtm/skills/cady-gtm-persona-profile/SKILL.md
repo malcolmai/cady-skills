@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.persona_profile"
   version: "d288ad85bb501dc84eb6"
-  library: "96968454e6943efc"
+  library: "bcd045b5f605c411"
   function: "gtm"
 ---
 # Persona profile
 
 **Point:** Understand one persona from what they actually do and where they are heading, so positioning, sourcing and copy start there.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.persona_profile": "d288ad85bb501dc84eb6@96968454e6943efc"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.persona_profile": "d288ad85bb501dc84eb6@bcd045b5f605c411"}})`
 
 **Bets** (where this differs from the default):
 - Keep the few pieces of evidence that drove the decision, linked to where each was read. Instead of: Summarise sources into labelled claims and counts ('7 of 10 say X') with no link back to where each was read.
