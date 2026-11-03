@@ -5,15 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "fa867e01b4d6e13d8ae3"
-  library: "77b2da60520f8542"
+  version: "10f76913ebcfd08624bf"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Who decides: the decision journey
 
 **Point:** Settle whether a choice or effect is decided, whose it is, and record it once.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "fa867e01b4d6e13d8ae3@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "10f76913ebcfd08624bf@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Decide or ask by risk (what breaks, for whom, how reversibly) and independent review, not by the decision's layer. Instead of: Ask the owner about every decision labelled company-level and decide everything below that alone.
+- Spend the owner's time only on top-level judgement they have not stated and on authority only they hold. Instead of: Check with the owner whenever a choice feels important, to be safe.
+- Write the chain from the goal down to the choice, with impact, the strongest alternative and why it loses, and dated premises. Instead of: Decide from judgement and report the choice, leaving the reasoning in the conversation.
+- Record an outcome the person states in chat as company state, in their own words, before any work item exists. Instead of: Wait for a work item, then summarise what the person said into its brief.
+- Override or withdraw any decision, the owner's included, when the reason is quoted from a goal, a dimension or the user on current context. Instead of: Leave a decision someone else made, especially the owner's, in place and ask before changing it.
 
 Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 

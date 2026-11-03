@@ -5,15 +5,20 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.marketing.post"
-  version: "d22d646cad253562516a"
-  library: "77b2da60520f8542"
+  version: "1fa2b0ea39762212ad18"
+  library: "ac5b4239e832e8db"
   function: "marketing"
 ---
 # Post one piece
 
 **Point:** Publish one useful, true piece for the brief's audience, judged in placement, only after approval.
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.marketing.post": "d22d646cad253562516a@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.marketing.post": "1fa2b0ea39762212ad18@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Have a fresh judge read the post in its intended placement before approval. Instead of: Self-review the draft in the editor.
+- Judge a post by qualified response and business outcome, kept apart from exposure. Instead of: Judge a post by likes, views and follower growth.
+- Shortlist hooks and headlines and let the owner pick. Instead of: Ship the writer's favourite hook.
 
 Create or edit one post for the audience, topic and placement chosen in the brief.
 

@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "ac365d499543c0183063"
-  library: "77b2da60520f8542"
+  version: "b9611f539bd437b2df02"
+  library: "ac5b4239e832e8db"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "ac365d499543c0183063@77b2da60520f8542"}})`
+**Point:** Move one deal on buyer evidence and dated mutual steps, so real deals close and non-fits end fast.
+
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.sales.deal_motion": "b9611f539bd437b2df02@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Use discovery to learn whether a problem worth solving now exists; the buyer talks most and either side may conclude no fit. Instead of: Use the first call to demo the product and pitch its features.
+- A fast no is a good result: close or pause a deal with no problem, owner or timing. Instead of: Keep a stalled deal open and nurture it in case it revives.
+- Send terms only after the buyer agrees the problem and asks for them, and walk through them live. Instead of: Email a proposal after a good first call to keep momentum.
+- Work back from the buyer's needed date with steps each side owns; ask about a missed buyer date once, directly. Instead of: Chase with repeated follow-ups and create urgency with deadlines or discounts.
 
 Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 

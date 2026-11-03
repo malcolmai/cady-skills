@@ -5,15 +5,24 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.company_review"
-  version: "93f1b6f623fb6ffc5ba8"
-  library: "77b2da60520f8542"
+  version: "bdc283c4160ff222161d"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Company strategy and operating review
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.company_review": "93f1b6f623fb6ffc5ba8@77b2da60520f8542"}})`
+**Point:** Find which intended outcomes are supported, slipping or unknown, then advance the most consequential work, not every function.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.company_review": "bdc283c4160ff222161d@ac5b4239e832e8db"}})`
 
 Review company direction, goals and progress, including onboarding a new company: its first offering and route to customers. Use when: a company needs an evidence-based operating review or onboarding. Not for: one executive decision (use `cady-company-executive-review`).
+
+## Bets
+
+- Choose work by consequence, the one or two problems that decide whether the company wins, and advance independent authorised work alongside. Instead of: Work a prioritised queue top to bottom, or review and initialise every function equally.
+- Judge by achieved results against intended conditions and dates, not task counts, status or files created. Instead of: Report activity: open tasks, active agents and assets produced.
+- At onboarding, save the owner's stated company and focus as direction early, in their words, adding nothing. Instead of: Research the company first, then write a fuller direction from what was found.
+- End each review with what the next runs change (takeaways, efficiency, reliability) and a check of the review itself: did it return to the point and go deep where it decides? Instead of: Score the outcomes and list findings, leaving how runs work and how they are judged unchanged.
 
 ## Company review
 

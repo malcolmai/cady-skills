@@ -5,15 +5,20 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
-  version: "8879ea882b2c38adf8d0"
-  library: "77b2da60520f8542"
+  version: "9bed55db1218c4bc22de"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
 
 **Point:** Prepare the user for one conversation, then capture what the buyer said and the promised next step.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "8879ea882b2c38adf8d0@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "9bed55db1218c4bc22de@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Separate what the buyer said from our inference; friendly interest is not a commitment. Instead of: Write the call up as an upbeat summary with assumed next steps.
+- Hold an uncertain notes match rather than guess the party. Instead of: Attach the call note to the likeliest party by name.
+- Set a stage only when the user states it. Instead of: Advance the stage from how the call seemed to go.
 
 Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
 

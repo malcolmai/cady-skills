@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "f392935522adbc97ca03"
-  library: "77b2da60520f8542"
+  version: "d84b20fb2e969530ba1c"
+  library: "ac5b4239e832e8db"
   function: "company_operations"
 ---
 # Company Operations
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "f392935522adbc97ca03@77b2da60520f8542"}})`
+**Point:** Keep the company legally sound and running, spending prevention effort where a missed obligation would cost most.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "d84b20fb2e969530ba1c@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Rank obligations by what missing one would cost against what preventing it costs, and record each that does not apply with its reason. Instead of: Work through a generic compliance checklist in order, giving every item equal weight.
+- Count a filing, signature, enrolment or access removal done only from the authority's or system's readback, the owner's word included. Instead of: Mark it done when someone says it was submitted, signed or removed.
+- Put IP, domains, repositories and key accounts in the company's name from the start, and clear a name for trademarks before brand spend. Instead of: Tidy ownership at the first financing, when investors' lawyers ask for it.
+- Raise a clock to the owner the same day when it is past due or within about 30 days; carry the rest as dated work. Instead of: Batch compliance into a periodic review and report all deadlines together.
+- Treat a material or non-standard case as a specialist's, and missing evidence as an open question, never as an exemption. Instead of: Give a confident answer from general research to save adviser cost.
 
 ## Role card
 

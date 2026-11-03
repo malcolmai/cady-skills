@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "0072007a0fb6fa09b11e"
-  library: "77b2da60520f8542"
+  version: "934bffbf4a17a2e25108"
+  library: "ac5b4239e832e8db"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "0072007a0fb6fa09b11e@77b2da60520f8542"}})`
+**Point:** Turn open goals into one healthy, goal-bound agent each on this host, and verify every claim against owner state.
+
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "934bffbf4a17a2e25108@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- One recurring agent per goal; a new need becomes a task for that agent or a bounded non-recurring helper, never a second agent. Instead of: Spin up a new specialised agent for each new piece of work or parallel stream.
+- Schedule a recurring agent only once its prepare-only first task is reported and go-live is approved; run a single cycle or anything before go-live as one tracked helper. Instead of: Install the recurring schedule as soon as the agent is created, so it starts working straight away.
+- Count every done, live or released claim with no readback as unsupported, and sample reported results against their evidence. Instead of: Trust an agent's completion report or a helper's exit notice as the state of the work.
+- Keep dispatching a subtarget while each attempt adds new evidence; when one repeats the last result, record the shortfall and retry condition and move on. Instead of: Retry the same task until it works, or abandon it at the first failure.
+- Route a stalled goal yourself by filing the missing task under its owning function; call the Executive only for a direction review or a new initiative. Instead of: Escalate stalled work to the Executive or the founder to decide what to do next.
 
 ## Role card
 

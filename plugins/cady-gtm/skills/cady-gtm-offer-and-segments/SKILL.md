@@ -5,15 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "b20f07390363cd28e454"
-  library: "77b2da60520f8542"
+  version: "2c583544a58794390716"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # Offer and segments
 
 **Point:** Turn the persona profile into the right offer, checking first that we understand the customer well enough.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "b20f07390363cd28e454@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "2c583544a58794390716@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Write the promise as the customer would say it, against what they do today; keep a sender term only where they use it. Instead of: Write the value proposition in the company's language: category, mechanism, 'AI-powered platform'.
+- Where the product does not yet beat today's alternative, the promise is a test to run, not a claim to make. Instead of: Claim the advantage the roadmap or pitch deck promises.
+- With no proof this reader already respects, claim nothing and show one specific, true observation about their situation. Instead of: Borrow credibility: 'trusted by', rounded numbers, logos or press used without permission.
+- Let a fresh reader given only the customer's quotes pick the promise that sounds like them. Instead of: Pick the promise the writer or founder likes best.
+- If the profile cannot yet support an offer, go back to understanding the customer before positioning. Instead of: Position from the founder's view and fill the gaps with assumptions.
 
 Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
 

@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "9ebc4e437d04705432b9"
-  library: "77b2da60520f8542"
+  version: "f838ffe66641e5a50f4f"
+  library: "ac5b4239e832e8db"
   function: "qa"
 ---
 # QA
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "9ebc4e437d04705432b9@77b2da60520f8542"}})`
+**Point:** Show what a fresh user actually meets, with evidence, so each iteration fixes the failures that matter most.
+
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "f838ffe66641e5a50f4f@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Walk journeys blind as a fresh user through the real surface; the builder's own walk is only a self-check. Instead of: Let the agent that built it verify it, or test from routes, seeded state and the database.
+- Hunt each run for as many findings as it can surface, ranked by impact on the flow, before handing any back. Instead of: Stop at the first failure, file it and wait for the fix before testing further.
+- Check the result the product produced, not only the steps: invented facts, wrong numbers or an unusable output fail the journey. Instead of: Pass the journey when the flow completes and every state renders.
+- Use the smallest check that could disprove the claim, at the lowest layer; run the real journey at the integrated candidate, not per chunk. Instead of: Run the full suite and release gate on every change.
+- Report a red check as information; block only on a security, isolation, authority or primary-path first-value regression. Instead of: Treat any red check as a stop until it is green.
 
 ## Role card
 

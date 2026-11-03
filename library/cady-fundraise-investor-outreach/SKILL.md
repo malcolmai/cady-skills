@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "b780187d3d2421e227a0"
-  library: "77b2da60520f8542"
+  version: "fff0feee3a05d1b71030"
+  library: "ac5b4239e832e8db"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
 **Point:** Earn first meetings with fitting investors, warm path first, on one sourced reason and true results, never invented traction.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "b780187d3d2421e227a0@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "fff0feee3a05d1b71030@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Ask for a double opt-in introduction with a forwardable blurb wherever a credible warm path exists; write cold only when none does. Instead of: Cold email the whole ranked list, or ask a contact to forward the deck without checking the investor wants it.
+- Write to one partner per firm with a sourced, dated reason for that partner, such as a recent deal. Instead of: Send a firm-wide or multi-partner note citing the fund's general thesis.
+- Describe the result so far, not the work; no attachment, and a link only if asked. Instead of: Attach the deck and describe the product, team and effort.
+- Send first notes and intro asks so first meetings land together in the round's two to three week window. Instead of: Send each note as each investor is found.
 
 Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 

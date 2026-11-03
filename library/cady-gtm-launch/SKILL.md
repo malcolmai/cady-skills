@@ -5,15 +5,23 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "042ec259fbc5a7915afe"
-  library: "77b2da60520f8542"
+  version: "742aba93d304fc21cdcc"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # GTM launch session
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "042ec259fbc5a7915afe@77b2da60520f8542"}})`
+**Point:** Prepare a whole outbound motion in one session, so only activation waits on access or approval.
+
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "742aba93d304fc21cdcc@ac5b4239e832e8db"}})`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing segments (use `cady-gtm-offer-and-segments`) or drafting outreach.
+
+## Bets
+
+- Prepare every channel's audience, offer, proof and stop condition even when sending access is missing; hold only activation. Instead of: Pause the launch until the sender, provider or scheduler is connected.
+- Save sourced identities in the system of record before drafting, and report researched, saved and listed counts separately. Instead of: Draft outreach from research notes and report one total of prospects found.
+- Keep prepared, approved, released and sent as distinct states; never read a prepared review or a quote of the user as approval. Instead of: Mark the launch done once reviews are prepared, or take the user's enthusiasm as the go-ahead.
 
 ## Gtm launch
 

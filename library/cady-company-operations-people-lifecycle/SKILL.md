@@ -5,13 +5,20 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
-  version: "14d1e1ca626c77a44780"
-  library: "77b2da60520f8542"
+  version: "92ee8536d7c961f41d15"
+  library: "ac5b4239e832e8db"
   function: "company_operations"
 ---
 # Joiners, movers and leavers
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "14d1e1ca626c77a44780@77b2da60520f8542"}})`
+**Point:** Get each joiner, mover and leaver's paperwork and access right, proven by system readback, holding no sensitive personal detail.
+
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "92ee8536d7c961f41d15@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Default a joiner to member access to every company system, with admin access a named, reasoned exception, until the company records a restricted default. Instead of: Apply least privilege per role from day one.
+- Close a leaver only when every system on the inventory shows an evidenced end state; raise a leaver step past its due date to an admin the same day. Instead of: Disable the main email or sign-in account and treat offboarding as done.
+- Keep only references, status and dates in Cady; documents and personal detail stay in their system of record. Instead of: Store the documents and HR details alongside the tracking for convenience.
 
 Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 

@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "53423b8e5fff3fdd1705"
-  library: "77b2da60520f8542"
+  version: "ffe8ea421dae3dbb485d"
+  library: "ac5b4239e832e8db"
   function: "design"
 ---
 # Design
 
-**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "53423b8e5fff3fdd1705@77b2da60520f8542"}})`
+**Point:** Give each surface real craft for its audience's job, so the product feels as good as it works.
+
+**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "ffe8ea421dae3dbb485d@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- For a material redesign, render about three meaningfully different directions in the real medium and compare them on the same flow. Instead of: Iterate on one direction, or offer palette swaps and written descriptions as the options.
+- Judge concept and execution separately: is the idea surprising and right for this audience, then does the rendered result carry it. Instead of: Judge by legibility, restraint, palette consistency and a clean checklist.
+- Start from the hardest user decision and the whole trigger-to-result journey, including empty, denied, failed and recovery states. Instead of: Start from the requested screen and make it attractive in its happy state.
+- Show the real product: capture real screens from realistic state and compose around them, never redrawing or generating UI pixels. Instead of: Mock up or generate a polished product image for marketing and help pages.
+- On a surface that is not a buying reason, follow the standard pattern and the design system; spend bespoke craft where the surface wins customers. Instead of: Design every page bespoke so the product looks distinctive everywhere.
 
 ## Role card
 

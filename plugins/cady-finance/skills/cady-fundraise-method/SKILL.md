@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "0d8e00e5ff9e68e214fa"
-  library: "77b2da60520f8542"
+  version: "14895e7be43b90d66718"
+  library: "ac5b4239e832e8db"
   function: "fundraise"
 ---
 # Fundraise
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "0d8e00e5ff9e68e214fa@77b2da60520f8542"}})`
+**Point:** Decide whether and how much to raise for a named milestone, then spend founder time where a yes is likely.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "14895e7be43b90d66718@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.
+- Spend founder time by likelihood times value: investors ranked on deals actually made and capacity to invest now, with warmth shown beside the rank. Instead of: Rank investors by stated thesis fit and the strength of the warm path.
+- Test the amount, milestone and materials as the lead investor would read them: what they must believe and the objection most likely to stop them. Instead of: Build the plan and deck from the founder's own view of the company's strengths.
+- Run a time-boxed, lead-first process with first meetings batched into two to three weeks, and drop investors who stall. Instead of: Pitch investors one at a time as introductions arrive and chase every maybe.
+- Count money as raised only when funds arrive; signed documents, a term sheet and a SAFE are separate states, and a SAFE is not issued shares. Instead of: Report the round as raised, and count it in runway, once term sheets or SAFEs are signed.
 
 ## Role card
 

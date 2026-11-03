@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "31f9bf7178dde25915b5"
-  library: "77b2da60520f8542"
+  version: "6aea7aab4e5739fc9960"
+  library: "ac5b4239e832e8db"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "31f9bf7178dde25915b5@77b2da60520f8542"}})`
+**Point:** Decide whether, when and how much to raise for a named milestone, so dilution buys proof for the next round.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "6aea7aab4e5739fc9960@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Size the raise as net burn to a named milestone plus about six months of buffer. Instead of: Raise the round size typical for the stage, or as much as investors will give.
+- Start the raise with 9 to 12 months of runway to the floor, just after a milestone proof. Instead of: Start when cash gets tight, or just before the milestone to save time.
+- Quote founder ownership only after modelling every outstanding SAFE and note and the option pool counted in the pre-money. Instead of: Quote ownership from the headline: new money over post-money.
+- After about 15 first meetings with no second meetings, change the story, amount or timing. Instead of: Add more investors to the top of the list.
+- Settle the instrument and structuring (local tax relief eligibility, how the round is marketed) before terms are agreed. Instead of: Default to a post-money SAFE everywhere because it is fastest.
 
 Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
 

@@ -5,15 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "a614f9610f8a0b7e2411"
-  library: "77b2da60520f8542"
+  version: "f2be29aa5fdfe708386c"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody owns, proven on a first task; grants only on the person's approval.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "a614f9610f8a0b7e2411@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "f2be29aa5fdfe708386c@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- An agent is one recurring responsibility tied to one goal; reuse or update the agent that owns the outcome before creating one. Instead of: Create a new agent for each new need or parallel stream of work.
+- Class risk by reach and reversibility, and make the first task one real cycle at its finish line; a critical agent runs it prepare-only through every effect path. Instead of: Class agents by how important their work is, and start with a trivial smoke task or go live directly.
+- Authority comes only from the person's approval or a grant; never write approval limits into an agent's text and treat them as control. Instead of: Write the limits into the agent's instructions and trust it to stay inside them.
+- Count a schedule, pause or retirement as real only after reading the host scheduler back. Instead of: Treat the agent record in Cady, or a successful create call, as the schedule's state.
+- Judge an agent by what it changed for its goal and the rigour of its decisions; fix the tool, check or placement before its duties. Instead of: Judge by runs completed and records written, and rewrite the agent's prompt when it fails.
 
 Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 
@@ -46,7 +53,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 ## Procedure
 
-1. Warranted? An agent is one ongoing responsibility. Due tasks are work items; a one-off is bounded host work or a task for an existing agent. Read agents_read first, then Projects work, direction and this host's automations: if an agent already owns the outcome (same goal, area or function) and no safety-isolation exception applies, reuse it or change it with mode='update' (rebind if its host changed) and stop here; a second agent on one goal and one contact list doubles sends and splits records. Create only when none owns it or a safety-isolation exception applies. Scope: the default is one registered agent per function in use, with its child role cards and skills installed on it; parallel sessions are runs of that agent, not new agents. Split a child agent out only for a different risk class or grant, or a different cadence or host (the safety-isolation exceptions); parallel work alone is not a reason to split.
+1. Warranted? An agent is one ongoing responsibility. Due tasks are work items; a one-off is bounded host work or a task for an existing agent. Read agents_read first, then Projects work, direction and this host's automations: if an agent already owns the outcome (same goal or area) and no safety-isolation exception applies, reuse it or change it with mode='update' (rebind if its host changed) and stop here; a second agent on one goal and one contact list doubles sends and splits records. Create only when none owns it or a safety-isolation exception applies. Scope: one recurring agent per goal or sub-goal (decision product:company-model), with the role cards and skills it needs installed on it; parallel sessions are runs of that agent, not new agents, and so are subagents doing its tasks. Split a child agent out only for a different risk class or grant, or a different cadence or host (the safety-isolation exceptions); parallel work alone is not a reason to split.
 2. Responsibility and risk class. State the outcome, one measure with its data source (its target lives on the goal's brief.target, not the agent, which keeps only stages), a cadence (by duty, deadline, evidence freshness) or trigger, approval limits and its end condition. Pass goalId when it serves a goal; goalPriorityRef is priority evidence, not permission. A research agent's responsibility is named key questions (`cady-company-decision-questions`); the function head keeps the decisions. Critical: the agent can cause a hard-to-undo effect outside the company or reach someone outside it (sending or publishing to non-members, spending or committing money, signing, filing, inviting or sharing data externally, changing external accounts or access, deleting owner records), or its drafts are released automatically by a grant, scheduled task or other agent. Every other agent is standard. Re-class, and prepare-only test the new effect path, on any grant, tool, access or trigger change.
 3. Fit. Read context_read with area ops/agents. Find needed skills in the installed library's INDEX and reuse them unchanged. A fork is optional: fork github.com/malcolmai/cady-skills only for a deliberate company edit, and record its baseline tag. Adapt only for an evidenced failure, tool mismatch or missing expert judgment; record why in the commit. Install the library as the Library reference says. For substantive drafting or adaptation, follow `cady-company-taste-review` step 3 and its conditional drafting reference; skip it for obvious corrections. Facts stay in Cady. Ask once for missing inputs, accounts, grants or scheduler; no secrets in chat.
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Critical: prepare-only, exercising each effect path before anything reaches anyone. Standard: it is the agent's test and touches each tool the duty needs.

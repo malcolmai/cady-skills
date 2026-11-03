@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.accounting.period_close"
-  version: "0b9a176011f017b9a028"
-  library: "77b2da60520f8542"
+  version: "a40c0165d7bd8e9ba98a"
+  library: "ac5b4239e832e8db"
   function: "accounting"
 ---
 # Month-end and period close
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "0b9a176011f017b9a028@77b2da60520f8542"}})`
+**Point:** Close each period with every account tied to its source and exceptions listed, so reported numbers can be trusted.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.accounting.period_close": "a40c0165d7bd8e9ba98a@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Reconcile every cash account to the statement closing balance. Instead of: Accept the bank feed or the ledger's own balance as reconciled once transactions are categorised.
+- Recognise revenue when delivered: upfront annual payments go to deferred revenue, and signed but undelivered work is not revenue. Instead of: Book revenue when invoiced or paid.
+- Explain every line that moves more than 10% and more than materiality; treat an unexplained move as an exception, and always investigate cash, tax and payroll items whatever their size. Instead of: Close once balances reconcile, and skip anything under materiality.
+- Hand the bookkeeper one row per exception with account, amount, source, issue and the proposed debit and credit. Instead of: Send a list of issues to look at.
 
 Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
 

@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "df28414d86ac141da793"
-  library: "77b2da60520f8542"
+  version: "3e3934347f4233039514"
+  library: "ac5b4239e832e8db"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "df28414d86ac141da793@77b2da60520f8542"}})`
+**Point:** Make the investor case checkable, with one metric definition, dated sources and first objections answered, so diligence confirms it.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "3e3934347f4233039514@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Answer the target investor's first three objections in the draft with exact evidence, or name each as an open risk. Instead of: Write the strongest positive narrative and leave objections for the meeting.
+- Define each metric once (MRR or ARR, bookings or revenue, retention basis) and use that definition in deck, model, data room and updates. Instead of: Use whichever metric looks strongest on each slide.
+- Send the monthly update with the same metric rows every month and bad news early and plainly. Instead of: Report highlights and pick the metrics that look good this month.
+- Have the data room ready before priced-round diligence, fixing gaps that stall a close (IP assignments, unapproved grants, cap table against register, 83(b)) first. Instead of: Assemble the data room after a term sheet arrives.
 
 Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
 

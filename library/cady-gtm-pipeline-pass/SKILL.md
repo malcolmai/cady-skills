@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
-  version: "80283543fcd31a3237ed"
-  library: "77b2da60520f8542"
+  version: "71dfe4c50b482bcd4afb"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # Warm pipeline pass
 
 **Point:** Give every due track an evidence-backed next action, routing each contact to its channel slice.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "80283543fcd31a3237ed@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "71dfe4c50b482bcd4afb@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Work replies first, then due follow-ups, then first touches. Instead of: Work the queue in due-date order.
+- Check each contact's latest outcome before routing a follow-up. Instead of: Send each due follow-up as scheduled.
+- Review a stale backlog before acting; never replay it blindly. Instead of: Catch up an overdue queue by sending everything due.
+- Close a track only on a definitive answer; never drop an interested lead. Instead of: Close quiet tracks to keep the pipeline clean.
 
 Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps.
 

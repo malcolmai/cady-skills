@@ -5,15 +5,24 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "7bc2601f5ac008a66697"
-  library: "77b2da60520f8542"
+  version: "605337e73d67934685a4"
+  library: "ac5b4239e832e8db"
   function: "engineering"
 ---
 # Independent review
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "7bc2601f5ac008a66697@77b2da60520f8542"}})`
+**Point:** A reviewer who did not produce the work checks the actual diff and evidence, so approval means it holds.
+
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "605337e73d67934685a4@ac5b4239e832e8db"}})`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
+
+## Bets
+
+- Start from the brief, acceptance and actual diff at named SHAs; read the producer's reasoning only after your own findings are written. Instead of: Read the producer's summary first and verify its claims.
+- Treat unverified evidence as unrun, and rerun affected checks at the reviewed head on a clean tree. Instead of: Accept the producer's report that the tests pass.
+- Rank by consequence and look for authority, isolation and data-loss holes before style. Instead of: Comment on everything visible in the diff, style included, with equal weight.
+- Read beyond the changed lines: callers, other writers of the same data, and missing tests, migrations or entry points. Instead of: Review only the lines in the diff.
 
 ## Independent review
 

@@ -5,13 +5,20 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
-  version: "99d1000d0294efa0bb26"
-  library: "77b2da60520f8542"
+  version: "a4181f22acad90572894"
+  library: "ac5b4239e832e8db"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "99d1000d0294efa0bb26@77b2da60520f8542"}})`
+**Point:** Settle one compliance requirement from the authority's own source, checked independently, so the register can be trusted.
+
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "a4181f22acad90572894@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Research from the authority's own guidance, statute or form first, then dated secondary sources. Instead of: Rely on the summaries and blog posts that rank first in search.
+- Check with a fresh reviewer given only the facts and the question, asked for the common mistakes, never shown your conclusion. Instead of: Have someone review your research and conclusion.
+- Treat missing evidence as an open question, never as an exemption or a 'not required'. Instead of: Assume the company qualifies for the common small-company exemption when a fact is unknown.
 
 Research, independently check and record one compliance requirement as a Cady Projects decision.
 

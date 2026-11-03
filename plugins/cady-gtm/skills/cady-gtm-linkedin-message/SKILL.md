@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "41fe5d542d744e150e5b"
-  library: "77b2da60520f8542"
+  version: "eb21f78cfbbeed6cc467"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # Social direct message
 
 **Point:** Open a real conversation with one honest reason, paced so the account stays safe.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "41fe5d542d744e150e5b@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "eb21f78cfbbeed6cc467@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- A connection note gives one honest reason to connect, with no pitch, ask or company name. Instead of: Pitch the product in the connection request.
+- Pace sends across working hours and count the owner's own manual sends in the limit. Instead of: Send the day's batch at once, up to the platform cap.
+- When acceptance falls, revise targeting or the note; never raise volume. Instead of: Send more invitations to keep accepted connections up.
+- Use only common ground the recipient would recognise; mention a mutual connection only when they identified it. Instead of: Name-drop mutual connections or shared groups found on the profile.
 
 Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
 

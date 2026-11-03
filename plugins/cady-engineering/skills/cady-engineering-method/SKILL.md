@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "a9bdacd49623441bf3d4"
-  library: "77b2da60520f8542"
+  version: "686c74f1f6a4dd4b6192"
+  library: "ac5b4239e832e8db"
   function: "engineering"
 ---
 # Engineering
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "a9bdacd49623441bf3d4@77b2da60520f8542"}})`
+**Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
+
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "686c74f1f6a4dd4b6192@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
+- Extend or prune the canonical owner; add a service, registry or path only after searching for the same nouns and verbs finds none. Instead of: Add a new module or helper beside the existing one because it is quicker than understanding it.
+- Use the most reliable, widely used approach on non-differentiating dimensions; reserve custom architecture and research for the differentiating ones. Instead of: Engineer every dimension to the same custom depth, or adopt a generic layer for the core.
+- Ship a compiling, independently reviewed build even when test-only CI is red; stop for security, isolation, authority or first-value regressions. Instead of: Hold every merge and release until all CI is green.
+- Write each test at the lowest layer that proves its claim, and none for behaviour that has never worked. Instead of: Add broad unit and end-to-end coverage around every change to feel safe.
 
 ## Role card
 

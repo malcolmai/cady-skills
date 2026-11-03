@@ -5,15 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "c9f10bf148b0f6f675c8"
-  library: "77b2da60520f8542"
+  version: "cbf6b2bf357220e76e3d"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Change agent behaviour
 
 **Point:** Change one agent behaviour at its strongest single home, proven before it lands, so guidance stays small and undiluted.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "c9f10bf148b0f6f675c8@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "cbf6b2bf357220e76e3d@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- If code or a tool result can make the rule true, change that, not the text. Instead of: Add a sentence to the prompt telling the agent to do the right thing.
+- Keep reasons, evidence and objections in source-only logic and serve only the distilled rule. Instead of: Put the rationale in the served prompt so the agent understands why.
+- Cut any served line that does not trace to a judgement or dependency; always-on text grows only by removing a line. Instead of: Keep a line if it seems helpful or might prevent a problem someday.
+- Prove a larger change with a few cases run with and without it, checks written first, including the nearby case that must not move. Instead of: Edit the text and spot-check one run to see that it now behaves.
+- Review a larger change twice by separate agents: logic against the reasons, writing on the served text alone. Instead of: Have one reviewer read the change together with its rationale and approve it.
 
 Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal.
 

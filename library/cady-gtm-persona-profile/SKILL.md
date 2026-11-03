@@ -5,15 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.persona_profile"
-  version: "7f2c480edcf3c76df784"
-  library: "77b2da60520f8542"
+  version: "d7440edc72f06de45ea6"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # Persona profile
 
 **Point:** Understand one persona from what they actually do and where they are heading, so positioning, sourcing and copy start there.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.persona_profile": "7f2c480edcf3c76df784@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.persona_profile": "d7440edc72f06de45ea6@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Keep the few pieces of evidence that drove the decision, linked to where each was read. Instead of: Summarise sources into labelled claims and counts ('7 of 10 say X') with no link back to where each was read.
+- Someone who sells to the persona is not a member of it, but may be a persona of their own. Instead of: Count vendors, consultants and agencies who sell to the persona as members of it, or discard them.
+- In fast-moving markets the latest evidence outranks the larger older pile, and the insight should say where the pain is heading. Instead of: Weight evidence by volume, so the largest body of reviews and posts sets the insight whatever its age.
+- Thin research is a failure of stopping rule, not of effort: stop when new sources only repeat what you have. Instead of: Gather a fixed number of sources, or stop once a plausible story forms.
+- An investor is known by what they did and whether they can still do it, not by their stated thesis. Instead of: Rank investors by their thesis page, website and fit of stated focus.
 
 Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy.
 

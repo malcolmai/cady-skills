@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "9da6229b2224723607c9"
-  library: "77b2da60520f8542"
+  version: "47f309eead8b8cb29739"
+  library: "ac5b4239e832e8db"
   function: "product"
 ---
 # Customer discovery interviews
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "9da6229b2224723607c9@77b2da60520f8542"}})`
+**Point:** Learn what customers actually did and paid, not what they say they would, so product decisions rest on behaviour.
+
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "47f309eead8b8cb29739@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Ask only about specific past instances: the last time it happened, what they did next and what it cost. Instead of: Ask whether they would use or pay for the idea and what they think of the concept.
+- Keep the idea out of the interview; describe the product only afterwards, if at all. Instead of: Describe the product early to get reactions and feedback.
+- Close by asking for a commitment that costs them something, and treat acceptance as the strongest signal of the interview. Instead of: Treat enthusiasm or 'I would buy that' as validation.
+- Recruit people who had the problem recently and acted on it; stop when new interviews stop changing the pattern. Instead of: Interview whoever is reachable, friends and fans included, up to a fixed count.
+- Count each pattern as n of m and keep the disconfirming cases in the synthesis. Instead of: Lead with the most vivid story as the finding.
 
 Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 

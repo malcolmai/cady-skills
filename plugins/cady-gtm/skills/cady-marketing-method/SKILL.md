@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "d6402ca7e175c9e22269"
-  library: "77b2da60520f8542"
+  version: "408052468193c5d0a9f6"
+  library: "ac5b4239e832e8db"
   function: "marketing"
 ---
 # Marketing
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "d6402ca7e175c9e22269@77b2da60520f8542"}})`
+**Point:** Create and test demand with truthful promises, judged on qualified response, after diagnosing where the funnel actually breaks.
+
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "408052468193c5d0a9f6@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Diagnose first: no response, response without conversion, and conversion with churn each need different work. Instead of: Answer weak results by producing more content or posting on more channels.
+- Plan 2-4 pillars, each one specific idea tied to a buying moment, with its mechanism and what would surprise the buyer. Instead of: Plan by generic topics and formats (tips, case studies, behind the scenes) on a posting calendar.
+- Prove a claim with a worked example from real customer or product evidence; without proof, narrow the promise. Instead of: State the benefit ('AI saves time') and let production quality carry it.
+- Judge each channel on qualified response and business outcome, kept apart from exposure. Instead of: Judge content by views, likes and follower growth.
+- Before product-market fit, treat paid spend as a capped demand test with its stop rule written before the first spend. Instead of: Buy reach to grow once something shows some traction.
 
 ## Role card
 

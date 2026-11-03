@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "18093304867ff081c9ea"
-  library: "77b2da60520f8542"
+  version: "6c86c83bf12fb4ac68d1"
+  library: "ac5b4239e832e8db"
   function: "product"
 ---
 # Research
 
-**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "18093304867ff081c9ea@77b2da60520f8542"}})`
+**Point:** Gather dated, attributable evidence on alternatives or technology so an owner can decide without redoing the analysis.
+
+**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "6c86c83bf12fb4ac68d1@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.
+- Compare a technology against the no-build and existing-capability baseline, measured at the real workload. Instead of: Compare candidate vendors with each other from their published benchmarks and demos.
+- Update the same-question piece and keep it short; research is an intermediate record that feeds a decision. Instead of: Write a new, comprehensive report for each request.
+- End with the implication for the decision and the next test that could change the choice. Instead of: End with a neutral summary of what was found.
 
 Create or update a company-library research piece on competitors and alternatives, or on a technology approach.
 

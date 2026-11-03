@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "9a8050976bad4834f70c"
-  library: "77b2da60520f8542"
+  version: "014dbe58a3acbf8544a1"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Executive decision review
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "9a8050976bad4834f70c@77b2da60520f8542"}})`
+**Point:** Make one company decision well, sized to its door, and predict its outcome so the Executive's calls get calibrated.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "014dbe58a3acbf8544a1@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Size the process to the door: decide a reversible, cheap call now with a default and reviewBy; keep pre-mortem and red team for one-way or consequential calls. Instead of: Run the same full analysis (options, base rates, pre-mortem, red team) on every company decision for rigour.
+- For a consequential call, take the outside view first: a sourced base rate for the reference class, or write 'none'. Instead of: Forecast from the company's own plan and specifics (the inside view).
+- Write the prediction before deciding and score it hit or miss at reviewBy; read the scored records before the next comparable decision. Instead of: Record the decision and its rationale, and judge it later by whether things turned out well.
+- Give the red-team subagent the frame and evidence, never your recommendation. Instead of: Ask a reviewer to check the decision you have reached.
+- End every decision in exact tasks for the owning function, with doneWhen lines, and do none of the work yourself. Instead of: Hand the decision down as a recommendation and let the team work out next steps, or start the first step yourself.
 
 Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
 

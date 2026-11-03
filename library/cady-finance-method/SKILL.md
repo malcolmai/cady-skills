@@ -5,13 +5,23 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "ed0166e1466d6ef7ff0f"
-  library: "77b2da60520f8542"
+  version: "5335bb7a882fa2366afd"
+  library: "ac5b4239e832e8db"
   function: "finance"
 ---
 # Finance
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "ed0166e1466d6ef7ff0f@77b2da60520f8542"}})`
+**Point:** Judge each spend, cut and raise as return against cost from real cash, so the plan fits the company's runway.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "5335bb7a882fa2366afd@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Diagnose the stage first and size Finance work to it: runway and commitments pre-revenue, collections and margin at first revenue, budget against actuals once growing. Instead of: Install a standard finance stack for every company: annual budget, monthly variance pack, three-statement model and separate specialist agents.
+- Rest a paid option's return only on existing or secured revenue; with none, recommend the adequate free option or leave the cost as the owner's call with no return claim. Instead of: Justify spend with a projected ROI built from forecast revenue, conversion or growth assumptions.
+- Before revenue, fund spend as a small staged test with a stop signal set in advance, and release the next tranche only on measured signal. Instead of: Allocate the whole budget up front across channels or tools according to the plan.
+- Keep actual, committed, reserved and forecast money as separate figures, and treat a source with no records as unknown coverage. Instead of: Net everything into one available-budget figure, counting a category with no records found as zero spend.
+- Give each metered line (cloud, AI APIs, ads) a monthly ceiling that triggers a review, with the provider-side alert owned by whoever runs the account. Instead of: Either set a hard cap that stops the service, or set no ceiling and find the overrun when the bill arrives.
+- Treat a plan allocation or recommendation as decision context only; every paid commitment waits for a person's approval of that exact spend. Instead of: Treat an approved budget line as standing permission to buy within it.
 
 ## Role card
 

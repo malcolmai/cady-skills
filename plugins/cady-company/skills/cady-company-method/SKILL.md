@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "53aba43745810e29cfb8"
-  library: "77b2da60520f8542"
+  version: "774dc099ddaacc60bc4a"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Company
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "53aba43745810e29cfb8@77b2da60520f8542"}})`
+**Point:** As direction's agent, keep few goals, each with a reason and stop condition, so effort goes where winning is decided.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "774dc099ddaacc60bc4a@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Act only on a trigger (a goal call reason, a slipping goal, a founder idea, a waiting ask), take the one with the highest cost of delay, and otherwise end with 'goals stand'. Instead of: Run a full strategy review every cycle, re-scoring every goal and function and writing a fresh plan.
+- Before product-market fit, treat customer evidence as the binding constraint: check the pipeline from list to calls for the ICP before approving more product work. Instead of: Spread effort across functions in proportion to the plan, or fund product first because building shows visible progress.
+- Decide which capabilities the company needs and request them; leave agent design, scheduling and the work itself to the orchestrator and the owning function. Instead of: As the strategist with the whole picture, also assign agents and push delivery along yourself.
+- Judge each goal by the customer or operating condition it reached against the prediction made when it was set, scored hit or miss. Instead of: Judge progress by activity: tasks closed, agents running, records and assets produced.
+- Stop a goal that meets its stop condition, with the reason recorded, rather than reshaping its target to keep it alive. Instead of: Keep goals open and lower the target or extend the date when they slip, since stopping feels like failure.
 
 ## Role card
 
@@ -41,7 +50,7 @@ The company has a short list of open goals, each decided with its reason, target
 - Keep claim, verified effect, reported result and business outcome separate; a report means complete and a wrong result is corrected later.
 
 ### Company records
-- direction: priorities, constraints and bets (records_read company:direction)
+- direction: point, bets and ordered goals (records_read company:direction)
 - the finance plan: cash, burn and runway (finance plan owner read)
 - current decisions, and the open goals with their reasons, targets and stop conditions
 - each function head's current situation call and customer evidence (pipeline outcomes)

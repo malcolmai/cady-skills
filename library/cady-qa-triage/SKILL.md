@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
-  version: "5c28f2b25820caa48fba"
-  library: "77b2da60520f8542"
+  version: "f065e0b3e947118be738"
+  library: "ac5b4239e832e8db"
   function: "qa"
 ---
 # Bug and flaky-test triage
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "5c28f2b25820caa48fba@77b2da60520f8542"}})`
+**Point:** Rate bugs by user impact and report them so anyone can reproduce them and verify the fix without asking.
+
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "f065e0b3e947118be738@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Rate severity by user impact, and raise it a level when the failure is silent, irreversible or hits most users. Instead of: Rate by how hard the fix is, who reported it or how loud the error looks.
+- Classify a flaky test by evidence as a race, shared state or infrastructure, and prove the fix by failure rate before and after. Instead of: Rerun until green, or add a sleep or a longer timeout.
+- Fix the test that pollutes shared state, not the test that fails. Instead of: Patch or skip the failing victim test.
+- Close only by rerunning the original steps on the fixed build, plus the boundaries the fix touched. Instead of: Close on the producer's 'fixed', a green CI run or a related passing test.
+- Scale the report to the case: one line for a clear typo, the full report for anything a stranger must reproduce. Instead of: Write the full template for every finding.
 
 Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it.
 

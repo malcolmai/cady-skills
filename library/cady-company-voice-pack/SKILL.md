@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
-  version: "5eef09e303220f55c737"
-  library: "77b2da60520f8542"
+  version: "1dbc6bd2aafeb53537d2"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "5eef09e303220f55c737@77b2da60520f8542"}})`
+**Point:** Capture how the owner actually writes from raw organic messages, so drafts sound like them without imitating Cady's copy.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "1dbc6bd2aafeb53537d2@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Keep examples exactly as sent and the owner's words about their style verbatim; derive texture only at drafting time. Instead of: Distil the owner's voice into a written style description or persona.
+- Include only messages you are confident they typed themselves; exclude anything Cady prepared or a grant released, templates and bulk sends; zero examples is valid. Instead of: Sample the owner's most recent or most polished sent messages.
+- Read their sent messages rather than interviewing them about how they write. Instead of: Ask the owner to describe their writing style.
+- Audit with the owner before saving, including two unlabelled drafts, with and without the pack, for them to pick. Instead of: Save the pack and let the owner correct drafts later.
 
 Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
 

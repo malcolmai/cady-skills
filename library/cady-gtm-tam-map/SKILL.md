@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "86b07e0c6b996759e297"
-  library: "77b2da60520f8542"
+  version: "baef8b0ccaddabfc40fd"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # TAM map
 
 **Point:** Find people who clearly fit a persona; prefer several narrow personas over one broad, weakly fitting offer.
 
-**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "86b07e0c6b996759e297@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "baef8b0ccaddabfc40fd@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Gate on clear fit to the persona; sourced signs of its trigger only rank. Instead of: Rank accounts by how much can be sourced about them or by firmographic match.
+- Prefer several narrow personas, even overlapping, to one broad list with a weakly fitting offer. Instead of: Build one large list to maximise reach.
+- Source a short list by hand; for a long one, check a few identities by hand across sources before building a collector. Instead of: Scrape or buy a large list first and clean it afterwards.
+- A name you cannot source stays out of the CRM, and a field you cannot source stays 'unknown'. Instead of: Fill the list from general knowledge and guessed addresses.
 
 Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts.
 

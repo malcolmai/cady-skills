@@ -5,15 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
-  version: "0e6e5f92c2d22022bd08"
-  library: "77b2da60520f8542"
+  version: "addd1eb40ee113b2144e"
+  library: "ac5b4239e832e8db"
   function: "qa"
 ---
 # User stories: keep, walk and read
 
-**Point:** Keep stories true to a real user goal, walk them blind, and read status only from blind runs.
+**Point:** Walk real user goals blind as a stranger would, so story status shows what a new user actually meets.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "0e6e5f92c2d22022bd08@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "addd1eb40ee113b2144e@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Upload a step picture from its file and let the tool check the hash; the model never carries the bytes. Instead of: Paste or retype the image's base64 into the tool call.
+- Brief the walker with only the story id, environment, build and account; a hinted pass is a finding, never a verification. Instead of: Give the walker the PR, routes or earlier reports so the walk goes faster.
+- Treat a check as information: nothing waits on its badge, and the step picture belongs to the story. Instead of: Hold work until a story check is green, or tie the picture to one run.
+- Read 'verified' as the steps passing blind at this revision, and check separately that the goal still matters. Instead of: Read a verified story as proof of user value.
+- Close a failure only by a new blind walk of the story at the fixed build. Instead of: Close on the producer's 'fixed' or a green CI run.
 
 Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 

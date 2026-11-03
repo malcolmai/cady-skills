@@ -1,5 +1,10 @@
 # Model registry
 
+## Bets
+
+- Match the tier to the job: a lead model plans and judges, cheaper workhorses write in bulk, and the top tier only reviews. Instead of: Run every task on the strongest model available.
+- Rate a model's value only from measured results on the company's own tasks; leave it unrated until then. Instead of: Rate models from benchmarks, launch posts and reputation.
+
 ## Models
 
 - **As of:** 2026-10-07
@@ -427,3 +432,4 @@
 | DeepSeek V4.1 Flash | API |
 
 - **Use:** Writes and retrieves: workstreams, bounded edits, triage, test fixes, bulk mechanical changes.
+- **Point:** Give hosts dated, sourced model prices and tiers, so picks follow measured value for money, not reputation.

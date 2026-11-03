@@ -5,13 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "f346ba04cc92ecf3c775"
-  library: "77b2da60520f8542"
+  version: "6712581c65cb1e7113bf"
+  library: "ac5b4239e832e8db"
   function: "gtm"
 ---
 # GTM
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "f346ba04cc92ecf3c775@77b2da60520f8542"}})`
+**Point:** Start from the customer and their words so offer, message and channel earn real conversations, then revise on evidence.
+
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "6712581c65cb1e7113bf@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Before the first result, find one credible path to a qualified conversation and act on it within days; re-plan from what happens. Instead of: Write and polish a full GTM strategy (ICP, positioning, channel mix, targets) before any real outreach.
+- Start from what the customer does, says and pays for now, in their own words; the company's description of itself is not evidence about them. Instead of: Start from the product's features and the founder's pitch, then look for people who might want it.
+- Split into several narrow personas, each with a message that reads as written to every person in it. Instead of: Choose one broad ICP so the list is big enough to matter.
+- When a funnel stage underperforms, change who we target or what we say, not how many we send. Instead of: Raise volume or add a channel when replies are low.
+- Treat under about 20 exposures or a single reply as direction only; weak response may be an exposure or execution gap. Instead of: Drop a segment after one quiet batch, or double down after one enthusiastic reply.
 
 ## Role card
 

@@ -5,13 +5,20 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "9f792742709a707636ac"
-  library: "77b2da60520f8542"
+  version: "2a5d5c9e91c4179f9c5e"
+  library: "ac5b4239e832e8db"
   function: "accounting"
 ---
 # Accounting
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "9f792742709a707636ac@77b2da60520f8542"}})`
+**Point:** Keep the books true to their sources each period, so cash, tax and investor figures can be trusted.
+
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "2a5d5c9e91c4179f9c5e@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Prepare the close and its exception list with proposed entries; the bookkeeper or ledger owner posts and locks, and a period is closed only on its lock readback. Instead of: Post the fixes directly in the ledger to get the close done, and report it closed once the work looks finished.
+- Get accrual items right from the first revenue or outside money: deferred revenue, accruals, SAFEs and notes as liabilities or equity, the cap table tied to the books. Instead of: Keep simple cash-basis books and let an accountant clean them up at year end or before a raise.
+- Close monthly, within about ten business days, at a depth matched to the company's volume. Instead of: Do the books once a year for the tax return.
 
 ## Role card
 

@@ -5,15 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "912058757c41c98f9c2b"
-  library: "77b2da60520f8542"
+  version: "bd5b2a98a12bf69d94d5"
+  library: "ac5b4239e832e8db"
   function: "fundraise"
 ---
 # Ranked investor list
 
 **Point:** Rank real investors by what they funded and can still fund, so founder time goes where a yes is likely.
 
-**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "912058757c41c98f9c2b@77b2da60520f8542"}})`
+**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "bd5b2a98a12bf69d94d5@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Rank by deals actually made and capacity to invest now. Instead of: Rank by stated thesis fit and warm path.
+- Show warmth in its own column; it orders only investors of similar fit. Instead of: Fold warm-intro strength into the fit score.
+- Leave capacity as unknown when it is not public, and show the gap. Instead of: Infer capacity from fund size, brand or thesis to complete the row.
+- Rank only investors that pass the eligibility judgement, each on a dated deal; put the rest on a watch list with the reason. Instead of: Rank everyone found and caveat the weak rows.
 
 Decide who to pitch for a round: a ranked list of named investors and partners, sourced, with warm paths.
 

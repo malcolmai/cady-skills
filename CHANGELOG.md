@@ -2,6 +2,76 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## ac5b4239e832e8db · 2026-11-03
+
+Since 77b2da60520f8542: 0 new, 0 dropped, 62 changed.
+
+Changed (the parts that differ):
+- `cady-accounting-method`: intro
+- `cady-accounting-period-close`: intro
+- `cady-company-change-agent-behaviour`: intro
+- `cady-company-decision-check`: intro
+- `cady-company-decision-questions`: intro
+- `cady-company-executive-review`: intro
+- `cady-company-experiment`: intro
+- `cady-company-manage-agents`: intro, Procedure
+- `cady-company-method`: intro, Role card, reference domain-method.md
+- `cady-company-operations-compliance-register`: intro
+- `cady-company-operations-contract-checks`: intro
+- `cady-company-operations-inbox-follow-through`: intro
+- `cady-company-operations-method`: intro
+- `cady-company-operations-people-lifecycle`: intro
+- `cady-company-operations-requirement-register`: intro
+- `cady-company-review`: intro, new Bets
+- `cady-company-taste-review`: intro, reference written-content.md
+- `cady-company-voice-pack`: intro
+- `cady-core-run-sequence`: new Bets
+- `cady-customer-success-lifecycle`: intro
+- `cady-customer-success-method`: intro
+- `cady-design-method`: intro
+- `cady-design-wcag-audit`: intro
+- `cady-engineering-debugging`: intro
+- `cady-engineering-independent-review`: intro, new Bets
+- `cady-engineering-integrations`: reference build.md, reference integrations.md, reference reads.md, reference vendor.md
+- `cady-engineering-method`: intro
+- `cady-engineering-system-cycle`: intro
+- `cady-finance-budget-review`: intro
+- `cady-finance-method`: intro
+- `cady-finance-runway`: intro
+- `cady-finance-tax-cycle`: intro
+- `cady-finance-vendor-spend-review`: intro
+- `cady-fundraise-investor-list`: intro
+- `cady-fundraise-investor-outreach`: intro
+- `cady-fundraise-method`: intro
+- `cady-fundraise-raise-materials`: intro
+- `cady-fundraise-raise-plan`: intro
+- `cady-gtm-calls`: intro
+- `cady-gtm-cold-email-cycle`: intro
+- `cady-gtm-events`: intro
+- `cady-gtm-launch`: intro, new Bets
+- `cady-gtm-linkedin-message`: intro
+- `cady-gtm-method`: intro
+- `cady-gtm-offer-and-segments`: intro
+- `cady-gtm-persona-profile`: intro
+- `cady-gtm-pipeline-pass`: intro
+- `cady-gtm-reply`: intro
+- `cady-gtm-tam-map`: intro
+- `cady-gtm-warm-email`: intro
+- `cady-marketing-method`: intro
+- `cady-marketing-post`: intro
+- `cady-orchestrator-method`: intro
+- `cady-product-customer-interview`: intro
+- `cady-product-manage`: intro
+- `cady-product-method`: intro
+- `cady-product-research`: intro
+- `cady-qa-method`: intro
+- `cady-qa-stories`: intro
+- `cady-qa-triage`: intro
+- `cady-sales-deal-motion`: intro
+- `cady-sales-method`: intro
+
+Shared references changed: models.md.
+
 ## 77b2da60520f8542 · 2026-11-02
 
 Since c8b387c68af98e70: 1 new, 0 dropped, 19 changed.

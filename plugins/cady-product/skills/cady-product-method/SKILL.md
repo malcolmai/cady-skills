@@ -5,13 +5,23 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "b077361d462855c9b006"
-  library: "77b2da60520f8542"
+  version: "6817f3d1e656fc3396d4"
+  library: "ac5b4239e832e8db"
   function: "product"
 ---
 # Product
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "b077361d462855c9b006@77b2da60520f8542"}})`
+**Point:** Decide what to build from users' real outcome against their alternative, so iterations buy correct learning, not output.
+
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "6817f3d1e656fc3396d4@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Spend most depth on the one or two problems that decide whether the product wins, and prove options by building and measuring them. Instead of: Spread effort evenly across the backlog, or stop at a spec, rubric or research summary for the hard problem.
+- Judge the product by whether it does the user's job better than their current alternative: output that is true, specific and useful. Instead of: Use usability or a passing check as the bar: the flow completes, the screens are clear, the tests are green.
+- Count speed as correct decisions per day: run the full journey, collect every finding, fix by class and rerun. Instead of: Optimise builds, CI throughput or runtime, and fix one finding per cycle as it surfaces.
+- Without customer feedback, state an assumed ICP and problem with what would disprove it, and build for them now. Instead of: Wait for interviews or validated demand before building, or treat the founder's guess as validated.
+- Call user-path work done only when it is seen working where the user meets it: the done story walked blind on the installed build. Instead of: Accept a reported result, a merged PR or a deploy as done.
+- Make a small tweak directly with one line of why; spend process only on choices that are costly to reverse. Instead of: Run every change through a spec, a review round and an eval to be safe.
 
 ## Role card
 

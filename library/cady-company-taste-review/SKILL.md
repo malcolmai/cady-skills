@@ -5,13 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "175220de1624b39bc6e4"
-  library: "77b2da60520f8542"
+  version: "1713494f520933542b25"
+  library: "ac5b4239e832e8db"
   function: "company"
 ---
 # Writing craft and taste decisions
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "175220de1624b39bc6e4@77b2da60520f8542"}})`
+**Point:** Judge writing and design by whether the intended reader acts as hoped, learning the owner's taste from corrections.
+
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "1713494f520933542b25@ac5b4239e832e8db"}})`
+
+**Bets** (where this differs from the default):
+- Start from the reader, what they must do or decide, and the one trade-off, before writing a word. Instead of: Start from the content to cover, then polish the prose.
+- Your own sense of how it lands is not a verdict: judge why first, then details, against the taste components. Instead of: Reread your own draft and call it good when it reads well to you.
+- Promote an owner correction to a general preference only after two or three consistent judgements, and never record a universal ban. Instead of: Turn each correction into a standing rule at once.
+- Write a prompt or skill for a capable colleague: outcome, constraints, useful judgement and finish line; length is no measure of quality. Instead of: Add a rule or caveat for every failure seen, so the prompt covers every case.
 
 Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 
