@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
-  version: "c6de908d6bd0977aab78"
-  library: "b455d68485d702b6"
+  version: "078659acfa359faa1fe1"
+  library: "a63d7695f1bd83d4"
   function: "gtm"
 ---
 # Channel plan
 
 **Point:** Turn accepted persona, offer and chosen channels into channel plays and execution briefs.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.channel_plan": "c6de908d6bd0977aab78@b455d68485d702b6"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.channel_plan": "078659acfa359faa1fe1@a63d7695f1bd83d4"}})`
 
 **Bets** (where this differs from the default):
 - Strategy decides the mix once; execution reads references. Instead of: Rediscover or copy the persona and offer inside execution.
@@ -25,7 +25,7 @@ Turn accepted persona, offer and chosen channels into channel plays and executio
 
 **Not for:** Choosing the persona, offer or channel mix; researching parties, writing copy, sending or installing schedules.
 
-**Unit of work:** one work item per outreach plan. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
+**Unit of work:** one work item per customer outreach plan. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
 
 ## Inputs
 

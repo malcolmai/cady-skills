@@ -2,12 +2,29 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## b455d68485d702b6 · 2026-11-03
+## a63d7695f1bd83d4 · 2026-11-03
 
-Since 3fd543d54b0547f6: 0 new, 0 dropped, 1 changed.
+Since 3fd543d54b0547f6: 0 new, 0 dropped, 16 changed.
 
 Changed (the parts that differ):
+- `cady`: Start every run, Add or change an agent, Load a skill
 - `cady-company-method`: intro, reference domain-method.md
+- `cady-core-run-sequence`: Bets, Run sequence, reference reporting.md
+- `cady-customer-success-method`: reference domain-method.md
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-investor-outreach`: intro, Procedure
+- `cady-gtm-channel-plan`: intro
+- `cady-gtm-cold-email-cycle`: intro, Procedure
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-linkedin-message`: intro, Procedure
+- `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-reply`: intro, Procedure
+- `cady-gtm-tam-map`: intro, Procedure
+- `cady-gtm-warm-email`: intro, Procedure
+- `cady-marketing-method`: reference domain-method.md
+- `cady-sales-method`: reference domain-method.md
+
+Shared references changed: outreach-drafting.md, outreach-release.md.
 
 ## 3fd543d54b0547f6 · 2026-11-03
 

@@ -5,21 +5,22 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "a132ce9862c9e88a10b5"
-  library: "b455d68485d702b6"
+  version: "a8c26f32fd80c6f7a61f"
+  library: "a63d7695f1bd83d4"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
 **Point:** Earn first meetings with fitting investors, warm path first, on one sourced reason and true results, never invented traction.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "a132ce9862c9e88a10b5@b455d68485d702b6"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "a8c26f32fd80c6f7a61f@a63d7695f1bd83d4"}})`
 
 **Bets** (where this differs from the default):
 - Ask for a double opt-in introduction with a forwardable blurb wherever a credible warm path exists; write cold only when none does. Instead of: Cold email the whole ranked list, or ask a contact to forward the deck without checking the investor wants it.
 - Write to one partner per firm with a sourced, dated reason for that partner, such as a recent deal. Instead of: Send a firm-wide or multi-partner note citing the fund's general thesis.
 - Describe the result so far, not the work; no attachment, and a link only if asked. Instead of: Attach the deck and describe the product, team and effort.
 - Send first notes and intro asks so first meetings land together in the round's two to three week window. Instead of: Send each note as each investor is found.
+- Pass motion 'investor' on the prepare call. Instead of: Leave the relationship type to inference.
 
 Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 
@@ -48,7 +49,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 3. First note: one partner per note, using the investor profile and partner record. Give a sourced, dated reason for this partner, such as a recent deal, stated thesis or portfolio fit. Use `../../references/outreach-drafting.md`, Sender voice, framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `../../references/taste-message.md` and the investor part of `../../references/taste-check.md`. Describe the result, not the work. No attachment; a link only if asked. Keep the draft with the exact gap visible to the owner outside the message, not as invented or unknown copy.
 4. Pace the round from the raise plan: send first notes and intro asks as one batch so first meetings land in its 2 to 3 week window. After a meeting, follow up within a day with the next step and date; for an investor who never replied, use `../../references/outreach-release.md`, Follow up. On a pass, record the reason with crm_tracks_set and stop. Move each investor's track through its stage with crm_tracks_set and roundId.
 5. Monthly update: send the update drafted with `cady-fundraise-raise-materials` on the plan's fixed send day as one reviewed batch with the same body. Every recipient goes on the marketing lane; use `../../references/outreach-drafting.md`, opt_out. Answer each reply through `cady-gtm-reply`.
-6. Prepare each batch with crm_outreach_review_prepare (recipientBodies, one per investor), using `../../references/outreach-release.md`, Permission, Preparation and Release; read the review with records_read review:outreach/<approvalId>. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies using `../../references/outreach-release.md`, Outcome check.
+6. Prepare each batch with crm_outreach_review_prepare (recipientBodies, one per investor), using `../../references/outreach-release.md`, Permission, Preparation and Release; read the review with records_read review:outreach/<approvalId>. Pass motion 'investor' on the prepare call. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies using `../../references/outreach-release.md`, Outcome check.
 
 ## Acceptance
 

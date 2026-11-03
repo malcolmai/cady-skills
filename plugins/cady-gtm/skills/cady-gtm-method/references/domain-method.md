@@ -21,4 +21,4 @@
 
 ### Shared loop
 
-- Outreach runs through the gtm skills: a cold first touch once per party per cycle in `cady-gtm-cold-email-cycle` (which holds the cold email quota and variant shares); every follow-up as its own review under the follow-up rule (`../../../references/outreach-release.md`, follow_up), by the outreach or sales agent, not marketing; replies in `cady-gtm-reply` in the first run that finds them (one cadence per agent: say how soon replies are seen when the cadence is set).
+- Customer outreach runs through the gtm skills: a cold first touch once per party per cycle in `cady-gtm-cold-email-cycle` (which holds the cold email quota and variant shares); every follow-up as its own review under the follow-up rule (`../../../references/outreach-release.md`, follow_up), by the outreach or sales agent, not marketing; replies in `cady-gtm-reply` in the first run that finds them (one cadence per agent: say how soon replies are seen when the cadence is set).

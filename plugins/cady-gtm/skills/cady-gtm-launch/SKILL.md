@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "84b2bed1e22b65859516"
-  library: "b455d68485d702b6"
+  version: "a97b9dfd3e6251f403b0"
+  library: "a63d7695f1bd83d4"
   function: "gtm"
 ---
 # GTM launch session
 
 **Point:** Prepare a whole outbound motion in one session, so only activation waits on access or approval.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "84b2bed1e22b65859516@b455d68485d702b6"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "a97b9dfd3e6251f403b0@a63d7695f1bd83d4"}})`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing a persona (use `cady-gtm-offer-and-segments`) or drafting outreach.
 
@@ -34,7 +34,7 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 - 1. Read context_read with the area you are working in (omit it for the map) and work_read. If no work item fits, create one with work_create, letting the server mint the workId, with a current methodId. Keep company priorities in direction through update_company_direction; goals are goal work items. Split substantial independent channel/cohort work only within host and plan limits.
 - 2. Settle the CRM of record before planning channels. If undecided, apply the first-use rule from context_read (company.modules): check the tools you can access, record external or native with company.modules.set, and ask the sponsor only if you cannot look. Do not hold work for it; no unsupported CRM readiness read is implied.
 - 3. Use the channel plan from the References line for each chosen channel’s play, execution agent and operational readiness.
-- 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing outreach. Use the reviewed List import from the References line for Cady CRM; keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall.
+- 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing customer outreach. Use the reviewed List import from the References line for Cady CRM; keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall.
 - 5. Prepare one crm_outreach_review_prepare per eligible cohort of at most 50 parties. Read the review with records_read review:outreach/<approvalId> and report the approvalId. Follow the References line for approval and release, send nothing unapproved, and never ask for addresses, bodies or credentials.
 
 ## Shared execution sections
