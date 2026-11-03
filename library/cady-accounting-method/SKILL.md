@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
   version: "d03a8e8f79eed3c937d1"
-  library: "3fd543d54b0547f6"
+  library: "a63d7695f1bd83d4"
   function: "accounting"
 ---
 # Accounting
 
 **Point:** Keep the books true to their sources each period, so cash, tax and investor figures can be trusted.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "d03a8e8f79eed3c937d1@3fd543d54b0547f6"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "d03a8e8f79eed3c937d1@a63d7695f1bd83d4"}})`
 
 **Bets** (where this differs from the default):
 - Prepare the close and its exception list with proposed entries; the bookkeeper or ledger owner posts and locks, and a period is closed only on its lock readback. Instead of: Post the fixes directly in the ledger to get the close done, and report it closed once the work looks finished.

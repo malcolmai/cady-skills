@@ -5,17 +5,18 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "65ffa5d4ea3909b700d6"
-  library: "3fd543d54b0547f6"
+  version: "5d3c0cc3141eb7f5b22b"
+  library: "a63d7695f1bd83d4"
   function: "company"
 ---
 # Company
 
-**Point:** As direction's agent, keep few goals, each with a reason and stop condition, so effort goes where winning is decided.
+**Point:** Set the right overall strategy for the company, reviewing it, tweaking it and starting new initiatives, and instruct the orchestrator to put it into action.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "65ffa5d4ea3909b700d6@3fd543d54b0547f6"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "5d3c0cc3141eb7f5b22b@a63d7695f1bd83d4"}})`
 
 **Bets** (where this differs from the default):
+- Keep few goals, each with a reason and a stop condition, so effort goes where winning is decided. Instead of: A goal for every idea or function.
 - Act only on a trigger (a goal call reason, a slipping goal, a founder idea, a waiting ask), take the one with the highest cost of delay, and otherwise end with 'goals stand'. Instead of: Run a full strategy review every cycle, re-scoring every goal and function and writing a fresh plan.
 - Before product-market fit, treat customer evidence as the binding constraint: check the pipeline from list to calls for the ICP before approving more product work. Instead of: Spread effort across functions in proportion to the plan, or fund product first because building shows visible progress.
 - Decide which capabilities the company needs and request them; leave agent design, scheduling and the work itself to the orchestrator and the owning function. Instead of: As the strategist with the whole picture, also assign agents and push delivery along yourself.

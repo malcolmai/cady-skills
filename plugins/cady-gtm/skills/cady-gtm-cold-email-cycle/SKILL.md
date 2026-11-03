@@ -5,21 +5,23 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "5df152146c1250bb4a11"
-  library: "3fd543d54b0547f6"
+  version: "b5318b2a88fdc7210b25"
+  library: "a63d7695f1bd83d4"
   function: "gtm"
 ---
 # Cold email cycle
 
 **Point:** Earn replies from strangers with one honest, segment-true reason, without harming sender reputation.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "5df152146c1250bb4a11@3fd543d54b0547f6"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "b5318b2a88fdc7210b25@a63d7695f1bd83d4"}})`
 
 **Bets** (where this differs from the default):
 - Open with the recipient's situation in their words; never a self-introduction, praise or an invented reaction. Instead of: Open with 'I'm X from Y' or a compliment on their recent post.
 - An inferred or unknown line becomes the message's question, never a claim about the recipient. Instead of: State the guessed pain as fact ('you're struggling with X').
 - Size the ask to the evidence: with only title and company size, ask for a one-word reply or offer a link, not a call. Instead of: Ask every cold prospect for a 15-minute call.
 - Protect the sending domain before volume: verify addresses, keep catch-all small, never buy a list. Instead of: Send to a bought or scraped list and clean up bounces afterwards.
+- Give each candidate a one-line reason for inclusion or exclusion. Instead of: Exclude or include candidates without explaining the decision.
+- Pass motion 'customer' on the prepare call. Instead of: Leave the relationship type to inference.
 
 Write and send cold email to people not yet contacted, using one template per segment.
 
@@ -47,10 +49,10 @@ Write and send cold email to people not yet contacted, using one template per se
 ## Procedure
 
 1. Use a work item bound to `cady-gtm-cold-email-cycle`. If starting one, call work_create with this methodId, its current methodVersion, segment, cycle and evidence refs. Read the brief refs (`../../references/outreach-drafting.md`, Brief). If profileRef is unchecked, stop and report to the brief’s author; draft nothing.
-2. Read the List or parties and records_read party:<partyId>; apply `../../references/outreach-release.md`, Permission. Exclude opted-out, suppressed, engaged parties (route to warm or reply), prior touches, missing names and role inboxes, each with a reason. Keep unverified destinations visible as held. Verify addresses before first send; keep catch-all a small share, never buy a list and re-verify data older than 90 days.
+2. Read the List or parties and records_read party:<partyId>; apply `../../references/outreach-release.md`, Permission. Exclude opted-out, suppressed, engaged parties (route to warm or reply), prior touches, missing names and role inboxes. Give every candidate, in or out, a one-line reason in words, not a code. Keep unverified destinations visible as held. Verify addresses before first send; keep catch-all a small share, never buy a list and re-verify data older than 90 days.
 3. Before the first cycle or after a sender change, check and record the sender as `../../references/cold-deliverability.md`, setup says.
 4. In cold_template mode the reason belongs to the persona, so people who share it get their own segmentKey (the persona_key). Use the brief’s angle, variants and shares and its segmentKey to write one plain cold_template per variant in the profile’s words; apply `../../references/outreach-drafting.md` (Brief, Unknowns). No images or attachments and at most one link. Run the draft check (the draft check part of `../../references/outreach-drafting.md`) before the taste check (`../../references/taste-message.md`). Use at most one proof item from the credibility inventory, with only CRM-approved customer names. Fields marked templatable use {{field.key|fallback}}. With only title and company size as evidence, ask for a one-word reply or offer a link, not a call.
-5. Prepare the review (crm_outreach_review_prepare), then read it back (records_read review:outreach/<approvalId>), following `../../references/outreach-release.md`. Use crm_outreach_review_prepare mode='prepare_cold_template' (relationship type customer: a persona segmentKey puts each recipient on the customer board as Prospect) with cycleKey, segmentKey, variants, proof and listId or partyIds; include trackedLink {destination: "<final https>"} for a linked template, never recipientBodies. Check samples, exclusions and remaining cap.
+5. Prepare the review (crm_outreach_review_prepare), then read it back (records_read review:outreach/<approvalId>), following `../../references/outreach-release.md`. Use crm_outreach_review_prepare mode='prepare_cold_template' (relationship type customer: a persona segmentKey puts each recipient on the customer board as Prospect) with cycleKey, segmentKey, variants, proof and listId or partyIds; include trackedLink {destination: "<final https>"} for a linked template, never recipientBodies. Check samples, exclusions and remaining cap. Pass motion 'customer' on the prepare call.
 6. The company cold quota is 100 recipients per rolling day and 500 per rolling week. Release only as `../../references/outreach-release.md`, Release says.
 7. At cycle end report crm.get_outreach_review({cycleKey}) rows with denominators, including sends and replies by variant, on this work item for the brief’s author (channel strategy). Read send results for bounces, complaints and blocks (`../../references/agent-stop.md`).
 8. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
