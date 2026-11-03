@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-03T00:00:00Z",
   "bundle": {
-    "tag": "e9ecd5528179f289",
-    "version": "e9ecd5528179f2890181bcd25b034ba2bed9ad71acae37f3b735b1638ead0705",
-    "pluginVersion": "2026.11.3-e9ecd552"
+    "tag": "7ab668733bffbf40",
+    "version": "7ab668733bffbf405432d034026701b888c0fb836064a08ee57925f7a8aa6ae9",
+    "pluginVersion": "2026.11.3-7ab66873"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.3-e9ecd552"
+    "version": "2026.11.3-7ab66873"
   },
   "skills": [
     {
@@ -135,7 +135,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "d889585a5b07562a04eb"
+      "version": "baed090be3484f04cd28"
     },
     {
       "name": "cady-core-run-sequence",
@@ -237,7 +237,7 @@
       "name": "cady-fundraise-investor-list",
       "path": "library/cady-fundraise-investor-list",
       "cadyId": "skill.fundraise.investor_list",
-      "version": "b92f816928c8dea01c0f"
+      "version": "0627ad7d1dbe40cfa694"
     },
     {
       "name": "cady-fundraise-investor-outreach",
@@ -315,7 +315,7 @@
       "name": "cady-gtm-persona-profile",
       "path": "library/cady-gtm-persona-profile",
       "cadyId": "skill.gtm.persona_profile",
-      "version": "d288ad85bb501dc84eb6"
+      "version": "7a0bf728d3e0ea3f4dc8"
     },
     {
       "name": "cady-gtm-pipeline-pass",
