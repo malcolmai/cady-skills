@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "d03a8e8f79eed3c937d1"
-  library: "2adae87402cedc95"
+  version: "44fc0ca56d3d9408ee62"
+  library: "96968454e6943efc"
   function: "accounting"
 ---
 # Accounting
 
 **Point:** Keep the books true to their sources each period, so cash, tax and investor figures can be trusted.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "d03a8e8f79eed3c937d1@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.accounting": "44fc0ca56d3d9408ee62@96968454e6943efc"}})`
 
 **Bets** (where this differs from the default):
 - Prepare the close and its exception list with proposed entries; the bookkeeper or ledger owner posts and locks, and a period is closed only on its lock readback. Instead of: Post the fixes directly in the ledger to get the close done, and report it closed once the work looks finished.
@@ -38,7 +38,6 @@ You keep the books true to their sources: you prepare each period close from the
 
 ### Hands off
 - Budgets, runway and tax planning go to Finance; filings and registers go to Company Operations.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - Claim a closed period only from the ledger owner's posted correction and period status.

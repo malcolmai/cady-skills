@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
   version: "a80c29d21d92d6ace30f"
-  library: "2adae87402cedc95"
+  library: "96968454e6943efc"
   function: "company"
 ---
 # Pre-registered experiment
 
 **Point:** Test the riskiest assumption against pass and fail lines set beforehand, so the result changes a decision, not a story.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "a80c29d21d92d6ace30f@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "a80c29d21d92d6ace30f@96968454e6943efc"}})`
 
 **Bets** (where this differs from the default):
 - Test first the assumption that would most change the plan if wrong and that you are least sure of. Instead of: Test what is easiest to measure, or what the team is already building.

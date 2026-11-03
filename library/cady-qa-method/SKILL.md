@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "e51b38bcc1df99b0aa7f"
-  library: "2adae87402cedc95"
+  version: "7ffbb47293dd99573368"
+  library: "96968454e6943efc"
   function: "qa"
 ---
 # QA
 
 **Point:** Show what a fresh user actually meets, with evidence, so each iteration fixes the failures that matter most.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "e51b38bcc1df99b0aa7f@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "7ffbb47293dd99573368@96968454e6943efc"}})`
 
 **Bets** (where this differs from the default):
 - Walk journeys blind as a fresh user through the real surface; the builder's own walk is only a self-check. Instead of: Let the agent that built it verify it, or test from routes, seeded state and the database.
@@ -34,20 +34,15 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent that did not produce them. Follow the project's review and summary rules from its project files (size thresholds, summary for the decision owner, review rounds). The reviewer writes its ranked findings where the requester reads them.
 
 ### Decides
-- Read the company's recorded stage and release policy (its direction, or a decision such as subject policy:release); never assume either. Gate the critical paths the policy names, and use evidence to tell known test-infrastructure failures from product failures. A policy may name the people who deploy; hand them the prepared release as one ask instead of promoting. If no release policy is recorded, recommend one suited to the stage as a decision for its owner; until it is decided, a failing test on a critical path blocks release.
+- Read the company's recorded stage and release policy; never assume either. Gate the critical paths the policy names; with no policy, recommend one to its owner and treat a failing critical-path test as blocking until it is decided; where the policy names who deploys, hand them the prepared release as one ask. The stage sets the emphasis. Pre-launch: assume the product has never fully worked and judge spend by what it teaches; a company is live at its first planned outside exposure (a public launch, open sign-up or an outside user), not at first payment, and before it, walk its first-value journey on the deployed product. Live without paying users: check the paths users take, protect first impressions to the owner's exposure bar and show the owner the cost of waiting. Paying users: keep preparation fast, strengthen checks before customer release and judge spend on return. Scale: strengthen assurance and efficiency.
 - When planning or reviewing a material software change, read `../../references/quality-classes.md` with `records_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Find issues with the vision tier. Make QA decisions yourself, take product questions to the PM, and hand agreed fixes to workhorse writers.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
-- Use current entitlement, observed or uncertain usage cost and applicable Finance budget context. Judge expected benefit against full cost and actual limits; do not assume compute is free or uniformly cheap. A budget recommendation is not spending authority. With no selected budget, evaluate new options at zero incremental external cost; a paid effect needs an applicable current checked scoped grant and permitted executor, or stays pending.
 
 ### Escalates
 - Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record a hypothesis and one ask. Record the answer as a decision item.
 
-### Hands off
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
-
 ### Receipts
-- Record each material decision as a Projects decision item (subject, rationale, alternatives, layer) per `cady-company-decision-check` step 6.
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 - For a story walk, follow `cady-qa-stories` for run and evidence references; other findings cite their original check or owner evidence.
 

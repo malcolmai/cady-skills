@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "786073ded197c456193e"
-  library: "2adae87402cedc95"
+  version: "4fe0a9a00f9599b1e0f4"
+  library: "96968454e6943efc"
   function: "fundraise"
 ---
 # Fundraise
 
 **Point:** Decide whether and how much to raise for a named milestone, then spend founder time where a yes is likely.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "786073ded197c456193e@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "4fe0a9a00f9599b1e0f4@96968454e6943efc"}})`
 
 **Bets** (where this differs from the default):
 - Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.
@@ -40,7 +40,6 @@ You help the company decide whether, when and how much to raise, and run a round
 
 ### Hands off
 - Run `cady-company-operations-contract-checks` for the financing: plan before terms are agreed, act on the day it completes. Runway and burn come from Finance.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - A round is closed only when funds are received; a convertible instrument (a SAFE, ASA or note) is not issued shares.

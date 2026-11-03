@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "1a685f8f00daf6162323"
-  library: "2adae87402cedc95"
+  version: "653ddea3cc89896d3837"
+  library: "96968454e6943efc"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
 **Point:** Pull real obligations and commitments out of the inbox and track them through, without reading every message individually.
 
-**Company context:** `context_read({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "1a685f8f00daf6162323@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "653ddea3cc89896d3837@96968454e6943efc"}})`
 
 **Bets** (where this differs from the default):
 - Group bulk mail by sender and template, sample a few, and scan the rest for consequential outliers (an invoice, contract, deadline or security action). Instead of: Read and summarise every message, or filter by sender alone.
