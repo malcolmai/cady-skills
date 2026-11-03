@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
   version: "078659acfa359faa1fe1"
-  library: "a63d7695f1bd83d4"
+  library: "2adae87402cedc95"
   function: "gtm"
 ---
 # Channel plan
 
 **Point:** Turn accepted persona, offer and chosen channels into channel plays and execution briefs.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.channel_plan": "078659acfa359faa1fe1@a63d7695f1bd83d4"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.channel_plan": "078659acfa359faa1fe1@2adae87402cedc95"}})`
 
 **Bets** (where this differs from the default):
 - Strategy decides the mix once; execution reads references. Instead of: Rediscover or copy the persona and offer inside execution.

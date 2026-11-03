@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
   version: "43754c6969e301cb4e1a"
-  library: "a63d7695f1bd83d4"
+  library: "2adae87402cedc95"
   function: "gtm"
 ---
 # Warm pipeline pass
 
 **Point:** Give every due track an evidence-backed next action, routing each contact to its channel slice.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "43754c6969e301cb4e1a@a63d7695f1bd83d4"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "43754c6969e301cb4e1a@2adae87402cedc95"}})`
 
 **Bets** (where this differs from the default):
 - Work replies first, then due follow-ups, then first touches. Instead of: Work the queue in due-date order.

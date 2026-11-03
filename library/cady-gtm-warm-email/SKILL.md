@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
   version: "104ae8363d2b73c8f2d8"
-  library: "a63d7695f1bd83d4"
+  library: "2adae87402cedc95"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
 **Point:** Keep each relationship moving with a useful email and a next step paced to the person.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "104ae8363d2b73c8f2d8@a63d7695f1bd83d4"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "104ae8363d2b73c8f2d8@2adae87402cedc95"}})`
 
 **Bets** (where this differs from the default):
 - Establish the relationship from evidence first; missing history is not proof a party is cold. Instead of: Treat anyone without a logged thread as cold and send a cold pitch.

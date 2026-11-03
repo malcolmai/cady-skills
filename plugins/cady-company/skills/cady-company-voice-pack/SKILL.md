@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
   version: "9c43c6c3f9f8dfdad7a5"
-  library: "a63d7695f1bd83d4"
+  library: "2adae87402cedc95"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
 
 **Point:** Capture how the owner actually writes from raw organic messages, so drafts sound like them without imitating Cady's copy.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "9c43c6c3f9f8dfdad7a5@a63d7695f1bd83d4"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.voice_pack": "9c43c6c3f9f8dfdad7a5@2adae87402cedc95"}})`
 
 **Bets** (where this differs from the default):
 - Keep examples exactly as sent and the owner's words about their style verbatim; derive texture only at drafting time. Instead of: Distil the owner's voice into a written style description or persona.

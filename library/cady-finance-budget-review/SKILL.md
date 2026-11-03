@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
   version: "217fc7b0bbcb01f66203"
-  library: "a63d7695f1bd83d4"
+  library: "2adae87402cedc95"
   function: "finance"
 ---
 # Budget and cost review
 
 **Point:** Allocate money to the few drivers that change a decision, from dated actuals, so spend follows what works.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "217fc7b0bbcb01f66203@a63d7695f1bd83d4"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "217fc7b0bbcb01f66203@2adae87402cedc95"}})`
 
 **Bets** (where this differs from the default):
 - Budget the few drivers that move cash (payroll, usage-based services, paid acquisition) at a depth set by stage and the decision at hand. Instead of: Build a full line-item budget by department and month.

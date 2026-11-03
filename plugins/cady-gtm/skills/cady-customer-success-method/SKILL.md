@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
   version: "1411a74d879fb46d06f2"
-  library: "a63d7695f1bd83d4"
+  library: "2adae87402cedc95"
   function: "customer_success"
 ---
 # Customer Success
 
 **Point:** Make sure each customer reaches the outcome they bought, because delivered value, not activity, is what keeps them.
 
-**Company context:** `context_read({"area": "customer_success/lifecycle", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "1411a74d879fb46d06f2@a63d7695f1bd83d4"}})`
+**Company context:** `context_read({"area": "customer_success/lifecycle", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.customer_success": "1411a74d879fb46d06f2@2adae87402cedc95"}})`
 
 **Bets** (where this differs from the default):
 - Judge outcome, adoption, relationship and commercial health separately, each from its own evidence. Instead of: Blend usage, satisfaction and payment into one health score with thresholds.
