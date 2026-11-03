@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "0627ad7d1dbe40cfa694"
-  library: "7ab668733bffbf40"
+  version: "bb3037282ce363eee98c"
+  library: "92b470f2d8d6c53e"
   function: "fundraise"
 ---
 # Ranked investor list
 
 **Point:** Rank real investors by what they funded and can still fund, so founder time goes where a yes is likely.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "0627ad7d1dbe40cfa694@7ab668733bffbf40"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "bb3037282ce363eee98c@92b470f2d8d6c53e"}})`
 
 **Bets** (where this differs from the default):
 - Rank by deals actually made and capacity to invest now. Instead of: Rank by stated thesis fit and warm path.
@@ -44,7 +44,7 @@ Decide who to pitch for a round: a ranked list of named investors and partners, 
 1. Read records_read company:direction and the exact financing objective, cash timing, milestone proof and founder constraints. Read or write the investor persona's profile (`cady-gtm-persona-profile`); its stage, cheque, geography and thesis are hypotheses unless accepted. Without an active round, no investor outreach is overdue.
 2. Canvass the founder's network and accessible relationship sources, then recent backers of comparable companies and directories. For each real firm, cite its public identity source; a generic thesis page is a proxy, not an activity trigger; never invent a firm, introduction or cheque.
 3. Build the N named, reachable investors in this work item's acceptance criteria (default 10): for each, a named partner or role and a reachable public page, published address or role-level route; whether they lead or follow at this stage; their recent deals (dated and sourced: stage, cheque, sector) or a stated proxy; whether they can still invest now (a fund's last raise and how far into it; an angel's source of wealth and recent activity); warm path; and unknown fields. Apply `cady-gtm-persona-profile`’s evidence judgement to eligibility and its figure check to every cited cheque, fund size and deal fact. Not eligible and never counted toward N: a fund with no dated deal in the last 12 months or no money left, a thesis found only in its own marketing, and anyone who sells services to founders or charges them to pitch. Rank by likelihood times value (likelihood: fit from what they did, capacity now and lead/follow; value: cheque size, ability to lead and help) and state the rule; Rank only eligible investors, each row naming the dated deal it rests on and its capacity evidence or 'unknown'; an ineligible investor goes to a watch list with its reason, because a ranked name is the one the founder approaches first. show warmth in its own column; it never enters the fit score and orders only investors of similar fit; stop when N meet this bar. Find a public, verifiable source first (registries, filings, directories, company sites); only when none can serve the N, ask the owner once for source access or a dataset as an access boundary with a ready packet; keep unresolved identities out of CRM.
-4. Check crm_parties_read (mode "lists") for duplicates and create exact sourced identities with crm_parties_update or crm_parties_create mode "create", investor role set, receipts read back. Before any message preparation, persist eligible real identities into the selected CRM List (in Cady, created with purpose investor) through `cady-gtm-tam-map`'s reviewed import, completion receipt and membership readback; prepare is not import. Another selected CRM uses its authorized reviewed route and stays canonical. Start selected relationships with crm_tracks_set as `cady-gtm-tam-map` says: supply the persona; leave unknown persona and unassigned Owner empty.
+4. Check crm_parties_read (mode "lists") for duplicates and create exact sourced identities with crm_parties_set or crm_parties_update mode "create", investor role set, receipts read back. Before any message preparation, persist eligible real identities into the selected CRM List (in Cady, created with purpose investor) through `cady-gtm-tam-map`'s reviewed import, completion receipt and membership readback; prepare is not import. Another selected CRM uses its authorized reviewed route and stays canonical. Start selected relationships with crm_tracks_set as `cady-gtm-tam-map` says: supply the persona; leave unknown persona and unassigned Owner empty.
 5. Record ranked sources and gaps through work_change(action: 'checkpoint'), linked to any list and party refs; follow the reporting section of skill cady-core-run-sequence for the finish line; read back with work_read. Save the ranked page as the persona's Cady File with files_create, linked from the persona, and say where it was saved; never leave the list only in chat. Report completion or exact source-access shortfall with work_report. Report and close as `cady-gtm-tam-map` does (researched, saved/matched and member counts separately; import receipt in evidenceRefs). List membership grants no investor contact authority. Without a List, cite the shortfall's owner record.
 
 ## Acceptance
