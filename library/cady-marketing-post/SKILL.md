@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.marketing.post"
   version: "cbc109c4db790af4c064"
-  library: "92b470f2d8d6c53e"
+  library: "2a94b0b4645d6de9"
   function: "marketing"
 ---
 # Post one piece
 
 **Point:** Publish one useful, true piece for the brief's audience, judged in placement, only after approval.
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.marketing.post": "cbc109c4db790af4c064@92b470f2d8d6c53e"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.marketing.post": "cbc109c4db790af4c064@2a94b0b4645d6de9"}})`
 
 **Bets** (where this differs from the default):
 - Have a fresh judge read the post in its intended placement before approval. Instead of: Self-review the draft in the editor.

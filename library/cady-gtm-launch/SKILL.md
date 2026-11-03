@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
   version: "3d5b1371e813772a53f1"
-  library: "92b470f2d8d6c53e"
+  library: "2a94b0b4645d6de9"
   function: "gtm"
 ---
 # GTM launch session
 
 **Point:** Prepare a whole outbound motion in one session, so only activation waits on access or approval.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "3d5b1371e813772a53f1@92b470f2d8d6c53e"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "3d5b1371e813772a53f1@2a94b0b4645d6de9"}})`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing a persona (use `cady-gtm-offer-and-segments`) or drafting outreach.
 

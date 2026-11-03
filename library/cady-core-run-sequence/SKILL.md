@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "2724233bcae717122c13"
-  library: "92b470f2d8d6c53e"
+  version: "674ad5161fc5ccfc5697"
+  library: "2a94b0b4645d6de9"
   function: "core"
 ---
 # Agent run sequence
 
 **Point:** One order for every session, so no run acts on stale state, doubles an effect or ends unrecorded.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "2724233bcae717122c13@92b470f2d8d6c53e"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "674ad5161fc5ccfc5697@2a94b0b4645d6de9"}})`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
 
@@ -41,7 +41,7 @@ Run one ordered piece of company work from reconciliation through result. Use wh
 
 - Read company state: `context_read {"task": "$task"}`
 - Reconcile unresolved effects: `work_read {"workId": "$reconcileWorkId"}` (agents)
-- Reconcile uncovered founder outcomes with live work acceptance first: `work_read {"decisions": {"contextType": "goal", "state": "current"}, "homePage": {"area": "goals", "filter": "active"}}`
+- Check which open goal this task serves; if none covers it, say so before starting.: `work_read {"decisions": {"contextType": "goal", "state": "current"}, "homePage": {"area": "goals", "filter": "active"}}`
 - Claim the selected work: `work_change {"action": "claim", "expectedGeneration": "$generation", "expectedRevision": "$revision", "workId": "$workId"}` (agents)
 - Check current decisions, then do the work: `work_read {"decisions": {"state": "current"}}`
 - Close with the checked outcome: `work_report {"items": [{"claim": "done", "resultSummary": "<checked outcome>"}]}`

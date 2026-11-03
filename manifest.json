@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-03T00:00:00Z",
   "bundle": {
-    "tag": "92b470f2d8d6c53e",
-    "version": "92b470f2d8d6c53eb38c4e89fad358a037f1bad593a1284026ee6b7f5867eeac",
-    "pluginVersion": "2026.11.3-92b470f2"
+    "tag": "2a94b0b4645d6de9",
+    "version": "2a94b0b4645d6de9908fbff617d53157275b9f80b5777b17e1ce6c3b6219155d",
+    "pluginVersion": "2026.11.3-2a94b0b4"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.3-92b470f2"
+    "version": "2026.11.3-2a94b0b4"
   },
   "skills": [
     {
@@ -141,7 +141,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "2724233bcae717122c13"
+      "version": "674ad5161fc5ccfc5697"
     },
     {
       "name": "cady-core-skill-index",
@@ -303,7 +303,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "881eabb816020f999cd9"
+      "version": "b9958e995bedbba54856"
     },
     {
       "name": "cady-gtm-offer-and-segments",
