@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
   version: "16bf76ff5a93207332d7"
-  library: "f4537fc893b29278"
+  library: "7ab668733bffbf40"
   function: "engineering"
 ---
 # Debugging and incident response
 
 **Point:** Find the real cause from evidence and fix it at its owner, so the bug and its siblings stay fixed.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "16bf76ff5a93207332d7@f4537fc893b29278"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.debugging": "16bf76ff5a93207332d7@7ab668733bffbf40"}})`
 
 **Bets** (where this differs from the default):
 - Read the full error, the first failure in the log and what changed since it last worked before forming any theory. Instead of: Form a hypothesis from the symptom and start editing code.

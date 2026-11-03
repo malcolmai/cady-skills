@@ -2,11 +2,12 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## f4537fc893b29278 · 2026-11-03
+## 7ab668733bffbf40 · 2026-11-03
 
-Since e9ecd5528179f289: 0 new, 0 dropped, 2 changed.
+Since e9ecd5528179f289: 0 new, 0 dropped, 3 changed.
 
 Changed (the parts that differ):
+- `cady-core-execution`: intro
 - `cady-fundraise-investor-list`: Procedure
 - `cady-gtm-persona-profile`: Procedure, Acceptance
 
