@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-03T00:00:00Z",
   "bundle": {
-    "tag": "836af4a3fd853606",
-    "version": "836af4a3fd853606b8c80448e4bfa22a5188fa6c678e6c68fe4c1cd14c13c998",
-    "pluginVersion": "2026.11.3-836af4a3"
+    "tag": "e9ecd5528179f289",
+    "version": "e9ecd5528179f2890181bcd25b034ba2bed9ad71acae37f3b735b1638ead0705",
+    "pluginVersion": "2026.11.3-e9ecd552"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.3-836af4a3"
+    "version": "2026.11.3-e9ecd552"
   },
   "skills": [
     {
@@ -123,7 +123,7 @@
       "name": "cady-company-voice-pack",
       "path": "library/cady-company-voice-pack",
       "cadyId": "skill.company.voice_pack",
-      "version": "a536b16ace22907645aa"
+      "version": "924c89253a2c084e1031"
     },
     {
       "name": "cady-core-context",
@@ -153,7 +153,7 @@
       "name": "cady-customer-success-lifecycle",
       "path": "library/cady-customer-success-lifecycle",
       "cadyId": "skill.customer_success.lifecycle",
-      "version": "1930f3ddf0725bc135c4"
+      "version": "d33b9ca678de2a1cc12d"
     },
     {
       "name": "cady-customer-success-method",
@@ -243,7 +243,7 @@
       "name": "cady-fundraise-investor-outreach",
       "path": "library/cady-fundraise-investor-outreach",
       "cadyId": "skill.fundraise.investor_outreach",
-      "version": "b058bbf241772f007e9f"
+      "version": "d68d56106c6471ddf16c"
     },
     {
       "name": "cady-fundraise-method",
@@ -255,7 +255,7 @@
       "name": "cady-fundraise-raise-materials",
       "path": "library/cady-fundraise-raise-materials",
       "cadyId": "skill.fundraise.raise_materials",
-      "version": "682273cf0c42345ab424"
+      "version": "72794510d268c67abfd0"
     },
     {
       "name": "cady-fundraise-raise-plan",
@@ -267,7 +267,7 @@
       "name": "cady-gtm-calls",
       "path": "library/cady-gtm-calls",
       "cadyId": "skill.gtm.calls",
-      "version": "14cf6ed816d29cec8e99"
+      "version": "5651339f83d66fec34fe"
     },
     {
       "name": "cady-gtm-channel-plan",
@@ -279,7 +279,7 @@
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "20982a5212a405e2ccc2"
+      "version": "6752a1b1175c1d0daa27"
     },
     {
       "name": "cady-gtm-events",
@@ -297,7 +297,7 @@
       "name": "cady-gtm-linkedin-message",
       "path": "library/cady-gtm-linkedin-message",
       "cadyId": "skill.gtm.linkedin_message",
-      "version": "7e727bea7ea2ff2ca1c4"
+      "version": "d0afcc4a6eaf43f630d4"
     },
     {
       "name": "cady-gtm-method",
@@ -321,13 +321,13 @@
       "name": "cady-gtm-pipeline-pass",
       "path": "library/cady-gtm-pipeline-pass",
       "cadyId": "skill.gtm.pipeline_pass",
-      "version": "1b2d7eab2f6d9ec65638"
+      "version": "a8e720dc669961c73986"
     },
     {
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "e9cb62e9ded50903df3e"
+      "version": "b81999773017d0faf930"
     },
     {
       "name": "cady-gtm-tam-map",
@@ -339,19 +339,19 @@
       "name": "cady-gtm-warm-email",
       "path": "library/cady-gtm-warm-email",
       "cadyId": "skill.gtm.warm_email",
-      "version": "eee66a3f0b2ba552c04c"
+      "version": "995523166e20cb0b19d4"
     },
     {
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "499639afc311007a752c"
+      "version": "9ff45248302ac51461de"
     },
     {
       "name": "cady-marketing-post",
       "path": "library/cady-marketing-post",
       "cadyId": "skill.marketing.post",
-      "version": "c832fd40b53ca7447569"
+      "version": "cbc109c4db790af4c064"
     },
     {
       "name": "cady-orchestrator-method",
@@ -405,7 +405,7 @@
       "name": "cady-sales-deal-motion",
       "path": "library/cady-sales-deal-motion",
       "cadyId": "skill.sales.deal_motion",
-      "version": "93db427a2e502d7e09a1"
+      "version": "dd1a96cecd551b49dd91"
     },
     {
       "name": "cady-sales-method",

@@ -2,6 +2,12 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## e9ecd5528179f289 · 2026-11-03
+
+Since 836af4a3fd853606: 0 new, 0 dropped, 0 changed.
+
+Shared references changed: outreach-drafting.md.
+
 ## 836af4a3fd853606 · 2026-11-03
 
 Since bcd045b5f605c411: 0 new, 0 dropped, 1 changed.

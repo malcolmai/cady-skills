@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "7e727bea7ea2ff2ca1c4"
-  library: "836af4a3fd853606"
+  version: "d0afcc4a6eaf43f630d4"
+  library: "e9ecd5528179f289"
   function: "gtm"
 ---
 # Social direct message
 
 **Point:** Open a real conversation with one honest reason, paced so the account stays safe.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "7e727bea7ea2ff2ca1c4@836af4a3fd853606"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "d0afcc4a6eaf43f630d4@e9ecd5528179f289"}})`
 
 **Bets** (where this differs from the default):
 - A connection note gives one honest reason to connect, with no pitch, ask or company name. Instead of: Pitch the product in the connection request.
