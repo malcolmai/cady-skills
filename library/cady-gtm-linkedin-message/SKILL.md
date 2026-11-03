@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
   version: "d0afcc4a6eaf43f630d4"
-  library: "7ab668733bffbf40"
+  library: "4e8b423b84956cfe"
   function: "gtm"
 ---
 # Social direct message
 
 **Point:** Open a real conversation with one honest reason, paced so the account stays safe.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "d0afcc4a6eaf43f630d4@7ab668733bffbf40"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "d0afcc4a6eaf43f630d4@4e8b423b84956cfe"}})`
 
 **Bets** (where this differs from the default):
 - A connection note gives one honest reason to connect, with no pitch, ask or company name. Instead of: Pitch the product in the connection request.

@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
   version: "75fffa7c7339f4abcf88"
-  library: "7ab668733bffbf40"
+  library: "4e8b423b84956cfe"
   function: "company"
 ---
 # Company
 
 **Point:** Set the right overall strategy for the company, reviewing it, tweaking it and starting new initiatives, and instruct the orchestrator to put it into action.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "75fffa7c7339f4abcf88@7ab668733bffbf40"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "75fffa7c7339f4abcf88@4e8b423b84956cfe"}})`
 
 **Bets** (where this differs from the default):
 - Keep few goals, each with a reason and a stop condition, so effort goes where winning is decided. Instead of: A goal for every idea or function.
