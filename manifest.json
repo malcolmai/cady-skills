@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-03T00:00:00Z",
   "bundle": {
-    "tag": "3fd543d54b0547f6",
-    "version": "3fd543d54b0547f6591c82b50350267f517371dc32b7d32ad533af0bd8680331",
-    "pluginVersion": "2026.11.3-3fd543d5"
+    "tag": "b455d68485d702b6",
+    "version": "b455d68485d702b69589f343b7b335b8181f455968040cf4d1aa4bb94e6c3187",
+    "pluginVersion": "2026.11.3-b455d684"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.3-3fd543d5"
+    "version": "2026.11.3-b455d684"
   },
   "skills": [
     {
@@ -69,7 +69,7 @@
       "name": "cady-company-method",
       "path": "library/cady-company-method",
       "cadyId": "company.method.company",
-      "version": "65ffa5d4ea3909b700d6"
+      "version": "5d3c0cc3141eb7f5b22b"
     },
     {
       "name": "cady-company-operations-compliance-register",

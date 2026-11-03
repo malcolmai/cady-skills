@@ -2,6 +2,13 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## b455d68485d702b6 · 2026-11-03
+
+Since 3fd543d54b0547f6: 0 new, 0 dropped, 1 changed.
+
+Changed (the parts that differ):
+- `cady-company-method`: intro, reference domain-method.md
+
 ## 3fd543d54b0547f6 · 2026-11-03
 
 Since 77b2da60520f8542: 1 new, 0 dropped, 65 changed.

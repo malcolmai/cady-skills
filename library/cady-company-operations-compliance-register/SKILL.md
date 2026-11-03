@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
   version: "7149e1d2e53805197305"
-  library: "3fd543d54b0547f6"
+  library: "b455d68485d702b6"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
 **Point:** Know every filing the company owes and start each early enough, so no deadline becomes a penalty or lost standing.
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "7149e1d2e53805197305@3fd543d54b0547f6"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.compliance_register": "7149e1d2e53805197305@b455d68485d702b6"}})`
 
 **Bets** (where this differs from the default):
 - Re-scan when an event changes the facts (a financing, new officers, a hire, a new state, a threshold crossed), not only on the calendar. Instead of: Keep last year's list of filings and check it once a year.
