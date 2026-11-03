@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "7ac17361ad03bb551105"
-  library: "2adae87402cedc95"
+  version: "c3ab554bc5523af06bb3"
+  library: "bcd045b5f605c411"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody owns, proven on a first task; grants only on the person's approval.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "7ac17361ad03bb551105@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "c3ab554bc5523af06bb3@bcd045b5f605c411"}})`
 
 **Bets** (where this differs from the default):
 - An agent is one recurring responsibility tied to one goal; reuse or update the agent that owns the outcome before creating one. Instead of: Create a new agent for each new need or parallel stream of work.
@@ -62,7 +62,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 7. Authority. Read the company's permission modes first (context_read companyValues, line permission_modes; one mode per category: invites, shares, external for outreach and publication, decisions). Effects follow `cady-company-decision-check` step 2. For agents, additionally: no mode lets you send without that approval or a grant, and limits text is not enforcement. Never approve for the person. Their own decision is needed for any grant (send, spend, publish, sign, file), for an invite, share or outreach effect whose permission category is in approval mode, for new access or capture, widening your or this host's permissions, a design change to a grant-holding agent, and raising cadence or cost; a critical agent needs it per grant. Otherwise Cady records a policy approval at go-live and notifies the owner. An in-chat yes counts only as approval {quote: their exact words} on create or go_live. With the owner absent, record agent.approve:<agentId> as a BLOCKED decision item (decidedBy: the member who will approve), delivered as asksForYou; complete that same workId only with their quote. Reuse a current one for unchanged terms. A sending grant activates only via crm_outreach_grants_update action='activate_by_decision' under the grant owner's matching COMPLETE decision. An anomaly-paused grant is resumed by its owner (action='request_resume'), never by you. A task handoff grants no rebind or agent migration.
 8. Review this host's agents by risk class, from runs, receipts and transcripts (host:transcript:<lowercase uuid>, never bodies). Critical: review the effects of its first released cycle, then a sample; pause on any anomaly. Standard: after its first task, review only on a signal (owner correction, refusals or retries, missed or empty runs, a cost spike, a claim without readback). Judge work by what it changed for its goal and by the rigour of its decisions (the chain from the goal, the losing alternative, current premises, owner-only calls left to the owner), not by activity or records written. Improve one thing per evidenced repeated failure (`cady-company-change-agent-behaviour`): fix the tool, owner check or instruction placement first, then propose one duties change via mode='update'.
 9. Retire only a confirmed obsolete agent or one that met its end condition. Cady runs no scheduler, so retiring or pausing an agent does not stop its host task: remove (retire) or pause (pause) that task in the host's scheduler, read the scheduler back, then confirm with agents_update or agents_create or agents_change mode=unschedule (targetAgentId, expectedRevision). The agent itself does this on its next wake when its context says stop; this host's orchestrator does it for the triggersToRemove items in its context. On resume the agent shows setUpSchedule: install the task again and bind it with hostTaskRef and readBackAt.
-10. To adopt an existing company scheduled task (secrets in its prompt: tell the owner, never upload them), follow the adoption reference (`../../references/adopt-scheduled-task.md`).
+10. To adopt an existing company scheduled task (secrets in its prompt: tell the owner, never upload them), critique it against step 5 and classify it as in step 2 (its goal, whether recent runs served it, external effects and authority, overlaps, and risks such as unbounded effects or stale facts); propose adopt, keep outside or ignore, never merging tasks; on the owner's yes, create it (steps 6-7), add only the run-sequence wrapper, read it back and bind it as in step 6, with scheduleKind.
 
 ## Acceptance
 
@@ -95,5 +95,4 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 - Read [Library](references/library.md) when you install or update the skill library on a host, or the company keeps a fork of it.
 - Read [Scheduling](references/scheduling.md) when you install, change or review a recurring host task, or choose a cadence, runtime or model for scheduled work.
 - Read [Silent hosts](references/silent-hosts.md) when you are the orchestrator checking other hosts for agents whose host has gone silent.
-- Read [Adopt an existing scheduled task](../../references/adopt-scheduled-task.md) when a company's existing host scheduled task is to be brought under Cady.
 - Read [Execution agent brief](../../references/execution-agent-brief.md) when you set up a channel execution agent.

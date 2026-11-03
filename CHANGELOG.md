@@ -2,6 +2,35 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## bcd045b5f605c411 · 2026-11-03
+
+Since 2adae87402cedc95: 0 new, 0 dropped, 21 changed.
+
+Changed (the parts that differ):
+- `cady`: reference agent-stop.md
+- `cady-accounting-method`: Role card
+- `cady-company-change-agent-behaviour`: Procedure
+- `cady-company-decision-check`: Procedure, Acceptance
+- `cady-company-manage-agents`: Procedure, References
+- `cady-company-method`: Role card
+- `cady-company-operations-method`: Role card
+- `cady-company-taste-review`: Procedure, References
+- `cady-core-execution`: intro
+- `cady-core-run-sequence`: Bets, Run sequence, reference reporting.md
+- `cady-customer-success-method`: reference domain-method.md
+- `cady-design-method`: Role card
+- `cady-engineering-method`: Role card
+- `cady-fundraise-method`: Role card
+- `cady-gtm-method`: Role card, Selected judgment
+- `cady-gtm-persona-profile`: Procedure
+- `cady-marketing-method`: Role card, Selected judgment, reference domain-method.md
+- `cady-orchestrator-method`: Role card
+- `cady-product-method`: Role card
+- `cady-qa-method`: Role card
+- `cady-sales-method`: Selected judgment, reference domain-method.md
+
+Shared references changed: adopt-scheduled-task.md, agent-skill-drafting.md, agent-stop.md, call-prep.md, company-goals.md, inbox-follow-through-details.md, outreach-drafting.md, outreach-release.md.
+
 ## 2adae87402cedc95 · 2026-11-03
 
 Since a63d7695f1bd83d4: 0 new, 0 dropped, 0 changed.

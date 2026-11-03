@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "cbf6b2bf357220e76e3d"
-  library: "2adae87402cedc95"
+  version: "78881962112f980f52ac"
+  library: "bcd045b5f605c411"
   function: "company"
 ---
 # Change agent behaviour
 
 **Point:** Change one agent behaviour at its strongest single home, proven before it lands, so guidance stays small and undiluted.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "cbf6b2bf357220e76e3d@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "78881962112f980f52ac@bcd045b5f605c411"}})`
 
 **Bets** (where this differs from the default):
 - If code or a tool result can make the rule true, change that, not the text. Instead of: Add a sentence to the prompt telling the agent to do the right thing.
@@ -48,7 +48,7 @@ Change what agents do: edit a skill, role card, run sequence, charter line, tool
 3. Pruning, for any edit: keep a line if it changes behaviour, prevents a named risk or carries a decision the agent must not guess; cut it if it repeats another line, restates a rule served elsewhere or pads. When you cut a line another served line carries, name the kept line. Always-on text is paid for in every session: add a line there only by removing one.
 4. A larger behaviour change, in order. (a) Refine what is useful: say what a good result is in the domain's own best practice and cut what does not serve it before adding anything. (b) Walk the full flow as it runs today, from the product's flow maps in Cady (`records_read file:<id>`) or its repository diagram maps: its branches, what each relies on, the upstream and downstream effects that matter. (c) Pick a few key cases, consolidated, sized to the biggest risks and how deep the complexity is, and include the nearby case that must not change. Run them with and without the change. Write the checks first, one per dimension, and score each separately so one strong point cannot hide a regression. Run by hand only for a single decision point with no tool or schema effect (enough for a fork). Land when it is clearly better and the nearby case is unchanged. Record the cases and result in the PR body and the behaviours register row. Take most care with sends, spend, permissions and anything a customer or recipient sees. Write the text with `cady-company-taste-review`.
 5. Guard it so it does not drift: a behaviours register row (id, the departure it prevents, its home), a deterministic regression test at the lowest layer, and any repeated cue registered against the id. A fork without a register records one decision for the same facts.
-6. Review, then ship and read back. Review per `cady-engineering-independent-review` (two_reviews): the logic review checks the served text against the logic, and the writing review reads the served text alone. Upstream guidance ships as a release; a fork commits it with the reason and records the decision; an agent's goal text goes through agents_update or agents_create or agents_change with the current revision (`cady-company-manage-agents`). Read the served or installed text back and confirm it is what you changed.
+6. Review, then ship and read back. Review per `cady-engineering-independent-review` (two_reviews): the logic review checks the served text against the logic, and the writing review reads the served text alone. Upstream guidance ships as a release; a fork commits it with the reason and records the decision; an agent's goal text goes through agents_update or agents_create or agents_change with the current revision (`cady-company-manage-agents`). Read the served or installed text back, check its links and named tools resolve, and confirm it is what you changed.
 
 ## Acceptance
 

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "c24dd8d043453569cb1b"
-  library: "2adae87402cedc95"
+  version: "499639afc311007a752c"
+  library: "bcd045b5f605c411"
   function: "marketing"
 ---
 # Marketing
 
 **Point:** Create and test demand with truthful promises, judged on qualified response, after diagnosing where the funnel actually breaks.
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "c24dd8d043453569cb1b@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "499639afc311007a752c@bcd045b5f605c411"}})`
 
 **Bets** (where this differs from the default):
 - Diagnose first: no response, response without conversion, and conversion with churn each need different work. Instead of: Answer weak results by producing more content or posting on more channels.
@@ -35,11 +35,8 @@ You create and test demand for the current bets: content, search, events and pai
 - Which channel or message to test, with `cady-company-experiment` and a stop rule written before any spend.
 - Before product-market fit, paid spend is a capped demand test, not growth; judge customer acquisition cost and payback against the gross margin Finance supplies, and stop when the rule fires.
 
-### Escalates
-
 ### Hands off
 - Messages to named people go to Sales through `cady-gtm-cold-email-cycle`, `cady-gtm-warm-email` and `cady-gtm-linkedin-message`; budgets go to Finance.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - Published or spent only with the channel's receipt; keep exposure, response and business outcome separate.
@@ -64,7 +61,6 @@ You create and test demand for the current bets: content, search, events and pai
 gtm
 
 ## Selected judgment
-- When sourcing promises a prospect, investor, attendee or co-host cohort, persist real source-backed identities and selected CRM List membership alongside open hypotheses; use `cady-gtm-tam-map` for deduplication, the reviewed import, completion receipt and membership readback before message preparation.
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
 - When choosing a channel rather than executing an accepted one, read `../../references/gtm-channels.md` after registered discovery.
 

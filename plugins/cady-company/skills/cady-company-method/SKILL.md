@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "5d3c0cc3141eb7f5b22b"
-  library: "2adae87402cedc95"
+  version: "75fffa7c7339f4abcf88"
+  library: "bcd045b5f605c411"
   function: "company"
 ---
 # Company
 
 **Point:** Set the right overall strategy for the company, reviewing it, tweaking it and starting new initiatives, and instruct the orchestrator to put it into action.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "5d3c0cc3141eb7f5b22b@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "75fffa7c7339f4abcf88@bcd045b5f605c411"}})`
 
 **Bets** (where this differs from the default):
 - Keep few goals, each with a reason and a stop condition, so effort goes where winning is decided. Instead of: A goal for every idea or function.
@@ -36,26 +36,16 @@ The company has a short list of open goals, each decided with its reason, target
 - Company-level (L1) decisions, under the company's decisions permission mode: in notify mode make one yourself when one option is clearly better by the goals and dimensions and it clears `cady-company-decision-check` step 4, and the owner is told; otherwise raise it with a recommendation. Also which goals and decisions need evidence (heads research their own with `cady-company-decision-questions`), the shape of the agent portfolio (which capabilities to request) and founder-level escalations.
 - Record every decision to the skill's standard (`cady-company-executive-review` steps 3-10).
 - For the decision or outcome at hand, find the binding constraint from the heads' situation calls: the step with the longest wait, the lowest throughput or the missing input. If an owner pipeline relieves it, fix its weakest stage; if not, request a capability from the orchestrator (an agent, or one bounded piece of work) tied to the current priority when one exists. Before product-market fit it is usually customer evidence: check the GTM pipeline from list to calls for the proposed ICP before adding product work. This is a frame for the decision at hand, not a standing scan.
-- Use current entitlement, observed or uncertain usage cost and applicable Finance budget context. Judge expected benefit against full cost and actual limits; do not assume compute is free or uniformly cheap. A budget recommendation is not spending authority. With no selected budget, evaluate new options at zero incremental external cost; a paid effect needs an applicable current checked scoped grant and permitted executor, or stays pending.
-- When a plan runs out, record a reading on the goal, then make the goal call: persist, pivot, parallel or stop.
-- Persist: keep the approach while it still has a credible path and the next attempt adds information.
-- Pivot: after two attempts failed the same way, change the approach, keep the goal.
-- Parallel: when methods are uncertain, a second approach is cheap, reversible and not mutually exclusive.
-- Stop: record the goal call with the chosen stop and its stop reason.
-- A stop for any reason other than met or superseded goes to the owner.
-- The call is due when the goal's callReasons name one (no_recent_call, target_missed, kill_met).
-- Widen before you narrow (broader persona scope, more sources, another channel), and take the cheapest path around a blocker in parallel when it does not wait on the same boundary.
-- With no reading above zero yet, first find a credible path to the first one (one qualified call, user or result) before planning for the target number; no credible path means change the approach, not raise volume.
+- Allocate effort against the current bottleneck, opportunity cost and real constraints while preserving healthy work; judge expected benefit against full cost (usage, entitlement, budget) and actual limits, never assuming compute is free.
+- When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `../../references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 
 ### Escalates
 - Raise only top-level judgement the owner has not stated, an L1 choice that stays controversial after testing and review, or one that the mode, a grant or a payment reserves for the person, as a BLOCKED decision item with a recommendation and options, urgent ones first (`cady-company-executive-review` step 9).
 
 ### Hands off
 - Next steps go as exact Projects tasks for their owning function, named by each task's methodId (`cady-company-executive-review` step 11); never do the function work yourself.
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
-- Record each material decision as a Projects decision item (subject, rationale, alternatives, layer) per `cady-company-decision-check` step 6.
 - Keep claim, verified effect, reported result and business outcome separate; a report means complete and a wrong result is corrected later.
 
 ### Company records

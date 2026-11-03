@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "7ebd5d4b89d50ccb6b18"
-  library: "2adae87402cedc95"
+  version: "a95eb57b5cf16d8eed01"
+  library: "bcd045b5f605c411"
   function: "engineering"
 ---
 # Engineering
 
 **Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "7ebd5d4b89d50ccb6b18@2adae87402cedc95"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "a95eb57b5cf16d8eed01@bcd045b5f605c411"}})`
 
 **Bets** (where this differs from the default):
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
@@ -39,16 +39,11 @@ Read your system map and the architecture decisions in `company_records` before 
 - Make engineering decisions yourself. Raise a cleanliness issue only when it blocks work or keeps recurring; extend the canonical owner rather than adding parallel paths.
 - Delegate per the native orchestration rules (split only substantial orthogonal work; never a reviewer who produced the change); clean up what you started; re-brief a failed helper once, then replace it.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
-- Use current entitlement, observed or uncertain usage cost and applicable Finance budget context. Judge expected benefit against full cost and actual limits; do not assume compute is free or uniformly cheap. A budget recommendation is not spending authority. With no selected budget, evaluate new options at zero incremental external cost; a paid effect needs an applicable current checked scoped grant and permitted executor, or stays pending.
 
 ### Escalates
 - Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record a hypothesis and one ask. Record the answer as a decision item.
 
-### Hands off
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
-
 ### Receipts
-- Record each material decision as a Projects decision item (subject, rationale, alternatives, layer) per `cady-company-decision-check` step 6.
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 - Engineering proposes and maintains the dimension register; Product confirms the labels. Raise agent-drafted labels to Product as one batched BLOCKED decision ask with your recommendation, never as separate "Draft:" decisions. ICP, pricing and core scope live in direction and decisions, not in the register.
 - When a dimension or architecture decision changes the system, update the product's top-level architecture diagram (save a new diagram File, relink it); a scoped diagram covers one dimension and never replaces the overview.
