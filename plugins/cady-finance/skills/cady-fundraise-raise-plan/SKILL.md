@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "c5a065e14dd3adc3293c"
-  library: "b14f38171b325388"
+  version: "e51f0b8ef017906f731e"
+  library: "ae40c76cb73327f0"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
 **Point:** Decide whether, when and how much to raise for a named milestone, so dilution buys proof for the next round.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "c5a065e14dd3adc3293c@b14f38171b325388"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_plan": "e51f0b8ef017906f731e@ae40c76cb73327f0"}})`
 
 **Bets** (where this differs from the default):
 - Size the raise as net burn to a named milestone plus about six months of buffer. Instead of: Raise the round size typical for the stage, or as much as investors will give.
@@ -48,7 +48,7 @@ Decide whether, when and how much to raise (SAFE, note or priced round), model d
 
 ## Procedure
 
-1. If this runs as a Projects work item, claim it with work_change(action: 'claim') (on CONFLICT stop and report the holder); an interactive question needs no claim. Read records_read company:direction and the runway view from `cady-finance-runway`.
+1. If this runs as a Projects work item, claim it with work_write(action: 'claim') (on CONFLICT stop and report the holder); an interactive question needs no claim. Read records_read company:direction and the runway view from `cady-finance-runway`.
 2. Whether and how much. Name the milestone that makes the next round or profitability possible (revenue level, retention, a shipped product) and the months to reach it. Default amount: planned net burn to that milestone plus 6 months of buffer, usually 18 to 24 months of runway. Compare cheaper routes: revenue and prepayments, grants and R&D credits, a smaller round, and venture debt only alongside equity or revenue. Not raising is a valid answer when the company is default alive. Test the amount and milestone as a lead investor would: what they must believe, the objection most likely to stop them, and which investors' theses fit; change the milestone or amount when no evidence answers that objection.
 3. When. Start with at least 9 to 12 months of runway to the floor: a process typically takes 3 to 6 months to cash (unverified). Start just after a milestone proof, not just before it, and avoid launching into local holiday periods.
 4. Instrument. SAFE (post-money): fastest and cheapest, no board, no interest or maturity; a valuation cap and optional discount; the holder's share is fixed at purchase amount divided by the post-money cap, so every further SAFE dilutes founders, not earlier holders. Convertible note: debt with interest (often 4 to 8%) and a maturity date (often 18 to 24 months) that gives holders leverage if no round happens; interest converts too. Priced round: sets a price, issues preferred shares, usually adds a board seat and protective provisions, costs more legal time and fees, and is standard from Series A and common at seed with a lead. Local forms differ (in the UK an advance subscription agreement keeps SEIS and EIS eligibility, which a SAFE does not); confirm the instrument with counsel.
@@ -56,7 +56,7 @@ Decide whether, when and how much to raise (SAFE, note or priced round), model d
 6. Terms to compare and route to counsel: valuation or cap, discount, most favoured nation, pool size, liquidation preference (1x non-participating is the market default), participation, anti-dilution (broad-based weighted average is standard; full ratchet is off-market), board seats, protective provisions, pro rata, founder vesting and information rights. Back-channel a lead with founders from its portfolio, including ones that struggled. Before terms are agreed, run `cady-company-operations-contract-checks` (plan, financing) so that structuring choices such as tax relief and how the round may be marketed are settled while they are cheap.
 7. Process: time-boxed and lead-first. Set a start date and a close target before the first meeting (a common shape is 8 to 12 weeks from first meetings to a lead's term sheet; unverified), and take the ranked pool from `cady-fundraise-investor-list` (seed: often 50 to 100 names, unverified), leads first. Start each investor with crm_tracks_set (motion "investor", roundId), then move the track with crm_tracks_set through prospect, contacted, meeting, diligence, term_sheet, then committed or passed with the reason (a release moves a prospect to contacted). On committed, record what was signed in the same crm_tracks_set call as commitment {roundId, amountMinor, committedOn, evidenceRef: file:<id> of the signed document in Files}; a repeat investor gets one commitment per round. Batch first meetings into 2 to 3 weeks so interest overlaps; follow up within a day with the next step and date; drop investors who stall rather than chase them. Get a lead, then fill the round, then set a close date. Signal check: after about 15 first meetings with no second meetings (unverified), change the story, amount or timing rather than adding volume. Exclusivity after a signed term sheet commonly runs 30 to 45 days (unverified). Keep the round in CRM’s company records. Messages to investors go through `cady-fundraise-investor-outreach`.
 8. Close. Signed documents and money in the bank are separate states; report closed only when funds are received. Before recording shares, inspect recent issues and verify each investment against its evidence document; record only after that receipt, correct only by voiding the issue, and never count a SAFE as issued shares. A suspected duplicate is refused unless distinctReason explains a separate issuance. On the day it completes, run `cady-company-operations-contract-checks` (act, financing): some post-completion clocks are 15 to 30 days, shorter than any monthly review. Post-close securities and registry filings go to `cady-company-operations-compliance-register`.
-9. Report the recommended amount, instrument, dilution table, timeline, terms needing counsel and the next founder decision; for a work item, use work_report. No investor is contacted from this skill.
+9. Report the recommended amount, instrument, dilution table, timeline, terms needing counsel and the next founder decision; for a work item, use work_write. No investor is contacted from this skill.
 
 ## Acceptance
 

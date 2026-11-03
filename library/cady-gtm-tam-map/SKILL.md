@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
   version: "51a796cc679d03f7884e"
-  library: "b14f38171b325388"
+  library: "ae40c76cb73327f0"
   function: "gtm"
 ---
 # TAM map
 
 **Point:** Find people who clearly fit a persona; prefer several narrow personas over one broad, weakly fitting offer.
 
-**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "51a796cc679d03f7884e@b14f38171b325388"}})`
+**Company context:** `context_read({"area": "gtm/prospecting", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.tam_map": "51a796cc679d03f7884e@ae40c76cb73327f0"}})`
 
 **Bets** (where this differs from the default):
 - Gate on clear fit to the persona; sourced signs of its trigger only rank. Instead of: Rank accounts by how much can be sourced about them or by firmographic match.

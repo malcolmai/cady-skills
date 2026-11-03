@@ -15,7 +15,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal. (`library/cady-company-change-agent-behaviour/SKILL.md`)
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it. (`library/cady-company-decision-check/SKILL.md`)
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route. (`library/cady-company-decision-questions/SKILL.md`)
-- `cady-company-executive-review`: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals. (`library/cady-company-executive-review/SKILL.md`)
+- `cady-company-executive-review`: Run the weekly review of open goals and initiatives, or make one company-level decision between reviews. (`library/cady-company-executive-review/SKILL.md`)
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts. (`library/cady-company-experiment/SKILL.md`)
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task. (`library/cady-company-manage-agents/SKILL.md`)
 - `cady-company-method`: Company role card: what this function owns and decides (`library/cady-company-method/SKILL.md`)

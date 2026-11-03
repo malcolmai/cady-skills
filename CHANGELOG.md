@@ -2,12 +2,43 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## b14f38171b325388 · 2026-11-03
+## ae40c76cb73327f0 · 2026-11-03
 
-Since 2a94b0b4645d6de9: 0 new, 0 dropped, 1 changed.
+Since 2a94b0b4645d6de9: 0 new, 0 dropped, 32 changed.
 
 Changed (the parts that differ):
 - `cady`: reference agent-stop.md, reference execution-agent-brief.md
+- `cady-company-decision-questions`: Procedure
+- `cady-company-executive-review`: description, intro, Procedure, Acceptance, Result
+- `cady-company-experiment`: Procedure
+- `cady-company-manage-agents`: Procedure
+- `cady-company-method`: intro, Role card, reference domain-method.md
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-operations-contract-checks`: Procedure
+- `cady-company-operations-inbox-follow-through`: Result
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-company-operations-requirement-register`: Procedure
+- `cady-company-review`: reference setup.md
+- `cady-company-taste-review`: Procedure
+- `cady-core-execution`: reference credentials.md, reference decision-standard.md, reference delivery-completion.md
+- `cady-core-run-sequence`: Run sequence, reference reporting.md
+- `cady-core-skill-index`: company
+- `cady-customer-success-lifecycle`: Procedure
+- `cady-engineering-debugging`: Procedure
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-method`: reference domain-method.md
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-calls`: Procedure
+- `cady-gtm-cold-email-cycle`: Procedure
+- `cady-gtm-events`: Procedure
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-method`: reference domain-method.md
+- `cady-orchestrator-method`: Role card
+- `cady-product-manage`: Procedure
+- `cady-qa-triage`: Procedure
+- `cady-sales-deal-motion`: Procedure
 
 Shared references changed: agent-stop.md, call-follow-up.md, call-prep.md, cold-deliverability.md, company-goals.md, competitor-profile.md, contract-kinds.md, events-attend.md, events-host.md, execution-agent-brief.md, gtm-channels.md, inbox-follow-through-details.md, intro-request.md, outreach-drafting.md, outreach-release.md, people-checklists.md, quality-classes.md, release-plan.md, tam-map-import.md, taste-check.md, taste-message.md, taste-post.md, vendor-purchase.md, vendor-renewal.md.
 

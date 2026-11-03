@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
   version: "ea914c2a71f46d32fe31"
-  library: "b14f38171b325388"
+  library: "ae40c76cb73327f0"
   function: "product"
 ---
 # Research
 
 **Point:** Gather dated, attributable evidence on alternatives or technology so an owner can decide without redoing the analysis.
 
-**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "ea914c2a71f46d32fe31@b14f38171b325388"}})`
+**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "ea914c2a71f46d32fe31@ae40c76cb73327f0"}})`
 
 **Bets** (where this differs from the default):
 - Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "3c92758f0914097da71f"
-  library: "b14f38171b325388"
+  version: "8f872cddbcdd2c00c3bd"
+  library: "ae40c76cb73327f0"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
 
 **Point:** Make the investor case checkable, with one metric definition, dated sources and first objections answered, so diligence confirms it.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "3c92758f0914097da71f@b14f38171b325388"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.raise_materials": "8f872cddbcdd2c00c3bd@ae40c76cb73327f0"}})`
 
 **Bets** (where this differs from the default):
 - Answer the target investor's first three objections in the draft with exact evidence, or name each as an open risk. Instead of: Write the strongest positive narrative and leave objections for the meeting.
@@ -47,8 +47,8 @@ Draft or revise an investor memo, deck narrative, data room or monthly investor 
 3. Monthly investor update, drafted for a fixed send day: subject with company, month and one-line headline; 1) highlights (2 to 3 wins with numbers); 2) metrics table, same rows every month (revenue or MRR, growth, customers, burn, runway months, cash); 3) lowlights and what you are doing about them; 4) asks, specific and actionable (an intro to a named role, a hire, a customer type); 5) thanks. Under 400 words; bad news early and plainly; never change a metric definition without saying so.
 4. Data room, ready before priced-round diligence (lighter for a SAFE): incorporation and governing documents, board and shareholder consents; fully diluted cap table reconciled to the share register and every SAFE, note and option grant with its board approval; IP assignments from every founder, employee and contractor; key customer, supplier and financing contracts; monthly financials for the last 12 to 24 months and the model; metric definitions; team and option list; material filings and disputes. Common gaps that stall a close: a missing IP assignment, an unapproved option grant, a cap table that does not match the register, or no evidence that a US 83(b) election was filed in time (the deadline cannot be cured later).
 5. Reconcile every material number and claim to an exact dated source. Make the narrative and export usable to its audience. Draft to people in your voice pack (`../../references/outreach-drafting.md`, sender_voice); do not create a separate voice card. Check placeholders, stale figures and unsupported traction.
-6. Save the document through the host Files route using files_update or files_create with mode "begin", files_update or files_create with mode "validate" and files_update or files_create with mode "complete" where available. Give it a meaningful name and location, and relate its exact ref to this claimed work through work_change(action: 'checkpoint'); Cady does not classify documents. Read back with work_read and files.read_text when supported.
-7. Report checked File refs, missing evidence and the next founder decision with work_report. A monthly update remains a draft until it is sent through `cady-fundraise-investor-outreach`.
+6. Save the document through the host Files route using files_update or files_create with mode "begin", files_update or files_create with mode "validate" and files_update or files_create with mode "complete" where available. Give it a meaningful name and location, and relate its exact ref to this claimed work through work_write(action: 'checkpoint'); Cady does not classify documents. Read back with work_read and files.read_text when supported.
+7. Report checked File refs, missing evidence and the next founder decision with work_write. A monthly update remains a draft until it is sent through `cady-fundraise-investor-outreach`.
 
 ## Acceptance
 

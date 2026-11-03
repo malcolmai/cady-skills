@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "4fe0a9a00f9599b1e0f4"
-  library: "b14f38171b325388"
+  version: "165e64b4f7c692c17022"
+  library: "ae40c76cb73327f0"
   function: "fundraise"
 ---
 # Fundraise
 
 **Point:** Decide whether and how much to raise for a named milestone, then spend founder time where a yes is likely.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "4fe0a9a00f9599b1e0f4@b14f38171b325388"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "165e64b4f7c692c17022@ae40c76cb73327f0"}})`
 
 **Bets** (where this differs from the default):
 - Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.

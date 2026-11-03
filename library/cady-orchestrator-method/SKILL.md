@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "e36465514f8a73a46882"
-  library: "b14f38171b325388"
+  version: "47251568279e7b3f572c"
+  library: "ae40c76cb73327f0"
   function: "orchestrator"
 ---
 # Orchestrator
 
 **Point:** Turn open goals into one healthy, goal-bound agent each on this host, and verify every claim against owner state.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "e36465514f8a73a46882@b14f38171b325388"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "47251568279e7b3f572c@ae40c76cb73327f0"}})`
 
 **Bets** (where this differs from the default):
 - One recurring agent per goal; a new need becomes a task for that agent or a bounded non-recurring helper, never a second agent. Instead of: Spin up a new specialised agent for each new piece of work or parallel stream.
@@ -52,7 +52,7 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
-- Close each slot once with work_report (its run part records the run); evidence and usage follow the run sequence (skill cady-core-run-sequence).
+- Close each slot once with work_write (its run part records the run); evidence and usage follow the run sequence (skill cady-core-run-sequence).
 
 ### Company records
 - the agent roster (agents_read; read_cady_tool if not listed), read-only beyond this host

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "0f02a2e38fd96a829eb5"
-  library: "b14f38171b325388"
+  version: "bc5b6a65a6827025a7a7"
+  library: "ae40c76cb73327f0"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
 
 **Point:** Pull real obligations and commitments out of the inbox and track them through, without reading every message individually.
 
-**Company context:** `context_read({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "0f02a2e38fd96a829eb5@b14f38171b325388"}})`
+**Company context:** `context_read({"area": "ops/inbox", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.inbox_follow_through": "bc5b6a65a6827025a7a7@ae40c76cb73327f0"}})`
 
 **Bets** (where this differs from the default):
 - Group bulk mail by sender and template, sample a few, and scan the rest for consequential outliers (an invoice, contract, deadline or security action). Instead of: Read and summarise every message, or filter by sender alone.
@@ -81,7 +81,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 - company:work:<workId>
 - crm:interaction:<interactionId>
 - crm:party:<partyId>
-- **Transition:** report the useful outcome, material remainder and next owner through work_report; include counters only in optional observed run output, never create a run just to hold them
+- **Transition:** report the useful outcome, material remainder and next owner through work_write; include counters only in optional observed run output, never create a run just to hold them
 
 ## References
 - Read [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md) when a material inbox outcome, commitment or takeaway needs owner-routed follow-through.
