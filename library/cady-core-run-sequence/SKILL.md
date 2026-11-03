@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "82564682cef51c55104c"
-  library: "bcd045b5f605c411"
+  version: "3fa9721a5072196c222a"
+  library: "836af4a3fd853606"
   function: "core"
 ---
 # Agent run sequence
 
 **Point:** One order for every session, so no run acts on stale state, doubles an effect or ends unrecorded.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "82564682cef51c55104c@bcd045b5f605c411"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "3fa9721a5072196c222a@836af4a3fd853606"}})`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
 
@@ -29,7 +29,7 @@ Run one ordered piece of company work from reconciliation through result. Use wh
 - External effects use the one approval rule and the one message-sending rule in execution authority; channel skills keep only their route mechanics. Instead of: Let each channel restate approval and sending, or let a local route diverge from the approved review.
 - Classify a record by what it is when it is written (relationship type, persona, stage, the unit of work) and let that decide its one home; reuse the record that already covers it. Instead of: Filing it wherever the tool or workflow that made it writes.
 - Record each decision with the one or two pieces of evidence that decided it. Instead of: Collecting quotes and figures, or recording the choice with no reason.
-- When a fact you need is missing, say it is missing and get it from its owner; an empty, capped or refused read means unknown, not none. Instead of: Filling it with a plausible value, a template marker, or a quote found somewhere else.
+- When a fact you need is missing, say so and get it from its owner; if no one holds it, decide on a labelled estimate with its basis; an empty, capped or refused read means unknown, not none. Instead of: Filling it with a plausible value presented as fact, a template marker, or a quote found somewhere else; or stopping at unknown when the call still has to be made.
 
 ## Run sequence
 
