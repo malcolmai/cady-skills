@@ -2,9 +2,9 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## ae40c76cb73327f0 · 2026-11-03
+## 134ebb32ad1e6612 · 2026-11-03
 
-Since 2a94b0b4645d6de9: 0 new, 0 dropped, 32 changed.
+Since 2a94b0b4645d6de9: 0 new, 0 dropped, 34 changed.
 
 Changed (the parts that differ):
 - `cady`: reference agent-stop.md, reference execution-agent-brief.md
@@ -15,11 +15,12 @@ Changed (the parts that differ):
 - `cady-company-method`: intro, Role card, reference domain-method.md
 - `cady-company-operations-compliance-register`: Procedure
 - `cady-company-operations-contract-checks`: Procedure
-- `cady-company-operations-inbox-follow-through`: Result
+- `cady-company-operations-inbox-follow-through`: Procedure, Result
 - `cady-company-operations-people-lifecycle`: Procedure
 - `cady-company-operations-requirement-register`: Procedure
 - `cady-company-review`: reference setup.md
 - `cady-company-taste-review`: Procedure
+- `cady-company-voice-pack`: description, intro, Procedure
 - `cady-core-execution`: reference credentials.md, reference decision-standard.md, reference delivery-completion.md
 - `cady-core-run-sequence`: Run sequence, reference reporting.md
 - `cady-core-skill-index`: company
@@ -35,6 +36,7 @@ Changed (the parts that differ):
 - `cady-gtm-events`: Procedure
 - `cady-gtm-launch`: Gtm launch
 - `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-tam-map`: Procedure
 - `cady-orchestrator-method`: Role card
 - `cady-product-manage`: Procedure
 - `cady-qa-triage`: Procedure

@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-03T00:00:00Z",
   "bundle": {
-    "tag": "ae40c76cb73327f0",
-    "version": "ae40c76cb73327f0209f3931a8e08c08941374ab9b482f994c6b2da0f007ce57",
-    "pluginVersion": "2026.11.3-ae40c76c"
+    "tag": "134ebb32ad1e6612",
+    "version": "134ebb32ad1e6612622119c1d612022b2d4337455df637e92ea99f30c2cffbf2",
+    "pluginVersion": "2026.11.3-134ebb32"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.3-ae40c76c"
+    "version": "2026.11.3-134ebb32"
   },
   "skills": [
     {
@@ -63,7 +63,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "361349a649330e377d2e"
+      "version": "60341af787e37c5d1442"
     },
     {
       "name": "cady-company-method",
@@ -87,7 +87,7 @@
       "name": "cady-company-operations-inbox-follow-through",
       "path": "library/cady-company-operations-inbox-follow-through",
       "cadyId": "skill.company_operations.inbox_follow_through",
-      "version": "bc5b6a65a6827025a7a7"
+      "version": "bca0e975870ad822a797"
     },
     {
       "name": "cady-company-operations-method",
@@ -123,7 +123,7 @@
       "name": "cady-company-voice-pack",
       "path": "library/cady-company-voice-pack",
       "cadyId": "skill.company.voice_pack",
-      "version": "d552eeb5b5b8ba81ea7f"
+      "version": "410fa8ddf6915e11c2dc"
     },
     {
       "name": "cady-core-context",
@@ -291,7 +291,7 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "f2bf5311c9e9a1ee479c"
+      "version": "eb72630f775c663cd880"
     },
     {
       "name": "cady-gtm-linkedin-message",
@@ -333,7 +333,7 @@
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "51a796cc679d03f7884e"
+      "version": "d479dcb84d1ba53bb755"
     },
     {
       "name": "cady-gtm-warm-email",
@@ -405,7 +405,7 @@
       "name": "cady-sales-deal-motion",
       "path": "library/cady-sales-deal-motion",
       "cadyId": "skill.sales.deal_motion",
-      "version": "b2de2bc88a58fb7ab029"
+      "version": "b1a0b6cf7b9bdf63c8d9"
     },
     {
       "name": "cady-sales-method",
