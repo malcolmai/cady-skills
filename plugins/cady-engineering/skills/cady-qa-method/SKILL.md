@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
   version: "7ffbb47293dd99573368"
-  library: "92b470f2d8d6c53e"
+  library: "2a94b0b4645d6de9"
   function: "qa"
 ---
 # QA
 
 **Point:** Show what a fresh user actually meets, with evidence, so each iteration fixes the failures that matter most.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "7ffbb47293dd99573368@92b470f2d8d6c53e"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "7ffbb47293dd99573368@2a94b0b4645d6de9"}})`
 
 **Bets** (where this differs from the default):
 - Walk journeys blind as a fresh user through the real surface; the builder's own walk is only a self-check. Instead of: Let the agent that built it verify it, or test from routes, seeded state and the database.

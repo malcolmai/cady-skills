@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
   version: "47f309eead8b8cb29739"
-  library: "92b470f2d8d6c53e"
+  library: "2a94b0b4645d6de9"
   function: "product"
 ---
 # Customer discovery interviews
 
 **Point:** Learn what customers actually did and paid, not what they say they would, so product decisions rest on behaviour.
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "47f309eead8b8cb29739@92b470f2d8d6c53e"}})`
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.customer_interview": "47f309eead8b8cb29739@2a94b0b4645d6de9"}})`
 
 **Bets** (where this differs from the default):
 - Ask only about specific past instances: the last time it happened, what they did next and what it cost. Instead of: Ask whether they would use or pay for the idea and what they think of the concept.

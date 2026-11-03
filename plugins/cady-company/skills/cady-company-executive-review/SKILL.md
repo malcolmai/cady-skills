@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
   version: "74a5238ba2414778527c"
-  library: "92b470f2d8d6c53e"
+  library: "2a94b0b4645d6de9"
   function: "company"
 ---
 # Executive decision review
 
 **Point:** Make one company decision well, sized to its door, and predict its outcome so the Executive's calls get calibrated.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "74a5238ba2414778527c@92b470f2d8d6c53e"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "74a5238ba2414778527c@2a94b0b4645d6de9"}})`
 
 **Bets** (where this differs from the default):
 - Size the process to the door: decide a reversible, cheap call now with a default and reviewBy; keep pre-mortem and red team for one-way or consequential calls. Instead of: Run the same full analysis (options, base rates, pre-mortem, red team) on every company decision for rigour.
