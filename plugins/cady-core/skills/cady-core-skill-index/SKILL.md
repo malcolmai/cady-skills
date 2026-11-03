@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "136c2e49f5f9682c292f"
-  library: "ac5b4239e832e8db"
+  version: "3ab51347f7d3e04511a6"
+  library: "3fd543d54b0547f6"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "136c2e49f5f9682c292f@ac5b4239e832e8db"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "3ab51347f7d3e04511a6@3fd543d54b0547f6"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -35,10 +35,11 @@ Every Cady task skill, with one line on when to use it.
 
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 - `cady-gtm-calls`: Prepare for a sales or customer call (account brief, agenda, questions), then record its follow-up and next step.
+- `cady-gtm-channel-plan`: Turn accepted persona, offer and chosen channels into channel plays and execution briefs.
 - `cady-gtm-cold-email-cycle`: Write and send cold email to people not yet contacted, using one template per segment.
 - `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations.
 - `cady-gtm-linkedin-message`: Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
-- `cady-gtm-offer-and-segments`: Choose or revise the target segment, offer or message angle from evidence, before a cold cycle and at its review.
+- `cady-gtm-offer-and-segments`: Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-persona-profile`: Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy.
 - `cady-gtm-pipeline-pass`: Pass over due tracks of one motion (customer for GTM, investor for fundraising, partner) and their next steps.
 - `cady-gtm-reply`: Answer an inbound reply in a live thread: a question, interest, objection, referral, not now or stop.

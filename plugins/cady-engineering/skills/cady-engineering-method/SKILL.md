@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "686c74f1f6a4dd4b6192"
-  library: "ac5b4239e832e8db"
+  version: "7ebd5d4b89d50ccb6b18"
+  library: "3fd543d54b0547f6"
   function: "engineering"
 ---
 # Engineering
 
 **Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "686c74f1f6a4dd4b6192@ac5b4239e832e8db"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "7ebd5d4b89d50ccb6b18@3fd543d54b0547f6"}})`
 
 **Bets** (where this differs from the default):
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
@@ -21,6 +21,7 @@ metadata:
 - Use the most reliable, widely used approach on non-differentiating dimensions; reserve custom architecture and research for the differentiating ones. Instead of: Engineer every dimension to the same custom depth, or adopt a generic layer for the core.
 - Ship a compiling, independently reviewed build even when test-only CI is red; stop for security, isolation, authority or first-value regressions. Instead of: Hold every merge and release until all CI is green.
 - Write each test at the lowest layer that proves its claim, and none for behaviour that has never worked. Instead of: Add broad unit and end-to-end coverage around every change to feel safe.
+- Engineering: The run sequence owns the general finish line. Instead of: Let each function card define its own engineering completion and reporting standard.
 
 ## Role card
 
@@ -44,7 +45,7 @@ Read your system map and the architecture decisions in `company_records` before 
 - Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record a hypothesis and one ask. Record the answer as a decision item.
 
 ### Hands off
-- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3; policy:decision-layers). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
+- Finish every step that is not a human boundary yourself, including the decisions that are yours. Decide when your chain from the goal holds, its premises are current and testing and independent review leave you confident; bring the person only top-level judgement or a permission-edge call (`cady-company-decision-check` step 3). Build the owner decision list only from BLOCKED items so the person never answers the same question twice. Come to the person only at a boundary (a call, physical work, spend outside verified authority, an external send, a signature, access) and only with a ready packet: the exact ask, the prepared materials, the time it needs and what happens next; never with an idea or a 'should we'. If a record is close, quote it and ask only the difference. Record it as a BLOCKED checkpoint with boundary {kind, minutes, readyRefs}. Cady delivers it to them as asksForYou.
 
 ### Receipts
 - Record each material decision as a Projects decision item (subject, rationale, alternatives, layer) per `cady-company-decision-check` step 6.

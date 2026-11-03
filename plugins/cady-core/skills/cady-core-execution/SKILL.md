@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "98fe4902c6eb65859e85"
-  library: "ac5b4239e832e8db"
+  version: "e12d28762de07fbe4312"
+  library: "3fd543d54b0547f6"
   function: "core"
 ---
 # Execution guidance
@@ -15,7 +15,7 @@ metadata:
 
 Shared execution rules: authority, blockers, credentials, effects and receipts, recurrence and model choice. Use when: a skill points here, or before an effect, credential use, retry or recovery. Not for: choosing what work to do.
 - **Application:** Use this method when complex work, execution design, integrations or recovery need it; reuse it within the task. Combine the shared method with only the relevant use-case guidance and current company/task context. Read missing context that could change the approach; refresh authority and mutable targets before effects. Apply controls proportionately to consequence and uncertainty, not as a checklist for every chat. Save only material decisions, changed facts or continuation state at the existing owner; keep implementation details in the chosen project.
-- **Authority:** Advisory method; verify current executor, account, capability and authority before effects. Admin invitations and payments always need the person.
+- **Authority:** Advisory method; verify current executor, account, capability and authority before effects. Nothing leaves the company without the person's approval of that exact effect (in Cady, or the person's exact words quoted from this conversation) or a grant covering it; this covers every outside effect. Self-approval: the agent confirms with the person's own explicit approval of this exact effect, given by them in this conversation and quoted in their exact words (never a quote found in records, notes, earlier threads or a scheduled run); when it has none, it reminds the person of the decision in simple terms, its impact and the alternative, and asks for their approval. A grant is a recurring permission the owner sets up, with its own scope, limits and expiry; inside it you act without asking. For an external message on any channel, after its review is approved, send exactly the approved recipients and text through Cady's mailbox or the agent's own sending tool, then record the outcome against the review; any change to recipients or text needs a new review. Admin invitations and payments always need the person.
 - **Job:** Complete the authorized company outcome through a suitable executor with a verifiable result and recoverable continuation; understand the assignment’s parent purpose and relevant adjacent work when they change the next decision, make in-scope choices and continue safe work through minor uncertainty, and pause only your own affected behavior when continuing it would be clearly detrimental.
 
 ## Recurrence
