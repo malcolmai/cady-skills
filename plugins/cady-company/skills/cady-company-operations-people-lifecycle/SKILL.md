@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
   version: "92ee8536d7c961f41d15"
-  library: "4e8b423b84956cfe"
+  library: "92b470f2d8d6c53e"
   function: "company_operations"
 ---
 # Joiners, movers and leavers
 
 **Point:** Get each joiner, mover and leaver's paperwork and access right, proven by system readback, holding no sensitive personal detail.
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "92ee8536d7c961f41d15@4e8b423b84956cfe"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.people_lifecycle": "92ee8536d7c961f41d15@92b470f2d8d6c53e"}})`
 
 **Bets** (where this differs from the default):
 - Default a joiner to member access to every company system, with admin access a named, reasoned exception, until the company records a restricted default. Instead of: Apply least privilege per role from day one.
