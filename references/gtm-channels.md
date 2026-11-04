@@ -1,5 +1,7 @@
 # GTM channel comparison
 
+**Point:** Choose channels the persona already uses and trusts, so a first signal arrives within the stage's time and cost.
+
 - **Choice:** Compare channels on who they reach, cost and time to a signal, so the mix fits the persona and stage. Rank first by where the persona already looks and whom they trust (the persona File's how-they-buy section), then by time to first signal against the goal date, the cost the stage can carry (money, founder hours, reputation or account risk), and learning speed. A channel the persona does not use loses however cheap it is. With a dated goal still at zero, lead with channels needing no new setup or grant that can signal inside the window; start slow-setup channels in parallel only when cheap and not competing for the same founder hours. Budget each channel's weekly founder hours and show the plan's total fits the hours the direction allows; a plan that does not fit drops a channel.
 - **Experiment:** Run one or two channels at a time with pre-registered tests, stop signals and review dates, and use the GTM domain method's Direction rule for evidence strength and the next move.
 - **Boundary:** Name the angle and the customer's words it rests on; the channel's execution work drafts the copy. Write no message copy, subject line, post text or send step, even when asked what would be sent: copy here skips the drafting check and review and fixes text before the brief exists. Name no send date, follow-up cadence, cap or pause threshold; channel strategy owns those choices.

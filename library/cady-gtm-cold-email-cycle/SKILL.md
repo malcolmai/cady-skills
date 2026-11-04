@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "6752a1b1175c1d0daa27"
-  library: "2a94b0b4645d6de9"
+  version: "60d0a2909536dc12c71e"
+  library: "b7f9e546bea6e58a"
   function: "gtm"
 ---
 # Cold email cycle
 
 **Point:** Earn replies from strangers with one honest, segment-true reason, without harming sender reputation.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "6752a1b1175c1d0daa27@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "60d0a2909536dc12c71e@b7f9e546bea6e58a"}})`
 
 **Bets** (where this differs from the default):
 - Open with the recipient's situation in their words; never a self-introduction, praise or an invented reaction. Instead of: Open with 'I'm X from Y' or a compliment on their recent post.
@@ -48,7 +48,7 @@ Write and send cold email to people not yet contacted, using one template per se
 
 ## Procedure
 
-1. Use a work item bound to `cady-gtm-cold-email-cycle`. If starting one, call work_create with this methodId, its current methodVersion, segment, cycle and evidence refs. Read the brief refs (`../../references/outreach-drafting.md`, Brief). If profileRef is unchecked, stop and report to the brief’s author; draft nothing.
+1. Use a work item bound to `cady-gtm-cold-email-cycle`. If starting one, call work_write or decisions_write or asks_write with this methodId, its current methodVersion, segment, cycle and evidence refs. Read the brief refs (`../../references/outreach-drafting.md`, Brief). If profileRef is unchecked, stop and report to the brief’s author; draft nothing.
 2. Read the List or parties and records_read party:<partyId>; apply `../../references/outreach-release.md`, Permission. Exclude opted-out, suppressed, engaged parties (route to warm or reply), prior touches, missing names and role inboxes. Give every candidate, in or out, a one-line reason in words, not a code. Keep unverified destinations visible as held. Verify addresses before first send; keep catch-all a small share, never buy a list and re-verify data older than 90 days.
 3. Before the first cycle or after a sender change, check and record the sender as `../../references/cold-deliverability.md`, setup says.
 4. In cold_template mode the reason belongs to the persona, so people who share it get their own segmentKey (the persona_key). Use the brief’s angle, variants and shares and its segmentKey to write one plain cold_template per variant in the profile’s words; apply `../../references/outreach-drafting.md` (Brief, Unknowns). No images or attachments and at most one link. Run the draft check (the draft check part of `../../references/outreach-drafting.md`) before the taste check (`../../references/taste-message.md`). Use at most one proof item from the credibility inventory, with only CRM-approved customer names. Fields marked templatable use {{field.key|fallback}}. With only title and company size as evidence, ask for a one-word reply or offer a link, not a call.

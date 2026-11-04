@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "468db92bc0bb2a99dbe4"
-  library: "2a94b0b4645d6de9"
+  version: "c09a70bf092575ccad79"
+  library: "b7f9e546bea6e58a"
   function: "design"
 ---
 # Design
 
 **Point:** Give each surface real craft for its audience's job, so the product feels as good as it works.
 
-**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "468db92bc0bb2a99dbe4@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "c09a70bf092575ccad79@b7f9e546bea6e58a"}})`
 
 **Bets** (where this differs from the default):
 - For a material redesign, render about three meaningfully different directions in the real medium and compare them on the same flow. Instead of: Iterate on one direction, or offer palette swaps and written descriptions as the options.

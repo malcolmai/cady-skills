@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
-  version: "5651339f83d66fec34fe"
-  library: "2a94b0b4645d6de9"
+  version: "71da13ffe0305242aabe"
+  library: "b7f9e546bea6e58a"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
 
 **Point:** Prepare the user for one conversation, then capture what the buyer said and the promised next step.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "5651339f83d66fec34fe@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "71da13ffe0305242aabe@b7f9e546bea6e58a"}})`
 
 **Bets** (where this differs from the default):
 - Separate what the buyer said from our inference; friendly interest is not a commitment. Instead of: Write the call up as an upbeat summary with assumed next steps.
@@ -54,8 +54,8 @@ Prepare for a sales or customer call (account brief, agenda, questions), then re
 1. Read the brief and its refs (`../../references/outreach-drafting.md`, Brief), including qualification criteria from offerRef; read records_read party:<partyId> for each exact person. Keep cold and warm context distinct. For cold calls, remind the user that they decide lawfulness and UK numbers may need Telephone Preference Service (TPS) and Corporate Telephone Preference Service (CTPS) screening; this is not clearance.
 2. Prepare one sheet per call using `../../references/call-prep.md`, sheet; save it to Files with files_create or files_update, with upload begin and complete, verify the receipt and reference it on the work item. Report unavailable steps outside the sheet. The user makes the call; Cady never dials and never records audio.
 3. After the call, match the notes-system record to the exact party, date and participants (`../../references/call-follow-up.md`, match); hold an uncertain match. Record one crm_interactions_create interaction, kind call, with occurredAt and sourceRef citing the call note id; keep only connected/not connected, qualified yes/no and next step in note. Never store a transcript, phone number or audio. Preserve sourceRef on retry.
-4. Separate what the buyer said from inference and commitments (`../../references/call-follow-up.md`, separate); handle commitments and act versus ask under `../../references/outreach-drafting.md`, Authority. A connected conversation makes the party engaged; set a stage with crm_tracks_set or crm_tracks_set only when the user states it. Record supported ICP learning on the work item for the brief’s author (channel strategy).
-5. Draft the follow-up using `../../references/call-follow-up.md`, draft and `../../references/outreach-drafting.md`, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `../../references/taste-message.md`. Show the exact unsent proposal for user review; route it through cady-gtm-warm-email. Report the prepared outcome and linked work and source refs with work_report after owner readbacks; do not claim delivery.
+4. Separate what the buyer said from inference and commitments (`../../references/call-follow-up.md`, separate); handle commitments and act versus ask under `../../references/outreach-drafting.md`, Authority. A connected conversation makes the party engaged; set a stage with crm_entities_write or crm_entities_write only when the user states it. Record supported ICP learning on the work item for the brief’s author (channel strategy).
+5. Draft the follow-up using `../../references/call-follow-up.md`, draft and `../../references/outreach-drafting.md`, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `../../references/taste-message.md`. Show the exact unsent proposal for user review; route it through cady-gtm-warm-email. Report the prepared outcome and linked work and source refs with work_write after owner readbacks; do not claim delivery.
 6. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance

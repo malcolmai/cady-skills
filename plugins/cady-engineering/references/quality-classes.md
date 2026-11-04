@@ -1,5 +1,7 @@
 # Software quality classes
 
+**Point:** Give each software risk one quality class and a named owner, so every risk is checked by someone accountable.
+
 - **Guide:** | Family | Class | The question | Boundary |
 |---|---|---|---|
 | Trust | QC1 Identity and session lifecycle | Does "who is calling" stay true across renewal, revocation, devices, versions and client types? | Establishing and keeping who; what they may do is QC2. |

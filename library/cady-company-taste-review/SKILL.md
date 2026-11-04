@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "dac1da1aab496c6afc3a"
-  library: "2a94b0b4645d6de9"
+  version: "1e3a5b0093517c3d56f0"
+  library: "b7f9e546bea6e58a"
   function: "company"
 ---
 # Writing craft and taste decisions
 
 **Point:** Judge writing and design by whether the intended reader acts as hoped, learning the owner's taste from corrections.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "dac1da1aab496c6afc3a@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "1e3a5b0093517c3d56f0@b7f9e546bea6e58a"}})`
 
 **Bets** (where this differs from the default):
 - Start from the reader, what they must do or decide, and the one trade-off, before writing a word. Instead of: Start from the content to cover, then polish the prose.
@@ -46,7 +46,7 @@ Write or edit a post, article, web copy, prompt or skill, or review a design (ju
 2. Writing public text (a LinkedIn, X or blog post, article, script, caption or website copy): create, edit or review it with the written-content craft (its written-content reference).
 3. Writing a prompt or skill: reuse what already works. Write for a capable colleague: outcome, constraints, useful judgment and observable finish line; its name and use_when say what it does, when it applies and how it differs from its neighbours. Keep the core self-contained; move conditional detail into references. Length alone is not a quality verdict. Preserve the owner's limits and existing authority; leave out duplicated instructions and checks a tool already enforces. Place and prove a change to agent behaviour with `cady-company-change-agent-behaviour`.
 4. Judge what you wrote at two levels, the details with `../../references/taste-post.md` for public text and the ui or visual part of `../../references/taste-check.md` for a design. Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, direction or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why. Your own sense of how it lands is not a verdict.
-5. Learn from feedback: an owner correction becomes a decision (work_create decision {kind: "decision", subject: "taste:<medium>-<key>", rationale, chosen, alternatives, quote, source, authority, decidedBy, supersedes}). Put a short trigger, reason, trade-off, exception and confidence in rationale; chosen is the preference, quote the owner's exact words (source chat, authority member, decidedBy their id or "me"); for your own judgment use authority agent and omit decidedBy. A one-off stays low confidence and scoped to its work; promote it to a general preference only after two or three consistent judgments; never record a universal ban; supersede rather than overwrite. Never supersede an owner's taste decision on your own authority: record the conflict and ask once with two real alternatives (A, B, neither or equal, and one line why).
+5. Learn from feedback: an owner correction becomes a decision (work_write or decisions_write or asks_write decision {kind: "decision", subject: "taste:<medium>-<key>", rationale, chosen, alternatives, quote, source, authority, decidedBy, supersedes}). Put a short trigger, reason, trade-off, exception and confidence in rationale; chosen is the preference, quote the owner's exact words (source chat, authority member, decidedBy their id or "me"); for your own judgment use authority agent and omit decidedBy. A one-off stays low confidence and scoped to its work; promote it to a general preference only after two or three consistent judgments; never record a universal ban; supersede rather than overwrite. Never supersede an owner's taste decision on your own authority: record the conflict and ask once with two real alternatives (A, B, neither or equal, and one line why).
 
 ## Acceptance
 

@@ -219,6 +219,45 @@
 #### Vision
 
 - **Input:** text, image
+- **Model:** Claude Haiku 5.5
+
+#### Plans
+
+- **Api:** available
+- **Claude pro, max, team, enterprise:** available
+
+#### Price
+
+- **Basis:** USD per 1M tokens; standard API list price for prompts up to 100,000 tokens (over 100,000: input 0.50, output 2.50)
+- **Cache read:** 0.01
+- **Cache write long:** 0.2
+- **Cache write short:** 0.125
+- **Input:** 0.1
+- **Note:** Cache write: 5m/1h for Anthropic. Service tier, long context, regional and other charges may differ.
+- **Output:** 0.5
+
+#### Price source
+
+- **Checked:** 2026-11-04
+- **Url:** https://platform.claude.com/docs/en/about-claude/pricing
+- **Price status:** verified
+- **Provider:** Anthropic
+
+#### Rating
+
+- **Basis:** not measured
+- **Date:** 2026-11-04
+- **Value for money:** unrated
+
+#### Sources
+
+| Checked | Url |
+|---|---|
+| 2026-11-04 | https://platform.claude.com/docs/en/about-claude/pricing |
+
+- **Status:** current
+- **Tier:** exact-write
+- **Use cases:** fully specified edits handed down by a workhorse: patches, rename lists, path rewrites
 - **Api id:** claude-sonnet-5
 - **Model:** Claude Sonnet 5
 
@@ -384,6 +423,16 @@
 - **Stale after days:** 14
 
 ### Tiers
+
+#### Exact-write
+
+#### Picks
+
+| Model | Plan |
+|---|---|
+| Claude Haiku 5.5 | Claude |
+
+- **Use:** Applies a fully specified change with no judgement: a given patch, rename list, path rewrite or listed replacements, then the named check. Anything that needs a choice goes back to the workhorse that briefed it.
 
 #### Lead
 

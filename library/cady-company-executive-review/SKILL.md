@@ -1,32 +1,34 @@
 ---
 name: "cady-company-executive-review"
-description: "Executive decision review. Use when: Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals. Not for: Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`."
+description: "Executive review. Use when: Run the weekly review of open goals and initiatives, or make one company-level decision between reviews. Not for: Pushing work along, designing or changing agents or doing function work; routine decisions belong to the relevant function method, such as `cady-product-method`."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "74a5238ba2414778527c"
-  library: "2a94b0b4645d6de9"
+  version: "f643bbba42027ef942a8"
+  library: "b7f9e546bea6e58a"
   function: "company"
 ---
-# Executive decision review
+# Executive review
 
-**Point:** Make one company decision well, sized to its door, and predict its outcome so the Executive's calls get calibrated.
+**Point:** Call every goal against its prediction, weigh each initiative and hand the changes to the orchestrator, so calls stay calibrated.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "74a5238ba2414778527c@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "company/direction", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "f643bbba42027ef942a8@b7f9e546bea6e58a"}})`
 
 **Bets** (where this differs from the default):
+- Call every open goal at the weekly review, a persist in one line with its reading; between reviews take one decision only on a trigger. Instead of: Pick one decision per pass and let the other goals stand unrecorded.
 - Size the process to the door: decide a reversible, cheap call now with a default and reviewBy; keep pre-mortem and red team for one-way or consequential calls. Instead of: Run the same full analysis (options, base rates, pre-mortem, red team) on every company decision for rigour.
 - For a consequential call, take the outside view first: a sourced base rate for the reference class, or write 'none'. Instead of: Forecast from the company's own plan and specifics (the inside view).
-- Write the prediction before deciding and score it hit or miss at reviewBy; read the scored records before the next comparable decision. Instead of: Record the decision and its rationale, and judge it later by whether things turned out well.
+- Score each goal's reading against the last call's prediction, both numbers, and name a missing reading unknown with a dated check; write each call's own prediction before deciding. Instead of: Judge a goal from run reports, closed tasks or its trend, and call it on track or at risk without the prediction.
 - Give the red-team subagent the frame and evidence, never your recommendation. Instead of: Ask a reviewer to check the decision you have reached.
-- End every decision in exact tasks for the owning function, with doneWhen lines, and do none of the work yourself. Instead of: Hand the decision down as a recommendation and let the team work out next steps, or start the first step yourself.
+- End the pass in one instruction to the orchestrator listing every change the calls imply, each tied to its goal and the outcome it must reach, and do none of the work yourself. Instead of: File tasks under each function yourself and write their copy or steps, or hand next steps down as a recommendation.
+- Weigh each open initiative to a verdict each weekly review: start it as a goal, fold it into one, or decline it with the reason and a reopening trigger. Instead of: Leave a founder idea open until it seems timely, or add it as work without weighing it against the point and bets.
 
-Make one company-level decision (a goal to start, reshape or stop, market, pricing, a bet) or review the open goals.
+Run the weekly review of open goals and initiatives, or make one company-level decision between reviews.
 
-**Not for:** Pushing work along, designing agents or doing delivery; routine decisions belong to the relevant function method, such as `cady-product-method`.
+**Not for:** Pushing work along, designing or changing agents or doing function work; routine decisions belong to the relevant function method, such as `cady-product-method`.
 
-**Unit of work:** one decision, or one weekly review of the open goals. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
+**Unit of work:** one weekly review of every open goal and initiative, or one decision between reviews. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
 
 ## Inputs
 
@@ -45,25 +47,28 @@ Make one company-level decision (a goal to start, reshape or stop, market, prici
 
 ## Procedure
 
-1. Start each pass from the operating review of the open goals (the company review assessment: for each goal its intended condition, dated evidence, owner and on track, slipping or unknown), then pick one decision. Sources: a goal call reason, a goal slipping or meeting its stop condition; a new founder idea (a proposed goal, step 14); BLOCKED decision items waiting on you; escalations agents handed up; a direction change; material new evidence in list_recent_changes since your last pass. Take the one with the highest cost of delay. If none qualifies, end with 'goals stand' and write nothing.
+1. Pick the pass. The weekly review is your scheduled weekly pass, or any pass where an open goal's callReasons include no_recent_call. In it, call every open goal (step 13), weigh every open initiative (step 14), score any decision whose reviewBy has passed (step 12), then hand the changes to the orchestrator (step 11). A goal kept as it is gets a persist call with its reading, so a weekly review never ends in 'goals stand'. Goal calls and initiative verdicts are recorded as steps 13 and 14 say; run steps 3-8 on one only when it is consequential or one-way, such as a stop other than met. Between reviews, take the one decision with the highest cost of delay from: a BLOCKED decision item waiting on you, an escalation handed up, a goal's other callReasons (target_missed, kill_met, target_met, direction_changed), a direction change, an initiative the orchestrator raises (decided and recorded as step 14 says), or material new evidence in list_recent_changes since your last pass, and take it through steps 2-10. With none, end with 'goals stand' and write nothing.
 2. Look it up first: work_read decisions {state: "current", subject} and the goal. If a current record exists, still holds (`cady-company-decision-check` step 1) and no trigger reopens it, use it and stop; never ask the person twice.
 3. Frame it: the decision in one sentence, the chain from the company goal to it (`cady-company-decision-check` step 3), why now, the deadline or cost of delay, one-way or two-way door, and who decides (`cady-company-decision-check` steps 3 and 4). Pick the one frame that fits: expected value for repeatable bets, real options for reversible exploration, constraint analysis for throughput problems, pre-mortem for one-way doors. Proportion the work to the door: a reversible, low-cost (two-way door) decision is decided now with a stated default and reviewed at reviewBy in hindsight; steps 4-8 stay light, and the full pre-mortem and red team (step 8) are for consequential or one-way decisions only.
 4. Compare the strongest feasible alternative and the status quo where relevant. A genuinely binary choice is valid; judge the choice and evidence, not the option count.
 5. For a consequential or one-way decision, take the outside view first: the reference class and its base rate with a source, or 'none'.
-6. Decide what you need to decide: use `cady-company-decision-questions` for evidence on each uncertainty that would change the choice. Check what owners already hold; request it as bounded work from the orchestrator with a deadline.
+6. Find the evidence that would change the choice: use `cady-company-decision-questions` for each such uncertainty. Check what owners already hold; request the rest as bounded work from the orchestrator with a deadline.
 7. Write the prediction before deciding: for a one-way door a range with a confidence and a kill or reversal condition; for a two-way door the stated default and its reviewBy are enough.
 8. Review before deciding: the strongest alternative and the weakest assumption, re-read against current state when it is over a week old. Only a consequential or one-way decision also gets a pre-mortem and a fresh red-team subagent (review tier) given the frame and evidence, never your recommendation.
-9. Decide within your authority. An L1 choice you may make yourself only in notify mode and when `cady-company-decision-check` step 4 holds; record it and the owner is told. Otherwise, when the call stays controversial after testing and review or the mode reserves it, raise a BLOCKED decision item addressed to the owner with a recommendation and options; it reaches them as asksForYou.
-10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File through files_update or files_create mode "begin" then "complete", and a decision item through work_create with decision {kind: "decision", subject, layer (L1 for a company-level choice under `cady-company-decision-check`, L2 strategy with a keyAssumption, L3 execution), rationale, alternatives, reversal, reviewBy, authority, decidedBy} citing file:<fileId>. For your own choice use authority "agent" and omit decidedBy: Cady records it as your agent, never as the person (no source or quote). A person's choice needs source "chat" with their exact words in quote and decidedBy (or a verified source "grant" with grantId); Cady marks agent-recorded person decisions viaAgent. Keep the item's summary within its 2000-byte limit.
-11. File next steps as exact Projects tasks, each naming its owning function by its methodId, that function's role card or task skill (the orchestrator dispatches): headline, brief {doneWhen: 1-5 plain lines}, nextAction and evidence refs, with goalId, dependsOn or productId only when real. A goal is priority evidence, not task identity or effect authority; a direct one-off needs no invented goal, and a goal grants no effects. Read the reported result before judging outcomes, and correct a wrong one with corrects; never do the function work yourself.
-12. At reviewBy, compare the outcome with the prediction, score it hit or miss, then keep, change or stop; record what you learned as a decision that supersedes the old one. Before the next comparable decision, read the scored records.
-13. Goals: keep the company's priorities as open goal work items (`../../references/company-goals.md`), each with its reason, target, stop condition, expected cost and strongest alternative. Start, reshape or stop one only on a trigger from step 1; otherwise end with 'goals stand' and write nothing. On a direction change, make each open goal's call; supersede or withdraw decisions that assumed the old offer, citing the new direction; close CRM tracks for audiences the new direction drops (crm_tracks_set no_longer_relevant).
-14. Founder ideas: record each as a proposed goal with its reason and the reason's size at intake, and never drop one silently; stop a goal only with a recorded reason, as `../../references/company-goals.md` says.
+9. Decide within your authority. An L1 choice you may make yourself only in notify mode and when `cady-company-decision-check` step 4 holds; record it and the owner is told. Otherwise, when the call stays controversial after testing and review or the mode reserves it, raise a BLOCKED decision item addressed to the owner with options and your recommendation, as the run sequence asks; it reaches them as asksForYou. Ask the owner nothing else: a missing schedule, a record gap or an agent problem goes in the orchestrator instruction (step 11).
+10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File through files_update or files_create mode "begin" then "complete", and a decision item through work_write or decisions_write or asks_write with decision {kind: "decision", subject, layer (L1 for a company-level choice under `cady-company-decision-check`, L2 strategy with a keyAssumption, L3 execution), rationale, alternatives, reversal, reviewBy, authority, decidedBy} citing file:<fileId>. For your own choice use authority "agent" and omit decidedBy: Cady records it as your agent, never as the person (no source or quote). A person's choice needs source "chat" with their exact words in quote and decidedBy (or a verified source "grant" with grantId); Cady marks agent-recorded person decisions viaAgent. Keep the item's summary within its 2000-byte limit.
+11. Hand the changes to the orchestrator as one instruction: one task through work_write or decisions_write or asks_write with methodId `cady-orchestrator-method`, a headline naming the orchestrator, nextAction (what it does first), evidenceRefs (the goal calls and decisions behind the changes) and brief {doneWhen: one line per change}. List every change the pass implies: an agent to re-aim at its goal's binding constraint, pause or point elsewhere after its goal stops, a capability to request, work to file under its owning function, each naming the goal or decision it serves and the outcome it must reach, not how (no copy, scripts or setup steps). The orchestrator designs, dispatches and files function work; file no task under another function and do no function work yourself. With no change, file none.
+12. At a decision's reviewBy, compare the outcome with its prediction, score it hit or miss, then keep, change or stop; record what you learned as a decision that supersedes the old one. Goal calls are scored in step 13. Read reported results before judging an outcome, and correct a wrong one with corrects; before the next comparable decision, read the scored records.
+13. Goals (`../../references/company-goals.md`): at each weekly review, call every open goal. Score its latest reading against the last call's prediction, with both numbers (predicted 10, read 6: miss). With no reading since that call, score it unknown, never hit or miss, and set a dated check that gets one; never count run reports or closed tasks as progress. Then make the call (persist, pivot, parallel or stop, per `../../references/company-goals.md`), aimed at the goal's binding constraint, and record it: work_write or decisions_write or asks_write with goalId set to the goal, status COMPLETE, decision {kind: "decision", authority: "agent" (omit decidedBy), subject: "goal.call:<goalId>", chosen, rationale (the reading against the prediction, the call and why, the prediction for its next reviewBy), reviewBy} and evidenceRefs naming the reading's source. A stop adds stop {reason, evidenceRefs, driverComparison} to the same write; a goal the current bets have overtaken stops with reason superseded. Stop a goal with its stop call, never by cancelling it. On a direction change, make each open goal's call the same way; supersede or withdraw decisions that assumed the old offer, citing the new direction; close CRM tracks for audiences the new direction drops (crm_entities_write no_longer_relevant).
+14. Initiatives: an open initiative is a founder idea or a proposed scope expansion recorded as open work and not yet decided. At each weekly review, weigh each one against the direction's point and bets, the binding constraint and the goals it would compete with, then decide: start it as a goal, fold it into an open goal's next attempt, or decline it with the reason, naming the trigger that reopens it when the timing rather than the idea is wrong. Record it through work_write or decisions_write or asks_write: decision {kind: "decision", authority: "agent" (omit decidedBy), subject: "initiative:<slug>", layer: "L1", chosen (start, fold or decline), rationale, reviewBy} with evidenceRefs naming the initiative's work item, and for a start the goal write beside it; then claim that item and report it done with the verdict. In approval mode, or when the verdict stays controversial, raise it under step 9 instead and report the item once it is answered. Never add one as active work without a verdict, and never drop one silently.
 
 ## Acceptance
 
-- [ ] one decision recorded with frame, strongest feasible alternative, status quo where relevant and reviewBy, plus outside view and prediction for a one-way door; a binary choice is valid
-- [ ] or 'goals stand' with nothing written
+- [ ] weekly review: every open goal has a new goal call with its reading scored against its prediction, or unknown with a dated check
+- [ ] weekly review: every open initiative has a verdict (start, fold or decline) with its reason
+- [ ] agent, focus and execution changes sent as one orchestrator instruction; no task filed under another function and no function work done
+- [ ] between reviews: one decision recorded with frame, strongest feasible alternative, status quo where relevant and reviewBy, plus outside view and prediction for a one-way door; a binary choice is valid
+- [ ] or, between reviews with no trigger, 'goals stand' with nothing written
 - [ ] every stopped goal has a stop reason, evidence and driverComparison
 
 ## Owner checks
@@ -79,7 +84,7 @@ Make one company-level decision (a goal to start, reshape or stop, market, prici
 
 - company:work:<workId>
 - file:<fileId>
-- **Transition:** the Executive records the decision; the orchestrator and agents take the next steps
+- **Transition:** the Executive records its calls and verdicts; the orchestrator acts on its one instruction
 
 ## References
 - Read [Company goals](../../references/company-goals.md) when you start, reshape or stop a goal, or an idea becomes one.

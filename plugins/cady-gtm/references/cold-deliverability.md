@@ -1,5 +1,7 @@
 # Cold email deliverability
 
+**Point:** Keep cold email reaching inboxes without risking the main domain, so results measure the message, not the mailbox.
+
 ## Setup
 
 - Check the sender before the first cycle and after any change; Cady cannot see DNS or mailbox reputation, so the user or host checks and you record what was shown.

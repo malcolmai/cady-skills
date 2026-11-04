@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "7b0286d14a011b8baefb"
-  library: "2a94b0b4645d6de9"
+  version: "b7fc79eb1805c0c67412"
+  library: "b7f9e546bea6e58a"
   function: "product"
 ---
 # Product
 
 **Point:** Decide what to build from users' real outcome against their alternative, so iterations buy correct learning, not output.
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "7b0286d14a011b8baefb@2a94b0b4645d6de9"}})`
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "b7fc79eb1805c0c67412@b7f9e546bea6e58a"}})`
 
 **Bets** (where this differs from the default):
 - Spend most depth on the one or two problems that decide whether the product wins, and prove options by building and measuring them. Instead of: Spread effort evenly across the backlog, or stop at a spec, rubric or research summary for the hard problem.
