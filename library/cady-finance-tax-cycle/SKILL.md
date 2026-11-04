@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.tax_cycle"
   version: "e8b64c55acd81d215441"
-  library: "87df83c8c6a0cd7f"
+  library: "d8784b58e9574044"
   function: "finance"
 ---
 # Entity tax and filing cycle
 
 **Point:** Prepare each entity's tax obligations ahead of their deadlines, so filing and payment happen on time without penalties.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.tax_cycle": "e8b64c55acd81d215441@87df83c8c6a0cd7f"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.tax_cycle": "e8b64c55acd81d215441@d8784b58e9574044"}})`
 
 **Bets** (where this differs from the default):
 - Schedule each return backwards from its controlling deadline, with separate filing and payment dates and slack for review and correction. Instead of: Track the statutory filing date and start preparation as it approaches.

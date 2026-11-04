@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-03T00:00:00Z",
+  "generatedAt": "2026-11-04T00:00:00Z",
   "bundle": {
-    "tag": "87df83c8c6a0cd7f",
-    "version": "87df83c8c6a0cd7f7ab2697eb507e192d6c42f3051943805458252bded0e32c7",
-    "pluginVersion": "2026.11.3-87df83c8"
+    "tag": "d8784b58e9574044",
+    "version": "d8784b58e9574044960434635fc96c1aa0f75794ce8ef584b0d2c8a084ba9e95",
+    "pluginVersion": "2026.11.4-d8784b58"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.3-87df83c8"
+    "version": "2026.11.4-d8784b58"
   },
   "skills": [
     {
@@ -195,7 +195,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "c1e6887b517814b8cb02"
+      "version": "cd5f8936b222ec9da755"
     },
     {
       "name": "cady-engineering-system-cycle",
@@ -357,7 +357,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "170dc00f18b751bbaba5"
+      "version": "b32c990bd143b068311a"
     },
     {
       "name": "cady-product-customer-interview",
@@ -387,7 +387,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "d737de3fc17aa18094a8"
+      "version": "50b80e42fd8e074f0ab8"
     },
     {
       "name": "cady-qa-stories",

@@ -2,7 +2,7 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 87df83c8c6a0cd7f · 2026-11-03
+## d8784b58e9574044 · 2026-11-04
 
 Since 2a94b0b4645d6de9: 0 new, 0 dropped, 38 changed.
 
@@ -46,7 +46,7 @@ Changed (the parts that differ):
 - `cady-qa-triage`: Procedure
 - `cady-sales-deal-motion`: Procedure
 
-Shared references changed: agent-stop.md, call-follow-up.md, call-prep.md, cold-deliverability.md, company-goals.md, competitor-profile.md, contract-kinds.md, events-attend.md, events-host.md, execution-agent-brief.md, gtm-channels.md, inbox-follow-through-details.md, intro-request.md, outreach-drafting.md, outreach-release.md, people-checklists.md, quality-classes.md, release-plan.md, tam-map-import.md, taste-check.md, taste-message.md, taste-post.md, vendor-purchase.md, vendor-renewal.md.
+Shared references changed: agent-stop.md, call-follow-up.md, call-prep.md, cold-deliverability.md, company-goals.md, competitor-profile.md, contract-kinds.md, events-attend.md, events-host.md, execution-agent-brief.md, gtm-channels.md, inbox-follow-through-details.md, intro-request.md, models.md, outreach-drafting.md, outreach-release.md, people-checklists.md, quality-classes.md, release-plan.md, tam-map-import.md, taste-check.md, taste-message.md, taste-post.md, vendor-purchase.md, vendor-renewal.md.
 
 ## 2a94b0b4645d6de9 · 2026-11-03
 
