@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "e41f9fd8587d5662cb07"
-  library: "199ad8bea2e0552f"
+  version: "4e9e1dca6e255281abd3"
+  library: "b7f9e546bea6e58a"
   function: "core"
 ---
 # Agent run sequence
 
 **Point:** One order for every session, so no run acts on stale state, doubles an effect or ends unrecorded.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "e41f9fd8587d5662cb07@199ad8bea2e0552f"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "4e9e1dca6e255281abd3@b7f9e546bea6e58a"}})`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
 
@@ -45,6 +45,7 @@ Run one ordered piece of company work from reconciliation through result. Use wh
 - Claim the selected work: `work_write {"action": "claim", "expectedGeneration": "$generation", "expectedRevision": "$revision", "workId": "$workId"}` (agents)
 - Check current decisions, then do the work: `work_read {"decisions": {"state": "current"}}`
 - Close with the checked outcome: `work_write {"items": [{"claim": "done", "resultSummary": "<checked outcome>"}]}`
+- If the work belongs to a plan, follow the plan path: `work_read {"homePage": {"area": "goals", "filter": "active"}}`
 
 ### Steps
 
@@ -54,6 +55,7 @@ Run one ordered piece of company work from reconciliation through result. Use wh
 - 4. Agents: claim one item: work_write action='claim' (omit attemptId and claimProof; the server fills and reuses them on your connection; a claim on BLOCKED work unblocks it). Stop on a live claim conflict. The method follows the work's subject, not the session's area: if the item is bound to another function's method, refile it (action='refile' with methodId and why) and work it under the subject's method. A claim lasts 30 minutes (control.claim.expiresAt on the work item); renew it with action='renew' before it expires.
 - 5. Do the work. Read context_read {agentId, workId: id} for the skill and records. Stay within scope; resolve lane overlap before go_live. Finish every step short of a human boundary yourself and checkpoint at natural boundaries. Near the budget (about four-fifths spent or a host warning), stop starting steps and close with the result or shortfall. Ask only what blocks and what no current record answers (otherwise choose a sensible default and proceed): when a missing owner fact blocks the next step, ask now with work_write or decisions_write or asks_write {ask} and keep working on the rest; raise each call that stays controversial after testing and review (`cady-company-decision-check` step 3) or owner-only fact the work needs once, each with options, your recommendation, unlocks and blocks naming its own item; decide the rest yourself and record it. A ready ask carries the exact question or effect, the prepared materials (readyRefs), the minutes it needs and what happens next, never an idea or a 'should we'; if a record is close, quote it and ask only the difference. A refused call or a missing tool, connector or permission: fix it yourself if you can; if it needs the person's authority, prepare the fix and raise one ask for approval (kind access) that carries the single action; if the right fix is unclear, raise one ask with the key options and your recommendation. Never hand the person manual steps, and keep working on the rest. A wait on a third party is a nextAction, not an ask. An open hypothesis is the working assumption: treat it as answered, build on it, cite it, and propose a change only with new evidence. decisions.omissions means the list is incomplete. Record each decision per `cady-company-decision-check` step 6 (subject, rationale, alternatives, layer), citing the one or two pieces of evidence that decided it, and mark sensitive records as it says; quote an OPEN pendingConfirmations item back once. Your agent's privacy covers its runs, results, evaluations, cost, prompt and design only, never company work or decisions.
 - 6. Last, close. Two records: a run (agents only, every slot, even no_work) and a work item (anyone, only for an outcome someone would track). Everyone: a reported result is taken as complete and corrected afterwards if wrong (supersede or reopen), not held for acceptance; work that changes what a person or host meets is complete only citing its done story walked blind at the installed build (story:<slug>#<step>@<run>), otherwise report it partial with nextAction 'walk <slug> after release'. Deliver the requested result or verify the effect; preparation is progress unless requested; say saved, sent or done only after the write succeeded and you read it back (an effect: its provider evidence cited on the work), otherwise say proposed or unverified; when the request is to prepare something for a person's review, the prepared, held item is the deliverable: report it done with the review ref. Until live, prepare only. Link owner artifacts; never copy their body. Agents: close with one work_write call (fields, metadata and recovery: the reporting section below). Interactive runs end with asksForYou; report nextRunAt for cadence or runsOn for trigger. When scheduledBy=none, name host setup and raise the owner ask. Before the final reply, turn each question left in your text into an ask if only the owner can answer it (`cady-company-decision-check` steps 2-3), batched; otherwise decide it and say why. Chat points to the ask, never holds the only copy. Agents (agentId): nobody reads your reply, so your whole final reply is the reply line work_write returns, nothing before or after it; notify a person only on failure, an owner action or a goal closed as met. For a stopped run, follow `../../references/agent-stop.md`.
+- 7. A plan agents follow is a goal, not a company-structure record. Create: work_write job goal (the brief is the plan), its steps as tasks with goalId, each material choice as decisions_write with goalId. Follow: find plans with context_read area or work_read homePage {area: goals, areaPath}; read the goal brief and its linked decisions before the first step. If your step read carries planChanged ('plan changed since <date>'), re-read its goal (planChanged.read) before you act on the step. Revisit: supersede the decision, or change the goal; do not edit a step to say so. End: a goal call with stop (reason met or superseded). The browser goal page shows the same plan body, choices and banner.
 
 ## References
 

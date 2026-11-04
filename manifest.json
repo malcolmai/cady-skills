@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-04T00:00:00Z",
   "bundle": {
-    "tag": "199ad8bea2e0552f",
-    "version": "199ad8bea2e0552f4a5c526af26fdc87ad106a97745951571c43af692c6a6897",
-    "pluginVersion": "2026.11.4-199ad8be"
+    "tag": "b7f9e546bea6e58a",
+    "version": "b7f9e546bea6e58a18a07ba2b3269b9aeafd53253a13e6979e6a068d41ac89c7",
+    "pluginVersion": "2026.11.4-b7f9e546"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.4-199ad8be"
+    "version": "2026.11.4-b7f9e546"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "1f0ec0ced26f9d1ca1ac"
+      "version": "db1aff1d8290d6aae390"
     },
     {
       "name": "cady-accounting-method",
@@ -45,13 +45,13 @@
       "name": "cady-company-decision-questions",
       "path": "library/cady-company-decision-questions",
       "cadyId": "skill.company.decision_questions",
-      "version": "878107373e1219de965d"
+      "version": "d2d9613b484e0373e756"
     },
     {
       "name": "cady-company-executive-review",
       "path": "library/cady-company-executive-review",
       "cadyId": "skill.company.executive_review",
-      "version": "c85fd13fd8fc60148d8a"
+      "version": "f643bbba42027ef942a8"
     },
     {
       "name": "cady-company-experiment",
@@ -69,7 +69,7 @@
       "name": "cady-company-method",
       "path": "library/cady-company-method",
       "cadyId": "company.method.company",
-      "version": "b057e7fe6d057987ae58"
+      "version": "cfb9ff80d8e93ef11b2a"
     },
     {
       "name": "cady-company-operations-compliance-register",
@@ -141,7 +141,7 @@
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "e41f9fd8587d5662cb07"
+      "version": "4e9e1dca6e255281abd3"
     },
     {
       "name": "cady-core-skill-index",

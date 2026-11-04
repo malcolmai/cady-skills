@@ -2,17 +2,17 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 199ad8bea2e0552f · 2026-11-04
+## b7f9e546bea6e58a · 2026-11-04
 
 Since 2a94b0b4645d6de9: 0 new, 0 dropped, 38 changed.
 
 Changed (the parts that differ):
-- `cady`: reference agent-stop.md, reference execution-agent-brief.md
+- `cady`: Start every run, reference agent-stop.md, reference execution-agent-brief.md
 - `cady-company-decision-questions`: Procedure
 - `cady-company-executive-review`: description, intro, Procedure, Acceptance, Result
 - `cady-company-experiment`: Procedure
 - `cady-company-manage-agents`: Procedure
-- `cady-company-method`: intro, Role card, reference domain-method.md
+- `cady-company-method`: intro, Role card, Selected judgment, reference domain-method.md
 - `cady-company-operations-compliance-register`: Procedure
 - `cady-company-operations-contract-checks`: Inputs, Procedure
 - `cady-company-operations-inbox-follow-through`: Procedure, Result

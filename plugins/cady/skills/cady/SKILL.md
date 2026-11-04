@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "1f0ec0ced26f9d1ca1ac"
-  library: "199ad8bea2e0552f"
+  version: "db1aff1d8290d6aae390"
+  library: "b7f9e546bea6e58a"
   function: "core"
 ---
 # Cady
@@ -42,6 +42,7 @@ Then follow cady-core-run-sequence. A new company, or one with no direction yet,
 | `ops/legal` | filings, registers, compliance, tax |
 | `ops/records` | recording and consolidating decisions, files and work |
 | `ops/inbox` | mail triage, commitments, follow-ups and what to record |
+| `company/direction` | the company point, bets and company-wide choices |
 | `finance/pricing` | plans, prices, limits, Stripe |
 | `finance/plan` | the finance plan: cash, burn, runway |
 
@@ -53,6 +54,6 @@ Read `agents_read` first (through `read_cady_tool` where your host does not list
 
 Try: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in its Claude Code group plugin, or `library/<name>/SKILL.md` beside this skill (Cady reply paths mean either place); `records_read {refs:["<cady-id>"]}`, e.g. `records_read {refs:["skill.gtm.reply"]}`, returns method text; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/199ad8bea2e0552f/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/b7f9e546bea6e58a/
 
 A fork changes that line to its own raw URL and branch.
