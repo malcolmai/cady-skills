@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
   version: "3bc1d70c76a157e4e1a6"
-  library: "3a6b57b5728fb7c0"
+  library: "304b45825981f34c"
   function: "gtm"
 ---
 # Offer and persona
 
 **Point:** Turn the persona profile into the right offer, checking first that we understand the customer well enough.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "3bc1d70c76a157e4e1a6@3a6b57b5728fb7c0"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.offer_and_segments": "3bc1d70c76a157e4e1a6@304b45825981f34c"}})`
 
 **Bets** (where this differs from the default):
 - Write the promise as the customer would say it, against what they do today; keep a sender term only where they use it. Instead of: Write the value proposition in the company's language: category, mechanism, 'AI-powered platform'.
