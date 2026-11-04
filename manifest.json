@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-04T00:00:00Z",
   "bundle": {
-    "tag": "4f2bb2a29c877c2e",
-    "version": "4f2bb2a29c877c2ee735f872b7edc0783f78b1a74717f2508bbd4a563071868f",
-    "pluginVersion": "2026.11.4-4f2bb2a2"
+    "tag": "3a6b57b5728fb7c0",
+    "version": "3a6b57b5728fb7c03da411f7dca61b240897c170f8f29551b0ab29110d57a5c7",
+    "pluginVersion": "2026.11.4-3a6b57b5"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.4-4f2bb2a2"
+    "version": "2026.11.4-3a6b57b5"
   },
   "skills": [
     {
@@ -51,7 +51,7 @@
       "name": "cady-company-executive-review",
       "path": "library/cady-company-executive-review",
       "cadyId": "skill.company.executive_review",
-      "version": "30401b757c17ed21dd5c"
+      "version": "387a5106bbdc5b784d09"
     },
     {
       "name": "cady-company-experiment",
@@ -63,13 +63,13 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "a2357738c4b5deb0a7ff"
+      "version": "869cf81db97bf05d9eea"
     },
     {
       "name": "cady-company-method",
       "path": "library/cady-company-method",
       "cadyId": "company.method.company",
-      "version": "cfb9ff80d8e93ef11b2a"
+      "version": "436ad612984fe2de4df5"
     },
     {
       "name": "cady-company-operations-compliance-register",
@@ -111,7 +111,7 @@
       "name": "cady-company-review",
       "path": "library/cady-company-review",
       "cadyId": "execution.topic.company_review",
-      "version": "84dcc01625fa88436e51"
+      "version": "6238bb46cb80d6584aec"
     },
     {
       "name": "cady-company-taste-review",
@@ -135,7 +135,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "4eee3ce3761ddf290d2b"
+      "version": "c6c5773177be9f8abd50"
     },
     {
       "name": "cady-core-run-sequence",
@@ -357,7 +357,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "b32c990bd143b068311a"
+      "version": "c3095cbf8feb84cea1ea"
     },
     {
       "name": "cady-product-customer-interview",

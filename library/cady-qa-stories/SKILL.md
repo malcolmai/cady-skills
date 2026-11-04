@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
   version: "addd1eb40ee113b2144e"
-  library: "4f2bb2a29c877c2e"
+  library: "3a6b57b5728fb7c0"
   function: "qa"
 ---
 # User stories: keep, walk and read
 
 **Point:** Walk real user goals blind as a stranger would, so story status shows what a new user actually meets.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "addd1eb40ee113b2144e@4f2bb2a29c877c2e"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.stories": "addd1eb40ee113b2144e@3a6b57b5728fb7c0"}})`
 
 **Bets** (where this differs from the default):
 - Upload a step picture from its file and let the tool check the hash; the model never carries the bytes. Instead of: Paste or retype the image's base64 into the tool call.
