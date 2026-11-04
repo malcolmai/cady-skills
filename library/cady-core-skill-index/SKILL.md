@@ -6,12 +6,12 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
   version: "217ed4c1c83701aebcf2"
-  library: "d8784b58e9574044"
+  library: "584f400834f42c35"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "217ed4c1c83701aebcf2@d8784b58e9574044"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "217ed4c1c83701aebcf2@584f400834f42c35"}})`
 
 Every Cady task skill, with one line on when to use it.
 
