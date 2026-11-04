@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
   version: "c85fd13fd8fc60148d8a"
-  library: "584f400834f42c35"
+  library: "199ad8bea2e0552f"
   function: "company"
 ---
 # Executive review
 
 **Point:** Call every goal against its prediction, weigh each initiative and hand the changes to the orchestrator, so calls stay calibrated.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "c85fd13fd8fc60148d8a@584f400834f42c35"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "c85fd13fd8fc60148d8a@199ad8bea2e0552f"}})`
 
 **Bets** (where this differs from the default):
 - Call every open goal at the weekly review, a persist in one line with its reading; between reviews take one decision only on a trigger. Instead of: Pick one decision per pass and let the other goals stand unrecorded.

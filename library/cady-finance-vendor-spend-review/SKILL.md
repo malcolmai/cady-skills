@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
   version: "e664bfe7cd88ce6a40bf"
-  library: "584f400834f42c35"
+  library: "199ad8bea2e0552f"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
 **Point:** Decide each purchase or renewal on full commitment against no-buy and cheaper workarounds, so money goes where use proves value.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "e664bfe7cd88ce6a40bf@584f400834f42c35"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "e664bfe7cd88ce6a40bf@199ad8bea2e0552f"}})`
 
 **Bets** (where this differs from the default):
 - Compare every purchase against no-buy, the existing tool and a cheaper workaround, listing the free or zero-incremental option first. Instead of: Compare paid vendors with each other and pick the best value among them.
