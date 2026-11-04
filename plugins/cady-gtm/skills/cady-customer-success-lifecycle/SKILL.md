@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
   version: "5ad8c0bde13f405886eb"
-  library: "b7f9e546bea6e58a"
+  library: "4f2bb2a29c877c2e"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
 
 **Point:** Get each customer to the first result they bought by a date, then keep, grow or end the account honestly.
 
-**Company context:** `context_read({"area": "customer_success/lifecycle", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "5ad8c0bde13f405886eb@b7f9e546bea6e58a"}})`
+**Company context:** `context_read({"area": "customer_success/lifecycle", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.customer_success.lifecycle": "5ad8c0bde13f405886eb@4f2bb2a29c877c2e"}})`
 
 **Bets** (where this differs from the default):
 - At kickoff agree first value in the customer's words with a date; past it without the result, the account is at risk. Instead of: Measure onboarding by account setup, logins and a warm kickoff.
