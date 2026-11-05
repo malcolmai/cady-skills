@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
   version: "972fdda745c000100a6a"
-  library: "25ca7976ab432995"
+  library: "fd2ce869bc7d467d"
   function: "sales"
 ---
 # Sales
 
 **Point:** Qualify from the buyer's own words and actions, so effort goes to deals that can close and non-fits end fast.
 
-**Company context:** `context_read({"area": "sales/deals", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "972fdda745c000100a6a@25ca7976ab432995"}})`
+**Company context:** `context_read({"area": "sales/deals", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.sales": "972fdda745c000100a6a@fd2ce869bc7d467d"}})`
 
 **Bets** (where this differs from the default):
 - Establish the buying trigger, current alternative and who decides from what the buyer said or did; unknown beats a model-completed field. Instead of: Fill a qualification framework (BANT, MEDDIC, SPICED) from one friendly call and the account's profile.
