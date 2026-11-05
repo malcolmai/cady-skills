@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
   version: "c09a70bf092575ccad79"
-  library: "ad5d64b42572209d"
+  library: "25ca7976ab432995"
   function: "design"
 ---
 # Design
 
 **Point:** Give each surface real craft for its audience's job, so the product feels as good as it works.
 
-**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "c09a70bf092575ccad79@ad5d64b42572209d"}})`
+**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "c09a70bf092575ccad79@25ca7976ab432995"}})`
 
 **Bets** (where this differs from the default):
 - For a material redesign, render about three meaningfully different directions in the real medium and compare them on the same flow. Instead of: Iterate on one direction, or offer palette swaps and written descriptions as the options.

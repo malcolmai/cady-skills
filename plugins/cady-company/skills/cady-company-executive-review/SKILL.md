@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "387a5106bbdc5b784d09"
-  library: "ad5d64b42572209d"
+  version: "1b1614216f536f61e777"
+  library: "25ca7976ab432995"
   function: "company"
 ---
 # Executive review
 
 **Point:** Call every goal against its prediction, weigh each initiative and hand the changes to the orchestrator, so calls stay calibrated.
 
-**Company context:** `context_read({"area": "company/direction", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "387a5106bbdc5b784d09@ad5d64b42572209d"}})`
+**Company context:** `context_read({"area": "company/direction", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.executive_review": "1b1614216f536f61e777@25ca7976ab432995"}})`
 
 **Bets** (where this differs from the default):
 - Call every open goal at the weekly review, a persist in one line with its reading; between reviews take one decision only on a trigger. Instead of: Pick one decision per pass and let the other goals stand unrecorded.
@@ -65,6 +65,7 @@ Run the weekly review of open goals and initiatives, or make one company-level d
 16. Setup. For a new company, you do the setup work with execution topic company_review (setup, finish): draft the company point and function points; 3 to 5 bets as open hypotheses, each with a measure saying where it helps and where it hurts; goals as a phased roadmap, each phase with a gate in and a gate out, and the agent roster each goal needs, each agent shown by its decision map (goal, node, trigger, decides alone, consults on, hands off). Put it to the owner as one proposal they can edit or strike items from, then approve once, agents by their map. Only after that approval does the orchestrator create agents, starting with prepare-only first tasks; go-live stays gated by evaluations.
 17. Advice run. When the orchestrator runs you with a question, its options and evidence refs, answer in that run, no waiting for the weekly review: a recommendation, its reasons and the strongest alternative. Where the evidence bar and decision_check step 4 allow, record the point or bet change yourself; otherwise name the missing evidence. The orchestrator decides and acts, and a goal-target change is its own. If the problem is extended system work, say so and ask for a handover instead.
 18. Loop discipline. The loops are a design, not a fence: every agent has the same tools. When you see an agent act outside its loop (an inner agent writing a bet, say), take it as a drift to judge: flag it in the weekly review and record an observation on the methods node.
+19. Load and fit (weekly). Read company:system_map and the people-and-agents load view when each is served (until then use the work profile reads you hold: who carries more than their stated weekly capacity, who has room, how much open work has no size). This is an allocation question, not a judgement of anyone: if someone is overloaded, name the work that should move and to whom (a person with room, or an agent), and hand that change to the orchestrator under step 11; if work is unsized, ask its assigner for a size. Where an observation shows a fit problem (the same kind of work slipping with the same holder), record it on the node as an observation and change the allocation, not the person. Strengths and weaknesses are visible only to the person and admins, are never ranked, and stay out of any note you write. Applies where people carry a work profile.
 
 ## Acceptance
 

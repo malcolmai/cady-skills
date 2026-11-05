@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "217ed4c1c83701aebcf2"
-  library: "ad5d64b42572209d"
+  version: "8b51be95967e0918a49d"
+  library: "25ca7976ab432995"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "217ed4c1c83701aebcf2@ad5d64b42572209d"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"cady.skill_index": "8b51be95967e0918a49d@25ca7976ab432995"}})`
 
 Every Cady task skill, with one line on when to use it.
 
@@ -20,6 +20,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.
+- `cady-company-distil`: A due distil task names a node whose critical observations are waiting on the outer loop.
 - `cady-company-executive-review`: Run the weekly review of open goals and initiatives, or make one company-level decision between reviews.
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.

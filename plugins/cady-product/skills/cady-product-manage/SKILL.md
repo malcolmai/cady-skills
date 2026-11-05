@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
   version: "25d983847b85b27e74e0"
-  library: "ad5d64b42572209d"
+  library: "25ca7976ab432995"
   function: "product"
 ---
 # Product management and discovery
 
 **Point:** Decide what to build from evidence and run each goal to a live, measured result, because plans are not outcomes.
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "25d983847b85b27e74e0@ad5d64b42572209d"}})`
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.manage": "25d983847b85b27e74e0@25ca7976ab432995"}})`
 
 **Bets** (where this differs from the default):
 - Start with one offering, one assumed ICP and problem hypothesis with its disproof, and one first-value goal; defer everything else. Instead of: Build the full product model first: personas, roadmap, dimensions, research and stories.

@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
   version: "3df6e8cc132aef2eccb5"
-  library: "ad5d64b42572209d"
+  library: "25ca7976ab432995"
   function: "marketing"
 ---
 # Marketing
 
 **Point:** Create and test demand with truthful promises, judged on qualified response, after diagnosing where the funnel actually breaks.
 
-**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "3df6e8cc132aef2eccb5@ad5d64b42572209d"}})`
+**Company context:** `context_read({"area": "gtm/content", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.marketing": "3df6e8cc132aef2eccb5@25ca7976ab432995"}})`
 
 **Bets** (where this differs from the default):
 - Diagnose first: no response, response without conversion, and conversion with churn each need different work. Instead of: Answer weak results by producing more content or posting on more channels.

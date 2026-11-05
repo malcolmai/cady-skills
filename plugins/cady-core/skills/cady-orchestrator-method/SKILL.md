@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "c3095cbf8feb84cea1ea"
-  library: "ad5d64b42572209d"
+  version: "294b1e7ebc01ef07417a"
+  library: "25ca7976ab432995"
   function: "orchestrator"
 ---
 # Orchestrator
 
 **Point:** Run the company's work: turn open goals into one healthy, goal-bound agent each on this host, judge every run against the root points and bets, pause and hand over what is not up to scratch, and verify every claim against owner state.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "c3095cbf8feb84cea1ea@ad5d64b42572209d"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "294b1e7ebc01ef07417a@25ca7976ab432995"}})`
 
 **Bets** (where this differs from the default):
 - One recurring agent per goal; a new need becomes a task for that agent or a bounded non-recurring helper, never a second agent. Instead of: Spin up a new specialised agent for each new piece of work or parallel stream.
@@ -37,6 +37,7 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 - Every run reports what it learned as observations; points and bets are written by the Executive; a choice or initiative under its goals is yours.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 - Manage this host's agents, and take a silent host's agents when the server names this host as its moveTo (`cady-company-manage-agents`, Silent hosts reference). Each run, remove or pause each triggersToRemove trigger here, then make its next call (step 9).
+- Allocate work to the holder who fits: a person or an agent, chosen by role, free capacity and any strengths visible to you (a person's own and admins' reads only; never ask for or infer one you cannot see), never ranked or scored. Give a person a top-level brief (outcome, why it matters, constraints, deadline, done when) and no steps, and let the proposed date stand unless you have reason to change it; a warning that a date overruns their capacity is a steer to agree another date or split the work, never a refusal. Check in once, at about half the time to the deadline, only if the task has had no update; after that, raise at-risk on the deadline to whoever assigned it. Never chase a person by message. This applies where people carry a work profile; otherwise allocate among agents as before.
 
 ### Decides
 - Apply the safety-isolation exceptions in `cady-company-manage-agents` step 1 (no capacity exception); reuse healthy agents and retire helpers. Give helpers purpose, truth source, owner limits verbatim and finish line. Assign and continue work only against current recorded outcomes and function-owner acceptance, reconciled by the run sequence. The function owner decides acceptance repairs or supersession; you preserve that decision through assignment and integration and verify returned evidence and shortfall.

@@ -2,16 +2,20 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## ad5d64b42572209d · 2026-11-04
+## 25ca7976ab432995 · 2026-11-05
 
-Since b7f9e546bea6e58a: 0 new, 0 dropped, 6 changed.
+Since b7f9e546bea6e58a: 1 new, 0 dropped, 7 changed.
+
+New:
+- `cady-company-distil`
 
 Changed (the parts that differ):
 - `cady-company-executive-review`: description, intro, Procedure, Acceptance
-- `cady-company-manage-agents`: Procedure
+- `cady-company-manage-agents`: Inputs, Procedure, References, reference agent-design.md, reference agent-review.md, reference agent-setup.md, reference retiring.md
 - `cady-company-method`: intro, Role card
 - `cady-company-review`: reference setup.md
 - `cady-core-execution`: reference decision-standard.md
+- `cady-core-skill-index`: company
 - `cady-orchestrator-method`: intro, Role card
 
 ## b7f9e546bea6e58a · 2026-11-04

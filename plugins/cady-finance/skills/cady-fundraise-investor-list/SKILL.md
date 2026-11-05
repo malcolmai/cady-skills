@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
   version: "9744a8056975a6f10667"
-  library: "ad5d64b42572209d"
+  library: "25ca7976ab432995"
   function: "fundraise"
 ---
 # Ranked investor list
 
 **Point:** Rank real investors by what they funded and can still fund, so founder time goes where a yes is likely.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "9744a8056975a6f10667@ad5d64b42572209d"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_list": "9744a8056975a6f10667@25ca7976ab432995"}})`
 
 **Bets** (where this differs from the default):
 - Rank by deals actually made and capacity to invest now. Instead of: Rank by stated thesis fit and warm path.
