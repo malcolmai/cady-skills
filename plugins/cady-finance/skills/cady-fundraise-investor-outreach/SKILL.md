@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
   version: "b4a2fa4935fd51c940bc"
-  library: "fd2ce869bc7d467d"
+  library: "f367ea12f66f38bc"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
 **Point:** Earn first meetings with fitting investors, warm path first, on one sourced reason and true results, never invented traction.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "b4a2fa4935fd51c940bc@fd2ce869bc7d467d"}})`
+**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "b4a2fa4935fd51c940bc@f367ea12f66f38bc"}})`
 
 **Bets** (where this differs from the default):
 - Ask for a double opt-in introduction with a forwardable blurb wherever a credible warm path exists; write cold only when none does. Instead of: Cold email the whole ranked list, or ask a contact to forward the deck without checking the investor wants it.
