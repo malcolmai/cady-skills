@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
   version: "e510597361fcd7a1d171"
-  library: "f367ea12f66f38bc"
+  library: "d63cf26c33473e84"
   function: "company"
 ---
 # Who decides: the decision journey
 
 **Point:** Settle whether a choice or effect is decided, whose it is, and record it once.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "e510597361fcd7a1d171@f367ea12f66f38bc"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "e510597361fcd7a1d171@d63cf26c33473e84"}})`
 
 **Bets** (where this differs from the default):
 - Decide or ask by risk (what breaks, for whom, how reversibly) and independent review, not by the decision's layer. Instead of: Ask the owner about every decision labelled company-level and decide everything below that alone.

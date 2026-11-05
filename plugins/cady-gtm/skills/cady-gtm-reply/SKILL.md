@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
   version: "98fb93a58c9c529f5aa3"
-  library: "f367ea12f66f38bc"
+  library: "d63cf26c33473e84"
   function: "gtm"
 ---
 # Reply in a live thread
 
 **Point:** Learn what they want, judge fit honestly now or later, answer only that, honour stops, let them set the pace.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "98fb93a58c9c529f5aa3@f367ea12f66f38bc"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.reply": "98fb93a58c9c529f5aa3@d63cf26c33473e84"}})`
 
 **Bets** (where this differs from the default):
 - A stop gets nothing back, not even a confirmation; one more message after a stop is the costliest failure. Instead of: Confirm the unsubscribe or ask once more whether they are sure.

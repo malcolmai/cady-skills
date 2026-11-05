@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
   version: "60d0a2909536dc12c71e"
-  library: "f367ea12f66f38bc"
+  library: "d63cf26c33473e84"
   function: "gtm"
 ---
 # Cold email cycle
 
 **Point:** Earn replies from strangers with one honest, segment-true reason, without harming sender reputation.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "60d0a2909536dc12c71e@f367ea12f66f38bc"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.cold_email_cycle": "60d0a2909536dc12c71e@d63cf26c33473e84"}})`
 
 **Bets** (where this differs from the default):
 - Open with the recipient's situation in their words; never a self-introduction, praise or an invented reaction. Instead of: Open with 'I'm X from Y' or a compliment on their recent post.

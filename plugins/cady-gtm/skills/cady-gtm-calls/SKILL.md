@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
   version: "71da13ffe0305242aabe"
-  library: "f367ea12f66f38bc"
+  library: "d63cf26c33473e84"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
 
 **Point:** Prepare the user for one conversation, then capture what the buyer said and the promised next step.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "71da13ffe0305242aabe@f367ea12f66f38bc"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "71da13ffe0305242aabe@d63cf26c33473e84"}})`
 
 **Bets** (where this differs from the default):
 - Separate what the buyer said from our inference; friendly interest is not a commitment. Instead of: Write the call up as an upbeat summary with assumed next steps.

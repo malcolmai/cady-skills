@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
   version: "2cb82d88478c9dc08697"
-  library: "f367ea12f66f38bc"
+  library: "d63cf26c33473e84"
   function: "gtm"
 ---
 # GTM
 
 **Point:** Start from the customer and their words so offer, message and channel earn real conversations, then revise on evidence.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "2cb82d88478c9dc08697@f367ea12f66f38bc"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "2cb82d88478c9dc08697@d63cf26c33473e84"}})`
 
 **Bets** (where this differs from the default):
 - Before the first result, find one credible path to a qualified conversation and act on it within days; re-plan from what happens. Instead of: Write and polish a full GTM strategy (ICP, positioning, channel mix, targets) before any real outreach.
