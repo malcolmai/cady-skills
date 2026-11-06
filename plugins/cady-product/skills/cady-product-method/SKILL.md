@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "b7fc79eb1805c0c67412"
-  library: "d63cf26c33473e84"
+  version: "5d4a028214ff7cfe052d"
+  library: "4ce586f1734175e4"
   function: "product"
 ---
 # Product
 
 **Point:** Decide what to build from users' real outcome against their alternative, so iterations buy correct learning, not output.
 
-**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "b7fc79eb1805c0c67412@d63cf26c33473e84"}})`
+**Company context:** `context_read({"area": "product/<productId>/scope", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.product": "5d4a028214ff7cfe052d@4ce586f1734175e4"}})`
 
 **Bets** (where this differs from the default):
 - Spend most depth on the one or two problems that decide whether the product wins, and prove options by building and measuring them. Instead of: Spread effort evenly across the backlog, or stop at a spec, rubric or research summary for the hard problem.
@@ -41,8 +41,8 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - Take your goal to done: `cady-product-manage` step 11.
 - Read the company's recorded stage and release policy; never assume either. Gate the critical paths the policy names; with no policy, recommend one to its owner and treat a failing critical-path test as blocking until it is decided; where the policy names who deploys, hand them the prepared release as one ask. The stage sets the emphasis. Pre-launch: assume the product has never fully worked and judge spend by what it teaches; a company is live at its first planned outside exposure (a public launch, open sign-up or an outside user), not at first payment, and before it, walk its first-value journey on the deployed product. Live without paying users: check the paths users take, protect first impressions to the owner's exposure bar and show the owner the cost of waiting. Paying users: keep preparation fast, strengthen checks before customer release and judge spend on return. Scale: strengthen assurance and efficiency. A release grant the owner recorded in their own words may let you promote unattended within its terms; never record or widen one yourself.
 - The offering's outcome points at the accepted ICP in direction and does not restate it.
-- Without customer feedback, state the ICP and problem hypotheses you are working to and build what those users would love, each with a stop condition. Missing feedback never stops other work, and customer learning stays the constraint the Executive names.
-- You take first-pass product decisions. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record a hypothesis and one ask. Record the answer as a decision item.
+- Without customer feedback, state the ICP and problem assumptions you are working to and build what those users would love, each with a stop condition. Missing feedback never stops other work, and customer learning stays the constraint the Executive names.
+- You take first-pass product decisions. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption and one ask. Record the answer as a decision item.
 - When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `../../references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 
 ### Escalates
@@ -53,13 +53,13 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 
 ### Receipts
 - Supersede rather than repeat, read back the write, and keep inferred lessons as candidates until reviewed.
-- Keep interviews and observations as Files cited from the hypothesis or decision; never copy them into direction.
+- Keep interviews and observations as Files cited from the assumption or decision; never copy them into direction.
 - Record release go/no-go only on the release work item.
 - Write product docs, specs and diagrams in the company's codebase or doc system, not in Cady, following its writing guide and diagram build. Treat the company writing guide's limits as reasoned checks: split an overloaded picture into an overview and a scoped diagram. Cady gets only the product's top-level and dimension architecture diagrams, saved as Files and linked from Product context. Route each statement to one home by its kind: search first, then extend.
 
 ### Company records
 - direction and bets
-- current hypothesis and decision items
+- current assumption and decision items
 - customer evidence Files and CRM interactions
 - offerings (the company product owner read)
 - release work items

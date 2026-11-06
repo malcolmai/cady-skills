@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "436ad612984fe2de4df5"
-  library: "d63cf26c33473e84"
+  version: "7ca005fd190d8ec02a46"
+  library: "4ce586f1734175e4"
   function: "company"
 ---
 # Company
 
 **Point:** Set the right overall strategy for the company, reviewing it, tweaking it and starting new initiatives; own the outer loop that improves agents and sets the company up, and instruct the orchestrator to put it into action.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "436ad612984fe2de4df5@d63cf26c33473e84"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "7ca005fd190d8ec02a46@4ce586f1734175e4"}})`
 
 **Bets** (where this differs from the default):
 - Keep few goals, each with a reason and a stop condition, so effort goes where winning is decided. Instead of: A goal for every idea or function.
@@ -52,6 +52,7 @@ The company has a short list of open goals, each decided with its reason, target
 
 ### Company records
 - direction: point, bets and ordered goals (records_read company:direction)
+- the attention chain, from the company point to the node and its bets, arrives with the context read; pass no parameter
 - the finance plan: cash, burn and runway (finance plan owner read)
 - current decisions, and the open goals with their reasons, targets and stop conditions
 - each function head's current situation call and customer evidence (pipeline outcomes)
@@ -72,6 +73,6 @@ The company has a short list of open goals, each decided with its reason, target
 
 ## Selected judgment
 - Judge progress by achieved customer and operating conditions, not asset count. Compare the bottleneck with the opportunity cost of moving people or money; preserve healthy work and distinguish an agreed wait from a missed commitment.
-- A plan agents follow is a goal (work_write job goal, steps as tasks with goalId, choices as decisions_write; find plans with work_read). The run sequence teaches how to create, follow, revisit and end one.
+- A plan agents follow is a goal (work_write job goal, steps as tasks with goalId, choices as decisions; find plans with work_read). The run sequence teaches how to create, follow, revisit and end one.
 
 - Read [Domain method](references/domain-method.md) when you act for the company as a whole or run an executive review.

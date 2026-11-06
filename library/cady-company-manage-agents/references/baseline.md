@@ -1,0 +1,3 @@
+# Baseline
+
+The baseline is one agent per chosen function plus the Orchestrator and the Executive (weekly), as host files that only point at each role card and context reads; they copy no method text. Install without a Cady checkout or bun: `cady hosts --baseline --host claude --dir <the host's agents directory> --org <orgId>` (`--only gtm,sales` keeps chosen functions; the same command with `--check` reads it back and reports drift). Then for each agent create and bind it as in the agent_setup reference; each is prepare-only until its first task is reported. Keep only the functions the company chose: delete the other files and let the Executive's map record the gap. The Executive and the Orchestrator are always separate host tasks.

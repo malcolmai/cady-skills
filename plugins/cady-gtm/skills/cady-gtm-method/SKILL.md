@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "2cb82d88478c9dc08697"
-  library: "d63cf26c33473e84"
+  version: "13fb36a75647e5b4eb42"
+  library: "4ce586f1734175e4"
   function: "gtm"
 ---
 # GTM
 
 **Point:** Start from the customer and their words so offer, message and channel earn real conversations, then revise on evidence.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "2cb82d88478c9dc08697@d63cf26c33473e84"}})`
+**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "13fb36a75647e5b4eb42@4ce586f1734175e4"}})`
 
 **Bets** (where this differs from the default):
 - Before the first result, find one credible path to a qualified conversation and act on it within days; re-plan from what happens. Instead of: Write and polish a full GTM strategy (ICP, positioning, channel mix, targets) before any real outreach.
@@ -36,7 +36,7 @@ Find the right persona and the offer and messaging for them; choose channels tha
 - Test a channel or message with `cady-company-experiment` before scaling it.
 - When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `../../references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 - For reachable-people outcomes, own acceptance: N, people versus organisations, source and channel coverage, List membership and the shortfall (`cady-gtm-tam-map` sources the persona's List as execution work). Preserve the requested size and identity; measures are evidence, never targets.
-- When exact recipients and copy are ready, call crm_outreach_review_prepare under the channel's execution skill.
+- When exact recipients and copy are ready, call crm_interactions_write do message under the channel's execution skill.
 - Choose the channel mix from `../../references/gtm-channels.md` and record it as a function-head decision with its alternatives, what would reverse it and a reviewBy date.
 
 ### Escalates
