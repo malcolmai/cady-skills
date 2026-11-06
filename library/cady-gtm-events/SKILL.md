@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "347ba1cbf53f4c952c1a"
-  library: "4ce586f1734175e4"
+  version: "c6f82800d35af07ce016"
+  library: "a5465074a50f48fd"
   function: "gtm"
 ---
 # Events: attend or host
 
 **Point:** Turn one chosen event into real conversations and personal follow-ups, never a bulk list.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "347ba1cbf53f4c952c1a@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.events": "c6f82800d35af07ce016@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - An attendee directory is a source, not a relationship: listed people stay cold and the list is never bulk-messaged. Instead of: Import the attendee list as warm leads and message them all after the event.

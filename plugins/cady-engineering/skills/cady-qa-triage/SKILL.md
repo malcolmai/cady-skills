@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
   version: "c5f3ee64969904e313ee"
-  library: "4ce586f1734175e4"
+  library: "a5465074a50f48fd"
   function: "qa"
 ---
 # Bug and flaky-test triage
 
 **Point:** Rate bugs by user impact and report them so anyone can reproduce them and verify the fix without asking.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "c5f3ee64969904e313ee@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.qa.triage": "c5f3ee64969904e313ee@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - Rate severity by user impact, and raise it a level when the failure is silent, irreversible or hits most users. Instead of: Rate by how hard the fix is, who reported it or how loud the error looks.

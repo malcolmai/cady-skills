@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.tax_cycle"
-  version: "e8b64c55acd81d215441"
-  library: "4ce586f1734175e4"
+  version: "43a39e184c04338dab2c"
+  library: "a5465074a50f48fd"
   function: "finance"
 ---
 # Entity tax and filing cycle
 
 **Point:** Prepare each entity's tax obligations ahead of their deadlines, so filing and payment happen on time without penalties.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.tax_cycle": "e8b64c55acd81d215441@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.tax_cycle": "43a39e184c04338dab2c@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - Schedule each return backwards from its controlling deadline, with separate filing and payment dates and slack for review and correction. Instead of: Track the statutory filing date and start preparation as it approaches.
@@ -41,7 +41,7 @@ Plan or review an entity's tax obligations, filing preparation and material stra
 
 ## Procedure
 
-1. Start from the entity's current filing: decisions (work_read with decisions {state: "current", subjectPrefix: "filing:"}; `cady-company-operations-compliance-register`) and the exact entity from records_read legal-records:<kind>. Prepare one return-period. A missing requirement, or one past its reviewBy, goes back to the register; missing evidence is a question, not an exemption.
+1. Start from the entity's current filing: decisions (work_read with decisions {state: "current", subjectPrefix: "filing:"}; `cady-company-operations-compliance-register`) and the exact entity from its ops:entity decision line. Prepare one return-period. A missing requirement, or one past its reviewBy, goes back to the register; missing evidence is a question, not an exemption.
 2. For each obligation and period, distinguish preparation, review, filing and payment. Source each filing and payment deadline separately; create or update Projects work with dueDate for preparation well ahead of the controlling deadline and dependsOn for evidence, review and submission dependencies. Use the existing Projects work rather than a second tax clock. Work backwards using preparation effort, reviewer availability and correction buffer; escalate lost slack before the statutory date. Reuse the existing entity-period close when several obligations need it.
 3. Prepare source-linked figures, records and questions at the depth the obligation warrants. Identify who can sign, file and pay through the actual authority and provider route. A draft return or completed preparation is not a filed return or paid liability; verify those states only from their source receipts. A tax provision can change the accounts: reconcile adjustments with Accounting and recheck affected calculations and approvals against the revised accounts. Use follow-up work rather than a cyclic dependsOn chain.
 4. Revisit tax strategy when a material change in entity, activity, location, revenue, funding or law could change the choice. Otherwise set the compliance cadence from applicable obligations and source freshness; use a specialist for material nonstandard interpretation or sign-off.

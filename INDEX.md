@@ -71,7 +71,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. (`library/cady-product-customer-interview/SKILL.md`)
 - `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done. (`library/cady-product-manage/SKILL.md`)
 - `cady-product-method`: Product role card: what this function owns and decides (`library/cady-product-method/SKILL.md`)
-- `cady-product-research`: Create or update a company-library research piece on competitors and alternatives, or on a technology approach. (`library/cady-product-research/SKILL.md`)
+- `cady-product-research`: Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology. (`library/cady-product-research/SKILL.md`)
 
 ## engineering
 - `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. (`library/cady-engineering-debugging/SKILL.md`)

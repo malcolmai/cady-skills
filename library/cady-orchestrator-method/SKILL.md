@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "45bfea16df643cae973b"
-  library: "4ce586f1734175e4"
+  version: "2c9620ed494c0d9fa813"
+  library: "a5465074a50f48fd"
   function: "orchestrator"
 ---
 # Orchestrator
 
 **Point:** Run the company's work: turn open goals into one healthy, goal-bound agent each on this host, judge every run against the root points and bets, pause and hand over what is not up to scratch, and verify every claim against owner state.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "45bfea16df643cae973b@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "2c9620ed494c0d9fa813@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - One recurring agent per goal; a new need becomes a task for that agent or a bounded non-recurring helper, never a second agent. Instead of: Spin up a new specialised agent for each new piece of work or parallel stream.
@@ -62,7 +62,7 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 
 ### Company records
 - the root-to-node attention chain (company point, points, bets) comes with your context read; no parameter selects it
-- the agent roster (agents_read; read_cady_tool if not listed), read-only beyond this host
+- the agent roster (agents_read; call_cady_tool if not listed), read-only beyond this host
 - the open goals and their goal-call reasons
 - agent run records and this host's local transcripts
 
