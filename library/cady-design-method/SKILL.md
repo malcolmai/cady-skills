@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "c09a70bf092575ccad79"
-  library: "b7f9e546bea6e58a"
+  version: "66873600a479e7922594"
+  library: "4ce586f1734175e4"
   function: "design"
 ---
 # Design
 
 **Point:** Give each surface real craft for its audience's job, so the product feels as good as it works.
 
-**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "c09a70bf092575ccad79@b7f9e546bea6e58a"}})`
+**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "66873600a479e7922594@4ce586f1734175e4"}})`
 
 **Bets** (where this differs from the default):
 - For a material redesign, render about three meaningfully different directions in the real medium and compare them on the same flow. Instead of: Iterate on one direction, or offer palette swaps and written descriptions as the options.
@@ -36,7 +36,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - Make design decisions yourself; take product questions to the PM.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record a hypothesis and one ask. Record the answer as a decision item.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption and one ask. Record the answer as a decision item.
 
 ### Company records
 - the design system Files

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "cd5f8936b222ec9da755"
-  library: "b7f9e546bea6e58a"
+  version: "d93de8b0a390469a02d3"
+  library: "4ce586f1734175e4"
   function: "engineering"
 ---
 # Engineering
 
 **Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "cd5f8936b222ec9da755@b7f9e546bea6e58a"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "d93de8b0a390469a02d3@4ce586f1734175e4"}})`
 
 **Bets** (where this differs from the default):
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
@@ -41,7 +41,7 @@ Read your system map and the architecture decisions in `company_records` before 
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record a hypothesis and one ask. Record the answer as a decision item.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption and one ask. Record the answer as a decision item.
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.

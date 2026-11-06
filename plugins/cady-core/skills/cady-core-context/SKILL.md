@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "0405ecb24ff32d8d14ae"
-  library: "b7f9e546bea6e58a"
+  version: "a1f06daa78ce3d3947b9"
+  library: "4ce586f1734175e4"
   function: "core"
 ---
 # Company context
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "0405ecb24ff32d8d14ae@b7f9e546bea6e58a"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.context": "a1f06daa78ce3d3947b9@4ce586f1734175e4"}})`
 
 Decision layers (owner, function head, task), early-stage defaults and how to read company references. Use when: deciding who decides, or what to read, before company work. Not for: running a task; load the task's skill.
 
@@ -19,7 +19,7 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 ### Injected method
 
-- Use recorded direction as the working baseline, including its bets: beliefs the company acts on before evidence settles them. Let a held bet cut options without re-arguing it; surface contrary evidence against the bet it challenges instead of silently working around it. Record a bet only when it cites a current recorded person decision, tagged with the function that will test it; link its hypothesis so the outcome supplies the status. An inferred belief stays a hypothesis linked to the recorded decision it serves. Priorities link to goals; stage belongs to company:stage; rules cite decisions. Route missing owner facts to asks and research questions to tasks, never a company-context unknowns or sources list. Preserve user choices.
+- Use recorded direction as the working baseline, including its bets: beliefs the company acts on before evidence settles them. Let a held bet cut options without re-arguing it; surface contrary evidence against the bet it challenges instead of silently working around it. Record a bet only when it cites a current recorded person decision, tagged with the function that will test it; link its assumption so the outcome supplies the status. An inferred belief stays an assumption (an open decision of kind hypothesis) linked to the recorded decision it serves. Priorities link to goals; stage belongs to company:stage; rules cite decisions. Route missing owner facts to asks and research questions to tasks, never a company-context unknowns or sources list. Preserve user choices.
 - Verify readiness and authority before consequential effects, and the working result before expansion. An authorized recurring review can be configured before the first execution. Load the cady-company-review skill for operational review, then only relevant function methods.
 - Across sessions, recover the original authorized outcome through work_read; empty local claims do not establish that no work exists.
 - A chat observation or CRM note is not an order update, refund, shipment or completed resolution.

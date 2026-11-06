@@ -6,7 +6,7 @@
 
 - **Avoid when:** Use proportionate reasoning, not a mandatory record schema, lifecycle, health score or industry checklist.
 - **Decision:** Is value achieved? Diagnose onboarding friction, recovery or repeat-purchase gaps.
-- **Evidence bar:** Separate observed outcomes, proxies and causal hypotheses. Check alternative explanations, timing, selection effects and external conditions before crediting or blaming an intervention. Bound cohort comparisons by relevant circumstances, exposure, denominator and observation window; preserve contrary evidence and unknowns. Seek additional evidence when it could change a consequential decision, not to complete fields. Existing evidence can justify direct action; a material single failure can warrant a correction without waiting for recurrence.
+- **Evidence bar:** Separate observed outcomes, proxies and causal assumptions. Check alternative explanations, timing, selection effects and external conditions before crediting or blaming an intervention. Bound cohort comparisons by relevant circumstances, exposure, denominator and observation window; preserve contrary evidence and unknowns. Seek additional evidence when it could change a consequential decision, not to complete fields. Existing evidence can justify direct action; a material single failure can warrant a correction without waiting for recurrence.
 
 #### Execution
 

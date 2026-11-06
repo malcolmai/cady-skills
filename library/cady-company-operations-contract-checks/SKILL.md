@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
   version: "332c0e7f171333939d09"
-  library: "b7f9e546bea6e58a"
+  library: "4ce586f1734175e4"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
 **Point:** Before signing, surface the few terms dear to change later; after, start every clock the contract triggers.
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "332c0e7f171333939d09@b7f9e546bea6e58a"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "332c0e7f171333939d09@4ce586f1734175e4"}})`
 
 **Bets** (where this differs from the default):
 - Before signing, keep only the points that get harder or dearer to change afterwards, usually one to five, each with a default and the credible alternative. Instead of: Review every clause and report all the issues found.
