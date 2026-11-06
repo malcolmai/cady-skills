@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
   version: "d93de8b0a390469a02d3"
-  library: "4ce586f1734175e4"
+  library: "a5465074a50f48fd"
   function: "engineering"
 ---
 # Engineering
 
 **Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "d93de8b0a390469a02d3@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "d93de8b0a390469a02d3@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.

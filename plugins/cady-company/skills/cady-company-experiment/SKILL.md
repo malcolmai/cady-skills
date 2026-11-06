@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
   version: "fab466add2263d450d41"
-  library: "4ce586f1734175e4"
+  library: "a5465074a50f48fd"
   function: "company"
 ---
 # Pre-registered experiment
 
 **Point:** Test the riskiest assumption against pass and fail lines set beforehand, so the result changes a decision, not a story.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "fab466add2263d450d41@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "fab466add2263d450d41@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - Separate causes before concluding no demand. For outreach the causes are offer, persona, message, format, channel, timing and deliverability; name the isolated one or test the cheapest split. Instead of: Read a flat or negative response as the user not wanting the product.

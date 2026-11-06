@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
   version: "beea6cbc709611245c7e"
-  library: "4ce586f1734175e4"
+  library: "a5465074a50f48fd"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
 
 **Point:** Settle one compliance requirement from the authority's own source, checked independently, so the register can be trusted.
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "beea6cbc709611245c7e@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "beea6cbc709611245c7e@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - Research from the authority's own guidance, statute or form first, then dated secondary sources. Instead of: Rely on the summaries and blog posts that rank first in search.

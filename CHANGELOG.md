@@ -2,6 +2,39 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## a5465074a50f48fd · 2026-11-06
+
+Since 4ce586f1734175e4: 0 new, 0 dropped, 25 changed.
+
+Changed (the parts that differ):
+- `cady`: reference agent-stop.md
+- `cady-company-manage-agents`: Procedure, reference agent-setup.md, reference silent-hosts.md
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-operations-contract-checks`: Procedure
+- `cady-company-operations-method`: Role card, reference domain-method.md
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-core-context`: Company practice
+- `cady-core-run-sequence`: reference reporting.md
+- `cady-core-skill-index`: product
+- `cady-customer-success-lifecycle`: Procedure
+- `cady-finance-tax-cycle`: Procedure
+- `cady-fundraise-investor-outreach`: Inputs, Procedure
+- `cady-fundraise-method`: Role card, reference domain-method.md
+- `cady-fundraise-raise-materials`: description, intro, Procedure
+- `cady-fundraise-raise-plan`: Procedure, Owner checks
+- `cady-gtm-channel-plan`: Procedure
+- `cady-gtm-cold-email-cycle`: Procedure
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-tam-map`: Procedure
+- `cady-orchestrator-method`: Role card
+- `cady-product-manage`: Procedure
+- `cady-product-research`: description, intro, Inputs, Procedure, Acceptance, Owner checks, Result
+- `cady-qa-method`: Role card
+- `cady-qa-stories`: Inputs, Procedure
+- `cady-sales-deal-motion`: Procedure
+
+Shared references changed: agent-stop.md, competitor-profile.md, outreach-release.md, tam-map-import.md, vendor-renewal.md.
+
 ## 4ce586f1734175e4 · 2026-11-06
 
 Since b7f9e546bea6e58a: 1 new, 0 dropped, 50 changed.

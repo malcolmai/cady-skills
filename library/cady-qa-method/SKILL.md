@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "8f8a99c02ef168fbc5e4"
-  library: "4ce586f1734175e4"
+  version: "a21b844601708e9804c8"
+  library: "a5465074a50f48fd"
   function: "qa"
 ---
 # QA
 
 **Point:** Show what a fresh user actually meets, with evidence, so each iteration fixes the failures that matter most.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "8f8a99c02ef168fbc5e4@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "a21b844601708e9804c8@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - Walk journeys blind as a fresh user through the real surface; the builder's own walk is only a self-check. Instead of: Let the agent that built it verify it, or test from routes, seeded state and the database.
@@ -47,7 +47,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 - For a story walk, follow `cady-qa-stories` for run and evidence references; other findings cite their original check or owner evidence.
 
 ### Company records
-- stories and their runs (stories.read)
+- stories and their runs (stories_read)
 - capture Files
 - release work items and their thresholds
 - product and engineering decision items

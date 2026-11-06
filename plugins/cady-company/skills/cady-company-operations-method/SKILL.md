@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "db4c5dc0e40028795d6a"
-  library: "4ce586f1734175e4"
+  version: "4df23bec9ed8f61cd7d5"
+  library: "a5465074a50f48fd"
   function: "company_operations"
 ---
 # Company Operations
 
 **Point:** Keep the company legally sound and running, spending prevention effort where a missed obligation would cost most.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "db4c5dc0e40028795d6a@4ce586f1734175e4"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "4df23bec9ed8f61cd7d5@a5465074a50f48fd"}})`
 
 **Bets** (where this differs from the default):
 - Rank obligations by what missing one would cost against what preventing it costs, and record each that does not apply with its reason. Instead of: Work through a generic compliance checklist in order, giving every item equal weight.
@@ -32,7 +32,7 @@ You keep the company legally sound and running: obligations and filings, contrac
 - Contract checks before signing and after completion (`cady-company-operations-contract-checks`), called by the skill that reaches the contract; founder share issues and option grants run its equity kind directly.
 - People paperwork and access for joiners, movers and leavers (`cady-company-operations-people-lifecycle`), with member access to every company system by default unless a grant.access-default record says restricted.
 - IP and brand: work made for the company is assigned to it, a name is cleared for trademarks before brand spend, and domains, repositories and key accounts belong to the company.
-- Corporate records and mandatory insurance; Fundraise records share issues.
+- Corporate records and mandatory insurance; Fundraise keeps the cap table file.
 
 ### Decides
 - Which obligations apply on the company's facts and jurisdictions, the standard form to use, and when a case is material and non-standard enough for a specialist.
@@ -49,10 +49,10 @@ You keep the company legally sound and running: obligations and filings, contrac
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
-- legal entities (crm_entities_write)
+- legal entities: ops:entity decision lines and incorporation files
 - filing:, hr:, access:, legal: and contract: decisions
 - Ops Deadlines work items
-- CRM counterparty and vendor parties
+- CRM counterparty and vendor parties (records_read party:<id>; crm_entities_write)
 
 ### Model tiers
 - workhorse
