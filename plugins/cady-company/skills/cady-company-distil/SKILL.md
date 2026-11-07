@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.distil"
   version: "50b62027e472c0582910"
-  library: "a5465074a50f48fd"
+  library: "ab6c9b0d71690e90"
   function: "company"
 ---
 # Distil the concern tree
 
 **Point:** Turn what the work observed into the node's next point, bet or choice, once, under its authority.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.distil": "50b62027e472c0582910@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.distil": "50b62027e472c0582910@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Distil a node's due observations once, as a whole set, into its point, bet or choice under the node's authority. Instead of: Act on each observation as it arrives, or let a signal decide for the owner.

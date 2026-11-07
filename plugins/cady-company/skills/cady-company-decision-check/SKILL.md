@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "e510597361fcd7a1d171"
-  library: "a5465074a50f48fd"
+  version: "d9d0c6031924b7630336"
+  library: "ab6c9b0d71690e90"
   function: "company"
 ---
 # Who decides: the decision journey
 
 **Point:** Settle whether a choice or effect is decided, whose it is, and record it once.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "e510597361fcd7a1d171@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.decision_check": "d9d0c6031924b7630336@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Decide or ask by risk (what breaks, for whom, how reversibly) and independent review, not by the decision's layer. Instead of: Ask the owner about every decision labelled company-level and decide everything below that alone.
@@ -47,8 +47,9 @@ Before a choice or an effect: whether it is already decided, who decides, and ho
 3. Otherwise it is a choice. (a) Whose: its layer says. L1 changes a goal or the company: starting, stopping or reshaping a goal (its target, stop condition or expected cost), ICP and offer, stage and quality bar, a bet, a hire or other material commitment, a spend envelope or a grant. L2 is how a function pursues a goal: its head decides. L3 is how one task is done: any agent decides. An L2 or L3 choice that contradicts or extends an L1 one is L1. The owner's choices are only top-level judgement (the ICP, the customer problem, the offer, stage, a bet, a material commitment) and the permission edge (a grant, authority, an account or address they own, a fact only they hold); one they already stated is recorded as theirs with their quote (step 6), never asked back or chosen for them. (b) Risk: beyond those, whether to decide or ask turns on risk and review, not layer. Size the risk: what breaks, for whom, how reversibly. Cut it with tests at the lowest proving layer and the independent review (step 5), then decide when you have high confidence, as most small items and refactors allow. A high-risk change you cannot test or review is held, not shipped. (c) Chain: before you decide, write the chain down from the goal (one line for a small call): who the company serves and wins for, the ICP use case or pain this choice serves, what that needs the product or plan to emphasise, then this choice; with its impact, the strongest alternative and why it loses, and its premises dated (step 1 rechecks stale ones).
 4. L1 by an agent, usually the Executive: only when the company's decisions mode is notify (Cady refuses an agent's L1 decision in approval mode and tells you to ask), and never for top-level judgement the owner has not stated (step 3), a grant, an approval or a payment, which stay the person's; and one option is clearly better: it serves the company as a whole and the user's recorded direction, its reason and strongest alternative are written, and the independent review (step 5) agrees. Then record it; the owner is told and can reverse it. Otherwise raise a BLOCKED ask with a recommendation and options (each option's impact says what happens if the owner picks it), batched, and keep working on what does not wait.
 5. For a decision others will build on, or one with real risk (a refactor, a release, a change users meet), get an independent review before acting: a fresh-context reviewer that did not produce the choice (a subagent; the same model is fine), given only the record (goal served, choice, alternatives, key assumption, evidence, tests run). It checks each link of the chain from the goal, re-reads any premise it doubts, and asks whether the strongest alternative was weighed fairly and the work changes the goal rather than only looking helpful. It replaces the owner's review of refactors and releases. Fix what it finds, note it in rechecked and act; ask only what it cannot resolve.
-6. Record it in place. A new or changed outcome the person states in chat is company state before execution, even with no work item yet: use the existing own-words answer/decision path, preserving source chat, their exact quote and decidedBy, with context.type goal, the company/product scope, concern outcome_workflow and the returned writeAs.appliesTo; link the goal when one exists. Read back the saved record so a later run can find it. Reuse a matching recorded answer; do not invent words, infer a grant, or ask them to repeat an outcome already supplied. Other decisions: a goal change is an L1 decision with subject goal:<goalId> beside the goal write (a stop is goal.call:<goalId> with chosen stop and its stop reason); otherwise a decision item with subject, layer, rationale, alternatives, reversal and reviewBy. The rationale is the step 3 chain (goal, use case or pain, emphasis, choice), the impact, the losing alternative and the premises checked with their dates, quoting its reason from a goal, a dimension or the user. Cite the one or two pieces of evidence that decided it. A person's decision carries their exact words (source chat, quote, decidedBy) and, in the rationale, your inference of why they chose it then, marked as inferred; your own carries authority agent. Mark it sensitive (sensitive true, optional sharedWith) when it holds personal, HR, legal, financial-account or customer-confidential detail; only you, those shared and admins who turned on See everything then see it; everything else is company record every member reads.
+6. Record it in place. A new or changed outcome the person states in chat is company state before execution, even with no work item yet: record it in their own words (source chat, exact quote, decidedBy), read it back, and never invent words, infer a grant or ask them to repeat it. The record reference holds the fields. Other decisions: a goal change is an L1 decision with subject goal:<goalId> beside the goal write (a stop is goal.call:<goalId> with chosen stop and its stop reason); otherwise a decision item with subject, layer, rationale, alternatives, reversal and reviewBy. The rationale is the step 3 chain (goal, use case or pain, emphasis, choice), the impact, the losing alternative and the premises checked with their dates, quoting its reason from a goal, a dimension or the user. Cite the one or two pieces of evidence that decided it. A person's decision carries their exact words (source chat, quote, decidedBy) and, in the rationale, your inference of why they chose it then, marked as inferred; your own carries authority agent. Mark it sensitive (sensitive true) when it holds personal, HR, legal, financial-account or customer-confidential detail; the record reference says who then sees it.
 7. To correct a recorded decision send corrects {ref, as: supersede|wrong, why}; wrong records 'Ruled wrong: ...' on the same subject. You may override or withdraw any decision, a person's included, when why quotes the reason from a goal, a dimension or the user and the context it rests on is current (step 1); who made it is no reason to ask. In approval mode Cady refuses it and you raise a BLOCKED ask; in notify mode it is recorded and shown to the owner, who can revert it. An override never creates or widens a grant, a person-approval category, a payment or a reserved release step, and never undoes an owner's stop (initiative.stop or a goal stop).
+8. An owner's correction of an agent's work is evidence for the next run: fix the work and record the correction as theirs (step 6; corrects, step 7, when it rules a decision wrong). When your context serves orchestrator.node, also send work_write observations [{nodeKey: that node, text: their words, sourceRef: the decision ref}].
 
 ## Acceptance
 
@@ -56,7 +57,7 @@ Before a choice or an effect: whether it is already decided, who decides, and ho
 - [ ] every effect acted on cites the person's approval (in Cady or quoted) or a grant; otherwise it is one ready ask
 - [ ] every agent decision others build on records its chain from the goal, impact, losing alternative and dated premises; an agent L1 also its independent review
 - [ ] no top-level judgement or permission-edge call taken by an agent; an owner's stated call recorded as theirs with their quote
-- [ ] a person's decision records their words and the inferred reason
+- [ ] a person's decision or correction records their words and the inferred reason; with a node served, a correction is also an observation
 
 ## Owner checks
 
@@ -69,3 +70,6 @@ Before a choice or an effect: whether it is already decided, who decides, and ho
 
 - company:work:<workId>
 - **Transition:** the choice or effect recorded at its layer, with provenance
+
+## References
+- Read [Recording a stated outcome and a sensitive decision](../../references/decision-check-record.md) when you record an outcome the person states in chat, or a decision with personal, HR, legal, financial or customer-confidential detail.

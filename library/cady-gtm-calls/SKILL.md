@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
-  version: "3f117dc9263fd68c1a65"
-  library: "a5465074a50f48fd"
+  version: "ead271d2838dfc1e2310"
+  library: "ab6c9b0d71690e90"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
 
 **Point:** Prepare the user for one conversation, then capture what the buyer said and the promised next step.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "3f117dc9263fd68c1a65@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.calls": "ead271d2838dfc1e2310@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Separate what the buyer said from our inference; friendly interest is not a commitment. Instead of: Write the call up as an upbeat summary with assumed next steps.
@@ -52,9 +52,9 @@ Prepare for a sales or customer call (account brief, agenda, questions), then re
 ## Procedure
 
 1. Read the brief and its refs (`../../references/outreach-drafting.md`, Brief), including qualification criteria from offerRef; read records_read party:<partyId> for each exact person. Keep cold and warm context distinct. For cold calls, remind the user that they decide lawfulness and UK numbers may need Telephone Preference Service (TPS) and Corporate Telephone Preference Service (CTPS) screening; this is not clearance.
-2. Prepare one sheet per call using `../../references/call-prep.md`, sheet; save it to Files with files_update or files_create, with upload begin and complete, verify the receipt and reference it on the work item. Report unavailable steps outside the sheet. The user makes the call; Cady never dials and never records audio.
-3. After the call, match the notes-system record to the exact party, date and participants (`../../references/call-follow-up.md`, match); hold an uncertain match. Record one crm_interactions_write interaction, kind call, with occurredAt and sourceRef citing the call note id; keep only connected/not connected, qualified yes/no and next step in note. Never store a transcript, phone number or audio. Preserve sourceRef on retry.
-4. Separate what the buyer said from inference and commitments (`../../references/call-follow-up.md`, separate); handle commitments and act versus ask under `../../references/outreach-drafting.md`, Authority. A connected conversation makes the party engaged; set a stage with crm_entities_write mode start_tracks or crm_entities_write mode update_track only when the user states it. Record supported ICP learning on the work item for the brief’s author (channel strategy).
+2. Prepare one sheet per call using `../../references/call-prep.md`, sheet; save it to Files with files_set, with upload begin and complete, verify the receipt and reference it on the work item. Report unavailable steps outside the sheet. The user makes the call; Cady never dials and never records audio.
+3. After the call, match the notes-system record to the exact party, date and participants (`../../references/call-follow-up.md`, match); hold an uncertain match. Record one interaction with crm_interactions_set, interaction kind call, with occurredAt and sourceRef citing the call note id; keep only connected/not connected, qualified yes/no and next step in note. Never store a transcript, phone number or audio. Preserve sourceRef on retry.
+4. Separate what the buyer said from inference and commitments (`../../references/call-follow-up.md`, separate); handle commitments and act versus ask under `../../references/outreach-drafting.md`, Authority. A connected conversation makes the party engaged; set a stage with crm_set mode track only when the user states it. Record supported ICP learning on the work item for the brief’s author (channel strategy).
 5. Draft the follow-up using `../../references/call-follow-up.md`, draft and `../../references/outreach-drafting.md`, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `../../references/taste-message.md`. Show the exact unsent proposal for user review; route it through cady-gtm-warm-email. Report the prepared outcome and linked work and source refs with work_write after owner readbacks; do not claim delivery.
 6. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
 

@@ -1,3 +1,0 @@
-# Library
-
-Install the library host-wide so any agent can load a skill, and preload each agent's every-run skills per agent where the host supports it (Claude Code: the skills: list in its agent file in .claude/agents/ preloads them; it does not restrict the rest). An upstream install updates with the host's own update command. If the company keeps a fork, once a month compare its baseline tag with the latest cady-skills release; if newer, read its CHANGELOG.md and merge what helps by hand, keeping the company's deliberate edits. Re-check affected agents, bind what you install, update the baseline and record the decision (taken, partly or skipped, and why) as a decision item. Nothing merges automatically.

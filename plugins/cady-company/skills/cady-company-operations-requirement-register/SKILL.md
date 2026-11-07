@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
-  version: "beea6cbc709611245c7e"
-  library: "a5465074a50f48fd"
+  version: "fe8ddba0026646fb7bab"
+  library: "ab6c9b0d71690e90"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
 
 **Point:** Settle one compliance requirement from the authority's own source, checked independently, so the register can be trusted.
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "beea6cbc709611245c7e@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.requirement_register": "fe8ddba0026646fb7bab@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Research from the authority's own guidance, statute or form first, then dated secondary sources. Instead of: Rely on the summaries and blog posts that rank first in search.
@@ -46,7 +46,7 @@ Research, independently check and record one compliance requirement as a Cady Pr
 2. Research from the authority's own guidance, statute or form first, then dated secondary sources. Do not repeat a broad search when the exact current source and owner route settle the question. Establish the trigger, the deadline or rule, thresholds, who completes it, what proves completion and every exemption.
 3. Compare each exemption and threshold with the company's facts: which facts would remove an exemption or start a clock, and how close they are. Missing evidence is an open question, never an exemption or a not-required.
 4. Independent check: run one fresh-context subagent given only the facts and the question, not your research or conclusion, and ask it for the common mistakes on this requirement and their consequences. If no subagent is available, use a second dated source. Unresolved disagreement or a material or non-standard case goes to a specialist; until then the requirement stays an assumption.
-5. Record one decision with work_write or decisions_write or asks_write. subject <prefix>:<slug>, lowercase with hyphens. rationale at most 1,000 characters. citesWhy up to 4 dated sources, one short line each. rechecked at most 300 characters: who or what checked, the verdict and what changed. Add alternatives and keyAssumption, layer L2 and authority "agent", and leave decidedBy unset. The decision is capped at 2,000 characters, so upload the full research with files_update or files_create and cite file:<fileId> in the checkpoint's evidenceRefs. If step 1 found a current decision on this subject, set decision.supersedes to its workId; a second current decision on a subject is refused. Use kind "decision" only when rechecked holds the check's findings and no material question is open; otherwise use kind "assumption".
+5. Record one decision with work_write or decisions_write or asks_write. subject <prefix>:<slug>, lowercase with hyphens. rationale at most 1,000 characters. citesWhy up to 4 dated sources, one short line each. rechecked at most 300 characters: who or what checked, the verdict and what changed. Add alternatives and keyAssumption, layer L2 and authority "agent", and leave decidedBy unset. The decision is capped at 2,000 characters, so upload the full research with files_set and cite file:<fileId> in the checkpoint's evidenceRefs. If step 1 found a current decision on this subject, set decision.supersedes to its workId; a second current decision on a subject is refused. Use kind "decision" only when rechecked holds the check's findings and no material question is open; otherwise use kind "assumption".
 
 ## Acceptance
 

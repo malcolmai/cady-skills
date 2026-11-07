@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "4df23bec9ed8f61cd7d5"
-  library: "a5465074a50f48fd"
+  version: "0c191c490f9ef88ad517"
+  library: "ab6c9b0d71690e90"
   function: "company_operations"
 ---
 # Company Operations
 
 **Point:** Keep the company legally sound and running, spending prevention effort where a missed obligation would cost most.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "4df23bec9ed8f61cd7d5@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "0c191c490f9ef88ad517@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Rank obligations by what missing one would cost against what preventing it costs, and record each that does not apply with its reason. Instead of: Work through a generic compliance checklist in order, giving every item equal weight.
@@ -52,7 +52,7 @@ You keep the company legally sound and running: obligations and filings, contrac
 - legal entities: ops:entity decision lines and incorporation files
 - filing:, hr:, access:, legal: and contract: decisions
 - Ops Deadlines work items
-- CRM counterparty and vendor parties (records_read party:<id>; crm_entities_write)
+- CRM counterparty and vendor parties (records_read party:<id>; crm_set)
 
 ### Model tiers
 - workhorse
