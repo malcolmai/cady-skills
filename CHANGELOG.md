@@ -2,6 +2,56 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## ab6c9b0d71690e90 · 2026-11-07
+
+Since a5465074a50f48fd: 0 new, 0 dropped, 42 changed.
+
+Changed (the parts that differ):
+- `cady`: reference execution-agent-brief.md
+- `cady-company-change-agent-behaviour`: Procedure
+- `cady-company-decision-check`: Procedure, Acceptance, Result, new References
+- `cady-company-executive-review`: intro, Procedure, Acceptance, References
+- `cady-company-manage-agents`: Procedure, Acceptance, References, reference agent-design.md, reference agent-review.md, reference agent-setup.md, reference baseline.md, reference library.md, reference retiring.md, reference scheduling.md, reference silent-hosts.md
+- `cady-company-method`: Selected judgment
+- `cady-company-operations-contract-checks`: Inputs
+- `cady-company-operations-inbox-follow-through`: Procedure
+- `cady-company-operations-method`: Role card, reference domain-method.md
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-company-operations-requirement-register`: Procedure
+- `cady-company-review`: Company review
+- `cady-company-voice-pack`: description, intro, Procedure
+- `cady-core-execution`: Recurrence
+- `cady-core-run-sequence`: Run sequence, References, reference asking.md, reference goals-and-work.md, reference plan-path.md, reference reporting.md
+- `cady-customer-success-lifecycle`: Procedure
+- `cady-engineering-independent-review`: Independent review
+- `cady-engineering-system-cycle`: Procedure, Acceptance, References
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-investor-outreach`: Procedure
+- `cady-fundraise-method`: Role card
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-calls`: Procedure
+- `cady-gtm-cold-email-cycle`: Procedure
+- `cady-gtm-events`: Procedure
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-method`: Role card
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-persona-profile`: Procedure
+- `cady-gtm-pipeline-pass`: Procedure
+- `cady-gtm-reply`: Procedure
+- `cady-gtm-tam-map`: Procedure, References
+- `cady-gtm-warm-email`: Procedure
+- `cady-orchestrator-method`: Role card
+- `cady-product-customer-interview`: Procedure
+- `cady-product-manage`: Procedure, References
+- `cady-product-method`: reference domain-method.md
+- `cady-product-research`: Procedure
+- `cady-qa-stories`: Procedure
+- `cady-sales-deal-motion`: Procedure, Owner checks, References
+
+Shared references changed: agent-hosts.md, agent-lifecycle.md, deal-motion-stages.md, decision-check-record.md, engineering-cycle-dimensions.md, engineering-cycle-review.md, events-host.md, execution-agent-brief.md, executive-decision.md, executive-setup-advice.md, executive-weekly.md, inbox-follow-through-details.md, intro-request.md, outreach-release.md, product-manage-detail.md, tam-map-enrich.md, tam-map-import.md, vendor-renewal.md.
+
 ## a5465074a50f48fd · 2026-11-06
 
 Since 4ce586f1734175e4: 0 new, 0 dropped, 25 changed.

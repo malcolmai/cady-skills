@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "70dfcd1e444a61aa95d4"
-  library: "a5465074a50f48fd"
+  version: "000841c2340893409921"
+  library: "ab6c9b0d71690e90"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
 **Point:** Keep each relationship moving with a useful email and a next step paced to the person.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "70dfcd1e444a61aa95d4@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.warm_email": "000841c2340893409921@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Establish the relationship from evidence first; missing history is not proof a party is cold. Instead of: Treat anyone without a logged thread as cold and send a cold pitch.
@@ -50,7 +50,7 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 
 1. Read the party and its record or thread to establish the relationship: confirm engagement or an introduction from evidence; a partner or supplier first approach may proceed even without prior engagement using its sourced purpose, without claiming an exchange. Missing history is not proof that a party is cold.
 2. Read the existing exchange with crm_interactions_read and records_read communication:<id>. Before a trial nudge about a product link, check sign-up with records_read party:<partyId> and respond to it. Do routine track work; ask the owner for a price, commitment, availability or relationship call. For a supplier cancellation, order or commitment, obtain the exact user review required by `cady-finance-vendor-spend-review`; an outreach grant does not substitute.
-3. For a follow-up, say which follow-up this is (first or second), run the outcome check (`../../references/outreach-release.md`, Outcome check) first, then apply `../../references/outreach-release.md`, Follow up. For an introduction request, use `../../references/intro-request.md`. For a human click nudge, use the warm_email copy reference. File external clicks with crm_interactions_write.
+3. For a follow-up, say which follow-up this is (first or second), run the outcome check (`../../references/outreach-release.md`, Outcome check) first, then apply `../../references/outreach-release.md`, Follow up. For an introduction request, use `../../references/intro-request.md`. For a human click nudge, use the warm_email copy reference. File external clicks with crm_interactions_set.
 4. Draft one message per person, meeting them where they are in their own record or thread. Use `../../references/outreach-drafting.md`, Brief, Sender voice, Framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; the relationship type carried by the review decides the lane. Run the draft check in `../../references/outreach-drafting.md` before `../../references/taste-message.md`. Say what we do in a natural clause, not a pitch.
 5. Prepare and read back the review as `../../references/outreach-release.md` (Preparation, Release) says; act on each hold; then report the review and the track update. On the prepare call, pass motion when the person is new to every board.
 6. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.

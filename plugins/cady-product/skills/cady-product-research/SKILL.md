@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "4d0ce8298f8df623b886"
-  library: "a5465074a50f48fd"
+  version: "81c93997e6bfe86ac41c"
+  library: "ab6c9b0d71690e90"
   function: "product"
 ---
 # Research
 
 **Point:** Gather dated, attributable evidence on alternatives or technology so an owner can decide without redoing the analysis.
 
-**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "4d0ce8298f8df623b886@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "81c93997e6bfe86ac41c@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.
@@ -49,7 +49,7 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 4. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
 5. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
 6. Write Markdown with useful headings and real tables. Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Cite customer quotes as quote:<id> (research.write records and checks a quote against its public page) and sources by URL or file:<id>. Do not delay useful evidence for formatting.
-7. A research piece is a File named research/<title>.md: create it with files_create mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_update at its expectedGeneration after reading it with records_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Customer interviews and observations stay in Files linked from work, with a CRM interaction. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
+7. A research piece is a File named research/<title>.md: create it with files_set mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_set mode patch at its expectedGeneration after reading it with records_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Customer interviews and observations stay in Files linked from work, with a CRM interaction. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
 
 ## Acceptance
 

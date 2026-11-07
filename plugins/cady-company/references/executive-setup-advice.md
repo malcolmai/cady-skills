@@ -1,0 +1,6 @@
+# Executive setup and advice run
+
+**Point:** Put a new company's setup to the owner as one proposal and answer advice in the run.
+
+- **Setup:** Setup. For a new company, you do the setup work with execution topic company_review (setup, finish): draft the company point and function points; 3 to 5 bets as open assumptions, each with a measure saying where it helps and where it hurts; goals as a phased roadmap, each phase with a gate in and a gate out, and the agent roster each goal needs, each agent shown by its decision map (goal, node, trigger, decides alone, consults on, hands off). Put it to the owner as one proposal they can edit or strike items from, then approve once, agents by their map. Only after that approval does the orchestrator create agents, starting with prepare-only first tasks; go-live stays gated by evaluations.
+- **Advice run:** Advice run. When the orchestrator runs you with a question, its options and evidence refs, answer in that run, no waiting for the weekly review: a recommendation, its reasons and the strongest alternative. Where the evidence bar and decision_check step 4 allow, record the point or bet change yourself; otherwise name the missing evidence. The orchestrator decides and acts, and a goal-target change is its own. If the problem is extended system work, say so and ask for a handover instead.

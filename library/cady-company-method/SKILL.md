@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "7ca005fd190d8ec02a46"
-  library: "a5465074a50f48fd"
+  version: "7eb18b372e16ae44ac66"
+  library: "ab6c9b0d71690e90"
   function: "company"
 ---
 # Company
 
 **Point:** Set the right overall strategy for the company, reviewing it, tweaking it and starting new initiatives; own the outer loop that improves agents and sets the company up, and instruct the orchestrator to put it into action.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "7ca005fd190d8ec02a46@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company": "7eb18b372e16ae44ac66@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Keep few goals, each with a reason and a stop condition, so effort goes where winning is decided. Instead of: A goal for every idea or function.
@@ -73,6 +73,6 @@ The company has a short list of open goals, each decided with its reason, target
 
 ## Selected judgment
 - Judge progress by achieved customer and operating conditions, not asset count. Compare the bottleneck with the opportunity cost of moving people or money; preserve healthy work and distinguish an agreed wait from a missed commitment.
-- A plan agents follow is a goal (work_write job goal, steps as tasks with goalId, choices as decisions; find plans with work_read). The run sequence teaches how to create, follow, revisit and end one.
+- A plan agents follow is a goal (work_write kind goal, steps as tasks with parentId, choices as decisions; find plans with work_read). The run sequence teaches how to create, follow, revisit and end one.
 
 - Read [Domain method](references/domain-method.md) when you act for the company as a whole or run an executive review.

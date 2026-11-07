@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
-  version: "60e907faf439a4db9d20"
-  library: "a5465074a50f48fd"
+  version: "84e0c2af7d97185f62f4"
+  library: "ab6c9b0d71690e90"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
 **Point:** Before signing, surface the few terms dear to change later; after, start every clock the contract triggers.
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "60e907faf439a4db9d20@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "84e0c2af7d97185f62f4@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Before signing, keep only the points that get harder or dearer to change afterwards, usually one to five, each with a default and the credible alternative. Instead of: Review every clause and report all the issues found.
@@ -36,7 +36,7 @@ A contract that commits the company is about to be signed or was just signed: wh
 
 ### Evidence refs
 
-- entity records (crm_entities_write)
+- entity records (crm_set)
 - the contract's terms or its existing work item
 - current filing:, hr:, legal: and contract: decisions
 

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
-  version: "75030ef06ecf85751e25"
-  library: "a5465074a50f48fd"
+  version: "70805b21c2d91ad12806"
+  library: "ab6c9b0d71690e90"
   function: "gtm"
 ---
 # Warm pipeline pass
 
 **Point:** Give every due track an evidence-backed next action, routing each contact to its channel slice.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "75030ef06ecf85751e25@a5465074a50f48fd"}})`
+**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.pipeline_pass": "70805b21c2d91ad12806@ab6c9b0d71690e90"}})`
 
 **Bets** (where this differs from the default):
 - Work replies first, then due follow-ups, then first touches. Instead of: Work the queue in due-date order.
@@ -41,11 +41,11 @@ Pass over due tracks of one motion (customer for GTM, investor for fundraising, 
 
 ## Procedure
 
-1. Call crm_entities_read mode find_tracks with motion <the pass's motion> and dueBefore now and work every due CRM track, not Projects items. Never infer a stage; preserve current persona and owner.
+1. Call crm_read mode tracks with motion <the pass's motion> and dueBefore now and work every due CRM track, not Projects items. Never infer a stage; preserve current persona and owner.
 2. Route replies first to `cady-gtm-reply`, then due follow-ups to `cady-gtm-warm-email` or `cady-gtm-linkedin-message`, then today's first touches to `cady-gtm-cold-email-cycle` or `cady-gtm-linkedin-message`. Before routing any follow-up, run `../../references/outreach-release.md` Outcome check; apply its Follow up part. Review stale items; never replay a backlog of external sends blindly.
-3. When no contact action fits, update crm_entities_write mode update_track. Set each touched party's evidence-backed next action and due date. Handle routine work and owner questions as `../../references/outreach-drafting.md`, Authority says. A refusal returns the exact next call; follow it.
-4. Close a track only on a definitive answer, in the same crm_entities_write mode update_track call with reason, reasonKind and any evidence. Set recontact only on a lost or paused track; never drop an interested lead. Reopen a held track only with an explicit reason. Recontact policies are '1m', '2m', '3m', '6m', 'date' and 'unless_changed'.
-5. Record product signup or activation with crm_interactions_write, matching by email and using each product event id as sourceRef (up to 25 per call); preserve sourceRef on retries for idempotency. Pass the captured cref for attribution; keep UTMs in product analytics. The user's agent or automation runs the sync.
+3. When no contact action fits, update crm_set mode track. Set each touched party's evidence-backed next action and due date. Handle routine work and owner questions as `../../references/outreach-drafting.md`, Authority says. A refusal returns the exact next call; follow it.
+4. Close a track only on a definitive answer, in the same crm_set mode track call with reason, reasonKind and any evidence. Set recontact only on a lost or paused track; never drop an interested lead. Reopen a held track only with an explicit reason. Recontact policies are '1m', '2m', '3m', '6m', 'date' and 'unless_changed'.
+5. Record product signup or activation with crm_interactions_set, matching by email and using each product event id as sourceRef (up to 25 per call); preserve sourceRef on retries for idempotency. Pass the captured cref for attribution; keep UTMs in product analytics. The user's agent or automation runs the sync.
 6. On each touched track, keep the exact review receipt; do not copy it into a Projects work item.
 7. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
 
