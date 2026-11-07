@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
   version: "0c191c490f9ef88ad517"
-  library: "ab6c9b0d71690e90"
+  library: "eeb0c2f0062592df"
   function: "company_operations"
 ---
 # Company Operations
 
 **Point:** Keep the company legally sound and running, spending prevention effort where a missed obligation would cost most.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "0c191c490f9ef88ad517@ab6c9b0d71690e90"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.company_operations": "0c191c490f9ef88ad517@eeb0c2f0062592df"}})`
 
 **Bets** (where this differs from the default):
 - Rank obligations by what missing one would cost against what preventing it costs, and record each that does not apply with its reason. Instead of: Work through a generic compliance checklist in order, giving every item equal weight.

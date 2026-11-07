@@ -5,20 +5,21 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "7be584873a38b6bc4bb7"
-  library: "ab6c9b0d71690e90"
+  version: "6fd84bb6a23c85bf3f41"
+  library: "eeb0c2f0062592df"
   function: "engineering"
 ---
 # Independent review
 
 **Point:** A reviewer who did not produce the work checks the actual diff and evidence, so approval means it holds.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "7be584873a38b6bc4bb7@ab6c9b0d71690e90"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "6fd84bb6a23c85bf3f41@eeb0c2f0062592df"}})`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
 
 ## Bets
 
+- Step back to the relevant point(s) and how the change fits them before reviewing the diff. Instead of: Review the diff alone against its own acceptance.
 - Start from the brief, acceptance and actual diff at named SHAs; read the producer's reasoning only after your own findings are written. Instead of: Read the producer's summary first and verify its claims.
 - Treat unverified evidence as unrun, and rerun affected checks at the reviewed head on a clean tree. Instead of: Accept the producer's report that the tests pass.
 - Rank by consequence and look for authority, isolation and data-loss holes before style. Instead of: Comment on everything visible in the diff, style included, with equal weight.
@@ -36,7 +37,7 @@ Independently review a diff or artifact: rerun its checks, rank findings and ret
 - **Checks:** Inspect prior review and check evidence for the claims it covers. Reuse a check only when its relevant content, baseline/head relationship, selection, toolchain and environment remain valid; a producer assertion alone is not proof. Serious findings, conflicts, or stale, missing or doubtful evidence invalidate affected conclusions: investigate and rerun the affected checks at the reviewed head on a clean tree. Report commands, revisions and results; unverified evidence is unrun, not passed. Actual effect authority and live environment checks stay fresh. Read beyond changed lines: callers, other writers of the same data and missing tests, migrations, docs or entry points. When a software brief names owner × quality cells, use them as lenses with `../../references/quality-classes.md`; otherwise use the change classes below. Those classes remain the evidence floor.
 - **Findings:** Rank by consequence. Blocker: wrong behaviour, a security, isolation or authority defect, data-loss risk, or a claimed check that does not hold; it must be fixed before merge. Should fix: a real defect or maintenance cost; it lands only with the owner's acceptance and a tracked item. Nit: optional and labelled as such. Each finding gives file:line, what is wrong, the failure it causes and a suggested fix, and says whether it is verified or suspected. An approval with no findings is valid when the evidence supports it.
 - **Gotchas:** Approving from the summary; nitpicking style while missing an authority hole; reviewing only the diff and not its callers; treating 'tests pass' as proof the tests test anything; one reviewer reviewing their own fix.
-- **Independence:** Refuse a review of work you produced or watched being produced, and say so; the requester finds another reviewer. Start from the brief, acceptance and actual diff at named baseline and head SHAs, not the producer’s summary or verdict; read the producer’s reasoning only after your own findings are written. Review may build on sound independent coverage of an integrated baseline: inspect the new delta and affected dependencies and seams, so the named integrated head is covered without restarting unchanged review.
+- **Independence:** Before reviewing, step back to the relevant point(s) (the map page's, the method's, the goal's) and how this change fits them; a minor map change (wording, a status, a row) needs no explicit review, a larger one or a plan does. Refuse a review of work you produced or watched being produced, and say so; the requester finds another reviewer. Start from the brief, acceptance and actual diff at named baseline and head SHAs, not the producer’s summary or verdict; read the producer’s reasoning only after your own findings are written. Review may build on sound independent coverage of an integrated baseline: inspect the new delta and affected dependencies and seams, so the named integrated head is covered without restarting unchanged review.
 - **Levels:** Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, direction or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why.
 - **Two reviews:** A larger method or agent-behaviour text change gets two reviews by two separate agents, neither the producer. Logic review reads the method's logic and the served text: does every served line follow from the logic, and does the flow hold end to end, nearby case included? Writing review reads the served text alone (record reads: served): does it tell an agent what to do, with nothing repeated, missing or contradicted? A small text fix gets only the writing review; a code change gets one review.
 - **Verdict:** End with land, fix (the blockers to clear) or redesign (why the approach is wrong and the alternative). Write ranked findings and a receipt (producer, reviewer, baseline and head SHAs, prior coverage reused, checks and results, verdict) to the file the requester names; the producer never edits it. At most two rounds per lane; review later fixes and affected seams as the integrated state changes.

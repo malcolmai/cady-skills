@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "d3c46ae26ff62a52ca02"
-  library: "ab6c9b0d71690e90"
+  version: "3f7861fb76b92a01dd4a"
+  library: "eeb0c2f0062592df"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
 **Point:** Route each pass to review, build or hunt from current state, so work tracks the goal, not a rotation.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "d3c46ae26ff62a52ca02@ab6c9b0d71690e90"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "3f7861fb76b92a01dd4a@eeb0c2f0062592df"}})`
 
 **Bets** (where this differs from the default):
 - Choose the motion from current state: review when direction is stale, engineer when ready items exist, hunt after a dimension closes. Instead of: Run a fixed rotation of review, build and test phases each cycle.
@@ -39,7 +39,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 ### Evidence refs
 
 - company direction and current decisions
-- your system map and dimension register, kept beside the product's source
+- the product's system map and dimensions page (its product:system-map-<product> signpost)
 - open findings and the last review checkpoint
 - file:<fileId> research notes
 
@@ -53,8 +53,8 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 ## Procedure
 
 1. Objective. Clear the product's engineering backlog by the motion its current state calls for: review, engineer or hunt, routed from current state, not a fixed rotation. Review when there is no ranked direction, when the goals, a dimension label or a research scan changed since it was written, or when findings contradict it. Engineer when the direction is current and ready items exist, under the engineering role card. Hunt, under the QA role card and by an agent that did not build what it hunts, after a dimension closes, across seams after the end-to-end tests (step 7), or when the finding list is empty or stale. With a short queue one agent reviews and engineers in the same pass, its diffs still getting the engineering role's independent review; give a motion its own agent only when its queue justifies it, and never let two agents share a claim.
-2. Map once, update in place. Keep one system map beside the product's source (a File for non-software): journey goals as user outcomes in lifecycle order and architecture as one simple diagram. Features and implementation choices are decisions, not goals. Read records_read company:direction and current work_read decisions first; never restate what a decision already holds.
-3. Name high-level, mutually exclusive, collectively exhaustive dimensions that every goal crosses, each with one question, owner and boundary. Before users or revenue, name only the 3 to 5 a goal actually crosses. With users, expect 8 to 14. For a product you build in code, every code area has exactly one owner, including a module’s SQL, pages and tests; do not register qualities such as cost, isolation, verification or efficiency as owners (`../../references/quality-classes.md`). Keep only what has its own owner, question and test. Label each dimension differentiating or not under subject product.choice:dimension:<slug>: use the current decision or raise a missing or changed one to Product as a BLOCKED decision with your recommendation. The dimensions reference holds the rest of the register rules.
+2. Map once, update in place. Keep one system map, with its dimensions page, at its single writer, found from the host (the repo for software; a Notion page or HTML template otherwise), published as a versioned Cady File and signposted by one decision, product:system-map-<product>; the system_map reference holds the template and the publish steps. On the map: journey goals as user outcomes in lifecycle order and architecture as one simple diagram. Features and implementation choices are decisions, not goals. Read records_read company:direction and current work_read decisions first; never restate what a decision already holds.
+3. Name high-level, mutually exclusive, collectively exhaustive dimensions that every goal crosses, each with one question, owner and boundary. Before users or revenue, name only the 3 to 5 a goal actually crosses. With users, expect 8 to 14. For a product you build in code, every code area has exactly one owner, including a module’s SQL, pages and tests; do not register qualities such as cost, isolation, verification or efficiency as owners (`../../references/quality-classes.md`). Keep only what has its own owner, question and test. Label each differentiating or not on the map's Dimensions page; only a real choice becomes a decision. The dimensions reference holds the rest of the register rules.
 4. Depth follows the label. A non-differentiating dimension takes the most reliable widely used approach with the least custom code; deviation needs a named reason. A differentiating dimension gets a reviewed architecture (apply the Product card’s depth judgement on the decisive problem from the first session, including before users or revenue) and, only after the first users or revenue, a weekly research scan with `cady-product-research`; test a promising idea with `cady-company-experiment` before it changes the architecture; before then, research only where that judgement calls for it. The dimensions reference holds the research rules.
 5. Test depth follows the change and design comes before tests. Plan bug fixes with root cause, owner and blast radius; for a product you build in code, add only the classes crossed, usually in one line. For its features and architecture, name touched owners, adjacent loops and layers; route about four questions from `../../references/quality-classes.md` and recurring owner cells, and answer them in the writer brief; a small fix follows the trail into adjacent logic instead; a change to method or agent-behaviour text follows `cady-company-change-agent-behaviour`; test features against the touched dimensions and architecture changes with core end-to-end tests after research and any needed experiment. Record unrun evidence as unrun, and fix the root cause across instances.
 6. Select Product and Engineering review to match the risk and open questions, not as mandatory model calls or serial phases. Product judges journey goals, user alternatives and scope; Engineering judges architecture, research gaps, size, lifecycle and ownership. Consider a plan review when unresolved design choices could cause costly rework, especially for authority, schema, several owners or a differentiating owner. An architecture review of several issues, by default, groups them into families by architectural cause and ends in ordered fix slices; the review reference holds the method. Where design review is needed, give touched dimensions and the whole a verdict (right, right but over-built, or wrong shape), best alternative, gap and deletion. Extend the last review, checkpoint the verdict, and return ranked direction to Product, whose scope decisions stand. Update affected goals and acceptance; deduplicate hunting findings against open items.
@@ -64,7 +64,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 
 ## Acceptance
 
-- [ ] one map holds journey goals and architecture, each as one simple diagram
+- [ ] one map, published as a signposted File, holds journey goals and one simple architecture diagram
 - [ ] the dimension register is MECE
 - [ ] each review gives every touched dimension a design verdict, and a recurring failure signature becomes an architecture finding rather than a rerun
 - [ ] each pass ends with a checkpoint: ranked review, reviewed delivery or a deduplicated finding list, ending with the close's two lines
@@ -73,7 +73,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 ## Owner checks
 
 - current direction and decisions read before mapping
-- every dimension has one owner, one question and a label that is decided or raised to Product
+- every dimension has one owner, one question and a label on the map's Dimensions page; a real choice is decided or raised to Product
 - differentiating dimensions have a reviewed design and decision-relevant research; recurring scans follow step 4
 - findings are deduplicated against open items before filing
 
@@ -89,3 +89,4 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 - Read [Engineering cycle dimension register and research](../../references/engineering-cycle-dimensions.md) when you name, label or change the dimension register, or scan research for a differentiating dimension.
 - Read [Software quality classes](../../references/quality-classes.md) when planning a change or placing a finding for a product you build in code.
 - Read [Engineering cycle review, checkpoint and data paths](../../references/engineering-cycle-review.md) when you run an architecture review of several issues, write a motion's checkpoint, or check a material data path.
+- Read [Product system map template and drafting](../../references/engineering-system-map.md) when you draft, restructure or publish a product's system map.
