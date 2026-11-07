@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
   version: "25bf9050658280c017cb"
-  library: "eeb0c2f0062592df"
+  library: "cda95ca8b8fec515"
   function: "finance"
 ---
 # Finance
 
 **Point:** Judge each spend, cut and raise as return against cost from real cash, so the plan fits the company's runway.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "25bf9050658280c017cb@eeb0c2f0062592df"}})`
+**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "25bf9050658280c017cb@cda95ca8b8fec515"}})`
 
 **Bets** (where this differs from the default):
 - Diagnose the stage first and size Finance work to it: runway and commitments pre-revenue, collections and margin at first revenue, budget against actuals once growing. Instead of: Install a standard finance stack for every company: annual budget, monthly variance pack, three-statement model and separate specialist agents.

@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
   version: "74323eb8eae09acfe528"
-  library: "eeb0c2f0062592df"
+  library: "cda95ca8b8fec515"
   function: "company"
 ---
 # Writing craft and taste decisions
 
 **Point:** Judge writing and design by whether the intended reader acts as hoped, learning the owner's taste from corrections.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "74323eb8eae09acfe528@eeb0c2f0062592df"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.taste_review": "74323eb8eae09acfe528@cda95ca8b8fec515"}})`
 
 **Bets** (where this differs from the default):
 - Start from the reader, what they must do or decide, and the one trade-off, before writing a word. Instead of: Start from the content to cover, then polish the prose.
