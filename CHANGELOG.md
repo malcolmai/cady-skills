@@ -2,6 +2,16 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## eeb0c2f0062592df · 2026-11-07
+
+Since ab6c9b0d71690e90: 0 new, 0 dropped, 2 changed.
+
+Changed (the parts that differ):
+- `cady-engineering-independent-review`: Bets, Independent review
+- `cady-engineering-system-cycle`: Inputs, Procedure, Acceptance, Owner checks, References
+
+Shared references changed: engineering-cycle-dimensions.md, engineering-system-map.md.
+
 ## ab6c9b0d71690e90 · 2026-11-07
 
 Since a5465074a50f48fd: 0 new, 0 dropped, 42 changed.
