@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.design.wcag_audit"
   version: "121b27faa5ccd57e2fba"
-  library: "19a36a2529fb5f11"
+  library: "18b616a637e57c35"
   function: "design"
 ---
 # Accessibility audit (WCAG 2.2 AA)
 
 **Point:** Find the barriers that stop assistive-technology users completing core journeys, proven by hand, so fixes target real harm.
 
-**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "121b27faa5ccd57e2fba@19a36a2529fb5f11"}})`
+**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.design.wcag_audit": "121b27faa5ccd57e2fba@18b616a637e57c35"}})`
 
 **Bets** (where this differs from the default):
 - Treat automated scan hits as leads, and judge conformance from keyboard and screen-reader passes of each core journey. Instead of: Run axe or Lighthouse and report zero violations as accessible.

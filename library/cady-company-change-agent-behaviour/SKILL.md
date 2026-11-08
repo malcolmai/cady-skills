@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
   version: "5bc17ff06df16dbf1416"
-  library: "19a36a2529fb5f11"
+  library: "18b616a637e57c35"
   function: "company"
 ---
 # Change agent behaviour
 
 **Point:** Change one agent behaviour at its strongest single home, proven before it lands, so guidance stays small and undiluted.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "5bc17ff06df16dbf1416@19a36a2529fb5f11"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.change_agent_behaviour": "5bc17ff06df16dbf1416@18b616a637e57c35"}})`
 
 **Bets** (where this differs from the default):
 - If code or a tool result can make the rule true, change that, not the text. Instead of: Add a sentence to the prompt telling the agent to do the right thing.

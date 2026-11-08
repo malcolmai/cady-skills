@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
   version: "b540dffc227d897cfbee"
-  library: "19a36a2529fb5f11"
+  library: "18b616a637e57c35"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
 **Point:** Route each pass to review, build or hunt from current state, so work tracks the goal, not a rotation.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "b540dffc227d897cfbee@19a36a2529fb5f11"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.engineering.system_cycle": "b540dffc227d897cfbee@18b616a637e57c35"}})`
 
 **Bets** (where this differs from the default):
 - Choose the motion from current state: review when direction is stale, engineer when ready items exist, hunt after a dimension closes. Instead of: Run a fixed rotation of review, build and test phases each cycle.
