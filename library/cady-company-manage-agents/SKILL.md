@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
   version: "f0505ca706159157aa30"
-  library: "18b616a637e57c35"
+  library: "3570b99d1209db24"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody owns, proven on a first task; grants only on the person's approval.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "f0505ca706159157aa30@18b616a637e57c35"}})`
+**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.manage_agents": "f0505ca706159157aa30@3570b99d1209db24"}})`
 
 **Bets** (where this differs from the default):
 - An agent is one recurring responsibility tied to one goal; reuse or update the agent that owns the outcome before creating one. Instead of: Create a new agent for each new need or parallel stream of work.
