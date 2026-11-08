@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "d93de8b0a390469a02d3"
-  library: "eeb0c2f0062592df"
+  version: "1be77277be98e0568deb"
+  library: "18b616a637e57c35"
   function: "engineering"
 ---
 # Engineering
 
 **Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "d93de8b0a390469a02d3@eeb0c2f0062592df"}})`
+**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "1be77277be98e0568deb@18b616a637e57c35"}})`
 
 **Bets** (where this differs from the default):
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
@@ -26,7 +26,7 @@ metadata:
 ## Role card
 
 ### Framing
-Read your system map and the architecture decisions in `company_records` before changing a layer; know its material limits and why each choice was made.
+Read your product map (product-area context serves its pointer; the product's Offering line names it) and the architecture decisions in `company_records` before changing a layer; know its material limits and why each choice was made.
 
 ### Owns
 - Land only independently reviewed work, in the batching and review rounds the project's repository guidance sets; never land unreviewed work to save time.

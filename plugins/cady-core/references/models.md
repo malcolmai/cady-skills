@@ -2,13 +2,13 @@
 
 ## Bets
 
-- Match the tier to the job: a lead model plans and judges, cheaper workhorses write in bulk, and the top tier only reviews. Instead of: Run every task on the strongest model available.
+- Let the host pick the model for each task; record what it used and price it here. Instead of: Prescribing a model tier for each kind of task.
 - Rate a model's value only from measured results on the company's own tasks; leave it unrated until then. Instead of: Rate models from benchmarks, launch posts and reputation.
 
 ## Models
 
 - **As of:** 2026-10-07
-- **Boundary:** Reference data, never a default: the host owns model selection and effort (scheduled_model_selection.host_mapping); prices and tiers are dated and sourced, an unmeasured view never sets a value-for-money rating, which needs measured quality, a row whose current price is unverified says so, and nothing here grants budget.
+- **Boundary:** Tracking only: the host owns model selection and effort; this registry sets no tier, default or pick, and nothing here grants budget. Prices are dated and sourced; a row whose current price is unverified says so.
 
 ### Models
 
@@ -419,7 +419,7 @@
 - **Refresh:** The orchestrator re-checks this registry every 7 days, sooner when a new model ships. Find new releases on https://aireleasetracker.com/, read general early feedback to judge whether a new model is good, and weight our own measured experience on real tasks above both. Drop a model from the registry once a newer one covers its work; do not keep exclusion lists. Past stale_after_days the registry is served with stale: true; treat its prices and picks as possibly out of date, never as a refusal.
 - **Refresh every days:** 7
 - **Refresh owner:** orchestrator
-- **Selection criterion:** Prefer the model with good value for money for the job and avoid low value-for-money models, judged on verified prices and measured quality; an unverified price or an unmeasured view alone never sets a rating.
+- **Selection criterion:** None: the host chooses. The registry only prices what was used.
 - **Stale after days:** 14
 
 ### Tiers
@@ -481,4 +481,4 @@
 | DeepSeek V4.1 Flash | API |
 
 - **Use:** Writes and retrieves: workstreams, bounded edits, triage, test fixes, bulk mechanical changes.
-- **Point:** Give hosts dated, sourced model prices and tiers, so picks follow measured value for money, not reputation.
+- **Point:** Track dated, sourced model prices so agent spend is attributed; the host chooses which models to run.
