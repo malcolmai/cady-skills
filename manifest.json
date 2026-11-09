@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-08T00:00:00Z",
+  "generatedAt": "2026-11-09T00:00:00Z",
   "bundle": {
-    "tag": "3570b99d1209db24",
-    "version": "3570b99d1209db2474592cc6829e520b21d6699474582f9f5942458e164989c7",
-    "pluginVersion": "2026.11.8-3570b99d"
+    "tag": "1c135c6bd46b7b60",
+    "version": "1c135c6bd46b7b601e7e6fcd797c1d04362c9f5611353518aa0c8c10bfbb9f31",
+    "pluginVersion": "2026.11.9-1c135c6b"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.8-3570b99d"
+    "version": "2026.11.9-1c135c6b"
   },
   "skills": [
     {

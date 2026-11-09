@@ -6,14 +6,14 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
   version: "e7abd7be22de94b2ac02"
-  library: "3570b99d1209db24"
+  library: "1c135c6bd46b7b60"
   function: "core"
 ---
 # Agent run sequence
 
 **Point:** One order for every session, so no run acts on stale state, doubles an effect or ends unrecorded.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "e7abd7be22de94b2ac02@3570b99d1209db24"}})`
+**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.run_sequence": "e7abd7be22de94b2ac02@1c135c6bd46b7b60"}})`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
 
