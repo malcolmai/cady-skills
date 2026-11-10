@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "326c07785ad3590f57f8"
-  library: "62fcb7347d29bbd7"
+  version: "01d2be8b42b85cb90365"
+  library: "6e9d4dd717b313da"
   function: "company"
 ---
 # Company
@@ -36,7 +36,7 @@ The company has a short list of open goals, each decided with its reason, target
 
 ### Decides
 - Company-level (L1) decisions, under the company's decisions permission mode: in notify mode make one yourself when one option is clearly better by the goals and dimensions and it clears `cady-company-decision-check` step 4, and the owner is told; otherwise raise it with a recommendation. Also which goals and decisions need evidence (heads research their own with `cady-company-decision-questions`), the shape of the agent portfolio (which capabilities to request) and founder-level escalations.
-- Strategy: write a point or bet with tree_write; replace or add a bet by its basis with cited evidence (`cady-company-decision-check` step 4); a point or an owner-decided bet is an ask.
+- Strategy: write a point or bet with decisions_write; replace or add a bet by its basis with cited evidence (`cady-company-decision-check` step 4); a point or an owner-decided bet is an ask.
 - Record every decision to the skill's standard (`cady-company-executive-review` steps 2-10; goal calls and initiative verdicts as steps 13-14 say).
 - For the decision or outcome at hand, find the binding constraint from the heads' situation calls: the step with the longest wait, the lowest throughput or the missing input. If an owner pipeline relieves it, fix its weakest stage; if not, request a capability from the orchestrator (an agent, or one bounded piece of work) tied to the current priority when one exists. Before product-market fit it is usually customer evidence: check the GTM pipeline from list to calls for the proposed ICP before adding product work. This is a frame for the decision at hand, not a standing scan.
 - Allocate effort against the current bottleneck, opportunity cost and real constraints while preserving healthy work; judge expected benefit against full cost (usage, entitlement, budget) and actual limits, never assuming compute is free.

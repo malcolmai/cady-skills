@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "a0d037bdd68a5b524b92"
-  library: "62fcb7347d29bbd7"
+  version: "a551705e5c8779c3bfcf"
+  library: "6e9d4dd717b313da"
   function: "core"
 ---
 # Agent run sequence
@@ -52,7 +52,7 @@ Run one ordered piece of company work from reconciliation through result. Use wh
 - 2. Agents: reconcile first. For each reconcileWorkIds item settle unresolved effects with their owner (work_write {id, effects: {reconciled: {effectRef, disposition}}}); an expired claim is no longer held: claim again (step 4). Start no new effect on an item until it is clear.
 - 3. Read open goals (the strategy tree in cady_read company:map carries their decisions, including the person's recorded words), then their live work and brief.doneWhen; follow page and omitted-detail reads. If no open goal covers this task, say so before starting. Agents: check due standing duties from your assignment and hostReview; an empty queue does not cancel them. Claim before controlled work; after claim only the claim holder changes the brief, with work_write {id, brief}. Read the goals_and_work section before you create work, act on asks or a goal call, or conclude no_work.
 - 4. Agents: claim one item with work_write {id, status: working}. Stop on a live claim conflict. The method follows the work's subject, not the session's area: if the item is bound to another function's method, refile it (work_write {id, path, note}: the method comes from the node's path). A claim lasts 30 minutes (control.claim.expiresAt); renew it before it expires by claiming again (same call).
-- 5. Do the work. Read cady_read work:<workId> and the skill ref its method names (skill.<id>). Resolve lane overlap before go_live. Finish every step short of a human boundary yourself and checkpoint at natural boundaries. Near the budget (about four-fifths spent or a host warning), stop starting steps and close with result or shortfall. Read the asking section when you would ask, a call is refused or you rely on an assumption. Record each decision per `cady-company-decision-check` step 6 (a strategy item as a point or a bet with its basis, through tree_write; a narrow call in the work result); quote an OPEN pendingConfirmations item back once. decisions.omissions means the list is incomplete.
+- 5. Do the work. Read cady_read work:<workId> and the skill ref its method names (skill.<id>). Resolve lane overlap before go_live. Finish every step short of a human boundary yourself and checkpoint at natural boundaries. Near the budget (about four-fifths spent or a host warning), stop starting steps and close with result or shortfall. Read the asking section when you would ask, a call is refused or you rely on an assumption. Record each decision per `cady-company-decision-check` step 6 (a strategy item as a point or a bet with its basis, through decisions_write; a narrow call in the work result); quote an OPEN pendingConfirmations item back once. decisions.omissions means the list is incomplete.
 - 6. Close with one work_write call (fields, output shape, recovery and the walked-story rule: the reporting section). Say saved, sent or done only after the write succeeded and you read it back (an effect: cite provider evidence), otherwise proposed or unverified. Until live, prepare only. Turn each question left in your text into an ask if only the owner can answer it, else decide it and say why; chat points to the ask. Agents (agentId): nobody reads your reply, so your whole final reply is the reply line work_write returns.
 
 ## References
