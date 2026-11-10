@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "2a0d58f1b89e6c795542"
-  library: "18b616a637e57c35"
+  version: "e7a2e90b31befd2dc7f9"
+  library: "3e67725c10e93707"
   function: "gtm"
 ---
 # GTM launch session
 
 **Point:** Prepare a whole outbound motion in one session, so only activation waits on access or approval.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.gtm_launch": "2a0d58f1b89e6c795542@18b616a637e57c35"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing a persona (use `cady-gtm-offer-and-segments`) or drafting outreach.
 
@@ -27,15 +27,15 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 
 - **Job:** From the company context and the user's outbound request, prepare the complete internal motion in one session. A missing sender, provider or scheduler blocks activation only, never internal preparation.
 - **References:** Channel plays and execution briefs: `cady-gtm-channel-plan`; reviewed List import: `../../references/tam-map-import.md`; approval and release: `../../references/outreach-release.md`, Release.
-- **Rule:** A prepared review is not approval or delivery. A live claim and matching skill are required at prepare and release; never invent user assent or present a quote of the user as approval. Record prepared, authorized, released and executor-sent states distinctly, and reconcile uncertain effects before retrying.
+- **Rule:** A prepared review is not approval or delivery. A live claim is required at prepare and release, and work not bound to a go-to-market skill needs motion to prepare; never invent user assent or present a quote of the user as approval. Record prepared, authorized, released and executor-sent states distinctly, and reconcile uncertain effects before retrying.
 
 ### Steps
 
-- 1. Read context_read with the area you are working in (omit it for the map) and work_read. If no work item fits, create one with work_write or decisions_write or asks_write, letting the server mint the workId, with a current methodId. Keep company priorities in direction through update_company_direction; goals are goal work items. Split substantial independent channel/cohort work only within host and plan limits.
-- 2. Settle the CRM of record before planning channels. If undecided, apply the first-use rule from context_read (company.modules): check the tools you can access, record external or native with company.modules.set, and ask the sponsor only if you cannot look. Do not hold work for it; no unsupported CRM readiness read is implied.
+- 1. Start with cady_start {agentId} (or {function}); cady_read company:map is the setup map; read work_read. If no work item fits, create one with work_write {kind: task, headline, next, path: its node, brief}; the server mints the id and takes the method from the path. Keep company priorities as goal work items; strategy goes on the tree with tree_write. Split substantial independent channel/cohort work only within host and plan limits.
+- 2. Settle the CRM of record before planning channels. If undecided, apply the first-use rule from cady_read company:modules: check the tools you can access, note an external tool in AGENTS.md or choose Cady's with company_setup, and ask the sponsor only if you cannot look. Do not hold work for it; no unsupported CRM readiness read is implied.
 - 3. Use the channel plan from the References line for each chosen channel’s play, execution agent and operational readiness.
 - 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing customer outreach. Use the reviewed List import from the References line for Cady CRM; keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall.
-- 5. Prepare one crm_outreach_set kind message status review per eligible cohort of at most 50 parties. Read the review with records_read review:outreach/<approvalId> and report the approvalId. Follow the References line for approval and release, send nothing unapproved, and never ask for addresses, bodies or credentials.
+- 5. Prepare one review with crm_outreach (no id) per eligible cohort of at most 50 parties. Read the review with cady_read review:outreach/<approvalId> and report the approvalId. Follow the References line for approval and release, send nothing unapproved, and never ask for addresses, bodies or credentials.
 
 ## Shared execution sections
 

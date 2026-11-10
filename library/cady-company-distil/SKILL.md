@@ -5,24 +5,24 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.distil"
-  version: "50b62027e472c0582910"
-  library: "18b616a637e57c35"
+  version: "893fb2390515f79d41bc"
+  library: "3e67725c10e93707"
   function: "company"
 ---
 # Distil the concern tree
 
 **Point:** Turn what the work observed into the node's next point, bet or choice, once, under its authority.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.distil": "50b62027e472c0582910@18b616a637e57c35"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
-- Distil a node's due observations once, as a whole set, into its point, bet or choice under the node's authority. Instead of: Act on each observation as it arrives, or let a signal decide for the owner.
+- Distil a node's due observations once, as a whole set, into its point or bet under the authority of its basis. Instead of: Act on each observation as it arrives, or let a signal decide for the owner.
 
 A due distil task names a node whose critical observations are waiting on the outer loop.
 
 **Not for:** Doing the work that produced the observation, or the company review that owns direction (`cady-company-executive-review`).
 
-**Unit of work:** one node's due observations. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
+**Unit of work:** one node's due observations. **Kind:** strategy. **Parallel:** no. 
 
 ## Always
 
@@ -34,7 +34,7 @@ A due distil task names a node whose critical observations are waiting on the ou
 ### Evidence refs
 
 - the distil task's node reference (node:<key>) and the observations the node carries
-- the node's current point and its current bets and choices
+- the node's current point and its current bets
 
 ### Work fields
 
@@ -43,16 +43,16 @@ A due distil task names a node whose critical observations are waiting on the ou
 
 ## Procedure
 
-1. Read before deciding. The task (work_read) names the node in its statement and cites it as node:<key>. The context read (context_read) already carries the chain, from the company point through the points down to that node, with its bets; for a node shown without bets, say the bets were not read. Then read the node's due observations. A distil reads the whole due set, not one observation at a time. There is one task per node episode: work it once for the whole set and file no second task for the node.
-2. Judge what the observations change. Is the node's point still true? Does a bet the node carries still hold against its measure, and does the evidence contradict it? Is a choice now the right answer? An observation is a signal, not a decision: the node's record is where the judgement lands, and an ordinary observation may rightly change nothing.
-3. Settle the record once. Set or replace the node's point in its own sentence; accept a bet only with the option it replaced, why, its state and the measure that would settle it; record a choice with the option it replaced and why. A later decision supersedes the current one of its kind, and the history stays. Dismiss an observation only with the note that says why it was not acted on.
-4. Apply the one authority rule. An admin (the owner) may write any node decision. A manager may accept any bet they can see; a point or a choice is an admin's, so raise it as an ask with the recommendation and its evidence instead of writing it. An agent proposes; it never accepts a node decision in the owner's place: record it as an assumption and raise an ask to the node's holder or a manager who can see it.
-5. Close the episode. Every observation in the due set ends distilled (a decision was made from it) or dismissed (seen and deliberately not acted on, with its note); it never returns to recorded. Close the distil task with work_write or decisions_write or asks_write, carrying the decision it produced, the evidence behind it and the disposition of each observation, so the next episode starts from a clean node.
+1. Read before deciding. The task (work_read) names the node in its statement and cites it as node:<key>. cady_read company:map carries the tree, from the company point through the points down to that node, with its bets; for a node shown without bets, say the bets were not read. Then read the node's due observations. A distil reads the whole due set, not one observation at a time. The top of every company's tree is the same four families: go-to-market (demand), product (what is offered, priced and delivered), finance (company-level money in and out) and operations (how the company runs); a family needs no agent. There is one task per node episode: work it once for the whole set and file no second task for the node.
+2. Judge what the observations change. Is the node's point still true? Does a bet the node carries still hold against its measure, or does the evidence contradict it? An observation is a signal, not a decision: an ordinary one may rightly change nothing, and a narrow lesson goes to its owning home (product map, test or check, method, work result), not the tree.
+3. Settle the record once, with tree_write at the node's path (`cady-company-decision-check` step 6). Set or replace the node's point in its own sentence. Write a bet as we do X, not Y, because W, with its basis (validated, citing a reading or two independent runs; hypothesis, naming what would accept it, what would reject it and after doing what; owner decided; or resource constraint) and the measure that would settle it. A later item supersedes the current one of its kind, and the history stays. Dismiss an observation only with the note that says why it was not acted on.
+4. Authority follows the basis. A member decides by role, and an Admin's quoted words make a bet owner decided. A point or a bet you write is current at once and the owner is told; one call reverts it, and cited evidence is still the better record. Replacing an owner-decided bet needs the Admin's quoted words; otherwise it waits as an ask carrying the recommendation and evidence, and so does any one-way door. Your override grants no outside-effect permission.
+5. Close the episode. Every observation in the due set ends distilled (a decision was made from it) or dismissed (seen and deliberately not acted on, with its note); it never returns to recorded. Close the distil task with work_write {id, status: done, result, evidenceRefs}, the result carrying the point or bet it produced, the evidence behind it and the disposition of each observation, so the next episode starts from a clean node.
 6. Say what to watch. Report which reading would confirm or refute an accepted bet, and the next observation that would reopen the point. That reading is C5's measurement of the node, so name it in the same words the bet's measure uses.
 
 ## Acceptance
 
-- [ ] (check) the node's current point, bet or choice states what the due observations showed, and nothing else on the node changed
+- [ ] (check) the node's current point or bet states what the due observations showed, and nothing else on the node changed
 - [ ] (check) every observation in the due set is distilled or dismissed with its note
 - [ ] (person) a function head's accepted bet was seen by the owner and confirmed once
 

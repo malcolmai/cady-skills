@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "d0c8fe815baae228ece2"
-  library: "18b616a637e57c35"
+  version: "991d43950b480e2ac827"
+  library: "3e67725c10e93707"
   function: "gtm"
 ---
 # Social direct message
 
 **Point:** Open a real conversation with one honest reason, paced so the account stays safe.
 
-**Company context:** `context_read({"area": "gtm/outreach", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.gtm.linkedin_message": "d0c8fe815baae228ece2@18b616a637e57c35"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - A connection note gives one honest reason to connect, with no pitch, ask or company name. Instead of: Pitch the product in the connection request.
@@ -26,7 +26,7 @@ Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
 
 **Not for:** Public comments or posts are publishing; email or a reply in a live thread use their own skills.
 
-**Unit of work:** one work item per cohort of 20 or fewer. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
+**Unit of work:** one work item per cohort of 20 or fewer. **Kind:** execution. **Parallel:** yes. 
 
 ## Always
 

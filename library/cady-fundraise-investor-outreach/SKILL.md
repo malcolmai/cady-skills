@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "81ed96b2df74ff71e495"
-  library: "18b616a637e57c35"
+  version: "7b4346d3da72888c3f40"
+  library: "3e67725c10e93707"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
 **Point:** Earn first meetings with fitting investors, warm path first, on one sourced reason and true results, never invented traction.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.fundraise.investor_outreach": "81ed96b2df74ff71e495@18b616a637e57c35"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Ask for a double opt-in introduction with a forwardable blurb wherever a credible warm path exists; write cold only when none does. Instead of: Cold email the whole ranked list, or ask a contact to forward the deck without checking the investor wants it.
@@ -26,7 +26,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 
 **Not for:** Choosing which investors to pitch (use `cady-fundraise-investor-list`), deciding the round (use `cady-fundraise-raise-plan`) or drafting the deck, memo or update (use `cady-fundraise-raise-materials`).
 
-**Unit of work:** one work item per batch of 20 or fewer investors, or one monthly update send. **Kind:** execution. **Parallel:** yes. **Can release:** yes. 
+**Unit of work:** one work item per batch of 20 or fewer investors, or one monthly update send. **Kind:** execution. **Parallel:** yes. 
 
 ## Inputs
 
@@ -44,12 +44,12 @@ Write to investors: a warm intro request, a personalised first note, round follo
 
 ## Procedure
 
-1. Read the accepted raise plan and the round (its fundraise:round-<slug> decision, headline "Raising <name>: ...", and round file; investor tracks with crm_read mode tracks and round: <name> exactly). Write only to investors in the ranked pool from `cady-fundraise-investor-list`, leads first; read records_read party:<partyId> for each before preparing anything.
+1. Read the accepted raise plan and the round (its fundraise:round-<slug> decision, headline "Raising <name>: ...", and round file; investor tracks with crm_read mode stages and round: <name> exactly). Write only to investors in the ranked pool from `cady-fundraise-investor-list`, leads first; read cady_read party:<partyId> for each before preparing anything.
 2. Warm intro first. Where a warm path exists, ask the connector for a double opt-in introduction with a forwardable blurb, as `../../references/intro-request.md` says. Use `../../references/outreach-drafting.md`, Truth and grounding and claims. Write cold only when no credible path exists.
 3. First note: one partner per note, using the investor profile and partner record. Give a sourced, dated reason for this partner, such as a recent deal, stated thesis or portfolio fit. Use `../../references/outreach-drafting.md`, Sender voice, framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `../../references/taste-message.md` and the investor part of `../../references/taste-check.md`. Describe the result, not the work. No attachment; a link only if asked. Keep the draft with the exact gap visible to the owner outside the message, not as invented or unknown copy.
-4. Pace the round from the raise plan: send first notes and intro asks as one batch so first meetings land in its 2 to 3 week window. After a meeting, follow up within a day with the next step and date; for an investor who never replied, use `../../references/outreach-release.md`, Follow up. On a pass, record the reason with crm_set mode track and stop. Move each investor's track through its stage with crm_set mode track and round.
+4. Pace the round from the raise plan: send first notes and intro asks as one batch so first meetings land in its 2 to 3 week window. After a meeting, follow up within a day with the next step and date; for an investor who never replied, use `../../references/outreach-release.md`, Follow up. On a pass, record it with crm_interactions_set (motion investor, stage passed, the reason as the note) and stop. Move each investor's track through its stage with crm_interactions_set (motion investor, stage).
 5. Monthly update: send the update drafted with `cady-fundraise-raise-materials` on the plan's fixed send day as one reviewed batch with the same body. Every recipient goes on the marketing lane; use `../../references/outreach-drafting.md`, opt_out. Answer each reply through `cady-gtm-reply`.
-6. Prepare each batch with crm_outreach_set kind message status review (recipientBodies, one per investor), using `../../references/outreach-release.md`, Permission, Preparation and Release; read the review with records_read review:outreach/<approvalId>. Pass motion 'investor' on the prepare call. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies using `../../references/outreach-release.md`, Outcome check.
+6. Prepare each batch with crm_outreach (no id) (recipientBodies, one per investor), using `../../references/outreach-release.md`, Permission, Preparation and Release; read the review with cady_read review:outreach/<approvalId>. Pass motion 'investor' on the prepare call. Sent copy, positive interest, a term sheet, signed documents and money received are distinct states; record replies using `../../references/outreach-release.md`, Outcome check.
 
 ## Acceptance
 

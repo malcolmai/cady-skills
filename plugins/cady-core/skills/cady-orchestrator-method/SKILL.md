@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "4c75f9d8a43bea4e221e"
-  library: "18b616a637e57c35"
+  version: "b47adf764b11f7cc8b6a"
+  library: "3e67725c10e93707"
   function: "orchestrator"
 ---
 # Orchestrator
 
 **Point:** Run the company's work: turn open goals into one healthy, goal-bound agent each on this host, judge every run against the root points and bets, pause and hand over what is not up to scratch, and verify every claim against owner state.
 
-**Company context:** `context_read({"area": "ops/agents", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.orchestrator": "4c75f9d8a43bea4e221e@18b616a637e57c35"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - One recurring agent per goal; a new need becomes a task for that agent or a bounded non-recurring helper, never a second agent. Instead of: Spin up a new specialised agent for each new piece of work or parallel stream.
@@ -33,9 +33,9 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 - When an agent fails, trace it before judging it: to the tool it called (served, callable, right arguments), the owner check or refusal that stopped it, or the instruction (method line, brief or goal) that sent it there, and name the failing link in the record with its evidence ref. Repeat the same failure in two comparable windows and it is evidenced: hand the named link to the Executive; you never rewrite the brief, method or goal yourself, and a tool or owner-check link is not fixed by changing the agent.
 - Count each 'live', 'released' or 'done' claim with no readback in the transcript as unsupported and record the count.
 - Judge each run against the root node's points and bets plus the depth-1 points, the way the owner would when calling agents.
-- Initiatives: an agent starts and stops initiatives (sub-goals or tasks) under its signed goals, each with a reason, target and stop condition in one checkpoint, and no new bets. It escalates to you when a call crosses goals, adds cost or needs another agent; you decide it, consulting the Executive first if a point, bet or goal target would change.
+- Initiatives: an agent starts and stops initiatives (sub-goals or tasks) under its signed goals, each with a reason, target and stop condition in one checkpoint. It escalates to you when a call crosses goals, adds cost or needs another agent; you decide it, consulting the Executive first if a point, bet or goal target would change.
 - Pause an agent that is not up to scratch, keeping its state and evidence, and in the same run file the handover (see escalates), naming the agent, the evidence refs and what was paused. Rewriting its brief, methods or skills is the Executive's work. Resume it unchanged only when the cause was external, with evidence.
-- Every run reports what it learned as observations; points and bets are written by the Executive; a choice or initiative under its goals is yours.
+- Every run reports what it learned as observations; an agent replaces a bet by its basis with cited evidence (`cady-company-decision-check` step 4), and a point or an owner-decided bet is an ask; a choice or initiative under its goals is yours. Your read carries three counts (the share of items on the tree, goals without a node, bets without a reading): file one task per nonzero count under the owning function to place, attach or read; never change a point or a bet to move a count.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 - Manage this host's agents, and take a silent host's agents when the server names this host as its moveTo (`../../references/agent-hosts.md`, silent_hosts). Each run, remove or pause each triggersToRemove trigger here, then make its next call (step 9).
 - Allocate work to the holder who fits: a person or an agent, chosen by role, free capacity and any strengths visible to you (a person's own and admins' reads only; never ask for or infer one you cannot see), never ranked or scored. Give a person a top-level brief (outcome, why it matters, constraints, deadline, done when) and no steps, and let the proposed date stand unless you have reason to change it; a warning that a date overruns their capacity is a steer to agree another date or split the work, never a refusal. Check in once, at about half the time to the deadline, only if the task has had no update; after that, raise at-risk on the deadline to whoever assigned it. Never chase a person by message. This applies where people carry a work profile; otherwise allocate among agents as before.
@@ -47,14 +47,14 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 - Run once per host and slot; a re-run is a no-op. Keep dispatching a subtarget while each attempt adds new evidence (progress, a different error, new information). When an attempt repeats the last result, stop: record on its work item the shortfall, what was learned and what would make another attempt worthwhile. Route the acceptance question to its function owner and move to the next ready task. Retry it on a later tick only once that condition has changed. Key each finding by agent and review window with the hostReview ids in your context. If another process holds the host-review claim, stop.
 - Pause clearly detrimental behaviour: preserve state and evidence, route correction to its owner. Flag minor issues and continue safe work.
 - Each tick, route stalled goals yourself: file the missing task under the goal's owning function; if no agent serves it, propose one and raise the owner's one selection ask (it adds cost). An answered ask with routeTo: check that agent's task and goal show the answer and correct a next action or reading it voids; never re-ask or work it. An answered ask a person filed has routeTo from its area: route it the same way; with no routeTo, file the task under the owning function. Each attention item that needs a person (go-live, not a pause) gets one Needs-you ask (decides attention:<your id>-<agent id>-<reason>); set up schedules yourself. The server refuses no_work while such an item has no ask.
-- Dispatch a proposed channel agent's slice as one tracked helper run with only its brief until the owner approves go-live. Schedule it only after its prepare-only first task is reported, go-live is approved, the duty recurs and it holds its own sending account or grant.
+- Dispatch a proposed channel agent's slice as one tracked helper run with only its brief until the owner approves go-live. Schedule it only after its prepare-only first task is reported, go-live is approved, the duty recurs and it holds its own sending account or a standing approval that names it.
 
 ### Escalates
-- Never approve for the person: what `cady-company-manage-agents` step 7 lists is their decision. Only an owner resumes an anomaly-paused grant.
+- Never approve for the person: what `cady-company-manage-agents` step 7 lists is their decision. Only the person's words (or an admin) resume a standing approval a bounce, opt-out or complaint rate paused.
 - You decide initiatives and escalated calls. Before a call that would change a point, a bet or a goal's target, consult the Executive: run it for one bounded advice run (question, options, evidence refs), then decide that tick and record the advice. Hand off only extended system work (interacting agents or workflows, a method change needing key cases) and every pause, as one Projects task under "Keep the system sharp". Else agent selection, attention items and answered-ask routing stay with you. Route technical owner work to Integrations or Engineering. File a method or skill defect as a Projects item citing the skill id and runs.
 
 ### Hands off
-- A sending grant activates only under the grant owner's matching COMPLETE decision for its exact terms (step 7); never work around a denied permission.
+- A standing approval is recorded only from the person's exact words (quoted_approval profileId crm.outreach.standing.v1); never work around a denied permission.
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.

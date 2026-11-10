@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "f00130ae887eadd91d4e"
-  library: "18b616a637e57c35"
+  version: "bb69d2347c7f0cfc561d"
+  library: "3e67725c10e93707"
   function: "core"
 ---
 # Cady
@@ -15,11 +15,10 @@ Reads the company's context in Cady, then loads the matching skill. Use when the
 
 ## Start every run
 
-    context_read({"area": "<area>", "task": "<what you are about to do, in one sentence>"})
+    cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}
 
-Add "agentId" for a registered agent, "workId" to resume work, and
-"knownMethods" {cady-id: version} (up to 32) for held skills, so Cady returns company
-content without repeating their text. Product areas use the id from get_company_product for <productId>.
+The reply ranks the matching skills, strategy items, decisions, work and asks. Resume work with `work_read`; read a product with
+`cady_read {"refs": ["product:*"]}`.
 Then follow cady-core-run-sequence. A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-review`).
 
 | Area | For |
@@ -48,12 +47,12 @@ Then follow cady-core-run-sequence. A new company, or one with no direction yet,
 
 ## Add or change an agent
 
-Read `agents_read` first (through `read_cady_tool` where your host does not list it). Reuse or update an agent that already owns the outcome. To create, bind or schedule one, load `cady-company-manage-agents`; its channel execution agent brief is [`references/execution-agent-brief.md`](references/execution-agent-brief.md).
+Read `agents_read` first. Reuse or update an agent that already owns the outcome. To create, bind or schedule one, load `cady-company-manage-agents`; its channel execution agent brief is [`references/execution-agent-brief.md`](references/execution-agent-brief.md).
 
 ## Load a skill
 
-Try: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in its Claude Code group plugin, or `library/<name>/SKILL.md` beside this skill (Cady reply paths mean either place); `records_read {refs:["<cady-id>"]}`, e.g. `records_read {refs:["skill.gtm.reply"]}`, returns method text; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
+Try: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in its Claude Code group plugin, or `library/<name>/SKILL.md` beside this skill (Cady reply paths mean either place); `cady_read {refs:["<cady-id>"]}`, e.g. `cady_read {refs:["skill.gtm.reply"]}`, returns method text; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/18b616a637e57c35/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/3e67725c10e93707/
 
 A fork changes that line to its own raw URL and branch.

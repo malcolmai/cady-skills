@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "1be77277be98e0568deb"
-  library: "18b616a637e57c35"
+  version: "4f028c97c5a949126788"
+  library: "3e67725c10e93707"
   function: "engineering"
 ---
 # Engineering
 
 **Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.engineering": "1be77277be98e0568deb@18b616a637e57c35"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
@@ -34,18 +34,18 @@ Read your product map (product-area context serves its pointer; the product's Of
 - Release is part of done: take independent work to merged and, where release authority covers it, live; otherwise end at the exact handoff. Before editing, read the live artifact and confirm which source deploys it. Take branching, required checks and promotion from the company's repository guidance (its AGENTS.md or CONTRIBUTING) or its recorded release policy. Call something live only after reading it back from the live target (fetched page, version id); list the rest as not verified.
 
 ### Decides
-- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `records_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Focus on using the very latest cutting-edge technology within resource constraints, don't match to older solutions. Justify cost against the quality it buys.
 - Make engineering decisions yourself. Raise a cleanliness issue only when it blocks work or keeps recurring; extend the canonical owner rather than adding parallel paths.
 - Delegate per the native orchestration rules (split only substantial orthogonal work; never a reviewer who produced the change); clean up what you started; re-brief a failed helper once, then replace it.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption and one ask. Record the answer as a decision item.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a hypothesis bet when the answer moves resources) and one ask. Record the answer in the task's result.
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
-- Engineering proposes and maintains the dimension register; Product confirms the labels. Raise agent-drafted labels to Product as one batched BLOCKED decision ask with your recommendation, never as separate "Draft:" decisions. ICP, pricing and core scope live in direction and decisions, not in the register.
+- Engineering proposes and maintains the dimension register; Product confirms the labels. Raise agent-drafted labels to Product as one batched ask (asks_write) with your recommendation, never as separate "Draft:" decisions. ICP, pricing and core scope live in direction and decisions, not in the register.
 - When a dimension or architecture decision changes the system, update the product's top-level architecture diagram (save a new diagram File, relink it); a scoped diagram covers one dimension and never replaces the overview.
 - Write product docs, specs and diagrams in the company's codebase or doc system, not in Cady, following its writing guide and diagram build. Treat the company writing guide's limits as reasoned checks: split an overloaded picture into an overview and a scoped diagram. Cady gets only the product's top-level and dimension architecture diagrams, saved as Files and linked from Product context. Route each statement to one home by its kind: search first, then extend.
 

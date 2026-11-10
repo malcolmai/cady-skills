@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "bec14c6172f3f650fdc3"
-  library: "18b616a637e57c35"
+  version: "43259892e8b740f67929"
+  library: "3e67725c10e93707"
   function: "fundraise"
 ---
 # Fundraise
 
 **Point:** Decide whether and how much to raise for a named milestone, then spend founder time where a yes is likely.
 
-**Company context:** `context_read({"area": "fundraise/raise", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.fundraise": "bec14c6172f3f650fdc3@18b616a637e57c35"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.
@@ -47,7 +47,7 @@ You help the company decide whether, when and how much to raise, and run a round
 
 ### Company records
 - rounds: one decision per round, subject fundraise:round-<slug> and headline "Raising <name>: ...", plus a round file under fundraising/ in Files (decisions_write, files_set)
-- investor tracks whose round tag is the round's <name> exactly (crm_set mode track, round); a commitment amount is a party field citing the signed file (crm_set, crm_set mode field_values)
+- investor tracks of the round (the round's <name> exactly, a party field; stages through crm_interactions_set); a commitment amount is a party field citing the signed file (crm_set, crm_set fields)
 - the cap table: legal/cap-table.csv in Files
 - the runway view and Finance plan
 

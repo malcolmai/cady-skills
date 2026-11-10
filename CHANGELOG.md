@@ -2,6 +2,76 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 3e67725c10e93707 · 2026-11-10
+
+Since 18b616a637e57c35: 0 new, 0 dropped, 62 changed.
+
+Changed (the parts that differ):
+- `cady`: Start every run, Add or change an agent, Load a skill, reference agent-stop.md, reference execution-agent-brief.md
+- `cady-accounting-period-close`: intro, Procedure
+- `cady-company-change-agent-behaviour`: description, intro, Procedure
+- `cady-company-decision-check`: intro, Always, Procedure
+- `cady-company-decision-questions`: intro, Procedure, Acceptance
+- `cady-company-distil`: intro, Inputs, Procedure, Acceptance
+- `cady-company-executive-review`: intro, Inputs, Procedure, Owner checks
+- `cady-company-experiment`: intro, Inputs, Procedure, Acceptance
+- `cady-company-manage-agents`: intro, Inputs, Procedure
+- `cady-company-method`: Role card, Selected judgment, reference domain-method.md
+- `cady-company-operations-compliance-register`: intro, Inputs, Procedure, Acceptance
+- `cady-company-operations-contract-checks`: intro, Inputs, Procedure, Result
+- `cady-company-operations-inbox-follow-through`: intro, Procedure
+- `cady-company-operations-method`: intro, Role card, reference domain-method.md
+- `cady-company-operations-people-lifecycle`: intro, Inputs, Procedure
+- `cady-company-operations-requirement-register`: intro, Procedure, Owner checks
+- `cady-company-review`: reference setup.md
+- `cady-company-taste-review`: intro, Procedure
+- `cady-company-voice-pack`: description, intro, Procedure, Acceptance, Owner checks
+- `cady-core-context`: Company practice
+- `cady-core-execution`: Recurrence, reference credentials.md, reference decision-standard.md, reference delivery-completion.md, reference native-orchestration.md
+- `cady-core-run-sequence`: Run sequence, reference asking.md, reference goals-and-work.md, reference plan-path.md, reference reporting.md
+- `cady-core-skill-index`: company
+- `cady-customer-success-lifecycle`: intro, Procedure
+- `cady-design-method`: Role card
+- `cady-design-wcag-audit`: intro
+- `cady-engineering-debugging`: intro, Procedure
+- `cady-engineering-method`: Role card
+- `cady-engineering-system-cycle`: intro, Procedure
+- `cady-finance-budget-review`: intro
+- `cady-finance-method`: Role card, reference domain-method.md
+- `cady-finance-runway`: intro, Procedure
+- `cady-finance-tax-cycle`: intro, Procedure
+- `cady-finance-vendor-spend-review`: intro
+- `cady-fundraise-investor-list`: intro, Procedure
+- `cady-fundraise-investor-outreach`: intro, Procedure
+- `cady-fundraise-method`: Role card, reference domain-method.md
+- `cady-fundraise-raise-materials`: intro, Procedure
+- `cady-fundraise-raise-plan`: intro, Procedure
+- `cady-gtm-calls`: intro, Procedure
+- `cady-gtm-channel-plan`: intro, Procedure, Acceptance, Owner checks
+- `cady-gtm-cold-email-cycle`: intro, Procedure
+- `cady-gtm-events`: intro, Procedure
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-linkedin-message`: intro
+- `cady-gtm-method`: Role card, reference domain-method.md
+- `cady-gtm-offer-and-segments`: intro, Procedure
+- `cady-gtm-persona-profile`: intro, Inputs, Procedure
+- `cady-gtm-pipeline-pass`: intro, Procedure
+- `cady-gtm-reply`: intro, Procedure
+- `cady-gtm-tam-map`: intro, Procedure
+- `cady-gtm-warm-email`: intro, Procedure, References
+- `cady-marketing-post`: intro
+- `cady-orchestrator-method`: Role card
+- `cady-product-customer-interview`: intro, Inputs
+- `cady-product-manage`: intro, Procedure, Acceptance, Owner checks
+- `cady-product-method`: Role card, reference domain-method.md
+- `cady-product-research`: intro, Procedure
+- `cady-qa-method`: Role card
+- `cady-qa-stories`: intro, Procedure
+- `cady-qa-triage`: intro, Procedure, Result
+- `cady-sales-deal-motion`: intro, Procedure
+
+Shared references changed: agent-hosts.md, agent-lifecycle.md, agent-stop.md, call-follow-up.md, cold-deliverability.md, company-goals.md, competitor-profile.md, contract-kinds.md, deal-motion-stages.md, decision-check-record.md, engineering-cycle-dimensions.md, engineering-system-map.md, events-host.md, execution-agent-brief.md, executive-decision.md, executive-setup-advice.md, executive-weekly.md, inbox-follow-through-details.md, outreach-release.md, product-manage-detail.md, release-plan.md, tam-map-enrich.md, tam-map-import.md, taste-check.md, vendor-renewal.md.
+
 ## 18b616a637e57c35 · 2026-11-08
 
 Since eeb0c2f0062592df: 0 new, 0 dropped, 2 changed.
