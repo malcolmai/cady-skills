@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-10T00:00:00Z",
   "bundle": {
-    "tag": "3e67725c10e93707",
-    "version": "3e67725c10e93707e79a0586a772b02721e36750b8d2866ba9fa1b6ad9d66c78",
-    "pluginVersion": "2026.11.10-3e67725c"
+    "tag": "62fcb7347d29bbd7",
+    "version": "62fcb7347d29bbd70d8d678c1c8b522e8794798be39559d45e8e21c0369181e8",
+    "pluginVersion": "2026.11.10-62fcb734"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.10-3e67725c"
+    "version": "2026.11.10-62fcb734"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "33f961d4b7720a6bcd41"
+      "version": "c1b19cc1c679b08118ef"
     },
     {
       "name": "cady-company-decision-check",
