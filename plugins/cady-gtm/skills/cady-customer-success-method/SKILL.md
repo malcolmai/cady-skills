@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
   version: "242ba69a561062a373e2"
-  library: "3e67725c10e93707"
+  library: "62fcb7347d29bbd7"
   function: "customer_success"
 ---
 # Customer Success
