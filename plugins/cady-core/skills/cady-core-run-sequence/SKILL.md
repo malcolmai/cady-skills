@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "db862225ce821d182d6c"
-  library: "e51679b5968e92e0"
+  version: "a1d6f2229efbabd47649"
+  library: "015714eb283c43b7"
   function: "core"
 ---
 # Agent run sequence
@@ -48,7 +48,7 @@ Run one ordered piece of company work from reconciliation through result. Use wh
 
 ### Steps
 
-- 1. Start with cady_start {agentId} (or {function}): your work, your function's point and the decisions that govern it. Search cady_read with your task in a sentence for anything else; a registered agent then reads its work item (cady_read work:<workId>), a task sentence. Agents: pass agentId on every Cady call that accepts it. If you are paused or retired (agent.stop, retired state, an AGENT_PAUSED or AGENT_RETIRED refusal), stop: remove or pause your host trigger as the stop says, call agents_set host {action: removed} and end the run. Before work, record any new or changed outcome the person states in chat through `cady-company-decision-check` step 6.
+- 1. Start with cady_start {task: your request, verbatim; agentId if you have one}: the item it names, and the point and bets that govern it (no task: your goals and active tasks). Search cady_read with your task in a sentence for anything else; a registered agent then reads its work item (cady_read work:<workId>), a task sentence. Agents: pass agentId on every Cady call that accepts it. If you are paused or retired (agent.stop, retired state, an AGENT_PAUSED or AGENT_RETIRED refusal), stop: remove or pause your host trigger as the stop says, call agents_set host {action: removed} and end the run. Before work, record any new or changed outcome the person states in chat through `cady-company-decision-check` step 6.
 - 2. Agents: reconcile first. For each reconcileWorkIds item settle unresolved effects with their owner (work_write {id, effects: {reconciled: {effectRef, disposition}}}); an expired claim is no longer held: claim again (step 4). Start no new effect on an item until it is clear.
 - 3. Read open goals (the strategy tree in cady_read company:map carries their decisions, including the person's recorded words), then their live work and brief.doneWhen; follow page and omitted-detail reads. If no open goal covers this task, say so before starting. Agents: check due standing duties from your assignment and hostReview; an empty queue does not cancel them. Claim before controlled work; after claim only the claim holder changes the brief, with work_write {id, brief}. Read the goals_and_work section before you create work, act on asks or a goal call, or conclude no_work.
 - 4. Agents: claim one item with work_write {id, status: working}. Stop on a live claim conflict. The method follows the work's subject, not the session's area: if the item is bound to another function's method, refile it (work_write {id, path, note}: the method comes from the node's path). A claim lasts 30 minutes (control.claim.expiresAt); renew it before it expires by claiming again (same call).
