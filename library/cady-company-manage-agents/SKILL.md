@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
   version: "affca1b46d7494f41e70"
-  library: "1ed15292f0f09aa6"
+  library: "e51679b5968e92e0"
   function: "company"
 ---
 # Manage company agents

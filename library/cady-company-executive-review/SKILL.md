@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "8abcfd26cf60bdefce31"
-  library: "1ed15292f0f09aa6"
+  version: "764aa4b58a60675f3240"
+  library: "e51679b5968e92e0"
   function: "company"
 ---
 # Executive review
@@ -60,7 +60,7 @@ Run the weekly review of open goals and initiatives, or make one company-level d
 10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File (files_set) cited by the work result (work_write {id, status: done, result, evidenceRefs: [file:<fileId>]}); a strategy result is a point or a bet with its basis, written with decisions_write (`cady-company-decision-check` step 6). The decision reference holds the calls.
 11. Hand the changes to the orchestrator as one instruction (work_write {kind: task, owner: the orchestrator's agent id, headline naming the orchestrator, next, evidenceRefs, brief {doneWhen}}), each change naming the goal or decision it serves and the outcome, not how. The orchestrator designs and files function work; file no task under another function and do no function work yourself. With no change, file none. The decision reference holds the call.
 12. At a decision's reviewBy, read reported results first, then score outcome against prediction (hit or miss) and keep, change or stop; record what you learned by replacing the old bet or decision, and rule out a wrong outcome (decisions_write ruleOut, or status wrong by subject). Before the next comparable decision, read the scored records.
-13. Goals (`../../references/company-goals.md`): at each weekly review, call every open goal. Score its latest reading against the last call's prediction, with both numbers; with no reading since that call, score it unknown, never hit or miss, and set a dated check that gets one. Then persist, pivot, parallel or stop it, aimed at the goal's binding constraint, recorded as goal.call:<goalId>. Stop a goal with its stop call, never by cancelling it; on a direction change close CRM tracks for audiences it drops (crm_set). The weekly reference holds the fields.
+13. Goals (`../../references/company-goals.md`): at each weekly review, call every open goal. Score its latest reading against the last call's prediction, with both numbers; with no reading since that call, score it unknown, never hit or miss, and set a dated check that gets one. Then persist, pivot, parallel or stop it, aimed at the goal's binding constraint, recorded with work_write {id: the goal, call, note}. Stop a goal with its stop call, never by cancelling it; on a direction change close CRM tracks for audiences it drops (crm_set). The weekly reference holds the fields.
 14. Initiatives: weigh each open initiative (a founder idea or proposed scope expansion not yet decided) against the direction's point and bets, the binding constraint and competing goals, then decide: start it as a goal, fold it into an open goal's next attempt, or decline it with the reason. Never add one as active work without a verdict, and never drop one silently. The weekly reference holds the record.
 15. Handovers (weekly): answer every open task under the standing goal "Keep the system sharp" with its evidence read: change one thing through `cady-company-change-agent-behaviour`, resume, replace or retire, and close the task. The weekly reference holds the rest.
 16. Setup. For a new company, do the setup work with execution topic company_review (setup, finish) and put it to the owner as one proposal; only after approval does the orchestrator create agents. The setup_advice reference holds the parts.
