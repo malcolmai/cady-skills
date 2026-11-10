@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "1e47376e13eb59298322"
-  library: "fceb362826942aaa"
+  version: "f99e77410c39a808b1f0"
+  library: "e60c542620b38cff"
   function: "gtm"
 ---
 # GTM launch session
@@ -31,7 +31,7 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 
 ### Steps
 
-- 1. Start with cady_start {task: your request, verbatim; agentId if you have one}; cady_read company:map is the setup map; read work_read. If no work item fits, create one with work_write {kind: task, headline, next, path: its node, brief}; the server mints the id and takes the method from the path. Keep company priorities as goal work items; strategy goes on the tree with decisions_write. Split substantial independent channel/cohort work only within host and plan limits.
+- 1. Start with cady_start {task: your request, verbatim; agentId if you have one}; then act on its `do`; read more only for what it names and the task needs. If no work item fits, create one with work_write {kind: task, headline, next, path: its node, brief}; the server mints the id and takes the method from the path. Keep company priorities as goal work items; strategy goes on the tree with decisions_write. Split substantial independent channel/cohort work only within host and plan limits.
 - 2. Settle the CRM of record before planning channels. If undecided, apply the first-use rule from cady_read company:modules: check the tools you can access, note an external tool in AGENTS.md or choose Cady's with company_setup, and ask the sponsor only if you cannot look. Do not hold work for it; no unsupported CRM readiness read is implied.
 - 3. Use the channel plan from the References line for each chosen channel’s play, execution agent and operational readiness.
 - 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing customer outreach. Use the reviewed List import from the References line for Cady CRM; keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
-  version: "74553e9baccc8d356916"
-  library: "fceb362826942aaa"
+  version: "f862f96c5fbb521bcc5c"
+  library: "e60c542620b38cff"
   function: "gtm"
 ---
 # Channel plan
