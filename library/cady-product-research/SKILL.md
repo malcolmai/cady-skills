@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "81c93997e6bfe86ac41c"
-  library: "1c135c6bd46b7b60"
+  version: "a15c6369014b4c0788bc"
+  library: "70bc30f10f1b616d"
   function: "product"
 ---
 # Research
 
 **Point:** Gather dated, attributable evidence on alternatives or technology so an owner can decide without redoing the analysis.
 
-**Company context:** `context_read({"area": "product/<productId>/context", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.product.research": "81c93997e6bfe86ac41c@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.
@@ -25,7 +25,7 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 
 **Not for:** Product plans, roadmaps, architecture implementation plans, task reports or company policy; keep these with Product and Company Work. Raw notes belong in Files linked from work. Use `cady-product-manage` for product strategy; Research supports it with evidence. Vendor choice for the company's own tools: `cady-engineering-integrations` (vendor reference).
 
-**Unit of work:** one research question and its evolving research file. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
+**Unit of work:** one research question and its evolving research file. **Kind:** strategy. **Parallel:** no. 
 
 ## Inputs
 
@@ -44,12 +44,12 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 ## Procedure
 
 1. State the question, scope, audience and product relevance in a sentence. Research the decision-relevant uncertainty; keep the piece a useful second-layer evidence source rather than a new decision record or policy.
-2. Search Files for the same question and dimension (records_read search kinds ["file"], query research/ plus the topic). Update that file when it exists, preserving its history and useful structure; create another only for a distinct question or dimension.
+2. Search Files for the same question and dimension (cady_read search kinds ["file"], query research/ plus the topic). Update that file when it exists, preserving its history and useful structure; create another only for a distinct question or dimension.
 3. Competition (who the alternatives are and how they price, position and win) or Technology (a product use case and technical feasibility)? Read the matching reference before gathering evidence; both apply the steps below.
 4. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
 5. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
 6. Write Markdown with useful headings and real tables. Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Cite customer quotes as quote:<id> (research.write records and checks a quote against its public page) and sources by URL or file:<id>. Do not delay useful evidence for formatting.
-7. A research piece is a File named research/<title>.md: create it with files_set mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_set mode patch at its expectedGeneration after reading it with records_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Customer interviews and observations stay in Files linked from work, with a CRM interaction. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
+7. A research piece is a File named research/<title>.md: create it with files_set mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_set mode patch at its expectedGeneration after reading it with cady_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Customer interviews and observations stay in Files linked from work, with a CRM interaction. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
 
 ## Acceptance
 

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
-  version: "fab466add2263d450d41"
-  library: "1c135c6bd46b7b60"
+  version: "4b120293c5144c1611db"
+  library: "70bc30f10f1b616d"
   function: "company"
 ---
 # Pre-registered experiment
 
 **Point:** Test the riskiest assumption against pass and fail lines set beforehand, so the result changes a decision, not a story.
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company.experiment": "fab466add2263d450d41@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Separate causes before concluding no demand. For outreach the causes are offer, persona, message, format, channel, timing and deliverability; name the isolated one or test the cheapest split. Instead of: Read a flat or negative response as the user not wanting the product.
@@ -27,29 +27,29 @@ Test the riskiest assumption with a pre-registered experiment and a decision rul
 
 **Not for:** Routine delivery whose desired behavior is clear, or reliability fixes with acceptance; use `cady-engineering-method` for implementation.
 
-**Unit of work:** one assumption and the decision that settles it. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
+**Unit of work:** one assumption and the decision that settles it. **Kind:** strategy. **Parallel:** no. 
 
 ## Inputs
 
 ### Evidence refs
 
-- the assumption decision item
+- the assumption task
 - the Files and CRM records the test produces
 
 ## Procedure
 
 1. Pick the riskiest assumption: the one that would most change the plan if wrong and that you are least sure of. Test it before easier ones.
-2. Look it up first: work_read decisions {state: "current", subject: "hypothesis:<function>.<slug>"} (a persona's assumption is hypothesis:persona.<personaKey>). If a current assumption exists, continue it; never register it twice.
-3. Pre-register before any work, recorded as `cady-company-decision-questions` step 3 records (subject convention there), as an assumption decision item (work_write or decisions_write or asks_write, status OPEN, decision {kind: "hypothesis", subject: "hypothesis:<function>.<slug>", rationale, authority "agent" and no decidedBy: Cady records it as your agent}): the assumption; one behavioural metric (what people do, not what they say); a pass line and a fail line; the decision taken on each outcome; sample size and time box; stop conditions; a sourced cost ceiling or explicit unknown; zero incremental external cost is the evaluation fallback without a selected budget, while any paid effect requires checked current authority. Put the full design in a File the item cites. Cite the question:<slug> it tests, when there is one.
+2. Look it up first among the hypothesis bets in your context read (orchestrator.bets) and your tasks (work_read). If a current assumption exists, continue it; never register it twice.
+3. Pre-register before any work, recorded as `cady-company-decision-questions` step 3 records, as a task (work_write {kind: task, headline: the assumption, brief}): the assumption; one behavioural metric (what people do, not what they say); a pass line and a fail line; the decision taken on each outcome; sample size and time box; stop conditions; a sourced cost ceiling or explicit unknown; zero incremental external cost is the evaluation fallback without a selected budget, while any paid effect requires checked current authority. Put the full design in a File the task cites. Cite the question it tests, when there is one.
 4. Design the smallest test that could change the decision, varying one main thing: for demand and usability assumptions, conversations first, then a manual or concierge test, then a build; for a quality or feasibility crux, the smallest test is a measured build. Prepare everything yourself; come to the person only at a boundary (a call, filming, spend outside verified authority, a send, a signature, access) with a ready packet.
 5. Run it as Projects work citing company:work:<hypothesisId>. Stop early when a stop condition is met. If the instrument or environment changes during the run, take a new baseline before comparing.
-6. Judge it only against the pre-registered lines. Record the outcome as a decision (status COMPLETE) that supersedes the assumption (subject "hypothesis.outcome:<function>.<slug>", authority as in step 3), with the evidence refs and the decision it triggers. A result between the lines because the sample was too small is inconclusive, not a fail; to settle it, pre-register a larger rerun. When the user requested validation, leave a scoped next action on the resulting work; retire or replace a prior nextAction only after checking the exact current work and confirming the successor, using the supported owner transition.
+6. Judge it only against the pre-registered lines. Record the outcome in the task's result (work_write {id, status: done, result, evidenceRefs}) with the decision it triggers; a hypothesis bet it tests is validated or replaced with tree_write. A result between the lines because the sample was too small is inconclusive, not a fail; to settle it, pre-register a larger rerun. When the user requested validation, leave a scoped next action on the resulting work; retire or replace a prior next action only after checking the exact current work and confirming the successor, with work_write {id, next}.
 7. A sound test changes a decision, tests the risky assumption, measures behaviour against lines set and held beforehand, has enough sample to tell, and stops on time.
 
 ## Acceptance
 
-- [ ] a pre-registered assumption item
-- [ ] an outcome decision that supersedes it, citing evidence
+- [ ] a pre-registered assumption task
+- [ ] an outcome result that answers it, citing evidence
 
 ## Owner checks
 

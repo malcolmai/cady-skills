@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "217fc7b0bbcb01f66203"
-  library: "1c135c6bd46b7b60"
+  version: "ae7bdd08763f2cfd5517"
+  library: "70bc30f10f1b616d"
   function: "finance"
 ---
 # Budget and cost review
 
 **Point:** Allocate money to the few drivers that change a decision, from dated actuals, so spend follows what works.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.budget_review": "217fc7b0bbcb01f66203@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Budget the few drivers that move cash (payroll, usage-based services, paid acquisition) at a depth set by stage and the decision at hand. Instead of: Build a full line-item budget by department and month.
@@ -25,7 +25,7 @@ Draft or update a budget or spend allocation, or review last month's spend again
 
 **Not for:** Burn, runway and when to cut, posting ledger entries, reserving money or authorizing payment; use `cady-accounting-method` for close work.
 
-**Unit of work:** one decision horizon, or one monthly cost review, against the current Finance plan. **Kind:** strategy. **Parallel:** no. **Can release:** no. 
+**Unit of work:** one decision horizon, or one monthly cost review, against the current Finance plan. **Kind:** strategy. **Parallel:** no. 
 
 ## Inputs
 

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "66873600a479e7922594"
-  library: "1c135c6bd46b7b60"
+  version: "c76dccc0686a5fc4eba8"
+  library: "70bc30f10f1b616d"
   function: "design"
 ---
 # Design
 
 **Point:** Give each surface real craft for its audience's job, so the product feels as good as it works.
 
-**Company context:** `context_read({"area": "product/<productId>/ui", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.design": "66873600a479e7922594@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - For a material redesign, render about three meaningfully different directions in the real medium and compare them on the same flow. Instead of: Iterate on one direction, or offer palette swaps and written descriptions as the options.
@@ -32,11 +32,11 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - The design system and the craft of each surface: layout, type, copy, motion and assets.
 
 ### Decides
-- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `records_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Make design decisions yourself; take product questions to the PM.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption and one ask. Record the answer as a decision item.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a hypothesis bet when the answer moves resources) and one ask. Record the answer in the task's result.
 
 ### Company records
 - the design system Files

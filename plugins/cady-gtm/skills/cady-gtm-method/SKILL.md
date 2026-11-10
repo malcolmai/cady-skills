@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "55a70c2a12258e216502"
-  library: "1c135c6bd46b7b60"
+  version: "5cb64b671601dfbcb449"
+  library: "70bc30f10f1b616d"
   function: "gtm"
 ---
 # GTM
 
 **Point:** Start from the customer and their words so offer, message and channel earn real conversations, then revise on evidence.
 
-**Company context:** `context_read({"area": "gtm/strategy", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.gtm": "55a70c2a12258e216502@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Before the first result, find one credible path to a qualified conversation and act on it within days; re-plan from what happens. Instead of: Write and polish a full GTM strategy (ICP, positioning, channel mix, targets) before any real outreach.
@@ -36,7 +36,7 @@ Find the right persona and the offer and messaging for them; choose channels tha
 - Test a channel or message with `cady-company-experiment` before scaling it.
 - When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `../../references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 - For reachable-people outcomes, own acceptance: N, people versus organisations, source and channel coverage, List membership and the shortfall (`cady-gtm-tam-map` sources the persona's List as execution work). Preserve the requested size and identity; measures are evidence, never targets.
-- When exact recipients and copy are ready, call crm_outreach_set kind message status review under the channel's execution skill.
+- When exact recipients and copy are ready, call crm_outreach (no id) under the channel's execution skill; one named person needs only the party and voice:me first (`cady-gtm-warm-email`).
 - Choose the channel mix from `../../references/gtm-channels.md` and record it as a function-head decision with its alternatives, what would reverse it and a reviewBy date.
 
 ### Escalates
@@ -48,7 +48,7 @@ Find the right persona and the offer and messaging for them; choose channels tha
 ### Company records
 - direction and bets
 - CRM lists, parties and interactions
-- outreach grants and reviews
+- standing approvals and reviews
 
 ### Model tiers
 - lead

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "3570a0303c029edfce7d"
-  library: "1c135c6bd46b7b60"
+  version: "61b44a406475f3bc766f"
+  library: "70bc30f10f1b616d"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
 **Point:** Decide each purchase or renewal on full commitment against no-buy and cheaper workarounds, so money goes where use proves value.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.finance.vendor_spend_review": "3570a0303c029edfce7d@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Compare every purchase against no-buy, the existing tool and a cheaper workaround, listing the free or zero-incremental option first. Instead of: Compare paid vendors with each other and pick the best value among them.
@@ -25,7 +25,7 @@ Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actua
 
 **Not for:** Bookkeeping, a finance ledger, payment, provider billing changes, supplier order execution or technical qualification; use `cady-finance-budget-review` for the current budget plan.
 
-**Unit of work:** one work item per vendor and plan or purchase decision. **Kind:** strategy. **Parallel:** yes. **Can release:** no. 
+**Unit of work:** one work item per vendor and plan or purchase decision. **Kind:** strategy. **Parallel:** yes. 
 
 ## Inputs
 

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "6fd84bb6a23c85bf3f41"
-  library: "1c135c6bd46b7b60"
+  version: "20868b53dcaa3a2e4d00"
+  library: "70bc30f10f1b616d"
   function: "engineering"
 ---
 # Independent review
 
 **Point:** A reviewer who did not produce the work checks the actual diff and evidence, so approval means it holds.
 
-**Company context:** `context_read({"area": "product/<productId>/engineering", "task": "<what you are about to do, in one sentence>", "knownMethods": {"execution.topic.independent_review": "6fd84bb6a23c85bf3f41@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
 

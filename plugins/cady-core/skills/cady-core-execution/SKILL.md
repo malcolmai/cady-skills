@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "1d8c40581231051e6062"
-  library: "1c135c6bd46b7b60"
+  version: "ed60f2d7a52a842a86e1"
+  library: "70bc30f10f1b616d"
   function: "core"
 ---
 # Execution guidance
 
-**Company context:** `context_read({"area": "ops/records", "task": "<what you are about to do, in one sentence>"})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 Shared execution rules: authority, blockers, credentials, effects and receipts, recurrence and model choice. Use when: a skill points here, or before an effect, credential use, retry or recovery. Not for: choosing what work to do.
 - **Application:** Use this method when complex work, execution design, integrations or recovery need it; reuse it within the task. Combine the shared method with only the relevant use-case guidance and current company/task context. Read missing context that could change the approach; refresh authority and mutable targets before effects. Apply controls proportionately to consequence and uncertainty, not as a checklist for every chat. Save only material decisions, changed facts or continuation state at the existing owner; keep implementation details in the chosen project.
@@ -20,7 +20,7 @@ Shared execution rules: authority, blockers, credentials, effects and receipts, 
 
 ## Recurrence
 
-- Recurring work: `../../references/agent-hosts.md` (scheduling). Every run of every agent follows the run sequence (skill cady-core-run-sequence). Waiting work records nextAction and a dueDate and relies on the host's next wake; there is no separate wake mechanism.
+- Recurring work: `../../references/agent-hosts.md` (scheduling). Every run of every agent follows the run sequence (skill cady-core-run-sequence). Waiting work records its next action and due date and relies on the host's next wake; there is no separate wake mechanism.
 
 ## Selection
 

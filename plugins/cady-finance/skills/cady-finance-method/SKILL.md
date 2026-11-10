@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "25bf9050658280c017cb"
-  library: "1c135c6bd46b7b60"
+  version: "ce642836179f26faa903"
+  library: "70bc30f10f1b616d"
   function: "finance"
 ---
 # Finance
 
 **Point:** Judge each spend, cut and raise as return against cost from real cash, so the plan fits the company's runway.
 
-**Company context:** `context_read({"area": "finance/plan", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.finance": "25bf9050658280c017cb@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Diagnose the stage first and size Finance work to it: runway and commitments pre-revenue, collections and margin at first revenue, budget against actuals once growing. Instead of: Install a standard finance stack for every company: annual budget, monthly variance pack, three-statement model and separate specialist agents.
@@ -55,7 +55,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 ### Company records
 - current company direction and Finance plan
 - CRM vendor parties and legal entities
-- Projects work, dueDate, dependsOn and decision records
+- Projects work, due date, dependsOn and decision records
 - chosen ledger, bank, contract and filing sources by reference
 - this agent’s goal, duties, limits and run receipts
 

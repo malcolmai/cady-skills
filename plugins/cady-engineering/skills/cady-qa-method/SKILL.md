@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "eaf851736f263eb5c7cd"
-  library: "1c135c6bd46b7b60"
+  version: "afbe46d76efa8f935acb"
+  library: "70bc30f10f1b616d"
   function: "qa"
 ---
 # QA
 
 **Point:** Show what a fresh user actually meets, with evidence, so each iteration fixes the failures that matter most.
 
-**Company context:** `context_read({"area": "product/<productId>/release", "task": "<what you are about to do, in one sentence>", "knownMethods": {"company.method.qa": "eaf851736f263eb5c7cd@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Walk journeys blind as a fresh user through the real surface; the builder's own walk is only a self-check. Instead of: Let the agent that built it verify it, or test from routes, seeded state and the database.
@@ -35,12 +35,12 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 
 ### Decides
 - Read the company's recorded stage and release policy; never assume either. Gate the critical paths the policy names; with no policy, recommend one to its owner and treat a failing critical-path test as blocking until it is decided; where the policy names who deploys, hand them the prepared release as one ask. The stage sets the emphasis. Pre-launch: assume the product has never fully worked and judge spend by what it teaches; a company is live at its first planned outside exposure (a public launch, open sign-up or an outside user), not at first payment, and before it, walk its first-value journey on the deployed product. Live without paying users: check the paths users take, protect first impressions to the owner's exposure bar and show the owner the cost of waiting. Paying users: keep preparation fast, strengthen checks before customer release and judge spend on return. Scale: strengthen assurance and efficiency.
-- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `records_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Find issues with the vision tier. Make QA decisions yourself, take product questions to the PM, and hand agreed fixes to workhorse writers.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption and one ask. Record the answer as a decision item.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a hypothesis bet when the answer moves resources) and one ask. Record the answer in the task's result.
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.

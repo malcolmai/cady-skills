@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
-  version: "84e0c2af7d97185f62f4"
-  library: "1c135c6bd46b7b60"
+  version: "250e2456f64352393f70"
+  library: "70bc30f10f1b616d"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
 **Point:** Before signing, surface the few terms dear to change later; after, start every clock the contract triggers.
 
-**Company context:** `context_read({"area": "ops/legal", "task": "<what you are about to do, in one sentence>", "knownMethods": {"skill.company_operations.contract_checks": "84e0c2af7d97185f62f4@1c135c6bd46b7b60"}})`
+**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
 - Before signing, keep only the points that get harder or dearer to change afterwards, usually one to five, each with a default and the credible alternative. Instead of: Review every clause and report all the issues found.
@@ -24,7 +24,7 @@ A contract that commits the company is about to be signed or was just signed: wh
 
 **Not for:** Posts or updates about it, the yearly filing calendar (`cady-company-operations-compliance-register`), general legal questions, or a contract not yet in view.
 
-**Unit of work:** one contract, one phase: plan before signing or act after completion. **Kind:** execution. **Parallel:** yes. **Can release:** no. 
+**Unit of work:** one contract, one phase: plan before signing or act after completion. **Kind:** execution. **Parallel:** yes. 
 
 ## Always
 
@@ -38,7 +38,7 @@ A contract that commits the company is about to be signed or was just signed: wh
 
 - entity records (crm_set)
 - the contract's terms or its existing work item
-- current filing:, hr:, legal: and contract: decisions
+- the filing, hr, legal and contract registers (register-<kind>.md)
 
 ### Work fields
 
@@ -48,12 +48,12 @@ A contract that commits the company is about to be signed or was just signed: wh
 
 ## Procedure
 
-1. Name the contract and phase. Plan: terms are being agreed and nothing is signed (a term sheet, an offer, a statement of work, an order form). Act: it is signed, paid, issued or started, and that date starts the clocks. If neither is true, stop: there is nothing to check yet. Look up contract:<kind>:<ref> with work_read decisions {state: "current", subjectPrefix: "contract:"}; if it is current for this phase and the facts have not materially changed, use it and stop.
+1. Name the contract and phase. Plan: terms are being agreed and nothing is signed (a term sheet, an offer, a statement of work, an order form). Act: it is signed, paid, issued or started, and that date starts the clocks. If neither is true, stop: there is nothing to check yet. Look up this contract's entry in register-contract.md (its fil-<n> once known, else files_read q "register contract"); if it is current for this phase and the facts have not materially changed, use it and stop.
 2. Name the jurisdictions in scope from the facts: the contracting entity and where it is registered (its ops:entity decision line), and where the counterparty, workers and customers are. If a counterparty's or worker's country is unknown, ask once as a BLOCKED item and continue with the jurisdictions you know.
 3. Consider the points every contract shares, then the kind's own row (`../../references/contract-kinds.md`). Shared: who contracts and who may sign, with any board or shareholder approval; what the company gets (ownership of what is made, data and confidentiality); what it commits to (amount, term, renewal and notice, exit, liability); money and tax (payment terms, currency, tax where the work is done or the customer is); what completion starts (clocks, registrations, registers). Record the points that do not apply in one line in the decision record; report only the applicable ones to the owner.
 4. Plan: for each point that applies, ask what gets harder or dearer to change after signing, and keep only those, usually one to five. For each: the choice, your recommended default, the credible alternative and what changing it later would cost. Add them to the contract's existing work item; a choice reserved to the founder becomes a BLOCKED decision with your recommendation.
-5. Act: settle each applicable obligation with requirement_register steps 2 to 5, reusing a current filing:, hr: or legal: decision. Compute each deadline from the completion date as the authority states it, never from an illustration. If one is already passed or too close for the owner to act in time (about 30 days by default), tell the owner today (the date, the consequence and who must act) before anything else; if it has passed, say so and what late relief exists. If the completion date is unknown, ask for it first. Then create dated Projects work for each obligation with work_write or decisions_write or asks_write, with methodId and methodVersion from context_read selectedMethod for company_operations: dueDate is the deadline minus a buffer, and dependsOn names the evidence and the filer. Elections, filings, signatures and payments are BLOCKED asks for the person who files; mark one done only from the authority's receipt.
-6. Record a contract:<kind>:<ref> decision with work_write or decisions_write or asks_write (phase, jurisdictions, points checked and ruled out, the work created; supersede the plan record at act). Report the items that need someone else, soonest deadline first.
+5. Act: settle each applicable obligation with requirement_register steps 2 to 5, reusing a current entry in register-filing.md, register-hr.md or register-legal.md. Compute each deadline from the completion date as the authority states it, never from an illustration. If one is already passed or too close for the owner to act in time (about 30 days by default), tell the owner today (the date, the consequence and who must act) before anything else; if it has passed, say so and what late relief exists. If the completion date is unknown, ask for it first. Then create dated Projects work for each obligation with work_write {kind: task, path: operations}: due is the deadline minus a buffer, and brief.dependsOn names the evidence and the filer. Elections, filings, signatures and payments are asks (asks_write) for the person who files; mark one done only from the authority's receipt.
+6. Record the contract check as an entry <kind>-<ref> in register-contract.md (files_set mode patch): phase, jurisdictions, points checked and ruled out, the work created; the act-phase entry replaces the plan-phase one. Report the items that need someone else, soonest deadline first.
 
 ## Acceptance
 
@@ -74,7 +74,7 @@ A contract that commits the company is about to be signed or was just signed: wh
 
 - company:work:<workId>
 - crm:entity:<entityId>
-- **Transition:** contract:<kind>:<ref> decision with plan choices or dated obligations
+- **Transition:** register-contract.md entry <kind>-<ref> with plan choices or dated obligations
 
 ## References
 - Read [Contract kinds](../../references/contract-kinds.md) when the contract's kind may add points to the shared ones.
