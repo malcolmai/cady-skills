@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
   version: "9c1c92ad876999154aba"
-  library: "c005b0910eaa5164"
+  library: "810d92568a814141"
   function: "company"
 ---
 # Executive review
