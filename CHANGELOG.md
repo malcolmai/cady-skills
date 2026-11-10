@@ -2,7 +2,7 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 70bc30f10f1b616d · 2026-11-10
+## c005b0910eaa5164 · 2026-11-10
 
 Since 18b616a637e57c35: 0 new, 0 dropped, 61 changed.
 
