@@ -2,9 +2,9 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 015714eb283c43b7 · 2026-11-10
+## e30735e29499ea4d · 2026-11-10
 
-Since 62fcb7347d29bbd7: 0 new, 0 dropped, 11 changed.
+Since 62fcb7347d29bbd7: 0 new, 0 dropped, 12 changed.
 
 Changed (the parts that differ):
 - `cady-company-decision-check`: Procedure
@@ -17,9 +17,10 @@ Changed (the parts that differ):
 - `cady-core-run-sequence`: Run sequence, reference plan-path.md
 - `cady-gtm-launch`: Gtm launch
 - `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-warm-email`: Procedure
 - `cady-product-manage`: Procedure
 
-Shared references changed: company-goals.md, decision-check-record.md, engineering-cycle-dimensions.md, executive-decision.md, executive-weekly.md, product-manage-detail.md.
+Shared references changed: company-goals.md, decision-check-record.md, engineering-cycle-dimensions.md, executive-decision.md, executive-weekly.md, outreach-release.md, product-manage-detail.md.
 
 ## 62fcb7347d29bbd7 · 2026-11-10
 

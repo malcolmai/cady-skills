@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
-  version: "c7e4357e431e0643dc74"
-  library: "015714eb283c43b7"
+  version: "4da06c251c310d9e073b"
+  library: "e30735e29499ea4d"
   function: "gtm"
 ---
 # Warm pipeline pass
