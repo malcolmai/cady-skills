@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.distil"
   version: "11d152be2a6c5781ac35"
-  library: "e60c542620b38cff"
+  library: "fd85e7f28da63fc0"
   function: "company"
 ---
 # Distil the concern tree
