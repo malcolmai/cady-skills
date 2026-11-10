@@ -1,12 +1,12 @@
 ---
 name: "cady-company-change-agent-behaviour"
-description: "Change agent behaviour. Use when: Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal. Not for: Making, scheduling or retiring an agent (`cady-company-manage-agents`), or writing or judging a post or design."
+description: "Change agent behaviour. Use when: Change what agents do: edit a skill, role card, run sequence, tool text or an agent's goal. Not for: Making, scheduling or retiring an agent (`cady-company-manage-agents`), or writing or judging a post or design."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "52cef4db621fb5fa7813"
-  library: "810d92568a814141"
+  version: "33f961d4b7720a6bcd41"
+  library: "3e67725c10e93707"
   function: "company"
 ---
 # Change agent behaviour
@@ -22,7 +22,7 @@ metadata:
 - Prove a larger change with a few cases run with and without it, checks written first, including the nearby case that must not move. Instead of: Edit the text and spot-check one run to see that it now behaves.
 - Review a larger change twice by separate agents: logic against the reasons, writing on the served text alone. Instead of: Have one reviewer read the change together with its rationale and approve it.
 
-Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal.
+Change what agents do: edit a skill, role card, run sequence, tool text or an agent's goal.
 
 **Not for:** Making, scheduling or retiring an agent (`cady-company-manage-agents`), or writing or judging a post or design.
 

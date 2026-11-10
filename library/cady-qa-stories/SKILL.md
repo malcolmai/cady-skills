@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
   version: "58f709c6d2de7686d837"
-  library: "810d92568a814141"
+  library: "3e67725c10e93707"
   function: "qa"
 ---
 # User stories: keep, walk and read

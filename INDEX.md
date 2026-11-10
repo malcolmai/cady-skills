@@ -12,7 +12,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-orchestrator-method`: Orchestrator role card: what this function owns and decides (`library/cady-orchestrator-method/SKILL.md`)
 
 ## company
-- `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, charter line, tool text or an agent's goal. (`library/cady-company-change-agent-behaviour/SKILL.md`)
+- `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, tool text or an agent's goal. (`library/cady-company-change-agent-behaviour/SKILL.md`)
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it. (`library/cady-company-decision-check/SKILL.md`)
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route. (`library/cady-company-decision-questions/SKILL.md`)
 - `cady-company-distil`: A due distil task names a node whose critical observations are waiting on the outer loop. (`library/cady-company-distil/SKILL.md`)

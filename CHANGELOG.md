@@ -2,14 +2,14 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 810d92568a814141 · 2026-11-10
+## 3e67725c10e93707 · 2026-11-10
 
-Since 18b616a637e57c35: 0 new, 0 dropped, 61 changed.
+Since 18b616a637e57c35: 0 new, 0 dropped, 62 changed.
 
 Changed (the parts that differ):
 - `cady`: Start every run, Add or change an agent, Load a skill, reference agent-stop.md, reference execution-agent-brief.md
 - `cady-accounting-period-close`: intro, Procedure
-- `cady-company-change-agent-behaviour`: intro, Procedure
+- `cady-company-change-agent-behaviour`: description, intro, Procedure
 - `cady-company-decision-check`: intro, Always, Procedure
 - `cady-company-decision-questions`: intro, Procedure, Acceptance
 - `cady-company-distil`: intro, Inputs, Procedure, Acceptance
@@ -29,6 +29,7 @@ Changed (the parts that differ):
 - `cady-core-context`: Company practice
 - `cady-core-execution`: Recurrence, reference credentials.md, reference decision-standard.md, reference delivery-completion.md, reference native-orchestration.md
 - `cady-core-run-sequence`: Run sequence, reference asking.md, reference goals-and-work.md, reference plan-path.md, reference reporting.md
+- `cady-core-skill-index`: company
 - `cady-customer-success-lifecycle`: intro, Procedure
 - `cady-design-method`: Role card
 - `cady-design-wcag-audit`: intro

@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-10T00:00:00Z",
   "bundle": {
-    "tag": "810d92568a814141",
-    "version": "810d92568a81414187eb436a551e1f6f42d13bd6f77766693a389ddd438fdabe",
-    "pluginVersion": "2026.11.10-810d9256"
+    "tag": "3e67725c10e93707",
+    "version": "3e67725c10e93707e79a0586a772b02721e36750b8d2866ba9fa1b6ad9d66c78",
+    "pluginVersion": "2026.11.10-3e67725c"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.10-810d9256"
+    "version": "2026.11.10-3e67725c"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "52cef4db621fb5fa7813"
+      "version": "33f961d4b7720a6bcd41"
     },
     {
       "name": "cady-company-decision-check",
@@ -153,7 +153,7 @@
       "name": "cady-core-skill-index",
       "path": "library/cady-core-skill-index",
       "cadyId": "cady.skill_index",
-      "version": "9f00b9483155f49ac03e"
+      "version": "3f4e7b2fc41657ca1274"
     },
     {
       "name": "cady-customer-success-lifecycle",
