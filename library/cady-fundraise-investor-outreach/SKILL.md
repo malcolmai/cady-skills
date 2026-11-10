@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
   version: "c77d0cf9716d0f01abbe"
-  library: "e30735e29499ea4d"
+  library: "fceb362826942aaa"
   function: "fundraise"
 ---
 # Investor outreach and updates
