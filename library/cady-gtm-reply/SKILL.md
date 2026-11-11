@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
   version: "af0e5687ea97fb9c06cf"
-  library: "1ff500e2120fed4b"
+  library: "0809eae19e8ff025"
   function: "gtm"
 ---
 # Reply in a live thread
