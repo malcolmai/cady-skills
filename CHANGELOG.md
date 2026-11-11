@@ -2,6 +2,24 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## fd85e7f28da63fc0 · 2026-11-10
+
+Since 015714eb283c43b7: 0 new, 0 dropped, 10 changed.
+
+Changed (the parts that differ):
+- `cady`: reference execution-agent-brief.md
+- `cady-company-distil`: Procedure
+- `cady-core-execution`: reference decision-standard.md
+- `cady-core-run-sequence`: Run sequence, reference asking.md, reference goals-and-work.md
+- `cady-engineering-independent-review`: Bets, Independent review
+- `cady-engineering-system-cycle`: Procedure
+- `cady-finance-method`: reference domain-method.md
+- `cady-fundraise-method`: reference domain-method.md
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-warm-email`: Procedure
+
+Shared references changed: decision-check-record.md, execution-agent-brief.md, outreach-release.md.
+
 ## 015714eb283c43b7 · 2026-11-10
 
 Since 62fcb7347d29bbd7: 0 new, 0 dropped, 11 changed.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "5a441d2167b3159bdf33"
-  library: "015714eb283c43b7"
+  version: "270d5dcd9a65cbf49333"
+  library: "fd85e7f28da63fc0"
   function: "company"
 ---
 # Who decides: the decision journey
