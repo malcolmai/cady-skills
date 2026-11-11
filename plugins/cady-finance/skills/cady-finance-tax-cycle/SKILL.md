@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.tax_cycle"
   version: "f2f4c12971a4c1d640f1"
-  library: "8ae2a5b48ab3b227"
+  library: "1ff500e2120fed4b"
   function: "finance"
 ---
 # Entity tax and filing cycle
