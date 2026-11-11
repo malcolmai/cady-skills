@@ -2,6 +2,54 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 1ff500e2120fed4b · 2026-11-11
+
+Since beadb50f2d059a05: 0 new, 0 dropped, 40 changed.
+
+Changed (the parts that differ):
+- `cady`: reference agent-stop.md, reference execution-agent-brief.md
+- `cady-company-decision-check`: Procedure
+- `cady-company-decision-questions`: Procedure
+- `cady-company-distil`: Procedure
+- `cady-company-executive-review`: Procedure
+- `cady-company-experiment`: Procedure
+- `cady-company-manage-agents`: Procedure
+- `cady-company-method`: Role card, Selected judgment
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-operations-contract-checks`: Procedure
+- `cady-company-operations-inbox-follow-through`: Result
+- `cady-company-operations-method`: reference domain-method.md
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-company-operations-requirement-register`: Procedure
+- `cady-company-review`: reference setup.md
+- `cady-company-taste-review`: Procedure
+- `cady-core-execution`: reference credentials.md, reference decision-standard.md, reference delivery-completion.md
+- `cady-core-run-sequence`: Bets, Run sequence, reference asking.md, reference goals-and-work.md, reference plan-path.md, reference reporting.md
+- `cady-customer-success-lifecycle`: Procedure
+- `cady-engineering-debugging`: Procedure
+- `cady-engineering-method`: intro, Role card, Parent function, removed Selected judgment, reference receipts.md, reference selected-judgment.md
+- `cady-engineering-system-cycle`: Procedure
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-method`: Role card, reference domain-method.md
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-fundraise-raise-plan`: Procedure
+- `cady-gtm-calls`: Procedure
+- `cady-gtm-cold-email-cycle`: Procedure
+- `cady-gtm-events`: Procedure
+- `cady-gtm-launch`: Gtm launch
+- `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-reply`: Procedure, Acceptance
+- `cady-gtm-warm-email`: Procedure
+- `cady-orchestrator-method`: Role card
+- `cady-product-manage`: Procedure, Acceptance
+- `cady-product-method`: reference domain-method.md
+- `cady-qa-triage`: Procedure
+- `cady-sales-deal-motion`: Procedure
+
+Shared references changed: agent-lifecycle.md, agent-stop.md, call-follow-up.md, company-goals.md, deal-motion-stages.md, decision-check-record.md, engineering-cycle-dimensions.md, engineering-cycle-review.md, execution-agent-brief.md, executive-decision.md, executive-weekly.md, outreach-release.md, product-manage-detail.md, release-plan.md, taste-check.md, vendor-renewal.md.
+
 ## beadb50f2d059a05 · 2026-11-11
 
 Since fd85e7f28da63fc0: 0 new, 0 dropped, 3 changed.

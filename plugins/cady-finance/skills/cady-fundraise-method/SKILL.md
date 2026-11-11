@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "7a1a539b7c37ae8085aa"
-  library: "beadb50f2d059a05"
+  version: "c1bf4727d2103ee08490"
+  library: "1ff500e2120fed4b"
   function: "fundraise"
 ---
 # Fundraise
@@ -46,7 +46,7 @@ You help the company decide whether, when and how much to raise, and run a round
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
-- rounds: one decision per round, subject fundraise:round-<slug> and headline "Raising <name>: ...", plus a round file under fundraising/ in Files (decisions_write, files_set)
+- rounds: one decision per round, subject fundraise:round-<slug> and headline "Raising <name>: ...", plus a round file under fundraising/ in Files (decisions_set, files_set)
 - investor tracks of the round (the round's <name> exactly, a party field; stages through crm_interactions_set); a commitment amount is a party field citing the signed file (crm_set, crm_set fields)
 - the cap table: legal/cap-table.csv in Files
 - the runway view and Finance plan

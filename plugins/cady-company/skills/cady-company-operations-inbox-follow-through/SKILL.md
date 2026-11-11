@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "254e240ed9a6fe92cc5b"
-  library: "beadb50f2d059a05"
+  version: "2bbb50515e58b2d72bd9"
+  library: "1ff500e2120fed4b"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
@@ -81,7 +81,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 - company:work:<workId>
 - crm:interaction:<interactionId>
 - crm:party:<partyId>
-- **Transition:** report the useful outcome, material remainder and next owner through work_write; include counters only in optional observed run output, never create a run just to hold them
+- **Transition:** report the useful outcome, material remainder and next owner through work_set; include counters only in optional observed run output, never create a run just to hold them
 
 ## References
 - Read [Commitment updates and takeaway routing](../../references/inbox-follow-through-details.md) when a material inbox outcome, commitment or takeaway needs owner-routed follow-through.

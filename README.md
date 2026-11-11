@@ -90,14 +90,6 @@ Then: Start a new conversation.
 
 **Other hosts**: Reinstall from github.com/malcolmai/cady-skills (README, Update).
 
-If Claude Code reports your skills are newer than Cady's release (after a rollback), reinstall instead:
-
-```bash
-claude plugin uninstall cady@cady && claude plugin install cady@cady
-```
-
-Also uninstall and reinstall each group plugin you installed (`claude plugin install <group>@cady`).
-
 ## Customise for your company (fork)
 
 Optional. Fork when you want company-specific methods; the library is a best-practice baseline, your orchestrator agent edits the fork with your company's own reasoning, and Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.

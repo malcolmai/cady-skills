@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "507c7f4e221928993ef7"
-  library: "beadb50f2d059a05"
+  version: "0408cb3b44a732e3fe0a"
+  library: "1ff500e2120fed4b"
   function: "gtm"
 ---
 # Social direct message

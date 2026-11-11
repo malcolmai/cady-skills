@@ -8,6 +8,6 @@
 - Stop on a missing or unreadable ref the brief needs.
 - **Scope:** Stop all work on the affected account or mailbox at once: prepare, release and send nothing more on it. Work on other accounts goes on.
 - **Pause:** Do not pause your own agent record; it must stay active to file this run's report.
-- **Report:** Close with one work_write {id, status: blocked, run: {outcome: 'partial', stopCause: {kind, evidenceRef}}, result "Stopped: <cause>, <evidence>, <what is paused>", next the owner's exact step (for example "Owner: clear the LinkedIn check, then resume grant <id>"). That item is your one ask. A stop is not progress: never report the work done.
+- **Report:** Close with one work_set {id, status: blocked, run: {outcome: 'partial', stopCause: {kind, evidenceRef}}, result "Stopped: <cause>, <evidence>, <what is paused>", next the owner's exact step (for example "Owner: clear the LinkedIn check, then resume grant <id>"). That item is your one ask. A stop is not progress: never report the work done.
 - **Workaround:** Never retry, wait it out, resend, or switch tool, domain, mailbox, account or browser automation. Settle an uncertain write by reading it back with cady_read, never by sending again.
 - **Owner:** Change nothing about your own setup or method. The owner, or channel strategy, fixes the cause.
