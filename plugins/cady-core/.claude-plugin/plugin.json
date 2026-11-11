@@ -1,6 +1,6 @@
 {
   "name": "cady-core",
-  "version": "2026.11.11-0809eae1",
+  "version": "2026.11.11-34244392",
   "description": "Cady skills every agent uses: run sequence, context, scheduling, skill index. Requires the cady plugin.",
   "author": {
     "name": "Cady",

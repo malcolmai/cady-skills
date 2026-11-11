@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-11T00:00:00Z",
   "bundle": {
-    "tag": "0809eae19e8ff025",
-    "version": "0809eae19e8ff02519bc0ebe0879c5919f04a7a383fbbe5aa7688616780e07a1",
-    "pluginVersion": "2026.11.11-0809eae1"
+    "tag": "342443923258ad5d",
+    "version": "342443923258ad5d0db2f520daf16a381226befdac1c45a67ccb1d32ae99d8a2",
+    "pluginVersion": "2026.11.11-34244392"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.11-0809eae1"
+    "version": "2026.11.11-34244392"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "598c1d6fbc8552fa1e5b"
+      "version": "b486368e87340a8691fe"
     },
     {
       "name": "cady-accounting-method",
@@ -69,7 +69,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "3aff318943ee736b97ed"
+      "version": "de0b6660d831ed8964bb"
     },
     {
       "name": "cady-company-method",
@@ -141,7 +141,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "7b1e97b958c7ef1580cf"
+      "version": "2620dc57d8da0736626d"
     },
     {
       "name": "cady-core-run-sequence",
@@ -279,7 +279,7 @@
       "name": "cady-gtm-channel-plan",
       "path": "library/cady-gtm-channel-plan",
       "cadyId": "skill.gtm.channel_plan",
-      "version": "a3f9ec97e021da3f3660"
+      "version": "46968ad11ab04c261501"
     },
     {
       "name": "cady-gtm-cold-email-cycle",
@@ -363,7 +363,7 @@
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "15e3b86600951a715ba4"
+      "version": "f0ae908ab3e3de03774e"
     },
     {
       "name": "cady-product-customer-interview",
