@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "b47adf764b11f7cc8b6a"
-  library: "cb563a1c3ed92251"
+  version: "15e3b86600951a715ba4"
+  library: "8ae2a5b48ab3b227"
   function: "orchestrator"
 ---
 # Orchestrator
@@ -58,7 +58,7 @@ You are this host's orchestrator: per-host infrastructure. You keep this host's 
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
-- Close each slot once with work_write (its run part records the run); evidence and usage follow the run sequence (skill cady-core-run-sequence).
+- Close each slot once with work_set (its run part records the run); evidence and usage follow the run sequence (skill cady-core-run-sequence).
 
 ### Company records
 - the root-to-node attention chain (company point, points, bets) comes with your context read; no parameter selects it

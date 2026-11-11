@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
-  version: "737214ead3fb424f6fa9"
-  library: "cb563a1c3ed92251"
+  version: "891e1a31e2a23430c697"
+  library: "8ae2a5b48ab3b227"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
@@ -46,7 +46,7 @@ Research, independently check and record one compliance requirement as a Cady Pr
 2. Research from the authority's own guidance, statute or form first, then dated secondary sources. Do not repeat a broad search when the exact current source and owner route settle the question. Establish the trigger, the deadline or rule, thresholds, who completes it, what proves completion and every exemption.
 3. Compare each exemption and threshold with the company's facts: which facts would remove an exemption or start a clock, and how close they are. Missing evidence is an open question, never an exemption or a not-required.
 4. Independent check: run one fresh-context subagent given only the facts and the question, not your research or conclusion, and ask it for the common mistakes on this requirement and their consequences. If no subagent is available, use a second dated source. Unresolved disagreement or a material or non-standard case goes to a specialist; until then the requirement stays an assumption.
-5. Record one register entry in register-<kind>.md (files_set mode save_text when the File does not exist yet, else mode patch at its expectedGeneration after reading it), named <slug>, lowercase with hyphens. State the rule in at most 1,000 characters with up to 4 dated sources, one short line each, and a check line of at most 300 characters: who or what checked, the verdict and what changed. Add alternatives and the key assumption. Upload longer research as its own File and cite file:<fileId> in the entry. If step 1 found an entry on this subject, replace it in place. An entry with a deadline also gets a dated task (work_write {kind: task, path: operations, due, evidenceRefs: [the register's fil-<n>]}) Mark the entry settled only when the check line holds the findings and no material question is open; otherwise mark it an assumption.
+5. Record one register entry in register-<kind>.md (files_set mode save_text when the File does not exist yet, else mode patch at its expectedGeneration after reading it), named <slug>, lowercase with hyphens. State the rule in at most 1,000 characters with up to 4 dated sources, one short line each, and a check line of at most 300 characters: who or what checked, the verdict and what changed. Add alternatives and the key assumption. Upload longer research as its own File and cite file:<fileId> in the entry. If step 1 found an entry on this subject, replace it in place. An entry with a deadline also gets a dated task (work_set {kind: task, path: operations, due, evidenceRefs: [the register's fil-<n>]}) Mark the entry settled only when the check line holds the findings and no material question is open; otherwise mark it an assumption.
 
 ## Acceptance
 

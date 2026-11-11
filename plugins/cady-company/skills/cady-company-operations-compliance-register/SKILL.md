@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
-  version: "bd9400c5e2efd6959a3e"
-  library: "cb563a1c3ed92251"
+  version: "dd336f0f892ff7cb7e55"
+  library: "8ae2a5b48ab3b227"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
@@ -46,8 +46,8 @@ What statutory and registry filings the company owes and when (annual returns, c
 2. For each entity and jurisdiction, check every category: registry annual and event filings, tax, securities and financing notices, foreign-investment and statistical reports, payroll and employment, mandatory insurance, sector licences, data-protection registration. Research each with requirement_register steps 2 and 3. You may run one research subagent per jurisdiction, each given the entity facts, the categories and those steps, returning dated sources and findings; you merge them. State each category that does not apply, with the reason.
 3. For each applicable requirement, record how to file: the authority, portal or form, who may sign and file, the credentials needed (never stored in Cady) and the fee. Record what it means commercially: the cost, the late penalty and how it escalates, and the effect on other obligations (accounts before tax, a notice tied to the next close, good standing, loss of an exemption). Work back from the deadline to a preparation start with buffer.
 4. Check and record each new or changed requirement with requirement_register steps 4 and 5. Give the checker the common mistakes: wrong entity or period, a missed trigger, a misread exemption, the wrong clock. Name the entry <jurisdiction>-<authority>-<obligation> in register-filing.md (illustrative: <country>-<registry>-annual-return): the obligation and the entity in one short sentence, then jurisdiction, authority, the due date or rule, exemptions considered, how to file and the implications. Set reviewBy at the preparation start, sooner if the rule or the facts it depends on are likely to change, and tomorrow if the start has passed.
-5. Each upcoming occurrence is Projects work with due at the preparation start and brief.dependsOn for evidence, review and the filer; reuse existing work. Create it with work_write {kind: task, path: operations} (the method comes from the path), so Ops Deadlines lists the work and marks it overdue. Tax returns follow `cady-finance-tax-cycle`, one return-period each. Agents submit no government filing or payment: set the step blocked for the person or adviser who files (work_write {id, status: blocked, next}), raise an ask alone (asks_write, kind "send", readyRefs citing the step), and verify filed or paid only from the authority's receipt.
-6. Close by updating register-filing.md (files_set mode patch). It lists the entities, jurisdictions and categories covered, the changes found and the open questions, with a review date at most a month away, and the next register task (work_write {kind: task, path: operations, due, evidenceRefs: [the register's fil-<n>]}) due then. Report each requirement's state (settled, assumption or with a specialist), its next due date and the pending action.
+5. Each upcoming occurrence is Projects work with due at the preparation start and brief.dependsOn for evidence, review and the filer; reuse existing work. Create it with work_set {kind: task, path: operations} (the method comes from the path), so Ops Deadlines lists the work and marks it overdue. Tax returns follow `cady-finance-tax-cycle`, one return-period each. Agents submit no government filing or payment: set the step blocked for the person or adviser who files (work_set {id, status: blocked, next}), raise an ask alone (asks_set, kind "send", readyRefs citing the step), and verify filed or paid only from the authority's receipt.
+6. Close by updating register-filing.md (files_set mode patch). It lists the entities, jurisdictions and categories covered, the changes found and the open questions, with a review date at most a month away, and the next register task (work_set {kind: task, path: operations, due, evidenceRefs: [the register's fil-<n>]}) due then. Report each requirement's state (settled, assumption or with a specialist), its next due date and the pending action.
 
 ## Acceptance
 

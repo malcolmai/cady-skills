@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "b65e25896cb57a44c823"
-  library: "cb563a1c3ed92251"
+  version: "b251c7aa11ae16a849e7"
+  library: "8ae2a5b48ab3b227"
   function: "gtm"
 ---
 # Cold email cycle
@@ -48,7 +48,7 @@ Write and send cold email to people not yet contacted, using one template per se
 
 ## Procedure
 
-1. Use the work item for this cycle. If starting one, call work_write {kind: task, headline, next, path: the channel's node, brief {segment, cycle}, evidenceRefs}. Read the brief refs (`../../references/outreach-drafting.md`, Brief). If profileRef is unchecked, stop and report to the brief’s author; draft nothing.
+1. Use the work item for this cycle. If starting one, call work_set {kind: task, headline, next, path: the channel's node, brief {segment, cycle}, evidenceRefs}. Read the brief refs (`../../references/outreach-drafting.md`, Brief). If profileRef is unchecked, stop and report to the brief’s author; draft nothing.
 2. Read the List or parties and cady_read party:<partyId>; apply `../../references/outreach-release.md`, Permission. Exclude opted-out, suppressed, engaged parties (route to warm or reply), prior touches, missing names and role inboxes. Give every candidate, in or out, a one-line reason in words, not a code. Keep unverified destinations visible as held. Verify addresses before first send; keep catch-all a small share, never buy a list and re-verify data older than 90 days.
 3. Before the first cycle or after a sender change, check and record the sender as `../../references/cold-deliverability.md`, setup says.
 4. In cold_template mode the reason belongs to the persona, so people who share it get their own segmentKey (the persona_key). Use the brief’s angle, variants and shares and its segmentKey to write one plain cold_template per variant in the profile’s words; apply `../../references/outreach-drafting.md` (Brief, Unknowns). No images or attachments and at most one link. Run the draft check (the draft check part of `../../references/outreach-drafting.md`) before the taste check (`../../references/taste-message.md`). Use at most one proof item from the credibility inventory, with only CRM-approved customer names. Fields marked templatable use {{field.key|fallback}}. With only title and company size as evidence, ask for a one-word reply or offer a link, not a call.

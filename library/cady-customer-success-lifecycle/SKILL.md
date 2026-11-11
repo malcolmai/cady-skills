@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
-  version: "ba9d8de25f6c156b416d"
-  library: "cb563a1c3ed92251"
+  version: "6a419ec264483094e239"
+  library: "8ae2a5b48ab3b227"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
@@ -44,7 +44,7 @@ Run one customer account after the sale: onboarding to first value, health, risk
 
 ## Procedure
 
-1. Claim this work item with work_write {id, status: working}; if someone else holds it, stop and report the holder.
+1. Claim this work item with work_set {id, status: working}; if someone else holds it, stop and report the holder.
 2. Read the account: cady_read party:<partyId> (role customer, renewalDate), its won track via crm_read mode stages, the sales handoff note with cady_read file:<id>, and interactions such as signup, activation, meeting and note. Missing evidence is unknown, not failure: ask before judging. Go to the moment the account is in.
 3. Onboarding: at kickoff, restate the goal from the handoff so the customer does not repeat the sales conversation, then agree in their words the first value: the first observable result they bought for, such as a first report delivered or a first batch processed, and a date. Default 30 days for an assisted setup and 14 for self-serve. List the few setup steps with an owner each; clear your side's blockers first. Record crm_interactions_set (interaction kind activation) when the result is observed, not when an account is created. Past the date without first value, the account is at risk however friendly the customer is.
 4. Health: judge four dimensions separately, never as one score. Outcome: are they getting the result they bought? Adoption: the necessary use, by the right people, at the job's natural cadence. Relationship: champion present and engaged, sponsor known, sentiment in their words. Commercial: payment on time, usage or seats against the contract, renewal distance. Early risk signals: champion left or quiet, use missing for two natural cycles, a serious issue open over a week, a reorganisation, acquisition or budget cut, questions about export, terms or notice period, a failed payment.
@@ -52,7 +52,7 @@ Run one customer account after the sale: onboarding to first value, health, risk
 6. Renewal: for an annual contract start 90 days before renewalDate (30 days for a monthly plan), or before the contract's notice deadline if that is earlier. At 90 days review outcomes delivered against the kickoff goal and open risks; at 60 hold the renewal conversation with value in their numbers and any price change, announced no later than the contract's notice period; at 30 complete the paperwork. Send every notice the contract or law requires with no promotion in it, using `../../references/outreach-drafting.md`, opt_out, and never let an auto-renewal surprise the customer. Afterwards send crm_set role customer with the new renewalDate in its own call, and record the signed renewal with crm_interactions_set (interaction kind note) (sourceRef the order or invoice ref, no document text).
 7. Expansion: only once first value is reached and no risk is open. Real triggers are hitting a plan limit, another team asking, or a new use case the customer raised. Ask what result the expansion buys; when it needs a proposal, run it through `cady-sales-deal-motion`.
 8. Cancellation: acknowledge the request the same day and ask once why. Make one save attempt only when a real remedy fits that reason (the fix with a date, a pause, a smaller plan, or terms the owner approved); offer nothing the owner has not approved. If they decline or repeat the decision, honour it by the date they asked: no extra steps, repeated calls or guilt. Confirm in writing the end date, final invoice, access and data export; the cancellation itself is made by the billing owner. Record the reason with crm_interactions_set (interaction kind note) (no message body), when the contract ends send crm_set role other with renewalDate null so the account no longer counts as a customer, and set recontact 'unless_changed' unless they asked for a date. Cancelling is not an opt-out, and not consent to marketing either.
-9. Every customer message goes through `cady-gtm-reply` or `cady-gtm-warm-email`; nothing sends from this skill. The same churn or risk reason across three or more accounts is a proposal to the product owner or `cady-gtm-offer-and-segments`. Report with work_write once records and files read back.
+9. Every customer message goes through `cady-gtm-reply` or `cady-gtm-warm-email`; nothing sends from this skill. The same churn or risk reason across three or more accounts is a proposal to the product owner or `cady-gtm-offer-and-segments`. Report with work_set once records and files read back.
 
 ## Acceptance
 
