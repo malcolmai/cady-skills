@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-11T00:00:00Z",
   "bundle": {
-    "tag": "4f0a67ec47513ea9",
-    "version": "4f0a67ec47513ea99621a7f1a7a2678d51c11908aeb0b87bb2ddb2067ea31ff5",
-    "pluginVersion": "2026.11.11-4f0a67ec"
+    "tag": "32606770787e22ac",
+    "version": "32606770787e22ac54ffc1daf2314d8fcf0975a9db78fa59723108c28f1c6474",
+    "pluginVersion": "2026.11.11-32606770"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.11-4f0a67ec"
+    "version": "2026.11.11-32606770"
   },
   "skills": [
     {
