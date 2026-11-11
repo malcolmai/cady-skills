@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-11T00:00:00Z",
   "bundle": {
-    "tag": "d31a1ceb5b37afff",
-    "version": "d31a1ceb5b37afff6718e9c2d724d70b4f52c9aba77fd0be33ab7a889d74291d",
-    "pluginVersion": "2026.11.11-d31a1ceb"
+    "tag": "3092e0fcdaacc224",
+    "version": "3092e0fcdaacc2241fce84c5c09d439013b734b6551599fe8bcf4ddfdcfec326",
+    "pluginVersion": "2026.11.11-3092e0fc"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.11-d31a1ceb"
+    "version": "2026.11.11-3092e0fc"
   },
   "skills": [
     {
@@ -201,7 +201,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "661046e50c41f1c68a26"
+      "version": "e878aa626f7e475a7439"
     },
     {
       "name": "cady-engineering-system-cycle",
