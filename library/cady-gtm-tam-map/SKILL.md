@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
   version: "96f369b0201114d9cc66"
-  library: "f07f44f6654894c0"
+  library: "d31a1ceb5b37afff"
   function: "gtm"
 ---
 # TAM map

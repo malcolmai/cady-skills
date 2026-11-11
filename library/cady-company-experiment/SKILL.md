@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
   version: "e9ed4191895cc02fcbe8"
-  library: "f07f44f6654894c0"
+  library: "d31a1ceb5b37afff"
   function: "company"
 ---
 # Pre-registered experiment

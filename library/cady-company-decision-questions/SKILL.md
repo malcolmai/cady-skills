@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
   version: "858e41094cc14b6eb852"
-  library: "f07f44f6654894c0"
+  library: "d31a1ceb5b37afff"
   function: "company"
 ---
 # Key questions and research

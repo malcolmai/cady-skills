@@ -2,7 +2,7 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## f07f44f6654894c0 · 2026-11-11
+## d31a1ceb5b37afff · 2026-11-11
 
 Since beadb50f2d059a05: 0 new, 0 dropped, 6 changed.
 
@@ -11,7 +11,7 @@ Changed (the parts that differ):
 - `cady-company-executive-review`: Procedure
 - `cady-core-execution`: reference decision-standard.md
 - `cady-core-run-sequence`: Run sequence
-- `cady-engineering-method`: intro, Role card
+- `cady-engineering-method`: intro, Role card, Parent function, removed Selected judgment, reference selected-judgment.md
 - `cady-engineering-system-cycle`: Procedure
 
 Shared references changed: engineering-cycle-review.md.
