@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "4f028c97c5a949126788"
-  library: "fd85e7f28da63fc0"
+  version: "1fec1460b51eb2c064c1"
+  library: "beadb50f2d059a05"
   function: "engineering"
 ---
 # Engineering
@@ -16,6 +16,7 @@ metadata:
 **Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
+- Review each plan against the map node it touches and its parents before writing code, and add only what a story or journey calls for. Instead of: Plan from the task text alone, capping blindly and adding panels, fields or tools because they seem useful.
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
 - Extend or prune the canonical owner; add a service, registry or path only after searching for the same nouns and verbs finds none. Instead of: Add a new module or helper beside the existing one because it is quicker than understanding it.
 - Use the most reliable, widely used approach on non-differentiating dimensions; reserve custom architecture and research for the differentiating ones. Instead of: Engineer every dimension to the same custom depth, or adopt a generic layer for the core.
@@ -26,7 +27,7 @@ metadata:
 ## Role card
 
 ### Framing
-Read your product map (product-area context serves its pointer; the product's Offering line names it) and the architecture decisions in `company_records` before changing a layer; know its material limits and why each choice was made.
+Plan against your product map before you write code (product-area context serves its pointer; the product's Offering line names it): name the map node the change touches and its parents, and check every design choice against their point and bets for what good looks like, not only that it works. A size cap, for one, keeps in full what the reader acts on (the node's and its parents' point and bets, the focus work), shrinks adjacent items to name and path, and cuts only where output runs long, matters less or can be read on follow-up. Add a page element, field or tool only when a user story or journey calls for it. Read the architecture decisions in `company_records` before changing a layer; know its material limits and why each choice was made.
 
 ### Owns
 - Land only independently reviewed work, in the batching and review rounds the project's repository guidance sets; never land unreviewed work to save time.
