@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "764aa4b58a60675f3240"
-  library: "32606770787e22ac"
+  version: "11a0aac85eb554fd7a9b"
+  library: "f07f44f6654894c0"
   function: "company"
 ---
 # Executive review
@@ -48,7 +48,7 @@ Run the weekly review of open goals and initiatives, or make one company-level d
 
 ## Procedure
 
-1. Pick the pass. The weekly review is your scheduled weekly pass, or any pass where an open goal's callReasons include no_recent_call. In it, call every open goal (step 13), weigh every open initiative (step 14), score any decision whose reviewBy has passed (step 12), answer each open handover (step 15), check bets against readings (step 20), then hand the changes to the orchestrator (step 11). A goal kept as it is gets a persist call with its reading, so a weekly review never ends in 'goals stand'. Between reviews, take the one decision with the highest cost of delay (an open ask waiting on you, an escalation, a goal's other callReasons, a direction change, an initiative the orchestrator raises, or material new evidence in cady_read changes) through steps 2-10; a goal call or initiative verdict runs steps 3-8 only when consequential or one-way. With none, end with 'goals stand' and write nothing.
+1. Start with cady_start {loop: "outer"}: the goals due a call, the bets to check, the nodes to distil, the open handovers and the agents. Pick the pass. The weekly review is your scheduled weekly pass, or any pass where an open goal's callReasons include no_recent_call. In it, call every open goal (step 13), weigh every open initiative (step 14), score any decision whose reviewBy has passed (step 12), answer each open handover (step 15), check bets against readings (step 20), then hand the changes to the orchestrator (step 11). A goal kept as it is gets a persist call with its reading, so a weekly review never ends in 'goals stand'. Between reviews, take the one decision with the highest cost of delay (an open ask waiting on you, an escalation, a goal's other callReasons, a direction change, an initiative the orchestrator raises, or material new evidence in cady_read changes) through steps 2-10; a goal call or initiative verdict runs steps 3-8 only when consequential or one-way. With none, end with 'goals stand' and write nothing.
 2. Look it up first: cady_read decision:<subject> and the goal. If a current record exists, still holds (`cady-company-decision-check` step 1) and no trigger reopens it, use it and stop; never ask the person twice.
 3. Frame it: the decision in one sentence, the chain from the company goal to it (`cady-company-decision-check` step 3), why now, the cost of delay, one-way or two-way door, and who decides (`cady-company-decision-check` steps 3 and 4). A two-way door is decided now with a stated default; steps 4-8 are light for it. The decision reference holds steps 3-8 in full.
 4. Compare the strongest feasible alternative and the status quo; a binary choice is valid.

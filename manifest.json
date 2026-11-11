@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-11T00:00:00Z",
   "bundle": {
-    "tag": "32606770787e22ac",
-    "version": "32606770787e22ac54ffc1daf2314d8fcf0975a9db78fa59723108c28f1c6474",
-    "pluginVersion": "2026.11.11-32606770"
+    "tag": "f07f44f6654894c0",
+    "version": "f07f44f6654894c0e05680e2bbdc738bbb7109beebd9747c0c714514820a3b92",
+    "pluginVersion": "2026.11.11-f07f44f6"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.11-32606770"
+    "version": "2026.11.11-f07f44f6"
   },
   "skills": [
     {
@@ -51,13 +51,13 @@
       "name": "cady-company-distil",
       "path": "library/cady-company-distil",
       "cadyId": "skill.company.distil",
-      "version": "11d152be2a6c5781ac35"
+      "version": "9a7d00069afe0564cd83"
     },
     {
       "name": "cady-company-executive-review",
       "path": "library/cady-company-executive-review",
       "cadyId": "skill.company.executive_review",
-      "version": "764aa4b58a60675f3240"
+      "version": "11a0aac85eb554fd7a9b"
     },
     {
       "name": "cady-company-experiment",
@@ -141,13 +141,13 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "a632331c08c23901f8c1"
+      "version": "a6b2ca181a6302fe2933"
     },
     {
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "06dd917790101f58221d"
+      "version": "60bdb56ac57a13a9c06c"
     },
     {
       "name": "cady-core-skill-index",
