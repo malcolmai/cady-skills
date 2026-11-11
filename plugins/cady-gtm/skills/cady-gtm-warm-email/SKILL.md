@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
   version: "bae6fda89bef8717ef76"
-  library: "921dfb8c2c658fd5"
+  library: "4f0a67ec47513ea9"
   function: "gtm"
 ---
 # Warm email and follow-ups

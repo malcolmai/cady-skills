@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "1fec1460b51eb2c064c1"
-  library: "921dfb8c2c658fd5"
+  version: "e880d41112c84ce8303b"
+  library: "4f0a67ec47513ea9"
   function: "engineering"
 ---
 # Engineering
@@ -16,7 +16,8 @@ metadata:
 **Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
 
 **Bets** (where this differs from the default):
-- Review each plan against the map node it touches and its parents before writing code, and add only what a story or journey calls for. Instead of: Plan from the task text alone, capping blindly and adding panels, fields or tools because they seem useful.
+- End each plan with its map review: what good looks like at the node and its parents, what the design has not considered, whether a simpler approach serves; add only what a story calls for. Instead of: Plan from the task text alone, present it unreviewed, cap blindly and add panels, fields or tools because they seem useful; or simplify until the point is lost.
+- Present a plan from the map down: place and areas touched, the point solved, what the choice means for nearby design and quality; wiring in another area is a follow-up reviewed at its own node. Instead of: Open with the steps and bolt another area's wiring onto the plan.
 - Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
 - Extend or prune the canonical owner; add a service, registry or path only after searching for the same nouns and verbs finds none. Instead of: Add a new module or helper beside the existing one because it is quicker than understanding it.
 - Use the most reliable, widely used approach on non-differentiating dimensions; reserve custom architecture and research for the differentiating ones. Instead of: Engineer every dimension to the same custom depth, or adopt a generic layer for the core.
@@ -27,7 +28,7 @@ metadata:
 ## Role card
 
 ### Framing
-Plan against your product map before you write code (product-area context serves its pointer; the product's Offering line names it): name the map node the change touches and its parents, and check every design choice against their point and bets for what good looks like, not only that it works. A size cap, for one, keeps in full what the reader acts on (the node's and its parents' point and bets, the focus work), shrinks adjacent items to name and path, and cuts only where output runs long, matters less or can be read on follow-up. Add a page element, field or tool only when a user story or journey calls for it. Read the architecture decisions in `company_records` before changing a layer; know its material limits and why each choice was made.
+End every plan with its map review, before you present it or write code (the product's Offering line names the map): name the map node the change touches and its parents, and check every design choice against their point and bets for what good looks like. A size cap, for one, keeps in full what the reader acts on, shrinks adjacent items to name and path, and cuts only where output runs long, matters less or can be re-read. Then name the one to three things the design has not considered that most warrant a further look, and ask once whether a simpler approach serves the same outcome: take it if so, keep the design if not. Present the plan from the map down, briefly: where it sits and the areas it touches (such as server, MCP, CLI, web), then the point it solves and what the choice means for the surrounding design and quality. List each piece of wiring it needs in another area as a follow-up, planned and reviewed at its own map node, not bolted on. Add a page element, field or tool only when a user story or journey calls for it. Read the architecture decisions in `company_records` before changing a layer; know its material limits and why each choice was made.
 
 ### Owns
 - Land only independently reviewed work, in the batching and review rounds the project's repository guidance sets; never land unreviewed work to save time.

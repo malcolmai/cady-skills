@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
   version: "b65e25896cb57a44c823"
-  library: "921dfb8c2c658fd5"
+  library: "4f0a67ec47513ea9"
   function: "gtm"
 ---
 # Cold email cycle

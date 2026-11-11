@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-11T00:00:00Z",
   "bundle": {
-    "tag": "921dfb8c2c658fd5",
-    "version": "921dfb8c2c658fd507780c37c5db2f43ba57d6e09d5d6f2c4c51019f48591d4a",
-    "pluginVersion": "2026.11.11-921dfb8c"
+    "tag": "4f0a67ec47513ea9",
+    "version": "4f0a67ec47513ea99621a7f1a7a2678d51c11908aeb0b87bb2ddb2067ea31ff5",
+    "pluginVersion": "2026.11.11-4f0a67ec"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.11-921dfb8c"
+    "version": "2026.11.11-4f0a67ec"
   },
   "skills": [
     {
@@ -201,13 +201,13 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "1fec1460b51eb2c064c1"
+      "version": "e880d41112c84ce8303b"
     },
     {
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "ecef702fae88819a9e36"
+      "version": "0bc4d7d91c71bdd98f17"
     },
     {
       "name": "cady-finance-budget-review",
