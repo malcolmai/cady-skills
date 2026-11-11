@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
   version: "ad21ed82704156b64750"
-  library: "7575e3eb3f739247"
+  library: "921dfb8c2c658fd5"
   function: "fundraise"
 ---
 # Ranked investor list

@@ -2,11 +2,12 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 7575e3eb3f739247 · 2026-11-11
+## 921dfb8c2c658fd5 · 2026-11-11
 
-Since beadb50f2d059a05: 0 new, 0 dropped, 0 changed.
+Since beadb50f2d059a05: 0 new, 0 dropped, 1 changed.
 
-No skill text changed; release metadata only.
+Changed (the parts that differ):
+- `cady-core-run-sequence`: Run sequence
 
 ## beadb50f2d059a05 · 2026-11-11
 
