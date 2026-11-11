@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.pipeline_pass"
   version: "4da06c251c310d9e073b"
-  library: "24d354b05663abe0"
+  library: "beadb50f2d059a05"
   function: "gtm"
 ---
 # Warm pipeline pass

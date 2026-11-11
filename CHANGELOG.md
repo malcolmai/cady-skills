@@ -2,11 +2,14 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
-## 24d354b05663abe0 · 2026-11-11
+## beadb50f2d059a05 · 2026-11-11
 
-Since fd85e7f28da63fc0: 0 new, 0 dropped, 0 changed.
+Since fd85e7f28da63fc0: 0 new, 0 dropped, 3 changed.
 
-No skill text changed; release metadata only.
+Changed (the parts that differ):
+- `cady-company-decision-check`: Procedure
+- `cady-engineering-method`: intro, Role card
+- `cady-engineering-system-cycle`: Procedure
 
 ## fd85e7f28da63fc0 · 2026-11-10
 
