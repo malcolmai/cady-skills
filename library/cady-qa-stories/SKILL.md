@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.stories"
-  version: "58f709c6d2de7686d837"
-  library: "82f67ca6a975c29f"
+  version: "f6ae4f3e2649befa47fc"
+  library: "9c7400a46a1d124f"
   function: "qa"
 ---
 # User stories: keep, walk and read
 
 **Point:** Walk real user goals blind as a stranger would, so story status shows what a new user actually meets.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Upload a step picture from its file and let the tool check the hash; the model never carries the bytes. Instead of: Paste or retype the image's base64 into the tool call.

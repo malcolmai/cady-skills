@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
-  version: "5f06edd1311a93808e1e"
-  library: "82f67ca6a975c29f"
+  version: "08b51266fcd581bbd388"
+  library: "9c7400a46a1d124f"
   function: "qa"
 ---
 # Bug and flaky-test triage
 
 **Point:** Rate bugs by user impact and report them so anyone can reproduce them and verify the fix without asking.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Rate severity by user impact, and raise it a level when the failure is silent, irreversible or hits most users. Instead of: Rate by how hard the fix is, who reported it or how loud the error looks.

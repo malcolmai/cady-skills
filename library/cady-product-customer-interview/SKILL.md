@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "1cece4fd89594e1e874d"
-  library: "82f67ca6a975c29f"
+  version: "a3c83da7647c99f94668"
+  library: "9c7400a46a1d124f"
   function: "product"
 ---
 # Customer discovery interviews
 
 **Point:** Learn what customers actually did and paid, not what they say they would, so product decisions rest on behaviour.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Ask only about specific past instances: the last time it happened, what they did next and what it cost. Instead of: Ask whether they would use or pay for the idea and what they think of the concept.

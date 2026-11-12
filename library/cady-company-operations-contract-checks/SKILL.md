@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
-  version: "f5982d7ff13b781dcf7f"
-  library: "82f67ca6a975c29f"
+  version: "30c77c0b2d03e5b38f4f"
+  library: "9c7400a46a1d124f"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
 
 **Point:** Before signing, surface the few terms dear to change later; after, start every clock the contract triggers.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Before signing, keep only the points that get harder or dearer to change afterwards, usually one to five, each with a default and the credible alternative. Instead of: Review every clause and report all the issues found.

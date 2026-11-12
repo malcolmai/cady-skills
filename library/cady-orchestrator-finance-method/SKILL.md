@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_finance"
-  version: "356655fcdee3de284cce"
-  library: "82f67ca6a975c29f"
+  version: "2bb5388f19a4927f283c"
+  library: "9c7400a46a1d124f"
   function: "orchestrator_finance"
 ---
 # Finance orchestrator
 
 **Point:** Run the money motion so every commitment fits the runway and funding starts before it is needed.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Runway gates spend: read every new commitment against current runway months, and send one that moves the runway line to the Executive. Instead of: Approving spend by budget line alone.

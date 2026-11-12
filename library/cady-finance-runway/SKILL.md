@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.runway"
-  version: "f818b17d5e8c39d93b35"
-  library: "82f67ca6a975c29f"
+  version: "914285be1b56bc718b01"
+  library: "9c7400a46a1d124f"
   function: "finance"
 ---
 # Burn and runway
 
 **Point:** Show when cash runs out and whether growth gets there first, so cuts or a raise start in time.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Measure burn from bank cash out and net it of cash collected, excluding unfunded SAFEs, undrawn credit and tax collected but owed. Instead of: Compute burn from the P&L as expenses minus booked revenue, and count signed or available money as cash.

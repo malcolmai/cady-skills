@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_product.motion_pass"
-  version: "68c62653af1108aed504"
-  library: "82f67ca6a975c29f"
+  version: "76e825f59a16504724f2"
+  library: "9c7400a46a1d124f"
   function: "orchestrator_product"
 ---
 # Orchestrate product
 
 **Point:** Each pass, in-flight work is few, names what it will change, and returns its results to discovery.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Limit work in progress and finish before starting. Instead of: Many half-built items in flight.

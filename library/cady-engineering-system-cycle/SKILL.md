@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "acc1433ac1d6354f19da"
-  library: "82f67ca6a975c29f"
+  version: "db9ab1b17a25a75f00bc"
+  library: "9c7400a46a1d124f"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
 
 **Point:** Route each pass to review, build or hunt from current state, so work tracks the goal, not a rotation.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Choose the motion from current state: review when direction is stale, engineer when ready items exist, hunt after a dimension closes. Instead of: Run a fixed rotation of review, build and test phases each cycle.

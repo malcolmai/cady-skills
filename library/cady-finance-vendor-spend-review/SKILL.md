@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "e5c72f45657ace06c3d1"
-  library: "82f67ca6a975c29f"
+  version: "d53bce7756bce29921e4"
+  library: "9c7400a46a1d124f"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
 
 **Point:** Decide each purchase or renewal on full commitment against no-buy and cheaper workarounds, so money goes where use proves value.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Compare every purchase against no-buy, the existing tool and a cheaper workaround, listing the free or zero-incremental option first. Instead of: Compare paid vendors with each other and pick the best value among them.

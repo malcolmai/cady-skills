@@ -2,6 +2,16 @@
 
 What changed in each upstream release, newest first. A fork's Executive reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 9c7400a46a1d124f · 2026-11-12
+
+Since 82f67ca6a975c29f: 0 new, 0 dropped, 4 changed.
+
+Changed (the parts that differ):
+- `cady`: Start every run
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-taste-review`: Procedure
+- `cady-core-run-sequence`: Run sequence
+
 ## 82f67ca6a975c29f · 2026-11-12
 
 Since bd0e0f3c0c9b4833: 0 new, 0 dropped, 0 changed.

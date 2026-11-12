@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.goal_pass"
-  version: "b7a1aa95a9a35694dd4f"
-  library: "82f67ca6a975c29f"
+  version: "161cf2b84f348f4f8cdc"
+  library: "9c7400a46a1d124f"
   function: "orchestrator"
 ---
 # Orchestrate the company
 
 **Point:** Each pass, every open goal has a state and a holder, and every call cites the node that decided it.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Judge a goal by its reading over its window, not by the activity of the agents serving it. Instead of: Counting runs, tasks or messages as progress.

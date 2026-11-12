@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
-  version: "99cd5ed6c93f4f32bd9f"
-  library: "82f67ca6a975c29f"
+  version: "c5bd80cbdc158f3c92ab"
+  library: "9c7400a46a1d124f"
   function: "company"
 ---
 # Pre-registered experiment
 
 **Point:** Test the riskiest assumption against pass and fail lines set beforehand, so the result changes a decision, not a story.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Separate causes before concluding no demand. For outreach the causes are offer, persona, message, format, channel, timing and deliverability; name the isolated one or test the cheapest split. Instead of: Read a flat or negative response as the user not wanting the product.

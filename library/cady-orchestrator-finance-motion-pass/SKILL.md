@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_finance.motion_pass"
-  version: "e5a5b0431ce40e27a3db"
-  library: "82f67ca6a975c29f"
+  version: "ce692f52c7403a5fbf83"
+  library: "9c7400a46a1d124f"
   function: "orchestrator_finance"
 ---
 # Orchestrate finance
 
 **Point:** Each pass, runway is current, the close is on time and funding starts ahead of the runway line.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Set the funding start backwards from the runway line, with slack. Instead of: Starting a raise when cash feels short.

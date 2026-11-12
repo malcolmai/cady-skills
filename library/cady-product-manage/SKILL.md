@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "87fadee5a1db976c87e4"
-  library: "82f67ca6a975c29f"
+  version: "a25f0c2c402c717d5941"
+  library: "9c7400a46a1d124f"
   function: "product"
 ---
 # Product management and discovery
 
 **Point:** Decide what to build from evidence and run each goal to a live, measured result, because plans are not outcomes.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Start with one offering, one assumed ICP and problem assumption with its disproof, and one first-value goal; defer everything else. Instead of: Build the full product model first: personas, roadmap, dimensions, research and stories.

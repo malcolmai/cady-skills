@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "a8bd6d77f9af96cd292c"
-  library: "82f67ca6a975c29f"
+  version: "03078824ad1c553d73fc"
+  library: "9c7400a46a1d124f"
   function: "qa"
 ---
 # QA
 
 **Point:** Show what a fresh user actually meets, with evidence, so each iteration fixes the failures that matter most.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Walk journeys blind as a fresh user through the real surface; the builder's own walk is only a self-check. Instead of: Let the agent that built it verify it, or test from routes, seeded state and the database.

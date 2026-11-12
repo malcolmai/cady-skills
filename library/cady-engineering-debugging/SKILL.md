@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
-  version: "ca5c91f1a950e8786ab9"
-  library: "82f67ca6a975c29f"
+  version: "ad217651d1e9d8fc7afd"
+  library: "9c7400a46a1d124f"
   function: "engineering"
 ---
 # Debugging and incident response
 
 **Point:** Find the real cause from evidence and fix it at its owner, so the bug and its siblings stay fixed.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Read the full error, the first failure in the log and what changed since it last worked before forming any theory. Instead of: Form a candidate cause from the symptom and start editing code.

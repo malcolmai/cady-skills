@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.persona_profile"
-  version: "6e30b050a9f42f336c45"
-  library: "82f67ca6a975c29f"
+  version: "435035dde256a33df30d"
+  library: "9c7400a46a1d124f"
   function: "gtm"
 ---
 # Persona profile
 
 **Point:** Understand one persona from what they actually do and where they are heading, so positioning, sourcing and copy start there.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Keep the few pieces of evidence that drove the decision, linked to where each was read. Instead of: Summarise sources into labelled claims and counts ('7 of 10 say X') with no link back to where each was read.

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "e8e436ab158135b606b4"
-  library: "82f67ca6a975c29f"
+  version: "b368ce5077b79522d144"
+  library: "9c7400a46a1d124f"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
 
 **Point:** Make the investor case checkable, with one metric definition, dated sources and first objections answered, so diligence confirms it.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Answer the target investor's first three objections in the draft with exact evidence, or name each as an open risk. Instead of: Write the strongest positive narrative and leave objections for the meeting.

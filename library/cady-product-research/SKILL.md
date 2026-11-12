@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "a15c6369014b4c0788bc"
-  library: "82f67ca6a975c29f"
+  version: "d893bf18cbd89e03a5bd"
+  library: "9c7400a46a1d124f"
   function: "product"
 ---
 # Research
 
 **Point:** Gather dated, attributable evidence on alternatives or technology so an owner can decide without redoing the analysis.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "b3208368d02833d80fba"
-  library: "82f67ca6a975c29f"
+  version: "2769274229c22e639354"
+  library: "9c7400a46a1d124f"
   function: "company"
 ---
 # Executive
 
 **Point:** Set the best direction, then design and iteratively improve the system that pursues it: agents, humans and collaboration.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Decide by comparison: name the better route and why ('x beats y because...'); a flaw with no better option named is no reason to stop or wait. Instead of: Critiquing a plan's weaknesses in isolation, or holding out for a flawless option.

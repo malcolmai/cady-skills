@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
-  version: "dd336f0f892ff7cb7e55"
-  library: "82f67ca6a975c29f"
+  version: "7622dc756b136866a001"
+  library: "9c7400a46a1d124f"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review
 
 **Point:** Know every filing the company owes and start each early enough, so no deadline becomes a penalty or lost standing.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Re-scan when an event changes the facts (a financing, new officers, a hire, a new state, a threshold crossed), not only on the calendar. Instead of: Keep last year's list of filings and check it once a year.
@@ -42,7 +42,7 @@ What statutory and registry filings the company owes and when (annual returns, c
 
 ## Procedure
 
-1. Read the filing register (register-filing.md, requirement_register step 1) and any exact saved policy or contract that governs the requested filing question and each entity from its ops:entity decision lines (cady_read {search: {query: "ops:entity", kinds: ["decision"]}}, then decision:<subject> for each) and incorporation files. Read cady_read changes {since: the last register review, important: false} for events that create or change obligations: a financing or share issue, new officers, shareholders or addresses, hires and payroll, a new country or state, revenue or headcount crossing a threshold, a new regulated activity. A full pass (step 2 for every entity) runs when there is no filing register File yet or an entity, jurisdiction or event changed; otherwise review only what changed and the requirements past their reviewBy. A completed contract with no entry in register-contract.md goes to `cady-company-operations-contract-checks` (act).
+1. Read the filing register (register-filing.md, requirement_register step 1) and any exact saved policy or contract that governs the requested filing question and each entity from its ops:entity decision lines (cady_read {search: "ops:entity", kinds: ["decision"]}, then decision:<subject> for each) and incorporation files. Read cady_read changes {since: the last register review, important: false} for events that create or change obligations: a financing or share issue, new officers, shareholders or addresses, hires and payroll, a new country or state, revenue or headcount crossing a threshold, a new regulated activity. A full pass (step 2 for every entity) runs when there is no filing register File yet or an entity, jurisdiction or event changed; otherwise review only what changed and the requirements past their reviewBy. A completed contract with no entry in register-contract.md goes to `cady-company-operations-contract-checks` (act).
 2. For each entity and jurisdiction, check every category: registry annual and event filings, tax, securities and financing notices, foreign-investment and statistical reports, payroll and employment, mandatory insurance, sector licences, data-protection registration. Research each with requirement_register steps 2 and 3. You may run one research subagent per jurisdiction, each given the entity facts, the categories and those steps, returning dated sources and findings; you merge them. State each category that does not apply, with the reason.
 3. For each applicable requirement, record how to file: the authority, portal or form, who may sign and file, the credentials needed (never stored in Cady) and the fee. Record what it means commercially: the cost, the late penalty and how it escalates, and the effect on other obligations (accounts before tax, a notice tied to the next close, good standing, loss of an exemption). Work back from the deadline to a preparation start with buffer.
 4. Check and record each new or changed requirement with requirement_register steps 4 and 5. Give the checker the common mistakes: wrong entity or period, a missed trigger, a misread exemption, the wrong clock. Name the entry <jurisdiction>-<authority>-<obligation> in register-filing.md (illustrative: <country>-<registry>-annual-return): the obligation and the entity in one short sentence, then jurisdiction, authority, the due date or rule, exemptions considered, how to file and the implications. Set reviewBy at the preparation start, sooner if the rule or the facts it depends on are likely to change, and tomorrow if the start has passed.

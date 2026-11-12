@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.distil"
-  version: "3b05c5a2e47dd383d2d4"
-  library: "82f67ca6a975c29f"
+  version: "63d02cf2ca63c9a5b492"
+  library: "9c7400a46a1d124f"
   function: "company"
 ---
 # Distil the concern tree
 
 **Point:** Turn what the work observed into the node's next point, bet or choice, once, under its authority.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Distil a node's due observations once, as a whole set, into its point or bet under the authority of its basis. Instead of: Act on each observation as it arrives, or let a signal decide for the owner.

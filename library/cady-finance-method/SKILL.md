@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "ff5fb1529e52f7c2637e"
-  library: "82f67ca6a975c29f"
+  version: "1da5dc39931bcf687146"
+  library: "9c7400a46a1d124f"
   function: "finance"
 ---
 # Finance
 
 **Point:** Judge each spend, cut and raise as return against cost from real cash, so the plan fits the company's runway.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Diagnose the stage first and size Finance work to it: runway and commitments pre-revenue, collections and margin at first revenue, budget against actuals once growing. Instead of: Install a standard finance stack for every company: annual budget, monthly variance pack, three-statement model and separate specialist agents.

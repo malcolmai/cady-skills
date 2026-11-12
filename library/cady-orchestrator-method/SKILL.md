@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "e7c08e0da131b18bedaa"
-  library: "82f67ca6a975c29f"
+  version: "b2f6a77ff010668ff902"
+  library: "9c7400a46a1d124f"
   function: "orchestrator"
 ---
 # Orchestrator
 
 **Point:** Keep every goal moving on real evidence: nothing stuck, nothing accepted on activity, each conflict settled by its point.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Read the response, not the activity: challenge only where the thinking shown is thinner than the stakes; otherwise trust it and move on. Instead of: Investigating the work behind every result, or accepting one because work was done.

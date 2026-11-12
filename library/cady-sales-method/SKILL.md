@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "0cd3c119fad1899ba531"
-  library: "82f67ca6a975c29f"
+  version: "a944791dc17a0c02fd7e"
+  library: "9c7400a46a1d124f"
   function: "sales"
 ---
 # Sales
 
 **Point:** Qualify from the buyer's own words and actions, so effort goes to deals that can close and non-fits end fast.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Establish the buying trigger, current alternative and who decides from what the buyer said or did; unknown beats a model-completed field. Instead of: Fill a qualification framework (BANT, MEDDIC, SPICED) from one friendly call and the account's profile.

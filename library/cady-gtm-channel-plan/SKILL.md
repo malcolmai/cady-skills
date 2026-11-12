@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
-  version: "46968ad11ab04c261501"
-  library: "82f67ca6a975c29f"
+  version: "ee8ab675d8b6a78e0be6"
+  library: "9c7400a46a1d124f"
   function: "gtm"
 ---
 # Channel plan
 
 **Point:** Turn accepted persona, offer and chosen channels into channel plays and execution briefs.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Strategy decides the mix once; execution reads references. Instead of: Rediscover or copy the persona and offer inside execution.

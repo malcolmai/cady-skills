@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "a6370a304083691d49d6"
-  library: "82f67ca6a975c29f"
+  version: "e8027d47dfc956450b88"
+  library: "9c7400a46a1d124f"
   function: "core"
 ---
 # Agent run sequence
 
 **Point:** One order for every session, so no run acts on stale state, doubles an effect or ends unrecorded.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 Run one ordered piece of company work from reconciliation through result. Use when: the user wants a task carried through to a recorded outcome. Not for: setting up recurring work.
 
@@ -39,11 +39,11 @@ Run one ordered piece of company work from reconciliation through result. Use wh
 
 ### Plan heads
 
-- Read company state: `cady_read {"search": {"query": "$task"}}`
+- Read company state: `cady_read {"search": "$task"}`
 - Reconcile unresolved effects: `work_read {"id": "$reconcileWorkId"}` (agents)
 - Check which open goal this task serves: `work_read {"where": {"kind": "goal"}}`
 - Claim the selected work: `work_set {"id": "$workId", "status": "working"}` (agents)
-- Check current decisions, then do the work: `cady_read {"search": {"kinds": ["decision"], "query": "$task"}}`
+- Check current decisions, then do the work: `cady_read {"kinds": ["decision"], "search": "$task"}`
 - Close with the checked outcome: `work_set {"id": "$workId", "result": "<checked outcome>", "status": "done"}`
 
 ### Steps

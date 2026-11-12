@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_gtm"
-  version: "a019c3bea33f1bedac53"
-  library: "82f67ca6a975c29f"
+  version: "a24aae8d31941b6f27c7"
+  library: "9c7400a46a1d124f"
   function: "orchestrator_gtm"
 ---
 # GTM orchestrator
 
 **Point:** Run the go-to-market motion so every send rides on evidence and effort goes where the funnel breaks.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Nothing goes out ahead of its evidence: a segment runs only on an accepted persona and offer, and one under its reply line goes back to positioning, not to more volume. Instead of: Fixing a weak segment with more sends.
