@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_operations"
-  version: "da7f8ddbdcfb799daf18"
-  library: "6501d292ae359b43"
+  version: "77120321c2a0bf90e31c"
+  library: "d110e6194c26a326"
   function: "orchestrator_operations"
 ---
 # Operations orchestrator
@@ -27,6 +27,7 @@ The inner loop for operations: you run its obligations and do none of its work.
 
 ### Skills
 - `cady-orchestrator-operations-motion-pass`: A due operations pass, or an event: an obligation's lead time opening or a commitment found in the inbox.
+- `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
 ## Parent function

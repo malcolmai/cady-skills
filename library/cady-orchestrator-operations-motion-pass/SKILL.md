@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_operations.motion_pass"
-  version: "d2408398a2112052a517"
-  library: "6501d292ae359b43"
+  version: "6d4489506a0509ce4a35"
+  library: "d110e6194c26a326"
   function: "orchestrator_operations"
 ---
 # Orchestrate operations
@@ -42,7 +42,7 @@ A due operations pass, or an event: an obligation's lead time opening or a commi
 2. Start each obligation whose lead time has opened.
 3. Rank the rest by the cost of a miss and spend prevention effort from the top.
 4. Track each commitment to done or an explicit decline.
-5. Decide inside the family's node by its point and bets, and record each call on the lowest node both pieces of work serve. Hand a call that crosses families to the orchestrator and one that would change a point, bet or goal to the Executive, with both options and the evidence.
+5. Read each result one level down with `cady-company-challenge`. Decide inside the family's node by its point and bets, and record each call on the lowest node both pieces of work serve. Hand a call that crosses families to the orchestrator and one that would change a point, bet or goal to the Executive, with both options and the evidence.
 6. Report obligations started, those at risk, and commitments open, done or declined.
 
 ## Acceptance

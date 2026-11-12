@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_gtm.motion_pass"
-  version: "3cf13132ffb3cf067bb2"
-  library: "6501d292ae359b43"
+  version: "f79ede5b7d16c1840191"
+  library: "d110e6194c26a326"
   function: "orchestrator_gtm"
 ---
 # Orchestrate GTM
@@ -44,7 +44,7 @@ A due GTM pass, or an event: a reply, a segment crossing its reply line or a sta
 3. Clear live replies and due follow-ups before any new send.
 4. Name the weakest stage and route the pass's effort there, and hand the due tracks to their holders for a pipeline pass.
 5. Keep one track per contact: one owner, one next step, one channel at a time; merge or end duplicates.
-6. Decide inside the family's node by its point and bets, and record each call on the lowest node both pieces of work serve. Hand a call that crosses families to the orchestrator and one that would change a point, bet or goal to the Executive, with both options and the evidence.
+6. Read each result one level down with `cady-company-challenge`. Decide inside the family's node by its point and bets, and record each call on the lowest node both pieces of work serve. Hand a call that crosses families to the orchestrator and one that would change a point, bet or goal to the Executive, with both options and the evidence.
 7. Report stage counts per segment, the weakest stage, where effort went and the calls made.
 
 ## Acceptance
