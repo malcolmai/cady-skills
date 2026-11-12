@@ -32,7 +32,7 @@ This repository is Cady's **method library**: 77 skills for running a company, f
 
 ## Quick start
 
-Clone this library once and adopt the agents you run; no fork is needed. Then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
+Clone this library once and adopt the agents you run. Then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
 
 **Claude Code**
 
@@ -91,9 +91,9 @@ Then: Start a new conversation.
 
 **Other hosts**: Reinstall from github.com/malcolmai/cady-skills (README, Update).
 
-## Customise for your company (fork)
+## Customise for your company
 
-Optional, and rarely needed: the skills are copied into your host, where you can edit them. Fork `malcolmai/cady-skills` only to keep company-specific methods in a repository of your own, then install from your fork and point the front door's `Library source:` line at your fork's raw URL.
+The skills you adopt are copied into your host and are your company's own: edit them in place and record why. Your Executive decides which library changes to take, from [CHANGELOG.md](CHANGELOG.md).
 
 ## What's inside
 
@@ -118,7 +118,7 @@ Optional, and rarely needed: the skills are copied into your host, where you can
 
 ## Contributing
 
-Improvements that would help every company are welcome upstream: open a pull request; see [CONTRIBUTING.md](CONTRIBUTING.md). Company-specific choices stay in your fork.
+Improvements that would help every company are welcome upstream: open a pull request; see [CONTRIBUTING.md](CONTRIBUTING.md). Company-specific choices stay in your own skills.
 
 ## License
 

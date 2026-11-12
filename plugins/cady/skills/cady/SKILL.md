@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "b841e98f21dad81455cb"
-  library: "aa83bb6963948c05"
+  version: "03ad13fab5ceae8a0d17"
+  library: "e6beafb39c14001c"
   function: "core"
 ---
 # Cady
@@ -53,6 +53,4 @@ Read `agents_read` first. Reuse or update an agent that already owns the outcome
 
 Try: the installed skill by name (`cady-core-skill-index` lists them); then fetch the skill and the references it links (`references/` beside its SKILL.md) from the Library source below (pinned URL, `library/<name>/SKILL.md`). In the claude.ai zip, `library/<name>/SKILL.md` sits beside this skill. `cady_read {refs:["<cady-id>"]}` returns the text of a core method only, e.g. `cady_read {refs:["skill.company.decision_check"]}`. If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/aa83bb6963948c05/
-
-A fork may change that line to its own raw URL and branch.
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/e6beafb39c14001c/
