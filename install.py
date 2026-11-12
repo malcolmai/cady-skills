@@ -149,8 +149,8 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
             current = read(up)
             if current == new:
                 upstreams[rel] = new  # it already holds the library's text
-            elif current is None and before.get(rel) == new:
-                pass  # you merged and deleted it; the library has not changed since, so there is nothing new to put beside it
+            elif current is None and ours_up.get(rel) == new:
+                upstreams[rel] = new  # you merged and deleted the one we wrote for this text; nothing new to put beside it
             elif current is None or (rel in ours_up and current == ours_up[rel]):
                 plan.append(("write", up, data))
                 upstreams[rel] = new
@@ -169,8 +169,8 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
         if local is not None and local not in {old, *history.get(rel, [])}:
             report["left"].append(rel)
             continue
-        report["removed"].append(rel)
         if local is not None:
+            report["removed"].append(rel)
             plan.append(("unlink", rel, None))
         drop_our_upstream(rel)
     for _, rel, _ in plan:  # every path is checked before the first change, so a refusal leaves dest untouched
@@ -235,7 +235,13 @@ def main(argv: list[str] | None = None) -> int:
     except (OSError, ValueError) as e:
         ap.error(f"{lock_path} is not a readable lock ({e}); fix or remove it, then run again")
     shape = {"files": dict, "history": dict, "upstreams": dict, "agents": list}
-    if not isinstance(lock, dict) or any(k in lock and not isinstance(lock[k], kind) for k, kind in shape.items()):
+    def well_formed(lock: object) -> bool:
+        if not isinstance(lock, dict) or any(k in lock and not isinstance(lock[k], kind) for k, kind in shape.items()):
+            return False
+        strs = lambda xs: all(isinstance(x, str) for x in xs)
+        return (strs(lock.get("agents", [])) and strs(lock.get("files", {}).values()) and strs(lock.get("upstreams", {}).values())
+                and all(isinstance(v, list) and strs(v) for v in lock.get("history", {}).values()))
+    if not well_formed(lock):
         ap.error(f"{lock_path} is not a roster lock (expected an object with files, history and upstreams objects and an agents list); fix or remove it, then run again")
     if args.update and not lock:
         ap.error(f"no roster at {dest} ({LOCK} not found); run without --update to install, or pass --dest")
