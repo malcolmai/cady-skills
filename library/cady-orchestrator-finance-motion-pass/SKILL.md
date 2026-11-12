@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_finance.motion_pass"
   version: "ce692f52c7403a5fbf83"
-  library: "aa83bb6963948c05"
+  library: "e6beafb39c14001c"
   function: "orchestrator_finance"
 ---
 # Orchestrate finance

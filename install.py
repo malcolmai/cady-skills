@@ -63,10 +63,14 @@ def main(argv: list[str] | None = None) -> int:
     for key in add + remove:
         if key not in roster["agents"]:
             ap.error(f"unknown agent {key!r}; run --list")
+    if add and remove:
+        ap.error("pass --add (or --stage) or --remove, not both")
     if [k for k in remove if k in roster["system"]]:
         ap.error("the company system (company, orchestrator) always runs and cannot be removed")
     dest = (args.dest or (Path(os.environ.get("CODEX_HOME") or Path.home() / ".codex") if args.host == "codex" else Path.cwd() / ".claude")).expanduser()
     skills = dest / "skills"
+    if skills.is_symlink():
+        ap.error(f"{skills} is a symlink; point --dest at the real folder")
     wanted = [(n, HERE / "library" / n) for n in names_for(roster, [*roster["system"], *add])]
     if args.host == "codex":
         wanted.append(("cady", HERE / roster["front_door"]))
@@ -74,18 +78,26 @@ def main(argv: list[str] | None = None) -> int:
         adopted = [k for k in roster["agents"] if k not in remove and (skills / roster["agents"][k]["card"]).is_dir()]
         keep = set(names_for(roster, adopted)) | {"cady"}
         for name in names_for(roster, remove):
+            if name in keep:
+                continue
+            if (skills / name).is_symlink():  # judged before resolving, so a link is never followed or deleted through
+                print(f"  kept {name}: it is a symlink, not a folder this installer made")
+                continue
             src, target = HERE / "library" / name, inside(skills, name)
-            if name in keep or not target.is_dir():
+            if not target.is_dir():
                 continue
             if tree(target) == tree(src):
                 shutil.rmtree(target)
                 print(f"  removed {name}")
             else:
-                print(f"  kept yours: {name} (you edited it)")
+                print(f"  kept {name}: it differs from this library (you edited it, or the library changed since you adopted it)")
     else:
         for name, src in wanted:
             if not src.is_dir():
                 print(f"  skipped {name} (not in this library)")
+                continue
+            if (skills / name).is_symlink():
+                print(f"  kept {name}: it is a symlink, not a folder this installer made")
                 continue
             target = inside(skills, name)
             if target.exists():
