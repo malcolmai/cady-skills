@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "cfaf8a384291891f4963"
-  library: "e6beafb39c14001c"
+  version: "ec949788b5766c63bca6"
+  library: "94cbfa32dc5a1bac"
   function: "company"
 ---
 # Manage company agents
@@ -55,7 +55,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 1. An agent is one ongoing responsibility; due tasks are work items and a one-off is a helper run. Read agents_read, Projects work (work_read), direction and this host's automations first: if an agent already owns the outcome (same goal, area, function) and no safety-isolation exception applies, reuse it or change it with agents_set (rebind if its host changed) and stop. Create only when none owns it or a safety-isolation exception applies: one recurring agent per goal or sub-goal; parallel sessions and subagents are runs of that agent, not new agents. Split a child agent out only for a different risk class or grant, or a different cadence or host.
 2. Responsibility and risk class. State the outcome, one measure with its data source, a cadence or trigger, approval limits and end condition; pass goal when it serves a goal. Critical: a hard-to-undo effect or reach outside the company, or drafts released automatically; every other agent is standard. Re-class and prepare-only test a new path on any grant, tool, access or trigger change.
-3. Fit. Read agents_read and cady_read company:map, and find needed skills in the library's skill index at the pinned tag, reused unchanged; adapt only for an evidenced failure, tool mismatch or missing expert judgment.
+3. Fit. Read agents_read and cady_read company:map, and name the agent's skills as plain names, the skill folders the host holds (the library's cady-core-skill-index lists them), or leave them empty; Cady serves no skill index, so do not search for one. Reuse library skills unchanged; adapt only for an evidenced failure, tool mismatch or missing expert judgment.
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement, and a critical agent runs it prepare-only through every effect path before anything reaches anyone. Its decision map, for approval: goal, node, trigger, decides alone, consults on, hands off.
 5. Evaluation. The criteria live on the first task, not the agent record: brief.doneWhen holds 2-5 reader tests tagged (check), (fresh) or (person), and brief.stopIf the early-stop limit; a completed run is not a reported result.
 6. Create, bind, prove, go live with agents_set (host {action: bind}, then status live), then report the first task with work_set; a returned schedule stays configured_unconfirmed until a host readback. Change visibility or sharing only on request; it applies at once and the owner is told.
