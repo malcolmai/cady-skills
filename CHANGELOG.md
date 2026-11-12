@@ -4,6 +4,18 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
 
+## 94cbfa32dc5a1bac · 2026-11-12
+
+Since e6beafb39c14001c: 0 new, 0 dropped, 4 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-core-execution`: reference agent-hosts.md
+
+Changed:
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-engineering-system-cycle`: reference agent-hosts.md
+- `cady-orchestrator-goal-pass`: reference agent-hosts.md
+
 ## e6beafb39c14001c · 2026-11-12
 
 Baseline: 78 skills. This log restarts here: compare a skill adopted before this release with its folder in this release. Later entries list what each release adds, drops or changes.

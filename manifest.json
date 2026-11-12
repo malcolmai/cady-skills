@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-12T00:00:00Z",
   "bundle": {
-    "tag": "e6beafb39c14001c",
-    "version": "e6beafb39c14001ca52b5385ede3a9cb93d403607b2e094eb0480ddf3a229b96",
-    "pluginVersion": "2026.11.12-e6beafb3"
+    "tag": "94cbfa32dc5a1bac",
+    "version": "94cbfa32dc5a1bac7f413df55a4fdbff1a00ab1b5d2667464ec5fe04e45f4c9a",
+    "pluginVersion": "2026.11.12-94cbfa32"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.12-e6beafb3"
+    "version": "2026.11.12-94cbfa32"
   },
   "skills": [
     {
@@ -75,7 +75,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "cfaf8a384291891f4963"
+      "version": "ec949788b5766c63bca6"
     },
     {
       "name": "cady-company-method",
@@ -147,7 +147,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "9ab7d201a598fd104fb8"
+      "version": "7b56c0657781d92cc8a0"
     },
     {
       "name": "cady-core-run-sequence",
@@ -213,7 +213,7 @@
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "0559034a594aa587bb47"
+      "version": "87a029b14d6da8cdf1cd"
     },
     {
       "name": "cady-finance-budget-review",
@@ -381,7 +381,7 @@
       "name": "cady-orchestrator-goal-pass",
       "path": "library/cady-orchestrator-goal-pass",
       "cadyId": "skill.orchestrator.goal_pass",
-      "version": "9634c9d9d98c20b1e5a4"
+      "version": "f4abc9ac1e7c32839d9b"
     },
     {
       "name": "cady-orchestrator-gtm-method",
