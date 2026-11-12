@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_product"
-  version: "5129764ba0f7f049530e"
-  library: "82f67ca6a975c29f"
+  version: "f4ac51a7e229b67a44d3"
+  library: "9c7400a46a1d124f"
   function: "orchestrator_product"
 ---
 # Product orchestrator
 
 **Point:** Run the product loop so every build buys a named learning or outcome and reaches real users fast.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - No build starts without the learning goal or outcome it buys; work that cannot say what it will change waits. Instead of: Building in backlog order or for the loudest request.

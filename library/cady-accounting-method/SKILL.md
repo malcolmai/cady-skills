@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "703820790f885b3171b6"
-  library: "82f67ca6a975c29f"
+  version: "c1010ca88142c08dbc7d"
+  library: "9c7400a46a1d124f"
   function: "accounting"
 ---
 # Accounting
 
 **Point:** Keep the books true to their sources each period, so cash, tax and investor figures can be trusted.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Prepare the close and its exception list with proposed entries; the bookkeeper or ledger owner posts and locks, and a period is closed only on its lock readback. Instead of: Post the fixes directly in the ledger to get the close done, and report it closed once the work looks finished.

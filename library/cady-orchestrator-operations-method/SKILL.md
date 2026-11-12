@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_operations"
-  version: "77120321c2a0bf90e31c"
-  library: "82f67ca6a975c29f"
+  version: "3b4b4c98054d9dfdd5f1"
+  library: "9c7400a46a1d124f"
   function: "orchestrator_operations"
 ---
 # Operations orchestrator
 
 **Point:** Run the company's obligations so nothing lapses: each started by its lead time, each commitment closed.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Lead time starts the work, not the deadline: start each obligation when its lead time opens. Instead of: Working obligations by their due date.

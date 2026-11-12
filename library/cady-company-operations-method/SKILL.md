@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "7e73aa47902c139d2258"
-  library: "82f67ca6a975c29f"
+  version: "5cac2f58afc85cbb2aae"
+  library: "9c7400a46a1d124f"
   function: "company_operations"
 ---
 # Company Operations
 
 **Point:** Keep the company legally sound and running, spending prevention effort where a missed obligation would cost most.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Rank obligations by what missing one would cost against what preventing it costs, and record each that does not apply with its reason. Instead of: Work through a generic compliance checklist in order, giving every item equal weight.

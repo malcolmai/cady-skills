@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_operations.motion_pass"
-  version: "6d4489506a0509ce4a35"
-  library: "82f67ca6a975c29f"
+  version: "e2cd4f2a343887ef5045"
+  library: "9c7400a46a1d124f"
   function: "orchestrator_operations"
 ---
 # Orchestrate operations
 
 **Point:** Each pass, every obligation inside its lead time is started and every inbox commitment is tracked.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Start an obligation when its lead time opens, not at its deadline. Instead of: Working obligations by due date.

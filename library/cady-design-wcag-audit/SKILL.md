@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.design.wcag_audit"
-  version: "c290c70e147e9ee3ef67"
-  library: "82f67ca6a975c29f"
+  version: "958966172003473c447c"
+  library: "9c7400a46a1d124f"
   function: "design"
 ---
 # Accessibility audit (WCAG 2.2 AA)
 
 **Point:** Find the barriers that stop assistive-technology users completing core journeys, proven by hand, so fixes target real harm.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Treat automated scan hits as leads, and judge conformance from keyboard and screen-reader passes of each core journey. Instead of: Run axe or Lighthouse and report zero violations as accessible.

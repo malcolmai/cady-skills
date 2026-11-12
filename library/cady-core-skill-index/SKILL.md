@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "390c7396e6ad9d9d5d05"
-  library: "82f67ca6a975c29f"
+  version: "f407fff73ac116c45b86"
+  library: "9c7400a46a1d124f"
   function: "core"
 ---
 # Skill index
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 Every Cady task skill, with one line on when to use it.
 

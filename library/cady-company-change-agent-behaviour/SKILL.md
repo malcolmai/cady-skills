@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "c1b19cc1c679b08118ef"
-  library: "82f67ca6a975c29f"
+  version: "82cd90a53bf942539d57"
+  library: "9c7400a46a1d124f"
   function: "company"
 ---
 # Change agent behaviour
 
 **Point:** Agents act better where they fell short, without growing, duplicating or weakening the guidance agents read.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - If code or a tool result can make the rule true, change that, not the text. Instead of: Add a sentence to the prompt telling the agent to do the right thing.

@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.integrations"
-  version: "472d0523c1990a47009c"
-  library: "82f67ca6a975c29f"
+  version: "34d71583d994c9001509"
+  library: "9c7400a46a1d124f"
   function: "engineering"
 ---
 # Integrations
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 Choose, operate or build a company integration: compare and pick a tool or vendor to connect (the vendor reference), operate a chosen connector (the connector reference) or build one (the build reference). Use when: comparing, choosing or connecting a tool, data source or account. Not for: a purchase or renewal decision on cost (use `cady-finance-vendor-spend-review`).
 

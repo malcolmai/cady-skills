@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "ae7bdd08763f2cfd5517"
-  library: "82f67ca6a975c29f"
+  version: "bdc1772ea9724fddc51f"
+  library: "9c7400a46a1d124f"
   function: "finance"
 ---
 # Budget and cost review
 
 **Point:** Allocate money to the few drivers that change a decision, from dated actuals, so spend follows what works.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Budget the few drivers that move cash (payroll, usage-based services, paid acquisition) at a depth set by stage and the decision at hand. Instead of: Build a full line-item budget by department and month.

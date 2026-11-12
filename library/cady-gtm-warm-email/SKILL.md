@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "3c853880952605b46158"
-  library: "82f67ca6a975c29f"
+  version: "9a734ea41e3f0a41ae3d"
+  library: "9c7400a46a1d124f"
   function: "gtm"
 ---
 # Warm email and follow-ups
 
 **Point:** Keep each relationship moving with a useful email and a next step paced to the person.
 
-**Company context:** `cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}`
+**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Establish the relationship from evidence first; missing history is not proof a party is cold. Instead of: Treat anyone without a logged thread as cold and send a cold pitch.

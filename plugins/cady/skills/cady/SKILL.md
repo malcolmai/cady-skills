@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "0b11dd0003ba0aaa0035"
-  library: "82f67ca6a975c29f"
+  version: "3cecf0be5ae795eec9fd"
+  library: "9c7400a46a1d124f"
   function: "core"
 ---
 # Cady
@@ -15,7 +15,7 @@ Reads the company's context in Cady, then loads the matching skill. Use when the
 
 ## Start every run
 
-    cady_read {"search": {"query": "<what you are about to do, in one sentence>"}}
+    cady_read {"search": "<what you are about to do, in one sentence>"}
 
 The reply ranks the matching skills, strategy items, decisions, work and asks. Resume work with `work_read`; read a product with
 `cady_read {"refs": ["product:*"]}`.
@@ -53,6 +53,6 @@ Read `agents_read` first. Reuse or update an agent that already owns the outcome
 
 Try: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in the host's skills folder (the roster install), or `library/<name>/SKILL.md` beside this skill (Cady reply paths mean either place); `cady_read {refs:["<cady-id>"]}` returns the text of a core method only, e.g. `cady_read {refs:["skill.company.decision_check"]}`; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/82f67ca6a975c29f/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/9c7400a46a1d124f/
 
 A fork changes that line to its own raw URL and branch.
