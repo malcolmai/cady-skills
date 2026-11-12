@@ -1,6 +1,33 @@
 # Changelog
 
-What changed in each upstream release, newest first. A fork's Executive reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
+The material changes in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill or to `cady-company-decision-check`.
+
+## aa83bb6963948c05 · 2026-11-12
+
+Since 9c7400a46a1d124f: 0 new, 0 dropped, 16 changed, 26 layout only.
+
+Library layout changed: every skill folder is now self-contained; no behaviour change unless noted.
+26 skills changed layout only (no text change).
+
+Urgent (core skill or decision check changed):
+- `cady-core-execution`: Recurrence, reference agent-hosts.md
+- `cady-core-run-sequence`: reference agent-stop.md, reference company-goals.md, reference goals-and-work.md, reference reporting.md
+
+Changed:
+- `cady`: Load a skill
+- `cady-company-change-agent-behaviour`: Improving an agent now means editing the company's own local skill and recording why; contributing upstream is optional.
+- `cady-company-executive-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-company-manage-agents`: Agent design now finds skills in the library's skill index at the pinned tag, and the library reference covers adopting skills.
+- `cady-company-operations-compliance-register`: References
+- `cady-company-operations-contract-checks`: Procedure, References, reference contract-kinds.md
+- `cady-company-operations-people-lifecycle`: Procedure, References, reference people-checklists.md
+- `cady-company-review`: reference company-goals.md, reference setup.md
+- `cady-design-method`: Role card, reference domain-method.md, reference quality-classes.md, reference taste-check.md
+- `cady-engineering-system-cycle`: Procedure, References, reference agent-hosts.md, reference engineering-cycle-dimensions.md, reference engineering-cycle-review.md, reference engineering-system-map.md, reference quality-classes.md
+- `cady-gtm-channel-plan`: Procedure, References, reference agent-stop.md, reference execution-agent-brief.md, reference gtm-channels.md, reference outreach-release.md
+- `cady-gtm-method`: Role card, reference company-goals.md, reference domain-method.md, reference gtm-channels.md, reference outreach-release.md
+- `cady-marketing-method`: Selected judgment, reference agent-stop.md, reference domain-method.md, reference gtm-channels.md, reference outreach-drafting.md, reference taste-message.md, reference taste-post.md
+- `cady-orchestrator-goal-pass`: Procedure, reference agent-hosts.md
 
 ## 9c7400a46a1d124f · 2026-11-12
 

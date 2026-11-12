@@ -32,7 +32,7 @@ This repository is Cady's **method library**: 77 skills for running a company, f
 
 ## Quick start
 
-Install straight from upstream; no fork is needed. Then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
+Clone this library once and adopt the agents you run; no fork is needed. Then ask your agent: **"Set up my company in Cady."** Connecting opens Cady in your browser, where you sign in or create an account.
 
 **Claude Code**
 
@@ -43,7 +43,7 @@ git clone --depth 1 https://github.com/malcolmai/cady-skills "$HOME/.cady-skills
 python3 "$HOME/.cady-skills/install.py" --host claude-code
 ```
 
-`cady` adds the Cady MCP server and the front door skill. The last command installs, into this project's `.claude/`, the company system (the Executive and the orchestrator) and the core skills every agent reads. Once setup has designed your agents, add each one with `python3 "$HOME/.cady-skills/install.py" --host claude-code --add <agent>` (`--list` names them): it installs that agent's role card, its function's skills and the skills the card lists from others. Only installed skills join the host's skill list.
+`cady` adds the Cady MCP server and the front door skill. The last command copies, into this project's `.claude/`, the company system (the Executive and the orchestrator) and the core skills every agent reads. Once setup has designed your agents, adopt each one with `python3 "$HOME/.cady-skills/install.py" --host claude-code --add <agent>` (`--list` names them, `--stage <creator|bootstrap|deep_tech>` adds a stage's usual agents): it copies that agent's role card, its function's skills and the skills the card lists, and never overwrites a folder you already have. Only installed skills join the host's skill list.
 
 **Codex**
 
@@ -53,23 +53,21 @@ python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex
 codex mcp add cady --url https://app.cadyworks.com/mcp && codex mcp login cady
 ```
 
-The install copies the front door, the company system (the Executive and the orchestrator) and the core skills into `${CODEX_HOME:-$HOME/.codex}/skills`; add each agent setup designs with `python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex --add <agent>` (`--list` names them).
+The install copies the front door, the company system (the Executive and the orchestrator) and the core skills into `${CODEX_HOME:-$HOME/.codex}/skills`; adopt each agent setup designs with `python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex --add <agent>` (`--list` names them, `--stage <creator|bootstrap|deep_tech>` adds a stage's usual agents). A folder you already have is never overwritten.
 
 **claude.ai**
 
-Upload `cady.zip` from the latest release as a skill (`cady/` holding the front door with `library/` and `references/` beside it), then add Cady as a custom connector: Settings > Connectors > Add custom connector, URL `https://app.cadyworks.com/mcp`.
+Upload `cady.zip` from the latest release as a skill (`cady/` holding the front door, with its `library/` folder beside it), then add Cady as a custom connector: Settings > Connectors > Add custom connector, URL `https://app.cadyworks.com/mcp`.
 
 ## Update
 
-Run your host's update command below. It pulls the library and resyncs your roster: files you have not edited are replaced, and a file you edited is kept with the new version written beside it as `<file>.upstream` to merge by hand. Starting a new session or conversation also refreshes the connection's instructions.
+Pull your clone of this library (the commands below) to see what is new. Your Executive reads [CHANGELOG.md](CHANGELOG.md) since its last agent review and adopts what helps: to take a newer skill, delete its old folder from your host's `skills/` folder and add its agent again. Skills you have not re-added stay exactly as they are. Starting a new session or conversation also refreshes the connection's instructions.
 
 **Claude Code**
 
 ```bash
-claude plugin marketplace update cady && claude plugin update cady@cady && git -C "$HOME/.cady-skills" pull --ff-only && python3 "$HOME/.cady-skills/install.py" --host claude-code --update
+claude plugin marketplace update cady && claude plugin update cady@cady && git -C "$HOME/.cady-skills" pull --ff-only
 ```
-
-Run it from the project you installed into. Files you have not edited are replaced; a file you edited is kept, with the new version written beside it as `<file>.upstream` to merge by hand.
 
 Then: Restart Claude Code.
 
@@ -78,7 +76,7 @@ On a host with a shell and the Cady CLI, run `cady usage read --host claude-code
 **Codex**
 
 ```bash
-git -C "${CODEX_HOME:-$HOME/.codex}/cady-skills" pull --ff-only && python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex --update
+git -C "${CODEX_HOME:-$HOME/.codex}/cady-skills" pull --ff-only
 ```
 
 Then: Start a new Codex session.
@@ -93,53 +91,22 @@ Then: Start a new conversation.
 
 **Other hosts**: Reinstall from github.com/malcolmai/cady-skills (README, Update).
 
-**From plugins to a roster install (November 2026).** The family plugins (`cady-core`, `cady-company`, `cady-gtm`, `cady-product`, `cady-finance`, `cady-operations`, and `cady-engineering` before them) gave way to `install.py`: a host installs only the agents it runs. Skill names did not change. To move, uninstall each family plugin you had (`claude plugin uninstall <plugin>@cady`), keep `cady@cady`, then run the install above with `--add` for each agent your company runs.
-
 ## Customise for your company (fork)
 
-Optional, and rarely needed: the roster install copies the skills into your host, where you can edit them, and updates keep your edits. Fork when you want to keep company-specific methods in a repository of your own; the library is a best-practice baseline, your Executive agent edits the fork with your company's own reasoning, and Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.
-
-1. **Fork** `malcolmai/cady-skills` into your organisation on GitHub (private is fine), or copy a release into a repository or folder of your own.
-2. **Record the baseline**: the release tag you started from. Every `SKILL.md` names it in `metadata.library`; also write it to a `BASELINE` file at the root of the fork.
-3. **Point the front door at your fork**: in `plugins/cady/skills/cady/SKILL.md`, set the `Library source:` line to your fork's raw URL and branch, for example `https://raw.githubusercontent.com/<your-org>/<your-fork>/main/`.
-4. **Install from your fork** with the commands above, replacing `malcolmai/cady-skills` and the clone URL with `<your-org>/<your-fork>`. For claude.ai, build the skill zip from your fork in the shape of the release's `cady.zip`.
+Optional, and rarely needed: the skills are copied into your host, where you can edit them. Fork `malcolmai/cady-skills` only to keep company-specific methods in a repository of your own, then install from your fork and point the front door's `Library source:` line at your fork's raw URL.
 
 ## What's inside
 
 | Path | What it is |
 |---|---|
 | [`INDEX.md`](INDEX.md) | Every skill with one line on when to use it and its path |
-| `library/` | The skills: function role cards, task skills and run guides |
-| `references/` | Shared references several skills load on demand |
+| `library/` | The skills: function role cards, task skills and run guides, each folder self-contained with its own `references/` |
 | `plugins/cady/` | The Claude Code plugin: the Cady MCP server and the front door skill |
-| `install.py`, `roster.json` | The roster install: each agent's role card and the skills it lists, plus the core skills, copied into your host |
+| `install.py`, `roster.json` | The adopt helper: copies the agents you choose (role card and the skills it lists) and the core skills into your host |
 | `.claude-plugin/marketplace.json` | The marketplace entry for `plugins/cady` |
 | [`examples/`](examples/README.md) | Three example agents (GTM, finance, orchestrator), each preloading its role's method |
-| [`CHANGELOG.md`](CHANGELOG.md) | What changed in each release; the monthly upstream check reads it |
+| [`CHANGELOG.md`](CHANGELOG.md) | The material changes in each release; your Executive reads it |
 | `manifest.json` | The library version and each skill's version |
-
-## Edit your fork
-
-Your Executive agent edits skills in the fork when your company's evidence says a method should differ: one commit per change, with the reason in the message. Keep company facts (names, prices, people, decisions) in Cady, not in a skill: methods come from skills, and context is company state.
-
-## Merge upstream once a month
-
-Once a month your orchestrator checks upstream by hand. Add the upstream remote once, then fetch, look at what changed since your baseline with `git diff`, merge the latest tag (resolve conflicts, keeping your deliberate edits) and record it as the new baseline:
-
-```bash
-git remote add upstream https://github.com/malcolmai/cady-skills
-git fetch upstream --tags
-git diff "$(cat BASELINE)" <latest-tag> --stat
-git merge <latest-tag>
-echo <latest-tag> > BASELINE
-```
-
-1. Compare `BASELINE` with the [latest release](https://github.com/malcolmai/cady-skills/releases/latest). If they match, there is nothing to do.
-2. Read the [CHANGELOG.md](CHANGELOG.md) entries after your baseline: which skills are new, dropped or changed, and which parts changed.
-3. Merge what helps. Where upstream changed a part you edited on purpose, keep your version or combine them, and say why in the merge commit. Skipping a release is a valid choice.
-4. Update `BASELINE`, reinstall from your fork, and record the decision (taken, partly taken or skipped, and why) in Cady as a decision item.
-
-There is no auto-merge and no plugin auto-update: a fork only changes when your orchestrator merges.
 
 ## Privacy and security
 
@@ -147,11 +114,11 @@ There is no auto-merge and no plugin auto-update: a fork only changes when your 
 - In Claude Code the plugin also adds the Cady MCP server (`app.cadyworks.com/mcp`), so do not also run `claude mcp add`, and switch off the claude.ai Cady connector inside Claude Code so Cady is not connected twice. In other apps, connect Cady once as a connector. Sending email or LinkedIn messages, publishing and spending follow your company's approval rules in Cady, and every effect leaves a record you can inspect.
 - Agents report run results and usage to Cady. They never upload transcripts.
 - On Codex, only if the owner opts the host in, the run sequence checks whether your most recent other local Codex session ended on a usage limit or sign-in error, and reports only that status.
-- The only script is `install.py`: it copies files from your clone of this library into your host's skills folder and records what it wrote. It fetches nothing, runs no hooks and sends nothing anywhere.
+- The only script is `install.py`: it copies skill folders from your clone of this library into your host's skills folder and never overwrites one that is there. It fetches nothing, runs no hooks and sends nothing anywhere.
 
 ## Contributing
 
-Improvements that would help every company are welcome upstream: open a pull request from your fork; see [CONTRIBUTING.md](CONTRIBUTING.md). Company-specific choices stay in your fork.
+Improvements that would help every company are welcome upstream: open a pull request; see [CONTRIBUTING.md](CONTRIBUTING.md). Company-specific choices stay in your fork.
 
 ## License
 

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "d893bf18cbd89e03a5bd"
-  library: "9c7400a46a1d124f"
+  version: "826f635ed3a827c00b6c"
+  library: "aa83bb6963948c05"
   function: "product"
 ---
 # Research
@@ -77,4 +77,4 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 ## References
 - Read [Competition](references/competition.md) when the question is about competitors, alternatives, pricing or positioning.
 - Read [Technology](references/technology.md) when the question is about choosing or assessing a technology, vendor, library or approach for a product use case.
-- Read [Competitor profile](../../references/competitor-profile.md) when you profile, compare or keep a competitor or alternative analysis current.
+- Read [Competitor profile](references/competitor-profile.md) when you profile, compare or keep a competitor or alternative analysis current.

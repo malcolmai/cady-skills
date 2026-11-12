@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "18fc288cd96f14258cf7"
-  library: "9c7400a46a1d124f"
+  version: "b95f92d34860edd36c67"
+  library: "aa83bb6963948c05"
   function: "gtm"
 ---
 # GTM launch session
@@ -26,7 +26,7 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 ## Gtm launch
 
 - **Job:** From the company context and the user's outbound request, prepare the complete internal motion in one session. A missing sender, provider or scheduler blocks activation only, never internal preparation.
-- **References:** Channel plays and execution briefs: `cady-gtm-channel-plan`; reviewed List import: `../../references/tam-map-import.md`; approval and release: `../../references/outreach-release.md`, Release.
+- **References:** Channel plays and execution briefs: `cady-gtm-channel-plan`; reviewed List import: `references/tam-map-import.md`; approval and release: `references/outreach-release.md`, Release.
 - **Rule:** A prepared review is not approval or delivery. A live claim is required at prepare and release, and work not bound to a go-to-market skill needs motion to prepare; never invent user assent or present a quote of the user as approval. Record prepared, authorized, released and executor-sent states distinctly, and reconcile uncertain effects before retrying.
 
 ### Steps

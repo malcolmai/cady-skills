@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "04a0cd37fc408f7895a1"
-  library: "9c7400a46a1d124f"
+  version: "242d2f65f42915acfcae"
+  library: "aa83bb6963948c05"
   function: "gtm"
 ---
 # Events: attend or host
@@ -46,11 +46,11 @@ Prepare for or host the event named in the brief to advance the company through 
 ## Procedure
 
 1. Claim the event work item with work_set {id, status: working}; read the brief and its refs. Follow its event, mode and conversation target; if any is missing, stop and report.
-2. Follow `../../references/events-attend.md` when attending or `../../references/events-host.md` when hosting; for a host cohort use `../../references/intro-request.md` where useful. The event platform remains the RSVP source of truth.
-3. Persist source-backed eligible speakers, attendees, co-hosts and guests in the brief's CRM List through the reviewed import (`../../references/tam-map-import.md`); read completion and actual membership. Report researched, saved and member counts separately and make shortfalls explicit.
+2. Follow `references/events-attend.md` when attending or `references/events-host.md` when hosting; for a host cohort use `references/intro-request.md` where useful. The event platform remains the RSVP source of truth.
+3. Persist source-backed eligible speakers, attendees, co-hosts and guests in the brief's CRM List through the reviewed import (`references/tam-map-import.md`); read completion and actual membership. Report researched, saved and member counts separately and make shortfalls explicit.
 4. After the event, record each actual one-to-one meeting with crm_interactions_set as interaction kind meeting, or substantive conversation as kind event_conversation, with occurredAt and sourceRef the event platform ID or event slug plus date. Directory presence alone is not intent: listed attendees stay cold and the attendee List is never bulk-messaged.
 5. For each person actually met, record one specific follow-up hook on the work item and route a personal follow-up to a separate `cady-gtm-warm-email` or `cady-gtm-linkedin-message` work item. Deliver promised items; record one short keep-or-drop learning note on the event work item.
-6. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
+6. Stop: on any condition in `references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance
 
@@ -82,8 +82,8 @@ Prepare for or host the event named in the brief to advance the company through 
 - **Transition:** the claim holder reports preparation and, after the event, learning
 
 ## References
-- Read [Agent stop](../../references/agent-stop.md) when before acting and whenever a stop condition arises.
-- Read [Attending an event](../../references/events-attend.md) when attending the event.
-- Read [Hosting an event](../../references/events-host.md) when hosting the event.
-- Read [Introduction request](../../references/intro-request.md) when requesting an introduction for a host cohort.
-- Read [Reviewed CRM import](../../references/tam-map-import.md) when adding sourced people to the brief’s List.
+- Read [Agent stop](references/agent-stop.md) when before acting and whenever a stop condition arises.
+- Read [Attending an event](references/events-attend.md) when attending the event.
+- Read [Hosting an event](references/events-host.md) when hosting the event.
+- Read [Introduction request](references/intro-request.md) when requesting an introduction for a host cohort.
+- Read [Reviewed CRM import](references/tam-map-import.md) when adding sourced people to the brief’s List.

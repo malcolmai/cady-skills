@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "3cecf0be5ae795eec9fd"
-  library: "9c7400a46a1d124f"
+  version: "b841e98f21dad81455cb"
+  library: "aa83bb6963948c05"
   function: "core"
 ---
 # Cady
@@ -51,8 +51,8 @@ Read `agents_read` first. Reuse or update an agent that already owns the outcome
 
 ## Load a skill
 
-Try: the installed skill by name (`cady-core-skill-index`); local `skills/<name>/SKILL.md` in the host's skills folder (the roster install), or `library/<name>/SKILL.md` beside this skill (Cady reply paths mean either place); `cady_read {refs:["<cady-id>"]}` returns the text of a core method only, e.g. `cady_read {refs:["skill.company.decision_check"]}`; finally fetch the skill and its linked references from the source below (pinned Library URL). If no route works, say the method is unavailable and hold company writes.
+Try: the installed skill by name (`cady-core-skill-index` lists them); then fetch the skill and the references it links (`references/` beside its SKILL.md) from the Library source below (pinned URL, `library/<name>/SKILL.md`). In the claude.ai zip, `library/<name>/SKILL.md` sits beside this skill. `cady_read {refs:["<cady-id>"]}` returns the text of a core method only, e.g. `cady_read {refs:["skill.company.decision_check"]}`. If no route works, say the method is unavailable and hold company writes.
 
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/9c7400a46a1d124f/
+    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/aa83bb6963948c05/
 
-A fork changes that line to its own raw URL and branch.
+A fork may change that line to its own raw URL and branch.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.all"
-  version: "0ce0a5a3d68b3320157b"
-  library: "9c7400a46a1d124f"
+  version: "c11ad993395f1c1b6bc9"
+  library: "aa83bb6963948c05"
   function: "core"
 ---
 # Execution guidance
@@ -20,7 +20,7 @@ Shared execution rules: authority, blockers, credentials, effects and receipts, 
 
 ## Recurrence
 
-- Recurring work: `../../references/agent-hosts.md` (scheduling). Every run of every agent follows the run sequence (skill cady-core-run-sequence). Waiting work records its next action and due date and relies on the host's next wake; there is no separate wake mechanism.
+- Recurring work: `references/agent-hosts.md` (scheduling). Every run of every agent follows the run sequence (skill cady-core-run-sequence). Waiting work records its next action and due date and relies on the host's next wake; there is no separate wake mechanism.
 
 ## Selection
 
