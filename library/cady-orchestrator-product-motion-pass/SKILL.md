@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_product.motion_pass"
   version: "76e825f59a16504724f2"
-  library: "ced6b4a7a67c21c5"
+  library: "f444a98c7277b591"
   function: "orchestrator_product"
 ---
 # Orchestrate product
