@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_gtm"
-  version: "1d3ed3a7523396dd38c0"
-  library: "6501d292ae359b43"
+  version: "a019c3bea33f1bedac53"
+  library: "d110e6194c26a326"
   function: "orchestrator_gtm"
 ---
 # GTM orchestrator
@@ -27,6 +27,7 @@ The inner loop for go-to-market: you run its motion and do none of its work.
 
 ### Skills
 - `cady-orchestrator-gtm-motion-pass`: A due GTM pass, or an event: a reply, a segment crossing its reply line or a stage stalling.
+- `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
 ## Parent function

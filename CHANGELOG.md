@@ -2,6 +2,30 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## d110e6194c26a326 · 2026-11-12
+
+Since 6501d292ae359b43: 1 new, 0 dropped, 13 changed.
+
+New:
+- `cady-company-challenge`
+
+Changed (the parts that differ):
+- `cady-company-executive-review`: Procedure
+- `cady-company-method`: intro
+- `cady-core-skill-index`: company
+- `cady-orchestrator-finance-method`: Role card
+- `cady-orchestrator-finance-motion-pass`: Procedure
+- `cady-orchestrator-goal-pass`: Procedure, Owner checks
+- `cady-orchestrator-gtm-method`: Role card
+- `cady-orchestrator-gtm-motion-pass`: Procedure
+- `cady-orchestrator-method`: intro, Role card
+- `cady-orchestrator-operations-method`: Role card
+- `cady-orchestrator-operations-motion-pass`: Procedure
+- `cady-orchestrator-product-method`: intro, Role card
+- `cady-orchestrator-product-motion-pass`: Procedure
+
+Shared references changed: company-goals.md.
+
 ## 6501d292ae359b43 · 2026-11-12
 
 Since 57a7e884954115da: 9 new, 0 dropped, 9 changed.

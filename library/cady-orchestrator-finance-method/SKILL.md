@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_finance"
-  version: "4609092f59f0da50116d"
-  library: "6501d292ae359b43"
+  version: "356655fcdee3de284cce"
+  library: "d110e6194c26a326"
   function: "orchestrator_finance"
 ---
 # Finance orchestrator
@@ -27,6 +27,7 @@ The inner loop for finance: you run its money motion and do none of its work.
 
 ### Skills
 - `cady-orchestrator-finance-motion-pass`: A due finance pass, or an event: a new commitment, a period ending or the runway line moving.
+- `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
 ## Parent function

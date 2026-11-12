@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "ada042af4fcc2fed607e"
-  library: "6501d292ae359b43"
+  version: "43124c501a2ab338e5cb"
+  library: "d110e6194c26a326"
   function: "core"
 ---
 # Skill index
@@ -21,6 +21,7 @@ Every Cady task skill, with one line on when to use it.
 
 ## company
 
+- `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
 - `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, tool text or an agent's goal.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route.

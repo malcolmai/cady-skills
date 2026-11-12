@@ -1,6 +1,6 @@
 # Cady skill library
 
-76 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+77 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
 
@@ -13,6 +13,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-orchestrator-method`: Orchestrator role card: its point and key bets (`library/cady-orchestrator-method/SKILL.md`)
 
 ## company
+- `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator. (`library/cady-company-challenge/SKILL.md`)
 - `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, tool text or an agent's goal. (`library/cady-company-change-agent-behaviour/SKILL.md`)
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it. (`library/cady-company-decision-check/SKILL.md`)
 - `cady-company-decision-questions`: A goal or decision you own needs evidence: frame its key questions and pick the cheapest research route. (`library/cady-company-decision-questions/SKILL.md`)

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_product.motion_pass"
-  version: "d8097890f969259c7d75"
-  library: "6501d292ae359b43"
+  version: "68c62653af1108aed504"
+  library: "d110e6194c26a326"
   function: "orchestrator_product"
 ---
 # Orchestrate product
@@ -41,10 +41,10 @@ A due product pass, or an event: a release due, work in progress over its limit 
 
 1. Read the product goals and initiatives, the work in progress against its limit, the releases due and the latest results.
 2. Check that each in-flight item names its learning goal or acceptance; an item that cannot say what it will change waits.
-3. Finish before starting: hold new starts while work in progress is over its limit.
+3. Cut each build to the smallest version a real user can judge, and hold new starts while work in progress is over its limit.
 4. Gate each release on a story walk by a fresh user, not on merged work.
 5. Read each release's results back into discovery before the next scope is set.
-6. Decide inside the family's node by its point and bets, and record each call on the lowest node both pieces of work serve. Hand a call that crosses families to the orchestrator and one that would change a point, bet or goal to the Executive, with both options and the evidence.
+6. Read each result one level down with `cady-company-challenge`. Decide inside the family's node by its point and bets, and record each call on the lowest node both pieces of work serve. Hand a call that crosses families to the orchestrator and one that would change a point, bet or goal to the Executive, with both options and the evidence.
 7. Report work in progress against its limit, items held and why, releases passed or held, and what was learned.
 
 ## Acceptance

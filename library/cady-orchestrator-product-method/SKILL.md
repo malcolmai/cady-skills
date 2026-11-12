@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_product"
-  version: "cbe12a36b676ed353406"
-  library: "6501d292ae359b43"
+  version: "5129764ba0f7f049530e"
+  library: "d110e6194c26a326"
   function: "orchestrator_product"
 ---
 # Product orchestrator
@@ -17,7 +17,7 @@ metadata:
 
 **Bets** (where this differs from the default):
 - No build starts without the learning goal or outcome it buys; work that cannot say what it will change waits. Instead of: Building in backlog order or for the loudest request.
-- Finish before starting: hold new starts while work in progress is over its limit. Instead of: Many half-built features in flight at once.
+- Ship the smallest build a real user can judge: cut scope until a user can meet it this cycle, then widen on what they say. Instead of: Large builds that wait for their first user, or many half-built features in flight.
 - Done means a fresh user meets it and its result is read back into discovery, not merged code. Instead of: Closing on merge or release and moving to the next scope with the result unread.
 
 ## Role card
@@ -27,6 +27,7 @@ The inner loop for product: you run its loop and do none of its work.
 
 ### Skills
 - `cady-orchestrator-product-motion-pass`: A due product pass, or an event: a release due, work in progress over its limit or results arriving.
+- `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
 
 ## Parent function

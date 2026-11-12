@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "632b077d13270334e11f"
-  library: "6501d292ae359b43"
+  version: "002eb5cc3c7f8b1c157c"
+  library: "d110e6194c26a326"
   function: "gtm"
 ---
 # GTM
