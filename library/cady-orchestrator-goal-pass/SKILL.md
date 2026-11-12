@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.goal_pass"
-  version: "48d7766ec5dbc69cdbaa"
-  library: "3e2606bbe363c868"
+  version: "b7a1aa95a9a35694dd4f"
+  library: "28918753c31b9ed8"
   function: "orchestrator"
 ---
 # Orchestrate the company

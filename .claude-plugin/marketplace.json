@@ -9,43 +9,7 @@
       "name": "cady",
       "source": "./plugins/cady",
       "description": "Cady's method library for company agents. Everything here relies on Cady and needs a Cady account.",
-      "version": "2026.11.12-3e2606bb"
-    },
-    {
-      "name": "cady-core",
-      "source": "./plugins/cady-core",
-      "description": "Cady skills every agent uses: run sequence, context, scheduling, skill index. Requires the cady plugin.",
-      "version": "2026.11.12-3e2606bb"
-    },
-    {
-      "name": "cady-company",
-      "source": "./plugins/cady-company",
-      "description": "Cady skills for the company system: the Executive and the orchestrator, direction, decisions and agents. Requires the cady plugin.",
-      "version": "2026.11.12-3e2606bb"
-    },
-    {
-      "name": "cady-gtm",
-      "source": "./plugins/cady-gtm",
-      "description": "Cady skills for go to market: its orchestrator, sales, outreach, marketing and customer success. Requires the cady plugin.",
-      "version": "2026.11.12-3e2606bb"
-    },
-    {
-      "name": "cady-product",
-      "source": "./plugins/cady-product",
-      "description": "Cady skills for product: its orchestrator, product, research, design, engineering, integrations, QA and review. Requires the cady plugin.",
-      "version": "2026.11.12-3e2606bb"
-    },
-    {
-      "name": "cady-finance",
-      "source": "./plugins/cady-finance",
-      "description": "Cady skills for finance: its orchestrator, finance, accounting and fundraising. Requires the cady plugin.",
-      "version": "2026.11.12-3e2606bb"
-    },
-    {
-      "name": "cady-operations",
-      "source": "./plugins/cady-operations",
-      "description": "Cady skills for company operations: its orchestrator, filings, registers, contracts, people and the inbox. Requires the cady plugin.",
-      "version": "2026.11.12-3e2606bb"
+      "version": "2026.11.12-28918753"
     }
   ]
 }
