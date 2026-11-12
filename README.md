@@ -92,7 +92,7 @@ Then: Start a new conversation.
 
 ## Customise for your company (fork)
 
-Optional. Fork when you want company-specific methods; the library is a best-practice baseline, your orchestrator agent edits the fork with your company's own reasoning, and Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.
+Optional. Fork when you want company-specific methods; the library is a best-practice baseline, your Executive agent edits the fork with your company's own reasoning, and Cady keeps your company's state and stores no skills. Nothing updates your fork automatically.
 
 1. **Fork** `malcolmai/cady-skills` into your organisation on GitHub (private is fine), or copy a release into a repository or folder of your own.
 2. **Record the baseline**: the release tag you started from. Every `SKILL.md` names it in `metadata.library`; also write it to a `BASELINE` file at the root of the fork.
@@ -115,7 +115,7 @@ Optional. Fork when you want company-specific methods; the library is a best-pra
 
 ## Edit your fork
 
-Your orchestrator edits skills in the fork when your company's evidence says a method should differ: one commit per change, with the reason in the message. Keep company facts (names, prices, people, decisions) in Cady, not in a skill: methods come from skills, and context is company state.
+Your Executive agent edits skills in the fork when your company's evidence says a method should differ: one commit per change, with the reason in the message. Keep company facts (names, prices, people, decisions) in Cady, not in a skill: methods come from skills, and context is company state.
 
 ## Merge upstream once a month
 

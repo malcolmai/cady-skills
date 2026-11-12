@@ -2,6 +2,12 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 4df067661df56e5b · 2026-11-12
+
+Since d110e6194c26a326: 0 new, 0 dropped, 0 changed.
+
+Shared references changed: executive-setup-advice.md.
+
 ## d110e6194c26a326 · 2026-11-12
 
 Since 6501d292ae359b43: 1 new, 0 dropped, 13 changed.
