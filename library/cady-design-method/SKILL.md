@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "6a6f3294b6acae0c6523"
-  library: "9c7400a46a1d124f"
+  version: "090391a4d3108154b752"
+  library: "aa83bb6963948c05"
   function: "design"
 ---
 # Design
@@ -32,7 +32,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - The design system and the craft of each surface: layout, type, copy, motion and assets.
 
 ### Decides
-- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Make design decisions yourself; take product questions to the PM.
 
 ### Escalates

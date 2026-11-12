@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.marketing.post"
-  version: "1c7abb1a528e1adaf468"
-  library: "9c7400a46a1d124f"
+  version: "c376fc5973b429bb3d0d"
+  library: "aa83bb6963948c05"
   function: "marketing"
 ---
 # Post one piece
@@ -47,12 +47,12 @@ Create or edit one post for the audience, topic and placement chosen in the brie
 
 ## Procedure
 
-1. Read the brief and its refs (`../../references/outreach-drafting.md`, Brief); follow its audience, topic, pillar and placement. Do not re-plan the content strategy.
-2. Create or edit the post using the written-content craft in `../../references/taste-post.md`. For an edit, preserve accepted work outside the requested change. Apply `../../references/outreach-drafting.md`, Truth and grounding, Claims and Brand pack to the evidence and allowed claims.
-3. Have a fresh judge check the post in its intended placement using `../../references/taste-post.md`, including the tells scan and source checks. For hooks and headlines, shortlist for the owner to pick.
+1. Read the brief and its refs (`references/outreach-drafting.md`, Brief); follow its audience, topic, pillar and placement. Do not re-plan the content strategy.
+2. Create or edit the post using the written-content craft in `references/taste-post.md`. For an edit, preserve accepted work outside the requested change. Apply `references/outreach-drafting.md`, Truth and grounding, Claims and Brand pack to the evidence and allowed claims.
+3. Have a fresh judge check the post in its intended placement using `references/taste-post.md`, including the tells scan and source checks. For hooks and headlines, shortlist for the owner to pick.
 4. Save the exact post and placement preview to Files and present the exact text and placement through execution authority's approval rule. Cady has no native publish review. After approval or a covering grant, use the authorized connector and record the channel's receipt and post id; report a held post as held.
 5. Record exposure, response and business outcome separately from their evidence; engagement is a signal, not proof of demand. Record owner corrections on the work item for the brief’s author (channel strategy).
-6. Stop: on any condition in `../../references/agent-stop.md`, stop and report as it says.
+6. Stop: on any condition in `references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance
 
@@ -78,6 +78,6 @@ Create or edit one post for the audience, topic and placement chosen in the brie
 - **Transition:** the claim holder reports the held post or publication and receipt
 
 ## References
-- Read [Agent stop](../../references/agent-stop.md) when before acting and whenever a stop condition arises.
-- Read [Outreach drafting](../../references/outreach-drafting.md) when use only truth, claims and brand guidance for the post.
-- Read [Taste check: post](../../references/taste-post.md) when a fresh judge checks the post in its intended placement.
+- Read [Agent stop](references/agent-stop.md) when before acting and whenever a stop condition arises.
+- Read [Outreach drafting](references/outreach-drafting.md) when use only truth, claims and brand guidance for the post.
+- Read [Taste check: post](references/taste-post.md) when a fresh judge checks the post in its intended placement.

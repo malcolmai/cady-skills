@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "023a54449279838ffaee"
-  library: "9c7400a46a1d124f"
+  version: "bd8452ca8b3c84d04463"
+  library: "aa83bb6963948c05"
   function: "marketing"
 ---
 # Marketing
@@ -62,6 +62,6 @@ gtm
 
 ## Selected judgment
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
-- When choosing a channel rather than executing an accepted one, read `../../references/gtm-channels.md` after registered discovery.
+- When choosing a channel rather than executing an accepted one, read `references/gtm-channels.md` after registered discovery.
 
 - Read [Domain method](references/domain-method.md) when you plan or publish marketing content or SEO.

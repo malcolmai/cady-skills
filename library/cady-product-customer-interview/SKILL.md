@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "a3c83da7647c99f94668"
-  library: "9c7400a46a1d124f"
+  version: "c641497ea92b95587acb"
+  library: "aa83bb6963948c05"
   function: "product"
 ---
 # Customer discovery interviews
@@ -39,7 +39,7 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 ## Procedure
 
 1. Start from the decision. Name the question or assumption item it serves (`cady-company-decision-questions`) and write the two or three things you must learn and which answers would change the decision. Without that, do not schedule interviews.
-2. Recruit people who had the problem recently and acted on it, not friends, fans or people who only fit a profile. Five to eight per segment usually show the pattern; stop when new interviews stop changing it. Requests to talk are outreach: an engaged contact through `cady-gtm-warm-email`, a LinkedIn connection through `cady-gtm-linkedin-message`, an introduction as `../../references/intro-request.md` says, and a cold person only in a cold cycle whose template is a plain research ask (the topic, about 20 minutes, no pitch). Once the requests are held for review, record one ask of kind call for whoever will take the interviews (question: hold N x 20 minutes; readyRefs: the guide File and the review id); in chat too, because the times arrive after this session. Booking a call with a person is an ask of kind call; messaging them is an outreach review. Do not hold an Executive work item for booking.
+2. Recruit people who had the problem recently and acted on it, not friends, fans or people who only fit a profile. Five to eight per segment usually show the pattern; stop when new interviews stop changing it. Requests to talk are outreach: an engaged contact through `cady-gtm-warm-email`, a LinkedIn connection through `cady-gtm-linkedin-message`, an introduction as `references/intro-request.md` says, and a cold person only in a cold cycle whose template is a plain research ask (the topic, about 20 minutes, no pitch). Once the requests are held for review, record one ask of kind call for whoever will take the interviews (question: hold N x 20 minutes; readyRefs: the guide File and the review id); in chat too, because the times arrive after this session. Booking a call with a person is an ask of kind call; messaging them is an outreach review. Do not hold an Executive work item for booking.
 3. Ask about specific past behaviour. 'Tell me about the last time you...', 'What did you do next?', 'What did you try before that?', 'What did it cost you in time or money?', 'Who else was involved?', 'Why then?'. Ask to be shown the spreadsheet, workaround or tool they use. Let silences run.
 4. Do not ask hypotheticals ('would you use', 'would you pay'), leading questions ('isn't X frustrating?'), yes or no questions, or for their solution. Do not pitch: describing your idea turns the rest of the interview into politeness. Spend the interview mostly listening.
 5. Steer away from bad data. A compliment carries no information; move on. A generalisation ('I always', 'usually') gets 'when was the last time?'. A feature request gets 'what would that let you do?' and 'how do you handle it today?'. An opinion on price is tested by behaviour, never taken as demand.
@@ -69,4 +69,4 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 - **Transition:** the decision owner reads the synthesis against the question it serves
 
 ## References
-- Read [Introduction request](../../references/intro-request.md) when you recruit through an introduction.
+- Read [Introduction request](references/intro-request.md) when you recruit through an introduction.

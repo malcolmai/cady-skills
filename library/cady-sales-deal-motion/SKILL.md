@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "fda5698bf5a441d4d78e"
-  library: "9c7400a46a1d124f"
+  version: "73bccd217ceeb278bd96"
+  library: "aa83bb6963948c05"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
@@ -49,7 +49,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 3. Discovery call (sheet and record: `cady-gtm-calls`). The aim is to learn whether a problem worth solving now exists, not to pitch: open with an upfront contract, let the buyer talk most, and end with a dated next step. The stages reference holds the questions.
 4. Qualify lightly with four questions, each answered from the buyer's words or marked unknown: problem, priority, power, path. Never fill unknowns by inference; enthusiasm, a demo request or a trial sign-up is a signal, not qualification. No problem, owner or timing: close it with crm_interactions_set: an interaction with motion customer and stage lost, its note the reason, and due the re-contact date when there is one. A fast no is a good result.
 5. Stages: propose a stage change with the buyer action behind it and set it only when the user states or confirms it: crm_interactions_set, an interaction with motion and stage, for a first start or an existing track. Stages need not move in listed order. Exits: discovery once a discovery call is booked; qualified when the four answers are known; trial when an agreed evaluation starts; proposal when the buyer asked for terms; negotiation when scope is accepted and terms are discussed; won when signed; lost when they decline or the close plan lapses without a reply. Every touch records an interaction whose note is the next action and due its date.
-6. Proposal: only after the buyer agrees the problem and asks for terms. Price comes from the accepted offer; a discount or non-standard term is the owner's decision. Save with files_set, read back with cady_read file:<id>; send it through `cady-gtm-reply` or `cady-gtm-warm-email`. Before sending terms, run `cady-company-operations-contract-checks` (plan, customer contract). For accompanying message copy, use `../../references/outreach-drafting.md`, draft_check before `../../references/taste-message.md`; route preparation and release through `../../references/outreach-release.md`. The stages reference holds the proposal contents.
+6. Proposal: only after the buyer agrees the problem and asks for terms. Price comes from the accepted offer; a discount or non-standard term is the owner's decision. Save with files_set, read back with cady_read file:<id>; send it through `cady-gtm-reply` or `cady-gtm-warm-email`. Before sending terms, run `cady-company-operations-contract-checks` (plan, customer contract). For accompanying message copy, use `references/outreach-drafting.md`, draft_check before `references/taste-message.md`; route preparation and release through `references/outreach-release.md`. The stages reference holds the proposal contents.
 7. Mutual close plan: work back from the date the buyer needs the result, with dated steps each side owns, agreed with the buyer's champion and saved with files_set. A missed buyer-owned date is the earliest sign of a stalled deal: ask once, directly, instead of chasing; invent no deadlines or pressure.
 8. Won: close it with one crm_interactions_set call (the order's interaction with motion customer, stage won, the reason and its kind as the note, evidence), set role customer with renewalDate in its own crm_set call, write a handoff note with files_set, start the customer work item with work_set {kind: task} (`cady-customer-success-lifecycle` runs it), send anything sold that the product cannot yet do to the product owner now, run `cady-company-operations-contract-checks` (act, customer contract). The stages reference holds the fields and the handoff note.
 9. Lost: close it with one crm_interactions_set call: motion customer, stage lost, the note the reason in the buyer's words (or marked inferred when it is yours; keep their words apart from your inference) and its kind, due a re-contact date; correct a close with another interaction that moves the stage. Three or more losses with one reason are a proposed change for `cady-gtm-offer-and-segments`; one loss is not a pivot. The stages reference holds the fields.
@@ -71,7 +71,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 - user-stated stage
 - accepted offer and price
 - Files readback
-- contact permission before any message (`../../references/outreach-release.md`)
+- contact permission before any message (`references/outreach-release.md`)
 
 ## Result
 
@@ -84,7 +84,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 - **Transition:** the claim holder reports the deal step, track readback and next action
 
 ## References
-- Read [Outreach drafting](../../references/outreach-drafting.md) when preparing customer message copy.
-- Read [Outreach release](../../references/outreach-release.md) when checking permission or routing a customer message for preparation and release.
-- Read [Deal motion stage detail](../../references/deal-motion-stages.md) when you run a discovery call, qualify, write a proposal or close plan, or close the deal won or lost.
-- Read [Taste check: message](../../references/taste-message.md) when judging a message draft before review.
+- Read [Outreach drafting](references/outreach-drafting.md) when preparing customer message copy.
+- Read [Outreach release](references/outreach-release.md) when checking permission or routing a customer message for preparation and release.
+- Read [Deal motion stage detail](references/deal-motion-stages.md) when you run a discovery call, qualify, write a proposal or close plan, or close the deal won or lost.
+- Read [Taste check: message](references/taste-message.md) when judging a message draft before review.

@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.challenge"
   version: "7e781e31a1e246824093"
-  library: "9c7400a46a1d124f"
+  library: "aa83bb6963948c05"
   function: "company"
 ---
 # Challenge a result by its stakes

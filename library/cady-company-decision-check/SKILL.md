@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "ee85963574a639b7fc5e"
-  library: "9c7400a46a1d124f"
+  version: "77d0677af526dd6be509"
+  library: "aa83bb6963948c05"
   function: "company"
 ---
 # Who decides: the decision journey
@@ -72,4 +72,4 @@ Before a choice or an effect: whether it is already decided, who decides, and ho
 - **Transition:** the choice or effect recorded at its layer, with provenance
 
 ## References
-- Read [Recording a stated outcome and a sensitive decision](../../references/decision-check-record.md) when you record an outcome the person states in chat, or a decision with personal, HR, legal, financial or customer-confidential detail.
+- Read [Recording a stated outcome and a sensitive decision](references/decision-check-record.md) when you record an outcome the person states in chat, or a decision with personal, HR, legal, financial or customer-confidential detail.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "e6dec26b06f5b442bd32"
-  library: "9c7400a46a1d124f"
+  version: "a5cfa18bc586365c0402"
+  library: "aa83bb6963948c05"
   function: "engineering"
 ---
 # Engineering
@@ -33,7 +33,7 @@ Check every change against the map before you build (the product's Offering line
 - Release is part of done: take work to merged and, where release authority covers it, live; otherwise end at the exact handoff. Follow the company's repository guidance or recorded release policy for branching, checks and promotion. Before editing, read the live artifact and confirm which source deploys it. Call something live only after reading it back from the live target.
 
 ### Decides
-- When planning or reviewing a material software change, read `../../references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
+- When planning or reviewing a material software change, read `references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Make engineering decisions yourself. Raise a cleanliness issue only when it blocks work or keeps recurring.
 - Delegate per the native orchestration rules; clean up what you started; re-brief a failed helper once, then replace it.
 

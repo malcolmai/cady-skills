@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "1d4c0939d2a36827827a"
-  library: "9c7400a46a1d124f"
+  version: "f0135ae1e7a3690c548a"
+  library: "aa83bb6963948c05"
   function: "gtm"
 ---
 # GTM
@@ -34,10 +34,10 @@ Find the right persona and the offer and messaging for them; choose channels tha
 
 ### Decides
 - Test a channel or message with `cady-company-experiment` before scaling it.
-- When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `../../references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
+- When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 - For reachable-people outcomes, own acceptance: N, people versus organisations, source and channel coverage, List membership and the shortfall (`cady-gtm-tam-map` sources the persona's List as execution work). Preserve the requested size and identity; measures are evidence, never targets.
 - When exact recipients and copy are ready, call crm_outreach (no id) under the channel's execution skill; one named person needs only the party and voice:me first (`cady-gtm-warm-email`).
-- Choose the channel mix from `../../references/gtm-channels.md` and record it as a function-head decision with its alternatives, what would reverse it and a reviewBy date.
+- Choose the channel mix from `references/gtm-channels.md` and record it as a function-head decision with its alternatives, what would reverse it and a reviewBy date.
 
 ### Escalates
 - Escalate any persona, offer or channel choice that remains controversial after testing and independent review through `cady-company-decision-check` step 3.

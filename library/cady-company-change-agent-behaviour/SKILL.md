@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "82cd90a53bf942539d57"
-  library: "9c7400a46a1d124f"
+  version: "6d3fe79c1a7bca800d43"
+  library: "aa83bb6963948c05"
   function: "company"
 ---
 # Change agent behaviour
@@ -46,8 +46,8 @@ Change what agents do: edit a skill, role card, run sequence, tool text or an ag
 2. Size it. A small tweak or cleanup (a typo, a wrong id, a stale fact, a fix a failing check proves) follows the trail: before you edit, find what the text touches (callers, lines and tools that rely on it, neighbouring branches, any registered cue) and check each still holds. Larger is anything that changes what an agent does at a decision, or a cut in always-on, hard-limit or external-facing text, or a cut of a line that prevents a named risk; it takes step 4 as well.
 3. Pruning, for any edit: keep a line if it changes behaviour, prevents a named risk or carries a decision the agent must not guess; cut it if it repeats another line or pads. Record each served line you cut in the method's logic.cuts (date, the line, the kept line that carries it or none, why). A reworded line is recorded with carried_by naming its new form. Run `publish_methods.py --deletion-ledger <published_methods.json at the base commit>` to list cuts with no row.
 4. A larger behaviour change, in order. (a) Refine what is useful: say what a good result is in the domain's own best practice and cut what does not serve it before adding anything. (b) Walk the full flow as it runs today, from the product's flow maps in Cady (`cady_read file:<id>`) or its repository diagram maps: its branches, what each relies on, the upstream and downstream effects that matter. (c) Pick a few key cases, consolidated, sized to the biggest risks and how deep the complexity is, and include the nearby case that must not change. Run them with and without the change. Write the checks first, one per dimension, and score each separately so one strong point cannot hide a regression. Run by hand only for a single decision point with no tool or schema effect. Land when it is clearly better and the nearby case is unchanged. Record the cases and result in the PR body and the behaviours register row. Take most care with sends, spend, permissions and anything a customer or recipient sees. Write the text with `cady-company-taste-review`.
-5. Guard it so it does not drift: a behaviours register row (id, the departure it prevents, its home), a deterministic regression test at the lowest layer, and any repeated cue registered against the id. A forked library with no register records one decision covering the same facts.
-6. Review, then ship and read back. Review per execution topic independent_review, two_reviews, which says which reviews a change gets; its writing review reads the served text alone. Upstream guidance ships as a release; a forked library commits it with the reason and records the decision; an agent's goal text goes through agents_set with the current revision (`cady-company-manage-agents`). Read the served or installed text back, check its links and named tools resolve, and confirm it is what you changed.
+5. Guard it so it does not drift: a behaviours register row (id, the departure it prevents, its home), a deterministic regression test at the lowest layer, and any repeated cue registered against the id. A company's local skill with no register records one decision covering the same facts.
+6. Review, then ship and read back. Review per execution topic independent_review, two_reviews, which says which reviews a change gets; its writing review reads the served text alone. Edit the company's local skill, which is the company's own, and record why; contributing the change upstream is optional; an agent's goal text goes through agents_set with the current revision (`cady-company-manage-agents`). Read the served or installed text back, check its links and named tools resolve, and confirm it is what you changed.
 
 ## Acceptance
 
