@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
   version: "ab1a3d592c2ad52d5e94"
-  library: "d110e6194c26a326"
+  library: "4df067661df56e5b"
   function: "company"
 ---
 # Who decides: the decision journey

@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_operations"
   version: "77120321c2a0bf90e31c"
-  library: "d110e6194c26a326"
+  library: "4df067661df56e5b"
   function: "orchestrator_operations"
 ---
 # Operations orchestrator
