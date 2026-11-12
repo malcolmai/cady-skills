@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator_finance"
   version: "2bb5388f19a4927f283c"
-  library: "ced6b4a7a67c21c5"
+  library: "f444a98c7277b591"
   function: "orchestrator_finance"
 ---
 # Finance orchestrator
