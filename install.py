@@ -98,52 +98,92 @@ def desired(roster: dict, host: str, agents: list[str]) -> dict[str, bytes]:
 
 
 def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
-    """Write the roster's files: new or unedited ones are replaced, edited ones kept with the new text beside them."""
+    """Bring dest to the roster: plan every change, check every path stays inside dest, then make the changes.
+
+    A file is the library's only while it matches a version the library delivered (the lock's files and history); any other
+    file is the company's and is never overwritten or deleted. When the library's text for a company file changes, the new
+    text goes beside it as <file>.upstream; an .upstream the installer did not write is never overwritten either.
+    """
     before: dict[str, str] = lock.get("files", {})
-    report = {"written": [], "kept": [], "removed": [], "left": []}
+    history: dict[str, list[str]] = lock.get("history", {})
+    ours_up: dict[str, str] = lock.get("upstreams", {})
+    report: dict = {"written": [], "kept": [], "removed": [], "left": [], "blocked": [], "beside": []}
+    plan: list[tuple[str, str, bytes | None]] = []
     after: dict[str, str] = {}
+    upstreams: dict[str, str] = {}
+
+    def read(rel: str) -> str | None:
+        path = dest / rel
+        return sha(path.read_bytes()) if path.is_file() else None
+
+    def drop_our_upstream(rel: str) -> None:
+        up = rel + ".upstream"
+        if rel in ours_up and read(up) == ours_up[rel]:
+            plan.append(("unlink", up, None))
+
     for rel, data in sorted(files.items()):
-        path = inside(dest, rel)
         new = sha(data)
         after[rel] = new
-        if path.is_file():
-            local = sha(path.read_bytes())
-            if local == new:
-                continue
-            delivered = {before.get(rel), *lock.get("history", {}).get(rel, [])} - {None}
-            if local not in delivered:
-                # Yours, not the library's: an edit, or a file this roster never delivered (no lock, or an agent added back).
-                # Keep it; when the library's text differs from what it last delivered, put the new text beside it.
-                if new != before.get(rel):
-                    report["kept"].append(rel)
-                    if not dry:
-                        inside(dest, rel + ".upstream").write_bytes(data)
-                continue
+        local = read(rel)
+        if local == new:
+            drop_our_upstream(rel)
+            continue
+        delivered = {before.get(rel), *history.get(rel, [])} - {None}
+        if local is not None and local not in delivered:
+            up = rel + ".upstream"
+            current = read(up)
+            if current == new:
+                upstreams[rel] = new  # it already holds the library's text
+            elif current is None or (rel in ours_up and current == ours_up[rel]):
+                plan.append(("write", up, data))
+                upstreams[rel] = new
+                report["kept"].append(rel)
+                report["beside"].append(up)
+            else:
+                report["blocked"].append(rel)
+            continue
+        plan.append(("write", rel, data))
         report["written"].append(rel)
-        if not dry:
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(data)
+        drop_our_upstream(rel)
     for rel, old in sorted(before.items()):
         if rel in files:
             continue
-        path = inside(dest, rel)
-        if path.is_file() and sha(path.read_bytes()) not in {old, *lock.get("history", {}).get(rel, [])}:
+        local = read(rel)
+        if local is not None and local not in {old, *history.get(rel, [])}:
             report["left"].append(rel)
             continue
         report["removed"].append(rel)
-        if not dry and path.is_file():
-            path.unlink()
-            for parent in path.parents:
-                if parent == dest or not parent.is_dir() or any(parent.iterdir()):
-                    break
-                parent.rmdir()
+        if local is not None:
+            plan.append(("unlink", rel, None))
+        drop_our_upstream(rel)
+    for _, rel, _ in plan:  # every path is checked before the first change, so a refusal leaves dest untouched
+        inside(dest, rel)
+        hop = dest
+        for part in Path(rel).parts:  # no folder or file on the way may be a link that leads out of dest
+            hop = hop / part
+            if hop.is_symlink():
+                raise SystemExit(f"install.py: refusing {rel!r}: {hop.relative_to(dest)} is a symlink")
+    # An .upstream the installer wrote earlier stays recorded as ours while it is still there unchanged.
+    for rel, digest in ours_up.items():
+        if rel not in upstreams and ("unlink", rel + ".upstream", None) not in plan and read(rel + ".upstream") == digest:
+            upstreams[rel] = digest
+    if not dry:
+        for op, rel, data in plan:
+            path = dest / rel
+            if op == "write":  # (an .upstream write is counted in report["beside"])
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
+            else:
+                path.unlink()
+                for parent in path.parents:
+                    if parent == dest or not parent.is_dir() or any(parent.iterdir()):
+                        break
+                    parent.rmdir()
     report["files"] = after
+    report["upstreams"] = upstreams
     # Every version the library has delivered for a file: restoring any of them is not a company edit.
-    history = {}
-    for rel in after:
-        seen = [before.get(rel), *lock.get("history", {}).get(rel, [])]
-        history[rel] = [h for h in dict.fromkeys(seen) if h and h != after[rel]][:8]
-    report["history"] = {rel: h for rel, h in history.items() if h}
+    report["history"] = {rel: h for rel in after
+                         if (h := [v for v in dict.fromkeys([before.get(rel), *history.get(rel, [])]) if v and v != after[rel]])}
     return report
 
 
@@ -166,8 +206,13 @@ def main(argv: list[str] | None = None) -> int:
     if not args.host:
         ap.error("--host is required (claude-code or codex)")
     dest = (args.dest or default_dest(args.host)).expanduser()
-    lock_path = dest / LOCK
-    lock = json.loads(lock_path.read_text()) if lock_path.is_file() else {}
+    lock_path = inside(dest, LOCK)
+    if lock_path.is_symlink():
+        ap.error(f"{lock_path} is a symlink; the lock must be a plain file inside {dest}")
+    try:
+        lock = json.loads(lock_path.read_text()) if lock_path.is_file() else {}
+    except (json.JSONDecodeError, UnicodeDecodeError) as e:
+        ap.error(f"{lock_path} is not a readable lock ({e}); fix or remove it, then run again")
     if args.update and not lock:
         ap.error(f"no roster at {dest} ({LOCK} not found); run without --update to install, or pass --dest")
     if lock and lock.get("host") != args.host:
@@ -177,6 +222,11 @@ def main(argv: list[str] | None = None) -> int:
     if gone:  # an agent this library lacks: drop it; the sync deletes its unedited files and leaves edited ones in place
         print(f"  dropped from the roster (not in this library): {', '.join(gone)}")
         agents = [k for k in agents if k not in gone]
+    missing_system = [k for k in roster["system"] if k not in agents]
+    if missing_system:  # the company system always runs, whatever the lock says
+        if lock:
+            print(f"  added to the roster (the company system always runs): {', '.join(missing_system)}")
+        agents = missing_system + agents
     split = lambda s: [x.strip() for x in s.split(",") if x.strip()]
     for key in split(args.add) + split(args.remove):
         if key not in roster["agents"]:
@@ -191,12 +241,16 @@ def main(argv: list[str] | None = None) -> int:
         dest.mkdir(parents=True, exist_ok=True)
         lock_path.write_text(json.dumps({"schema": "cady.roster-lock.v1", "host": args.host, "library": roster["library"],
                                          "agents": agents,
-                                         "files": report["files"], "history": report["history"]}, indent=2) + "\n")
+                                         "files": report["files"], "history": report["history"],
+                                         "upstreams": report["upstreams"]}, indent=2) + "\n")
     verb = "would change" if args.dry_run else "changed"
     print(f"Cady roster for {args.host} at {dest}: {', '.join(agents)} (library {roster['library']['tag']})")
-    print(f"  {verb}: {len(report['written'])} written, {len(report['removed'])} removed")
+    print(f"  {verb}: {len(report['written'])} written, {len(report['removed'])} removed"
+          + (f", {len(report['beside'])} .upstream written beside your edits" if report["beside"] else ""))
     for rel in report["kept"]:
         print(f"  kept your edit: {rel} (the new version is {rel}.upstream; merge it by hand, then delete it)")
+    for rel in report["blocked"]:
+        print(f"  kept your edit: {rel} (the library changed it, but {rel}.upstream is yours, so the new text was not written)")
     for rel in report["left"]:
         print(f"  left in place: {rel} (no longer in the roster, but you edited it)")
     return 0

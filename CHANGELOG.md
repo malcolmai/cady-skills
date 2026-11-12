@@ -2,6 +2,12 @@
 
 What changed in each upstream release, newest first. A fork's Executive reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## d050f67e29edf7f5 · 2026-11-12
+
+Since 28918753c31b9ed8: 0 new, 0 dropped, 0 changed.
+
+No skill text changed; release metadata only.
+
 ## 28918753c31b9ed8 · 2026-11-12
 
 Since 3e2606bbe363c868: 0 new, 0 dropped, 1 changed.
