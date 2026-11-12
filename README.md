@@ -66,7 +66,7 @@ Cady's first answer in a run says whether your skills match the release it serve
 claude plugin marketplace update cady && claude plugin update cady@cady && claude plugin update cady-core@cady
 ```
 
-Also run `claude plugin update <group>@cady` for each group plugin you installed.
+Also run `claude plugin update <group>@cady` for each group plugin you installed; if you had `cady-engineering`, its skills are now in `cady-product` (see the README's regroup note).
 
 Then: Restart Claude Code.
 
@@ -90,7 +90,7 @@ Then: Start a new conversation.
 
 **Other hosts**: Reinstall from github.com/malcolmai/cady-skills (README, Update).
 
-**Plugins regrouped (November 2026).** The plugins now follow the concern tree: `cady-company` holds the Executive and the orchestrator, and each family plugin holds its own orchestrator. Engineering and QA skills moved from `cady-engineering` (retired) to `cady-product`, and the company operations skills moved from `cady-company` to `cady-operations`. Skill names did not change. If you had `cady-engineering`, install `cady-product`; if your agents do company operations, install `cady-operations`.
+**Plugins regrouped (November 2026).** The plugins now follow the concern tree: `cady-company` holds the Executive and the orchestrator, and each family plugin holds its own orchestrator. Engineering and QA skills moved from `cady-engineering` (retired) to `cady-product`, and the company operations skills moved from `cady-company` to `cady-operations`. The orchestrator's skills moved from `cady-core` to `cady-company`. Skill names did not change. If you had `cady-engineering`, install `cady-product` and uninstall the retired plugin (`claude plugin uninstall cady-engineering@cady`) so its old copies do not shadow the new ones; if your agents do company operations, install `cady-operations`; an orchestrator host needs `cady-company`.
 
 ## Customise for your company (fork)
 
