@@ -1,6 +1,6 @@
 {
   "name": "cady-operations",
-  "version": "2026.11.12-11c1fd3a",
+  "version": "2026.11.12-3e2606bb",
   "description": "Cady skills for company operations: its orchestrator, filings, registers, contracts, people and the inbox. Requires the cady plugin.",
   "author": {
     "name": "Cady",
