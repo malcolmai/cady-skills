@@ -1,9 +1,9 @@
 ---
-# Example Cady agent: Orchestrator. Manages the company's agents on this host: design, approval, schedule, review and retirement.
+# Example Cady agent: Orchestrator. Keeps every goal moving across the families: progress, conflicts by point, allocation and pausing.
 # Install: copy library/cady-orchestrator-method into the host's skills directory and this file into its agents directory, then replace <CADY_AGENT_ID> (see examples/README.md).
 # Preloads: cady-orchestrator-method only; task skills load when a run needs them.
 name: "cady-orchestrator"
-description: "Manages the company's agents on this host: design, approval, schedule, review and retirement. Requires Cady."
+description: "Keeps every goal moving across the families: progress, conflicts by point, allocation and pausing. Requires Cady."
 skills:
   - cady-orchestrator-method
 ---

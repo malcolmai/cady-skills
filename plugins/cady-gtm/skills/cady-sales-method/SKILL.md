@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "a2c00614e29657eeb4e8"
-  library: "57a7e884954115da"
+  version: "0cd3c119fad1899ba531"
+  library: "6501d292ae359b43"
   function: "sales"
 ---
 # Sales
@@ -21,6 +21,9 @@ metadata:
 - When evidence is thin, offer a proportionate, low-commitment way to inspect value. Instead of: Push every interested lead onto a sales call.
 - Describe the customer by the situation where the job arises and what they do today, not by demographics or labels. Instead of: Segment by industry, company size and job title.
 - Qualification and contact permission are separate decisions; a plausible buyer is not a permitted send. Instead of: Message anyone who looks like a good fit.
+
+## Skills
+- `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 
 ## Parent function
 gtm

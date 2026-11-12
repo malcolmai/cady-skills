@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "de0b6660d831ed8964bb"
-  library: "57a7e884954115da"
+  version: "da92fe5236db8c9334b0"
+  library: "6501d292ae359b43"
   function: "company"
 ---
 # Manage company agents
@@ -60,7 +60,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 5. Evaluation. The criteria live on the first task, not the agent record: brief.doneWhen holds 2-5 reader tests tagged (check), (fresh) or (person), and brief.stopIf the early-stop limit; a completed run is not a reported result.
 6. Create, bind, prove, go live with agents_set (host {action: bind}, then status live), then report the first task with work_set; a returned schedule stays configured_unconfirmed until a host readback. Change visibility or sharing only on request; it applies at once and the owner is told.
 7. Authority. Read the company's permission modes first (cady_read company:map values, the permission modes line). Effects follow `cady-company-decision-check` step 2. No mode lets you send without that approval or a grant; limits text is not enforcement. Never approve for the person: their own decision covers every grant (send, spend, publish, sign, file), an invite, share or outreach effect in approval mode, new access or capture, widening permissions, a design change to a grant-holding agent and raising cadence or cost; per grant when critical. An in-chat yes counts only as approval {quote: their exact words} on create or go_live. An absent owner's approval: agent design, setup, review and retirement reference.
-8. Review this host's agents by risk class, with evidence from runs, receipts, cady_read changes {kind: agents} and transcripts (never bodies). Pause one that is not up to scratch (step 9) and hand over to the Executive; never rewrite its brief, methods or skills.
+8. Review this host's agents by risk class, with evidence from runs, receipts, cady_read changes {kind: agents} and transcripts (never bodies). Pause one that is not up to scratch (step 9); redesigning it is the Executive's (`cady-company-executive-review` step 15), never the pausing agent's.
 9. Retire or pause an agent only when it is confirmed obsolete or met its end condition, and adopt an existing company scheduled task only on the owner's yes: read the agent design, setup, review and retirement reference (it confirms an unscheduled task with agents_set host {action: removed}).
 
 ## Acceptance

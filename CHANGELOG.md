@@ -2,6 +2,34 @@
 
 What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 6501d292ae359b43 · 2026-11-12
+
+Since 57a7e884954115da: 9 new, 0 dropped, 9 changed.
+
+New:
+- `cady-orchestrator-finance-method`
+- `cady-orchestrator-finance-motion-pass`
+- `cady-orchestrator-goal-pass`
+- `cady-orchestrator-gtm-method`
+- `cady-orchestrator-gtm-motion-pass`
+- `cady-orchestrator-operations-method`
+- `cady-orchestrator-operations-motion-pass`
+- `cady-orchestrator-product-method`
+- `cady-orchestrator-product-motion-pass`
+
+Changed (the parts that differ):
+- `cady-company-executive-review`: Procedure
+- `cady-company-manage-agents`: Procedure
+- `cady-company-method`: description, intro, Role card, removed Selected judgment, reference domain-method.md
+- `cady-company-review`: reference setup.md
+- `cady-core-skill-index`: new core, company, gtm, finance, product
+- `cady-customer-success-method`: new Skills
+- `cady-design-method`: new Skills
+- `cady-orchestrator-method`: description, intro, Role card, Parent function, reference domain-method.md, reference selected-judgment.md
+- `cady-sales-method`: new Skills
+
+Shared references changed: executive-decision.md, executive-setup-advice.md.
+
 ## 57a7e884954115da · 2026-11-11
 
 Since 342443923258ad5d: 0 new, 0 dropped, 0 changed.
