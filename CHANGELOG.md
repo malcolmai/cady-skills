@@ -1,6 +1,13 @@
 # Changelog
 
-What changed in each upstream release, newest first. A fork's orchestrator reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
+What changed in each upstream release, newest first. A fork's Executive reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
+
+## 11c1fd3ac9bee5d5 · 2026-11-12
+
+Since 4df067661df56e5b: 0 new, 0 dropped, 1 changed.
+
+Changed (the parts that differ):
+- `cady-core-skill-index`: company, product, new operations, removed core, removed engineering
 
 ## 4df067661df56e5b · 2026-11-12
 

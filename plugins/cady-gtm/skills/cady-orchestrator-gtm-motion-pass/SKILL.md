@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator_gtm.motion_pass"
   version: "f79ede5b7d16c1840191"
-  library: "4df067661df56e5b"
+  library: "11c1fd3ac9bee5d5"
   function: "orchestrator_gtm"
 ---
 # Orchestrate GTM

@@ -5,9 +5,9 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "afa77cdc86fdcc786ad4"
-  library: "4df067661df56e5b"
-  function: "engineering"
+  version: "f925f502d4aeeb5cad26"
+  library: "11c1fd3ac9bee5d5"
+  function: "product"
 ---
 # Independent review
 

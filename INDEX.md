@@ -9,8 +9,6 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-core-execution`: a skill points here, or before an effect, credential use, retry or recovery. (`library/cady-core-execution/SKILL.md`)
 - `cady-core-run-sequence`: the user wants a task carried through to a recorded outcome. (`library/cady-core-run-sequence/SKILL.md`)
 - `cady-core-skill-index`: choosing which task skill fits, or binding an agent's installed skills (`library/cady-core-skill-index/SKILL.md`)
-- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered, a claim lapsed or a handover returned. (`library/cady-orchestrator-goal-pass/SKILL.md`)
-- `cady-orchestrator-method`: Orchestrator role card: its point and key bets (`library/cady-orchestrator-method/SKILL.md`)
 
 ## company
 - `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator. (`library/cady-company-challenge/SKILL.md`)
@@ -22,17 +20,11 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts. (`library/cady-company-experiment/SKILL.md`)
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task. (`library/cady-company-manage-agents/SKILL.md`)
 - `cady-company-method`: Executive role card: its point and key bets (`library/cady-company-method/SKILL.md`)
-- `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports). (`library/cady-company-operations-compliance-register/SKILL.md`)
-- `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts. (`library/cady-company-operations-contract-checks/SKILL.md`)
-- `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking. (`library/cady-company-operations-inbox-follow-through/SKILL.md`)
-- `cady-company-operations-method`: Company Operations role card: what this function owns and decides (`library/cady-company-operations-method/SKILL.md`)
-- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving. (`library/cady-company-operations-people-lifecycle/SKILL.md`)
-- `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision. (`library/cady-company-operations-requirement-register/SKILL.md`)
 - `cady-company-review`: a company needs an evidence-based operating review or onboarding. (`library/cady-company-review/SKILL.md`)
 - `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check). (`library/cady-company-taste-review/SKILL.md`)
 - `cady-company-voice-pack`: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages. (`library/cady-company-voice-pack/SKILL.md`)
-- `cady-orchestrator-operations-method`: Operations orchestrator role card: its point and key bets (`library/cady-orchestrator-operations-method/SKILL.md`)
-- `cady-orchestrator-operations-motion-pass`: A due operations pass, or an event: an obligation's lead time opening or a commitment found in the inbox. (`library/cady-orchestrator-operations-motion-pass/SKILL.md`)
+- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered, a claim lapsed or a handover returned. (`library/cady-orchestrator-goal-pass/SKILL.md`)
+- `cady-orchestrator-method`: Orchestrator role card: its point and key bets (`library/cady-orchestrator-method/SKILL.md`)
 
 ## gtm
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation. (`library/cady-customer-success-lifecycle/SKILL.md`)
@@ -57,6 +49,24 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review. (`library/cady-sales-deal-motion/SKILL.md`)
 - `cady-sales-method`: Sales role card: what this function owns and decides (`library/cady-sales-method/SKILL.md`)
 
+## product
+- `cady-design-method`: Design role card: what this function owns and decides (`library/cady-design-method/SKILL.md`)
+- `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings. (`library/cady-design-wcag-audit/SKILL.md`)
+- `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. (`library/cady-engineering-debugging/SKILL.md`)
+- `cady-engineering-independent-review`: a change needs review before merge. (`library/cady-engineering-independent-review/SKILL.md`)
+- `cady-engineering-integrations`: comparing, choosing or connecting a tool, data source or account. (`library/cady-engineering-integrations/SKILL.md`)
+- `cady-engineering-method`: Engineering role card: what this function owns and decides (`library/cady-engineering-method/SKILL.md`)
+- `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions. (`library/cady-engineering-system-cycle/SKILL.md`)
+- `cady-orchestrator-product-method`: Product orchestrator role card: its point and key bets (`library/cady-orchestrator-product-method/SKILL.md`)
+- `cady-orchestrator-product-motion-pass`: A due product pass, or an event: a release due, work in progress over its limit or results arriving. (`library/cady-orchestrator-product-motion-pass/SKILL.md`)
+- `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. (`library/cady-product-customer-interview/SKILL.md`)
+- `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done. (`library/cady-product-manage/SKILL.md`)
+- `cady-product-method`: Product role card: what this function owns and decides (`library/cady-product-method/SKILL.md`)
+- `cady-product-research`: Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology. (`library/cady-product-research/SKILL.md`)
+- `cady-qa-method`: QA role card: what this function owns and decides (`library/cady-qa-method/SKILL.md`)
+- `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step. (`library/cady-qa-stories/SKILL.md`)
+- `cady-qa-triage`: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. (`library/cady-qa-triage/SKILL.md`)
+
 ## finance
 - `cady-accounting-method`: Accounting role card: what this function owns and decides (`library/cady-accounting-method/SKILL.md`)
 - `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper. (`library/cady-accounting-period-close/SKILL.md`)
@@ -73,22 +83,12 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-orchestrator-finance-method`: Finance orchestrator role card: its point and key bets (`library/cady-orchestrator-finance-method/SKILL.md`)
 - `cady-orchestrator-finance-motion-pass`: A due finance pass, or an event: a new commitment, a period ending or the runway line moving. (`library/cady-orchestrator-finance-motion-pass/SKILL.md`)
 
-## product
-- `cady-design-method`: Design role card: what this function owns and decides (`library/cady-design-method/SKILL.md`)
-- `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings. (`library/cady-design-wcag-audit/SKILL.md`)
-- `cady-orchestrator-product-method`: Product orchestrator role card: its point and key bets (`library/cady-orchestrator-product-method/SKILL.md`)
-- `cady-orchestrator-product-motion-pass`: A due product pass, or an event: a release due, work in progress over its limit or results arriving. (`library/cady-orchestrator-product-motion-pass/SKILL.md`)
-- `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. (`library/cady-product-customer-interview/SKILL.md`)
-- `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done. (`library/cady-product-manage/SKILL.md`)
-- `cady-product-method`: Product role card: what this function owns and decides (`library/cady-product-method/SKILL.md`)
-- `cady-product-research`: Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology. (`library/cady-product-research/SKILL.md`)
-
-## engineering
-- `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. (`library/cady-engineering-debugging/SKILL.md`)
-- `cady-engineering-independent-review`: a change needs review before merge. (`library/cady-engineering-independent-review/SKILL.md`)
-- `cady-engineering-integrations`: comparing, choosing or connecting a tool, data source or account. (`library/cady-engineering-integrations/SKILL.md`)
-- `cady-engineering-method`: Engineering role card: what this function owns and decides (`library/cady-engineering-method/SKILL.md`)
-- `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions. (`library/cady-engineering-system-cycle/SKILL.md`)
-- `cady-qa-method`: QA role card: what this function owns and decides (`library/cady-qa-method/SKILL.md`)
-- `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step. (`library/cady-qa-stories/SKILL.md`)
-- `cady-qa-triage`: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. (`library/cady-qa-triage/SKILL.md`)
+## operations
+- `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports). (`library/cady-company-operations-compliance-register/SKILL.md`)
+- `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts. (`library/cady-company-operations-contract-checks/SKILL.md`)
+- `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking. (`library/cady-company-operations-inbox-follow-through/SKILL.md`)
+- `cady-company-operations-method`: Company Operations role card: what this function owns and decides (`library/cady-company-operations-method/SKILL.md`)
+- `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving. (`library/cady-company-operations-people-lifecycle/SKILL.md`)
+- `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision. (`library/cady-company-operations-requirement-register/SKILL.md`)
+- `cady-orchestrator-operations-method`: Operations orchestrator role card: its point and key bets (`library/cady-orchestrator-operations-method/SKILL.md`)
+- `cady-orchestrator-operations-motion-pass`: A due operations pass, or an event: an obligation's lead time opening or a commitment found in the inbox. (`library/cady-orchestrator-operations-motion-pass/SKILL.md`)

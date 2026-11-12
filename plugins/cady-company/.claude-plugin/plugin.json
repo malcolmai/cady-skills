@@ -1,7 +1,7 @@
 {
   "name": "cady-company",
-  "version": "2026.11.12-4df06766",
-  "description": "Cady skills for company direction, decisions, agents and operations. Requires the cady plugin.",
+  "version": "2026.11.12-11c1fd3a",
+  "description": "Cady skills for the company system: the Executive and the orchestrator, direction, decisions and agents. Requires the cady plugin.",
   "author": {
     "name": "Cady",
     "url": "https://cadyworks.com"

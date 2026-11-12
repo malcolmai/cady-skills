@@ -42,7 +42,7 @@ claude plugin install cady@cady
 claude plugin install cady-core@cady
 ```
 
-`cady` adds the Cady MCP server and the front door skill. Each `cady-<group>` plugin ships that group's skills, so install `cady-core`, then only the groups your agents use (cady-company, cady-gtm, cady-finance, cady-product, cady-engineering) with `claude plugin install <group>@cady`: every installed skill's description joins the host's skill list.
+`cady` adds the Cady MCP server and the front door skill. Each `cady-<group>` plugin ships that group's skills, so install `cady-core`, then only the groups your agents use (cady-company, cady-gtm, cady-product, cady-finance, cady-operations) with `claude plugin install <group>@cady`: every installed skill's description joins the host's skill list.
 
 **Codex**
 
@@ -89,6 +89,8 @@ Download cady.zip from github.com/malcolmai/cady-skills/releases/latest and uplo
 Then: Start a new conversation.
 
 **Other hosts**: Reinstall from github.com/malcolmai/cady-skills (README, Update).
+
+**Plugins regrouped (November 2026).** The plugins now follow the concern tree: `cady-company` holds the Executive and the orchestrator, and each family plugin holds its own orchestrator. Engineering and QA skills moved from `cady-engineering` (retired) to `cady-product`, and the company operations skills moved from `cady-company` to `cady-operations`. Skill names did not change. If you had `cady-engineering`, install `cady-product`; if your agents do company operations, install `cady-operations`.
 
 ## Customise for your company (fork)
 
