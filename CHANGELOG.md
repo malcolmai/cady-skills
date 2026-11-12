@@ -2,6 +2,15 @@
 
 What changed in each upstream release, newest first. A fork's Executive reads the entries after its baseline tag at the monthly upstream check, then merges what helps by hand.
 
+## 28918753c31b9ed8 · 2026-11-12
+
+Since 3e2606bbe363c868: 0 new, 0 dropped, 1 changed.
+
+Changed (the parts that differ):
+- `cady`: Load a skill
+
+Shared references changed: agent-hosts.md, executive-setup-advice.md.
+
 ## 3e2606bbe363c868 · 2026-11-12
 
 Since 11c1fd3ac9bee5d5: 0 new, 0 dropped, 0 changed.

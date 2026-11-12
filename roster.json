@@ -1,0 +1,519 @@
+{
+  "schema": "cady.roster.v1",
+  "library": {
+    "tag": "28918753c31b9ed8",
+    "version": "28918753c31b9ed8f5eb845b1094307dde44c9feeba92c037c035fcd72978cdf"
+  },
+  "core": [
+    "cady-core-context",
+    "cady-core-execution",
+    "cady-core-run-sequence",
+    "cady-core-skill-index"
+  ],
+  "system": [
+    "company",
+    "orchestrator"
+  ],
+  "front_door": "plugins/cady/skills/cady",
+  "agents": {
+    "company": {
+      "label": "Executive",
+      "family": "company",
+      "purpose": "Sets the direction and designs and improves the system of agents and people that pursues it",
+      "card": "cady-company-method",
+      "skills": [
+        "cady-company-challenge",
+        "cady-company-change-agent-behaviour",
+        "cady-company-decision-check",
+        "cady-company-decision-questions",
+        "cady-company-distil",
+        "cady-company-executive-review",
+        "cady-company-experiment",
+        "cady-company-manage-agents",
+        "cady-company-review",
+        "cady-company-taste-review",
+        "cady-company-voice-pack"
+      ]
+    },
+    "orchestrator": {
+      "label": "Orchestrator",
+      "family": "company",
+      "purpose": "Keeps every goal moving across the families: progress, conflicts by point, allocation and pausing",
+      "card": "cady-orchestrator-method",
+      "skills": [
+        "cady-orchestrator-goal-pass",
+        "cady-company-challenge",
+        "cady-company-manage-agents",
+        "cady-company-decision-check"
+      ]
+    },
+    "orchestrator_gtm": {
+      "label": "GTM orchestrator",
+      "family": "gtm",
+      "purpose": "Runs the go-to-market motion: evidence gates, the weakest funnel stage and replies first",
+      "card": "cady-orchestrator-gtm-method",
+      "skills": [
+        "cady-orchestrator-gtm-motion-pass",
+        "cady-company-challenge",
+        "cady-company-decision-check"
+      ]
+    },
+    "gtm": {
+      "label": "GTM",
+      "family": "gtm",
+      "purpose": "Grows demand: offer, segments, prospecting, outreach and pipeline",
+      "card": "cady-gtm-method",
+      "skills": [
+        "cady-gtm-calls",
+        "cady-gtm-channel-plan",
+        "cady-gtm-cold-email-cycle",
+        "cady-gtm-events",
+        "cady-gtm-launch",
+        "cady-gtm-linkedin-message",
+        "cady-gtm-offer-and-segments",
+        "cady-gtm-persona-profile",
+        "cady-gtm-pipeline-pass",
+        "cady-gtm-reply",
+        "cady-gtm-tam-map",
+        "cady-gtm-warm-email",
+        "cady-company-experiment"
+      ]
+    },
+    "marketing": {
+      "label": "Marketing",
+      "family": "gtm",
+      "purpose": "Produces marketing: positioning, content and campaigns",
+      "card": "cady-marketing-method",
+      "skills": [
+        "cady-marketing-post",
+        "cady-company-taste-review",
+        "cady-company-experiment",
+        "cady-gtm-offer-and-segments",
+        "cady-gtm-events"
+      ]
+    },
+    "sales": {
+      "label": "Sales",
+      "family": "gtm",
+      "purpose": "Works deals from first conversation to close",
+      "card": "cady-sales-method",
+      "skills": [
+        "cady-sales-deal-motion"
+      ]
+    },
+    "customer_success": {
+      "label": "Customer Success",
+      "family": "gtm",
+      "purpose": "Onboards and supports customers and keeps their accounts healthy",
+      "card": "cady-customer-success-method",
+      "skills": [
+        "cady-customer-success-lifecycle"
+      ]
+    },
+    "orchestrator_product": {
+      "label": "Product orchestrator",
+      "family": "product",
+      "purpose": "Runs the product loop: learning goals, work in progress and releases read back into discovery",
+      "card": "cady-orchestrator-product-method",
+      "skills": [
+        "cady-orchestrator-product-motion-pass",
+        "cady-company-challenge",
+        "cady-company-decision-check"
+      ]
+    },
+    "product": {
+      "label": "Product",
+      "family": "product",
+      "purpose": "Decides what to build and for whom, and qualifies releases",
+      "card": "cady-product-method",
+      "skills": [
+        "cady-product-customer-interview",
+        "cady-product-manage",
+        "cady-product-research",
+        "cady-company-experiment",
+        "cady-engineering-system-cycle",
+        "cady-company-decision-check",
+        "cady-qa-stories"
+      ]
+    },
+    "design": {
+      "label": "Design",
+      "family": "product",
+      "purpose": "Designs the customer experience: flows, interfaces and copy",
+      "card": "cady-design-method",
+      "skills": [
+        "cady-design-wcag-audit"
+      ]
+    },
+    "engineering": {
+      "label": "Engineering",
+      "family": "product",
+      "purpose": "Builds and runs the product: architecture, code, integrations and releases",
+      "card": "cady-engineering-method",
+      "skills": [
+        "cady-engineering-debugging",
+        "cady-engineering-independent-review",
+        "cady-engineering-integrations",
+        "cady-engineering-system-cycle"
+      ]
+    },
+    "qa": {
+      "label": "QA",
+      "family": "product",
+      "purpose": "Independently assesses quality, test evidence and release readiness",
+      "card": "cady-qa-method",
+      "skills": [
+        "cady-qa-stories",
+        "cady-qa-triage",
+        "cady-engineering-system-cycle"
+      ]
+    },
+    "orchestrator_finance": {
+      "label": "Finance orchestrator",
+      "family": "finance",
+      "purpose": "Runs the money motion: runway gates, closed books and funding started early",
+      "card": "cady-orchestrator-finance-method",
+      "skills": [
+        "cady-orchestrator-finance-motion-pass",
+        "cady-company-challenge",
+        "cady-company-decision-check"
+      ]
+    },
+    "finance": {
+      "label": "Finance",
+      "family": "finance",
+      "purpose": "Plans cash, budgets, purchases and commitments",
+      "card": "cady-finance-method",
+      "skills": [
+        "cady-finance-budget-review",
+        "cady-finance-runway",
+        "cady-finance-tax-cycle",
+        "cady-finance-vendor-spend-review",
+        "cady-accounting-period-close"
+      ]
+    },
+    "accounting": {
+      "label": "Accounting",
+      "family": "finance",
+      "purpose": "Keeps the books: ledgers, reconciliations and period close",
+      "card": "cady-accounting-method",
+      "skills": [
+        "cady-accounting-period-close"
+      ]
+    },
+    "fundraise": {
+      "label": "Fundraise",
+      "family": "finance",
+      "purpose": "Runs the fundraise: investor lists, materials and pipeline",
+      "card": "cady-fundraise-method",
+      "skills": [
+        "cady-fundraise-investor-list",
+        "cady-fundraise-investor-outreach",
+        "cady-fundraise-raise-materials",
+        "cady-fundraise-raise-plan"
+      ]
+    },
+    "orchestrator_operations": {
+      "label": "Operations orchestrator",
+      "family": "operations",
+      "purpose": "Runs the obligations: lead times, the cost of a miss and inbox commitments closed",
+      "card": "cady-orchestrator-operations-method",
+      "skills": [
+        "cady-orchestrator-operations-motion-pass",
+        "cady-company-challenge",
+        "cady-company-decision-check"
+      ]
+    },
+    "company_operations": {
+      "label": "Company Operations",
+      "family": "operations",
+      "purpose": "Runs company operations: filings, registers, compliance and records",
+      "card": "cady-company-operations-method",
+      "skills": [
+        "cady-company-operations-compliance-register",
+        "cady-company-operations-contract-checks",
+        "cady-company-operations-inbox-follow-through",
+        "cady-company-operations-people-lifecycle",
+        "cady-company-operations-requirement-register"
+      ]
+    }
+  },
+  "skills": {
+    "cady-company-decision-check": {
+      "shared": [
+        "decision-check-record.md"
+      ]
+    },
+    "cady-company-executive-review": {
+      "shared": [
+        "company-goals.md",
+        "executive-decision.md",
+        "executive-setup-advice.md",
+        "executive-weekly.md"
+      ]
+    },
+    "cady-company-manage-agents": {
+      "shared": [
+        "agent-hosts.md",
+        "agent-lifecycle.md",
+        "agent-stop.md",
+        "execution-agent-brief.md"
+      ]
+    },
+    "cady-company-operations-contract-checks": {
+      "shared": [
+        "contract-kinds.md"
+      ]
+    },
+    "cady-company-operations-inbox-follow-through": {
+      "shared": [
+        "inbox-follow-through-details.md",
+        "outreach-release.md"
+      ]
+    },
+    "cady-company-operations-people-lifecycle": {
+      "shared": [
+        "people-checklists.md"
+      ]
+    },
+    "cady-company-review": {
+      "shared": [
+        "company-goals.md"
+      ]
+    },
+    "cady-company-taste-review": {
+      "shared": [
+        "taste-check.md",
+        "taste-message.md",
+        "taste-post.md"
+      ]
+    },
+    "cady-company-voice-pack": {
+      "shared": [
+        "agent-stop.md",
+        "outreach-drafting.md",
+        "taste-check.md",
+        "taste-message.md",
+        "taste-post.md"
+      ]
+    },
+    "cady-core-execution": {
+      "shared": [
+        "agent-hosts.md"
+      ]
+    },
+    "cady-core-run-sequence": {
+      "shared": [
+        "agent-stop.md",
+        "company-goals.md"
+      ]
+    },
+    "cady-customer-success-lifecycle": {
+      "shared": [
+        "agent-stop.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-design-method": {
+      "shared": [
+        "quality-classes.md",
+        "taste-check.md"
+      ]
+    },
+    "cady-engineering-independent-review": {
+      "shared": [
+        "quality-classes.md"
+      ]
+    },
+    "cady-engineering-method": {
+      "shared": [
+        "quality-classes.md"
+      ]
+    },
+    "cady-engineering-system-cycle": {
+      "shared": [
+        "agent-hosts.md",
+        "engineering-cycle-dimensions.md",
+        "engineering-cycle-review.md",
+        "engineering-system-map.md",
+        "quality-classes.md"
+      ]
+    },
+    "cady-finance-vendor-spend-review": {
+      "shared": [
+        "vendor-purchase.md",
+        "vendor-renewal.md"
+      ]
+    },
+    "cady-fundraise-investor-outreach": {
+      "shared": [
+        "agent-stop.md",
+        "intro-request.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-check.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-fundraise-raise-materials": {
+      "shared": [
+        "agent-stop.md",
+        "outreach-drafting.md",
+        "taste-check.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-gtm-calls": {
+      "shared": [
+        "agent-stop.md",
+        "call-follow-up.md",
+        "call-prep.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-gtm-channel-plan": {
+      "shared": [
+        "agent-stop.md",
+        "execution-agent-brief.md",
+        "gtm-channels.md",
+        "outreach-release.md"
+      ]
+    },
+    "cady-gtm-cold-email-cycle": {
+      "shared": [
+        "agent-stop.md",
+        "cold-deliverability.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-gtm-events": {
+      "shared": [
+        "agent-stop.md",
+        "events-attend.md",
+        "events-host.md",
+        "intro-request.md",
+        "tam-map-import.md"
+      ]
+    },
+    "cady-gtm-launch": {
+      "shared": [
+        "outreach-release.md",
+        "tam-map-import.md"
+      ]
+    },
+    "cady-gtm-linkedin-message": {
+      "shared": [
+        "agent-stop.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-gtm-method": {
+      "shared": [
+        "company-goals.md",
+        "gtm-channels.md",
+        "outreach-release.md"
+      ]
+    },
+    "cady-gtm-pipeline-pass": {
+      "shared": [
+        "agent-stop.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-gtm-reply": {
+      "shared": [
+        "agent-stop.md",
+        "intro-request.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-gtm-tam-map": {
+      "shared": [
+        "tam-map-enrich.md",
+        "tam-map-import.md"
+      ]
+    },
+    "cady-gtm-warm-email": {
+      "shared": [
+        "agent-stop.md",
+        "intro-request.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    },
+    "cady-marketing-method": {
+      "shared": [
+        "agent-stop.md",
+        "gtm-channels.md",
+        "outreach-drafting.md",
+        "taste-message.md",
+        "taste-post.md"
+      ]
+    },
+    "cady-marketing-post": {
+      "shared": [
+        "agent-stop.md",
+        "outreach-drafting.md",
+        "taste-message.md",
+        "taste-post.md"
+      ]
+    },
+    "cady-orchestrator-goal-pass": {
+      "shared": [
+        "agent-hosts.md"
+      ]
+    },
+    "cady-product-customer-interview": {
+      "shared": [
+        "intro-request.md"
+      ]
+    },
+    "cady-product-manage": {
+      "shared": [
+        "company-goals.md",
+        "product-manage-detail.md",
+        "release-plan.md"
+      ]
+    },
+    "cady-product-method": {
+      "shared": [
+        "company-goals.md",
+        "quality-classes.md"
+      ]
+    },
+    "cady-product-research": {
+      "shared": [
+        "competitor-profile.md"
+      ]
+    },
+    "cady-qa-method": {
+      "shared": [
+        "models.md",
+        "quality-classes.md",
+        "taste-check.md"
+      ]
+    },
+    "cady-sales-deal-motion": {
+      "shared": [
+        "agent-stop.md",
+        "deal-motion-stages.md",
+        "outreach-drafting.md",
+        "outreach-release.md",
+        "taste-message.md"
+      ]
+    }
+  }
+}
