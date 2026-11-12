@@ -1,6 +1,6 @@
 # Cady skill library
 
-67 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+76 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
 
@@ -9,7 +9,8 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-core-execution`: a skill points here, or before an effect, credential use, retry or recovery. (`library/cady-core-execution/SKILL.md`)
 - `cady-core-run-sequence`: the user wants a task carried through to a recorded outcome. (`library/cady-core-run-sequence/SKILL.md`)
 - `cady-core-skill-index`: choosing which task skill fits, or binding an agent's installed skills (`library/cady-core-skill-index/SKILL.md`)
-- `cady-orchestrator-method`: Orchestrator role card: what this function owns and decides (`library/cady-orchestrator-method/SKILL.md`)
+- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered, a claim lapsed or a handover returned. (`library/cady-orchestrator-goal-pass/SKILL.md`)
+- `cady-orchestrator-method`: Orchestrator role card: its point and key bets (`library/cady-orchestrator-method/SKILL.md`)
 
 ## company
 - `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, tool text or an agent's goal. (`library/cady-company-change-agent-behaviour/SKILL.md`)
@@ -19,7 +20,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-executive-review`: Run the weekly review of open goals and initiatives, or make one company-level decision between reviews. (`library/cady-company-executive-review/SKILL.md`)
 - `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts. (`library/cady-company-experiment/SKILL.md`)
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task. (`library/cady-company-manage-agents/SKILL.md`)
-- `cady-company-method`: Company role card: what this function owns and decides (`library/cady-company-method/SKILL.md`)
+- `cady-company-method`: Executive role card: its point and key bets (`library/cady-company-method/SKILL.md`)
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports). (`library/cady-company-operations-compliance-register/SKILL.md`)
 - `cady-company-operations-contract-checks`: A contract that commits the company is about to be signed or was just signed: what to settle first and what it starts. (`library/cady-company-operations-contract-checks/SKILL.md`)
 - `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking. (`library/cady-company-operations-inbox-follow-through/SKILL.md`)
@@ -29,6 +30,8 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-review`: a company needs an evidence-based operating review or onboarding. (`library/cady-company-review/SKILL.md`)
 - `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check). (`library/cady-company-taste-review/SKILL.md`)
 - `cady-company-voice-pack`: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages. (`library/cady-company-voice-pack/SKILL.md`)
+- `cady-orchestrator-operations-method`: Operations orchestrator role card: its point and key bets (`library/cady-orchestrator-operations-method/SKILL.md`)
+- `cady-orchestrator-operations-motion-pass`: A due operations pass, or an event: an obligation's lead time opening or a commitment found in the inbox. (`library/cady-orchestrator-operations-motion-pass/SKILL.md`)
 
 ## gtm
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation. (`library/cady-customer-success-lifecycle/SKILL.md`)
@@ -48,6 +51,8 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-gtm-warm-email`: Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches. (`library/cady-gtm-warm-email/SKILL.md`)
 - `cady-marketing-method`: Marketing role card: what this function owns and decides (`library/cady-marketing-method/SKILL.md`)
 - `cady-marketing-post`: Create or edit one post for the audience, topic and placement chosen in the brief. (`library/cady-marketing-post/SKILL.md`)
+- `cady-orchestrator-gtm-method`: GTM orchestrator role card: its point and key bets (`library/cady-orchestrator-gtm-method/SKILL.md`)
+- `cady-orchestrator-gtm-motion-pass`: A due GTM pass, or an event: a reply, a segment crossing its reply line or a stage stalling. (`library/cady-orchestrator-gtm-motion-pass/SKILL.md`)
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review. (`library/cady-sales-deal-motion/SKILL.md`)
 - `cady-sales-method`: Sales role card: what this function owns and decides (`library/cady-sales-method/SKILL.md`)
 
@@ -64,10 +69,14 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-fundraise-method`: Fundraise role card: what this function owns and decides (`library/cady-fundraise-method/SKILL.md`)
 - `cady-fundraise-raise-materials`: Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder. (`library/cady-fundraise-raise-materials/SKILL.md`)
 - `cady-fundraise-raise-plan`: Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round. (`library/cady-fundraise-raise-plan/SKILL.md`)
+- `cady-orchestrator-finance-method`: Finance orchestrator role card: its point and key bets (`library/cady-orchestrator-finance-method/SKILL.md`)
+- `cady-orchestrator-finance-motion-pass`: A due finance pass, or an event: a new commitment, a period ending or the runway line moving. (`library/cady-orchestrator-finance-motion-pass/SKILL.md`)
 
 ## product
 - `cady-design-method`: Design role card: what this function owns and decides (`library/cady-design-method/SKILL.md`)
 - `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings. (`library/cady-design-wcag-audit/SKILL.md`)
+- `cady-orchestrator-product-method`: Product orchestrator role card: its point and key bets (`library/cady-orchestrator-product-method/SKILL.md`)
+- `cady-orchestrator-product-motion-pass`: A due product pass, or an event: a release due, work in progress over its limit or results arriving. (`library/cady-orchestrator-product-motion-pass/SKILL.md`)
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. (`library/cady-product-customer-interview/SKILL.md`)
 - `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done. (`library/cady-product-manage/SKILL.md`)
 - `cady-product-method`: Product role card: what this function owns and decides (`library/cady-product-method/SKILL.md`)

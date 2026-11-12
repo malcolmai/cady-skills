@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "242ba69a561062a373e2"
-  library: "57a7e884954115da"
+  version: "17cf6a5e41bebc242fe2"
+  library: "6501d292ae359b43"
   function: "customer_success"
 ---
 # Customer Success
@@ -20,6 +20,9 @@ metadata:
 - Check the customer actually got the promised outcome; usage, satisfaction, payment and renewal are proxies. Instead of: Read high usage or a renewal as proof of value.
 - A support note or CRM reply is not a fix; close a gap only when the owner's effect is verified. Instead of: Mark an issue handled once the customer has been answered.
 - Route a recurring or consequential failure to the owner who can change its cause: promise, product, delivery or terms. Instead of: Absorb failures account by account with goodwill gestures and check-ins.
+
+## Skills
+- `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.
 
 ## Parent function
 gtm

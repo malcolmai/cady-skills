@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "4a9ca29a2e3cd5686995"
-  library: "57a7e884954115da"
+  version: "ea2131d4e0165429e86d"
+  library: "6501d292ae359b43"
   function: "design"
 ---
 # Design
@@ -46,6 +46,9 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - lead
 - workhorse
 - vision
+
+## Skills
+- `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 
 ## Parent function
 product
