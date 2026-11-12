@@ -47,6 +47,13 @@ def atomic_write(path: Path, data: bytes) -> None:
         raise
 
 
+def well_formed_rel(rel: str) -> bool:
+    """True when rel is, as text, a relative path below dest: not empty, absolute or NUL, with no '.' or '..' part.
+    Links on the way are judged later, when a planned change is checked, and refused there."""
+    parts = Path(rel).parts if rel and "\0" not in rel else ()
+    return bool(parts) and not Path(rel).is_absolute() and not any(p in (".", "..") for p in parts)
+
+
 def inside(dest: Path, rel: str) -> Path:
     """dest/rel, refusing any path that would land outside dest (a lock or roster entry with .. or an absolute path)."""
     root = dest.resolve()
@@ -122,7 +129,7 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
     before: dict[str, str] = lock.get("files", {})
     history: dict[str, list[str]] = lock.get("history", {})
     ours_up: dict[str, str] = lock.get("upstreams", {})
-    report: dict = {"written": [], "kept": [], "removed": [], "left": [], "blocked": [], "beside": []}
+    report: dict = {"written": [], "kept": [], "removed": [], "left": [], "blocked": [], "beside": [], "ignored": []}
     plan: list[tuple[str, str, bytes | None]] = []
     after: dict[str, str] = {}
     upstreams: dict[str, str] = {}
@@ -135,6 +142,7 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
         up = rel + ".upstream"
         if rel in ours_up and read(up) == ours_up[rel]:
             plan.append(("unlink", up, None))
+            report["removed"].append(up)  # every deletion is counted, our own .upstream included
 
     for rel, data in sorted(files.items()):
         new = sha(data)
@@ -164,6 +172,9 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
         drop_our_upstream(rel)
     for rel, old in sorted(before.items()):
         if rel in files:
+            continue
+        if not well_formed_rel(rel):  # a lock entry that is not a path inside dest is ignored, never read or reported as yours
+            report["ignored"].append(rel)
             continue
         local = read(rel)
         if local is not None and local not in {old, *history.get(rel, [])}:
@@ -279,6 +290,8 @@ def main(argv: list[str] | None = None) -> int:
           + (f", {len(report['beside'])} .upstream written beside your edits" if report["beside"] else ""))
     for rel in report["kept"]:
         print(f"  kept your edit: {rel} (the new version is {rel}.upstream; merge it by hand, then delete it)")
+    for rel in report["ignored"]:
+        print(f"  ignored a lock entry outside {dest}: {rel!r}")
     for rel in report["blocked"]:
         print(f"  kept your edit: {rel} (the library changed it, but {rel}.upstream is yours, so the new text was not written)")
     for rel in report["left"]:
