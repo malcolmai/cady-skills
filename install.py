@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+import tempfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -30,6 +31,20 @@ LOCK = "cady-roster.lock.json"
 POINTER = re.compile(r" \(`\.\./([a-z0-9-]+)/SKILL\.md`\)")
 SAFE_NAME = re.compile(r"[a-z0-9][a-z0-9-]*")
 SAFE_REF = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.-]*\.md")
+
+
+def atomic_write(path: Path, data: bytes) -> None:
+    """Write a new file and swap it in, so a hard link elsewhere keeps its text and an interrupted run leaves no half file."""
+    fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".cady-tmp")  # a name no file holds yet
+    try:
+        mask = os.umask(0); os.umask(mask)
+        os.fchmod(fd, 0o666 & ~mask)  # the usual permissions for a new file, not mkstemp's owner-only ones
+        with os.fdopen(fd, "wb") as handle:
+            handle.write(data)
+        os.replace(tmp, path)
+    except BaseException:
+        Path(tmp).unlink(missing_ok=True)
+        raise
 
 
 def inside(dest: Path, rel: str) -> Path:
@@ -134,6 +149,8 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
             current = read(up)
             if current == new:
                 upstreams[rel] = new  # it already holds the library's text
+            elif current is None and before.get(rel) == new:
+                pass  # you merged and deleted it; the library has not changed since, so there is nothing new to put beside it
             elif current is None or (rel in ours_up and current == ours_up[rel]):
                 plan.append(("write", up, data))
                 upstreams[rel] = new
@@ -159,10 +176,14 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
     for _, rel, _ in plan:  # every path is checked before the first change, so a refusal leaves dest untouched
         inside(dest, rel)
         hop = dest
-        for part in Path(rel).parts:  # no folder or file on the way may be a link that leads out of dest
+        parts = Path(rel).parts
+        for i, part in enumerate(parts):  # no folder or file on the way may be a link, and each folder must be a folder
             hop = hop / part
             if hop.is_symlink():
                 raise SystemExit(f"install.py: refusing {rel!r}: {hop.relative_to(dest)} is a symlink")
+            last = i == len(parts) - 1
+            if hop.exists() and ((not last and not hop.is_dir()) or (last and not hop.is_file())):
+                raise SystemExit(f"install.py: refusing {rel!r}: {hop.relative_to(dest)} is in the way (move it, then run again)")
     # An .upstream the installer wrote earlier stays recorded as ours while it is still there unchanged.
     for rel, digest in ours_up.items():
         if rel not in upstreams and ("unlink", rel + ".upstream", None) not in plan and read(rel + ".upstream") == digest:
@@ -172,7 +193,7 @@ def sync(dest: Path, files: dict[str, bytes], lock: dict, dry: bool) -> dict:
             path = dest / rel
             if op == "write":  # (an .upstream write is counted in report["beside"])
                 path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_bytes(data)
+                atomic_write(path, data)
             else:
                 path.unlink()
                 for parent in path.parents:
@@ -207,12 +228,15 @@ def main(argv: list[str] | None = None) -> int:
         ap.error("--host is required (claude-code or codex)")
     dest = (args.dest or default_dest(args.host)).expanduser()
     lock_path = inside(dest, LOCK)
-    if lock_path.is_symlink():
-        ap.error(f"{lock_path} is a symlink; the lock must be a plain file inside {dest}")
+    if lock_path.is_symlink() or (lock_path.exists() and not lock_path.is_file()):
+        ap.error(f"{lock_path} must be a plain file inside {dest}; move it aside, then run again")
     try:
         lock = json.loads(lock_path.read_text()) if lock_path.is_file() else {}
-    except (json.JSONDecodeError, UnicodeDecodeError) as e:
+    except (OSError, ValueError) as e:
         ap.error(f"{lock_path} is not a readable lock ({e}); fix or remove it, then run again")
+    shape = {"files": dict, "history": dict, "upstreams": dict, "agents": list}
+    if not isinstance(lock, dict) or any(k in lock and not isinstance(lock[k], kind) for k, kind in shape.items()):
+        ap.error(f"{lock_path} is not a roster lock (expected an object with files, history and upstreams objects and an agents list); fix or remove it, then run again")
     if args.update and not lock:
         ap.error(f"no roster at {dest} ({LOCK} not found); run without --update to install, or pass --dest")
     if lock and lock.get("host") != args.host:
@@ -239,10 +263,10 @@ def main(argv: list[str] | None = None) -> int:
     report = sync(dest, desired(roster, args.host, agents), lock, args.dry_run)
     if not args.dry_run:
         dest.mkdir(parents=True, exist_ok=True)
-        lock_path.write_text(json.dumps({"schema": "cady.roster-lock.v1", "host": args.host, "library": roster["library"],
+        atomic_write(lock_path, (json.dumps({"schema": "cady.roster-lock.v1", "host": args.host, "library": roster["library"],
                                          "agents": agents,
                                          "files": report["files"], "history": report["history"],
-                                         "upstreams": report["upstreams"]}, indent=2) + "\n")
+                                         "upstreams": report["upstreams"]}, indent=2) + "\n").encode())
     verb = "would change" if args.dry_run else "changed"
     print(f"Cady roster for {args.host} at {dest}: {', '.join(agents)} (library {roster['library']['tag']})")
     print(f"  {verb}: {len(report['written'])} written, {len(report['removed'])} removed"
