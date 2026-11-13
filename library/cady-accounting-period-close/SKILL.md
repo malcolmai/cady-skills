@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.accounting.period_close"
   version: "7d213ed24e800d8b00e0"
-  library: "f444a98c7277b591"
+  library: "d7882682aac57260"
   function: "accounting"
 ---
 # Month-end and period close

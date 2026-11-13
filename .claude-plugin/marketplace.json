@@ -9,7 +9,7 @@
       "name": "cady",
       "source": "./plugins/cady",
       "description": "Cady's method library for company agents. Everything here relies on Cady and needs a Cady account.",
-      "version": "2026.11.12-f444a98c"
+      "version": "2026.11.13-d7882682"
     }
   ]
 }

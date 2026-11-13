@@ -52,6 +52,7 @@
 - **Status:** current
 - **Tier:** review
 - **Use cases:** key plans and independent reviews; most demanding coding and dense documents
+- **Api id:** gpt-6-astra
 - **Model:** GPT-6 Astra
 
 #### Plans
@@ -175,6 +176,7 @@
 #### Vision
 
 - **Input:** text, image
+- **Api id:** claude-sonnet-5-5
 - **Model:** Claude Sonnet 5.5
 
 #### Plans
@@ -219,6 +221,7 @@
 #### Vision
 
 - **Input:** text, image
+- **Api id:** claude-haiku-5-5
 - **Model:** Claude Haiku 5.5
 
 #### Plans
@@ -254,6 +257,7 @@
 | Checked | Url |
 |---|---|
 | 2026-11-04 | https://platform.claude.com/docs/en/about-claude/pricing |
+| 2026-11-13 | https://platform.claude.com/docs/en/about-claude/models/overview |
 
 - **Status:** current
 - **Tier:** exact-write
