@@ -43,7 +43,7 @@ git clone --depth 1 https://github.com/malcolmai/cady-skills "$HOME/.cady-skills
 python3 "$HOME/.cady-skills/install.py" --host claude-code
 ```
 
-`cady` adds the Cady MCP server and the front door skill. The last command copies, into this project's `.claude/`, the company system (the Executive and the orchestrator) and the core skills every agent reads. Once setup has designed your agents, adopt each one with `python3 "$HOME/.cady-skills/install.py" --host claude-code --add <agent>` (`--list` names them, `--stage <creator|bootstrap|deep_tech>` adds a stage's usual agents): it copies that agent's role card, its function's skills and the skills the card lists, and never overwrites a folder you already have. Only installed skills join the host's skill list.
+`cady` adds the Cady MCP server and the front door skill. The last command copies, into this project's `.claude/`, the company system (the Executive and the orchestrator) and the core skills every agent reads. Once setup has designed your agents, adopt each one with `python3 "$HOME/.cady-skills/install.py" --host claude-code --add <agent>` (`--list` names them): it copies that agent's role card, its function's skills and the skills the card lists, and never overwrites a folder you already have. Only installed skills join the host's skill list.
 
 **Codex**
 
@@ -53,7 +53,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex
 codex mcp add cady --url https://app.cadyworks.com/mcp && codex mcp login cady
 ```
 
-The install copies the front door, the company system (the Executive and the orchestrator) and the core skills into `${CODEX_HOME:-$HOME/.codex}/skills`; adopt each agent setup designs with `python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex --add <agent>` (`--list` names them, `--stage <creator|bootstrap|deep_tech>` adds a stage's usual agents). A folder you already have is never overwritten.
+The install copies the front door, the company system (the Executive and the orchestrator) and the core skills into `${CODEX_HOME:-$HOME/.codex}/skills`; adopt each agent setup designs with `python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex --add <agent>` (`--list` names them). A folder you already have is never overwritten.
 
 **claude.ai**
 

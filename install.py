@@ -6,7 +6,6 @@ core skills every agent reads. A folder you already have is never overwritten ("
 
   python3 install.py --list                                   # the agents this library holds
   python3 install.py --host claude-code --add gtm,marketing   # into ./.claude/skills
-  python3 install.py --host claude-code --stage creator       # the agents a creator usually starts with
   python3 install.py --host codex --add product               # into $CODEX_HOME/skills (default ~/.codex), front door included
   python3 install.py --host claude-code --remove marketing    # deletes only folders identical to the library's
 
@@ -48,7 +47,6 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--host", choices=("claude-code", "codex"))
     ap.add_argument("--dest", type=Path, help="where skills/ lives (default: ./.claude, or $CODEX_HOME for Codex)")
     ap.add_argument("--add", default="", help="comma-separated agents to adopt (see --list)")
-    ap.add_argument("--stage", choices=sorted(roster["stages"]), help="adopt that stage's usual agents")
     ap.add_argument("--remove", default="", help="comma-separated agents to remove (only folders identical to the library's)")
     ap.add_argument("--list", action="store_true", help="list the agents this library holds and exit")
     args = ap.parse_args(argv)
@@ -59,12 +57,12 @@ def main(argv: list[str] | None = None) -> int:
     if not args.host:
         ap.error("--host is required (claude-code or codex)")
     split = lambda s: [x.strip() for x in s.split(",") if x.strip()]
-    add, remove = split(args.add) + roster["stages"].get(args.stage, []), split(args.remove)
+    add, remove = split(args.add), split(args.remove)
     for key in add + remove:
         if key not in roster["agents"]:
             ap.error(f"unknown agent {key!r}; run --list")
     if add and remove:
-        ap.error("pass --add (or --stage) or --remove, not both")
+        ap.error("pass --add or --remove, not both")
     if [k for k in remove if k in roster["system"]]:
         ap.error("the company system (company, orchestrator) always runs and cannot be removed")
     dest = (args.dest or (Path(os.environ.get("CODEX_HOME") or Path.home() / ".codex") if args.host == "codex" else Path.cwd() / ".claude")).expanduser()

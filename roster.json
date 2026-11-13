@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "2a6a3e2e8610830f",
-    "version": "2a6a3e2e8610830f6ad4109bc701e30fca43227e67cb0f6db7027f7e248bad69"
+    "tag": "0b93eecfd4303f2c",
+    "version": "0b93eecfd4303f2c49b16c58f8229472f007e64ee08f53f08a5addaacf175a19"
   },
   "core": [
     "cady-core-context",
@@ -196,20 +196,5 @@
         "cady-company-operations-requirement-register"
       ]
     }
-  },
-  "stages": {
-    "creator": [
-      "marketing",
-      "gtm"
-    ],
-    "bootstrap": [
-      "product",
-      "gtm"
-    ],
-    "deep_tech": [
-      "product",
-      "finance",
-      "fundraise"
-    ]
   }
 }
