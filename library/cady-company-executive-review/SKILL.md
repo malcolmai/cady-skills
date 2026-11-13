@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "2b63099416ee4afb012f"
-  library: "b8e4e55055bf97b5"
+  version: "b1a70a8ecca25455e41b"
+  library: "f898539963d87619"
   function: "company"
 ---
 # Executive review
@@ -23,7 +23,7 @@ metadata:
 - Give the red-team subagent the frame and evidence, never your recommendation. Instead of: Ask a reviewer to check the decision you have reached.
 - End the pass in one instruction to the orchestrator listing every change the calls imply, each tied to its goal and the outcome it must reach, and do none of the work yourself. Instead of: File tasks under each function yourself and write their copy or steps, or hand next steps down as a recommendation.
 - Weigh each open initiative to a verdict each weekly review: start it as a goal, fold it into one, or decline it with the reason and a reopening trigger. Instead of: Leave a founder idea open until it seems timely, or add it as work without weighing it against the point and bets.
-- Each weekly review, check every current bet against the latest readings of the goals that test it; a contradicted bet is a bet_contradicted observation on its node. Instead of: Score goals and leave the bets unexamined.
+- Each weekly review, check every current bet against the latest readings of the goals that test it; a contradicted bet is an observation on its node. Instead of: Score goals and leave the bets unexamined.
 
 Run the weekly review of open goals and initiatives, or make one company-level decision between reviews.
 
@@ -48,7 +48,7 @@ Run the weekly review of open goals and initiatives, or make one company-level d
 
 ## Procedure
 
-1. Start with cady_start {loop: "outer"}: the goals due a call, the bets to check, the nodes to distil, the open handovers and the agents. Pick the pass. The weekly review is your scheduled weekly pass, or any pass where an open goal's callReasons include no_recent_call. In it, call every open goal (step 13), weigh every open initiative (step 14), score any decision whose reviewBy has passed (step 12), answer each open handover (step 15), check bets against readings (step 20), then hand the changes to the orchestrator (step 11). A goal kept as it is gets a persist call with its reading, so a weekly review never ends in 'goals stand'. Between reviews, take the one decision with the highest cost of delay (an open ask waiting on you, an escalation, a goal's other callReasons, a change of the root's or the product node's point or bets, an initiative the orchestrator raises, or material new evidence in cady_read changes) through steps 2-10; a goal call or initiative verdict runs steps 3-8 only when consequential or one-way. With none, end with 'goals stand' and write nothing.
+1. Start with cady_start {loop: "outer"}: the goals due a call, the bets to check, the open handovers and the agents. Pick the pass. The weekly review is your scheduled weekly pass, or any pass where an open goal's callReasons include no_recent_call. In it, call every open goal (step 13), weigh every open initiative (step 14), score any decision whose reviewBy has passed (step 12), answer each open handover (step 15), check bets against readings (step 20), then hand the changes to the orchestrator (step 11). A goal kept as it is gets a persist call with its reading, so a weekly review never ends in 'goals stand'. Between reviews, take the one decision with the highest cost of delay (an open ask waiting on you, an escalation, a goal's other callReasons, a change of the root's or the product node's point or bets, an initiative the orchestrator raises, or material new evidence in cady_read changes) through steps 2-10; a goal call or initiative verdict runs steps 3-8 only when consequential or one-way. With none, end with 'goals stand' and write nothing.
 2. Look it up first: cady_read decision:<subject> and the goal. If a current record exists, still holds (`cady-company-decision-check` step 1) and no trigger reopens it, use it and stop; never ask the person twice.
 3. Frame it: the decision in one sentence, the chain from the company goal to it (`cady-company-decision-check` step 3), why now, the cost of delay, one-way or two-way door, and who decides (`cady-company-decision-check` steps 3 and 4). A two-way door is decided now with a stated default; steps 4-8 are light for it. The decision reference holds steps 3-8 in full.
 4. Compare the strongest feasible alternative and the status quo; a binary choice is valid.
@@ -67,7 +67,7 @@ Run the weekly review of open goals and initiatives, or make one company-level d
 17. Advice run. When the orchestrator runs you with a question, answer in that run: a recommendation, its reasons and the strongest alternative. The setup_advice reference says when you record a point or bet change yourself.
 18. Loop drift. When an agent acts outside its loop (doing another holder's work, or redesigning what it should only run), flag it in the weekly review and record an observation on the methods node.
 19. Load and fit (weekly, where people carry a work profile): an allocation question, not a judgement of anyone; hand the work that should move to the orchestrator under step 11. The weekly reference holds the reads and the privacy rule.
-20. Bets against readings (weekly review only): for each current bet in your context (the root's bets and orchestrator.bets with its measure when served), compare it with the latest reading of the goals that test it. If a reading contradicts it, send work_set observations [{nodeKey, text, sourceRef, criticalClass: "bet_contradicted"}], nodeKey being the bet's node from orchestrator.bets (the root's key for a root bet). A bet with no reading is unknown: name the read that would get one. The result ends with the two lines of execution topic company_review close; its Next changes also go in the step 11 instruction, never filed by you.
+20. Bets against readings (weekly review only): for each current bet in your context (the root's bets and orchestrator.bets with its measure when served), compare it with the latest reading of the goals that test it. If a reading contradicts it, send work_set observations [{nodeKey, text, sourceRef}], nodeKey being the bet's node from orchestrator.bets (the root's key for a root bet). A bet with no reading is unknown: name the read that would get one. The result ends with the two lines of execution topic company_review close; its Next changes also go in the step 11 instruction, never filed by you.
 
 ## Acceptance
 
