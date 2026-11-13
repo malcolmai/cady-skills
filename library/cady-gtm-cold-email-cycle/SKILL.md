@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "082f15c5d70da3105d27"
-  library: "ff034891b009feeb"
+  version: "dcf0d0a328a00abaf2ec"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Cold email cycle
@@ -77,7 +77,7 @@ Write and send cold email to people not yet contacted, using one template per se
 
 - crm:outreach_review:<approvalId>
 - crm:outreach_cycle:<cycleKey>
-- **Transition:** the claim holder reports the review and cycle results for the brief’s author (channel strategy)
+- **Transition:** report the review and cycle results for the brief’s author (channel strategy)
 
 ## References
 - Read [Agent stop](references/agent-stop.md) when a stop condition arises.

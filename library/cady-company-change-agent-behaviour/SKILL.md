@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "6d3fe79c1a7bca800d43"
-  library: "ff034891b009feeb"
+  version: "a2ca40b9352dbbde9c0b"
+  library: "9774417a3b8911e8"
   function: "company"
 ---
 # Change agent behaviour
@@ -65,4 +65,4 @@ Change what agents do: edit a skill, role card, run sequence, tool text or an ag
 
 - decision:<change-id>
 - company:work:<workId>
-- **Transition:** the claim holder records the home, the evidence and the readback
+- **Transition:** record the home, the evidence and the readback

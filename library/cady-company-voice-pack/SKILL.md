@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
-  version: "abdbdf9b284dc8f13c85"
-  library: "ff034891b009feeb"
+  version: "0cb138542439eea5dcb5"
+  library: "9774417a3b8911e8"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
@@ -68,7 +68,7 @@ Owner sets up or refreshes how their messages sound, or drafts read generic. Bui
 ### Artifact refs
 
 - voice:me
-- **Transition:** the claim holder reports the result
+- **Transition:** report the result
 
 ## References
 - Read [Avoid and contrast](references/avoid-and-contrast.md) when writing the avoid lines or the with/without draft check.

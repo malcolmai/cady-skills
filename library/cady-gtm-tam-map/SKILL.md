@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "e35b83fa72fe6f9b54b4"
-  library: "ff034891b009feeb"
+  version: "3bb94bae0537520b306c"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # TAM map
@@ -78,7 +78,7 @@ Find who wants, where they gather: people, communities, prospects, leads, target
 ### Evidence refs
 
 - receipt:<receiptId>
-- **Transition:** the claim holder reports the map and coverage
+- **Transition:** report the map and coverage
 
 ## References
 - Read [TAM map enrichment, no-lookup and community cases](references/tam-map-enrich.md) when you enrich the cohort and record contact bases, have no way to look things up, or approach a community or institution.

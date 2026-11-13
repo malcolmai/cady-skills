@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "32ab9ffcdf6b749f3826"
-  library: "ff034891b009feeb"
+  version: "5e5b8e2387ca97d6cde9"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Offer and persona
@@ -65,4 +65,4 @@ Choose or revise the target persona, offer or message angle from evidence, befor
 ### Artifact refs
 
 - company:direction review
-- **Transition:** the claim holder reports the prepared revision
+- **Transition:** report the prepared revision

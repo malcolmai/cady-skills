@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "87a029b14d6da8cdf1cd"
-  library: "ff034891b009feeb"
+  version: "c66dec071b132cd25ae1"
+  library: "9774417a3b8911e8"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
@@ -83,7 +83,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 
 - company:work:<workId>
 - file:<fileId>
-- **Transition:** each motion's claim holder checkpoints its result on the cycle work item
+- **Transition:** each motion checkpoints its result on the cycle work item
 
 ## References
 - Read [Engineering cycle dimension register and research](references/engineering-cycle-dimensions.md) when you name, label or change the dimension register, or scan research for a differentiating dimension.
