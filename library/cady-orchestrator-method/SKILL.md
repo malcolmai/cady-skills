@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "b2f6a77ff010668ff902"
-  library: "ff034891b009feeb"
+  version: "ec22995d286868ab76e6"
+  library: "9774417a3b8911e8"
   function: "orchestrator"
 ---
 # Orchestrator
@@ -26,7 +26,7 @@ metadata:
 The inner loop across the families: you run the work; the Executive designs the system.
 
 ### Skills
-- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered, a claim lapsed or a handover returned.
+- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered or a handover returned.
 - `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 - `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.

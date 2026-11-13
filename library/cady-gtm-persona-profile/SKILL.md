@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.persona_profile"
-  version: "435035dde256a33df30d"
-  library: "ff034891b009feeb"
+  version: "9f33cfc4ab1fd5e72937"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Persona profile
@@ -64,4 +64,4 @@ Write or revise one persona's profile (customer, investor, partner or supplier) 
 ### Artifact refs
 
 - file:<profile>
-- **Transition:** the claim holder reports the profile File and its profile_ref
+- **Transition:** report the profile File and its profile_ref

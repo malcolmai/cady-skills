@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
-  version: "1d4cb2718f6c0ca2e7c2"
-  library: "ff034891b009feeb"
+  version: "4a01b8a0eab4f54052f0"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Channel plan
@@ -69,7 +69,7 @@ Turn accepted persona, offer and chosen channels into channel plays and executio
 
 - sourcing work item
 - channel execution agent and first work item refs
-- **Transition:** the claim holder reports the plan and hands execution agents to the orchestrator
+- **Transition:** report the plan and hand execution agents to the orchestrator
 
 ## References
 - Read [Execution agent brief](references/execution-agent-brief.md) when creating each channel agent and its first task.

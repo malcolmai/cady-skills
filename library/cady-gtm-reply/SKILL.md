@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "56b747962debbf5a7380"
-  library: "ff034891b009feeb"
+  version: "63b02aab46fd023494dd"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Reply in a live thread
@@ -86,7 +86,7 @@ Answer an inbound reply in a live thread: a question, interest, objection, refer
 ### Artifact refs
 
 - crm:outreach_review:<approvalId>
-- **Transition:** the claim holder reports the result
+- **Transition:** report the result
 
 ## References
 - Read [Agent stop](references/agent-stop.md) when before acting and whenever a stop condition arises.

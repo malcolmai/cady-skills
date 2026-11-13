@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
-  version: "c5bd80cbdc158f3c92ab"
-  library: "ff034891b009feeb"
+  version: "51789d93f8cf6b2aa717"
+  library: "9774417a3b8911e8"
   function: "company"
 ---
 # Pre-registered experiment
@@ -63,4 +63,4 @@ Test the riskiest assumption with a pre-registered experiment and a decision rul
 
 - company:work:<workId>
 - file:<fileId>
-- **Transition:** the claim holder records the outcome decision; the decision it triggers is handed on
+- **Transition:** record the outcome decision; the decision it triggers is handed on

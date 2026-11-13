@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "73bccd217ceeb278bd96"
-  library: "ff034891b009feeb"
+  version: "dad5c31ad4a76367195e"
+  library: "9774417a3b8911e8"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
@@ -44,7 +44,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 
 ## Procedure
 
-1. Claim this work item with work_set {id, status: working}; if someone else holds it, stop and report the holder. Start one with work_set {kind: task} if none covers this opportunity.
+1. If no work item covers this opportunity, start one with work_set {kind: task}.
 2. Read the deal: cady_read party:<partyId>, its customer track via crm_read mode stages, crm_activities_read mode interactions, and earlier checkpoints with work_read. Find the step below the deal is at and start there; skip what is done.
 3. Discovery call (sheet and record: `cady-gtm-calls`). The aim is to learn whether a problem worth solving now exists, not to pitch: open with an upfront contract, let the buyer talk most, and end with a dated next step. The stages reference holds the questions.
 4. Qualify lightly with four questions, each answered from the buyer's words or marked unknown: problem, priority, power, path. Never fill unknowns by inference; enthusiasm, a demo request or a trial sign-up is a signal, not qualification. No problem, owner or timing: close it with crm_interactions_set: an interaction with motion customer and stage lost, its note the reason, and due the re-contact date when there is one. A fast no is a good result.
@@ -81,7 +81,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 - file:<fileId>
 - crm:interaction:<interactionId>
 - company:work:<workId>
-- **Transition:** the claim holder reports the deal step, track readback and next action
+- **Transition:** report the deal step, track readback and next action
 
 ## References
 - Read [Outreach drafting](references/outreach-drafting.md) when preparing customer message copy.

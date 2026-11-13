@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "7f142c7bccfe90686f9c"
-  library: "ff034891b009feeb"
+  version: "d6d731ebea9bf442615d"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Social direct message
@@ -73,7 +73,7 @@ Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
 ### Artifact refs
 
 - crm:outreach_review:<approvalId>
-- **Transition:** the claim holder reports the prepared review
+- **Transition:** report the prepared review
 
 ## References
 - Read [Agent stop](references/agent-stop.md) when recognising and reporting a stop.

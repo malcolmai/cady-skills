@@ -1,12 +1,12 @@
 ---
 name: "cady-orchestrator-goal-pass"
-description: "Orchestrate the company. Use when: A due orchestrator pass, or an event: a run finished, an ask was answered, a claim lapsed or a handover returned. Not for: Function work, a family's own motion where that family has an orchestrator, or redesigning an agent (the Executive's)."
+description: "Orchestrate the company. Use when: A due orchestrator pass, or an event: a run finished, an ask was answered or a handover returned. Not for: Function work, a family's own motion where that family has an orchestrator, or redesigning an agent (the Executive's)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.goal_pass"
-  version: "f4abc9ac1e7c32839d9b"
-  library: "ff034891b009feeb"
+  version: "40edbcaacb6de000403b"
+  library: "9774417a3b8911e8"
   function: "orchestrator"
 ---
 # Orchestrate the company
@@ -18,7 +18,7 @@ metadata:
 **Bets** (where this differs from the default):
 - Judge a goal by its reading over its window, not by the activity of the agents serving it. Instead of: Counting runs, tasks or messages as progress.
 
-A due orchestrator pass, or an event: a run finished, an ask was answered, a claim lapsed or a handover returned.
+A due orchestrator pass, or an event: a run finished, an ask was answered or a handover returned.
 
 **Not for:** Function work, a family's own motion where that family has an orchestrator, or redesigning an agent (the Executive's).
 
@@ -29,7 +29,7 @@ A due orchestrator pass, or an event: a run finished, an ask was answered, a cla
 ### Evidence refs
 
 - the company's open goals with their readings
-- open, blocked and unheld work and lapsed claims
+- open and blocked work
 - runs and answered asks since the last pass
 - each family orchestrator's last pass
 
@@ -40,7 +40,7 @@ A due orchestrator pass, or an event: a run finished, an ask was answered, a cla
 
 ## Procedure
 
-1. Read the open goals with their readings, open, blocked and unheld work, lapsed claims, answered asks, the runs since the last pass, and each family orchestrator's last pass. Run once per host and slot; a re-run is a no-op, and if another process holds the host-review claim, stop. Keep this host's Cady connection and agents healthy: needed tools callable, each bound scheduled task read back and matching its agent. Widening your own permissions or the host's tool access is the owner's approval, never self-granted.
+1. Read the open goals with their readings, open and blocked work, answered asks, the runs since the last pass, and each family orchestrator's last pass. Run once per host and slot; a re-run is a no-op. Keep this host's Cady connection and agents healthy: needed tools callable, each bound scheduled task read back and matching its agent. Widening your own permissions or the host's tool access is the owner's approval, never self-granted.
 2. Mark each goal moving, stalled or at risk from its reading and its results in its window; activity alone is not movement. Read each result one level down with `cady-company-challenge` (a family orchestrator's pass, or an agent's where its family has none), and count each 'live', 'released' or 'done' claim with no readback in the transcript as unsupported. Evidence: host transcripts, run records, receipts, artifacts; cite host:transcript:<lowercase uuid>, never bodies; a missing transcript means unknown, not healthy. A trend needs two comparable windows. A completed run is not a reported result.
 3. Each tick, route stalled goals yourself: file the missing task under the goal's owning function; if no agent serves it, hand the gap to the Executive, which designs one, and raise the owner's one selection ask (it adds cost). An answered ask with routeTo: check that agent's task and goal show the answer and correct a next action or reading it voids; never re-ask or work it. An answered ask a person filed has routeTo from its area: route it the same way; with no routeTo, file the task under the owning function. Each attention item that needs a person (go-live, not a pause) gets one Needs-you ask (decides attention:<your id>-<agent id>-<reason>); set up schedules yourself. A no-work report is refused while such an item has no ask.
 4. Allocate work to the holder who fits: a person or an agent, chosen by role, free capacity and any strengths visible to you (a person's own and admins' reads only; never ask for or infer one you cannot see), never ranked or scored. Give a person a top-level brief (outcome, why it matters, constraints, deadline, done when) and no steps, and let the proposed date stand unless you have reason to change it; a warning that a date overruns their capacity is a steer to agree another date or split the work, never a refusal. Check in once, at about half the time to the deadline, only if the task has had no update; after that, raise at-risk on the deadline to whoever assigned it. Never chase a person by message. This applies where people carry a work profile; otherwise allocate among agents.

@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
   version: "ea4bce29d89da7aab6f2"
-  library: "ff034891b009feeb"
+  library: "9774417a3b8911e8"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion

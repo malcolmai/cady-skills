@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "be408c78d721219af2e0"
-  library: "ff034891b009feeb"
+  version: "7989227ad03e73f3d769"
+  library: "9774417a3b8911e8"
   function: "fundraise"
 ---
 # Ranked investor list
@@ -69,4 +69,4 @@ Decide who to pitch for a round: a ranked list of named investors and partners, 
 ### Evidence refs
 
 - receipt:<receiptId>
-- **Transition:** the claim holder reports the result
+- **Transition:** report the result

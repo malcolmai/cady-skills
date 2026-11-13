@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.marketing.post"
-  version: "c376fc5973b429bb3d0d"
-  library: "ff034891b009feeb"
+  version: "9af70ae8b2cfbe20f8f3"
+  library: "9774417a3b8911e8"
   function: "marketing"
 ---
 # Post one piece
@@ -75,7 +75,7 @@ Create or edit one post for the audience, topic and placement chosen in the brie
 - company:work:<workId>
 - file:<fileId>
 - channel receipt or post id
-- **Transition:** the claim holder reports the held post or publication and receipt
+- **Transition:** report the held post or publication and receipt
 
 ## References
 - Read [Agent stop](references/agent-stop.md) when before acting and whenever a stop condition arises.

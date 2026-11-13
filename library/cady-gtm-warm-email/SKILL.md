@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "f1431b6cd62a50b60d4f"
-  library: "ff034891b009feeb"
+  version: "3d4d2a6e88d445befb0b"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Warm email and follow-ups
@@ -75,7 +75,7 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 
 - crm:outreach_review:<approvalId>
 - crm:relationship_track:<trackId>
-- **Transition:** the claim holder reports prepared reviews and track updates
+- **Transition:** report prepared reviews and track updates
 
 ## References
 - Read [Warm email copy](references/warm-email-copy.md) when drafting a warm email or click nudge.

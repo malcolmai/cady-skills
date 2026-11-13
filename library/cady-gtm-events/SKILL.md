@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "242d2f65f42915acfcae"
-  library: "ff034891b009feeb"
+  version: "d2731b2a90aac9370989"
+  library: "9774417a3b8911e8"
   function: "gtm"
 ---
 # Events: attend or host
@@ -45,7 +45,7 @@ Prepare for or host the event named in the brief to advance the company through 
 
 ## Procedure
 
-1. Claim the event work item with work_set {id, status: working}; read the brief and its refs. Follow its event, mode and conversation target; if any is missing, stop and report.
+1. Read the event work item's brief and its refs. Follow its event, mode and conversation target; if any is missing, stop and report.
 2. Follow `references/events-attend.md` when attending or `references/events-host.md` when hosting; for a host cohort use `references/intro-request.md` where useful. The event platform remains the RSVP source of truth.
 3. Persist source-backed eligible speakers, attendees, co-hosts and guests in the brief's CRM List through the reviewed import (`references/tam-map-import.md`); read completion and actual membership. Report researched, saved and member counts separately and make shortfalls explicit.
 4. After the event, record each actual one-to-one meeting with crm_interactions_set as interaction kind meeting, or substantive conversation as kind event_conversation, with occurredAt and sourceRef the event platform ID or event slug plus date. Directory presence alone is not intent: listed attendees stay cold and the attendee List is never bulk-messaged.
@@ -79,7 +79,7 @@ Prepare for or host the event named in the brief to advance the company through 
 ### Evidence refs
 
 - receipt:<importCompletionReceiptId> when a CRM List is promised
-- **Transition:** the claim holder reports preparation and, after the event, learning
+- **Transition:** report preparation and, after the event, learning
 
 ## References
 - Read [Agent stop](references/agent-stop.md) when before acting and whenever a stop condition arises.

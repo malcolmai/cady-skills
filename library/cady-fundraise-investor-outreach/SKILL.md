@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "99014ef694f0804464e5"
-  library: "ff034891b009feeb"
+  version: "c114ddc8e1d7b6665f8c"
+  library: "9774417a3b8911e8"
   function: "fundraise"
 ---
 # Investor outreach and updates
@@ -70,7 +70,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 
 - crm:outreach_review:<approvalId>
 - crm:party:<partyId>
-- **Transition:** the claim holder reports prepared reviews and track updates
+- **Transition:** report prepared reviews and track updates
 
 ## References
 - Read [Introduction request](references/intro-request.md) when you ask for a warm introduction.

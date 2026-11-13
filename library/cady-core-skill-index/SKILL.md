@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "f407fff73ac116c45b86"
-  library: "ff034891b009feeb"
+  version: "07c3c62686e61163cbb3"
+  library: "9774417a3b8911e8"
   function: "core"
 ---
 # Skill index
@@ -27,7 +27,7 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 - `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 - `cady-company-voice-pack`: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
-- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered, a claim lapsed or a handover returned.
+- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered or a handover returned.
 
 ## gtm
 
