@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "ec949788b5766c63bca6"
-  library: "672018f0ca0380ad"
+  version: "d90acd7333edd57ebb2a"
+  library: "ff034891b009feeb"
   function: "company"
 ---
 # Manage company agents

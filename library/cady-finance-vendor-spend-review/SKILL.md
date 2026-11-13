@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
   version: "5c47864c69e955cf9ecb"
-  library: "672018f0ca0380ad"
+  library: "ff034891b009feeb"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal

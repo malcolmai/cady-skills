@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-13T00:00:00Z",
   "bundle": {
-    "tag": "672018f0ca0380ad",
-    "version": "672018f0ca0380adef2228ae806f8553ba38054a50f4e62d4892be4e9460652d",
-    "pluginVersion": "2026.11.13-672018f0"
+    "tag": "ff034891b009feeb",
+    "version": "ff034891b009feeb738d719e0e16e7a06829dc1d7064635f5a2f1cb5b7a66d16",
+    "pluginVersion": "2026.11.13-ff034891"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.13-672018f0"
+    "version": "2026.11.13-ff034891"
   },
   "skills": [
     {
@@ -75,7 +75,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "ec949788b5766c63bca6"
+      "version": "d90acd7333edd57ebb2a"
     },
     {
       "name": "cady-company-method",
