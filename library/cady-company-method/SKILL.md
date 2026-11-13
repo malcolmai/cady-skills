@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "2769274229c22e639354"
-  library: "04d8d277d668b7e6"
+  version: "c99610943ce24fc46edc"
+  library: "b8e4e55055bf97b5"
   function: "company"
 ---
 # Executive
 
-**Point:** Set the best direction, then design and iteratively improve the system that pursues it: agents, humans and collaboration.
+**Point:** Set the best point and bets, then design and iteratively improve the system that pursues it: agents, humans and collaboration.
 
 **Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 

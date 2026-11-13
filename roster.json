@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "04d8d277d668b7e6",
-    "version": "04d8d277d668b7e6414461f379a099298a82de7c392b35eabe53908f82b5a695"
+    "tag": "b8e4e55055bf97b5",
+    "version": "b8e4e55055bf97b5dd7b1c1b1b3c9466ab1df6e774d151bdc7afd59d986ee03c"
   },
   "core": [
     "cady-core-context",
@@ -41,20 +41,13 @@
       "purpose": "Keeps every goal moving across the families: progress, conflicts by point, allocation and pausing",
       "card": "cady-orchestrator-method",
       "skills": [
+        "cady-orchestrator-finance-motion-pass",
         "cady-orchestrator-goal-pass",
+        "cady-orchestrator-gtm-motion-pass",
+        "cady-orchestrator-operations-motion-pass",
+        "cady-orchestrator-product-motion-pass",
         "cady-company-challenge",
         "cady-company-manage-agents",
-        "cady-company-decision-check"
-      ]
-    },
-    "orchestrator_gtm": {
-      "label": "GTM orchestrator",
-      "family": "gtm",
-      "purpose": "Runs the go-to-market motion: evidence gates, the weakest funnel stage and replies first",
-      "card": "cady-orchestrator-gtm-method",
-      "skills": [
-        "cady-orchestrator-gtm-motion-pass",
-        "cady-company-challenge",
         "cady-company-decision-check"
       ]
     },
@@ -110,17 +103,6 @@
         "cady-customer-success-lifecycle"
       ]
     },
-    "orchestrator_product": {
-      "label": "Product orchestrator",
-      "family": "product",
-      "purpose": "Runs the product loop: learning goals, work in progress and releases read back into discovery",
-      "card": "cady-orchestrator-product-method",
-      "skills": [
-        "cady-orchestrator-product-motion-pass",
-        "cady-company-challenge",
-        "cady-company-decision-check"
-      ]
-    },
     "product": {
       "label": "Product",
       "family": "product",
@@ -168,17 +150,6 @@
         "cady-engineering-system-cycle"
       ]
     },
-    "orchestrator_finance": {
-      "label": "Finance orchestrator",
-      "family": "finance",
-      "purpose": "Runs the money motion: runway gates, closed books and funding started early",
-      "card": "cady-orchestrator-finance-method",
-      "skills": [
-        "cady-orchestrator-finance-motion-pass",
-        "cady-company-challenge",
-        "cady-company-decision-check"
-      ]
-    },
     "finance": {
       "label": "Finance",
       "family": "finance",
@@ -211,17 +182,6 @@
         "cady-fundraise-investor-outreach",
         "cady-fundraise-raise-materials",
         "cady-fundraise-raise-plan"
-      ]
-    },
-    "orchestrator_operations": {
-      "label": "Operations orchestrator",
-      "family": "operations",
-      "purpose": "Runs the obligations: lead times, the cost of a miss and inbox commitments closed",
-      "card": "cady-orchestrator-operations-method",
-      "skills": [
-        "cady-orchestrator-operations-motion-pass",
-        "cady-company-challenge",
-        "cady-company-decision-check"
       ]
     },
     "company_operations": {

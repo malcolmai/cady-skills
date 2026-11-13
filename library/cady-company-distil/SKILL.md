@@ -1,15 +1,15 @@
 ---
 name: "cady-company-distil"
-description: "Distil the concern tree. Use when: A due distil task names a node whose critical observations are waiting on the outer loop. Not for: Doing the work that produced the observation, or the company review that owns direction (`cady-company-executive-review`)."
+description: "Distil the company tree. Use when: A due distil task names a node whose critical observations are waiting on the outer loop. Not for: Doing the work that produced the observation, or the company review that owns the root's point and bets (`cady-company-executive-review`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.distil"
-  version: "63d02cf2ca63c9a5b492"
-  library: "04d8d277d668b7e6"
+  version: "b1ed99711b37fc3ebe7d"
+  library: "b8e4e55055bf97b5"
   function: "company"
 ---
-# Distil the concern tree
+# Distil the company tree
 
 **Point:** Turn what the work observed into the node's next point, bet or choice, once, under its authority.
 
@@ -20,7 +20,7 @@ metadata:
 
 A due distil task names a node whose critical observations are waiting on the outer loop.
 
-**Not for:** Doing the work that produced the observation, or the company review that owns direction (`cady-company-executive-review`).
+**Not for:** Doing the work that produced the observation, or the company review that owns the root's point and bets (`cady-company-executive-review`).
 
 **Unit of work:** one node's due observations. **Kind:** strategy. **Parallel:** no. 
 

@@ -22,7 +22,7 @@ Run your whole company across Claude and ChatGPT. These are the skills your agen
 
 Cady is your agent orchestrator. Connect your Claude Code, Codex, Claude or ChatGPT account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
 
-This repository is Cady's **method library**: 77 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
+This repository is Cady's **method library**: 73 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
 
 ## How it works
 
@@ -71,7 +71,7 @@ claude plugin marketplace update cady && claude plugin update cady@cady && git -
 
 Then: Restart Claude Code.
 
-On a host with a shell and the Cady CLI, run `cady usage read --host claude-code --session <current session when known> --started-at <run start ISO>` at close and report usage only when `cady usage read` exits 0; otherwise omit run.usage. Never reconstruct missing usage.
+On a host with a shell and the Cady CLI, usage reaches Cady one way, through the CLI (`cady sync`, also offered at `cady login`); never report or reconstruct usage in a run.
 
 **Codex**
 
@@ -81,7 +81,7 @@ git -C "${CODEX_HOME:-$HOME/.codex}/cady-skills" pull --ff-only
 
 Then: Start a new Codex session.
 
-On a host with a shell and the Cady CLI, run `cady usage read --host codex --session <current session when known> --started-at <run start ISO>` at close and report usage only when `cady usage read` exits 0; otherwise omit run.usage. Never reconstruct missing usage.
+On a host with a shell and the Cady CLI, usage reaches Cady one way, through the CLI (`cady sync`, also offered at `cady login`); never report or reconstruct usage in a run.
 
 **claude.ai**
 

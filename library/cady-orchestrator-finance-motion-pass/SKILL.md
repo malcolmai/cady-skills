@@ -4,10 +4,10 @@ description: "Orchestrate finance. Use when: A due finance pass, or an event: a 
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
-  cady-id: "skill.orchestrator_finance.motion_pass"
-  version: "ce692f52c7403a5fbf83"
-  library: "04d8d277d668b7e6"
-  function: "orchestrator_finance"
+  cady-id: "skill.orchestrator.finance_motion_pass"
+  version: "f09922f6190340fc4961"
+  library: "b8e4e55055bf97b5"
+  function: "orchestrator"
 ---
 # Orchestrate finance
 

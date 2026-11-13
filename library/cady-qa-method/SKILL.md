@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "7ca0247fb30e55b35b0f"
-  library: "04d8d277d668b7e6"
+  version: "b21e6d41243c1c099054"
+  library: "b8e4e55055bf97b5"
   function: "qa"
 ---
 # QA
@@ -34,7 +34,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 - Review changes and security independently: the reviewer is never the producer, at least a separate subagent. Small changes are approved by an agent that did not produce them. Follow the project's review and summary rules from its project files (size thresholds, summary for the decision owner, review rounds). The reviewer writes its ranked findings where the requester reads them.
 
 ### Decides
-- Read the company's recorded stage and release policy; never assume either. Gate the critical paths the policy names; with no policy, recommend one to its owner and treat a failing critical-path test as blocking until it is decided; where the policy names who deploys, hand them the prepared release as one ask. The stage sets the emphasis. Pre-launch: assume the product has never fully worked and judge spend by what it teaches; a company is live at its first planned outside exposure (a public launch, open sign-up or an outside user), not at first payment, and before it, walk its first-value journey on the deployed product. Live without paying users: check the paths users take, protect first impressions to the owner's exposure bar and show the owner the cost of waiting. Paying users: keep preparation fast, strengthen checks before customer release and judge spend on return. Scale: strengthen assurance and efficiency.
+- Read the company's recorded stage and release policy; never assume either. Gate the critical paths the policy names; with no policy, recommend one to its owner and treat a failing critical-path test as blocking until it is decided; where the policy names who deploys, hand them the prepared release as one ask. The stage sets the emphasis. Pre-fit: assume the product has never fully worked and judge spend by what it teaches; a company is live at its first planned outside exposure (a public launch, open sign-up or an outside user), not at first payment, and before it, walk its first-value journey on the deployed product. Live: check the paths users take, protect first impressions to the owner's exposure bar and show the owner the cost of waiting. Paying: keep preparation fast, strengthen checks before customer release and judge spend on return. Scale: strengthen assurance and efficiency.
 - When planning or reviewing a material software change, read `references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Find issues with the vision tier. Make QA decisions yourself, take product questions to the PM, and hand agreed fixes to workhorse writers.
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.

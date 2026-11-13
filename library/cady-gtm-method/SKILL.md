@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "ad1ec9f7cc10314c62db"
-  library: "04d8d277d668b7e6"
+  version: "c3b8a7ac314c638fabda"
+  library: "b8e4e55055bf97b5"
   function: "gtm"
 ---
 # GTM
@@ -20,14 +20,14 @@ metadata:
 - Start from what the customer does, says and pays for now, in their own words; the company's description of itself is not evidence about them. Instead of: Start from the product's features and the founder's pitch, then look for people who might want it.
 - Split into several narrow personas, each with a message that reads as written to every person in it. Instead of: Choose one broad ICP so the list is big enough to matter.
 - When a funnel stage underperforms, change who we target or what we say, not how many we send. Instead of: Raise volume or add a channel when replies are low.
-- Treat under about 20 exposures or a single reply as direction only; weak response may be an exposure or execution gap. Instead of: Drop a segment after one quiet batch, or double down after one enthusiastic reply.
-- Direction and execution have separate homes. Instead of: Plan channels, prepare recipients and execute inside the GTM function card.
-- Direction outranks this card when they conflict. Instead of: Let the function card override the company’s recorded direction.
+- Treat under about 20 exposures or a single reply as a directional signal only; weak response may be an exposure or execution gap. Instead of: Drop a segment after one quiet batch, or double down after one enthusiastic reply.
+- The company tree and execution have separate homes. Instead of: Plan channels, prepare recipients and execute inside the GTM function card.
+- The root's point and bets outrank this card when they conflict. Instead of: Let the function card override the root's recorded point and bets.
 
 ## Role card
 
 ### Framing
-Find the right persona and the offer and messaging for them; choose channels that serve them and the goal. Direction (company:direction) decides any conflict with this card.
+Find the right persona and the offer and messaging for them; choose channels that serve them and the goal. The root's point and bets decide any conflict with this card.
 
 ### Owns
 - The pipeline from target list to calls and customers, run through the gtm skills.
@@ -46,7 +46,7 @@ Find the right persona and the offer and messaging for them; choose channels tha
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
-- direction and bets
+- root point and bets
 - CRM lists, parties and interactions
 - standing approvals and reviews
 

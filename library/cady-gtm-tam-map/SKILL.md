@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "3bb94bae0537520b306c"
-  library: "04d8d277d668b7e6"
+  version: "6b5a1e3a2bd745420554"
+  library: "b8e4e55055bf97b5"
   function: "gtm"
 ---
 # TAM map
@@ -33,7 +33,7 @@ Find who wants, where they gather: people, communities, prospects, leads, target
 
 ### Evidence refs
 
-- core:direction ref
+- root node ref (point and bets)
 - source refs
 
 ### Work fields
@@ -46,7 +46,7 @@ Find who wants, where they gather: people, communities, prospects, leads, target
 
 ## Procedure
 
-1. Read cady_read company:direction and CRM Lists with crm_read mode lists. Use the accepted ICP or current persona assumption, and drop accounts its disqualifiers exclude. Every prospect must clearly fit the persona. Prefer several narrow personas (they may overlap when prospecting) to one broad persona with a weakly fitting offer. Fit to the persona gates; sourced signs of its trigger (`cady-gtm-persona-profile` part 4) rank. Recorded customer evidence or a current company decision governs breadth. Before sourcing, reuse or update this work item's brief and brief.doneWhen with the GTM owner's planning N, identity type (people or organisations), source and channel coverage, deduplication, import completion receipt, actual List membership readback and honest shortfall. For a first motion, 150-300 people is a sensible target, fewer for highly specialised industries. For an established motion, the more the better: cover as much of the market as you can. Keep it independent of mailbox setup, send quota, grant capacity and contact eligibility. Measures are evidence, never targets.
+1. Read the root's point and bets (cady_start carries them on its governing chain) and CRM Lists with crm_read mode lists. Use the accepted ICP or current persona assumption, and drop accounts its disqualifiers exclude. Every prospect must clearly fit the persona. Prefer several narrow personas (they may overlap when prospecting) to one broad persona with a weakly fitting offer. Fit to the persona gates; sourced signs of its trigger (`cady-gtm-persona-profile` part 4) rank. Recorded customer evidence or a current company decision governs breadth. Before sourcing, reuse or update this work item's brief and brief.doneWhen with the GTM owner's planning N, identity type (people or organisations), source and channel coverage, deduplication, import completion receipt, actual List membership readback and honest shortfall. For a first motion, 150-300 people is a sensible target, fewer for highly specialised industries. For an established motion, the more the better: cover as much of the market as you can. Keep it independent of mailbox setup, send quota, grant capacity and contact eligibility. Measures are evidence, never targets.
 2. Build named identities toward the existing brief's planning N, counting its people or organisation identity type. For short lists (about 30-50 people or fewer), source by hand without automation. For longer lists, set the strategy, check a few named identities by hand across source types for fit, reachable routes and extraction reliability, then build a bounded, resumable collector with deduplication, saved failures and progress. Give each account its identity source (an http(s) URL, a Cady file as file:<fileId> or a Cady list as crm:list:<listId>), a named person or role with a reachable public route, and an explicit "unknown" for every field you cannot source. General knowledge is an assumption to source, not a list: a name you cannot source stays out of the CRM and goes in the sourcing plan. Give each account a one-line reason, in words, why it is in (fits the profile) or out, or mark it unknown. Distinguish sourced facts from inference; a row with an unconfirmed or stale role stays a Candidate without a fit reason, outside N and in the shortfall. For a people outcome, count individually sourced people, not organisations, roles or a directory's total members; report reachable people and unknown routes separately. N counts source-backed identities, independently of contact eligibility or send capacity; deduplicate before counting and do not pad to meet N. A shortfall against N first widens the sources and criteria within the persona and ICP, then reports; the report is an input to the goal call, not a stop.
 3. With no way to look things up (no web search and no source files), the first result is the persona and sourcing plan: the criteria, where its names will come from and who will fetch them. It lists no company or person names. Report it as the work result and ask once for the sources or the owner's export, stating your default for everything else. The enrich reference holds the rest.
 4. A community or institution you would approach is a sourced organisation party, typed community or institution; its staff are the contact point, and its members are reached only when each is individually reachable and permitted. The enrich reference holds the rest.

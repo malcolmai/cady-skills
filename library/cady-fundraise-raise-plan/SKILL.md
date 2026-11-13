@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "3c8dd6a3fbfbc0c5f7f9"
-  library: "04d8d277d668b7e6"
+  version: "f80e637485db45e3d11d"
+  library: "b8e4e55055bf97b5"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
@@ -48,7 +48,7 @@ Decide whether, when and how much to raise (SAFE, note or priced round), model d
 
 ## Procedure
 
-1. Read cady_read company:direction and the runway view from `cady-finance-runway`.
+1. Read the root's point and bets (cady_start carries them on its governing chain) and the runway view from `cady-finance-runway`.
 2. Whether and how much. Name the milestone that makes the next round or profitability possible (revenue level, retention, a shipped product) and the months to reach it. Default amount: planned net burn to that milestone plus 6 months of buffer, usually 18 to 24 months of runway. Compare cheaper routes: revenue and prepayments, grants and R&D credits, a smaller round, and venture debt only alongside equity or revenue. Not raising is a valid answer when the company is default alive. Test the amount and milestone as a lead investor would: what they must believe, the objection most likely to stop them, and which investors' theses fit; change the milestone or amount when no evidence answers that objection.
 3. When. Start with at least 9 to 12 months of runway to the floor: a process typically takes 3 to 6 months to cash (unverified). Start just after a milestone proof, not just before it, and avoid launching into local holiday periods.
 4. Instrument. SAFE (post-money): fastest and cheapest, no board, no interest or maturity; a valuation cap and optional discount; the holder's share is fixed at purchase amount divided by the post-money cap, so every further SAFE dilutes founders, not earlier holders. Convertible note: debt with interest (often 4 to 8%) and a maturity date (often 18 to 24 months) that gives holders leverage if no round happens; interest converts too. Priced round: sets a price, issues preferred shares, usually adds a board seat and protective provisions, costs more legal time and fees, and is standard from Series A and common at seed with a lead. Local forms differ (in the UK an advance subscription agreement keeps SEIS and EIS eligibility, which a SAFE does not); confirm the instrument with counsel.
