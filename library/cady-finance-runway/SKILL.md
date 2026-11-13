@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.runway"
   version: "914285be1b56bc718b01"
-  library: "f444a98c7277b591"
+  library: "d7882682aac57260"
   function: "finance"
 ---
 # Burn and runway

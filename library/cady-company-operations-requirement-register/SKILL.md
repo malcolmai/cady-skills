@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
   version: "61daeffcd86281dc5989"
-  library: "f444a98c7277b591"
+  library: "d7882682aac57260"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
