@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
   version: "6d3fe79c1a7bca800d43"
-  library: "672018f0ca0380ad"
+  library: "ff034891b009feeb"
   function: "company"
 ---
 # Change agent behaviour
