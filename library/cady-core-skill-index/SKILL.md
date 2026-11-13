@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "07c3c62686e61163cbb3"
-  library: "04d8d277d668b7e6"
+  version: "4afa9ecb527e7fe4d485"
+  library: "b8e4e55055bf97b5"
   function: "core"
 ---
 # Skill index
@@ -27,7 +27,11 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
 - `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
 - `cady-company-voice-pack`: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
+- `cady-orchestrator-finance-motion-pass`: A due finance pass, or an event: a new commitment, a period ending or the runway line moving.
 - `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered or a handover returned.
+- `cady-orchestrator-gtm-motion-pass`: A due GTM pass, or an event: a reply, a segment crossing its reply line or a stage stalling.
+- `cady-orchestrator-operations-motion-pass`: A due operations pass, or an event: an obligation's lead time opening or a commitment found in the inbox.
+- `cady-orchestrator-product-motion-pass`: A due product pass, or an event: a release due, work in progress over its limit or results arriving.
 
 ## gtm
 
@@ -44,7 +48,6 @@ Every Cady task skill, with one line on when to use it.
 - `cady-gtm-tam-map`: Find who wants, where they gather: people, communities, prospects, leads, target customers, companies or accounts.
 - `cady-gtm-warm-email`: Write email follow-ups, engaged notes, or partner, organiser and supplier business messages, including first approaches.
 - `cady-marketing-post`: Create or edit one post for the audience, topic and placement chosen in the brief.
-- `cady-orchestrator-gtm-motion-pass`: A due GTM pass, or an event: a reply, a segment crossing its reply line or a stage stalling.
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.
 
 ## product
@@ -52,7 +55,6 @@ Every Cady task skill, with one line on when to use it.
 - `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
 - `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem.
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
-- `cady-orchestrator-product-motion-pass`: A due product pass, or an event: a release due, work in progress over its limit or results arriving.
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 - `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done.
 - `cady-product-research`: Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology.
@@ -70,7 +72,6 @@ Every Cady task skill, with one line on when to use it.
 - `cady-fundraise-investor-outreach`: Write to investors: a warm intro request, a personalised first note, round follow-ups, or the monthly update send.
 - `cady-fundraise-raise-materials`: Draft or revise an investor memo, deck narrative, data room or monthly investor update for a founder.
 - `cady-fundraise-raise-plan`: Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.
-- `cady-orchestrator-finance-motion-pass`: A due finance pass, or an event: a new commitment, a period ending or the runway line moving.
 
 ## operations
 
@@ -79,4 +80,3 @@ Every Cady task skill, with one line on when to use it.
 - `cady-company-operations-inbox-follow-through`: Bounded inbox maintenance or thread triage for follow-through, marketing handling or commitments needing tracking.
 - `cady-company-operations-people-lifecycle`: Plan, track and verify the paperwork and access for a new hire or contractor, a role change or someone leaving.
 - `cady-company-operations-requirement-register`: Research, independently check and record one compliance requirement as a Cady Projects decision.
-- `cady-orchestrator-operations-motion-pass`: A due operations pass, or an event: an obligation's lead time opening or a commitment found in the inbox.

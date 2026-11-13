@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-13T00:00:00Z",
   "bundle": {
-    "tag": "04d8d277d668b7e6",
-    "version": "04d8d277d668b7e6414461f379a099298a82de7c392b35eabe53908f82b5a695",
-    "pluginVersion": "2026.11.13-04d8d277"
+    "tag": "b8e4e55055bf97b5",
+    "version": "b8e4e55055bf97b5dd7b1c1b1b3c9466ab1df6e774d151bdc7afd59d986ee03c",
+    "pluginVersion": "2026.11.13-b8e4e550"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.13-04d8d277"
+    "version": "2026.11.13-b8e4e550"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "03ad13fab5ceae8a0d17"
+      "version": "cccc7f721be0f935e57a"
     },
     {
       "name": "cady-accounting-method",
@@ -45,7 +45,7 @@
       "name": "cady-company-decision-check",
       "path": "library/cady-company-decision-check",
       "cadyId": "skill.company.decision_check",
-      "version": "77d0677af526dd6be509"
+      "version": "51895f31f416b75a4755"
     },
     {
       "name": "cady-company-decision-questions",
@@ -57,13 +57,13 @@
       "name": "cady-company-distil",
       "path": "library/cady-company-distil",
       "cadyId": "skill.company.distil",
-      "version": "63d02cf2ca63c9a5b492"
+      "version": "b1ed99711b37fc3ebe7d"
     },
     {
       "name": "cady-company-executive-review",
       "path": "library/cady-company-executive-review",
       "cadyId": "skill.company.executive_review",
-      "version": "96eedec3cf5721fd6ba3"
+      "version": "2b63099416ee4afb012f"
     },
     {
       "name": "cady-company-experiment",
@@ -75,13 +75,13 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "d90acd7333edd57ebb2a"
+      "version": "65acde5b70043bce1443"
     },
     {
       "name": "cady-company-method",
       "path": "library/cady-company-method",
       "cadyId": "company.method.company",
-      "version": "2769274229c22e639354"
+      "version": "c99610943ce24fc46edc"
     },
     {
       "name": "cady-company-operations-compliance-register",
@@ -123,49 +123,49 @@
       "name": "cady-company-review",
       "path": "library/cady-company-review",
       "cadyId": "execution.topic.company_review",
-      "version": "718f31359960f3024858"
+      "version": "485ba5b0de1592897b71"
     },
     {
       "name": "cady-company-taste-review",
       "path": "library/cady-company-taste-review",
       "cadyId": "skill.company.taste_review",
-      "version": "eaf42d3c863e3dd3c7a2"
+      "version": "107316bbf986b418c510"
     },
     {
       "name": "cady-company-voice-pack",
       "path": "library/cady-company-voice-pack",
       "cadyId": "skill.company.voice_pack",
-      "version": "0cb138542439eea5dcb5"
+      "version": "d4efcee8e84ba03de209"
     },
     {
       "name": "cady-core-context",
       "path": "library/cady-core-context",
       "cadyId": "company.context",
-      "version": "2ea71913081dd31565bb"
+      "version": "4d5f57a4f30950310a1a"
     },
     {
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "34426cbb8aa222f77d0b"
+      "version": "36339d813c11fa156a77"
     },
     {
       "name": "cady-core-run-sequence",
       "path": "library/cady-core-run-sequence",
       "cadyId": "execution.topic.run_sequence",
-      "version": "fd124e972e9b0a8eb310"
+      "version": "d821febb4a7e39ce6623"
     },
     {
       "name": "cady-core-skill-index",
       "path": "library/cady-core-skill-index",
       "cadyId": "cady.skill_index",
-      "version": "07c3c62686e61163cbb3"
+      "version": "4afa9ecb527e7fe4d485"
     },
     {
       "name": "cady-customer-success-lifecycle",
       "path": "library/cady-customer-success-lifecycle",
       "cadyId": "skill.customer_success.lifecycle",
-      "version": "95ccb596abcaf5ae780c"
+      "version": "86803b657169ea14f4a5"
     },
     {
       "name": "cady-customer-success-method",
@@ -177,7 +177,7 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "090391a4d3108154b752"
+      "version": "576c62165a791e91a4d6"
     },
     {
       "name": "cady-design-wcag-audit",
@@ -195,37 +195,37 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "6f57c925410a54dfdd1e"
+      "version": "f9e01e30f890ab63d6f5"
     },
     {
       "name": "cady-engineering-integrations",
       "path": "library/cady-engineering-integrations",
       "cadyId": "execution.topic.integrations",
-      "version": "34d71583d994c9001509"
+      "version": "fe6de9ca2040e52329e5"
     },
     {
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "a5cfa18bc586365c0402"
+      "version": "c12f103644a3322da0e4"
     },
     {
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "c66dec071b132cd25ae1"
+      "version": "be802088751a370c6239"
     },
     {
       "name": "cady-finance-budget-review",
       "path": "library/cady-finance-budget-review",
       "cadyId": "skill.finance.budget_review",
-      "version": "bdc1772ea9724fddc51f"
+      "version": "dbefdc7019a41f5ab4f8"
     },
     {
       "name": "cady-finance-method",
       "path": "library/cady-finance-method",
       "cadyId": "company.method.finance",
-      "version": "8f9f24f3eec7fbfd10ef"
+      "version": "45288e01de1ef7338d6e"
     },
     {
       "name": "cady-finance-runway",
@@ -249,55 +249,55 @@
       "name": "cady-fundraise-investor-list",
       "path": "library/cady-fundraise-investor-list",
       "cadyId": "skill.fundraise.investor_list",
-      "version": "7989227ad03e73f3d769"
+      "version": "2861aae5ebb897e2b56d"
     },
     {
       "name": "cady-fundraise-investor-outreach",
       "path": "library/cady-fundraise-investor-outreach",
       "cadyId": "skill.fundraise.investor_outreach",
-      "version": "c114ddc8e1d7b6665f8c"
+      "version": "e05e6404504db3383d75"
     },
     {
       "name": "cady-fundraise-method",
       "path": "library/cady-fundraise-method",
       "cadyId": "company.method.fundraise",
-      "version": "14f9016e85abb23f6dbc"
+      "version": "167004e285744e12c4bc"
     },
     {
       "name": "cady-fundraise-raise-materials",
       "path": "library/cady-fundraise-raise-materials",
       "cadyId": "skill.fundraise.raise_materials",
-      "version": "ac7e950ecfe39d26c510"
+      "version": "f64367d993382ef3f91f"
     },
     {
       "name": "cady-fundraise-raise-plan",
       "path": "library/cady-fundraise-raise-plan",
       "cadyId": "skill.fundraise.raise_plan",
-      "version": "3c8dd6a3fbfbc0c5f7f9"
+      "version": "f80e637485db45e3d11d"
     },
     {
       "name": "cady-gtm-calls",
       "path": "library/cady-gtm-calls",
       "cadyId": "skill.gtm.calls",
-      "version": "67fd5e6b0ad93da09a13"
+      "version": "0a9ccf6b549eae4e4d7c"
     },
     {
       "name": "cady-gtm-channel-plan",
       "path": "library/cady-gtm-channel-plan",
       "cadyId": "skill.gtm.channel_plan",
-      "version": "4a01b8a0eab4f54052f0"
+      "version": "aa8359e3a59725fda1b1"
     },
     {
       "name": "cady-gtm-cold-email-cycle",
       "path": "library/cady-gtm-cold-email-cycle",
       "cadyId": "skill.gtm.cold_email_cycle",
-      "version": "dcf0d0a328a00abaf2ec"
+      "version": "84b5f4fd29f773d7e0ca"
     },
     {
       "name": "cady-gtm-events",
       "path": "library/cady-gtm-events",
       "cadyId": "skill.gtm.events",
-      "version": "d2731b2a90aac9370989"
+      "version": "7c651786ad64167982d7"
     },
     {
       "name": "cady-gtm-launch",
@@ -309,19 +309,19 @@
       "name": "cady-gtm-linkedin-message",
       "path": "library/cady-gtm-linkedin-message",
       "cadyId": "skill.gtm.linkedin_message",
-      "version": "d6d731ebea9bf442615d"
+      "version": "cc31dbea1b3428a8d587"
     },
     {
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "ad1ec9f7cc10314c62db"
+      "version": "c3b8a7ac314c638fabda"
     },
     {
       "name": "cady-gtm-offer-and-segments",
       "path": "library/cady-gtm-offer-and-segments",
       "cadyId": "skill.gtm.offer_and_segments",
-      "version": "5e5b8e2387ca97d6cde9"
+      "version": "0e997f85ff08a3b1f8c1"
     },
     {
       "name": "cady-gtm-persona-profile",
@@ -333,97 +333,73 @@
       "name": "cady-gtm-pipeline-pass",
       "path": "library/cady-gtm-pipeline-pass",
       "cadyId": "skill.gtm.pipeline_pass",
-      "version": "89406d8f81c4eefb0e8c"
+      "version": "5003318dd59ff146a03f"
     },
     {
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "63b02aab46fd023494dd"
+      "version": "d71a3fbb2bb1d2e2a3ad"
     },
     {
       "name": "cady-gtm-tam-map",
       "path": "library/cady-gtm-tam-map",
       "cadyId": "skill.gtm.tam_map",
-      "version": "3bb94bae0537520b306c"
+      "version": "6b5a1e3a2bd745420554"
     },
     {
       "name": "cady-gtm-warm-email",
       "path": "library/cady-gtm-warm-email",
       "cadyId": "skill.gtm.warm_email",
-      "version": "3d4d2a6e88d445befb0b"
+      "version": "6a44b4e0334202e3bf4e"
     },
     {
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "bd8452ca8b3c84d04463"
+      "version": "f22ee75440bb951bbe29"
     },
     {
       "name": "cady-marketing-post",
       "path": "library/cady-marketing-post",
       "cadyId": "skill.marketing.post",
-      "version": "9af70ae8b2cfbe20f8f3"
-    },
-    {
-      "name": "cady-orchestrator-finance-method",
-      "path": "library/cady-orchestrator-finance-method",
-      "cadyId": "company.method.orchestrator_finance",
-      "version": "2bb5388f19a4927f283c"
+      "version": "006b89e79a8b33f2d458"
     },
     {
       "name": "cady-orchestrator-finance-motion-pass",
       "path": "library/cady-orchestrator-finance-motion-pass",
-      "cadyId": "skill.orchestrator_finance.motion_pass",
-      "version": "ce692f52c7403a5fbf83"
+      "cadyId": "skill.orchestrator.finance_motion_pass",
+      "version": "f09922f6190340fc4961"
     },
     {
       "name": "cady-orchestrator-goal-pass",
       "path": "library/cady-orchestrator-goal-pass",
       "cadyId": "skill.orchestrator.goal_pass",
-      "version": "40edbcaacb6de000403b"
-    },
-    {
-      "name": "cady-orchestrator-gtm-method",
-      "path": "library/cady-orchestrator-gtm-method",
-      "cadyId": "company.method.orchestrator_gtm",
-      "version": "a24aae8d31941b6f27c7"
+      "version": "0bb22f59aaea4c67f1be"
     },
     {
       "name": "cady-orchestrator-gtm-motion-pass",
       "path": "library/cady-orchestrator-gtm-motion-pass",
-      "cadyId": "skill.orchestrator_gtm.motion_pass",
-      "version": "1ff13ceb19eef4da6f33"
+      "cadyId": "skill.orchestrator.gtm_motion_pass",
+      "version": "28c30ba7c12d8a16e717"
     },
     {
       "name": "cady-orchestrator-method",
       "path": "library/cady-orchestrator-method",
       "cadyId": "company.method.orchestrator",
-      "version": "ec22995d286868ab76e6"
-    },
-    {
-      "name": "cady-orchestrator-operations-method",
-      "path": "library/cady-orchestrator-operations-method",
-      "cadyId": "company.method.orchestrator_operations",
-      "version": "3b4b4c98054d9dfdd5f1"
+      "version": "1e324c774d87cae258da"
     },
     {
       "name": "cady-orchestrator-operations-motion-pass",
       "path": "library/cady-orchestrator-operations-motion-pass",
-      "cadyId": "skill.orchestrator_operations.motion_pass",
-      "version": "e2cd4f2a343887ef5045"
-    },
-    {
-      "name": "cady-orchestrator-product-method",
-      "path": "library/cady-orchestrator-product-method",
-      "cadyId": "company.method.orchestrator_product",
-      "version": "f4ac51a7e229b67a44d3"
+      "cadyId": "skill.orchestrator.operations_motion_pass",
+      "version": "c8585c54847950338dec"
     },
     {
       "name": "cady-orchestrator-product-motion-pass",
       "path": "library/cady-orchestrator-product-motion-pass",
-      "cadyId": "skill.orchestrator_product.motion_pass",
-      "version": "76e825f59a16504724f2"
+      "cadyId": "skill.orchestrator.product_motion_pass",
+      "version": "20ad3e2f940f0353614b"
     },
     {
       "name": "cady-product-customer-interview",
@@ -435,13 +411,13 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "3e3cb59b0377af959913"
+      "version": "c06b1bfe5f3042b2724f"
     },
     {
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "beac4108620c031768ef"
+      "version": "5b2940bc26bd3e9c6c14"
     },
     {
       "name": "cady-product-research",
@@ -453,25 +429,25 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "7ca0247fb30e55b35b0f"
+      "version": "b21e6d41243c1c099054"
     },
     {
       "name": "cady-qa-stories",
       "path": "library/cady-qa-stories",
       "cadyId": "skill.qa.stories",
-      "version": "f6ae4f3e2649befa47fc"
+      "version": "9f05d1629d0df09f48a7"
     },
     {
       "name": "cady-qa-triage",
       "path": "library/cady-qa-triage",
       "cadyId": "skill.qa.triage",
-      "version": "08b51266fcd581bbd388"
+      "version": "b0f8c5252d514216ca2e"
     },
     {
       "name": "cady-sales-deal-motion",
       "path": "library/cady-sales-deal-motion",
       "cadyId": "skill.sales.deal_motion",
-      "version": "dad5c31ad4a76367195e"
+      "version": "06879690b0b0db61a3ff"
     },
     {
       "name": "cady-sales-method",

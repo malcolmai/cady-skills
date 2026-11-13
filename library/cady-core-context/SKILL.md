@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "2ea71913081dd31565bb"
-  library: "04d8d277d668b7e6"
+  version: "4d5f57a4f30950310a1a"
+  library: "b8e4e55055bf97b5"
   function: "core"
 ---
 # Company context
@@ -19,7 +19,7 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 
 ### Injected method
 
-- Use recorded direction as the working baseline, including its bets: beliefs the company acts on before evidence settles them. Let a held bet cut options without re-arguing it; surface contrary evidence against the bet it challenges instead of silently working around it. Record a bet only when it cites a current recorded person decision, tagged with the function that will test it; link its assumption so the outcome supplies the status. An inferred belief stays an assumption (an open decision of kind hypothesis) linked to the recorded decision it serves. Priorities link to goals; stage belongs to company:stage; rules cite decisions. Route missing owner facts to asks and research questions to tasks, never a company-context unknowns or sources list. Preserve user choices.
+- Use the root's recorded point and bets as the working baseline; a bet is beliefs the company acts on before evidence settles them. Let a held bet cut options without re-arguing it; surface contrary evidence against the bet it challenges instead of silently working around it. Record a bet only when it cites a current recorded person decision, tagged with the function that will test it; link its assumption so the outcome supplies the status. An inferred belief stays an assumption (an open decision of kind hypothesis) linked to the recorded decision it serves. Priorities link to goals; stage belongs to company:stage; rules cite decisions. Route missing owner facts to asks and research questions to tasks, never a company-context unknowns or sources list. Preserve user choices.
 - Verify readiness and authority before consequential effects, and the working result before expansion. An authorized recurring review can be configured before the first execution. Load the cady-company-review skill for operational review, then only relevant function methods.
 - Across sessions, recover the original authorized outcome through work_read; empty local claims do not establish that no work exists.
 - A chat observation or CRM note is not an order update, refund, shipment or completed resolution.
@@ -33,7 +33,7 @@ Decision layers (owner, function head, task), early-stage defaults and how to re
 - A completed checkpoint need not complete the broader remit.
 - For a customer order or request, establish the exact order, status, promise and exception in the chosen commerce, support or fulfilment system before answering or changing it. Do not activate a tool or assume an order capability merely because it appears in a catalog.
 - Never adopt a service, tool or adviser because other companies use one. Map the workflow and find the work points with the most impact. Material and non-standard (the case departs from the standard process): bring in a specialist. A standard process and a standard case: do it AI-driven from official guidance and standard forms. Immaterial: the simplest thing that works.
-- **Objective:** Keep company direction clear and build reliable execution without overloading the founder.
+- **Objective:** Keep the company's point and bets clear and build reliable execution without overloading the founder.
 
 ## Orientation
 

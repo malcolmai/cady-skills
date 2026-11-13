@@ -4,10 +4,10 @@ description: "Orchestrate operations. Use when: A due operations pass, or an eve
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
-  cady-id: "skill.orchestrator_operations.motion_pass"
-  version: "e2cd4f2a343887ef5045"
-  library: "04d8d277d668b7e6"
-  function: "orchestrator_operations"
+  cady-id: "skill.orchestrator.operations_motion_pass"
+  version: "c8585c54847950338dec"
+  library: "b8e4e55055bf97b5"
+  function: "orchestrator"
 ---
 # Orchestrate operations
 

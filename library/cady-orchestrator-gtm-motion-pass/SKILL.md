@@ -4,10 +4,10 @@ description: "Orchestrate GTM. Use when: A due GTM pass, or an event: a reply, a
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
-  cady-id: "skill.orchestrator_gtm.motion_pass"
-  version: "1ff13ceb19eef4da6f33"
-  library: "04d8d277d668b7e6"
-  function: "orchestrator_gtm"
+  cady-id: "skill.orchestrator.gtm_motion_pass"
+  version: "28c30ba7c12d8a16e717"
+  library: "b8e4e55055bf97b5"
+  function: "orchestrator"
 ---
 # Orchestrate GTM
 

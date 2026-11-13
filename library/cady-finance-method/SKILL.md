@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "8f9f24f3eec7fbfd10ef"
-  library: "04d8d277d668b7e6"
+  version: "45288e01de1ef7338d6e"
+  library: "b8e4e55055bf97b5"
   function: "finance"
 ---
 # Finance
@@ -53,7 +53,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
-- current company direction and Finance plan
+- current company point and bets and Finance plan
 - CRM vendor parties and legal entities
 - Projects work, due date, dependsOn and decision records
 - chosen ledger, bank, contract and filing sources by reference

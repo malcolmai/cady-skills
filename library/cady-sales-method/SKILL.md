@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
   version: "a944791dc17a0c02fd7e"
-  library: "04d8d277d668b7e6"
+  library: "b8e4e55055bf97b5"
   function: "sales"
 ---
 # Sales

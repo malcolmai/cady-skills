@@ -1,6 +1,6 @@
 # Receipts
 
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
-- Engineering proposes and maintains the dimension register; Product confirms the labels. Raise agent-drafted labels to Product as one batched ask (asks_set) with your recommendation, never as separate "Draft:" decisions. ICP, pricing and core scope live in direction and decisions, not in the register.
+- Engineering proposes and maintains the dimension register; Product confirms the labels. Raise agent-drafted labels to Product as one batched ask (asks_set) with your recommendation, never as separate "Draft:" decisions. ICP, pricing and core scope live on the tree and in decisions, not in the register.
 - When a dimension or architecture decision changes the system, update the product's top-level architecture diagram (save a new diagram File, relink it); a scoped diagram covers one dimension and never replaces the overview.
 - Write product docs, specs and diagrams in the company's codebase or doc system, not in Cady, following its writing guide and diagram build. Treat the company writing guide's limits as reasoned checks: split an overloaded picture into an overview and a scoped diagram. Cady gets only the product's top-level and dimension architecture diagrams, saved as Files and linked from Product context. Route each statement to one home by its kind: search first, then extend.

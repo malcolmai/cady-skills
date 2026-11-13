@@ -4,10 +4,10 @@ description: "Orchestrate product. Use when: A due product pass, or an event: a 
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
-  cady-id: "skill.orchestrator_product.motion_pass"
-  version: "76e825f59a16504724f2"
-  library: "04d8d277d668b7e6"
-  function: "orchestrator_product"
+  cady-id: "skill.orchestrator.product_motion_pass"
+  version: "20ad3e2f940f0353614b"
+  library: "b8e4e55055bf97b5"
+  function: "orchestrator"
 ---
 # Orchestrate product
 
