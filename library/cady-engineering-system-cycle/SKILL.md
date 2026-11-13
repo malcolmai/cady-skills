@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "be802088751a370c6239"
-  library: "2a6a3e2e8610830f"
+  version: "a5f562572d578dc69106"
+  library: "0b93eecfd4303f2c"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
@@ -89,4 +89,4 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 - Read [Engineering cycle dimension register and research](references/engineering-cycle-dimensions.md) when you name, label or change the dimension register, or scan research for a differentiating dimension.
 - Read [Software quality classes](references/quality-classes.md) when planning a change or placing a finding for a product you build in code.
 - Read [Engineering cycle review, checkpoint and data paths](references/engineering-cycle-review.md) when you run an architecture review of several issues, write a motion's checkpoint, or check a material data path.
-- Read [Product map template and drafting](references/engineering-system-map.md) when you draft, restructure or publish a product's product map.
+- Read [Product map and dimension maps](references/engineering-system-map.md) when you draft, restructure, publish or check a product's product map or a dimension map.
