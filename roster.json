@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "b8e4e55055bf97b5",
-    "version": "b8e4e55055bf97b5dd7b1c1b1b3c9466ab1df6e774d151bdc7afd59d986ee03c"
+    "tag": "f898539963d87619",
+    "version": "f898539963d876198ed67ae2dfe9139fb0d798c420ce91241552fb43c9a61a64"
   },
   "core": [
     "cady-core-context",
@@ -26,7 +26,6 @@
         "cady-company-change-agent-behaviour",
         "cady-company-decision-check",
         "cady-company-decision-questions",
-        "cady-company-distil",
         "cady-company-executive-review",
         "cady-company-experiment",
         "cady-company-manage-agents",

@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
   version: "826f635ed3a827c00b6c"
-  library: "b8e4e55055bf97b5"
+  library: "f898539963d87619"
   function: "product"
 ---
 # Research

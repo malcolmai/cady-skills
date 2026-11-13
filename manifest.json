@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-13T00:00:00Z",
   "bundle": {
-    "tag": "b8e4e55055bf97b5",
-    "version": "b8e4e55055bf97b5dd7b1c1b1b3c9466ab1df6e774d151bdc7afd59d986ee03c",
-    "pluginVersion": "2026.11.13-b8e4e550"
+    "tag": "f898539963d87619",
+    "version": "f898539963d876198ed67ae2dfe9139fb0d798c420ce91241552fb43c9a61a64",
+    "pluginVersion": "2026.11.13-f8985399"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.13-b8e4e550"
+    "version": "2026.11.13-f8985399"
   },
   "skills": [
     {
@@ -45,7 +45,7 @@
       "name": "cady-company-decision-check",
       "path": "library/cady-company-decision-check",
       "cadyId": "skill.company.decision_check",
-      "version": "51895f31f416b75a4755"
+      "version": "ee7cbe9c00cf5cee51d6"
     },
     {
       "name": "cady-company-decision-questions",
@@ -54,16 +54,10 @@
       "version": "a760841be2b4ddce2e06"
     },
     {
-      "name": "cady-company-distil",
-      "path": "library/cady-company-distil",
-      "cadyId": "skill.company.distil",
-      "version": "b1ed99711b37fc3ebe7d"
-    },
-    {
       "name": "cady-company-executive-review",
       "path": "library/cady-company-executive-review",
       "cadyId": "skill.company.executive_review",
-      "version": "2b63099416ee4afb012f"
+      "version": "b1a70a8ecca25455e41b"
     },
     {
       "name": "cady-company-experiment",
@@ -75,7 +69,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "65acde5b70043bce1443"
+      "version": "33efd6dd4cf087f1626a"
     },
     {
       "name": "cady-company-method",
@@ -123,7 +117,7 @@
       "name": "cady-company-review",
       "path": "library/cady-company-review",
       "cadyId": "execution.topic.company_review",
-      "version": "485ba5b0de1592897b71"
+      "version": "58f1add8a24dcefa0ed2"
     },
     {
       "name": "cady-company-taste-review",
@@ -159,7 +153,7 @@
       "name": "cady-core-skill-index",
       "path": "library/cady-core-skill-index",
       "cadyId": "cady.skill_index",
-      "version": "4afa9ecb527e7fe4d485"
+      "version": "222962db8f868dd81c61"
     },
     {
       "name": "cady-customer-success-lifecycle",
