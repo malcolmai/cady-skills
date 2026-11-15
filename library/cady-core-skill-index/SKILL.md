@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "222962db8f868dd81c61"
-  library: "c0fe92432b4418aa"
+  version: "6eb6398cc9f85b833d51"
+  library: "f9df67a2cc156d98"
   function: "core"
 ---
 # Skill index
@@ -62,7 +62,7 @@ Every Cady task skill, with one line on when to use it.
 
 ## finance
 
-- `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper.
+- `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, clear Suspense and lock.
 - `cady-finance-budget-review`: Draft or update a budget or spend allocation, or review last month's spend against it.
 - `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
 - `cady-finance-tax-cycle`: Plan or review an entity's tax obligations, filing preparation and material strategy changes.

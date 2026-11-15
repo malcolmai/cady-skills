@@ -4,6 +4,20 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
 
+## f9df67a2cc156d98 · 2026-11-15
+
+Since c0fe92432b4418aa: 0 new, 0 dropped, 6 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-core-skill-index`: finance
+
+Changed:
+- `cady-accounting-method`: intro, Role card, Selected judgment, reference domain-method.md
+- `cady-accounting-period-close`: description, intro, Inputs, Procedure, Acceptance, Owner checks, Result
+- `cady-finance-budget-review`: intro, Inputs, Procedure, Owner checks, Result
+- `cady-finance-method`: intro, Role card, reference domain-method.md
+- `cady-finance-runway`: intro, Always, Inputs, Procedure, Owner checks, Result
+
 ## c0fe92432b4418aa · 2026-11-15
 
 Since ec5d8d2af93f34af: 0 new, 0 dropped, 4 changed.
