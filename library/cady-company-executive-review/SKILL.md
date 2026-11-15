@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "17add1c0cd1ff82b4870"
-  library: "399db4061033f42f"
+  version: "f1312479cec14ade1e8d"
+  library: "ec5d8d2af93f34af"
   function: "company"
 ---
 # Executive review
