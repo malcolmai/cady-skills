@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-13T00:00:00Z",
+  "generatedAt": "2026-11-15T00:00:00Z",
   "bundle": {
-    "tag": "0b93eecfd4303f2c",
-    "version": "0b93eecfd4303f2c49b16c58f8229472f007e64ee08f53f08a5addaacf175a19",
-    "pluginVersion": "2026.11.13-0b93eecf"
+    "tag": "399db4061033f42f",
+    "version": "399db4061033f42fdc7cc58925cc46decf9edea0ee133387af59fe10112f70a4",
+    "pluginVersion": "2026.11.15-399db406"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.13-0b93eecf"
+    "version": "2026.11.15-399db406"
   },
   "skills": [
     {
@@ -417,7 +417,7 @@
       "name": "cady-product-research",
       "path": "library/cady-product-research",
       "cadyId": "skill.product.research",
-      "version": "826f635ed3a827c00b6c"
+      "version": "230c40180ea30495cb0f"
     },
     {
       "name": "cady-qa-method",

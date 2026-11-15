@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "826f635ed3a827c00b6c"
-  library: "0b93eecfd4303f2c"
+  version: "230c40180ea30495cb0f"
+  library: "399db4061033f42f"
   function: "product"
 ---
 # Research
@@ -48,7 +48,7 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 3. Competition (who the alternatives are and how they price, position and win) or Technology (a product use case and technical feasibility)? Read the matching reference before gathering evidence; both apply the steps below.
 4. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
 5. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
-6. Write Markdown with useful headings and real tables. Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Cite customer quotes as quote:<id> (research.write records and checks a quote against its public page) and sources by URL or file:<id>. Do not delay useful evidence for formatting.
+6. Write Markdown with useful headings and real tables. Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Cite customer quotes as quote:<id> (research_set records and checks a quote against its public page) and sources by URL or file:<id>. Do not delay useful evidence for formatting.
 7. A research piece is a File named research/<title>.md: create it with files_set mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_set mode patch at its expectedGeneration after reading it with cady_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Customer interviews and observations stay in Files linked from work, with a CRM interaction. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
 
 ## Acceptance
