@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-15T00:00:00Z",
   "bundle": {
-    "tag": "ec5d8d2af93f34af",
-    "version": "ec5d8d2af93f34af804a8df9a3d95617ee4a1f3980a918fd8e79f91e712db89d",
-    "pluginVersion": "2026.11.15-ec5d8d2a"
+    "tag": "c0fe92432b4418aa",
+    "version": "c0fe92432b4418aa41b7473561d49c3dd11d00a668319567a0db350e998b3936",
+    "pluginVersion": "2026.11.15-c0fe9243"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.15-ec5d8d2a"
+    "version": "2026.11.15-c0fe9243"
   },
   "skills": [
     {
@@ -69,7 +69,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "33e35a04c1095bc26d42"
+      "version": "8355c3d3f523c9064c8e"
     },
     {
       "name": "cady-company-method",
@@ -141,7 +141,7 @@
       "name": "cady-core-execution",
       "path": "library/cady-core-execution",
       "cadyId": "execution.all",
-      "version": "2bef39fc5f58e102bc65"
+      "version": "e09c339dcf1dd1357938"
     },
     {
       "name": "cady-core-run-sequence",
@@ -417,7 +417,7 @@
       "name": "cady-product-research",
       "path": "library/cady-product-research",
       "cadyId": "skill.product.research",
-      "version": "230c40180ea30495cb0f"
+      "version": "6fdca2aec34a934155c9"
     },
     {
       "name": "cady-qa-method",
@@ -441,7 +441,7 @@
       "name": "cady-sales-deal-motion",
       "path": "library/cady-sales-deal-motion",
       "cadyId": "skill.sales.deal_motion",
-      "version": "06879690b0b0db61a3ff"
+      "version": "ad53c50b5ccdc24f2f5f"
     },
     {
       "name": "cady-sales-method",

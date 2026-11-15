@@ -5,13 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "230c40180ea30495cb0f"
-  library: "ec5d8d2af93f34af"
+  version: "6fdca2aec34a934155c9"
+  library: "c0fe92432b4418aa"
   function: "product"
 ---
 # Research
 
-**Point:** Gather dated, attributable evidence on alternatives or technology so an owner can decide without redoing the analysis.
+**Point:** Map the approaches to a question, their tradeoffs and evidence, so an owner can decide without redoing the analysis.
 
 **Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 
@@ -19,7 +19,7 @@ metadata:
 - Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.
 - Compare a technology against the no-build and existing-capability baseline, measured at the real workload. Instead of: Compare candidate vendors with each other from their published benchmarks and demos.
 - Update the same-question piece and keep it short; research is an intermediate record that feeds a decision. Instead of: Write a new, comprehensive report for each request.
-- End with the implication for the decision and the next test that could change the choice. Instead of: End with a neutral summary of what was found.
+- Map the approaches and their tradeoffs, and end with the test that would tell them apart. Instead of: Rank the options and end with a verdict.
 
 Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology.
 
@@ -43,13 +43,13 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 
 ## Procedure
 
-1. State the question, scope, audience and product relevance in a sentence. Research the decision-relevant uncertainty; keep the piece a useful second-layer evidence source rather than a new decision record or policy.
+1. State the question, scope, audience and product relevance in a sentence. Research is truth-seeking and independent of company priorities; research the decision-relevant uncertainty and keep the piece second-layer evidence.
 2. Search Files for the same question and dimension (cady_read search kinds ["file"], query research/ plus the topic). Update that file when it exists, preserving its history and useful structure; create another only for a distinct question or dimension.
-3. Competition (who the alternatives are and how they price, position and win) or Technology (a product use case and technical feasibility)? Read the matching reference before gathering evidence; both apply the steps below.
+3. Competition (who the alternatives are and how they price, position and win) or Technology (a product use case and technical feasibility)? Read the matching reference before gathering evidence.
 4. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
-5. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
-6. Write Markdown with useful headings and real tables. Include question, scope, evidence, counterevidence and implications where useful; omit empty sections. Cite customer quotes as quote:<id> (research_set records and checks a quote against its public page) and sources by URL or file:<id>. Do not delay useful evidence for formatting.
-7. A research piece is a File named research/<title>.md: create it with files_set mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_set mode patch at its expectedGeneration after reading it with cady_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Customer interviews and observations stay in Files linked from work, with a CRM interaction. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
+5. Map the approaches, not verdicts: what each buys and costs and when each wins. Challenge your own account until the simple and the detailed accounts agree, and open with the simple one. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
+6. Write Markdown with useful headings and real tables. Include question, scope, approaches, evidence and counterevidence where useful; omit empty sections. Cite customer quotes as quote:<id> (research_set records and checks a quote against its public page) and sources by URL or file:<id>.
+7. A research piece is a File named research/<title>.md; its first line is `Node: <path>`, the company node it is about (technical research: product; competitors: go-to-market). Create it with files_set mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_set mode patch at its expectedGeneration after reading it with cady_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
 
 ## Acceptance
 
@@ -59,9 +59,6 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 
 ## Owner checks
 
-- same-question piece checked
-- sources dated and attributable
-- source, inference and recommendation distinguishable
 - current operation schema and file generation checked
 - alternatives are real for the scoped customer choice, or the baseline and no-build path are explicit
 - counterevidence and limits included; implications conditional rather than policy
