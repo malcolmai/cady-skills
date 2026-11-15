@@ -68,7 +68,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 
 ## finance
 - `cady-accounting-method`: Accounting role card: what this function owns and decides (`library/cady-accounting-method/SKILL.md`)
-- `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, and list fixes for the bookkeeper. (`library/cady-accounting-period-close/SKILL.md`)
+- `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, clear Suspense and lock. (`library/cady-accounting-period-close/SKILL.md`)
 - `cady-finance-budget-review`: Draft or update a budget or spend allocation, or review last month's spend against it. (`library/cady-finance-budget-review/SKILL.md`)
 - `cady-finance-method`: Finance role card: what this function owns and decides (`library/cady-finance-method/SKILL.md`)
 - `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first. (`library/cady-finance-runway/SKILL.md`)

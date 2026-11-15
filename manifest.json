@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-15T00:00:00Z",
   "bundle": {
-    "tag": "c0fe92432b4418aa",
-    "version": "c0fe92432b4418aa41b7473561d49c3dd11d00a668319567a0db350e998b3936",
-    "pluginVersion": "2026.11.15-c0fe9243"
+    "tag": "f9df67a2cc156d98",
+    "version": "f9df67a2cc156d98f44cf1d03987b5cff513ea464b9954fc11a293b49231c5e8",
+    "pluginVersion": "2026.11.15-f9df67a2"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.15-c0fe9243"
+    "version": "2026.11.15-f9df67a2"
   },
   "skills": [
     {
@@ -21,13 +21,13 @@
       "name": "cady-accounting-method",
       "path": "library/cady-accounting-method",
       "cadyId": "company.method.accounting",
-      "version": "c1010ca88142c08dbc7d"
+      "version": "1c1c7c93e43f6ba77624"
     },
     {
       "name": "cady-accounting-period-close",
       "path": "library/cady-accounting-period-close",
       "cadyId": "skill.accounting.period_close",
-      "version": "7d213ed24e800d8b00e0"
+      "version": "f4138ffe1d5549c5dc02"
     },
     {
       "name": "cady-company-challenge",
@@ -153,7 +153,7 @@
       "name": "cady-core-skill-index",
       "path": "library/cady-core-skill-index",
       "cadyId": "cady.skill_index",
-      "version": "222962db8f868dd81c61"
+      "version": "6eb6398cc9f85b833d51"
     },
     {
       "name": "cady-customer-success-lifecycle",
@@ -213,19 +213,19 @@
       "name": "cady-finance-budget-review",
       "path": "library/cady-finance-budget-review",
       "cadyId": "skill.finance.budget_review",
-      "version": "dbefdc7019a41f5ab4f8"
+      "version": "2dd017127de6386f1213"
     },
     {
       "name": "cady-finance-method",
       "path": "library/cady-finance-method",
       "cadyId": "company.method.finance",
-      "version": "45288e01de1ef7338d6e"
+      "version": "297f096e658ccdb74887"
     },
     {
       "name": "cady-finance-runway",
       "path": "library/cady-finance-runway",
       "cadyId": "skill.finance.runway",
-      "version": "914285be1b56bc718b01"
+      "version": "6effe1f52d56d3b19c66"
     },
     {
       "name": "cady-finance-tax-cycle",

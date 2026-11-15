@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "c0fe92432b4418aa",
-    "version": "c0fe92432b4418aa41b7473561d49c3dd11d00a668319567a0db350e998b3936"
+    "tag": "f9df67a2cc156d98",
+    "version": "f9df67a2cc156d98f44cf1d03987b5cff513ea464b9954fc11a293b49231c5e8"
   },
   "core": [
     "cady-core-context",
