@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.persona_profile"
   version: "9f33cfc4ab1fd5e72937"
-  library: "f9df67a2cc156d98"
+  library: "6080f26188049f38"
   function: "gtm"
 ---
 # Persona profile
