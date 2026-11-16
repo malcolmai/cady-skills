@@ -5,11 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.integrations"
-  version: "fe6de9ca2040e52329e5"
-  library: "f27965346e1fad37"
+  version: "cfa46c666cdb2b6ba3d3"
+  library: "bdc87889e6a48ee4"
   function: "engineering"
 ---
 # Integrations
+
+**Point:** Choose, operate or build integrations by the safest route for the job, so effects land once, on the right account.
 
 **Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 

@@ -1,5 +1,7 @@
 # Receipts
 
+**Point:** Update the existing record when work changes a goal, bet, map or architecture, so no parallel record forms.
+
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 - Engineering proposes and maintains the dimension register; Product confirms the labels. Raise agent-drafted labels to Product as one batched ask (asks_set) with your recommendation, never as separate "Draft:" decisions. ICP, pricing and core scope live on the tree and in decisions, not in the register.
 - When a dimension or architecture decision changes the system, update the product's top-level architecture diagram (save a new diagram File, relink it); a scoped diagram covers one dimension and never replaces the overview.

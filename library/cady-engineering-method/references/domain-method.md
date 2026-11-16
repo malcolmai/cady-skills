@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Deliver a coherent slice at its real owner after tracing existing owners, so it serves intended use without duplicating.
+
 ### Architecture and chunk reads
 
 - **Architecture overview:** For an authorized new software offering, draft consequential architecture choices, rationale, boundaries and first buildable slice even before customer evidence permits an accepted outcome. Keep this provisional design in the chosen source artifact and link it through existing company work; cite host-only sources there without fabricating Product owner evidence refs. Accepted Product architecture decisions require reviewed choices and exact immutable Git references. A branch name, workspace note or unreviewed host summary is not an accepted architecture decision. Follow repository source for current architecture; show stale or unavailable references explicitly.

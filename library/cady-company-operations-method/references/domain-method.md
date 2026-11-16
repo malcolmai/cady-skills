@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Route operations work to the owning record and function, so entities, filings, vendors and delivery each have one home.
+
 ### Method detail
 
 - To change the company profile (name, website, description, currency, logo) or choose the Cady workspaces it uses, call company_setup with any of those fields; no revision or key is needed. For a logo save a PNG or JPEG through files_set (small: mode save_image) and pass its fil-<n> as logo. modules is the full list of Cady workspaces the company uses (crm, files_knowledge, stories, accounting); an external tool is one line in the company workspace AGENTS.md. The reply names next, the first setup phase not done (basics, what already exists, strategy and loops); read all three with cady_read company:setup. A refusal carries reason, message and recovery: a field refusal such as DESCRIPTION_TOO_LONG, fix the field; ACCESS_DENIED names the admin-only fields, so hand those to an admin. After a partial reply repeat the same call.

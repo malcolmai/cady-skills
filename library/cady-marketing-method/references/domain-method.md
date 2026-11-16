@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Choose and run the content that improves demand, from buyer evidence, so marketing effort is tested, not assumed.
+
 ### Content system
 
 #### Frameworks

@@ -4,6 +4,38 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
 
+## bdc87889e6a48ee4 · 2026-11-16
+
+Since f27965346e1fad37: 0 new, 0 dropped, 24 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady`: intro
+- `cady-core-context`: intro
+- `cady-core-execution`: intro, reference blockers.md, reference credentials.md, reference decision-standard.md, reference delivery-completion.md, reference native-orchestration.md, reference quality-check.md, reference risk-first.md, reference scheduled-model-selection.md
+- `cady-core-run-sequence`: reference asking.md, reference goals-and-work.md, reference plan-path.md, reference reporting.md
+- `cady-core-skill-index`: intro
+
+Changed:
+- `cady-accounting-method`: reference domain-method.md
+- `cady-company-method`: reference domain-method.md
+- `cady-company-operations-method`: reference domain-method.md
+- `cady-company-review`: reference setup.md
+- `cady-company-taste-review`: reference written-content.md
+- `cady-company-voice-pack`: reference avoid-and-contrast.md
+- `cady-customer-success-method`: reference domain-method.md
+- `cady-design-method`: reference domain-method.md
+- `cady-engineering-integrations`: intro, reference build.md, reference integrations.md, reference reads.md, reference vendor.md
+- `cady-engineering-method`: reference domain-method.md, reference receipts.md, reference selected-judgment.md
+- `cady-finance-method`: reference domain-method.md
+- `cady-fundraise-method`: reference domain-method.md
+- `cady-gtm-method`: reference domain-method.md
+- `cady-gtm-warm-email`: reference warm-email-copy.md
+- `cady-marketing-method`: reference domain-method.md
+- `cady-product-method`: reference domain-method.md, reference selected-judgment.md
+- `cady-product-research`: reference competition.md, reference technology.md
+- `cady-qa-method`: reference domain-method.md, reference models.md
+- `cady-sales-method`: reference domain-method.md
+
 ## f27965346e1fad37 · 2026-11-16
 
 Since 1c1985325ef5e69e: 0 new, 0 dropped, 5 changed.

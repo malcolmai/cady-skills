@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Frame the customer's job and the stakeholder's decision from observed evidence, so sales steps follow real need, not labels.
+
 ### Customer job
 
 #### Frameworks

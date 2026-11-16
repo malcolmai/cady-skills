@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
-  version: "d4efcee8e84ba03de209"
-  library: "f27965346e1fad37"
+  version: "47ac51a78b9f1018a4cb"
+  library: "bdc87889e6a48ee4"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
