@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.voice_pack"
   version: "d4efcee8e84ba03de209"
-  library: "6080f26188049f38"
+  library: "1c1985325ef5e69e"
   function: "company"
 ---
 # Build or refresh a texture-only voice pack
