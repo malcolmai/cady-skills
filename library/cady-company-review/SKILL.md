@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.company_review"
-  version: "e5dd50b7cba199d7cf77"
-  library: "bdc87889e6a48ee4"
+  version: "719ab2e7a7ec37aebf46"
+  library: "c1f73bea4c4b77ba"
   function: "company"
 ---
 # Company strategy and operating review
 
 **Point:** Find which intended outcomes are supported, slipping or unknown, then advance the most consequential work, not every function.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 Review the company's point, bets, goals and progress, including onboarding a new company: its first offering and route to customers. Use when: a company needs an evidence-based operating review or onboarding. Not for: one executive decision (use `cady-company-executive-review`).
 
@@ -37,7 +37,3 @@ Review the company's point, bets, goals and progress, including onboarding a new
 ## References
 
 - [Onboarding: a company's first review and launch](references/setup.md)
-
-## Shared execution sections
-
-Read these sections of `cady-core-execution`: Execution guidance.

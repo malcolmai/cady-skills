@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.challenge"
-  version: "7e781e31a1e246824093"
-  library: "bdc87889e6a48ee4"
+  version: "becff77979eed0246aa3"
+  library: "c1f73bea4c4b77ba"
   function: "company"
 ---
 # Challenge a result by its stakes
 
 **Point:** Catch a response whose thinking is thinner than its stakes, and get it fixed by the cheapest fresh pass.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Treat a smell as a gap between the stakes and the thinking shown, never as a kind of work: the same email can be fine or a smell, depending on what it risks. Instead of: A list of work types that always get challenged.

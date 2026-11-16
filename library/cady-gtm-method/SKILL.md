@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "e5135e18954d366cfa9e"
-  library: "bdc87889e6a48ee4"
+  version: "c90c6227d7560bb97fc3"
+  library: "c1f73bea4c4b77ba"
   function: "gtm"
 ---
 # GTM
 
 **Point:** Start from the customer and their words so offer, message and channel earn real conversations, then revise on evidence.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Before the first result, find one credible path to a qualified conversation and act on it within days; re-plan from what happens. Instead of: Write and polish a full GTM strategy (ICP, positioning, channel mix, targets) before any real outreach.
@@ -23,6 +25,9 @@ metadata:
 - Treat under about 20 exposures or a single reply as a directional signal only; weak response may be an exposure or execution gap. Instead of: Drop a segment after one quiet batch, or double down after one enthusiastic reply.
 - The company tree and execution have separate homes. Instead of: Plan channels, prepare recipients and execute inside the GTM function card.
 - The root's point and bets outrank this card when they conflict. Instead of: Let the function card override the root's recorded point and bets.
+
+## Every run
+
 
 ## Role card
 

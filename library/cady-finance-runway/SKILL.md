@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.runway"
-  version: "6effe1f52d56d3b19c66"
-  library: "bdc87889e6a48ee4"
+  version: "9b37e8457f3040b56b88"
+  library: "c1f73bea4c4b77ba"
   function: "finance"
 ---
 # Burn and runway
 
 **Point:** Show when cash runs out and whether growth gets there first, so cuts or a raise start in time.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Derive cash, burn and runway from the ledger's cash accounts at read time. Instead of: Type cash and burn into the plan and read them back.

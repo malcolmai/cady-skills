@@ -1,21 +1,21 @@
 ---
 name: "cady-engineering-independent-review"
-description: "Independent review. Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution)."
+description: "Independent review. Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (`cady-orchestrator-goal-pass`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "f9e01e30f890ab63d6f5"
-  library: "bdc87889e6a48ee4"
+  version: "0f612101af28568efc14"
+  library: "c1f73bea4c4b77ba"
   function: "engineering"
 ---
 # Independent review
 
 **Point:** A reviewer who did not produce the work checks the actual diff and evidence, so approval means it holds.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (cady-core-execution).
+Independently review a diff or artifact: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge. Not for: root-causing a bug, triaging a bug report or running helpers (`cady-orchestrator-goal-pass`).
 
 ## Bets
 
@@ -41,7 +41,3 @@ Independently review a diff or artifact: rerun its checks, rank findings and ret
 - **Levels:** Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, bet or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why.
 - **Two reviews:** A larger method or agent-behaviour text change gets two reviews by two separate agents, neither the producer. Logic review reads the method's logic and the served text: does every served line follow from the logic, and does the flow hold end to end, nearby case included? Writing review reads the served text alone (record reads: served): does it tell an agent what to do, with nothing repeated, missing or contradicted? A small text fix gets only the writing review; a code change gets one review.
 - **Verdict:** End with land, fix (the blockers to clear) or redesign (why the approach is wrong and the alternative). Write ranked findings and a receipt (producer, reviewer, baseline and head SHAs, prior coverage reused, checks and results, verdict) to the file the requester names; the producer never edits it. At most two rounds per lane; review later fixes and affected seams as the integrated state changes.
-
-## Shared execution sections
-
-Read these sections of `cady-core-execution`: Execution guidance.

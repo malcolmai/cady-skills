@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "66cf475a77bc7f2232b8"
-  library: "bdc87889e6a48ee4"
+  version: "857661a07597e6d6233c"
+  library: "c1f73bea4c4b77ba"
   function: "company"
 ---
 # Writing craft and taste decisions
 
 **Point:** Judge writing and design by whether the intended reader acts as hoped, learning the owner's taste from corrections.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Start from the reader, what they must do or decide, and the one trade-off, before writing a word. Instead of: Start from the content to cover, then polish the prose.

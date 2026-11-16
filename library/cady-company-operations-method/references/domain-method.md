@@ -18,8 +18,6 @@
 |---|---|
 | Canonical spending reservation and executor qualification | Operations can prepare a vendor decision, but Finance advice and agent prose cannot approve payment or a contract; use an applicable checked current route or hold the effect. |
 
-- **Read:** the installed `cady-core-context` skill for company practice
-
 #### Routing
 
 - **Finance:** Use the current Finance plan and `cady-finance-vendor-spend-review` for material budget and vendor value judgment; Operations owns supplier delivery and operational-risk oversight. Keep embedded financial controls with Finance and verify any exact financial effect with its owner.

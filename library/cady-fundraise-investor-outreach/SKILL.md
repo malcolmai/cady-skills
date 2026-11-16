@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "e05e6404504db3383d75"
-  library: "bdc87889e6a48ee4"
+  version: "92c038992f931a42524c"
+  library: "c1f73bea4c4b77ba"
   function: "fundraise"
 ---
 # Investor outreach and updates
 
 **Point:** Earn first meetings with fitting investors, warm path first, on one sourced reason and true results, never invented traction.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Ask for a double opt-in introduction with a forwardable blurb wherever a credible warm path exists; write cold only when none does. Instead of: Cold email the whole ranked list, or ask a contact to forward the deck without checking the investor wants it.
@@ -57,7 +57,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 - [ ] (check) every first note names one partner and a sourced reason; apply `references/outreach-drafting.md`, Draft check; within Cady’s copy check
 - [ ] (fresh) a partner reading only the note can say what the company does and the result so far; apply `references/outreach-drafting.md`, Easy yes
 - [ ] (check) batches follow the raise plan's pacing and every investor's stage is on its track
-- [ ] (person) follow `references/outreach-release.md`, Release for outreach mechanics and execution authority's sending rule; sent, interest, commitment and funds stay distinct
+- [ ] (person) follow `references/outreach-release.md`, Release for outreach mechanics and its sending rule; sent, interest, commitment and funds stay distinct
 
 ## Owner checks
 

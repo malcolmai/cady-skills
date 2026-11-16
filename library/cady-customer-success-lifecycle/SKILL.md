@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
-  version: "86803b657169ea14f4a5"
-  library: "bdc87889e6a48ee4"
+  version: "dbf4e43d5a67ff38b684"
+  library: "c1f73bea4c4b77ba"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
 
 **Point:** Get each customer to the first result they bought by a date, then keep, grow or end the account honestly.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - At kickoff agree first value in the customer's words with a date; past it without the result, the account is at risk. Instead of: Measure onboarding by account setup, logins and a warm kickoff.
@@ -44,7 +44,7 @@ Run one customer account after the sale: onboarding to first value, health, risk
 
 ## Procedure
 
-1. Read the account: cady_read party:<partyId> (role customer, renewalDate), its won track via crm_read mode stages, the sales handoff note with cady_read file:<id>, and interactions such as signup, activation, meeting and note. Missing evidence is unknown, not failure: ask before judging. Go to the moment the account is in.
+1. Read the account: cady_read party:<partyId> (role customer, renewalDate), its won track via crm_read mode stages, the sales handoff note with cady_read file:<id>, and interactions such as signup, activation, meeting and note. Missing evidence is unknown, not failure: ask before judging. Go to the moment the account is in. For an order or request, establish the exact order, status, promise and exception in the chosen commerce, support or fulfilment system before answering or changing it; a chat observation or CRM note is not an order update, refund, shipment or completed resolution.
 2. Onboarding: at kickoff, restate the goal from the handoff so the customer does not repeat the sales conversation, then agree in their words the first value: the first observable result they bought for, such as a first report delivered or a first batch processed, and a date. Default 30 days for an assisted setup and 14 for self-serve. List the few setup steps with an owner each; clear your side's blockers first. Record crm_interactions_set (interaction kind activation) when the result is observed, not when an account is created. Past the date without first value, the account is at risk however friendly the customer is.
 3. Health: judge four dimensions separately, never as one score. Outcome: are they getting the result they bought? Adoption: the necessary use, by the right people, at the job's natural cadence. Relationship: champion present and engaged, sponsor known, sentiment in their words. Commercial: payment on time, usage or seats against the contract, renewal distance. Early risk signals: champion left or quiet, use missing for two natural cycles, a serious issue open over a week, a reorganisation, acquisition or budget cut, questions about export, terms or notice period, a failed payment.
 4. At risk: within a week of a signal, name the one risk, its evidence and the likely cause. Speak to the customer directly with a specific question, not “just checking in”, using `references/outreach-drafting.md`, Easy yes. Agree a recovery plan: the outcome, steps each side owns and a check date, saved with files_set and set as the track's nextAction and nextActionDueAt. Own a delivery failure plainly: what happened, the fix and its date. Send product defects to the product owner with evidence. A discount does not fix a value problem. If their need changed or they have decided to leave, go to cancellation. Run `references/outreach-drafting.md`, Draft check before `references/taste-message.md`; route preparation and release through `references/outreach-release.md`.

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Adopt the Cady agents your company runs: copy each agent's skill folders from this library into your host.
 
-Run it from a clone of the library. The first run also copies the company system (the Executive and the orchestrator) and the
-core skills every agent reads. A folder you already have is never overwritten ("kept yours"), so a re-run changes nothing.
+Run it from a clone of the library. The first run also copies the company system (the Executive and the orchestrator).
+A folder you already have is never overwritten ("kept yours"), so a re-run changes nothing.
 
   python3 install.py --list                                   # the agents this library holds
   python3 install.py --host claude-code --add gtm,marketing   # into ./.claude/skills

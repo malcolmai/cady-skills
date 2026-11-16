@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "ed7adbb8307f8a0c201e"
-  library: "bdc87889e6a48ee4"
+  version: "905f72c910ad167bd9c5"
+  library: "c1f73bea4c4b77ba"
   function: "company"
 ---
 # Manage company agents
 
 **Point:** One agent per ongoing responsibility nobody serves, on a node or none; live on the owner's go-ahead.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - An agent is one recurring responsibility on a node or on none; reuse or update the agent that serves the outcome before creating one, but several agents may share a goal or node. Instead of: Create a new agent for each new need or parallel stream of work.
@@ -55,7 +55,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 1. An agent is one ongoing responsibility; due tasks are work items and a one-off is a helper run. Read agents_read, work (work_read), the node's point and bets and this host's automations first: if an agent already serves the outcome, reuse it or change it with agents_set (rebind if its host changed) and stop. Create one when none does; a goal or node may have several agents when their jobs differ. Put an agent on a node when that node's work needs its own regular pass. An agent sits on the node it serves, or on none (a personal agent). Parallel sessions and subagents are runs of that agent, not new agents.
 2. Responsibility and risk class. State the outcome, one measure with its data source, a cadence or trigger, approval limits and end condition; pass goal when it serves a goal. Critical: a hard-to-undo effect or reach outside the company, or drafts released automatically; every other agent is standard. Re-class on any grant, tool, access or trigger change.
-3. Fit. Read agents_read and cady_read company:map, and name the agent's skills as plain names, the skill folders the host holds (the library's cady-core-skill-index lists them), or leave them empty; Cady serves no skill index, so do not search for one. Reuse library skills unchanged; adapt only for an evidenced failure, tool mismatch or missing expert judgment.
+3. Fit. Read agents_read and cady_read company:map, and name the agent's skills as plain names, the skill folders the host holds (the library's roster.json lists each agent's skills), or leave them empty; Cady serves no skill index, so do not search for one. Reuse library skills unchanged; adapt only for an evidenced failure, tool mismatch or missing expert judgment.
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Its decision map: goal, node, trigger, decides alone, consults on, hands off.
 5. Evaluation. The criteria live on the first task, not the agent record: brief.doneWhen holds 2-5 reader tests tagged (check), (fresh) or (person), and brief.stopIf the early-stop limit; a completed run is not a reported result.
 6. Create and bind the agent with agents_set (host {action: bind}), file the first task with work_set, and ask the owner for the go-ahead (asks_set). On their yes, send status live with approval {quote}. A returned schedule stays configured_unconfirmed until a host readback. Change visibility or sharing only on request; it applies at once and the owner is told.
@@ -94,3 +94,4 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 - Read [Agent host tasks, library and silent hosts](references/agent-hosts.md) when you install, change or review a recurring host task, adopt skills, or check hosts for agents whose host went silent.
 - Read [Agent design, setup, review and retirement](references/agent-lifecycle.md) when you design an agent or change its responsibility, create, bind or take an agent live, review an agent or judge a reported result, pause or retire an agent, adopt a scheduled task, or install the baseline roster.
 - Read [Execution agent brief](references/execution-agent-brief.md) when you set up a channel execution agent.
+- Read [Model selection: model, effort and budget for scheduled work](references/model-selection.md) when you set up or change a scheduled run, or choose a model, effort or budget for work.

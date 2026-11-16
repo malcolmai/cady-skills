@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.accounting.period_close"
-  version: "f4138ffe1d5549c5dc02"
-  library: "bdc87889e6a48ee4"
+  version: "75ca124efdb9d3f808d1"
+  library: "c1f73bea4c4b77ba"
   function: "accounting"
 ---
 # Month-end and period close
 
 **Point:** Close each period with every account tied to its source and exceptions listed, so reported numbers can be trusted.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Reconcile every cash account to the statement closing balance. Instead of: Accept the bank feed or the ledger's own balance as reconciled once transactions are categorised.

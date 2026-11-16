@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "826ee42cb14a81473e4d"
-  library: "bdc87889e6a48ee4"
+  version: "268b45c2c2af8839a3f9"
+  library: "c1f73bea4c4b77ba"
   function: "sales"
 ---
 # Sales
 
 **Point:** Qualify from the buyer's own words and actions, so effort goes to deals that can close and non-fits end fast.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Establish the buying trigger, current alternative and who decides from what the buyer said or did; unknown beats a model-completed field. Instead of: Fill a qualification framework (BANT, MEDDIC, SPICED) from one friendly call and the account's profile.
@@ -21,6 +23,9 @@ metadata:
 - When evidence is thin, offer a proportionate, low-commitment way to inspect value. Instead of: Push every interested lead onto a sales call.
 - Describe the customer by the situation where the job arises and what they do today, not by demographics or labels. Instead of: Segment by industry, company size and job title.
 - Qualification and contact permission are separate decisions; a plausible buyer is not a permitted send. Instead of: Message anyone who looks like a good fit.
+
+## Every run
+
 
 ## Skills
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.

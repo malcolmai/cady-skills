@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "10cbe0c291fc95d02b33"
-  library: "bdc87889e6a48ee4"
+  version: "cb6a7f8b864df92b6695"
+  library: "c1f73bea4c4b77ba"
   function: "engineering"
 ---
 # Engineering
 
 **Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Check every change against the map, then scale the rest to the change. Instead of: Plan from the task text alone, or run a full plan and review cycle for a one-line fix.
@@ -22,6 +24,9 @@ metadata:
 - Use the most reliable, widely used approach on non-differentiating dimensions; reserve custom architecture and research for the differentiating ones. Instead of: Engineer every dimension to the same custom depth, or adopt a generic layer for the core.
 - Ship a compiling, independently reviewed build even when test-only CI is red; stop for security, isolation, authority or first-value regressions. Instead of: Hold every merge and release until all CI is green.
 - Write each test at the lowest layer that proves its claim, and none for behaviour that has never worked. Instead of: Add broad unit and end-to-end coverage around every change to feel safe.
+
+## Every run
+
 
 ## Role card
 

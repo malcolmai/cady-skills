@@ -4,6 +4,89 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
 
+## c1f73bea4c4b77ba · 2026-11-16
+
+Since bdc87889e6a48ee4: 0 new, 4 dropped, 69 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady`: intro, Start every run, Load a skill, removed Add or change an agent, reference agent-stop.md, reference execution-agent-brief.md
+- `cady-company-decision-check`: Procedure, References, reference asking.md
+
+Changed:
+- `cady-accounting-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-accounting-period-close`: wording
+- `cady-company-challenge`: wording
+- `cady-company-change-agent-behaviour`: Improving an agent now means editing the company's own local skill and recording why; contributing upstream is optional.
+- `cady-company-decision-questions`: wording
+- `cady-company-executive-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-company-experiment`: wording
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-method`: intro, new Every run, Role card, reference agent-stop.md, reference asking.md, reference domain-method.md, reference role-card-common.md, reference run-reporting.md
+- `cady-company-operations-compliance-register`: wording
+- `cady-company-operations-contract-checks`: Procedure
+- `cady-company-operations-inbox-follow-through`: reference outreach-release.md
+- `cady-company-operations-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference domain-method.md, reference role-card-common.md, reference run-reporting.md
+- `cady-company-operations-people-lifecycle`: wording
+- `cady-company-operations-requirement-register`: wording
+- `cady-company-review`: References, removed Shared execution sections
+- `cady-company-taste-review`: wording
+- `cady-company-voice-pack`: wording
+- `cady-customer-success-lifecycle`: Procedure, reference outreach-release.md
+- `cady-customer-success-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-design-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference domain-method.md, reference role-card-common.md, reference run-reporting.md
+- `cady-design-wcag-audit`: wording
+- `cady-engineering-debugging`: wording
+- `cady-engineering-independent-review`: description, intro, Independent review, removed Shared execution sections
+- `cady-engineering-integrations`: reference integrations.md
+- `cady-engineering-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference domain-method.md, reference role-card-common.md, reference run-reporting.md
+- `cady-engineering-system-cycle`: reference agent-hosts.md
+- `cady-finance-budget-review`: wording
+- `cady-finance-method`: intro, new Every run, Role card, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-finance-runway`: wording
+- `cady-finance-tax-cycle`: wording
+- `cady-finance-vendor-spend-review`: Procedure
+- `cady-fundraise-investor-list`: Procedure, reference agent-stop.md, reference run-reporting.md
+- `cady-fundraise-investor-outreach`: Acceptance, reference outreach-release.md
+- `cady-fundraise-method`: intro, new Every run, Selected judgment, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-fundraise-raise-materials`: wording
+- `cady-fundraise-raise-plan`: wording
+- `cady-gtm-calls`: reference outreach-release.md
+- `cady-gtm-channel-plan`: Procedure, reference outreach-release.md
+- `cady-gtm-cold-email-cycle`: reference outreach-release.md
+- `cady-gtm-events`: wording
+- `cady-gtm-launch`: Gtm launch, removed Shared execution sections, reference outreach-release.md
+- `cady-gtm-linkedin-message`: Procedure, Acceptance, reference outreach-release.md
+- `cady-gtm-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference outreach-release.md, reference role-card-common.md, reference run-reporting.md
+- `cady-gtm-offer-and-segments`: wording
+- `cady-gtm-persona-profile`: Procedure, reference agent-stop.md, reference run-reporting.md
+- `cady-gtm-pipeline-pass`: reference outreach-release.md
+- `cady-gtm-reply`: reference outreach-release.md
+- `cady-gtm-tam-map`: reference tam-map-enrich.md
+- `cady-gtm-warm-email`: reference outreach-release.md
+- `cady-marketing-method`: intro, new Every run, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-marketing-post`: Procedure, Acceptance, Owner checks
+- `cady-orchestrator-finance-motion-pass`: wording
+- `cady-orchestrator-goal-pass`: Procedure, Result, new References, reference agent-hosts.md, reference agent-stop.md, reference company-goals.md, reference goals-and-work.md, reference model-selection.md, reference native-orchestration.md, reference plan-path.md, reference run-reporting.md
+- `cady-orchestrator-gtm-motion-pass`: wording
+- `cady-orchestrator-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-orchestrator-operations-motion-pass`: wording
+- `cady-orchestrator-product-motion-pass`: wording
+- `cady-product-customer-interview`: wording
+- `cady-product-manage`: Procedure, reference asking.md, reference product-manage-detail.md
+- `cady-product-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-product-research`: wording
+- `cady-qa-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-qa-stories`: wording
+- `cady-qa-triage`: wording
+- `cady-sales-deal-motion`: reference outreach-release.md
+- `cady-sales-method`: intro, new Every run, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+
+Dropped (merged elsewhere or retired; check the new skills above):
+- cady-core-context
+- cady-core-execution
+- cady-core-run-sequence
+- cady-core-skill-index
+
 ## bdc87889e6a48ee4 · 2026-11-16
 
 Since f27965346e1fad37: 0 new, 0 dropped, 24 changed.

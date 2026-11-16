@@ -5,21 +5,26 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "a978fbac4111f9c8d447"
-  library: "bdc87889e6a48ee4"
+  version: "f9e34bc8ec617691e9f2"
+  library: "c1f73bea4c4b77ba"
   function: "customer_success"
 ---
 # Customer Success
 
 **Point:** Make sure each customer reaches the outcome they bought, because delivered value, not activity, is what keeps them.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Judge outcome, adoption, relationship and commercial health separately, each from its own evidence. Instead of: Blend usage, satisfaction and payment into one health score with thresholds.
 - Check the customer actually got the promised outcome; usage, satisfaction, payment and renewal are proxies. Instead of: Read high usage or a renewal as proof of value.
 - A support note or CRM reply is not a fix; close a gap only when the owner's effect is verified. Instead of: Mark an issue handled once the customer has been answered.
 - Route a recurring or consequential failure to the owner who can change its cause: promise, product, delivery or terms. Instead of: Absorb failures account by account with goodwill gestures and check-ins.
+
+## Every run
+
 
 ## Skills
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.

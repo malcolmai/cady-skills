@@ -22,7 +22,7 @@ Run your whole company across Claude and ChatGPT. These are the skills your agen
 
 Cady is your agent orchestrator. Connect your Claude Code, Codex, Claude or ChatGPT account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
 
-This repository is Cady's **method library**: 72 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
+This repository is Cady's **method library**: 68 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
 
 ## How it works
 
@@ -102,7 +102,7 @@ The skills you adopt are copied into your host and are your company's own: edit 
 | [`INDEX.md`](INDEX.md) | Every skill with one line on when to use it and its path |
 | `library/` | The skills: function role cards, task skills and run guides, each folder self-contained with its own `references/` |
 | `plugins/cady/` | The Claude Code plugin: the Cady MCP server and the front door skill |
-| `install.py`, `roster.json` | The adopt helper: copies the agents you choose (role card and the skills it lists) and the core skills into your host |
+| `install.py`, `roster.json` | The adopt helper: copies the agents you choose (role card and the skills it lists) into your host |
 | `.claude-plugin/marketplace.json` | The marketplace entry for `plugins/cady` |
 | [`examples/`](examples/README.md) | Three example agents (GTM, finance, orchestrator), each preloading its role's method |
 | [`CHANGELOG.md`](CHANGELOG.md) | The material changes in each release; your Executive reads it |
@@ -113,7 +113,7 @@ The skills you adopt are copied into your host and are your company's own: edit 
 - No file here holds company facts. Each skill names the exact `cady_read` call for its work.
 - In Claude Code the plugin also adds the Cady MCP server (`app.cadyworks.com/mcp`), so do not also run `claude mcp add`, and switch off the claude.ai Cady connector inside Claude Code so Cady is not connected twice. In other apps, connect Cady once as a connector. Sending email or LinkedIn messages, publishing and spending follow your company's approval rules in Cady, and every effect leaves a record you can inspect.
 - Agents report run results and usage to Cady. They never upload transcripts.
-- On Codex, only if the owner opts the host in, the run sequence checks whether your most recent other local Codex session ended on a usage limit or sign-in error, and reports only that status.
+- On Codex, only if the owner opts the host in, each scheduled run checks whether your most recent other local Codex session ended on a usage limit or sign-in error, and reports only that status.
 - The only script is `install.py`: it copies skill folders from your clone of this library into your host's skills folder and never overwrites one that is there. It fetches nothing, runs no hooks and sends nothing anywhere.
 
 ## Contributing
