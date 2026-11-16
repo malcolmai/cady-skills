@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "9a7a51c0a57459ba5cce"
-  library: "bdc87889e6a48ee4"
+  version: "7e400b6c6464d62d88cd"
+  library: "c1f73bea4c4b77ba"
   function: "product"
 ---
 # Product management and discovery
 
 **Point:** Decide what to build from evidence and run each goal to a live, measured result, because plans are not outcomes.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Start with one offering, one assumed ICP and problem assumption with its disproof, and one first-value goal; defer everything else. Instead of: Build the full product model first: personas, roadmap, dimensions, research and stories.
@@ -57,7 +57,7 @@ Decide what to build and why; run discovery; plan each release and its go/no-go;
 8. Check release thresholds against exact QA, engineering and customer evidence on the release work item. Go: record the go on that work (work_set {id, note: the go, with evidence refs}, then {id, next: 'ready to release'}); keep release stage 'qa'. No-go: status blocked with the unmet threshold and next action (work_set {id, status: blocked, result, next}). Stage 'released' is set by the agent that owns the release, once the deploy receipt reads back the deployed artifact and target, citing the receipt; whoever deployed.
 9. When the requested analysis includes validation work, create a scoped Projects item with its acceptance and next action. After verifying a specific successor or confirming the action is complete, update or clear the existing next action with work_set {id, next} when allowed; do not leave a superseded action current or create unrequested follow-on work.
 10. Product map and dimension maps: when a decision needs one (step 3), find, draft, publish and link it as `references/engineering-system-map.md` says.
-11. Run to done (the loop for a goal owner; only f ends it). a) Work the goal's ranked items (step 7) through Engineering and QA. b) Raise each call that stays controversial after testing and review, or owner-only fact, the roadmap needs once in this run, each with options, your recommendation, unlocks and `blocks` naming its own item (run sequence step 5); decide the rest yourself and record it, and build what does not depend on it. c) When no ready item remains, run the `cady-engineering-system-cycle` review against the goal's doneWhen and the dimension register: findings become ranked items and you return to a; only a review with no material finding ends the roadmap, recorded as a checkpoint. d) Release per policy (read policy:release and grant.release:<company>, `cady-company-decision-check` step 2): under a covering grant, promote through the company's release route yourself; where the policy names who deploys, prepare the exact release (SHA, checks, rollback) and raise one approval ask to that person; with no policy, raise one ask recommending one. Never widen a grant. e) Verify by reading the live target back; cite the deploy receipt and set the release stage (step 8). f) Close the goal only from a reading you took of its target source, never a count you did not read: stop it as met only when the release is live, doneWhen holds and the target count is met; otherwise keep it open and make driving the target the next ranked item. The first-session and run-to-done reference holds the release routes and the close.
+11. Run to done (the loop for a goal owner; only f ends it). a) Work the goal's ranked items (step 7) through Engineering and QA. b) Raise each call that stays controversial after testing and review, or owner-only fact, the roadmap needs once in this run, each with options, your recommendation, unlocks and `blocks` naming its own item (`references/asking.md`); decide the rest yourself and record it, and build what does not depend on it. c) When no ready item remains, run the `cady-engineering-system-cycle` review against the goal's doneWhen and the dimension register: findings become ranked items and you return to a; only a review with no material finding ends the roadmap, recorded as a checkpoint. d) Release per policy (read policy:release and grant.release:<company>, `cady-company-decision-check` step 2): under a covering grant, promote through the company's release route yourself; where the policy names who deploys, prepare the exact release (SHA, checks, rollback) and raise one approval ask to that person; with no policy, raise one ask recommending one. Never widen a grant. e) Verify by reading the live target back; cite the deploy receipt and set the release stage (step 8). f) Close the goal only from a reading you took of its target source, never a count you did not read: stop it as met only when the release is live, doneWhen holds and the target count is met; otherwise keep it open and make driving the target the next ranked item. The first-session and run-to-done reference holds the release routes and the close.
 
 ## Acceptance
 

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
-  version: "0e997f85ff08a3b1f8c1"
-  library: "bdc87889e6a48ee4"
+  version: "e1f8bd9e7ce92502ac5d"
+  library: "c1f73bea4c4b77ba"
   function: "gtm"
 ---
 # Offer and persona
 
 **Point:** Turn the persona profile into the right offer, checking first that we understand the customer well enough.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Write the promise as the customer would say it, against what they do today; keep a sender term only where they use it. Instead of: Write the value proposition in the company's language: category, mechanism, 'AI-powered platform'.

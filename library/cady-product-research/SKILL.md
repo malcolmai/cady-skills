@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "588d24145adb2d79dd0f"
-  library: "bdc87889e6a48ee4"
+  version: "edaacdfe676d93602145"
+  library: "c1f73bea4c4b77ba"
   function: "product"
 ---
 # Research
 
 **Point:** Map the approaches to a question, their tradeoffs and evidence, so an owner can decide without redoing the analysis.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.

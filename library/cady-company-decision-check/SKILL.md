@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_check"
-  version: "ee7cbe9c00cf5cee51d6"
-  library: "bdc87889e6a48ee4"
+  version: "9f9c0f1912d55d5523d8"
+  library: "c1f73bea4c4b77ba"
   function: "company"
 ---
 # Who decides: the decision journey
 
 **Point:** Settle whether a choice or effect is decided, whose it is, and record it once.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Decide or ask by risk (what breaks, for whom, how reversibly) and independent review, not by the decision's layer. Instead of: Ask the owner about every decision labelled company-level and decide everything below that alone.
@@ -43,7 +43,7 @@ Before a choice or an effect: whether it is already decided, who decides, and ho
 ## Procedure
 
 1. Already decided? Read the governing decisions and goal (cady_read decision:<subject> and the goal). Before following one, check it still holds: past its reviewBy, a premise it names changed, or a newer point, bet or goal conflicts. Context over a week old (a reading, a status, a premise) is checked and updated before it decides anything. If it holds, follow it and do not ask again; if not, recheck it at its own layer (step 3) and cite what changed.
-2. An effect (send, spend, sign, file, publish, share, invite, change access, delete or export data, anything irreversible) needs the person's approval or a standing approval covering it (a grant.* decision, an active standing approval, grant.release), under execution authority's one approval rule. With one, act and cite it as evidence on the work. Otherwise prepare the whole effect and ask once as a ready ask (run sequence step 5), and keep working on what does not wait. Payments, signatures and filings are always a person's; prepare them. Standing approvals (grants) are the only standing permissions: record none in a goal, decision or role card.
+2. An effect (send, spend, sign, file, publish, share, invite, change access, delete or export data, anything irreversible) needs the person's approval or a standing approval covering it (a grant.* decision, an active standing approval, grant.release), under the core's approval rule. With one, act and cite it as evidence on the work. Otherwise prepare the whole effect and ask once as a ready ask (`references/asking.md`), and keep working on what does not wait. Payments, signatures and filings are always a person's; prepare them. Standing approvals (grants) are the only standing permissions: record none in a goal, decision or role card.
 3. Otherwise it is a choice. (a) Whose: what changes where resources go or how functions work together is strategy, a point or a bet on the tree (step 6), and the bet's basis says who decides (step 4). Other choices go by layer. L1 changes a goal or the company: starting, stopping or reshaping a goal (its target, stop condition or expected cost), a hire or other material commitment, a spend envelope or a grant. L2 is how a function pursues a goal: its head decides. L3 is how one task is done: any agent decides. An L2 or L3 choice that contradicts or extends strategy or an L1 one is that one. The owner's choices are only top-level judgement (the ICP, the customer problem, the offer, stage, a bet, a material commitment) and the permission edge (a grant, authority, an account or address they own, a fact only they hold); one they already stated is recorded as theirs with their quote (step 6), never asked back or chosen for them. (b) Risk: beyond those, whether to decide or ask turns on risk and review, not layer. Size the risk: what breaks, for whom, how reversibly. Cut it with tests at the lowest proving layer and the independent review (step 5), then decide when you have high confidence, as most small items and refactors allow. A high-risk change you cannot test or review is held, not shipped. (c) Chain: before you decide, write the chain down from the goal (one line for a small call): who the company serves and wins for, the ICP use case or pain this choice serves, what that needs the product or plan to emphasise, then this choice; with its impact, the strongest alternative and why it loses, and its premises dated (step 1 rechecks stale ones).
 4. Strategy by an agent: you write a point or a bet on any path and replace any item; it is current at once and the owner is told (a validated bet needs its citation; owner decided is stored as such only with the Admin's quoted words, else as your hypothesis). A grant, an approval, a payment and a one-way door stay the person's: raise an ask (asks_set) with a recommendation and options (each option's impact says what happens if the owner picks it), batched, and keep working on what does not wait. An L1 goal change you make yourself only where the company's decisions mode is notify, with the owner told. Be sure first: one option is clearly better, it serves the company as a whole, its reason and strongest alternative are written, and the independent review (step 5) agrees.
 5. For a decision others will build on, or one with real risk (a refactor, a release, a change users meet), get an independent review before acting: a fresh-context reviewer that did not produce the choice (a subagent; the same model is fine), given only the record (goal served, choice, alternatives, key assumption, evidence, tests run). It checks each link of the chain from the goal, re-reads any premise it doubts, and asks whether the strongest alternative was weighed fairly and the work changes the goal rather than only looking helpful. It replaces the owner's review of refactors and releases. Fix what it finds, note it in rechecked and act; ask only what it cannot resolve.
@@ -72,4 +72,5 @@ Before a choice or an effect: whether it is already decided, who decides, and ho
 - **Transition:** the choice or effect recorded at its layer, with provenance
 
 ## References
+- Read [Asking and refusals](references/asking.md) when you would ask, a call is refused, a permission is missing or you rely on an assumption.
 - Read [Recording a stated outcome and a sensitive decision](references/decision-check-record.md) when you record an outcome the person states in chat, or a decision with personal, HR, legal, financial or customer-confidential detail.

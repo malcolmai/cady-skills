@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "2dd017127de6386f1213"
-  library: "bdc87889e6a48ee4"
+  version: "6dbb26cde26f5c4e6b4d"
+  library: "c1f73bea4c4b77ba"
   function: "finance"
 ---
 # Budget and cost review
 
 **Point:** Allocate money to the few drivers that change a decision, from dated actuals, so spend follows what works.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Hold each budget as one row on a function node, with an amount and a purpose. Instead of: A list of allocations inside the Finance plan.

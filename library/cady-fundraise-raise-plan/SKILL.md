@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
-  version: "f80e637485db45e3d11d"
-  library: "bdc87889e6a48ee4"
+  version: "cef03d93704b3539a024"
+  library: "c1f73bea4c4b77ba"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process
 
 **Point:** Decide whether, when and how much to raise for a named milestone, so dilution buys proof for the next round.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Size the raise as net burn to a named milestone plus about six months of buffer. Instead of: Raise the round size typical for the stage, or as much as investors will give.

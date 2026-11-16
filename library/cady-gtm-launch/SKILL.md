@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "98de4dcc4daecdcd0e31"
-  library: "bdc87889e6a48ee4"
+  version: "a5f1cf55c91839c756b2"
+  library: "c1f73bea4c4b77ba"
   function: "gtm"
 ---
 # GTM launch session
 
 **Point:** Prepare a whole outbound motion in one session, so only activation waits on access or approval.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 Prepare a coordinated go-to-market launch from strategy through approved work. Use when: the company is starting a growth motion. Not for: choosing a persona (use `cady-gtm-offer-and-segments`) or drafting outreach.
 
@@ -36,7 +36,3 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 - 3. Use the channel plan from the References line for each chosen channel’s play, execution agent and operational readiness.
 - 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing customer outreach. Use the reviewed List import from the References line for Cady CRM; keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall.
 - 5. Prepare one review with crm_outreach (no id) per eligible cohort of at most 50 parties. Read the review with cady_read review:outreach/<approvalId> and report the approvalId. Follow the References line for approval and release, send nothing unapproved, and never ask for addresses, bodies or credentials.
-
-## Shared execution sections
-
-Read these sections of `cady-core-execution`: Execution guidance.

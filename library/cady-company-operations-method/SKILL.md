@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "4c85518332db39fe0445"
-  library: "bdc87889e6a48ee4"
+  version: "8f7898067650d1cf8299"
+  library: "c1f73bea4c4b77ba"
   function: "company_operations"
 ---
 # Company Operations
 
 **Point:** Keep the company legally sound and running, spending prevention effort where a missed obligation would cost most.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Rank obligations by what missing one would cost against what preventing it costs, and record each that does not apply with its reason. Instead of: Work through a generic compliance checklist in order, giving every item equal weight.
@@ -22,6 +24,9 @@ metadata:
 - Raise a clock to the owner the same day when it is past due or within about 30 days; carry the rest as dated work. Instead of: Batch compliance into a periodic review and report all deadlines together.
 - Treat a material or non-standard case as a specialist's, and missing evidence as an open question, never as an exemption. Instead of: Give a confident answer from general research to save adviser cost.
 - Ask for a commercial value the company has not recorded; write none of it into a draft or template. Instead of: Fill a payment period, interest rate or term from general practice so the section looks finished.
+
+## Every run
+
 
 ## Role card
 

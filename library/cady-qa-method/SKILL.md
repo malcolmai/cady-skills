@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "b3b086544845f9c9090d"
-  library: "bdc87889e6a48ee4"
+  version: "49418ae51fdcc0c08659"
+  library: "c1f73bea4c4b77ba"
   function: "qa"
 ---
 # QA
 
 **Point:** Show what a fresh user actually meets, with evidence, so each iteration fixes the failures that matter most.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Walk journeys blind as a fresh user through the real surface; the builder's own walk is only a self-check. Instead of: Let the agent that built it verify it, or test from routes, seeded state and the database.
@@ -21,6 +23,9 @@ metadata:
 - Check the result the product produced, not only the steps: invented facts, wrong numbers or an unusable output fail the journey. Instead of: Pass the journey when the flow completes and every state renders.
 - Use the smallest check that could disprove the claim, at the lowest layer; run the real journey at the integrated candidate, not per chunk. Instead of: Run the full suite and release gate on every change.
 - Report a red check as information; block only on a security, isolation, authority or primary-path first-value regression. Instead of: Treat any red check as a stop until it is green.
+
+## Every run
+
 
 ## Role card
 

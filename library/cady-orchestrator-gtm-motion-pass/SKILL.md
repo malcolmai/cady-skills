@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.gtm_motion_pass"
-  version: "28c30ba7c12d8a16e717"
-  library: "bdc87889e6a48ee4"
+  version: "7835b8cb9d8e116e54f1"
+  library: "c1f73bea4c4b77ba"
   function: "orchestrator"
 ---
 # Orchestrate GTM
 
 **Point:** Each pass, the next unit of GTM effort goes to the stage where conversion breaks, behind an evidence gate.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Gate volume on evidence: a segment under its reply line goes back to positioning before another send. Instead of: Raising volume on a weak segment.

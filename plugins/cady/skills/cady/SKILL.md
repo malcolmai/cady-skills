@@ -5,23 +5,19 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "baa7baa72aef5f404a6e"
-  library: "bdc87889e6a48ee4"
+  version: "a248563320c90f357f02"
+  library: "c1f73bea4c4b77ba"
   function: "core"
 ---
 # Cady
 
-**Point:** Start every company run by reading Cady's context, then load the matching skill, so work begins from the company's record.
-
-Reads the company's context in Cady, then loads the matching skill. Use when the work is a company's sales and outreach, drafting to a person (read the sender's voice pack first), posts, competitors and pricing, tools and integrations, budget, fundraising, filings and hiring, product and engineering work, and company agents. Not for personal tasks or coding with no company context.
+**Point:** Start every run from Cady's state, then load the one installed skill that fits, so no run guesses.
 
 ## Start every run
 
-    cady_read {"search": "<what you are about to do, in one sentence>"}
+    cady_start {"task": "<your request, verbatim>"}
 
-The reply ranks the matching skills, strategy items, decisions, work and asks. Resume work with `work_read`; read a product with
-`cady_read {"refs": ["product:*"]}`.
-Then follow cady-core-run-sequence. A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-review`).
+It returns the state and the exact calls for what is open. A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-review`).
 
 | Area | For |
 |---|---|
@@ -47,12 +43,6 @@ Then follow cady-core-run-sequence. A new company, or one with no direction yet,
 | `finance/pricing` | plans, prices, limits, Stripe |
 | `finance/plan` | the finance plan: cash, burn, runway |
 
-## Add or change an agent
-
-Read `agents_read` first. Reuse or update an agent that already owns the outcome. To create, bind or schedule one, load `cady-company-manage-agents`; its channel execution agent brief is [`references/execution-agent-brief.md`](references/execution-agent-brief.md).
-
 ## Load a skill
 
-Try: the installed skill by name (`cady-core-skill-index` lists them); then fetch the skill and the references it links (`references/` beside its SKILL.md) from the Library source below (pinned URL, `library/<name>/SKILL.md`). In the claude.ai zip, `library/<name>/SKILL.md` sits beside this skill. `cady_read {refs:["<cady-id>"]}` returns the text of a core method only, e.g. `cady_read {refs:["skill.company.decision_check"]}`. If no route works, say the method is unavailable and hold company writes.
-
-    Library source: https://raw.githubusercontent.com/malcolmai/cady-skills/bdc87889e6a48ee4/
+Load the installed skill by name: the role's `cady-<function>-method`, then the task skill its area names. A skill that is not installed is unavailable: say so and hold company writes.

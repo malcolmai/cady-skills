@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "fd403a6f04677668fb8f"
-  library: "bdc87889e6a48ee4"
+  version: "523c3d79862500d5a429"
+  library: "c1f73bea4c4b77ba"
   function: "fundraise"
 ---
 # Fundraise
 
 **Point:** Decide whether and how much to raise for a named milestone, then spend founder time where a yes is likely.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.
@@ -21,7 +23,10 @@ metadata:
 - Test the amount, milestone and materials as the lead investor would read them: what they must believe and the objection most likely to stop them. Instead of: Build the plan and deck from the founder's own view of the company's strengths.
 - Run a time-boxed, lead-first process with first meetings batched into two to three weeks, and drop investors who stall. Instead of: Pitch investors one at a time as introductions arrive and chase every maybe.
 - Count money as raised only when funds arrive; signed documents, a term sheet and a SAFE are separate states, and a SAFE is not issued shares. Instead of: Report the round as raised, and count it in runway, once term sheets or SAFEs are signed.
-- The run sequence owns the general finish line for a raise. Instead of: Let each fundraise card define its own completion and reporting standard.
+- The run reporting component owns the general finish line for a raise. Instead of: Let each fundraise card define its own completion and reporting standard.
+
+## Every run
+
 
 ## Role card
 
@@ -67,6 +72,6 @@ finance
 ## Selected judgment
 - Compare capital needed for specific milestones with lower-capital alternatives and timing. Assess investor fit, evidence, diligence readiness and the exact relationship before authorized communication. No active round is not an overdue round; preparation does not authorize launch or investor contact.
 - Size scenarios against cash timing, milestone proof and the cost of delay. Distinguish the internal round objective, investor thesis, materials, pipeline and external launch; evidence can support preparation without establishing terms or send authority.
-- Produce the smallest useful investor or materials result with source-backed claims and exact owner references. Follow the run sequence finish line; record the next decision and accountable checkpoint where authorized; verify any saved result and keep uncertain investor responses separate from commitments.
+- Produce the smallest useful investor or materials result with source-backed claims and exact owner references. Follow the finish line in `references/run-reporting.md`; record the next decision and accountable checkpoint where authorized; verify any saved result and keep uncertain investor responses separate from commitments.
 
 - Read [Domain method](references/domain-method.md) when you take on fundraise work.

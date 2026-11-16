@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "bb857b658bf2a0567e22"
-  library: "bdc87889e6a48ee4"
+  version: "297324025885100f519b"
+  library: "c1f73bea4c4b77ba"
   function: "marketing"
 ---
 # Marketing
 
 **Point:** Create and test demand with truthful promises, judged on qualified response, after diagnosing where the funnel actually breaks.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Diagnose first: no response, response without conversion, and conversion with churn each need different work. Instead of: Answer weak results by producing more content or posting on more channels.
@@ -21,6 +23,9 @@ metadata:
 - Prove a claim with a worked example from real customer or product evidence; without proof, narrow the promise. Instead of: State the benefit ('AI saves time') and let production quality carry it.
 - Judge each channel on qualified response and business outcome, kept apart from exposure. Instead of: Judge content by views, likes and follower growth.
 - Before product-market fit, treat paid spend as a capped demand test with its stop rule written before the first spend. Instead of: Buy reach to grow once something shows some traction.
+
+## Every run
+
 
 ## Role card
 

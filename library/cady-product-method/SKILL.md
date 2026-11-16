@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "cf0f08f73308939cf052"
-  library: "bdc87889e6a48ee4"
+  version: "3b783f69b3b7875d7626"
+  library: "c1f73bea4c4b77ba"
   function: "product"
 ---
 # Product
 
 **Point:** Decide what to build from users' real outcome against their alternative, so iterations buy correct learning, not output.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Spend most depth on the one or two problems that decide whether the product wins, and prove options by building and measuring them. Instead of: Spread effort evenly across the backlog, or stop at a spec, rubric or research summary for the hard problem.
@@ -22,6 +24,9 @@ metadata:
 - Without customer feedback, state an assumed ICP and problem with what would disprove it, and build for them now. Instead of: Wait for interviews or validated demand before building, or treat the founder's guess as validated.
 - Call user-path work done only when it is seen working where the user meets it: the done story walked blind on the installed build. Instead of: Accept a reported result, a merged PR or a deploy as done.
 - Make a small tweak directly with one line of why; spend process only on choices that are costly to reverse. Instead of: Run every change through a spec, a review round and an eval to be safe.
+
+## Every run
+
 
 ## Role card
 

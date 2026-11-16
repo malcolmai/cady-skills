@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.tam_map"
-  version: "6b5a1e3a2bd745420554"
-  library: "bdc87889e6a48ee4"
+  version: "42018eaff4e4d9758636"
+  library: "c1f73bea4c4b77ba"
   function: "gtm"
 ---
 # TAM map
 
 **Point:** Find people who clearly fit a persona; prefer several narrow personas over one broad, weakly fitting offer.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Gate on clear fit to the persona; sourced signs of its trigger only rank. Instead of: Rank accounts by how much can be sourced about them or by firmographic match.

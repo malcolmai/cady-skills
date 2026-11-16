@@ -5,15 +5,17 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "d036d7a95eb98449a9e3"
-  library: "bdc87889e6a48ee4"
+  version: "6cc59db8c1407d2070f7"
+  library: "c1f73bea4c4b77ba"
   function: "design"
 ---
 # Design
 
 **Point:** Give each surface real craft for its audience's job, so the product feels as good as it works.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
+
+Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - For a material redesign, render about three meaningfully different directions in the real medium and compare them on the same flow. Instead of: Iterate on one direction, or offer palette swaps and written descriptions as the options.
@@ -21,7 +23,10 @@ metadata:
 - Start from the hardest user decision and the whole trigger-to-result journey, including empty, denied, failed and recovery states. Instead of: Start from the requested screen and make it attractive in its happy state.
 - Show the real product: capture real screens from realistic state and compose around them, never redrawing or generating UI pixels. Instead of: Mock up or generate a polished product image for marketing and help pages.
 - On a surface that is not a buying reason, follow the standard pattern and the design system; spend bespoke craft where the surface wins customers. Instead of: Design every page bespoke so the product looks distinctive everywhere.
-- The run sequence owns the general finish line for product design. Instead of: Let each function card define its own completion and reporting standard.
+- The run reporting component owns the general finish line for product design. Instead of: Let each function card define its own completion and reporting standard.
+
+## Every run
+
 
 ## Role card
 

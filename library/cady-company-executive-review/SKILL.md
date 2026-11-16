@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.executive_review"
-  version: "f1312479cec14ade1e8d"
-  library: "bdc87889e6a48ee4"
+  version: "756fdc1409200ad33c71"
+  library: "c1f73bea4c4b77ba"
   function: "company"
 ---
 # Executive review
 
 **Point:** Call every goal against its prediction, weigh each initiative and hand the changes to the orchestrator, so calls stay calibrated.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Call every open goal at the weekly review, a persist in one line with its reading; between reviews take one decision only on a trigger. Instead of: Pick one decision per pass and let the other goals stand unrecorded.
@@ -56,7 +56,7 @@ Run the weekly review of open goals and initiatives, or make one company-level d
 6. Find the evidence that would change the choice (`cady-company-decision-questions`); request the rest as bounded orchestrator work.
 7. Write the prediction before deciding (a two-way door needs only its default and reviewBy).
 8. Review before deciding; a consequential or one-way decision also gets a pre-mortem and a red-team subagent given the frame and evidence, never your recommendation.
-9. Decide within your authority. An L1 choice you may make yourself only in notify mode and when `cady-company-decision-check` step 4 holds; record it and the owner is told. Otherwise, when the call stays controversial after testing and review or the mode reserves it, raise an ask (asks_set) to the owner with options and your recommendation, as the run sequence asks; it reaches them on Needs you (cady_read view work.needs_you). Ask nothing else: a missing schedule or record gap goes in the orchestrator instruction (step 11); an agent problem is yours to redesign (step 15).
+9. Decide within your authority. An L1 choice you may make yourself only in notify mode and when `cady-company-decision-check` step 4 holds; record it and the owner is told. Otherwise, when the call stays controversial after testing and review or the mode reserves it, raise an ask (asks_set) to the owner with options and your recommendation, as `references/asking.md` says; it reaches them on Needs you (cady_read view work.needs_you). Ask nothing else: a missing schedule or record gap goes in the orchestrator instruction (step 11); an agent problem is yours to redesign (step 15).
 10. Record it: the full record (steps 3-8, the decision and reviewBy) as a File (files_set) cited by the work result (work_set {id, status: done, result, evidenceRefs: [file:<fileId>]}); a strategy result is a point or a bet with its basis, written with decisions_set (`cady-company-decision-check` step 6). The decision reference holds the calls.
 11. Hand the changes to the orchestrator as one instruction (work_set {kind: task, owner: the orchestrator's agent id, headline naming the orchestrator, next, evidenceRefs, brief {doneWhen}}), each change naming the goal or decision it serves and the outcome, not how. The orchestrator allocates and files function work, while designing or changing an agent stays yours (step 15); file no task under another function and do no function work yourself. With no change, file none. The decision reference holds the call.
 12. At a decision's reviewBy, read reported results first, then score outcome against prediction (hit or miss) and keep, change or stop; record what you learned by replacing the old bet or decision, and rule out a wrong outcome (decisions_set ruleOut, or status wrong by subject). Before the next comparable decision, read the scored records.

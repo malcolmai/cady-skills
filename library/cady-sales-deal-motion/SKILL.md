@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "ad53c50b5ccdc24f2f5f"
-  library: "bdc87889e6a48ee4"
+  version: "41dd91840236de9df497"
+  library: "c1f73bea4c4b77ba"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
 
 **Point:** Move one deal on buyer evidence and dated mutual steps, so real deals close and non-fits end fast.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Use discovery to learn whether a problem worth solving now exists; the buyer talks most and either side may conclude no fit. Instead of: Use the first call to demo the product and pitch its features.

@@ -5,15 +5,15 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision_questions"
-  version: "a760841be2b4ddce2e06"
-  library: "bdc87889e6a48ee4"
+  version: "e2e124a0a9772ff1bca8"
+  library: "c1f73bea4c4b77ba"
   function: "company"
 ---
 # Key questions and research
 
 **Point:** Ask only questions whose answers would change a decision, and settle each by the cheapest sufficient evidence.
 
-**Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
+**Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
 - Start from the decision: name the answer that would reverse it and when it is needed, and drop any question no decision depends on. Instead of: Research the topic broadly, then see which decisions the findings inform.
