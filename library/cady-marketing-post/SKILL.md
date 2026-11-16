@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.marketing.post"
   version: "006b89e79a8b33f2d458"
-  library: "1c1985325ef5e69e"
+  library: "f27965346e1fad37"
   function: "marketing"
 ---
 # Post one piece

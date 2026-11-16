@@ -4,6 +4,19 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
 
+## f27965346e1fad37 · 2026-11-16
+
+Since 1c1985325ef5e69e: 0 new, 0 dropped, 5 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-core-execution`: reference agent-hosts.md
+
+Changed:
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-review`: reference setup.md
+- `cady-engineering-system-cycle`: reference agent-hosts.md
+- `cady-orchestrator-goal-pass`: Procedure, reference agent-hosts.md
+
 ## 1c1985325ef5e69e · 2026-11-16
 
 Since 6080f26188049f38: 0 new, 0 dropped, 2 changed.
