@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Challenge claims with the smallest independent evidence that could disprove them, so owners decide on tested outcomes, not test counts.
+
 - **Accountability:** The release owner decides; QA independently challenges the evidence; a qualified specialist owns applicable regulatory, safety or domain judgment.
 
 ### Iteration

@@ -5,11 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.context"
-  version: "4d5f57a4f30950310a1a"
-  library: "f27965346e1fad37"
+  version: "39b6343ef14df3cd0675"
+  library: "bdc87889e6a48ee4"
   function: "core"
 ---
 # Company context
+
+**Point:** Work from the root's recorded point and bets and check readiness before effects, so agents act on what was decided.
 
 **Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 

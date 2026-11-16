@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Design from the audience's decision and journey, judged on the real surface, so the work moves that decision.
+
 ### Baseline
 
 | Key | Outcome |

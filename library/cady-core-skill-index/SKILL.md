@@ -5,11 +5,13 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.skill_index"
-  version: "6eb6398cc9f85b833d51"
-  library: "f27965346e1fad37"
+  version: "8cacd0d2fd461e0082c0"
+  library: "bdc87889e6a48ee4"
   function: "core"
 ---
 # Skill index
+
+**Point:** Pick or bind the task skill whose use-when fits the work, so an agent loads the right method.
 
 **Company context:** `cady_read {"search": "<what you are about to do, in one sentence>"}`
 

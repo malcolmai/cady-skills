@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Judge whether each customer got the value they expected and route gaps to their cause, so recovery rests on evidence.
+
 ### Method
 
 #### Frameworks

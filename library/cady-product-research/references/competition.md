@@ -1,5 +1,7 @@
 # Competition
 
+**Point:** Compare real alternatives on dated evidence and say when each wins, so positioning rests on evidence, not feature counts.
+
 1. Define the customer, buying/use circumstance, job and boundary of the comparison; name the dimension being examined, such as workflow, capability, price, distribution or switching cost.
 2. Identify actual alternatives available in that circumstance: named competitors where evidenced, adjacent substitutes, internal/manual workarounds, and doing nothing or staying put. A company is an alternative only when customers can plausibly choose it for the scoped job.
 3. Compare like with like on dated evidence. Prefer observed customer behavior, current product/pricing documentation, filings, direct tests and credible independent sources. Record geography, segment, plan/version and date where they affect comparability. Separate observed fact from vendor positioning and your inference. For alternatives, profile depth, provenance, retrieval and keeping the result current, follow the competitor profile reference.

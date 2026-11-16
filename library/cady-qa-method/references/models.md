@@ -1,5 +1,7 @@
 # Model registry
 
+**Point:** Track dated, sourced model prices so agent spend is attributed; the host chooses which models to run.
+
 ## Bets
 
 - Let the host pick the model for each task; record what it used and price it here. Instead of: Prescribing a model tier for each kind of task.
@@ -485,4 +487,3 @@
 | DeepSeek V4.1 Flash | API |
 
 - **Use:** Writes and retrieves: workstreams, bounded edits, triage, test fixes, bulk mechanical changes.
-- **Point:** Track dated, sourced model prices so agent spend is attributed; the host chooses which models to run.

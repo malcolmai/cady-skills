@@ -1,5 +1,7 @@
 # Technology
 
+**Point:** Assess a technology against the no-build baseline at the real workload, on measured evidence, so adopting it is never assumed.
+
 1. Define the product use case, users, required outcome, expected scale and material constraints; identify what decision the evidence could inform.
 2. Compare credible ways to meet the need: existing capability, buy/use a service, integrate, build, manual operation, defer and no-build where relevant. Describe the baseline so a new technology is not treated as necessary by default, nor an older one assumed sufficient.
 3. Distinguish independently measured behavior from vendor-published claims and demos. Record version, configuration, workload, date and method for benchmarks; do not generalize a narrow test beyond its conditions.

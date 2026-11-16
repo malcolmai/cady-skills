@@ -1,5 +1,7 @@
 # Domain method
 
+**Point:** Set the bar from the user's situation and judge by their real outcome, so product work counts results, not activity.
+
 ### Method
 
 - Definition states what the product is, for whom and the outcome it enables; Roadmap holds the point and bets, the founder's beliefs; a release is a Company Work task. Discovery, assumptions and release go/no-go follow `cady-product-manage`; curated Competition and Technology analysis lives in the Research library, selected through the research topic. Attribute founder choices as decisions, not research evidence; retain exact references, not copied source bodies or execution status.

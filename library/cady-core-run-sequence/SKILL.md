@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.run_sequence"
-  version: "cdc6ec9875a29b1ab0f9"
-  library: "f27965346e1fad37"
+  version: "7c04145046a274bfc208"
+  library: "bdc87889e6a48ee4"
   function: "core"
 ---
 # Agent run sequence

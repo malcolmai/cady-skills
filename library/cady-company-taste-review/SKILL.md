@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "107316bbf986b418c510"
-  library: "f27965346e1fad37"
+  version: "66cf475a77bc7f2232b8"
+  library: "bdc87889e6a48ee4"
   function: "company"
 ---
 # Writing craft and taste decisions

@@ -1,5 +1,7 @@
 # Integration vendor choice
 
+**Point:** Reuse what the company has or pick the lowest-risk tool for the exact job, so no connection adds needless risk.
+
 ## Bets
 
 - Reuse a suitable tool the company already has or chose, even when a newer one looks better. Instead of: Recommend the best-in-class tool for the job.
@@ -11,4 +13,3 @@
 
 - **Social surface:** Own accounts: choose through channel_connectors for the exact operation; prefer an official API that fits, but a knowingly selected unofficial connector is valid with its account risk stated. Verify the actual account (authentication), qualify the chosen operation, read posts and insights, and draft; scheduling and publishing stay with the publication approval. Competitor posts: prefer official discovery (Instagram Business Discovery for public business or creator accounts, YouTube search and channel reads, approved Threads keyword search, X search), then public web search, then a paid public-data vendor proposed under selection, stating whether it uses official APIs or scraping. TikTok's Research API and Meta's Content Library serve vetted researchers only; LinkedIn offers no read of other companies' posts. Never collect through a logged-in account (walled_gardens). Save each post as positioning_context describes.
 - **Walled gardens:** For broad public research involving walled gardens, prefer the host's default web search or the user's selected dedicated data provider, within verified access, permissions and spend. Do not scrape search-result pages or use authenticated personal accounts as bulk scrapers. Reserve account-specific access for bounded work requiring private state. A vendor example is not a selected tool, connection proof or authority grant.
-- **Point:** Choose the tool that does the exact job with least commitment and risk, reusing what the company already has.
