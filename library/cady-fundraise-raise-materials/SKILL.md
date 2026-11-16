@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "b7fc07a2caa28625fb1d"
-  library: "c1f73bea4c4b77ba"
+  version: "034b1dd2509f19e7f219"
+  library: "cfea7a0f5db313ae"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
@@ -42,7 +42,7 @@ Draft or revise an investor memo, deck narrative, data room or monthly investor 
 
 ## Procedure
 
-1. Read the root's point and bets (cady_start carries them on its governing chain), existing work with work_read and exact source documents with cady_read file:<id>. Separate accepted facts, founder choices, bets, dated metrics, inferred claims and missing evidence. Ask only for a decision that changes the commissioned material.
+1. Read the root's point and bets (cady_start carries them in its `node` and `above` fields), existing work with work_read and exact source documents with cady_read file:<id>. Separate accepted facts, founder choices, bets, dated metrics, inferred claims and missing evidence. Ask only for a decision that changes the commissioned material.
 2. Draft only the requested kind. A memo makes a checkable investor case; a deck narrative states each slide's question, claim, proof and limit. Keep internal choices distinct from investor-facing claims. Define each metric once and use it everywhere (MRR versus ARR, bookings versus revenue, logo versus net revenue retention, cohort start rule); investors check that the deck, model and data room agree. For cash and burn figures use `cady-finance-runway` and state each figure's basis (assumption or observed); name the plan file if one exists; Cady never classifies files. Then read it as the target investor would: the three objections they would raise first, each answered in the draft with its evidence (quotes exact) or named as an open risk, and how the round fits their thesis (stage, sector, check size) from their own record, labelled assumed where unsourced. Judge it with the taste check (references/taste-check.md, investor part) before review.
 3. Monthly investor update, drafted for a fixed send day: subject with company, month and one-line headline; 1) highlights (2 to 3 wins with numbers); 2) metrics table, same rows every month (revenue or MRR, growth, customers, burn, runway months, cash); 3) lowlights and what you are doing about them; 4) asks, specific and actionable (an intro to a named role, a hire, a customer type); 5) thanks. Under 400 words; bad news early and plainly; never change a metric definition without saying so.
 4. Data room, ready before priced-round diligence (lighter for a SAFE): incorporation and governing documents, board and shareholder consents; fully diluted cap table reconciled to the share register and every SAFE, note and option grant with its board approval; IP assignments from every founder, employee and contractor; key customer, supplier and financing contracts; monthly financials for the last 12 to 24 months and the model; metric definitions; team and option list; material filings and disputes. Common gaps that stall a close: a missing IP assignment, an unapproved option grant, a cap table that does not match the register, or no evidence that a US 83(b) election was filed in time (the deadline cannot be cured later).
