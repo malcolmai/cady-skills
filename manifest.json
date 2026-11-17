@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-17T00:00:00Z",
   "bundle": {
-    "tag": "5e7cf5ce5896ae8e",
-    "version": "5e7cf5ce5896ae8e0074d116c7bb4dadaa679ea534d9e6c490eb60db75c15f92",
-    "pluginVersion": "2026.11.17-5e7cf5ce"
+    "tag": "5aaea3dd7d596b5a",
+    "version": "5aaea3dd7d596b5a1ae8c91431012c5c1ae2b95d1dda06d2e078c8227ca3140f",
+    "pluginVersion": "2026.11.17-5aaea3dd"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.17-5e7cf5ce"
+    "version": "2026.11.17-5aaea3dd"
   },
   "skills": [
     {
@@ -57,7 +57,7 @@
       "name": "cady-company-executive-review",
       "path": "library/cady-company-executive-review",
       "cadyId": "skill.company.executive_review",
-      "version": "71522267fb432d42df0a"
+      "version": "712ec9861d258516ca93"
     },
     {
       "name": "cady-company-experiment",
@@ -69,7 +69,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "bd3ff462c8d042c620da"
+      "version": "62971b86aa09f4151dd7"
     },
     {
       "name": "cady-company-method",
@@ -81,13 +81,13 @@
       "name": "cady-company-operations-compliance-register",
       "path": "library/cady-company-operations-compliance-register",
       "cadyId": "skill.company_operations.compliance_register",
-      "version": "240e719aed8198290492"
+      "version": "827bf1e1378866e91d7a"
     },
     {
       "name": "cady-company-operations-contract-checks",
       "path": "library/cady-company-operations-contract-checks",
       "cadyId": "skill.company_operations.contract_checks",
-      "version": "306f2764dcb344ac4e7d"
+      "version": "b4e26827dfe592f53bf6"
     },
     {
       "name": "cady-company-operations-inbox-follow-through",
@@ -111,19 +111,19 @@
       "name": "cady-company-operations-requirement-register",
       "path": "library/cady-company-operations-requirement-register",
       "cadyId": "skill.company_operations.requirement_register",
-      "version": "b63570e0b0b3709c574c"
+      "version": "4258c8fbe3f928c2db40"
     },
     {
       "name": "cady-company-review",
       "path": "library/cady-company-review",
       "cadyId": "execution.topic.company_review",
-      "version": "aed786909472343c87a9"
+      "version": "ff9d8eb690fb63a9848b"
     },
     {
       "name": "cady-company-taste-review",
       "path": "library/cady-company-taste-review",
       "cadyId": "skill.company.taste_review",
-      "version": "857661a07597e6d6233c"
+      "version": "bb5cffae73edf4c32e33"
     },
     {
       "name": "cady-company-voice-pack",
@@ -285,7 +285,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "d9af3b82ec9cb677b428"
+      "version": "37312b8ff49887721cbb"
     },
     {
       "name": "cady-gtm-offer-and-segments",
@@ -345,7 +345,7 @@
       "name": "cady-orchestrator-goal-pass",
       "path": "library/cady-orchestrator-goal-pass",
       "cadyId": "skill.orchestrator.goal_pass",
-      "version": "55638f287c39a3aa0293"
+      "version": "37c6049150fbf0672a3c"
     },
     {
       "name": "cady-orchestrator-gtm-motion-pass",
@@ -381,13 +381,13 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "82e4c1bc9e28de1703d7"
+      "version": "316298e15b837869b36a"
     },
     {
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "3b783f69b3b7875d7626"
+      "version": "3cdd7a4bc8bad0227f3b"
     },
     {
       "name": "cady-product-research",
