@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "32f0ee13542de48c7733"
-  library: "d6293ffcdacbd003"
+  version: "5960e8131f42eee69a1f"
+  library: "8f1b82867a8ae070"
   function: "fundraise"
 ---
 # Fundraise

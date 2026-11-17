@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "3cdd7a4bc8bad0227f3b"
-  library: "d6293ffcdacbd003"
+  version: "1dccfea13d71b94ae326"
+  library: "8f1b82867a8ae070"
   function: "product"
 ---
 # Product
@@ -77,9 +77,9 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 
 ### Skills
 - `cady-product-manage`: Decide what to build and why; run discovery; plan each release and its go/no-go; run a goal to done.
-- `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
+- `cady-company-evidence`: A decision you own needs evidence: frame its questions, take the cheapest route, pre-register any test of behaviour.
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
-- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
+- `cady-company-decision`: Before a choice or an effect: whether it is decided, who decides, how to test a big call and how to record it.
 - `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
 ## Parent function

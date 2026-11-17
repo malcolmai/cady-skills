@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "5aa984fe2945bf613b7e"
-  library: "d6293ffcdacbd003"
+  version: "efb0059721bb00b40418"
+  library: "8f1b82867a8ae070"
   function: "gtm"
 ---
 # Cold email cycle
@@ -52,7 +52,7 @@ Write and send cold email to people not yet contacted, using one template per se
 2. Read the List or parties and cady_read party:<partyId>; apply `references/outreach-release.md`, Permission. Exclude opted-out, suppressed, engaged parties (route to warm or reply), prior touches, missing names and role inboxes. Give every candidate, in or out, a one-line reason in words, not a code. Keep unverified destinations visible as held. Verify addresses before first send; keep catch-all a small share, never buy a list and re-verify data older than 90 days.
 3. Before the first cycle or after a sender change, check and record the sender as `references/cold-deliverability.md`, setup says.
 4. In cold_template mode the reason belongs to the persona, so people who share it get their own segmentKey (the persona_key). Use the brief’s angle, variants and shares and its segmentKey to write one plain cold_template per variant in the profile’s words; apply `references/outreach-drafting.md` (Brief, Unknowns). No images or attachments and at most one link. Run the draft check (the draft check part of `references/outreach-drafting.md`) before the taste check (`references/taste-message.md`). Use at most one proof item from the credibility inventory, with only CRM-approved customer names. Fields marked templatable use {{field.key|fallback}}. With only title and company size as evidence, ask for a one-word reply or offer a link, not a call.
-5. Prepare the review (crm_outreach (no id)), then read it back (cady_read review:outreach/<approvalId>), following `references/outreach-release.md`. Use crm_outreach (no id) (relationship type customer: a persona segmentKey puts each recipient on the customer board as Prospect) with cycleKey, segmentKey, variants, proof and listId or partyIds; include trackedLink {destination: "<final https>"} for a linked template, never recipientBodies. Check samples, exclusions and remaining cap. Pass motion 'customer' on the prepare call.
+5. Prepare the review (crm_outreach without an id), then read it back (cady_read review:outreach/<approvalId>), following `references/outreach-release.md`. Use crm_outreach without an id (relationship type customer: a persona segmentKey puts each recipient on the customer board as Prospect) with cycleKey, segmentKey, variants, proof and listId or partyIds; include trackedLink {destination: "<final https>"} for a linked template, never recipientBodies. Check samples, exclusions and remaining cap. Pass motion 'customer' on the prepare call.
 6. The company cold quota is 100 recipients per rolling day and 500 per rolling week. Release only as `references/outreach-release.md`, Release says.
 7. At cycle end report the cycle's outreach review rows (cady_read review:outreach/<approvalId>) with denominators, including sends and replies by variant, and each variant’s silence evidence (silence.byReason: bounced, complained, opted out, clicked without replying, scanner click only, no signal, which means unexplained, not ignored; opens and reply sentiment are not recorded, so say unknown, never infer them), on this work item for the brief’s author (channel strategy). Read send results for bounces, complaints and blocks (`references/agent-stop.md`).
 8. Stop: on any condition in `references/agent-stop.md`, stop and report as it says.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "0adfcec6cabd7e831269"
-  library: "d6293ffcdacbd003"
+  version: "42b3b2aa60011663a48a"
+  library: "8f1b82867a8ae070"
   function: "company"
 ---
 # Executive
@@ -28,11 +28,12 @@ Shared by every role card: `references/role-card-common.md`.
 ## Role card
 
 ### Framing
-The outer loop: you design and improve the system; the orchestrators run its work.
+The outer loop: you design and improve the system; the orchestrator runs its work.
 
 ### Skills
-- `cady-company-executive-review`: Run the weekly review of open goals and initiatives, or make one company-level decision between reviews.
+- `cady-company-weekly-review`: The weekly review: assess the company, call every goal and initiative, check bets, hand changes to the orchestrator.
+- `cady-company-decision`: Before a choice or an effect: whether it is decided, who decides, how to test a big call and how to record it.
+- `cady-company-evidence`: A decision you own needs evidence: frame its questions, take the cheapest route, pre-register any test of behaviour.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
-- `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
-- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
-- `cady-company-voice-pack`: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
+- `cady-company-change-agent-behaviour`: Change what agents do: edit a skill, role card, run sequence, tool text or an agent's goal.
+- `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check).

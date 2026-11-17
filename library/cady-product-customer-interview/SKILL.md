@@ -1,12 +1,12 @@
 ---
 name: "cady-product-customer-interview"
-description: "Customer discovery interviews. Use when: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. Not for: Choosing which question needs evidence or its research route (use `cady-company-decision-questions`), competitor research (use `cady-product-research`) or a sales call (use `cady-gtm-calls`)."
+description: "Customer discovery interviews. Use when: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. Not for: Choosing which question needs evidence or its research route (use `cady-company-evidence`), competitor research (use `cady-product-research`) or a sales call (use `cady-gtm-calls`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "62aea78d16cdea8eaa8f"
-  library: "d6293ffcdacbd003"
+  version: "77f99b5ab9f4ba32cbc5"
+  library: "8f1b82867a8ae070"
   function: "product"
 ---
 # Customer discovery interviews
@@ -24,7 +24,7 @@ metadata:
 
 Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions.
 
-**Not for:** Choosing which question needs evidence or its research route (use `cady-company-decision-questions`), competitor research (use `cady-product-research`) or a sales call (use `cady-gtm-calls`).
+**Not for:** Choosing which question needs evidence or its research route (use `cady-company-evidence`), competitor research (use `cady-product-research`) or a sales call (use `cady-gtm-calls`).
 
 **Unit of work:** one interview round for one question or assumption. **Kind:** strategy. **Parallel:** no. 
 
@@ -38,7 +38,7 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 
 ## Procedure
 
-1. Start from the decision. Name the question or assumption item it serves (`cady-company-decision-questions`) and write the two or three things you must learn and which answers would change the decision. Without that, do not schedule interviews.
+1. Start from the decision. Name the question or assumption item it serves (`cady-company-evidence`) and write the two or three things you must learn and which answers would change the decision. Without that, do not schedule interviews.
 2. Recruit people who had the problem recently and acted on it, not friends, fans or people who only fit a profile. Five to eight per segment usually show the pattern; stop when new interviews stop changing it. Requests to talk are outreach: an engaged contact through `cady-gtm-warm-email`, a LinkedIn connection through `cady-gtm-linkedin-message`, an introduction as `references/intro-request.md` says, and a cold person only in a cold cycle whose template is a plain research ask (the topic, about 20 minutes, no pitch). Once the requests are held for review, record one ask of kind call for whoever will take the interviews (question: hold N x 20 minutes; readyRefs: the guide File and the review id); in chat too, because the times arrive after this session. Booking a call with a person is an ask of kind call; messaging them is an outreach review. Do not hold an Executive work item for booking.
 3. Ask about specific past behaviour. 'Tell me about the last time you...', 'What did you do next?', 'What did you try before that?', 'What did it cost you in time or money?', 'Who else was involved?', 'Why then?'. Ask to be shown the spreadsheet, workaround or tool they use. Let silences run.
 4. Do not ask hypotheticals ('would you use', 'would you pay'), leading questions ('isn't X frustrating?'), yes or no questions, or for their solution. Do not pitch: describing your idea turns the rest of the interview into politeness. Spend the interview mostly listening.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "8443bf0d7a514c4983ad"
-  library: "d6293ffcdacbd003"
+  version: "1461f719b3b6d2eac13c"
+  library: "8f1b82867a8ae070"
   function: "gtm"
 ---
 # GTM
@@ -38,14 +38,14 @@ Find the right persona and the offer and messaging for them; choose channels tha
 - The pipeline from target list to calls and customers, run through the gtm skills.
 
 ### Decides
-- Test a channel or message with `cady-company-experiment` before scaling it.
+- Test a channel or message with `cady-company-evidence` before scaling it.
 - When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 - For reachable-people outcomes, own acceptance: N, people versus organisations, source and channel coverage, List membership and the shortfall (`cady-gtm-tam-map` sources the persona's List as execution work). Preserve the requested size and identity; measures are evidence, never targets.
-- When exact recipients and copy are ready, call crm_outreach (no id) under the channel's execution skill; one named person needs only the party and voice:me first (`cady-gtm-warm-email`).
+- When exact recipients and copy are ready, prepare a new outreach review (crm_outreach without an id) under the channel's execution skill; one named person needs only the party and voice:me first (`cady-gtm-warm-email`).
 - Choose the channel mix from `references/gtm-channels.md` and record it as a function-head decision with its alternatives, what would reverse it and a reviewBy date.
 
 ### Escalates
-- Escalate any persona, offer or channel choice that remains controversial after testing and independent review through `cady-company-decision-check` step 3.
+- Escalate any persona, offer or channel choice that remains controversial after testing and independent review through `cady-company-decision` step 4.
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
@@ -62,8 +62,9 @@ Find the right persona and the offer and messaging for them; choose channels tha
 ### Skills
 - `cady-gtm-offer-and-segments`: Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-persona-profile`: Write or revise one persona's profile (customer, investor, partner or supplier) before positioning, sourcing or copy.
-- `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
+- `cady-company-evidence`: A decision you own needs evidence: frame its questions, take the cheapest route, pre-register any test of behaviour.
 - `cady-gtm-channel-plan`: Turn accepted persona, offer and chosen channels into channel plays and execution briefs.
+- `cady-gtm-voice-pack`: Owner sets up or refreshes how their messages sound, or drafts read generic. Builds the pack from their sent messages.
 
 ## Parent function
 company

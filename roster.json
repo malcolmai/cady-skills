@@ -1,10 +1,13 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "d6293ffcdacbd003",
-    "version": "d6293ffcdacbd00303c7c3a1427c867076b4e345077719ea76d290df1ecdae63"
+    "tag": "8f1b82867a8ae070",
+    "version": "8f1b82867a8ae0707ca78e34648902f7e027a4327be3fbdea49b046cecd3840a"
   },
   "core": [],
+  "standalone": [
+    "cady-company-onboarding"
+  ],
   "system": [
     "company",
     "orchestrator"
@@ -17,16 +20,12 @@
       "purpose": "Sets the direction and designs and improves the system of agents and people that pursues it",
       "card": "cady-company-method",
       "skills": [
-        "cady-company-challenge",
         "cady-company-change-agent-behaviour",
-        "cady-company-decision-check",
-        "cady-company-decision-questions",
-        "cady-company-executive-review",
-        "cady-company-experiment",
+        "cady-company-decision",
+        "cady-company-evidence",
         "cady-company-manage-agents",
-        "cady-company-review",
         "cady-company-taste-review",
-        "cady-company-voice-pack"
+        "cady-company-weekly-review"
       ]
     },
     "orchestrator": {
@@ -35,14 +34,10 @@
       "purpose": "Keeps every goal moving across the families: progress, conflicts by point, allocation and pausing",
       "card": "cady-orchestrator-method",
       "skills": [
-        "cady-orchestrator-finance-motion-pass",
+        "cady-orchestrator-challenge",
         "cady-orchestrator-goal-pass",
-        "cady-orchestrator-gtm-motion-pass",
-        "cady-orchestrator-operations-motion-pass",
-        "cady-orchestrator-product-motion-pass",
-        "cady-company-challenge",
         "cady-company-manage-agents",
-        "cady-company-decision-check"
+        "cady-company-decision"
       ]
     },
     "gtm": {
@@ -62,8 +57,9 @@
         "cady-gtm-pipeline-pass",
         "cady-gtm-reply",
         "cady-gtm-tam-map",
+        "cady-gtm-voice-pack",
         "cady-gtm-warm-email",
-        "cady-company-experiment"
+        "cady-company-evidence"
       ]
     },
     "marketing": {
@@ -74,7 +70,7 @@
       "skills": [
         "cady-marketing-post",
         "cady-company-taste-review",
-        "cady-company-experiment",
+        "cady-company-evidence",
         "cady-gtm-offer-and-segments",
         "cady-gtm-events"
       ]
@@ -106,9 +102,9 @@
         "cady-product-customer-interview",
         "cady-product-manage",
         "cady-product-research",
-        "cady-company-experiment",
+        "cady-company-evidence",
         "cady-engineering-system-cycle",
-        "cady-company-decision-check",
+        "cady-company-decision",
         "cady-qa-stories"
       ]
     },

@@ -2,7 +2,74 @@
 
 <!-- cady-skills changelog series 2 -->
 
-The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
+The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
+
+## 8f1b82867a8ae070 · 2026-11-17
+
+Since d6293ffcdacbd003: 6 new, 11 dropped, 38 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady`: Start every run
+
+Changed:
+- `cady-accounting-method`: reference asking.md, reference run-reporting.md
+- `cady-company-change-agent-behaviour`: Improving an agent now means editing the company's own local skill and recording why; contributing upstream is optional.
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-method`: Role card, reference asking.md, reference run-reporting.md
+- `cady-company-operations-inbox-follow-through`: reference outreach-release.md
+- `cady-company-operations-method`: reference asking.md, reference run-reporting.md
+- `cady-company-taste-review`: description, intro, Procedure
+- `cady-customer-success-lifecycle`: reference outreach-release.md
+- `cady-customer-success-method`: reference asking.md, reference run-reporting.md
+- `cady-design-method`: reference asking.md, reference run-reporting.md
+- `cady-engineering-independent-review`: description, intro
+- `cady-engineering-method`: reference asking.md, reference run-reporting.md
+- `cady-engineering-system-cycle`: Procedure, reference engineering-cycle-dimensions.md, reference engineering-cycle-review.md
+- `cady-finance-method`: reference asking.md, reference run-reporting.md
+- `cady-fundraise-investor-list`: reference run-reporting.md
+- `cady-fundraise-investor-outreach`: Procedure, reference outreach-release.md
+- `cady-fundraise-method`: reference asking.md, reference domain-method.md, reference run-reporting.md
+- `cady-gtm-calls`: reference outreach-release.md
+- `cady-gtm-channel-plan`: Procedure, References, reference outreach-release.md
+- `cady-gtm-cold-email-cycle`: Procedure, reference outreach-release.md
+- `cady-gtm-launch`: Gtm launch, new References, reference first-offering.md, reference outreach-release.md
+- `cady-gtm-linkedin-message`: reference outreach-release.md
+- `cady-gtm-method`: Role card, reference asking.md, reference company-goals.md, reference domain-method.md, reference outreach-release.md, reference run-reporting.md
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-persona-profile`: reference run-reporting.md
+- `cady-gtm-pipeline-pass`: reference outreach-release.md
+- `cady-gtm-reply`: Procedure, reference outreach-release.md
+- `cady-gtm-warm-email`: reference outreach-release.md
+- `cady-marketing-method`: Role card, reference asking.md, reference run-reporting.md
+- `cady-orchestrator-goal-pass`: description, intro, Inputs, Procedure, Acceptance, Owner checks, References, reference agent-hosts.md, reference company-goals.md, reference family-checks.md, reference native-orchestration.md, reference run-reporting.md
+- `cady-orchestrator-method`: intro, Role card, reference asking.md, reference run-reporting.md
+- `cady-product-customer-interview`: description, intro, Procedure
+- `cady-product-manage`: Procedure, reference asking.md, reference company-goals.md, reference product-manage-detail.md
+- `cady-product-method`: Role card, reference asking.md, reference company-goals.md, reference run-reporting.md
+- `cady-qa-method`: reference asking.md, reference run-reporting.md
+- `cady-sales-deal-motion`: reference outreach-release.md
+- `cady-sales-method`: reference asking.md, reference run-reporting.md
+
+New:
+- `cady-company-decision`
+- `cady-company-evidence`
+- `cady-company-onboarding`
+- `cady-company-weekly-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-gtm-voice-pack`
+- `cady-orchestrator-challenge`
+
+Dropped (merged elsewhere or retired; check the new skills above):
+- cady-company-challenge
+- cady-company-decision-check
+- cady-company-decision-questions
+- cady-company-executive-review
+- cady-company-experiment
+- cady-company-review
+- cady-company-voice-pack
+- cady-orchestrator-finance-motion-pass
+- cady-orchestrator-gtm-motion-pass
+- cady-orchestrator-operations-motion-pass
+- cady-orchestrator-product-motion-pass
 
 ## d6293ffcdacbd003 · 2026-11-17
 
