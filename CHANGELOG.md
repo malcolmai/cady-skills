@@ -4,6 +4,16 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
 
+## 08b863aa7e59e96e · 2026-11-17
+
+Since cfea7a0f5db313ae: 0 new, 0 dropped, 4 changed.
+
+Changed:
+- `cady-company-executive-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-company-operations-method`: reference domain-method.md
+- `cady-company-review`: reference setup.md
+- `cady-gtm-launch`: Gtm launch
+
 ## cfea7a0f5db313ae · 2026-11-16
 
 Since c1f73bea4c4b77ba: 0 new, 0 dropped, 10 changed.

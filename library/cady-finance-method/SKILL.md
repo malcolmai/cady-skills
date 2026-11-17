@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
   version: "a1f102b719cb0705afdd"
-  library: "cfea7a0f5db313ae"
+  library: "08b863aa7e59e96e"
   function: "finance"
 ---
 # Finance
