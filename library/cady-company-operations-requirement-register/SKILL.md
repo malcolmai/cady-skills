@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.requirement_register"
-  version: "b63570e0b0b3709c574c"
-  library: "5e7cf5ce5896ae8e"
+  version: "4258c8fbe3f928c2db40"
+  library: "5aaea3dd7d596b5a"
   function: "company_operations"
 ---
 # Requirement register: research, check and record
@@ -42,7 +42,7 @@ Research, independently check and record one compliance requirement as a Cady Pr
 
 ## Procedure
 
-1. Read the register: one File per kind, named register-<kind>.md, found with files_read q "register <kind>" (q matches name and text terms, so take the hit whose name is exactly that) and read with cady_read; once it exists refer to it by its fil-<n> (replies show it; files_read, files_set and cady_read take it), and the dated work items cite it in evidenceRefs. Note each entry's name and review date. A record past its reviewBy is rechecked before any work relies on it. When a request depends on a saved company policy or contract, read that exact current source and the relevant current owner route before making an absence claim or handoff; report “not found in checked locations” when the search was bounded, never global absence.
+1. Read the register: one File per kind, named register-<kind>.md, found with files_read query "register <kind>" (query matches name and text terms, so take the hit whose name is exactly that) and read with cady_read; once it exists refer to it by its fil-<n> (replies show it; files_read, files_set and cady_read take it), and the dated work items cite it in evidenceRefs. Note each entry's name and review date. A record past its reviewBy is rechecked before any work relies on it. When a request depends on a saved company policy or contract, read that exact current source and the relevant current owner route before making an absence claim or handoff; report “not found in checked locations” when the search was bounded, never global absence.
 2. Research from the authority's own guidance, statute or form first, then dated secondary sources. Do not repeat a broad search when the exact current source and owner route settle the question. Establish the trigger, the deadline or rule, thresholds, who completes it, what proves completion and every exemption.
 3. Compare each exemption and threshold with the company's facts: which facts would remove an exemption or start a clock, and how close they are. Missing evidence is an open question, never an exemption or a not-required.
 4. Independent check: run one fresh-context subagent given only the facts and the question, not your research or conclusion, and ask it for the common mistakes on this requirement and their consequences. If no subagent is available, use a second dated source. Unresolved disagreement or a material or non-standard case goes to a specialist; until then the requirement stays an assumption.
