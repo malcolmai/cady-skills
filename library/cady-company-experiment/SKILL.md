@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.experiment"
-  version: "ad77834f9de1b3e95fe7"
-  library: "c49c95c34718ba2b"
+  version: "11cb3026c417382f1e5e"
+  library: "d6293ffcdacbd003"
   function: "company"
 ---
 # Pre-registered experiment
@@ -39,7 +39,7 @@ Test the riskiest assumption with a pre-registered experiment and a decision rul
 ## Procedure
 
 1. Pick the riskiest assumption: the one that would most change the plan if wrong and that you are least sure of. Test it before easier ones.
-2. Look it up first among the hypothesis bets in your context read (orchestrator.bets) and your tasks (work_read). If a current assumption exists, continue it; never register it twice.
+2. Look it up first among the hypothesis bets in your context read (orchestrator.bets) and your tasks (cady_read). If a current assumption exists, continue it; never register it twice.
 3. Pre-register before any work, recorded as `cady-company-decision-questions` step 3 records, as a task (work_set {kind: task, headline: the assumption, brief}): the assumption; one behavioural metric (what people do, not what they say); a pass line and a fail line; the decision taken on each outcome; sample size and time box; stop conditions; a sourced cost ceiling or explicit unknown; zero incremental external cost is the evaluation fallback without a selected budget, while any paid effect requires checked current authority. Put the full design in a File the task cites. Cite the question it tests, when there is one.
 4. Design the smallest test that could change the decision, varying one main thing: for demand and usability assumptions, conversations first, then a manual or concierge test, then a build; for a quality or feasibility crux, the smallest test is a measured build. Prepare everything yourself; come to the person only at a boundary (a call, filming, spend outside verified authority, a send, a signature, access) with a ready packet.
 5. Run it as Projects work citing company:work:<hypothesisId>. Stop early when a stop condition is met. If the instrument or environment changes during the run, take a new baseline before comparing.

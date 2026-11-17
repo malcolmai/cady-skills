@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "33b983dca9451c66efa5"
-  library: "c49c95c34718ba2b"
+  version: "603d7767254347f61511"
+  library: "d6293ffcdacbd003"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal

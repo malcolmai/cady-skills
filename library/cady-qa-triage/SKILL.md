@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
-  version: "bc8a4556777250b8f4fd"
-  library: "c49c95c34718ba2b"
+  version: "26d443228b16c776c9cd"
+  library: "d6293ffcdacbd003"
   function: "qa"
 ---
 # Bug and flaky-test triage
@@ -38,7 +38,7 @@ Rate a bug's severity, write a reproducible report, triage a flaky test, or veri
 
 ## Procedure
 
-1. Reproduce before you rate. Search open items first (work_read) and add evidence to a duplicate instead of filing again. Try the steps on the reported build and environment, then on current main. Record reproduced, not reproduced (and what you tried) or not attempted. One failed attempt on a different build, account or data shape is not 'cannot reproduce'.
+1. Reproduce before you rate. Search open items first (cady_read) and add evidence to a duplicate instead of filing again. Try the steps on the reported build and environment, then on current main. Record reproduced, not reproduced (and what you tried) or not attempted. One failed attempt on a different build, account or data shape is not 'cannot reproduce'.
 2. Rate severity by user impact, never by fix effort or who reported it. Blocker: a core journey is impossible, data is lost or corrupted, a security, tenant-isolation or authority defect is exposed, or a wrong external effect happens (wrong recipient, double charge); for example sign-in fails for everyone, or one company can read another's records. Respond now: stop the affected path or release, name an owner within the hour, mitigate the same day. Critical: a core journey fails for a segment with no workaround, or shows wrong numbers users will act on; for example an export silently drops rows. Owner today, fix within one to two days and before the next release. Major: a feature is broken but a reasonable workaround exists, or a secondary journey fails; schedule it in the current cycle. Minor: cosmetic, copy or a rare edge with no lasting harm; batch it with nearby work.
 3. Adjust and gate. Raise one level when the failure is silent (the user cannot tell it went wrong), irreversible or hits most users; lower one level when it is contained behind a flag or internal only. Severity is impact; priority is when, and belongs to the owner. The company's recorded release policy names which severities block a release; with none recorded, blocker and critical block. Re-rate when evidence changes impact.
 4. Write the report so someone else can reproduce it without asking. Title: the observed symptom and where ('CSV export drops rows above 1000', not 'export broken'). Steps: numbered, from a known starting state and named test data. Expected: with its source (acceptance, spec or previous behaviour). Actual: exact error text, status code and ids. Environment: SHA or build, environment, browser, OS or device, account role, data shape and flags. Frequency: every time, or n of m runs. Evidence: capture and log excerpt with timestamps or request id as file:<fileId>. Severity with a one-line reason. A suspected cause only when evidenced, labelled as an assumption. Record it with work_set {kind: task, headline: the report title, next, due: from the response time, evidenceRefs: the story step and the File holding the full report}. Keep secrets and personal data out; route a security report straight to its owner with restricted evidence.

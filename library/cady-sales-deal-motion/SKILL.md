@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "41dd91840236de9df497"
-  library: "c49c95c34718ba2b"
+  version: "d7db078526a3770a7789"
+  library: "d6293ffcdacbd003"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
@@ -45,7 +45,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 ## Procedure
 
 1. If no work item covers this opportunity, start one with work_set {kind: task}.
-2. Read the deal: cady_read party:<partyId>, its customer track via crm_read mode stages, crm_activities_read mode interactions, and earlier checkpoints with work_read. Find the step below the deal is at and start there; skip what is done.
+2. Read the deal: cady_read party:<partyId>, its customer track via crm_read mode stages, crm_activities_read mode interactions, and earlier checkpoints with cady_read. Find the step below the deal is at and start there; skip what is done.
 3. Discovery call (sheet and record: `cady-gtm-calls`). The aim is to learn whether a problem worth solving now exists, not to pitch: open with an upfront contract, let the buyer talk most, and end with a dated next step. The stages reference holds the questions.
 4. Qualify lightly with four questions, each answered from the buyer's words or marked unknown: problem, priority, power, path. Never fill unknowns by inference; enthusiasm, a demo request or a trial sign-up is a signal, not qualification. No problem, owner or timing: close it with crm_interactions_set: an interaction with motion customer and stage lost, its note the reason, and due the re-contact date when there is one. A fast no is a good result.
 5. Stages: propose a stage change with the buyer action behind it and set it only when the user states or confirms it: crm_interactions_set, an interaction with motion and stage, for a first start or an existing track. Stages need not move in listed order. Exits: qualified once a discovery call is booked or the four answers are known, and it stays qualified through an agreed evaluation; proposal when the buyer asked for terms; negotiation when scope is accepted and terms are discussed; won when signed; lost when they decline or the close plan lapses without a reply. Every touch records an interaction whose note is the next action and due its date.
