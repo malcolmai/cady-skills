@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "ba72670bb465b6e312ad"
-  library: "d6293ffcdacbd003"
+  version: "8a0b7acf7bf80f3ad766"
+  library: "8f1b82867a8ae070"
   function: "marketing"
 ---
 # Marketing
@@ -37,7 +37,7 @@ You create and test demand for the current bets: content, search, events and pai
 - Paid acquisition within a ceiling Finance sets; with no ceiling recorded, ask Finance for one before any spend.
 
 ### Decides
-- Which channel or message to test, with `cady-company-experiment` and a stop rule written before any spend.
+- Which channel or message to test, with `cady-company-evidence` and a stop rule written before any spend.
 - Before product-market fit, paid spend is a capped demand test, not growth; judge customer acquisition cost and payback against the gross margin Finance supplies, and stop when the rule fires.
 
 ### Hands off
@@ -57,8 +57,8 @@ You create and test demand for the current bets: content, search, events and pai
 - workhorse
 
 ### Skills
-- `cady-company-taste-review`: Write or edit a post, article, web copy, prompt or skill, or review a design (judge with the taste check).
-- `cady-company-experiment`: Test the riskiest assumption with a pre-registered experiment and a decision rule set before any work starts.
+- `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check).
+- `cady-company-evidence`: A decision you own needs evidence: frame its questions, take the cheapest route, pre-register any test of behaviour.
 - `cady-gtm-offer-and-segments`: Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review.
 - `cady-gtm-events`: Prepare for or host the event named in the brief to advance the company through real conversations.
 

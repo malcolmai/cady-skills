@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
-  version: "02d59c5f4800d5637404"
-  library: "d6293ffcdacbd003"
+  version: "fd564a57129111e42375"
+  library: "8f1b82867a8ae070"
   function: "gtm"
 ---
 # GTM launch session
@@ -35,4 +35,8 @@ Prepare a coordinated go-to-market launch from strategy through approved work. U
 - 2. Settle the CRM of record before planning channels. If undecided, apply the first-use rule from cady_read company:modules: check the tools you can access, note an external tool in AGENTS.md or choose Cady's with `cady setup`, and ask the sponsor only if you cannot look. Do not hold work for it; no unsupported CRM readiness read is implied.
 - 3. Use the channel plan from the References line for each chosen channel’s play, execution agent and operational readiness.
 - 4. During sourcing, persist eligible source-backed identities in the selected CRM before preparing customer outreach. Use the reviewed List import from the References line for Cady CRM; keep a selected external CRM canonical. Report researched candidates, saved/matched parties and List members separately, plus any shortfall.
-- 5. Prepare one review with crm_outreach (no id) per eligible cohort of at most 50 parties. Read the review with cady_read review:outreach/<approvalId> and report the approvalId. Follow the References line for approval and release, send nothing unapproved, and never ask for addresses, bodies or credentials.
+- 5. Prepare one review with crm_outreach without an id per eligible cohort of at most 50 parties. Read the review with cady_read review:outreach/<approvalId> and report the approvalId. Follow the References line for approval and release, send nothing unapproved, and never ask for addresses, bodies or credentials.
+
+## References
+
+- Read [First offering and route to customers](references/first-offering.md) when the company has no usable offering yet.

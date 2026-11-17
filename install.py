@@ -28,7 +28,7 @@ def tree(path: Path) -> dict[str, bytes]:
 
 
 def names_for(roster: dict, agents: list[str]) -> list[str]:
-    names = list(roster["core"])
+    names = [*roster["core"], *roster.get("standalone", [])]  # standalone skills sit on no role card: the person's own agent runs them
     for key in agents:
         names += [roster["agents"][key]["card"], *roster["agents"][key]["skills"]]
     return list(dict.fromkeys(names))

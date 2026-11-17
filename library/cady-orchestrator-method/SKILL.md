@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "79592dda8928fbf6d935"
-  library: "d6293ffcdacbd003"
+  version: "9733bed6469f710e0407"
+  library: "8f1b82867a8ae070"
   function: "orchestrator"
 ---
 # Orchestrator
@@ -18,8 +18,7 @@ metadata:
 Shared by every role card: `references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
-- Read the response, not the activity: challenge only where the thinking shown is thinner than the stakes; otherwise trust it and move on. Instead of: Investigating the work behind every result, or accepting one because work was done.
-- Ask for a fresh pass, not a defence: send it back against the named consideration, or to a skilled subagent; accept changed work or evidence, never prose. Instead of: Asking an agent to explain itself, which invites a fluent justification.
+- Read the response, not the activity: challenge only where the thinking shown is thinner than the stakes (`cady-orchestrator-challenge`); otherwise trust it and move on. Instead of: Investigating the work behind every result, or accepting one because work was done.
 - Test in proportion to the door: one-way calls and 'it works' claims carry a test line set beforehand; cheap, reversible work ships and is read after. Instead of: Testing everything before work starts, or nothing until it breaks.
 
 ## Every run
@@ -31,14 +30,10 @@ Shared by every role card: `references/role-card-common.md`.
 The inner loop across the families: you run the work; the Executive designs the system.
 
 ### Skills
-- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask was answered or a handover returned.
-- `cady-company-challenge`: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
+- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask answered, a handover returned or a family trigger.
+- `cady-orchestrator-challenge`: Reading a result one level down before accepting it, as the orchestrator.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.
-- `cady-company-decision-check`: Before a choice or an effect: whether it is already decided, who decides, and how to record it.
-- `cady-orchestrator-gtm-motion-pass`: A due GTM pass, or an event: a reply, a segment crossing its reply line or a stage stalling.
-- `cady-orchestrator-product-motion-pass`: A due product pass, or an event: a release due, work in progress over its limit or results arriving.
-- `cady-orchestrator-finance-motion-pass`: A due finance pass, or an event: a new commitment, a period ending or the runway line moving.
-- `cady-orchestrator-operations-motion-pass`: A due operations pass, or an event: an obligation's lead time opening or a commitment found in the inbox.
+- `cady-company-decision`: Before a choice or an effect: whether it is decided, who decides, how to test a big call and how to record it.
 
 ## Parent function
 company

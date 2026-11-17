@@ -1,13 +1,13 @@
 ---
-name: "cady-company-challenge"
-description: "Challenge a result by its stakes. Use when: Reading a result one level down before accepting it, as the orchestrator or a family orchestrator. Not for: Independent review before a merge (cady-engineering-independent-review), the Executive's own decisions, or redoing the work."
+name: "cady-orchestrator-challenge"
+description: "Challenge a result by its stakes. Use when: Reading a result one level down before accepting it, as the orchestrator. Not for: Independent review before a merge (cady-engineering-independent-review), the Executive's own decisions, or redoing the work."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
-  cady-id: "skill.company.challenge"
-  version: "becff77979eed0246aa3"
-  library: "d6293ffcdacbd003"
-  function: "company"
+  cady-id: "skill.orchestrator.challenge"
+  version: "6aff801c0ca4738d2e2e"
+  library: "8f1b82867a8ae070"
+  function: "orchestrator"
 ---
 # Challenge a result by its stakes
 
@@ -19,7 +19,7 @@ metadata:
 - Treat a smell as a gap between the stakes and the thinking shown, never as a kind of work: the same email can be fine or a smell, depending on what it risks. Instead of: A list of work types that always get challenged.
 - Ask for a fresh pass against a named consideration, then a skilled subagent, then evidence, the cheapest rung first. Instead of: Asking the agent to explain or justify its result.
 
-Reading a result one level down before accepting it, as the orchestrator or a family orchestrator.
+Reading a result one level down before accepting it, as the orchestrator.
 
 **Not for:** Independent review before a merge (cady-engineering-independent-review), the Executive's own decisions, or redoing the work.
 
@@ -34,7 +34,7 @@ Reading a result one level down before accepting it, as the orchestrator or a fa
 
 ## Procedure
 
-1. Read the response, not the activity: judge what it shows and never investigate the work behind it. Challenge one level down only: the orchestrator reads family orchestrators' passes and cross-family results, a family orchestrator reads its agents' results, and where a family has no orchestrator the orchestrator reads its agents. Challenging a family pass names the missing consideration and the family revises its own call; its calls inside its family still stand.
+1. Read the response, not the activity: judge what it shows and never investigate the work behind it. Challenge one level down only: the orchestrator reads its agents' results and cross-family results; an agent's calls inside its own family still stand, and a challenge names the missing consideration so the agent revises its own call.
 2. Match the stakes to the thinking they need. Complex or costly work shows research, an alternative weighed or a feasibility check. An external action (outreach, a post, a commitment) shows the recipient's view, why they would care and how it could be misread, and the impact on us: a client lost if it is too pushy, a commercial goal missed with no follow-up. A claim that something is done, working or fixed shows how it was tested and its readback. A confident recommendation names its key assumption and what would show it wrong. A report of much work says how it moves the point it serves.
 3. A smell is a response whose thinking is thinner than its stakes. A one-way door is not a smell; it raises the bar for each line in step 2. With no smell, accept the result and move on: trust is the default. A minor gap is flagged in the result while the work continues.
 4. With a smell, send the result back for a fresh pass against the named consideration, for example: 'do a fresh pass on the recipient's view: why would they care, and how could this be misread?' Never ask the agent to justify itself; a request to explain invites a defence, a fresh pass invites a revision.

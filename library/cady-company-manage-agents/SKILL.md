@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "e2cb420595c133eecb42"
-  library: "d6293ffcdacbd003"
+  version: "293fea9583f700c4b83b"
+  library: "8f1b82867a8ae070"
   function: "company"
 ---
 # Manage company agents
@@ -59,9 +59,10 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Its decision map: goal, node, trigger, decides alone, consults on, hands off.
 5. Evaluation. The criteria live on the first task, not the agent record: brief.doneWhen holds 2-5 reader tests tagged (check), (fresh) or (person), and brief.stopIf the early-stop limit; a completed run is not a reported result.
 6. Create and bind the agent with agents_set (host {action: bind}), file the first task with work_set, and ask the owner for the go-ahead (asks_set). On their yes, send status live with approval {quote}. A returned schedule stays configured_unconfirmed until a host readback. Change visibility or sharing only on request; it applies at once and the owner is told.
-7. Authority. Read the company's permission modes first (cady_read {refs: ["company:values"]}, the permission modes line). Effects follow `cady-company-decision-check` step 2. No mode lets you send without that approval or a grant; limits text is not enforcement. Never approve for the person: their own decision covers every grant (send, spend, publish, sign, file), an invite, share or outreach effect in approval mode, new access or capture, widening permissions, a design change to a grant-holding agent and raising cadence or cost; per grant when critical. An agent acts with its owner's permissions, and its lifecycle is the owner's. Going live, from draft, paused or retired, takes the owner's go-ahead: the owner gives it, or the owner's own agent records the owner's exact words as approval {quote}. An absent owner's go-ahead: agent design, setup, review and retirement reference.
-8. Review this host's agents by risk class, with evidence from runs, receipts, cady_read changes {kind: agents} and transcripts (never bodies). Pause one that is not up to scratch (step 9); redesigning it is the Executive's (`cady-company-executive-review` step 15), never the pausing agent's.
+7. Authority. Read the company's permission modes first (cady_read {refs: ["company:values"]}, the permission modes line). Effects follow the core's approval rule. No mode lets you send without that approval or a grant; limits text is not enforcement. Never approve for the person: their own decision covers every grant (send, spend, publish, sign, file), an invite, share or outreach effect in approval mode, new access or capture, widening permissions, a design change to a grant-holding agent and raising cadence or cost; per grant when critical. An agent acts with its owner's permissions, and its lifecycle is the owner's. Going live, from draft, paused or retired, takes the owner's go-ahead: the owner gives it, or the owner's own agent records the owner's exact words as approval {quote}. An absent owner's go-ahead: agent design, setup, review and retirement reference.
+8. Review this host's agents by risk class, with evidence from runs, receipts, cady_read changes {kind: agents} and transcripts (never bodies). Pause one that is not up to scratch (step 9); redesigning it is the Executive's (`cady-company-weekly-review` step 5), never the pausing agent's.
 9. Retire or pause an agent only when it is confirmed obsolete or met its end condition, and adopt an existing company scheduled task only on the owner's yes: read the agent design, setup, review and retirement reference (it confirms an unscheduled task with agents_set host {action: removed}).
+10. Host setup, for the orchestrator on its host. Once the owner has approved the agents the Executive designs, bind each live one to this host with agents_set host {action: bind} (a binding is this host's alone; another host binds its own), register its cadence with the exact localSchedule command the bind reply carries, and check every live agent has open work (cady_read), filing its next task under its goal or handing the gap to the Executive. Take a silent host's agents when the server names this host as its moveTo (the agent_hosts reference). Each run, remove or pause each triggersToRemove trigger here, then make its next call.
 
 ## Acceptance
 
