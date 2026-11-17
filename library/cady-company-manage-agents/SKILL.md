@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "62971b86aa09f4151dd7"
-  library: "c49c95c34718ba2b"
+  version: "e2cb420595c133eecb42"
+  library: "d6293ffcdacbd003"
   function: "company"
 ---
 # Manage company agents
@@ -53,7 +53,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 ## Procedure
 
-1. An agent is one ongoing responsibility; due tasks are work items and a one-off is a helper run. Read agents_read, work (work_read), the node's point and bets and this host's automations first: if an agent already serves the outcome, reuse it or change it with agents_set (rebind if its host changed) and stop. Create one when none does; a goal or node may have several agents when their jobs differ. Put an agent on a node when that node's work needs its own regular pass. An agent sits on the node it serves, or on none (a personal agent). Parallel sessions and subagents are runs of that agent, not new agents.
+1. An agent is one ongoing responsibility; due tasks are work items and a one-off is a helper run. Read agents_read, work (cady_read), the node's point and bets and this host's automations first: if an agent already serves the outcome, reuse it or change it with agents_set (rebind if its host changed) and stop. Create one when none does; a goal or node may have several agents when their jobs differ. Put an agent on a node when that node's work needs its own regular pass. An agent sits on the node it serves, or on none (a personal agent). Parallel sessions and subagents are runs of that agent, not new agents.
 2. Responsibility and risk class. State the outcome, one measure with its data source, a cadence or trigger, approval limits and end condition; pass goal when it serves a goal. Critical: a hard-to-undo effect or reach outside the company, or drafts released automatically; every other agent is standard. Re-class on any grant, tool, access or trigger change.
 3. Fit. Read agents_read and the company tree (cady_read {}), and name the agent's skills as plain names, the skill folders the host holds (the library's roster.json lists each agent's skills), or leave them empty; Cady serves no skill index, so do not search for one. Reuse library skills unchanged; adapt only for an evidenced failure, tool mismatch or missing expert judgment.
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Its decision map: goal, node, trigger, decides alone, consults on, hands off.

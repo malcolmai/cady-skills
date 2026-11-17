@@ -4,6 +4,27 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision-check`.
 
+## d6293ffcdacbd003 · 2026-11-17
+
+Since c49c95c34718ba2b: 0 new, 0 dropped, 15 changed.
+
+Changed:
+- `cady-company-decision-questions`: Procedure
+- `cady-company-experiment`: Procedure
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-review`: Company review
+- `cady-engineering-system-cycle`: reference agent-hosts.md
+- `cady-finance-method`: reference domain-method.md
+- `cady-finance-vendor-spend-review`: reference vendor-renewal.md
+- `cady-fundraise-investor-list`: Procedure
+- `cady-fundraise-method`: reference domain-method.md
+- `cady-fundraise-raise-materials`: Procedure
+- `cady-gtm-method`: reference domain-method.md
+- `cady-marketing-method`: reference domain-method.md
+- `cady-orchestrator-goal-pass`: Procedure, reference agent-hosts.md, reference plan-path.md
+- `cady-qa-triage`: Procedure
+- `cady-sales-deal-motion`: Procedure
+
 ## c49c95c34718ba2b · 2026-11-17
 
 Since 5aaea3dd7d596b5a: 0 new, 0 dropped, 0 changed.
