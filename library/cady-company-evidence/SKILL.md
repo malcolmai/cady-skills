@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.evidence"
   version: "2321ca05a6a33964bf6d"
-  library: "8f1b82867a8ae070"
+  library: "32ba7697987a0749"
   function: "company"
 ---
 # Key questions and behaviour tests

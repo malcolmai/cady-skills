@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision"
-  version: "5b19630f558e4007c883"
-  library: "8f1b82867a8ae070"
+  version: "831610b7242185346fdf"
+  library: "32ba7697987a0749"
   function: "company"
 ---
 # Who decides, and how to record it
