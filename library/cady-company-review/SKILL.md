@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.company_review"
   version: "ff9d8eb690fb63a9848b"
-  library: "5aaea3dd7d596b5a"
+  library: "c49c95c34718ba2b"
   function: "company"
 ---
 # Company strategy and operating review
