@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.company_review"
-  version: "719ab2e7a7ec37aebf46"
-  library: "cfea7a0f5db313ae"
+  version: "aed786909472343c87a9"
+  library: "08b863aa7e59e96e"
   function: "company"
 ---
 # Company strategy and operating review
