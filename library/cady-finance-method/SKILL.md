@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "2aaf5c8add6ecde405d6"
-  library: "8f1b82867a8ae070"
+  version: "6885c0447ac6f602e1cb"
+  library: "32ba7697987a0749"
   function: "finance"
 ---
 # Finance

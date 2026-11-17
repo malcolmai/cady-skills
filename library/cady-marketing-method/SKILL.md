@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "8a0b7acf7bf80f3ad766"
-  library: "8f1b82867a8ae070"
+  version: "19bc72f99449ea6f2bc2"
+  library: "32ba7697987a0749"
   function: "marketing"
 ---
 # Marketing

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.weekly_review"
-  version: "0c221f34165405819cac"
-  library: "8f1b82867a8ae070"
+  version: "39403053a66956856b16"
+  library: "32ba7697987a0749"
   function: "company"
 ---
 # Weekly review
@@ -45,7 +45,7 @@ The weekly review: assess the company, call every goal and initiative, check bet
 ## Procedure
 
 1. Assess. cady_start {loop: "outer"} returns the goals due a call, the bets to check, the open handovers and the agents. This is the weekly pass, or any pass where a goal's callReasons include no_recent_call; between reviews take only the one decision with the highest cost of delay (`cady-company-decision`), or write nothing and end with 'goals stand'. Judge results and dates against intended conditions, not task counts; disclose incomplete coverage; work first on the one or two problems that decide whether the company wins.
-2. Decisions due: score any decision past its reviewBy against its prediction, and keep, change or stop it (`cady-company-decision` step 7).
+2. Decisions due: score any decision past its reviewBy against its prediction, and keep, change or stop it (`cady-company-decision` step 1).
 3. Goals (`references/company-goals.md`, `references/executive-weekly.md`, goal calls): call every open goal, scoring its reading against the last prediction (unknown with a dated check when there is none), then persist, pivot, parallel or stop it, aimed at the goal's binding constraint (the step with the longest wait, the lowest throughput or the missing input; before product-market fit it is usually customer evidence: check the GTM pipeline from list to calls for the proposed ICP before adding product work).
 4. Initiatives (`references/executive-weekly.md`, initiatives): give each open one a verdict, start, fold or decline, with its reason.
 5. Handovers (`references/executive-weekly.md`, handovers): answer each open task under "Keep the system sharp" and read the library CHANGELOG.md since your last agent review; change an agent only through `cady-company-change-agent-behaviour`.

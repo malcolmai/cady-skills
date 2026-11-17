@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.goal_pass"
-  version: "b0ae4f0138882bfca004"
-  library: "8f1b82867a8ae070"
+  version: "8415ea467ee4cd032244"
+  library: "32ba7697987a0749"
   function: "orchestrator"
 ---
 # Orchestrate the company
@@ -49,7 +49,7 @@ A due orchestrator pass, or an event: a run finished, an ask answered, a handove
 7. Settle each conflict at the lowest node both pieces of work serve, by its point and bets, and record the call on that node. Agents escalate to you when a call crosses goals, adds cost or needs another agent. Before a call that would change a point, a bet or a goal's target, run the Executive for one bounded advice run, decide that tick and record the advice; the point or bet itself is the Executive's to write.
 8. When an agent fails, trace it before judging it: the tool it called, the owner check or refusal that stopped it, or the instruction that sent it there; name the failing link with its evidence ref. The same failure in two comparable windows goes to the Executive, as does every agent design need, pause and extended system work, as one Projects task under "Keep the system sharp". Pause an agent that is not up to scratch or clearly detrimental, keeping its state, and file the handover in the same run (`cady-company-manage-agents` steps 8-9); rewriting an agent is the Executive's work.
 9. Host setup for the agents the Executive designs, once approved, is `cady-company-manage-agents` step 10. Move capacity to the family that holds the binding constraint, and name the constraint.
-10. Pass observations through: every run reports what it learned; an agent replaces a bet by its basis with cited evidence (`cady-company-decision` step 4), and a point or an owner-decided bet is an ask. File one task per nonzero count of your read (items on the tree, goals without a node, bets without a reading) under the owning function; never change a point or a bet to move a count.
+10. Pass observations through: every run reports what it learned; an agent writes or replaces a point or a bet by its basis with cited evidence, and the owner is told (`cady-company-decision` step 4). File one task per nonzero count of your read (items on the tree, goals without a node, bets without a reading) under the owning function; never change a point or a bet to move a count.
 11. Close each slot once with work_set, its run part recording the goals by state, the calls with the node each cites, the handovers, the unsupported-claim count, the challenges made with the share that changed the work and the observations passed through; for a family goal also its report line. Evidence and usage follow `references/run-reporting.md`; update any record a result or call changes in place.
 
 ## Acceptance
