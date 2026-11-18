@@ -1,12 +1,12 @@
 ---
 name: "cady-engineering-independent-review"
-description: "Independent review. Independently review a diff, artifact or decision record: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge, or a decision others will build on before it is acted on. Not for: root-causing a bug, triaging a bug report or running helpers (`cady-orchestrator-goal-pass`)."
+description: "Independent review. Independently review a diff, artifact or decision record: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review, before merge or in a later batch, or a decision others will build on before it is acted on. Not for: root-causing a bug, triaging a bug report or running helpers (`cady-orchestrator-goal-pass`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "2bdd226a25564fa4bad9"
-  library: "32ba7697987a0749"
+  version: "c74e546fa127be3c8e30"
+  library: "78361a71b5e27b55"
   function: "engineering"
 ---
 # Independent review
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Independently review a diff, artifact or decision record: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review before merge, or a decision others will build on before it is acted on. Not for: root-causing a bug, triaging a bug report or running helpers (`cady-orchestrator-goal-pass`).
+Independently review a diff, artifact or decision record: rerun its checks, rank findings and return land, fix or redesign. Use when: a change needs review, before merge or in a later batch, or a decision others will build on before it is acted on. Not for: root-causing a bug, triaging a bug report or running helpers (`cady-orchestrator-goal-pass`).
 
 ## Bets
 

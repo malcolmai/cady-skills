@@ -45,7 +45,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-design-method`: Design role card: what this function owns and decides (`library/cady-design-method/SKILL.md`)
 - `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings. (`library/cady-design-wcag-audit/SKILL.md`)
 - `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. (`library/cady-engineering-debugging/SKILL.md`)
-- `cady-engineering-independent-review`: a change needs review before merge, or a decision others will build on before it is acted on. (`library/cady-engineering-independent-review/SKILL.md`)
+- `cady-engineering-independent-review`: a change needs review, before merge or in a later batch, or a decision others will build on before it is acted on. (`library/cady-engineering-independent-review/SKILL.md`)
 - `cady-engineering-integrations`: comparing, choosing or connecting a tool, data source or account. (`library/cady-engineering-integrations/SKILL.md`)
 - `cady-engineering-method`: Engineering role card: what this function owns and decides (`library/cady-engineering-method/SKILL.md`)
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions. (`library/cady-engineering-system-cycle/SKILL.md`)
