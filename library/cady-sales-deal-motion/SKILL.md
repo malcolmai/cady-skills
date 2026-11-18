@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "3e6fb609b391ca102fb5"
-  library: "b214552fcaa8da00"
+  version: "9f59aac2dfa76e87816c"
+  library: "339b85c2dfa269aa"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
@@ -51,7 +51,7 @@ Work one opportunity: discovery call, light qualification, proposal, close plan,
 5. Stages: propose a stage change with the buyer action behind it and set it only when the user states or confirms it: crm_interactions_set, an interaction with motion and stage, for a first start or an existing track. Stages need not move in listed order. Exits: qualified once a discovery call is booked or the four answers are known, and it stays qualified through an agreed evaluation; proposal when the buyer asked for terms; negotiation when scope is accepted and terms are discussed; won when signed; lost when they decline or the close plan lapses without a reply. Every touch records an interaction whose note is the next action and due its date.
 6. Proposal: only after the buyer agrees the problem and asks for terms. Price comes from the accepted offer; a discount or non-standard term is the owner's decision. Save with files_set, read back with cady_read file:<id>; send it through `cady-gtm-reply` or `cady-gtm-warm-email`. Before sending terms, run `cady-company-operations-contract-checks` (plan, customer contract). For accompanying message copy, use `references/outreach-drafting.md`, draft_check before `references/taste-message.md`; route preparation and release through `references/outreach-release.md`. The stages reference holds the proposal contents.
 7. Mutual close plan: work back from the date the buyer needs the result, with dated steps each side owns, agreed with the buyer's champion and saved with files_set. A missed buyer-owned date is the earliest sign of a stalled deal: ask once, directly, instead of chasing; invent no deadlines or pressure.
-8. Won: close it with one crm_interactions_set call (the order's interaction with motion customer, stage won, the reason and its kind as the note, evidence), set role customer with renewalDate in its own crm_set call, write a handoff note with files_set, start the customer work item with work_set {kind: task} (`cady-customer-success-lifecycle` runs it), send anything sold that the product cannot yet do to the product owner now, run `cady-company-operations-contract-checks` (act, customer contract). The stages reference holds the fields and the handoff note.
+8. Won: close it with one crm_interactions_set call (the order's interaction with motion customer, stage won, the reason and its kind as the note, evidence), record the renewal date with crm_set renewalDate (the won track is what makes them a customer), write a handoff note with files_set, start the customer work item with work_set {kind: task} (`cady-customer-success-lifecycle` runs it), send anything sold that the product cannot yet do to the product owner now, run `cady-company-operations-contract-checks` (act, customer contract). The stages reference holds the fields and the handoff note.
 9. Lost: close it with one crm_interactions_set call: motion customer, stage lost, the note the reason in the buyer's words (or marked inferred when it is yours; keep their words apart from your inference) and its kind, due a re-contact date; correct a close with another interaction that moves the stage. Three or more losses with one reason are a proposed change for `cady-gtm-offer-and-segments`; one loss is not a pivot. The stages reference holds the fields.
 10. Small self-serve deals skip the proposal and close plan: confirm sign-up and activation, then hand to `cady-customer-success-lifecycle`. Report with work_set once track, files and next action read back.
 
