@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-18T00:00:00Z",
   "bundle": {
-    "tag": "78361a71b5e27b55",
-    "version": "78361a71b5e27b550fd9f29d0c8feb79f24db74fedeb52560c41c81890139938",
-    "pluginVersion": "2026.11.18-78361a71"
+    "tag": "b214552fcaa8da00",
+    "version": "b214552fcaa8da00fdf6333b74b8fcb8ce3ad7eac623babfde5e5a87403ecc9a",
+    "pluginVersion": "2026.11.18-b214552f"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.18-78361a71"
+    "version": "2026.11.18-b214552f"
   },
   "skills": [
     {
@@ -39,7 +39,7 @@
       "name": "cady-company-decision",
       "path": "library/cady-company-decision",
       "cadyId": "skill.company.decision",
-      "version": "831610b7242185346fdf"
+      "version": "33e65dcc64a90ba03970"
     },
     {
       "name": "cady-company-evidence",
