@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-17T00:00:00Z",
+  "generatedAt": "2026-11-18T00:00:00Z",
   "bundle": {
-    "tag": "32ba7697987a0749",
-    "version": "32ba7697987a07491c6277b1c95fd20bb4065d91a722b10eea5e50b83095abf2",
-    "pluginVersion": "2026.11.17-32ba7697"
+    "tag": "78361a71b5e27b55",
+    "version": "78361a71b5e27b550fd9f29d0c8feb79f24db74fedeb52560c41c81890139938",
+    "pluginVersion": "2026.11.18-78361a71"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.17-32ba7697"
+    "version": "2026.11.18-78361a71"
   },
   "skills": [
     {
@@ -147,7 +147,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "2bdd226a25564fa4bad9"
+      "version": "c74e546fa127be3c8e30"
     },
     {
       "name": "cady-engineering-integrations",
@@ -159,7 +159,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "b579b6b985329ce17cc6"
+      "version": "ed990608b2b175b072d7"
     },
     {
       "name": "cady-engineering-system-cycle",
