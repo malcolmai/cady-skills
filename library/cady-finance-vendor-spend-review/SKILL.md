@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.vendor_spend_review"
-  version: "603d7767254347f61511"
-  library: "b214552fcaa8da00"
+  version: "e20f6cb9739335e10459"
+  library: "339b85c2dfa269aa"
   function: "finance"
 ---
 # Vendor spend review: new purchase or renewal
@@ -67,7 +67,7 @@ Decide whether to buy, trial, renew or cancel a paid tool or vendor: cost, actua
 - current entitlement and applicable executor authority
 - separate provider/access/security checks
 - no payment or contract effect from advisory method
-- CRM provider role and renewal receipt
+- CRM supplier track and renewal date receipt
 - dated evidence and notice recheck
 - exact user review before any cancellation effect
 

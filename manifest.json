@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-18T00:00:00Z",
   "bundle": {
-    "tag": "b214552fcaa8da00",
-    "version": "b214552fcaa8da00fdf6333b74b8fcb8ce3ad7eac623babfde5e5a87403ecc9a",
-    "pluginVersion": "2026.11.18-b214552f"
+    "tag": "339b85c2dfa269aa",
+    "version": "339b85c2dfa269aa5cbed89673f0f4201d8939bb00acdccf914070d3a48444e2",
+    "pluginVersion": "2026.11.18-339b85c2"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.18-b214552f"
+    "version": "2026.11.18-339b85c2"
   },
   "skills": [
     {
@@ -117,7 +117,7 @@
       "name": "cady-customer-success-lifecycle",
       "path": "library/cady-customer-success-lifecycle",
       "cadyId": "skill.customer_success.lifecycle",
-      "version": "6eafc463920363de2ea3"
+      "version": "d6577732b9cd80bc6303"
     },
     {
       "name": "cady-customer-success-method",
@@ -195,13 +195,13 @@
       "name": "cady-finance-vendor-spend-review",
       "path": "library/cady-finance-vendor-spend-review",
       "cadyId": "skill.finance.vendor_spend_review",
-      "version": "603d7767254347f61511"
+      "version": "e20f6cb9739335e10459"
     },
     {
       "name": "cady-fundraise-investor-list",
       "path": "library/cady-fundraise-investor-list",
       "cadyId": "skill.fundraise.investor_list",
-      "version": "d2c40e6ccea1e2191838"
+      "version": "c43fe3a0b95abaedac6c"
     },
     {
       "name": "cady-fundraise-investor-outreach",
@@ -387,7 +387,7 @@
       "name": "cady-sales-deal-motion",
       "path": "library/cady-sales-deal-motion",
       "cadyId": "skill.sales.deal_motion",
-      "version": "3e6fb609b391ca102fb5"
+      "version": "9f59aac2dfa76e87816c"
     },
     {
       "name": "cady-sales-method",
