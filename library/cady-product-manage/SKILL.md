@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "e6a7b8a197f65eae0202"
-  library: "7d6773c56f890604"
+  version: "40a06c1b056081214203"
+  library: "6ac3a344413e5e1b"
   function: "product"
 ---
 # Product management and discovery
@@ -49,7 +49,7 @@ Decide what to build and why; run discovery; plan each release and its go/no-go;
 
 1. Objective. Decide what to build, for whom and why, from evidence, and keep one record per decision. The minimum is an offering, an assumed ICP with a problem assumption and one goal; everything else waits for a decision that needs it.
 2. Read the root's point and bets (cady_start carries them in its `node` and `above` fields), then cady_read changes {kind: strategy} for its current decisions, bets and assumptions (cady_read decision:<subject> reads one). Read the Files and CRM evidence they cite before judging; unknown stays unknown. On a change of the root's or the product node's point or bets, make each open goal's call; replace or rule out bets and decisions that assumed the old offer, citing the new point; close CRM tracks for audiences it drops (crm_interactions_set: the motion's closing stage, the reason as the note).
-3. Minimum first session: (a) if the company has no product, name it and record the offering with decisions_set (subject product:offering-<productId>, headline exactly "Offering <productId>: <name>"); goals, tasks, stories and product decisions must name a defined productId. (b) If no customer has spoken yet (no accepted ICP on the tree, no current assumption, no customer evidence in CRM), do not wait or treat a guess as validated: state one assumed ICP and one problem assumption, with what would prove it wrong, record it as a hypothesis bet (decisions_set, basis hypothesis, with its measure), and tell the person it is an assumption they can replace. (c) Then one goal record with brief.target as `references/company-goals.md` defines; for a product people use, make it a first-value goal read from a blind walk of one story on the deployed product. Defer dimensions, maps, other stories, research and module choices until a decision needs them, except on the crux. The first-session and run-to-done reference holds the record fields.
+3. Minimum first session: (a) if the company has no product, name it and record the offering with decisions_set (subject product:offering-<productId>, headline exactly "Offering <productId>: <name>"); goals, tasks, stories and product decisions must name a defined productId. (b) If no customer has spoken yet (no accepted ICP on the tree, no current assumption, no customer evidence in CRM), do not wait or treat a guess as validated: state one assumed ICP and one problem assumption, with what would prove it wrong, record it as a bet (decisions_set, its measure what would prove it wrong), and tell the person it is an assumption they can replace. (c) Then one goal record with brief.target as `references/company-goals.md` defines; for a product people use, make it a first-value goal read from a blind walk of one story on the deployed product. Defer dimensions, maps, other stories, research and module choices until a decision needs them, except on the crux. The first-session and run-to-done reference holds the record fields.
 4. Record assumptions as `cady-company-evidence` step 2 does. Get evidence for the assumption with that skill (route) and `cady-company-evidence` (pre-registered tests), as Projects work bound to the assumption (evidenceRefs company:work:<hypothesisId>); run interviews with `cady-product-customer-interview`. If the evidence needs calls and no pipeline is getting the ICP onto calls, hand it to the Executive as the binding constraint and continue independent product work under the Product card’s depth judgement.
 5. Keep evidence tied to the offering. Keep interview notes, observations and raw source material in Files through files_set mode begin_upload and files_set mode complete_upload, citing each as file:<fileId> from the assumption or work item. Put curated Competition or Technology analysis in the Research library with `cady-product-research`; preserve and link the existing tree, decisions and work context rather than replacing it. Never paste evidence into the tree or a work headline, or create another record to hold learning.
 6. When a shipped goal missed its measure or users showed no interest, read it by the "Separate causes before concluding no demand" bet in `cady-company-evidence`. When evidence settles an assumption, validate or replace its bet with decisions_set. A product choice about behaviour goes to the product map or a test, not a decision; one that moves resources between products or functions is a bet, written with decisions_set (`cady-company-decision` step 6). Any other product call goes in the work result. Raise a choice reserved to the founder as an ask (asks_set) to the owner with the question; it reaches them on Needs you (cady_read view work.needs_you). Write an accepted ICP or bet with decisions_set.
@@ -62,7 +62,7 @@ Decide what to build and why; run discovery; plan each release and its go/no-go;
 ## Acceptance
 
 - [ ] with no offering, the offering, then an assumed ICP and problem assumption, then one goal are created in that order and a test is planned
-- [ ] each bet names its basis, measure and the item it replaces
+- [ ] each bet names its measure and the item it replaces
 - [ ] observations are files linked from work, never a new store
 - [ ] each release has an explicit go or no-go on its own work item with evidence
 - [ ] requested validation work is recorded, and superseded next actions are updated only by a work_set on the exact current work
@@ -70,7 +70,7 @@ Decide what to build and why; run discovery; plan each release and its go/no-go;
 ## Owner checks
 
 - the root's point and bets and decisions read before judging
-- assumption recorded as a hypothesis bet, not on the root's point
+- assumption recorded as a bet with its measure, not on the root's point
 - evidence held as Files and cited by ref
 - go/no-go recorded on the release work item
 - offering exists before product-area calls; later structure waits for a decision that needs it

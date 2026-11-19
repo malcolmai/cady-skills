@@ -4,6 +4,37 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 6ac3a344413e5e1b · 2026-11-19
+
+Since 7d6773c56f890604: 0 new, 0 dropped, 23 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-company-decision`: intro, Procedure, Acceptance, Owner checks, References, reference asking.md, reference decision-check-record.md
+
+Changed:
+- `cady-accounting-method`: reference asking.md
+- `cady-company-evidence`: Procedure
+- `cady-company-method`: reference asking.md
+- `cady-company-onboarding`: Procedure
+- `cady-company-operations-inbox-follow-through`: reference inbox-follow-through-details.md
+- `cady-company-operations-method`: reference asking.md
+- `cady-customer-success-method`: reference asking.md
+- `cady-design-method`: Role card, reference asking.md
+- `cady-engineering-method`: Role card, reference asking.md
+- `cady-finance-method`: reference asking.md
+- `cady-fundraise-method`: reference asking.md
+- `cady-gtm-method`: reference asking.md
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-persona-profile`: Procedure
+- `cady-marketing-method`: reference asking.md
+- `cady-orchestrator-goal-pass`: Procedure, reference family-checks.md
+- `cady-orchestrator-method`: reference asking.md
+- `cady-product-customer-interview`: Inputs
+- `cady-product-manage`: Procedure, Acceptance, Owner checks, reference asking.md, reference product-manage-detail.md
+- `cady-product-method`: Role card, reference asking.md
+- `cady-qa-method`: Role card, reference asking.md
+- `cady-sales-method`: reference asking.md
+
 ## 7d6773c56f890604 · 2026-11-19
 
 Since 6c5dad5b0848e7aa: 0 new, 0 dropped, 0 changed.

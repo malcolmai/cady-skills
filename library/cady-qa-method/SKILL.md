@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "639ce8ef252080855dfa"
-  library: "7d6773c56f890604"
+  version: "2435c626287ad1b88eaf"
+  library: "6ac3a344413e5e1b"
   function: "qa"
 ---
 # QA
@@ -45,7 +45,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 - Choose model tiers from the `models` registry; name no model in a card, brief or file.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a hypothesis bet when the answer moves resources) and one ask. Record the answer in the task's result.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Record the answer in the task's result.
 
 ### Receipts
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.

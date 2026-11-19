@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "8f8fcd23b363749282e0"
-  library: "7d6773c56f890604"
+  version: "8b06643436f1126f5dc1"
+  library: "6ac3a344413e5e1b"
   function: "design"
 ---
 # Design
@@ -41,7 +41,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - Make design decisions yourself; take product questions to the PM.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a hypothesis bet when the answer moves resources) and one ask. Record the answer in the task's result.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Record the answer in the task's result.
 
 ### Company records
 - the design system Files
