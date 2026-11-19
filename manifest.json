@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-19T00:00:00Z",
   "bundle": {
-    "tag": "6ac3a344413e5e1b",
-    "version": "6ac3a344413e5e1b9f923a9c7ecc3137310c316e746c2680ed8312d8b55d8440",
-    "pluginVersion": "2026.11.19-6ac3a344"
+    "tag": "3462e1dbd5e6b840",
+    "version": "3462e1dbd5e6b8407d33183d61f5ec0fcc33859f9c46563d1af38c027d1fe8a7",
+    "pluginVersion": "2026.11.19-3462e1db"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.19-6ac3a344"
+    "version": "2026.11.19-3462e1db"
   },
   "skills": [
     {
@@ -69,13 +69,13 @@
       "name": "cady-company-operations-compliance-register",
       "path": "library/cady-company-operations-compliance-register",
       "cadyId": "skill.company_operations.compliance_register",
-      "version": "827bf1e1378866e91d7a"
+      "version": "786dd4274bf285bae299"
     },
     {
       "name": "cady-company-operations-contract-checks",
       "path": "library/cady-company-operations-contract-checks",
       "cadyId": "skill.company_operations.contract_checks",
-      "version": "b4e26827dfe592f53bf6"
+      "version": "2f6ec72e9c53b4834023"
     },
     {
       "name": "cady-company-operations-inbox-follow-through",
@@ -87,13 +87,13 @@
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "75692013bf6f753ea848"
+      "version": "c97d09ae5a747d93b484"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
       "path": "library/cady-company-operations-people-lifecycle",
       "cadyId": "skill.company_operations.people_lifecycle",
-      "version": "106d6b93d5ad622fc6c5"
+      "version": "105a722e68e6da92fcbb"
     },
     {
       "name": "cady-company-operations-requirement-register",
@@ -189,7 +189,7 @@
       "name": "cady-finance-tax-cycle",
       "path": "library/cady-finance-tax-cycle",
       "cadyId": "skill.finance.tax_cycle",
-      "version": "15fa20fba427d46d5c50"
+      "version": "67d9e43e23ec936952a2"
     },
     {
       "name": "cady-finance-vendor-spend-review",
