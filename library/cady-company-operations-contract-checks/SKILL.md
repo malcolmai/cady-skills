@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.contract_checks"
-  version: "b4e26827dfe592f53bf6"
-  library: "6ac3a344413e5e1b"
+  version: "2f6ec72e9c53b4834023"
+  library: "3462e1dbd5e6b840"
   function: "company_operations"
 ---
 # Contract checks: before signing, after completion
@@ -49,7 +49,7 @@ A contract that commits the company is about to be signed or was just signed: wh
 ## Procedure
 
 1. Name the contract and phase. Plan: terms are being agreed and nothing is signed (a term sheet, an offer, a statement of work, an order form). Act: it is signed, paid, issued or started, and that date starts the clocks. If neither is true, stop: there is nothing to check yet. Look up this contract's entry in register-contract.md (its fil-<n> once known, else files_read query "register contract"); if it is current for this phase and the facts have not materially changed, use it and stop.
-2. Name the jurisdictions in scope from the facts: the contracting entity and where it is registered (its ops:entity decision line), and where the counterparty, workers and customers are. If a counterparty's or worker's country is unknown, ask once as a BLOCKED item and continue with the jurisdictions you know.
+2. Name the jurisdictions in scope from the facts: the contracting entity and where it is registered (the File legal/entities.md), and where the counterparty, workers and customers are. If a counterparty's or worker's country is unknown, ask once as a BLOCKED item and continue with the jurisdictions you know.
 3. Consider the points every contract shares, then the kind's own row (`references/contract-kinds.md`). Shared: who contracts and who may sign, with any board or shareholder approval; what the company gets (ownership of what is made, data and confidentiality); what it commits to (amount, term, renewal and notice, exit, liability); money and tax (payment terms, currency, tax where the work is done or the customer is); what completion starts (clocks, registrations, registers). Record the points that do not apply in one line in the decision record; report only the applicable ones to the owner. Founder and contractor work: with more than one founder, an IP assignment and a vesting founder agreement; with a contractor or agency, an IP assignment in the engagement; raise each as a decision task and use the standard form unless the case is material and non-standard.
 4. Plan: for each point that applies, ask what gets harder or dearer to change after signing, and keep only those, usually one to five. For each: the choice, your recommended default, the credible alternative and what changing it later would cost. Add them to the contract's existing work item; a choice reserved to the founder becomes a BLOCKED decision with your recommendation.
 5. Act: settle each applicable obligation with requirement_register steps 2 to 5, reusing a current entry in register-filing.md, register-hr.md or register-legal.md. Compute each deadline from the completion date as the authority states it, never from an illustration. If one is already passed or too close for the owner to act in time (about 30 days by default), tell the owner today (the date, the consequence and who must act) before anything else; if it has passed, say so and what late relief exists. If the completion date is unknown, ask for it first. Then create dated Projects work for each obligation with work_set {kind: task, path: operations}: due is the deadline minus a buffer, and brief.dependsOn names the evidence and the filer. Elections, filings, signatures and payments are asks (asks_set) for the person who files; mark one done only from the authority's receipt.

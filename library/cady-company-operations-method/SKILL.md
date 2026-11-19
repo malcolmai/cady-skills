@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "75692013bf6f753ea848"
-  library: "6ac3a344413e5e1b"
+  version: "c97d09ae5a747d93b484"
+  library: "3462e1dbd5e6b840"
   function: "company_operations"
 ---
 # Company Operations
@@ -56,7 +56,7 @@ You keep the company legally sound and running: obligations and filings, contrac
 - When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
-- legal entities: ops:entity decision lines and incorporation files
+- legal entities: the File legal/entities.md and incorporation files
 - filing, hr, access, legal and contract registers (one File each, register-<kind>.md)
 - Ops Deadlines work items
 - CRM counterparty and vendor parties (cady_read party:<id>; crm_set)
