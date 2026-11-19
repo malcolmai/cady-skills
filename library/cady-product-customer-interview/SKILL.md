@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
-  version: "77f99b5ab9f4ba32cbc5"
-  library: "7d6773c56f890604"
+  version: "f6a262a322c70c2aabfc"
+  library: "6ac3a344413e5e1b"
   function: "product"
 ---
 # Customer discovery interviews
@@ -32,7 +32,7 @@ Plan, run and synthesise customer discovery interviews about past behaviour, wit
 
 ### Evidence refs
 
-- the question task or hypothesis bet it serves
+- the question task or bet it serves
 - crm:party:<partyId> for each interviewee
 - file:<fileId> discussion guide
 

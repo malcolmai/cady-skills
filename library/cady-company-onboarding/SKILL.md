@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.onboarding"
-  version: "a5438c93df6f14408611"
-  library: "7d6773c56f890604"
+  version: "7a807b4fc21e00ab6ace"
+  library: "6ac3a344413e5e1b"
   function: "company"
 ---
 # Set up a company and hand over to its Executive
@@ -37,7 +37,7 @@ A new company has no Cady setup yet: record it from what the owner says and set 
 
 1. Setup gates nothing and starts here: record what you learn as you work, following the public setup page (cadyworks.com/docs/setup/); every write is safe to repeat. `cady setup` shows its first steps, the Connect page hands an AI app the same page, and MCP has no setup tool. Put any step that is a person's to them. This skill adds judgement only: change the company's point (what it is for) or a bet (a choice it is making, with its reason) only where the owner changed it.
 2. Record the owner's words first. Once they say what the company does and what they are working on, save that as the company's point and bets with decisions_set, in their words and adding nothing they did not say, before any research.
-3. Infer the rest from their words and the company's stage, and mark every inference. For each function's point (what that function is for, such as demand for go-to-market) that the setup asks for, write only what they said or clearly implied; where they are silent, write a labelled guess (a hypothesis bet: a choice with what would confirm it and what would reject it), never a researched fact, a number or a customer.
+3. Infer the rest from their words and the company's stage, and mark every inference. For each function's point (what that function is for, such as demand for go-to-market) that the setup asks for, write only what they said or clearly implied; where they are silent, write a labelled guess (a bet with its measure: what would confirm it and what would reject it), never a researched fact, a number or a customer.
 4. Ask the owner only what changes the setup and only they can answer: a missing purpose, a conflicting choice, an account or source, who to invite. Ask at most three questions in one message, say what you will do meanwhile, and never ask again what they have answered.
 5. The setup drafts one agent each for product, go-to-market and operations; shape each draft's duties and first task from what the company does (a creator business's go-to-market draft leads with content; a research-heavy business's product draft starts with research). Bind each draft to where it runs before asking; only the owner's own yes makes an agent live; a pending reply, 'not yet' or silence leaves drafts. A first task prepares work and sends or files nothing.
 6. Hand over once the owner approves the agents: from then on the Executive agent runs the company and onboarding ends. A setup is not delivery: a definition or a mock is not a build, and a first offering with its route to customers is `cady-gtm-launch`.

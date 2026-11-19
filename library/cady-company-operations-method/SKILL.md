@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "0d83d9f68cc1d1b719f6"
-  library: "7d6773c56f890604"
+  version: "75692013bf6f753ea848"
+  library: "6ac3a344413e5e1b"
   function: "company_operations"
 ---
 # Company Operations

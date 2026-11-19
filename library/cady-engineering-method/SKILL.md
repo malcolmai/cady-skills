@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "ed990608b2b175b072d7"
-  library: "7d6773c56f890604"
+  version: "f9ebff81e70e4fde3575"
+  library: "6ac3a344413e5e1b"
   function: "engineering"
 ---
 # Engineering
@@ -43,7 +43,7 @@ Check every change against the map before you build (the product's Offering line
 - Delegate per the native orchestration rules; clean up what you started; re-brief a failed helper once, then replace it.
 
 ### Escalates
-- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a hypothesis bet when the answer moves resources) and one ask. Record the answer in the task's result.
+- Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Record the answer in the task's result.
 
 ### Company records
 - the product's top-level architecture diagram (Product context) and scoped dimension diagrams

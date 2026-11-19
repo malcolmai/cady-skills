@@ -2,7 +2,7 @@
 
 **Point:** Gate each family's effort on its own evidence, limit or lead time, so effort goes where delivery breaks.
 
-Apply the row for the goal's family, then decide inside the family's node by its point and bets and record each call on the lowest node both pieces of work serve; a call that crosses families is yours (step 7), and one that would change a point, bet or goal goes to the Executive with both options and the evidence. The function's own skills do the work; this table holds only the gate.
+Apply the row for the goal's family, then decide inside the family's node by its point and bets and record each call as `cady-company-decision` step 6 says; a call that crosses families is yours (step 7), and one that would change a point, bet or goal goes to the Executive with both options and the evidence. The function's own skills do the work; this table holds only the gate.
 
 | Family | Gate (owner skill) | Trigger events | Report line |
 | --- | --- | --- | --- |
