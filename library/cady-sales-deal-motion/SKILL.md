@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
   version: "9f59aac2dfa76e87816c"
-  library: "6c5dad5b0848e7aa"
+  library: "7d6773c56f890604"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff

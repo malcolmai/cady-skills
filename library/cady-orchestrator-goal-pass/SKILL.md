@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.goal_pass"
   version: "8415ea467ee4cd032244"
-  library: "6c5dad5b0848e7aa"
+  library: "7d6773c56f890604"
   function: "orchestrator"
 ---
 # Orchestrate the company
