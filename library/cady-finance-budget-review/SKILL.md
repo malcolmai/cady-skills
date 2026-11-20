@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
-  version: "6dbb26cde26f5c4e6b4d"
-  library: "d2e2631f030e5c74"
+  version: "456fe761d8d55884ff38"
+  library: "edc1674bd8d95c81"
   function: "finance"
 ---
 # Budget and cost review
@@ -43,7 +43,7 @@ Draft or update a budget or spend allocation, or review last month's spend again
 
 ## Procedure
 
-1. Read the root's point and bets and the current finance plan owner read. Choose planning depth from the company stage, business model, cash pressure and actual obligations; a small company need not maintain a corporate FP&A process. Identify the decision the budget must support and the few drivers that change it.
+1. Read the root's point and bets and the Finance plan: the finance node's bets and the File finance/plan.md. Choose planning depth from the company stage, business model, cash pressure and actual obligations; a small company need not maintain a corporate FP&A process. Identify the decision the budget must support and the few drivers that change it.
 2. Reconcile dated observed cash and actuals from the chosen sources with committed obligations, any independently evidenced reservations and forecast flows. Keep those four categories distinct; missing records mean unknown coverage, never zero spend or available balance. Identify currency, period, tax and timing differences before adding figures.
 3. Draft a baseline with explicit driver assumptions and material upside/downside or timing sensitivity. Include collections, payments, inventory, payroll, tax or capital only when relevant. Take cash, burn and runway from `cady-finance-runway` rather than recomputing them; state what would change the decision.
 4. Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, bet or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why. The detail level is the figures, budget and trigger below. Recommend a proportionate budget, stop/review trigger and owner. A budget is one row on a function node with an amount and a purpose: if authorized, set it with accounting_set action set_budget {nodeKey, amountMinor, currency, purpose} (budgetId and expectedRevision to change; close_budget to end) and read it back with accounting_read mode budgets. A budget is decision context, not a reservation or executable spending grant. Rest the return on any spend only on existing or secured revenue, never on projected revenue; forecasts stay scenarios.
