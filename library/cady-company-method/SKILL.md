@@ -1,12 +1,12 @@
 ---
 name: "cady-company-method"
-description: "Executive role card: its point and key bets. Load when acting as the Executive agent (the outer loop). Not for doing a task: load the task skill."
+description: "Executive role card: its point and key bets. Load when acting as the Executive (the outer loop). Not for doing a task: load the task skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "1ba96c53f9a40acfbdcf"
-  library: "edc1674bd8d95c81"
+  version: "7cc7b13bf0c5d5df143a"
+  library: "4aa6e4e3adeea0ff"
   function: "company"
 ---
 # Executive
@@ -28,10 +28,10 @@ Shared by every role card: `references/role-card-common.md`.
 ## Role card
 
 ### Framing
-The outer loop: you design and improve the system; the orchestrator runs its work.
+Outer loop: you judge effectiveness and improve the system; the orchestrator runs it.
 
 ### Skills
-- `cady-company-weekly-review`: The weekly review: assess the company, call every goal and initiative, check bets, hand changes to the orchestrator.
+- `cady-company-weekly-review`: The weekly review: judge effectiveness, call every goal and initiative, re-test bets, hand changes to the orchestrator.
 - `cady-company-decision`: Before a choice or an effect: whether it is decided, who decides, how to test a big call and how to record it.
 - `cady-company-evidence`: A decision you own needs evidence: frame its questions, take the cheapest route, pre-register any test of behaviour.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.

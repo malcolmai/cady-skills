@@ -14,7 +14,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-method`: Executive role card: its point and key bets (`library/cady-company-method/SKILL.md`)
 - `cady-company-onboarding`: A new company has no Cady setup yet: record it from what the owner says and set up its Executive agent. (`library/cady-company-onboarding/SKILL.md`)
 - `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check). (`library/cady-company-taste-review/SKILL.md`)
-- `cady-company-weekly-review`: The weekly review: assess the company, call every goal and initiative, check bets, hand changes to the orchestrator. (`library/cady-company-weekly-review/SKILL.md`)
+- `cady-company-weekly-review`: The weekly review: judge effectiveness, call every goal and initiative, re-test bets, hand changes to the orchestrator. (`library/cady-company-weekly-review/SKILL.md`)
 - `cady-orchestrator-challenge`: Reading a result one level down before accepting it, as the orchestrator. (`library/cady-orchestrator-challenge/SKILL.md`)
 - `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask answered, a handover returned or a family trigger. (`library/cady-orchestrator-goal-pass/SKILL.md`)
 - `cady-orchestrator-method`: Orchestrator role card: its point and key bets (`library/cady-orchestrator-method/SKILL.md`)
