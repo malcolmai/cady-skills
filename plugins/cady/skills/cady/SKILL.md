@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "ecbac3211bd2f721befe"
-  library: "95ad4c9fa4afb97b"
+  version: "d186d24d60002665297c"
+  library: "830bea6d287a0eb9"
   function: "core"
 ---
 # Cady
@@ -28,12 +28,12 @@ It returns the state and the exact calls for what is open. A new company, or one
 | `sales/deals` | discovery through closing |
 | `customer_success/lifecycle` | onboarding through renewal and expansion |
 | `fundraise/raise` | raise plan, investors, materials and outreach |
-| `product/<productId>/scope` | roadmap, features, product bar |
-| `product/<productId>/ui` | pages, layout, components, UI copy |
-| `product/<productId>/context` | how context and records are written, served and cleaned up |
-| `product/<productId>/engineering` | infrastructure, data model, MCP interface, code |
-| `product/<productId>/release` | merge, gates, staging and production |
-| `product/<productId>/methods` | shipped methods, agent guidance and evals |
+| `product/scope` | roadmap, features, product bar |
+| `product/ui` | pages, layout, components, UI copy |
+| `product/context` | how context and records are written, served and cleaned up |
+| `product/engineering` | infrastructure, data model, MCP interface, code |
+| `product/release` | merge, gates, staging and production |
+| `product/methods` | shipped methods, agent guidance and evals |
 | `ops/agents` | create, schedule, approve and retire agents; what they may do |
 | `ops/onboarding` | a new company's first review and goals |
 | `ops/legal` | filings, registers, compliance, tax |

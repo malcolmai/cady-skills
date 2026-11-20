@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "10a314ac97d54bfd5fcd"
-  library: "95ad4c9fa4afb97b"
+  version: "bfe9a35a5f4599c02414"
+  library: "830bea6d287a0eb9"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
@@ -39,7 +39,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 ### Evidence refs
 
 - the root's point and bets and current decisions
-- the product's product map and its owner nodes (the File named by the map clause of decision product:offering-<key>)
+- the product's product map and its owner nodes (the File named <product's node path>/product-map.md)
 - open findings and the last review checkpoint
 - file:<fileId> research notes
 
@@ -53,7 +53,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 ## Procedure
 
 1. Objective. Clear the product's engineering backlog by the motion its current state calls for: review, engineer or hunt, routed from current state, not a fixed rotation. Review when there is no ranked plan, when the goals, a dimension label or a research scan changed since it was written, or when findings contradict it. Engineer when the ranked plan is current and ready items exist, under the engineering role card. Hunt, under the QA role card and by an agent that did not build what it hunts, after a dimension closes, across seams after the end-to-end tests (step 7), or when the finding list is empty or stale. With a short queue one agent reviews and engineers in the same pass, its diffs still getting the engineering role's independent review; give a motion its own agent only when its queue justifies it, and never let two agents share a claim.
-2. Map once, update in place. Keep one product map, with its owner nodes, at its single writer: the repo for software, a Notion page or HTML template otherwise. Publish it as one Markdown Cady File, named by the `map [file:<id>]` clause of the product's Offering line (decision product:offering-<key>); product-area context serves it as `Product map (<key>): file:<id>`. Whoever merges a change to the map then runs `cady product map publish <path> --product <key>` from the merged source: the first run attaches the File (pass `--writer <url>` then), and once it is attached every run adds a version, keeps the writer and records no decision. The system_map reference holds the template and the drafting steps. On the map: journey goals as user outcomes in lifecycle order and architecture as one simple diagram. Features and implementation choices are decisions, not goals. Read the current decisions (cady_read search kinds decision) first; never restate what a decision already holds.
+2. Map once, update in place. Keep one product map, with its owner nodes, at its single writer: the repo for software, a Notion page or HTML template otherwise. Publish it as one Markdown Cady File named <product's node path>/product-map.md (product/product-map.md for a company with one product). Whoever merges a change to the map then runs `cady product map publish <path> --product <node path>` from the merged source: the first run uploads the File (pass `--writer <url>` then), and every later run adds a version of it and keeps the writer; no decision names the map. The system_map reference holds the template and the drafting steps. On the map: journey goals as user outcomes in lifecycle order and architecture as one simple diagram. Features and implementation choices are decisions, not goals. Read the current decisions (cady_read search kinds decision) first; never restate what a decision already holds.
 3. Name high-level, mutually exclusive, collectively exhaustive dimensions that every goal crosses, each with one question, owner and boundary. Before users or revenue, name only the 3 to 5 a goal actually crosses. With users, expect 8 to 14. For a product you build in code, every code area has exactly one owner, including a module’s SQL, pages and tests; do not register qualities such as cost, isolation, verification or efficiency as owners (`references/quality-classes.md`). Keep only what has its own owner, question and test. Label each differentiating or not on the owner's node in the map; only a real choice becomes a decision. The dimensions reference holds the rest of the register rules.
 4. Depth follows the label. A non-differentiating dimension takes the most reliable widely used approach with the least custom code; deviation needs a named reason. A differentiating dimension gets a reviewed architecture (apply the Product card’s depth judgement on the decisive problem from the first session, including before users or revenue) and, only after the first users or revenue, a weekly research scan with `cady-product-research`; test a promising idea with `cady-company-evidence` before it changes the architecture; before then, research only where that judgement calls for it. The dimensions reference holds the research rules.
 5. Test depth follows the change and design comes before tests. Plan bug fixes with root cause, owner and blast radius; for a product you build in code, add only the classes crossed, usually in one line. For its features and architecture, name touched owners, adjacent loops and layers; route about four questions from `references/quality-classes.md` and recurring owner cells, and answer them in the writer brief; a small fix follows the trail into adjacent logic instead; a change to method or agent-behaviour text follows `cady-company-change-agent-behaviour`; test features against the touched dimensions and architecture changes with core end-to-end tests after research and any needed experiment. Record unrun evidence as unrun, and fix the root cause across instances.
@@ -64,7 +64,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 
 ## Acceptance
 
-- [ ] one product map, published as the File the product's Offering line names, holds journey goals and one simple architecture diagram
+- [ ] one product map, published as the File named <product's node path>/product-map.md, holds journey goals and one simple architecture diagram
 - [ ] the dimension register is MECE
 - [ ] each review gives every touched dimension a design verdict, and a recurring failure signature becomes an architecture finding rather than a rerun
 - [ ] each pass ends with a checkpoint: ranked review, reviewed delivery or a deduplicated finding list, ending with the close's two lines
