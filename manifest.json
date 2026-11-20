@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-20T00:00:00Z",
   "bundle": {
-    "tag": "4aa6e4e3adeea0ff",
-    "version": "4aa6e4e3adeea0ff99b4d296ceba4263b113ab3d7d415a571f334d72e3968bcd",
-    "pluginVersion": "2026.11.20-4aa6e4e3"
+    "tag": "cc5160a5a8c4134c",
+    "version": "cc5160a5a8c4134cf31d8e46c84baa0f4a1f1413ec83ece9c75269032c8912f6",
+    "pluginVersion": "2026.11.20-cc5160a5"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.20-4aa6e4e3"
+    "version": "2026.11.20-cc5160a5"
   },
   "skills": [
     {
@@ -51,7 +51,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "4742ad151620c308014c"
+      "version": "383c36a833087983238f"
     },
     {
       "name": "cady-company-method",
@@ -63,7 +63,7 @@
       "name": "cady-company-onboarding",
       "path": "library/cady-company-onboarding",
       "cadyId": "skill.company.onboarding",
-      "version": "7a807b4fc21e00ab6ace"
+      "version": "5676d608facb1c087e83"
     },
     {
       "name": "cady-company-operations-compliance-register",
@@ -165,7 +165,7 @@
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "bfe9a35a5f4599c02414"
+      "version": "6ba286f709aa8cc01283"
     },
     {
       "name": "cady-finance-budget-review",
@@ -237,7 +237,7 @@
       "name": "cady-gtm-channel-plan",
       "path": "library/cady-gtm-channel-plan",
       "cadyId": "skill.gtm.channel_plan",
-      "version": "475dcf486af30a96dfbe"
+      "version": "f7956f22a91c062d1e72"
     },
     {
       "name": "cady-gtm-cold-email-cycle",
@@ -333,7 +333,7 @@
       "name": "cady-orchestrator-goal-pass",
       "path": "library/cady-orchestrator-goal-pass",
       "cadyId": "skill.orchestrator.goal_pass",
-      "version": "e0c3de16298ef8623a2f"
+      "version": "d7b05750dc8c184ee620"
     },
     {
       "name": "cady-orchestrator-method",
