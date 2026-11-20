@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "553e99aeb1e1ee2952fc"
-  library: "95ad4c9fa4afb97b"
+  version: "1eec64f788107c93a33a"
+  library: "830bea6d287a0eb9"
   function: "product"
 ---
 # Product
@@ -66,7 +66,7 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - root point and bets
 - current assumption and decision items
 - customer evidence Files and CRM interactions
-- offerings (the company product owner read)
+- the product nodes (node:product and the nodes below it)
 - release work items
 - the product's architecture diagrams: one top-level diagram first, plus scoped diagrams for one dimension each
 
