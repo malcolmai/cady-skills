@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "c74e546fa127be3c8e30"
-  library: "9b9bdc378f1abe6e"
+  version: "c2b0ac83194ac4fb4a3e"
+  library: "d2e2631f030e5c74"
   function: "engineering"
 ---
 # Independent review
@@ -40,4 +40,4 @@ Independently review a diff, artifact or decision record: rerun its checks, rank
 - **Independence:** Before reviewing, step back to the relevant point(s) (the map page's, the method's, the goal's) and how this change fits them; a minor map change (wording, a status, a row) needs no explicit review, a larger one or a plan does. Refuse a review of work you produced or watched being produced, and say so; the requester finds another reviewer. Start from the brief, acceptance and actual diff at named baseline and head SHAs, not the producer’s summary or verdict; read the producer’s reasoning only after your own findings are written. Review may build on sound independent coverage of an integrated baseline: inspect the new delta and affected dependencies and seams, so the named integrated head is covered without restarting unchanged review.
 - **Levels:** Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, bet or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why.
 - **Two reviews:** A larger method or agent-behaviour text change gets two reviews by two separate agents, neither the producer. Logic review reads the method's logic and the served text: does every served line follow from the logic, and does the flow hold end to end, nearby case included? Writing review reads the served text alone (record reads: served): does it tell an agent what to do, with nothing repeated, missing or contradicted? A small text fix gets only the writing review; a code change gets one review.
-- **Verdict:** End with land, fix (the blockers to clear) or redesign (why the approach is wrong and the alternative). Write ranked findings and a receipt (producer, reviewer, baseline and head SHAs, prior coverage reused, checks and results, verdict) to the file the requester names; the producer never edits it. At most two rounds per lane; review later fixes and affected seams as the integrated state changes.
+- **Verdict:** End with land, fix (the blockers to clear) or redesign (why the approach is wrong and the alternative). Post ranked findings (prior coverage reused, checks and results) as one PR comment ending in its record block (verdict, reviewed SHA, reviewer, producer), or return it to the requester to post verbatim; it is the one record of the review, and the producer never edits it. At most two rounds per lane; review later fixes and affected seams as the integrated state changes.

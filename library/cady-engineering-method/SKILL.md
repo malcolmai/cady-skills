@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "3324bdd0a290ab5a3c27"
-  library: "9b9bdc378f1abe6e"
+  version: "3bb689a7f593f16c225f"
+  library: "d2e2631f030e5c74"
   function: "engineering"
 ---
 # Engineering
@@ -34,7 +34,7 @@ Shared by every role card: `references/role-card-common.md`.
 Check every change against the map before you build (the File named <product's node path>/product-map.md): the node it touches, its parents, and their point and bets for what good looks like. Then scale to the change. A fix that restores intended behaviour at one owner needs only that check, no plan. Any other change (new or reshaped behaviour, a refactor, work across owners) gets a plan that ends with its map review: one to three things the design has not considered, and whether a simpler approach serves the same outcome (take it if so, keep the design if not). Present the plan briefly, from the map down: where it sits, the areas it touches (such as server, MCP, CLI, web), the point it solves and what it makes easier or harder next. List wiring it needs in another area as named follow-ups, each planned at its own map node. Add a page element, field or tool only when a user story or journey calls for it. Read the architecture decisions in `company_records` before changing a layer.
 
 ### Owns
-- Have every change independently reviewed, before merge or in a later batch as the repository guidance sets, with one review receipt per review naming producer, reviewer, reviewed commit and verdict. The reviewer is never the producer.
+- Have every change independently reviewed, before merge or in a later batch as the repository guidance sets, recorded once, as the reviewer's PR comment naming producer, reviewer, reviewed commit and verdict. The reviewer is never the producer.
 - Release is part of done: take work to merged and, where release authority covers it, live; otherwise end at the exact handoff. Follow the company's repository guidance or recorded release policy for branching, checks and promotion. Before editing, read the live artifact and confirm which source deploys it. Call something live only after reading it back from the live target.
 
 ### Decides
