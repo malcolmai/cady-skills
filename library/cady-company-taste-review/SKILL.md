@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "d8cd7b69959ea5ee931e"
-  library: "cc5160a5a8c4134c"
+  version: "df8ff6a5b08a73ed32f4"
+  library: "1c813a168890974c"
   function: "company"
 ---
 # Writing craft and taste decisions
@@ -36,15 +36,15 @@ Write or edit a post, article, web copy or other public text, or review a design
 ### Evidence refs
 
 - the artifact or draft
-- current taste decisions (subjectPrefix taste:)
+- the bets on the node the work serves and its parents (the owner's preferences)
 - the owner's corrections
 
 ## Procedure
 
-1. Start from the reader and purpose: who gets the work, what it must get them to do or decide, the one trade-off. Read the owner's taste decisions first: cady_read {query: "taste", kinds: ["decision"]}.
+1. Start from the reader and purpose: who gets the work, what it must get them to do or decide, the one trade-off. Read the owner's preferences first: the bets on the node the work serves and its parents, which cady_start serves.
 2. Writing public text (a LinkedIn, X or blog post, article, script, caption or website copy): create, edit or review it with the written-content craft (its written-content reference).
 3. Judge what you wrote at two levels, the details with `references/taste-post.md` for public text and the ui or visual part of `references/taste-check.md` for a design. Review at two levels. First why: does the work serve the purpose one level up? Ask why until you reach a recorded goal, bet or decision, and list each assumption with its evidence or mark it unsupported. A why that is missing goes back to the requester as a question. A why that evidence contradicts is a blocker even when the details are sound. A why that conflicts with an owner's recorded decision goes to that owner; you do not reverse it. Then review the details. An obviously purposeful small fix needs one line on why. Your own sense of how it lands is not a verdict.
-4. Learn from feedback: an owner correction becomes a decision (decisions_set {subject: "taste:<medium>-<key>", chosen, rationale, alternatives, quote, authority, replaces, citesWhy}). Put a short trigger, reason, trade-off, exception and confidence in rationale; chosen is the preference, quote the owner's exact words (authority manager, admin for an Admin); for your own judgment use authority agent. A one-off stays low confidence and scoped to its work; promote it to a general preference only after two or three consistent judgments; never record a universal ban; replace rather than overwrite. Never replace an owner's taste decision on your own authority: record the conflict and ask once with two real alternatives (A, B, neither or equal, and one line why).
+4. Learn from feedback: an owner correction becomes a bet on the node it governs, the root when it is company-wide (decisions_set {path, bet: {chosen: the preference, insteadOf: what it rules out, why: a short trigger, reason, trade-off, exception and confidence}}); a bet replacing one names it in replaces. A one-off stays low confidence and scoped to its work; promote it to a general preference only after two or three consistent judgments; never record a universal ban; replace rather than overwrite. Never replace an owner's preference bet on your own authority: record the conflict and ask once with two real alternatives (A, B, neither or equal, and one line why).
 
 ## Acceptance
 
@@ -62,8 +62,8 @@ Write or edit a post, article, web copy or other public text, or review a design
 ### Artifact refs
 
 - company:work:<workId>
-- decision:taste:<medium>-<key>
-- **Transition:** the draft is handed on with what was and was not judged; a preference becomes a taste decision
+- node:<path> (the preference bet)
+- **Transition:** the draft is handed on with what was and was not judged; a preference becomes a bet on its node
 
 ## References
 - Read [Taste check](references/taste-check.md) when judging a draft or design before review.

@@ -4,6 +4,20 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 1c813a168890974c · 2026-11-20
+
+Since cc5160a5a8c4134c: 0 new, 0 dropped, 8 changed.
+
+Changed:
+- `cady-company-change-agent-behaviour`: Improving an agent now means editing the company's own local skill and recording why; contributing upstream is optional.
+- `cady-company-taste-review`: Inputs, Procedure, Result, reference taste-check.md
+- `cady-design-method`: reference taste-check.md
+- `cady-fundraise-investor-outreach`: reference taste-check.md
+- `cady-fundraise-raise-materials`: reference taste-check.md
+- `cady-gtm-voice-pack`: reference taste-check.md
+- `cady-product-manage`: Procedure, reference product-manage-detail.md
+- `cady-qa-method`: reference taste-check.md
+
 ## cc5160a5a8c4134c · 2026-11-20
 
 Since 4aa6e4e3adeea0ff: 0 new, 0 dropped, 5 changed.

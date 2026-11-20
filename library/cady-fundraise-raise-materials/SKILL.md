@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "8bbd4e4faa195b1d3b10"
-  library: "cc5160a5a8c4134c"
+  version: "e898332354e155be3960"
+  library: "1c813a168890974c"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
