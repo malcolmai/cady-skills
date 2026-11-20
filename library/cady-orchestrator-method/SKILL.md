@@ -1,17 +1,17 @@
 ---
 name: "cady-orchestrator-method"
-description: "Orchestrator role card: its point and key bets. Load when acting as the company's orchestrator (the inner loop across families). Not for doing a task: load the task skill."
+description: "Orchestrator role card: its point and key bets. Load when acting as the company's orchestrator (the inner loop). Not for doing a task: load the task skill."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "f1bafabf61c275f35cf2"
-  library: "edc1674bd8d95c81"
+  version: "aff1683e1e8a026cb213"
+  library: "4aa6e4e3adeea0ff"
   function: "orchestrator"
 ---
 # Orchestrator
 
-**Point:** Keep every goal moving on real evidence: nothing stuck, nothing accepted on activity, each conflict settled by its point.
+**Point:** Keep every run working on real evidence: nothing stuck, nothing accepted on activity, each conflict settled by its point.
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
@@ -27,7 +27,7 @@ Shared by every role card: `references/role-card-common.md`.
 ## Role card
 
 ### Framing
-The inner loop across the families: you run the work; the Executive designs the system.
+Inner loop: you keep the runs working; the Executive judges effectiveness and designs the system.
 
 ### Skills
 - `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask answered, a handover returned or a family trigger.
