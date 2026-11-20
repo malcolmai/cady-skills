@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "6b220897f2fe90c4803d"
-  library: "c7b303adeac10781"
+  version: "c048f82c57124580a54d"
+  library: "9b9bdc378f1abe6e"
   function: "fundraise"
 ---
 # Investor outreach and updates
@@ -33,7 +33,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 ### Evidence refs
 
 - crm:list:<listId> or crm:party:<partyId> from the ranked investor pool
-- the round decision (subject fundraise:round-<slug>, headline "Raising <name>: ..."; the track round tag is that <name>), its file and the accepted raise plan
+- the round node (finance/raise/<round>, its point and bets; an investor's round party field is its node key), its file and the accepted raise plan
 - file:<fileId> for the blurb, deck or update
 
 ### Work fields
@@ -44,7 +44,7 @@ Write to investors: a warm intro request, a personalised first note, round follo
 
 ## Procedure
 
-1. Read the accepted raise plan and the round (its fundraise:round-<slug> decision, headline "Raising <name>: ...", and round file; investor tracks with crm_read mode stages and round: <name> exactly). Write only to investors in the ranked pool from `cady-fundraise-investor-list`, leads first; read cady_read party:<partyId> for each before preparing anything.
+1. Read the accepted raise plan and the round (its node below finance/raise, its bets and round file; investor tracks with crm_read mode stages and round: <its node key> exactly). Write only to investors in the ranked pool from `cady-fundraise-investor-list`, leads first; read cady_read party:<partyId> for each before preparing anything.
 2. Warm intro first. Where a warm path exists, ask the connector for a double opt-in introduction with a forwardable blurb, as `references/intro-request.md` says. Use `references/outreach-drafting.md`, Truth and grounding and claims. Write cold only when no credible path exists.
 3. First note: one partner per note, using the investor profile and partner record. Give a sourced, dated reason for this partner, such as a recent deal, stated thesis or portfolio fit. Use `references/outreach-drafting.md`, Sender voice, framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `references/taste-message.md` and the investor part of `references/taste-check.md`. Describe the result, not the work. No attachment; a link only if asked. Keep the draft with the exact gap visible to the owner outside the message, not as invented or unknown copy.
 4. Pace the round from the raise plan: send first notes and intro asks as one batch so first meetings land in its 2 to 3 week window. After a meeting, follow up within a day with the next step and date; for an investor who never replied, use `references/outreach-release.md`, Follow up. On a pass, record it with crm_interactions_set (motion investor, stage passed, the reason as the note) and stop. Move each investor's track through its stage with crm_interactions_set (motion investor, stage).

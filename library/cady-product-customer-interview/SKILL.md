@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.customer_interview"
   version: "f6a262a322c70c2aabfc"
-  library: "c7b303adeac10781"
+  library: "9b9bdc378f1abe6e"
   function: "product"
 ---
 # Customer discovery interviews
