@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
-  version: "475dcf486af30a96dfbe"
-  library: "4aa6e4e3adeea0ff"
+  version: "f7956f22a91c062d1e72"
+  library: "cc5160a5a8c4134c"
   function: "gtm"
 ---
 # Channel plan
@@ -50,7 +50,7 @@ Turn accepted persona, offer and chosen channels into channel plays and executio
 5. Choose one to three variants with large angle differences: about 40/30/30 early, then 70/20/10 only after a winner holds two cycles. Before the cycle use `cady-company-evidence` to pre-register the behavioural metric, pass and fail lines, sample, time box and keep, scale or kill decision. Read the cycle's outreach reviews (cady_read review:outreach/<approvalId>, each approvalId the work reported) at mid-cycle and end by variant and persona with denominators; use the GTM domain method's small-sample rule before treating evidence as decisive. A channel failing its line twice the same way goes to the strategy goal call: persist, pivot, parallel or stop.
 6. For each channel identify the standing approval to ask for: the List or motion it covers, the agents that hold the work, an optional end and an optional daily cap. A standing approval is a person's recorded yes that agents cite (recorded with the approval door, then cited with crm_outreach {id, status: sending, grantId}); see the authority section. The first cycle supplies the one to five rendered examples for the owner’s decision; nothing sends before that approval. Never record a standing approval on the owner’s behalf: only their exact words record one.
 7. Create one execution agent per channel in use with `references/execution-agent-brief.md`.
-8. Hand the agent and first work item IDs to the orchestrator, with a recommended cadence and why it suits reply timing; the orchestrator chooses schedule or tracked one-off dispatch and binds it; the agent goes live on the owner's go-ahead.
+8. Hand the agent and first work item IDs to the orchestrator, with a recommended cadence and why it suits reply timing; the orchestrator chooses schedule or tracked one-off dispatch and binds it; the agent is set live once bound (no go-ahead asked).
 9. Before accepting an execution agent's result, read its held review (cady_read review:outreach/<approvalId>) and the List shortfall; send back what fails the brief's doneWhen.
 
 ## Acceptance
@@ -61,7 +61,7 @@ Turn accepted persona, offer and chosen channels into channel plays and executio
 
 ## Owner checks
 
-- the owner gives standing approvals; the orchestrator chooses scheduling; the owner's go-ahead takes the agent live
+- the owner gives standing approvals; the orchestrator chooses scheduling; status live takes the agent live
 
 ## Result
 
