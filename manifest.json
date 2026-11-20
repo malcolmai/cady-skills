@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-20T00:00:00Z",
   "bundle": {
-    "tag": "cc5160a5a8c4134c",
-    "version": "cc5160a5a8c4134cf31d8e46c84baa0f4a1f1413ec83ece9c75269032c8912f6",
-    "pluginVersion": "2026.11.20-cc5160a5"
+    "tag": "1c813a168890974c",
+    "version": "1c813a168890974c616a110c2fdf0f098ca90bc9adf1fc42e5d0c0aa1cf8fdb7",
+    "pluginVersion": "2026.11.20-1c813a16"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.20-cc5160a5"
+    "version": "2026.11.20-1c813a16"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "a80250a2e57f1f03185f"
+      "version": "31b0cbcb33ba6d0266c9"
     },
     {
       "name": "cady-company-decision",
@@ -105,7 +105,7 @@
       "name": "cady-company-taste-review",
       "path": "library/cady-company-taste-review",
       "cadyId": "skill.company.taste_review",
-      "version": "d8cd7b69959ea5ee931e"
+      "version": "df8ff6a5b08a73ed32f4"
     },
     {
       "name": "cady-company-weekly-review",
@@ -129,7 +129,7 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "8b06643436f1126f5dc1"
+      "version": "5f2af641273e99db3591"
     },
     {
       "name": "cady-design-wcag-audit",
@@ -207,7 +207,7 @@
       "name": "cady-fundraise-investor-outreach",
       "path": "library/cady-fundraise-investor-outreach",
       "cadyId": "skill.fundraise.investor_outreach",
-      "version": "c048f82c57124580a54d"
+      "version": "077f4c56d04c17cb20f6"
     },
     {
       "name": "cady-fundraise-method",
@@ -219,7 +219,7 @@
       "name": "cady-fundraise-raise-materials",
       "path": "library/cady-fundraise-raise-materials",
       "cadyId": "skill.fundraise.raise_materials",
-      "version": "8bbd4e4faa195b1d3b10"
+      "version": "e898332354e155be3960"
     },
     {
       "name": "cady-fundraise-raise-plan",
@@ -303,7 +303,7 @@
       "name": "cady-gtm-voice-pack",
       "path": "library/cady-gtm-voice-pack",
       "cadyId": "skill.gtm.voice_pack",
-      "version": "318953e70f45be18bf1a"
+      "version": "5b29e425756e140556dc"
     },
     {
       "name": "cady-gtm-warm-email",
@@ -351,7 +351,7 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "ba6f87909ee7f743ab69"
+      "version": "b950c6730e79df22034c"
     },
     {
       "name": "cady-product-method",
@@ -369,7 +369,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "2435c626287ad1b88eaf"
+      "version": "6540202c0cd19e00bdec"
     },
     {
       "name": "cady-qa-stories",
