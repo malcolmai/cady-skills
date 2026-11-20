@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-20T00:00:00Z",
   "bundle": {
-    "tag": "c7b303adeac10781",
-    "version": "c7b303adeac107810e2b16fbd76f82898d225d814d6e07eab548e2c581a14101",
-    "pluginVersion": "2026.11.20-c7b303ad"
+    "tag": "9b9bdc378f1abe6e",
+    "version": "9b9bdc378f1abe6e7db017aa990c7f3ce2d984f9db61da75998271df4d754851",
+    "pluginVersion": "2026.11.20-9b9bdc37"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.20-c7b303ad"
+    "version": "2026.11.20-9b9bdc37"
   },
   "skills": [
     {
@@ -207,13 +207,13 @@
       "name": "cady-fundraise-investor-outreach",
       "path": "library/cady-fundraise-investor-outreach",
       "cadyId": "skill.fundraise.investor_outreach",
-      "version": "6b220897f2fe90c4803d"
+      "version": "c048f82c57124580a54d"
     },
     {
       "name": "cady-fundraise-method",
       "path": "library/cady-fundraise-method",
       "cadyId": "company.method.fundraise",
-      "version": "0b2f3a23b69919d7df43"
+      "version": "1f10566dd75a6e7d1ed8"
     },
     {
       "name": "cady-fundraise-raise-materials",
@@ -225,7 +225,7 @@
       "name": "cady-fundraise-raise-plan",
       "path": "library/cady-fundraise-raise-plan",
       "cadyId": "skill.fundraise.raise_plan",
-      "version": "72642383628f6ebb13ad"
+      "version": "3bfc1930b2b9dfe624c0"
     },
     {
       "name": "cady-gtm-calls",
