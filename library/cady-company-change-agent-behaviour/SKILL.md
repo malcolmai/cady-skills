@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "ee831ff472c49ec5d781"
-  library: "1789731d790b6a95"
+  version: "a80250a2e57f1f03185f"
+  library: "c7b303adeac10781"
   function: "company"
 ---
 # Change agent behaviour
@@ -53,7 +53,7 @@ Change what agents do: edit a skill, role card, run sequence, tool text or an ag
 
 - [ ] (check) the change sits at its one home, with a pointer or registered cue elsewhere and no restated copy
 - [ ] (fresh) larger change: key cases judged against checks written first, including the nearby case
-- [ ] (person) the owner decided any change to an always-on line, a hard limit or an external-facing line
+- [ ] (person) the owner decided any change to an always-on line, a hard limit or an external-facing line; correcting a line that names a call, field or behaviour the code no longer has needs only the review
 
 ## Owner checks
 
