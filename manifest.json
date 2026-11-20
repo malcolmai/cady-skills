@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-20T00:00:00Z",
   "bundle": {
-    "tag": "830bea6d287a0eb9",
-    "version": "830bea6d287a0eb975b581840adab080d4fdec8d1635d01899698a6004261f8b",
-    "pluginVersion": "2026.11.20-830bea6d"
+    "tag": "1789731d790b6a95",
+    "version": "1789731d790b6a952fbb69f09e2addc62f0fc2ada949fb423d086de74c525d29",
+    "pluginVersion": "2026.11.20-1789731d"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.20-830bea6d"
+    "version": "2026.11.20-1789731d"
   },
   "skills": [
     {
@@ -333,7 +333,7 @@
       "name": "cady-orchestrator-goal-pass",
       "path": "library/cady-orchestrator-goal-pass",
       "cadyId": "skill.orchestrator.goal_pass",
-      "version": "ed0d9463057eea94c9a8"
+      "version": "1b17bf0a75803ab52766"
     },
     {
       "name": "cady-orchestrator-method",
