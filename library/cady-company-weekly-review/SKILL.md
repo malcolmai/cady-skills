@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.weekly_review"
-  version: "39403053a66956856b16"
-  library: "d2e2631f030e5c74"
+  version: "7e4f59d556386ec96df7"
+  library: "edc1674bd8d95c81"
   function: "company"
 ---
 # Weekly review
@@ -38,7 +38,7 @@ The weekly review: assess the company, call every goal and initiative, check bet
 ### Sources
 
 - cady_start (the root's point and bets)
-- the finance plan read (cash, burn, runway)
+- the books (cash, burn, runway) and the finance node (the plan)
 - cady_read changes since your last review
 - each function head's current situation call
 
