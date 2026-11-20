@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
   version: "8bbd4e4faa195b1d3b10"
-  library: "830bea6d287a0eb9"
+  library: "1789731d790b6a95"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
