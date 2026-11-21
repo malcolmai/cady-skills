@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "df0219fd917d4bb32232"
-  library: "50403006fa99835e"
+  version: "3f9bff2e620b2006f10b"
+  library: "ec73b70a2f595665"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
