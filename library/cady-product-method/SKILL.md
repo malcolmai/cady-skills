@@ -1,12 +1,12 @@
 ---
 name: "cady-product-method"
-description: "Product role card: what this function owns and decides. Load when acting as the Product agent or choosing among its skills. Not for doing a task: load the task skill."
+description: "Product role card: what this function owns and decides. Load when acting as the Product agent or choosing among its skills. Not for doing a task: load the task skill, or with only this card read the reference it links for that task."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "2c33f4b9f702d5ddc033"
-  library: "6f009dfb3b71e749"
+  version: "49868345c655d1590b0e"
+  library: "50403006fa99835e"
   function: "product"
 ---
 # Product

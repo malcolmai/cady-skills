@@ -5,7 +5,7 @@ Put this file and map.schema.json beside the source, model.json, in the map fold
 `docs` folder), then run it from anywhere:
 
     python3 render_map.py            # check the source, then write product-map.md and gaps.md beside it
-    python3 render_map.py --check    # the same checks, and fail if the two files on disk differ from a fresh render
+    python3 render_map.py --check    # the same checks, and fail if the two files on disk differ from a fresh render in the same form
     python3 render_map.py --list     # every subject id with its point
     python3 render_map.py --front    # print the front page
     python3 render_map.py --card ID  # print one subject's card
@@ -19,16 +19,19 @@ line saying where the map is edited: `cady product map publish` adds that to the
 
 Counted as gaps: a card bet with no reason or no alternative. An owner's bet is the owner's sentence word for word, so one without them is counted on a
 line of its own: only the owner can fill it. One subject owns a path; a dimension's `governs` paths are owned by another subject, and their open work and
-traps show on both cards. A part's `schema` names the file that defines its shape. While that file is not written, an open item of the current release
-must name that path itself and come before the other open items of its subject. The order of items across subjects is not checked.
+traps show on both cards. A part's `schema` names the file that defines its shape, or the folder of migrations that does. While it is not written, an
+open item of the current release must name that path itself and come before the other open items of its subject. The order of items across subjects is
+not checked.
 
 Derived at each render and never stored: file counts, each path's point, Touches, open work and every count. Not derived: a
 subject's tools (the source lists them) and the diagram (the source holds it as text). A folder's point is the first line of its
 README, or else the leading comment of its entry file (index.ts, __init__.py and the like); a file's is its leading comment.
 
 File counts and ownership read tracked files, so stage new files, then render. File counts change whenever a file is added
-anywhere. Where the render is committed, render and check with --no-file-counts: the render then says nothing about how many
-files there are, nor how many of them the subjects own, so an added file does not make it stale.
+anywhere. Where the render is committed, render with --no-file-counts: the front page and the cards then say nothing about how
+many files there are, nor how many of them the subjects own, so an added file does not make them stale. gaps.md says the render
+was made that way and how many files no subject owned at that render; --check reads that, checks in the same form with or without
+the option, and compares that line with its number left out. The front page names the option in its "Using this map" section.
 
 Standard library only. Options: --source, --schema, --root (the repository root), --out (where the two files go) and
 --no-file-counts.
@@ -49,6 +52,8 @@ ENTRY_FILES = ("index.ts", "index.tsx", "index.js", "index.mjs", "__init__.py", 
 FRONT_LIMIT = 10_000  # bytes; over it is a flag
 MAX_QUESTIONS = 7
 OUTPUTS = ("product-map.md", "gaps.md")
+UNOWNED_LINE = "- Files no subject owns: "  # in gaps.md of a render without file counts: counted at that render; --check compares the line with its number left out
+NO_COUNTS_MARK = "Rendered with `--no-file-counts`"  # how --check knows the form the render on disk was made in
 
 
 # ---- the schema: the part of JSON Schema that map.schema.json uses ----
@@ -189,7 +194,7 @@ class Map:
     """A source that matched the schema, joined with the repository it describes."""
 
     def __init__(self, model: dict, root: Path, skip: tuple[str, ...] = (), file_counts: bool = True):
-        self.m, self.root, self.file_counts = model, root, file_counts
+        self.m, self.root, self.file_counts, self.skip = model, root, file_counts, skip
         # the two rendered files are not counted, so a render does not change the next one; with no file counts, no file is listed
         self.files = [f for f in list_files(root) if f not in skip] if file_counts else []
         self.subjects = ([("core", s) for s in model["app"]["core"]] + [("module", s) for s in model["app"]["modules"]]
@@ -276,16 +281,14 @@ class Map:
         return errors
 
     def schema_first(self, s: dict) -> list[str]:
-        """A part's schema file is a file, not a folder. While it is not written, an open item of the current release names that path itself,
-        and that item comes before the other open items of this subject: the shape is settled before the code that builds on it. One
-        message per file, however many parts share it. The order across subjects is not checked."""
+        """A part's schema path is the file that defines its shape, or a folder of migrations. While it is not written, an open item of the
+        current release names that path itself, and that item comes before the other open items of this subject: the shape is settled before
+        the code that builds on it. One message per path, however many parts share it. The order across subjects is not checked."""
         errors, sid = [], s["id"]
         items = [i for i in (self.m["releases"][0]["items"] if self.m["releases"] else []) if i["status"] != "done"]
         for path in dict.fromkeys((part.get("schema") or "").rstrip("/") for part in s.get("parts") or []):
             if not path:
                 continue
-            if (self.root / path).is_dir():
-                errors.append(f"{sid}: the schema file {path} is a folder; name the file that defines the shape")
             if (self.root / path).exists():
                 continue
             writes = [n for n, i in enumerate(items) if path in [p.rstrip("/") for p in i["paths"]]]
@@ -356,6 +359,10 @@ class Map:
                 "items_no_card": self.open_items(None), "traps_no_card": self.traps(None),
                 "unowned": sum(1 for f in self.files if not self.owner_of_file[f])}
 
+    def unowned_now(self) -> int:
+        """How many files no subject owns, read from the repository now, whether or not this render shows file counts."""
+        return sum(1 for f in (self.files if self.file_counts else list_files(self.root)) if f not in self.skip and not self.owner_path(f))
+
     def count_lines(self) -> list[str]:
         c = self.counts()
         return [f"- Bets with no recorded reason: {len(c['no_reason'])} of {c['bets']}.",
@@ -396,7 +403,7 @@ class Map:
               "Find the angle, then the key area, then the subject named on its line. Its card is the heading with its name below; "
               "`render_map.py --card <id>` prints one card and `--list` every id. Read this code lists the paths a subject owns; when "
               "paths nest, the longest matching path owns the file. Where a card and the code disagree, the code is right and the map "
-              "is fixed in the same change: edit `model.json`, then run `render_map.py`.", ""]
+              f"is fixed in the same change: edit `model.json`, then run `render_map.py{'' if self.file_counts else ' --no-file-counts'}`.", ""]
         kinds = {kind: sum(1 for k, _ in self.subjects if k == kind) for kind in ("core", "module", "dimension")}
         o += ["## 5. State of the map", "",
               f"{plural(len(self.subjects), 'subject')} ({kinds['core']} core, {plural(kinds['module'], 'module')}, {plural(kinds['dimension'], 'dimension')})"
@@ -459,9 +466,13 @@ class Map:
     def product_map(self) -> str:
         return self.front() + "\n" + "\n".join(self.card(s["id"]) for _, s in self.subjects)
 
-    def gaps(self) -> str:
+    def gaps(self, unowned_note: bool = False) -> str:
+        """The gaps list. With `unowned_note`, a render without file counts still says how many files no subject owned when it was made."""
         c = self.counts()
-        o = [f"# {self.m['product']['name']}: gaps", "", "Derived at each render from `model.json`; counts are over card bets.", ""] + self.count_lines() + [""]
+        o = [f"# {self.m['product']['name']}: gaps", "", "Derived at each render from `model.json`; counts are over card bets.", ""] + self.count_lines()
+        if unowned_note and not self.file_counts:
+            o.append(f"{UNOWNED_LINE}{self.unowned_now()}. {NO_COUNTS_MARK}, so the number is counted when the render is made and `--check` does not compare it.")
+        o.append("")
         if self.errors:
             o += ["## Failed checks", ""] + [f"- {e}" for e in self.errors] + [""]
         if self.flags:
@@ -487,11 +498,11 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--schema", type=Path, default=here / "map.schema.json", help="the schema (default: map.schema.json beside this file)")
     ap.add_argument("--root", type=Path, help="the repository root (default: two folders above the source)")
     ap.add_argument("--out", type=Path, help="where product-map.md and gaps.md go (default: beside the source)")
-    ap.add_argument("--check", action="store_true", help="write nothing; fail if a check fails or the files on disk differ from a fresh render")
+    ap.add_argument("--check", action="store_true", help="write nothing; fail if a check fails or the files on disk differ from a fresh render in the form they were made in (with or without file counts)")
     ap.add_argument("--list", action="store_true", help="print every subject id with its point")
     ap.add_argument("--front", action="store_true", help="print the front page")
     ap.add_argument("--card", metavar="ID", help="print one subject's card")
-    ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out, and with them how many of the repository's files the subjects own; where the render is committed, render and check with it, so an added file does not make it stale")
+    ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out of the front page and the cards; where the render is committed, render with it, so an added file does not make it stale (gaps.md keeps the count of files no subject owns, as of the render)")
     args = ap.parse_args(argv)
     source = args.source.resolve()
     root, out = (args.root or source.parent.parent.parent).resolve(), (args.out or source.parent).resolve()
@@ -505,31 +516,36 @@ def main(argv: list[str] | None = None) -> int:
         print(f"render_map: {source.name} does not match {args.schema.name}; nothing written:", file=sys.stderr)
         print("\n".join(f"  {p}" for p in problems), file=sys.stderr)
         return 1
+    on_disk = (out / "gaps.md").read_text(encoding="utf-8") if args.check and (out / "gaps.md").is_file() else ""
+    no_counts = args.no_file_counts or NO_COUNTS_MARK in on_disk  # --check follows the form the render on disk was made in
     built = Map(model, root, tuple(os.path.relpath(folder / name, root).replace(os.sep, "/") for folder in {out, source.parent} for name in OUTPUTS),
-                file_counts=not args.no_file_counts)
+                file_counts=not no_counts)
     if args.list or args.front or args.card:
         if args.card and args.card not in built.by_id:
             print(f"render_map: no subject {args.card}; --list prints the ids", file=sys.stderr)
             return 1
         print("\n".join(f"{s['id']}\t{kind}\t{s['point']}" for kind, s in built.subjects) if args.list else built.front() if args.front else built.card(args.card))
         return 0
-    rendered = {"product-map.md": built.product_map(), "gaps.md": built.gaps()}
+    rendered = {"product-map.md": built.product_map(), "gaps.md": built.gaps(unowned_note=True)}
+    # without file counts only the number on the unowned line is free to differ: the line must be there, once, with the rest of its text
+    compared = lambda text: re.sub(rf"(?m)^({re.escape(UNOWNED_LINE)})\d+", r"\1N", text) if no_counts else text
     stale = []
     for name in OUTPUTS:
         text = rendered[name].rstrip("\n") + "\n"
         if args.check:
-            if not (out / name).is_file() or (out / name).read_text(encoding="utf-8") != text:
+            if not (out / name).is_file() or compared((out / name).read_text(encoding="utf-8")) != compared(text):
                 stale.append(name)
         else:
             out.mkdir(parents=True, exist_ok=True)
             (out / name).write_text(text, encoding="utf-8")
-    print(f"render_map: {plural(len(built.subjects), 'card')}, front page {len(built.front().encode('utf-8'))} bytes" + ("" if args.check else f", written to {out}"))
+    print(f"render_map: {plural(len(built.subjects), 'card')}, front page {len(built.front().encode('utf-8'))} bytes" + ("" if args.check else f", written to {out}")
+          + (f"; no file counts, {plural(built.unowned_now(), 'file')} owned by no subject" if no_counts else ""))
     for line in built.flags:
         print(f"flag (not a failure): {line}")
     for line in built.errors:
         print(f"check failed: {line}", file=sys.stderr)
     for name in stale:
-        print(f"check failed: {name} is missing or differs from a fresh render; run render_map.py", file=sys.stderr)
+        print(f"check failed: {name} is missing or differs from a fresh render; run render_map.py{' --no-file-counts' if no_counts else ''}", file=sys.stderr)
     return 1 if built.errors or stale else 0
 
 
