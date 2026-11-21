@@ -191,7 +191,7 @@
       "items": {
         "$ref": "#/$defs/dimension"
       },
-      "description": "Parts of how the product is engineered: the Interface, Infrastructure and QA subjects, each answering one engineering question. A quality (fast, secure) is not a subject."
+      "description": "Parts of how the product is engineered: the Interface, Infrastructure and QA subjects, each answering one engineering question. With a dimension register, its questions; with none, start from the usual questions the method's dimensions page lists (`engineering-cycle-dimensions.md` beside the method; component.engineering_cycle_dimensions in Cady) and name one only where the product has code of its own for it. A quality (fast, secure) is not a subject."
     },
     "loops": {
       "type": "array",
@@ -268,7 +268,7 @@
     },
     "releases": {
       "type": "array",
-      "description": "Ordered, the first current. A release is a goal a user can reach end to end, with the items that reach it. Take them from the tracker or roadmap; a dated list of work the owner asked for is a tracker: one release per list. Where the tracker states no goal, write it and add an owner question to confirm it. With no tracker, write one release from the work the sources name (for a new product, the brief), leave `by` out and add an owner question to confirm its goal. When the sources name no work, leave the list empty and ask the owner.",
+      "description": "Ordered, the first current. A release is a goal a user can reach end to end, with the items that reach it. Take them from the tracker or roadmap; a dated list of work the owner asked for is a tracker: one release per list. With several lists, the current release is the list being worked now, or the newest dated one where the sources do not say, and comes first; the older lists follow, newest first, and an undated list comes last. An older list keeps only its open items: the map draws open items only, and the current release keeps its done ones as its record. An older list with none is left out, and one owner question names every list left out. An item is a piece of work a list asks for: group findings into the work that answers them, and do not copy every finding as an item. Where the tracker states no goal, write it and add an owner question to confirm it. With no tracker, write one release from the work the sources name (for a new product, the brief), leave `by` out and add an owner question to confirm its goal. When the sources name no work, leave the list empty and ask the owner.",
       "items": {
         "type": "object",
         "description": "One release.",
@@ -421,7 +421,7 @@
         },
         "why": {
           "type": "string",
-          "description": "The recorded reason, when a source gives one. A research or document pointer goes here as file:<id> or file:<repository path>. For an unsigned statement, the quoted sentence. Where the research does not exist, say so here and mark the bet proposed."
+          "description": "The recorded reason, when a source gives one. A research or document pointer goes here as file:<id> or file:<repository path>. For an unsigned statement, the quoted sentence. Where the research does not exist, say so here; the origin is still as `origin` says: inferred when a source shows the choice, proposed when none does."
         },
         "origin": {
           "enum": [
@@ -429,7 +429,7 @@
             "inferred",
             "proposed"
           ],
-          "description": "owner: a sentence the owner wrote, signed or said to you, or one in a document the owner gave you as theirs, such as the brief. inferred: what the code or a document implies, in your words, or a statement from a document that only sits in the repository and names no author, with the one sentence that states the choice quoted in `why`. proposed: your own choice, with nothing in the sources behind it. One owner question asks which of the unsigned documents are the owner's own."
+          "description": "owner: a sentence the owner wrote, signed or said to you, or one in a document the owner gave you as theirs, such as the brief. inferred: what the code or a document implies, in your words, or a statement from a document that only sits in the repository and names no author, with the one sentence that states the choice quoted in `why`. proposed: your own choice, with nothing in the sources behind it; it is marked proposed and never written as decided. The owner is the person who decides the product. One owner question asks which of the unsigned documents are the owner's own and, where the sources name more than one person and do not say who decides, who the owner is; until it is answered those bets stay inferred."
         },
         "source": {
           "type": "string",
@@ -495,7 +495,7 @@
               },
               "schema": {
                 "$ref": "#/$defs/path",
-                "description": "The file that defines this part's shape, its fields and types: a table definition, a type file or a schema file; a file, not a folder. The map points to it and never restates fields. While it is not written, an open item of the current release names this path itself and comes before the other open items of this subject. The tool checks that much; the order across subjects is the builder's to keep."
+                "description": "The file that defines this part's shape, its fields and types: a table definition, a type file or a schema file. Where the shape is a folder of ordered migrations, name that folder. For a folder the tool checks only that it exists or that an item names it. The map points to it and never restates fields. While it is not written, an open item of the current release names this path itself and comes before the other open items of this subject. The tool checks that much; the order across subjects is the builder's to keep."
               }
             }
           }
@@ -531,11 +531,11 @@
           "items": {
             "$ref": "#/$defs/path"
           },
-          "description": "The paths this subject owns, each a file or a folder. One subject owns a path. When paths nest, the longest matching path owns the file. A file that draws a screen or declares a route stays with the client's Interface subject, even when it also holds a rule; a logic subject names the files that hold only its rules and records, in every client and layer: a file a second client could import unchanged. A subject names its own test files inside a shared test folder; the rest, with CI and build scripts, stays with the QA subject that runs them. A document belongs to the subject it is about; one about several subjects, the brief included, belongs to no subject. The README, agent instruction files, package and ignore files and the map's own folder belong to no subject: unowned files are expected. A path that does not exist yet must be named by an item of the current release. A path that states no point renders \"no point stated\": leave the map so; the fix is the file's own first line, in the project's own change."
+          "description": "The paths this subject owns, each a file or a folder. One subject owns a path. When paths nest, the longest matching path owns the file. In a client, a file with screen or route code, or one that imports it, stays with that client's Interface subject, even when it also holds a rule. A logic subject, or another dimension, names the client files that have none. On the server, a file that handles one subject's requests stays with that subject, its rules and handlers together; the Interface subject for the server's API owns the entry every request passes and lists the handler files under `governs`. It names its entry files one by one, because the tool refuses a governed path inside the dimension's own home. A subject names its own test files inside a shared test folder, and a build script belongs to the subject whose code it builds; the rest of the shared tests, with CI scripts, stays with the QA subject that runs them. A document belongs to the subject it is about; one about several subjects, the brief included, belongs to no subject. The README, agent instruction files, package and ignore files and the map's own folder belong to no subject: unowned files are expected. A path that does not exist yet must be named by an item of the current release. A path that states no point renders \"no point stated\": leave the map so; the fix is the file's own first line, in the project's own change."
         },
         "tools": {
           "type": "array",
-          "description": "Commands or callable operations defined in this subject's own code: a script the package file names, a CLI command, a served operation. The tool does not find these; list them when you list the subject.",
+          "description": "Commands or callable operations defined in this subject's own code: a script the package file names, a CLI command, a served operation. A build script is listed on the subject whose code it builds, which also owns its file. The tool does not find these; list them when you list the subject.",
           "items": {
             "type": "object",
             "description": "One command or operation.",
@@ -594,7 +594,7 @@
           "items": {
             "$ref": "#/$defs/bet"
           },
-          "description": "This subject's own choices. May be empty. With a dimension register, the first is its label: differentiating or not, with the reason. With no register, leave out the label, the register ids and the owner, and ask for every dimension's label in one owner question."
+          "description": "This subject's own choices. May be empty. With a dimension register, the first is its label: differentiating or not, with the reason. With no register, leave out the label, the register ids and the owner, and ask for every dimension's label in one owner question; a technology choice the sources already show is still written, as an inferred bet."
         },
         "parts": {
           "type": "array",
@@ -621,7 +621,7 @@
               },
               "schema": {
                 "$ref": "#/$defs/path",
-                "description": "The file that defines this part's shape, its fields and types: a table definition, a type file or a schema file; a file, not a folder. The map points to it and never restates fields. While it is not written, an open item of the current release names this path itself and comes before the other open items of this subject. The tool checks that much; the order across subjects is the builder's to keep."
+                "description": "The file that defines this part's shape, its fields and types: a table definition, a type file or a schema file. Where the shape is a folder of ordered migrations, name that folder. For a folder the tool checks only that it exists or that an item names it. The map points to it and never restates fields. While it is not written, an open item of the current release names this path itself and comes before the other open items of this subject. The tool checks that much; the order across subjects is the builder's to keep."
               }
             }
           }
@@ -656,18 +656,18 @@
           "items": {
             "$ref": "#/$defs/path"
           },
-          "description": "The paths this subject owns, each a file or a folder. One subject owns a path. When paths nest, the longest matching path owns the file. A file that draws a screen or declares a route stays with the client's Interface subject, even when it also holds a rule; a logic subject names the files that hold only its rules and records, in every client and layer: a file a second client could import unchanged. A subject names its own test files inside a shared test folder; the rest, with CI and build scripts, stays with the QA subject that runs them. A document belongs to the subject it is about; one about several subjects, the brief included, belongs to no subject. The README, agent instruction files, package and ignore files and the map's own folder belong to no subject: unowned files are expected. A path that does not exist yet must be named by an item of the current release. A path that states no point renders \"no point stated\": leave the map so; the fix is the file's own first line, in the project's own change. A dimension that owns no code of its own has an empty list and at least one `governs` path."
+          "description": "The paths this subject owns, each a file or a folder. One subject owns a path. When paths nest, the longest matching path owns the file. In a client, a file with screen or route code, or one that imports it, stays with that client's Interface subject, even when it also holds a rule. A logic subject, or another dimension, names the client files that have none. On the server, a file that handles one subject's requests stays with that subject, its rules and handlers together; the Interface subject for the server's API owns the entry every request passes and lists the handler files under `governs`. It names its entry files one by one, because the tool refuses a governed path inside the dimension's own home. A subject names its own test files inside a shared test folder, and a build script belongs to the subject whose code it builds; the rest of the shared tests, with CI scripts, stays with the QA subject that runs them. A document belongs to the subject it is about; one about several subjects, the brief included, belongs to no subject. The README, agent instruction files, package and ignore files and the map's own folder belong to no subject: unowned files are expected. A path that does not exist yet must be named by an item of the current release. A path that states no point renders \"no point stated\": leave the map so; the fix is the file's own first line, in the project's own change. A dimension that owns no code of its own has an empty list and at least one `governs` path."
         },
         "governs": {
           "type": "array",
           "items": {
             "$ref": "#/$defs/path"
           },
-          "description": "Paths another subject owns whose rules this dimension sets, such as the checks every route passes; never a path inside its own home. The dimension owns none of them: each shows on this card as governed, the owning card names this dimension, and its open work and traps show on both."
+          "description": "Paths another subject owns whose rules this dimension sets, such as the checks every route passes, or the handler files behind the server's API entry; never a path inside its own home. The dimension owns none of them: each shows on this card as governed, the owning card names this dimension, and its open work and traps show on both."
         },
         "tools": {
           "type": "array",
-          "description": "Commands or callable operations defined in this subject's own code: a script the package file names, a CLI command, a served operation. The tool does not find these; list them when you list the subject.",
+          "description": "Commands or callable operations defined in this subject's own code: a script the package file names, a CLI command, a served operation. A build script is listed on the subject whose code it builds, which also owns its file. The tool does not find these; list them when you list the subject.",
           "items": {
             "type": "object",
             "description": "One command or operation.",

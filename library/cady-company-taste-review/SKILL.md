@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
   version: "df8ff6a5b08a73ed32f4"
-  library: "6f009dfb3b71e749"
+  library: "50403006fa99835e"
   function: "company"
 ---
 # Writing craft and taste decisions
