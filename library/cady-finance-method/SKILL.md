@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "ff89cd6a090fb1270e7f"
-  library: "4b91b8940460190e"
+  version: "ffadedf62891ec5c86f8"
+  library: "6f009dfb3b71e749"
   function: "finance"
 ---
 # Finance
@@ -25,9 +25,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Give each metered line (cloud, AI APIs, ads) a monthly ceiling that triggers a review, with the provider-side alert owned by whoever runs the account. Instead of: Either set a hard cap that stops the service, or set no ceiling and find the overrun when the bill arrives.
 - Treat a budget or recommendation as decision context only; every paid commitment waits for a person's approval of that exact spend. Instead of: Treat an approved budget line as standing permission to buy within it.
 - The run reporting component owns the general finish line for financial work. Instead of: Let each finance card define its own completion and reporting standard.
-
-## Every run
-
 
 ## Role card
 

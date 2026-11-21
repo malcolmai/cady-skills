@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "11da6c271b73bbd4b80a"
-  library: "4b91b8940460190e"
+  version: "2c33f4b9f702d5ddc033"
+  library: "6f009dfb3b71e749"
   function: "product"
 ---
 # Product
@@ -24,9 +24,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Without customer feedback, state an assumed ICP and problem with what would disprove it, and build for them now. Instead of: Wait for interviews or validated demand before building, or treat the founder's guess as validated.
 - Call user-path work done only when it is seen working where the user meets it: the done story walked blind on the installed build. Instead of: Accept a reported result, a merged PR or a deploy as done.
 - Make a small tweak directly with one line of why; spend process only on choices that are costly to reverse. Instead of: Run every change through a spec, a review round and an eval to be safe.
-
-## Every run
-
 
 ## Role card
 
@@ -88,3 +85,5 @@ company
 - Read [Selected judgment](references/selected-judgment.md) when you decide what to build, adopt, integrate or defer.
 
 - Read [Domain method](references/domain-method.md) when you scope, research or decide product work.
+
+- Read [System map (product map) and dimension maps](references/engineering-system-map.md) when generating, restructuring, publishing or checking a product's system map (product map) or a dimension map.

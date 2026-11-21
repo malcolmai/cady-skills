@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "cdbbb2a9410bac71a096"
-  library: "4b91b8940460190e"
+  version: "da46725bfbb863546f9d"
+  library: "6f009dfb3b71e749"
   function: "marketing"
 ---
 # Marketing
@@ -23,9 +23,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Prove a claim with a worked example from real customer or product evidence; without proof, narrow the promise. Instead of: State the benefit ('AI saves time') and let production quality carry it.
 - Judge each channel on qualified response and business outcome, kept apart from exposure. Instead of: Judge content by views, likes and follower growth.
 - Before product-market fit, treat paid spend as a capped demand test with its stop rule written before the first spend. Instead of: Buy reach to grow once something shows some traction.
-
-## Every run
-
 
 ## Role card
 

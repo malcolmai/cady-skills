@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "5f2af641273e99db3591"
-  library: "4b91b8940460190e"
+  version: "e1f74c02bffd180ac40b"
+  library: "6f009dfb3b71e749"
   function: "design"
 ---
 # Design
@@ -24,9 +24,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Show the real product: capture real screens from realistic state and compose around them, never redrawing or generating UI pixels. Instead of: Mock up or generate a polished product image for marketing and help pages.
 - On a surface that is not a buying reason, follow the standard pattern and the design system; spend bespoke craft where the surface wins customers. Instead of: Design every page bespoke so the product looks distinctive everywhere.
 - The run reporting component owns the general finish line for product design. Instead of: Let each function card define its own completion and reporting standard.
-
-## Every run
-
 
 ## Role card
 

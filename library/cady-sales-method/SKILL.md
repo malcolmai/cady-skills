@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "cfab630a3d4aa034ce5e"
-  library: "4b91b8940460190e"
+  version: "1c2b8e2b9b63dbc5c7bd"
+  library: "6f009dfb3b71e749"
   function: "sales"
 ---
 # Sales
@@ -23,9 +23,6 @@ Shared by every role card: `references/role-card-common.md`.
 - When evidence is thin, offer a proportionate, low-commitment way to inspect value. Instead of: Push every interested lead onto a sales call.
 - Describe the customer by the situation where the job arises and what they do today, not by demographics or labels. Instead of: Segment by industry, company size and job title.
 - Qualification and contact permission are separate decisions; a plausible buyer is not a permitted send. Instead of: Message anyone who looks like a good fit.
-
-## Every run
-
 
 ## Skills
 - `cady-sales-deal-motion`: Work one opportunity: discovery call, light qualification, proposal, close plan, handoff to success or loss review.

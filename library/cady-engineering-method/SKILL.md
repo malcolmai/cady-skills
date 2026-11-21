@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "3bb689a7f593f16c225f"
-  library: "4b91b8940460190e"
+  version: "5e1a0781135d6dfedb86"
+  library: "6f009dfb3b71e749"
   function: "engineering"
 ---
 # Engineering
@@ -24,9 +24,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Use the most reliable, widely used approach on non-differentiating dimensions; reserve custom architecture and research for the differentiating ones. Instead of: Engineer every dimension to the same custom depth, or adopt a generic layer for the core.
 - Ship a compiling, independently reviewed build even when test-only CI is red; stop for security, isolation, authority or first-value regressions. Instead of: Hold every merge and release until all CI is green.
 - Write each test at the lowest layer that proves its claim, and none for behaviour that has never worked. Instead of: Add broad unit and end-to-end coverage around every change to feel safe.
-
-## Every run
-
 
 ## Role card
 

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "0d32f7cbcf75ae974049"
-  library: "4b91b8940460190e"
+  version: "94518d5189ad38605f33"
+  library: "6f009dfb3b71e749"
   function: "gtm"
 ---
 # GTM
@@ -25,9 +25,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Treat under about 20 exposures or a single reply as a directional signal only; weak response may be an exposure or execution gap. Instead of: Drop a segment after one quiet batch, or double down after one enthusiastic reply.
 - The company tree and execution have separate homes. Instead of: Plan channels, prepare recipients and execute inside the GTM function card.
 - The root's point and bets outrank this card when they conflict. Instead of: Let the function card override the root's recorded point and bets.
-
-## Every run
-
 
 ## Role card
 

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "1f10566dd75a6e7d1ed8"
-  library: "4b91b8940460190e"
+  version: "e7a130b536450b1be11b"
+  library: "6f009dfb3b71e749"
   function: "fundraise"
 ---
 # Fundraise
@@ -24,9 +24,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Run a time-boxed, lead-first process with first meetings batched into two to three weeks, and drop investors who stall. Instead of: Pitch investors one at a time as introductions arrive and chase every maybe.
 - Count money as raised only when funds arrive; signed documents, a term sheet and a SAFE are separate states, and a SAFE is not issued shares. Instead of: Report the round as raised, and count it in runway, once term sheets or SAFEs are signed.
 - The run reporting component owns the general finish line for a raise. Instead of: Let each fundraise card define its own completion and reporting standard.
-
-## Every run
-
 
 ## Role card
 

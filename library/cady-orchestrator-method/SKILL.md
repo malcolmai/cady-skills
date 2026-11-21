@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.orchestrator"
-  version: "aff1683e1e8a026cb213"
-  library: "4b91b8940460190e"
+  version: "f905cf711f132638e0e4"
+  library: "6f009dfb3b71e749"
   function: "orchestrator"
 ---
 # Orchestrator
@@ -20,9 +20,6 @@ Shared by every role card: `references/role-card-common.md`.
 **Bets** (where this differs from the default):
 - Read the response, not the activity: challenge only where the thinking shown is thinner than the stakes (`cady-orchestrator-challenge`); otherwise trust it and move on. Instead of: Investigating the work behind every result, or accepting one because work was done.
 - Test in proportion to the door: one-way calls and 'it works' claims carry a test line set beforehand; cheap, reversible work ships and is read after. Instead of: Testing everything before work starts, or nothing until it breaks.
-
-## Every run
-
 
 ## Role card
 
