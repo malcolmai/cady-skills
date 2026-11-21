@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "474a8166d75ff0a9dd00"
-  library: "2d8ff224740604ab"
+  version: "56c0ea2baa483f033fd8"
+  library: "4c8cd57f8e100676"
   function: "product"
 ---
 # Product management and discovery

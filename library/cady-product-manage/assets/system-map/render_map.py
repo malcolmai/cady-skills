@@ -10,15 +10,21 @@ Put this file and map.schema.json beside the source, model.json, in the map fold
     python3 render_map.py --front    # print the front page
     python3 render_map.py --card ID  # print one subject's card
 
-product-map.md is the front page (five sections) followed by one card per subject (eleven headings, in a fixed order; one
+product-map.md is the front page (five sections; the current release's bets stand under its goal) followed by one card per subject (eleven headings, in a fixed order; one
 with nothing to say is left out). gaps.md holds the same counts as the front page's last section, what they count, and at most
 seven owner questions. Nothing is written when the source does not match the schema. The exit code is 1 when the schema, a
 check or --check fails. A flag (a count outside the usual range, or a placing worth a look) is printed and does not fail.
 
 Derived at each render and never stored: file counts, each path's point, Touches, open work and every count. Not derived: a
-subject's tools (the source lists them) and the diagram (the source holds it as text).
+subject's tools (the source lists them) and the diagram (the source holds it as text). A folder's point is the first line of its
+README, or else the leading comment of its entry file (index.ts, __init__.py and the like); a file's is its leading comment.
 
-Standard library only. Options: --source, --schema, --root (the repository root) and --out (where the two files go).
+File counts change whenever a file is added anywhere. Where the rendered files are committed and many changes land at once, pass
+--no-file-counts: the render then says nothing about how many files there are, nor how many of them the subjects own, so only a
+change to the map makes it stale.
+
+Standard library only. Options: --source, --schema, --root (the repository root), --out (where the two files go) and
+--no-file-counts.
 """
 from __future__ import annotations
 
@@ -31,6 +37,8 @@ import sys
 from pathlib import Path
 
 SKIP_DIRS = {".git", "node_modules", "dist", "build", "__pycache__", ".venv", ".wrangler"}
+DOC_TAGS = ("packageDocumentation", "fileoverview", "file", "overview", "description", "summary")  # a tag that opens a description; any other @tag is a directive
+ENTRY_FILES = ("index.ts", "index.tsx", "index.js", "index.mjs", "__init__.py", "mod.rs", "doc.go")  # where a folder with no README states its point
 FRONT_LIMIT = 10_000  # bytes; over it is a flag
 MAX_QUESTIONS = 7
 OUTPUTS = ("product-map.md", "gaps.md")
@@ -139,11 +147,12 @@ def leading_comment(path: Path) -> str:
             body.append(line.lstrip()[len(mark):])
     kept: list[str] = []
     for line in body:
-        if not line.strip() or set(line.strip()) <= set("-=*#/"):
+        line = re.sub(rf"^@(?:{'|'.join(DOC_TAGS)})\b\s*", "", line.strip())  # the tag is not part of the point
+        if not line or set(line) <= set("-=*#/") or line.startswith("@"):  # a directive (@ts-nocheck, @flow, @jest-environment jsdom) is no point
             if kept:
                 break
             continue
-        kept.append(line.strip())
+        kept.append(line)
     return first_sentence(" ".join(kept))
 
 
@@ -154,7 +163,7 @@ def path_point(root: Path, path: str) -> str:
             for line in head(full / name).splitlines():
                 if line.strip():
                     return first_sentence(line.strip().lstrip("#").strip()) or "no point stated"
-        return "no point stated"
+        return next((point for point in (leading_comment(full / name) for name in ENTRY_FILES) if point), "no point stated")
     return leading_comment(full) or "no point stated"
 
 
@@ -172,9 +181,10 @@ def bet_line(bet: dict, why: bool = False) -> str:
 class Map:
     """A source that matched the schema, joined with the repository it describes."""
 
-    def __init__(self, model: dict, root: Path, skip: tuple[str, ...] = ()):
-        self.m, self.root = model, root
-        self.files = [f for f in list_files(root) if f not in skip]  # the two rendered files are not counted, so a render does not change the next one
+    def __init__(self, model: dict, root: Path, skip: tuple[str, ...] = (), file_counts: bool = True):
+        self.m, self.root, self.file_counts = model, root, file_counts
+        # the two rendered files are not counted, so a render does not change the next one; with no file counts, no file is listed
+        self.files = [f for f in list_files(root) if f not in skip] if file_counts else []
         self.subjects = ([("core", s) for s in model["app"]["core"]] + [("module", s) for s in model["app"]["modules"]]
                          + [("dimension", s) for s in model["dimensions"]])
         self.by_id = {s["id"]: s for _, s in self.subjects}
@@ -316,6 +326,7 @@ class Map:
         if m["releases"]:
             release = m["releases"][0]
             o += [f"**Current release, {release['name']}**" + (f" (set by {release['by']})" if release.get("by") else "") + f": {release['point']}", ""]
+            o += [bet_line(b) for b in release.get("bets") or []] + ([""] if release.get("bets") else [])
         else:
             o += ["No release is recorded.", ""]
         o += ["## 2. How it runs, and why it is built this way", ""]
@@ -340,8 +351,9 @@ class Map:
               "is fixed in the same change: edit `model.json`, then run `render_map.py`.", ""]
         kinds = {kind: sum(1 for k, _ in self.subjects if k == kind) for kind in ("core", "module", "dimension")}
         o += ["## 5. State of the map", "",
-              f"{plural(len(self.subjects), 'subject')} ({kinds['core']} core, {plural(kinds['module'], 'module')}, {plural(kinds['dimension'], 'dimension')}) "
-              f"own {len(self.files) - c['unowned']} of {plural(len(self.files), 'file')}. Counts are over card bets; `gaps.md` lists what they count.", ""]
+              f"{plural(len(self.subjects), 'subject')} ({kinds['core']} core, {plural(kinds['module'], 'module')}, {plural(kinds['dimension'], 'dimension')})"
+              + (f" own {len(self.files) - c['unowned']} of {plural(len(self.files), 'file')}" if self.file_counts else "")
+              + ". Counts are over card bets; `gaps.md` lists what they count.", ""]
         o += self.count_lines() + [f"- Checks: {'passed' if not self.errors else plural(len(self.errors), 'failure') + ', listed in `gaps.md`'}.", ""]
         return "\n".join(o)
 
@@ -355,8 +367,9 @@ class Map:
         if s.get("owner"):
             where += f"; owner {s['owner']}"
         tools, bets, guarantees = s.get("tools") or [], s.get("bets") or [], s.get("guarantees") or []
-        size = [plural(len(self.owned(sid)), "file")] + [plural(len(x), word) for x, word in ((tools, "tool"), (guarantees, "guarantee"), (bets, "bet")) if x]
-        o = [f"## {s['name']}", "", f"**Point:** {s['point']}", "", f"**Where it sits:** {where}.", "", "**Size:** " + ", ".join(size) + ".", ""]
+        size = [plural(len(self.owned(sid)), "file")] if self.file_counts else []
+        size += [plural(len(x), word) for x, word in ((tools, "tool"), (guarantees, "guarantee"), (bets, "bet")) if x]
+        o = [f"## {s['name']}", "", f"**Point:** {s['point']}", "", f"**Where it sits:** {where}.", ""] + (["**Size:** " + ", ".join(size) + ".", ""] if size else [])
         if s.get("parts"):
             o += ["### What it is made of", ""] + [f"- **{p['name']}:** {p['point']}" for p in s["parts"]] + [""]
         if bets:
@@ -369,8 +382,8 @@ class Map:
             o += [f"- **{w['when'].rstrip('.')}:** {w['then']}" + (" See " + ", ".join(f"`{p}`" for p in w["src"]) + "." if w.get("src") else "") for _, w in traps] + [""]
         o += ["### Read this code", ""]
         for path in (p.rstrip("/") for p in s["home"]):
-            count = sum(1 for f in self.files if self.owner_of_file[f] and self.owner_of_file[f] == (path, sid))
-            o.append(f"- `{path}` ({plural(count, 'file')}): {path_point(self.root, path) if (self.root / path).exists() else 'planned, not yet written'}")
+            count = f" ({plural(sum(1 for f in self.files if self.owner_of_file[f] == (path, sid)), 'file')})" if self.file_counts else ""
+            o.append(f"- `{path}`{count}: {path_point(self.root, path) if (self.root / path).exists() else 'planned, not yet written'}")
         o.append("")
         if tools:
             o += ["### Its tools", ""] + [f"- `{t['name']}`: {t['point']}" for t in tools] + [""]
@@ -423,6 +436,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--list", action="store_true", help="print every subject id with its point")
     ap.add_argument("--front", action="store_true", help="print the front page")
     ap.add_argument("--card", metavar="ID", help="print one subject's card")
+    ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out, and with them how many of the repository's files the subjects own, so an added file does not make a committed render stale")
     args = ap.parse_args(argv)
     source = args.source.resolve()
     root, out = (args.root or source.parent.parent.parent).resolve(), (args.out or source.parent).resolve()
@@ -436,7 +450,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"render_map: {source.name} does not match {args.schema.name}; nothing written:", file=sys.stderr)
         print("\n".join(f"  {p}" for p in problems), file=sys.stderr)
         return 1
-    built = Map(model, root, tuple(os.path.relpath(folder / name, root).replace(os.sep, "/") for folder in {out, source.parent} for name in OUTPUTS))
+    built = Map(model, root, tuple(os.path.relpath(folder / name, root).replace(os.sep, "/") for folder in {out, source.parent} for name in OUTPUTS),
+                file_counts=not args.no_file_counts)
     if args.list or args.front or args.card:
         if args.card and args.card not in built.by_id:
             print(f"render_map: no subject {args.card}; --list prints the ids", file=sys.stderr)
