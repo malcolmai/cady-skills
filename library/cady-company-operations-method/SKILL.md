@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "c97d09ae5a747d93b484"
-  library: "4b91b8940460190e"
+  version: "3a0a0d59d573944bd95d"
+  library: "6f009dfb3b71e749"
   function: "company_operations"
 ---
 # Company Operations
@@ -24,9 +24,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Raise a clock to the owner the same day when it is past due or within about 30 days; carry the rest as dated work. Instead of: Batch compliance into a periodic review and report all deadlines together.
 - Treat a material or non-standard case as a specialist's, and missing evidence as an open question, never as an exemption. Instead of: Give a confident answer from general research to save adviser cost.
 - Ask for a commercial value the company has not recorded; write none of it into a draft or template. Instead of: Fill a payment period, interest rate or term from general practice so the section looks finished.
-
-## Every run
-
 
 ## Role card
 

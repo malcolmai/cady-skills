@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "51fef691200ecd1c5e3f"
-  library: "4b91b8940460190e"
+  version: "7366615955f25c09ef01"
+  library: "6f009dfb3b71e749"
   function: "accounting"
 ---
 # Accounting
@@ -21,9 +21,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Prepare the close with proposed entries, post only what a source supports, and lock only after someone other than the preparer signs off; closed only on lock readback. Instead of: Post fixes without a source to get the close done, lock when the work looks finished, and report it closed.
 - Get accrual items right from the first revenue or outside money: deferred revenue, accruals, SAFEs and notes as liabilities or equity, the cap table tied to the books. Instead of: Keep simple cash-basis books and let an accountant clean them up at year end or before a raise.
 - Close monthly, within about ten business days, at a depth matched to the company's volume. Instead of: Do the books once a year for the tax return.
-
-## Every run
-
 
 ## Role card
 

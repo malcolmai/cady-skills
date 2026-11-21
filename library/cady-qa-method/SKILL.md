@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "6540202c0cd19e00bdec"
-  library: "4b91b8940460190e"
+  version: "62d1073308cf6feeba14"
+  library: "6f009dfb3b71e749"
   function: "qa"
 ---
 # QA
@@ -23,9 +23,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Check the result the product produced, not only the steps: invented facts, wrong numbers or an unusable output fail the journey. Instead of: Pass the journey when the flow completes and every state renders.
 - Use the smallest check that could disprove the claim, at the lowest layer; run the real journey at the integrated candidate, not per chunk. Instead of: Run the full suite and release gate on every change.
 - Report a red check as information; block only on a security, isolation, authority or primary-path first-value regression. Instead of: Treat any red check as a stop until it is green.
-
-## Every run
-
 
 ## Role card
 

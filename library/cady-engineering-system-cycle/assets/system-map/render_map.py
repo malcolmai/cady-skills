@@ -10,10 +10,17 @@ Put this file and map.schema.json beside the source, model.json, in the map fold
     python3 render_map.py --front    # print the front page
     python3 render_map.py --card ID  # print one subject's card
 
-product-map.md is the front page (five sections; the current release's bets stand under its goal) followed by one card per subject (eleven headings, in a fixed order; one
-with nothing to say is left out). gaps.md holds the same counts as the front page's last section, what they count, and at most
-seven owner questions. Nothing is written when the source does not match the schema. The exit code is 1 when the schema, a
-check or --check fails. A flag (a count outside the usual range, or a placing worth a look) is printed and does not fail.
+product-map.md is the front page (five sections; the current release's bets stand under its goal) followed by one card per subject (three opening
+lines, Point, Where it sits and Size, then up to eight headings, in a fixed order; one with nothing to say is left out). gaps.md holds the same counts as
+the front page's last section, what they count, and at most seven owner questions, with how many more the source holds. Nothing is written when the source does not match the schema. The
+exit code is 1 when the schema, a check or --check fails. A flag (a count outside the usual range, or a placing worth a look) is printed and does not fail.
+The tool writes these two files only: a project that wants sections of its own renders them into a file of its own, so --check still passes. It writes no
+line saying where the map is edited: `cady product map publish` adds that to the published File.
+
+Counted as gaps: a card bet with no reason or no alternative. An owner's bet is the owner's sentence word for word, so one without them is counted on a
+line of its own: only the owner can fill it. One subject owns a path; a dimension's `governs` paths are owned by another subject, and their open work and
+traps show on both cards. A part's `schema` names the file that defines its shape. While that file is not written, an open item of the current release
+must name that path itself and come before the other open items of its subject. The order of items across subjects is not checked.
 
 Derived at each render and never stored: file counts, each path's point, Touches, open work and every count. Not derived: a
 subject's tools (the source lists them) and the diagram (the source holds it as text). A folder's point is the first line of its
@@ -21,7 +28,7 @@ README, or else the leading comment of its entry file (index.ts, __init__.py and
 
 File counts and ownership read tracked files, so stage new files, then render. File counts change whenever a file is added
 anywhere. Where the render is committed, render and check with --no-file-counts: the render then says nothing about how many
-files there are, nor how many of them the subjects own, so an added file does not stale it.
+files there are, nor how many of them the subjects own, so an added file does not make it stale.
 
 Standard library only. Options: --source, --schema, --root (the repository root), --out (where the two files go) and
 --no-file-counts.
@@ -189,6 +196,7 @@ class Map:
                          + [("dimension", s) for s in model["dimensions"]])
         self.by_id = {s["id"]: s for _, s in self.subjects}
         self.homes = [(p.rstrip("/"), s["id"]) for _, s in self.subjects for p in s["home"]]
+        self.governs = [(p.rstrip("/"), s["id"]) for _, s in self.subjects for p in s.get("governs") or []]
         self.place: dict[str, list[tuple[dict, dict]]] = {}
         for angle in model["framework"]["angles"]:
             for area in angle["areas"]:
@@ -209,9 +217,16 @@ class Map:
         return best
 
     def owners(self, path: str) -> list[str]:
-        """The subjects a path belongs to: the one that owns it, and every subject with a home inside it."""
+        """The subjects a path belongs to: the one that owns it, every subject with a home inside it, and each dimension that governs it."""
         path, best = path.rstrip("/"), self.owner_path(path.rstrip("/"))
-        return list(dict.fromkeys(([best[1]] if best else []) + [sid for home, sid in self.homes if covers(path, home)]))
+        return list(dict.fromkeys(([best[1]] if best else []) + [sid for home, sid in self.homes if covers(path, home)]
+                                  + [sid for gov, sid in self.governs if covers(gov, path) or covers(path, gov)]))
+
+    def governed_by(self, sid: str) -> list[str]:
+        """The dimensions that set the rules for code this subject owns."""
+        mine = [p.rstrip("/") for p in self.by_id[sid]["home"]]  # its home is the governed path or inside it, or it owns the governed path by the longest match
+        return list(dict.fromkeys(other for gov, other in self.governs if other != sid
+                                  and (any(covers(gov, p) for p in mine) or (self.owner_path(gov) or ("", ""))[1] == sid)))
 
     def owned(self, sid: str) -> list[str]:
         return [f for f in self.files if self.owner_of_file[f] and self.owner_of_file[f][1] == sid]
@@ -238,6 +253,12 @@ class Map:
             errors += [f"{s['id']}: home path does not exist and no open item of the current release plans it: {p}" for p in s["home"] if not self.cited(p)]
             errors += [f"{s['id']}: test does not exist (leave `test` out until it does): {g['test']}" for g in s.get("guarantees") or []
                        if g.get("test") and not (self.root / g["test"]).exists()]
+            errors += [f"{s['id']}: governed path does not exist and no open item of the current release plans it: {p}" for p in s.get("governs") or [] if not self.cited(p)]
+            errors += [f"{s['id']}: {p} is in its own home and a path it governs; a governed path is owned by another subject" for p in s.get("governs") or []
+                       if any(covers(h.rstrip("/"), p.rstrip("/")) for h in s["home"])]
+            if not s["home"] and not s.get("governs"):
+                errors.append(f"subject {s['id']} has no home and governs nothing; it needs a path")
+            errors += self.schema_first(s)
         homes: dict[str, str] = {}
         for path, sid in self.homes:
             if homes.setdefault(path, sid) != sid:
@@ -254,13 +275,35 @@ class Map:
                 errors.append(f"question {q['id']} blocks {q['blocks']}, which is not product, a release id or a subject id")
         return errors
 
+    def schema_first(self, s: dict) -> list[str]:
+        """A part's schema file is a file, not a folder. While it is not written, an open item of the current release names that path itself,
+        and that item comes before the other open items of this subject: the shape is settled before the code that builds on it. One
+        message per file, however many parts share it. The order across subjects is not checked."""
+        errors, sid = [], s["id"]
+        items = [i for i in (self.m["releases"][0]["items"] if self.m["releases"] else []) if i["status"] != "done"]
+        for path in dict.fromkeys((part.get("schema") or "").rstrip("/") for part in s.get("parts") or []):
+            if not path:
+                continue
+            if (self.root / path).is_dir():
+                errors.append(f"{sid}: the schema file {path} is a folder; name the file that defines the shape")
+            if (self.root / path).exists():
+                continue
+            writes = [n for n, i in enumerate(items) if path in [p.rstrip("/") for p in i["paths"]]]
+            if not writes:
+                errors.append(f"{sid}: the schema file {path} does not exist and no open item of the current release names it; an item that writes it names that path")
+                continue
+            early = [i["id"] for i in items[:writes[0]] if sid in {o for p in i["paths"] for o in self.owners(p)}]
+            if early:
+                errors.append(f"{sid}: item {', '.join(early)} comes before {items[writes[0]]['id']}, which writes the schema file {path}; the schema item comes first")
+        return errors
+
     def flag(self) -> list[str]:
         flags = []
         if not 5 <= len(self.subjects) <= 40:
-            flags.append(f"{plural(len(self.subjects), 'subject')}; a map has 5 to 40")
+            flags.append(f"{plural(len(self.subjects), 'subject')}; 5 to 40 is usual")
         if not 3 <= len(self.m["product"]["bets"]) <= 7:
-            flags.append(f"the product has {plural(len(self.m['product']['bets']), 'bet')}; it has three to seven")
-        flags += [f"angle {a['name']} has {plural(len(a['areas']), 'key area')}; an angle has two to five" for a in self.m["framework"]["angles"] if len(a["areas"]) < 2]
+            flags.append(f"the product has {plural(len(self.m['product']['bets']), 'bet')}; three to seven is usual")
+        flags += [f"angle {a['name']} has {plural(len(a['areas']), 'key area')}; two to five is usual" for a in self.m["framework"]["angles"] if len(a["areas"]) < 2]
         names = {a["name"].strip().lower() for a in self.m["framework"]["angles"]}
         if "qa" not in names:
             flags.append("no angle is named QA; a map keeps one")
@@ -271,6 +314,8 @@ class Map:
                 flags.append(f"angle {a['name']} holds both core or module subjects and dimensions; Business logic holds the first, the other angles the dimensions")
         if not self.m["product"].get("diagram"):
             flags.append("the product has no diagram")
+        flags += [f"{sid} governs {path}, which no subject owns; list it as a `home` of the subject that owns it" for path, sid in self.governs
+                  if not self.owner_path(path) and not any(covers(path, home) for home, _ in self.homes)]
         size = len(self.front().encode("utf-8"))
         if size > FRONT_LIMIT:
             flags.append(f"the front page is {size} bytes; keep it under about {FRONT_LIMIT}")
@@ -304,7 +349,9 @@ class Map:
     def counts(self) -> dict:
         bets = [(s, b) for _, s in self.subjects for b in s.get("bets") or []]
         guarantees = [(s, g) for _, s in self.subjects for g in s.get("guarantees") or []]
-        return {"bets": len(bets), "no_reason": [x for x in bets if not x[1].get("why")], "no_instead": [x for x in bets if not x[1].get("instead_of")],
+        mine = [x for x in bets if x[1]["origin"] != "owner"]  # an owner's bet is their sentence as written: only they can add a reason or an alternative
+        return {"bets": len(bets), "no_reason": [x for x in mine if not x[1].get("why")], "no_instead": [x for x in mine if not x[1].get("instead_of")],
+                "owner_bare": [x for x in bets if x[1]["origin"] == "owner" and not (x[1].get("why") and x[1].get("instead_of"))],
                 "guarantees": len(guarantees), "no_test": [x for x in guarantees if not x[1].get("test")],
                 "items_no_card": self.open_items(None), "traps_no_card": self.traps(None),
                 "unowned": sum(1 for f in self.files if not self.owner_of_file[f])}
@@ -313,6 +360,7 @@ class Map:
         c = self.counts()
         return [f"- Bets with no recorded reason: {len(c['no_reason'])} of {c['bets']}.",
                 f"- Bets with no \"instead of\": {len(c['no_instead'])} of {c['bets']}.",
+                f"- Owner bets as written, with no reason or no \"instead of\": {len(c['owner_bare'])}.",
                 f"- Guarantees citing no test: {len(c['no_test'])} of {c['guarantees']}.",
                 f"- Open items on no card: {len(c['items_no_card'])}.",
                 f"- Traps on no card: {len(c['traps_no_card'])}."]
@@ -357,7 +405,7 @@ class Map:
         o += self.count_lines() + [f"- Checks: {'passed' if not self.errors else plural(len(self.errors), 'failure') + ', listed in `gaps.md`'}.", ""]
         return "\n".join(o)
 
-    # a card: eleven headings in this order; one with nothing to say is left out
+    # a card: three opening lines, then up to eight headings in this order; one with nothing to say is left out
     def card(self, sid: str) -> str:
         s = self.by_id[sid]
         placed = self.place.get(sid) or []
@@ -371,7 +419,7 @@ class Map:
         size += [plural(len(x), word) for x, word in ((tools, "tool"), (guarantees, "guarantee"), (bets, "bet")) if x]
         o = [f"## {s['name']}", "", f"**Point:** {s['point']}", "", f"**Where it sits:** {where}.", ""] + (["**Size:** " + ", ".join(size) + ".", ""] if size else [])
         if s.get("parts"):
-            o += ["### What it is made of", ""] + [f"- **{p['name']}:** {p['point']}" for p in s["parts"]] + [""]
+            o += ["### What it is made of", ""] + [f"- **{p['name']}:** {p['point']}" + (f" Schema: `{p['schema']}`" if p.get("schema") else "") for p in s["parts"]] + [""]
         if bets:
             o += ["### Why it is this way", ""] + [bet_line(b, why=True) for b in bets] + [""]
         if guarantees:
@@ -384,17 +432,22 @@ class Map:
         for path in (p.rstrip("/") for p in s["home"]):
             count = f" ({plural(sum(1 for f in self.files if self.owner_of_file[f] == (path, sid)), 'file')})" if self.file_counts else ""
             o.append(f"- `{path}`{count}: {path_point(self.root, path) if (self.root / path).exists() else 'planned, not yet written'}")
+        for path in (p.rstrip("/") for p in s.get("governs") or []):
+            owner = self.owner_path(path)
+            o.append(f"- `{path}` (governed" + (f", owned by {self.by_id[owner[1]]['name']}" if owner else "") + f"): {path_point(self.root, path) if (self.root / path).exists() else 'planned, not yet written'}")
         o.append("")
         if tools:
             o += ["### Its tools", ""] + [f"- `{t['name']}`: {t['point']}" for t in tools] + [""]
-        loops, shares = [lp for lp in self.m["loops"] if sid in lp["nodes"]], self.shares(sid)
-        if loops or shares:
+        loops, shares, rules = [lp for lp in self.m["loops"] if sid in lp["nodes"]], self.shares(sid), self.governed_by(sid)
+        if loops or shares or rules:
             o += ["### Touches", ""]
             for lp in loops:
                 others = ", ".join(self.by_id[x]["name"] for x in lp["nodes"] if x != sid and x in self.by_id)
                 o.append(f"- Loop **{lp['name']}**: {lp['point']}" + (f" With: {others}." if others else ""))
             if shares:
                 o.append("- Shares code with: " + ", ".join(self.by_id[x]["name"] for x in shares) + ".")
+            if rules:
+                o.append("- Rules set by: " + ", ".join(self.by_id[x]["name"] for x in rules) + ".")
             o.append("")
         items = self.open_items(sid)
         if items:
@@ -415,13 +468,15 @@ class Map:
             o += ["## Flags", ""] + [f"- {f}" for f in self.flags] + [""]
         for title, rows in (("Bets with no recorded reason", [f"{s['name']}: {b['bet']}" for s, b in c["no_reason"]]),
                             ("Bets with no \"instead of\"", [f"{s['name']}: {b['bet']}" for s, b in c["no_instead"]]),
+                            ("Owner bets as written, with no reason or no \"instead of\"", [f"{s['name']}: {b['bet']}" for s, b in c["owner_bare"]]),
                             ("Guarantees citing no test", [f"{s['name']}: {g['text']}" for s, g in c["no_test"]]),
                             ("Open items on no card", [f"**{i['id']}** ({i['status']}): {i['text']}" for i in c["items_no_card"]]),
                             ("Traps on no card", [f"{lp['name']}: {w['when']}" for lp, w in c["traps_no_card"]])):
             if rows:
                 o += [f"## {title}", ""] + [f"- {row}" for row in rows] + [""]
-        questions = sorted(self.m["questions"], key=lambda q: not q.get("blocks"))[:MAX_QUESTIONS]
+        questions, more = sorted(self.m["questions"], key=lambda q: not q.get("blocks"))[:MAX_QUESTIONS], len(self.m["questions"]) - MAX_QUESTIONS
         o += ["## Owner questions", ""] + ([f"{n}. {q['text']}" + (f" (blocks {q['blocks']})" if q.get("blocks") else "") for n, q in enumerate(questions, 1)] or ["None recorded."]) + [""]
+        o += [f"{more} more in `model.json`.", ""] if more > 0 else []
         return "\n".join(o)
 
 
@@ -436,7 +491,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--list", action="store_true", help="print every subject id with its point")
     ap.add_argument("--front", action="store_true", help="print the front page")
     ap.add_argument("--card", metavar="ID", help="print one subject's card")
-    ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out, and with them how many of the repository's files the subjects own; where the render is committed, render and check with it, so an added file does not stale it")
+    ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out, and with them how many of the repository's files the subjects own; where the render is committed, render and check with it, so an added file does not make it stale")
     args = ap.parse_args(argv)
     source = args.source.resolve()
     root, out = (args.root or source.parent.parent.parent).resolve(), (args.out or source.parent).resolve()
@@ -470,7 +525,7 @@ def main(argv: list[str] | None = None) -> int:
             (out / name).write_text(text, encoding="utf-8")
     print(f"render_map: {plural(len(built.subjects), 'card')}, front page {len(built.front().encode('utf-8'))} bytes" + ("" if args.check else f", written to {out}"))
     for line in built.flags:
-        print(f"flag: {line}")
+        print(f"flag (not a failure): {line}")
     for line in built.errors:
         print(f"check failed: {line}", file=sys.stderr)
     for name in stale:

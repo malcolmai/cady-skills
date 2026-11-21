@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "cady.system-map.v1",
   "title": "System map source",
-  "description": "The hand-written source of a product's system map (model.json). render_map.py checks a source against this file and renders the front page, the cards and the gaps list from it. Only points, bets, definitions and paths are written here; counts, each path's point, Touches and open work are derived at each render. A key that begins with x_ is the project's own and is ignored.",
+  "description": "The hand-written source of a product's system map (model.json). render_map.py checks a source against this file and renders the front page, the cards and the gaps list from it. Only points, bets, definitions and paths are written here; counts, each path's point, Touches and open work are derived at each render. A pointer to research or to a document goes in the `why` of the bet it supports; the map has no other place for one. A key that begins with x_ is the project's own and is ignored.",
   "type": "object",
   "required": [
     "schema",
@@ -80,7 +80,7 @@
           "type": "array",
           "minItems": 3,
           "maxItems": 4,
-          "description": "For software: Business logic, Interface, Infrastructure, QA. Otherwise three or four that split the product the same way, with QA kept; the renderer flags a map with no angle named QA.",
+          "description": "For software: Business logic, Interface, Infrastructure, QA. Otherwise three or four that split the product the same way, with QA kept; the tool flags a map with no angle named QA.",
           "items": {
             "type": "object",
             "description": "One angle.",
@@ -117,7 +117,7 @@
                 "type": "array",
                 "minItems": 1,
                 "maxItems": 5,
-                "description": "The angle's key areas: where a change is decided. Two to five is usual; the renderer flags fewer than two.",
+                "description": "The angle's key areas: where a change is decided. Two to five is usual; the tool flags fewer than two. Write an area the sources name, empty or not; never add one only to quiet the flag.",
                 "items": {
                   "type": "object",
                   "description": "One key area.",
@@ -160,7 +160,7 @@
     },
     "app": {
       "type": "object",
-      "description": "The Business logic subjects. The renderer flags an angle that holds both these and dimensions.",
+      "description": "The Business logic subjects: the things users name. The tool flags an angle that holds both these and dimensions.",
       "required": [
         "core",
         "modules"
@@ -175,14 +175,14 @@
           "items": {
             "$ref": "#/$defs/subject"
           },
-          "description": "What the product cannot run without: its base records and the logic built on them."
+          "description": "What users name that is not a module: the product's base records and the logic built on them. A record belongs to the logic subject it is about; how records are stored is an Infrastructure subject."
         },
         "modules": {
           "type": "array",
           "items": {
             "$ref": "#/$defs/subject"
           },
-          "description": "Parts that can be left out while the rest still works, such as a system of record of their own."
+          "description": "Parts a customer can decline or switch off while the product's point still holds. Anything else users name is core."
         }
       }
     },
@@ -191,11 +191,11 @@
       "items": {
         "$ref": "#/$defs/dimension"
       },
-      "description": "Parts of how the product is engineered: the Interface, Infrastructure and QA subjects. A quality (fast, secure) is not a subject."
+      "description": "Parts of how the product is engineered: the Interface, Infrastructure and QA subjects, each answering one engineering question. A quality (fast, secure) is not a subject."
     },
     "loops": {
       "type": "array",
-      "description": "A loop is a flow that repeats and runs through several subjects, such as sign-up to first use, a sync or a release. May be empty.",
+      "description": "A loop is a flow that repeats and runs through several subjects, such as sign-up to first use, a sync or a release. Write the ones the sources name, when you list the subjects. May be empty.",
       "items": {
         "type": "object",
         "description": "One loop.",
@@ -230,7 +230,7 @@
           },
           "watch": {
             "type": "array",
-            "description": "Its known traps.",
+            "description": "Its known traps: what a source (an incident note, a code comment, a feedback document) says goes wrong. Never invent one.",
             "items": {
               "type": "object",
               "description": "One trap. It shows on the card of the subject that owns a cited file, or on every subject of the loop when no subject owns one.",
@@ -268,7 +268,7 @@
     },
     "releases": {
       "type": "array",
-      "description": "Ordered, the first current. A release is a goal a user can reach end to end, with the items that reach it. With no tracker or roadmap to read, leave the list empty and ask the owner.",
+      "description": "Ordered, the first current. A release is a goal a user can reach end to end, with the items that reach it. Take them from the tracker or roadmap; a dated list of work the owner asked for is a tracker: one release per list. Where the tracker states no goal, write it and add an owner question to confirm it. With no tracker, write one release from the work the sources name (for a new product, the brief), leave `by` out and add an owner question to confirm its goal. When the sources name no work, leave the list empty and ask the owner.",
       "items": {
         "type": "object",
         "description": "One release.",
@@ -325,7 +325,7 @@
                 "id": {
                   "type": "string",
                   "minLength": 1,
-                  "description": "The item's id as the tracker writes it, such as R1.2. No two items share one, in this release or another."
+                  "description": "The item's id as the tracker writes it. Where the tracker has none, or repeats one, R<release number>.<item number> in build order, such as R1.2. No two items share one, in this release or another."
                 },
                 "text": {
                   "type": "string",
@@ -344,18 +344,18 @@
                     "in progress",
                     "done"
                   ],
-                  "description": "next: not started, a decision still to make included. in progress: started, or built and not yet switched on. done: built and in the code, even when the release has not shipped."
+                  "description": "next: not started, a decision still to make included. in progress: started, or built and not yet switched on. done: built and in the code, even when the release has not shipped. When sources disagree, the code decides; where the code cannot show it, take the less finished status and say the disagreement in `text`."
                 }
               }
             },
-            "description": "In build order: the first item not done is the next build step."
+            "description": "In build order, layer by layer: the first item not done is the next build step. A layer is what the next items read from: the stored shape, then the logic on it, then what reaches it."
           }
         }
       }
     },
     "questions": {
       "type": "array",
-      "description": "Questions only the owner can answer. The gaps list shows at most seven, those that block the product's point, a release goal or a subject first.",
+      "description": "Questions only the owner can answer. One question covers like cases, such as every dimension's label. The gaps list shows at most seven, those that block the product's point, a release goal or a subject first, and says how many more there are.",
       "items": {
         "type": "object",
         "description": "One owner question.",
@@ -391,12 +391,12 @@
     },
     "path": {
       "type": "string",
-      "pattern": "^(?!.*(^|/)\\.\\.?(/|$))[^/\\s][^\\s]*$",
-      "description": "A path inside the repository, relative to its root: no leading slash, no spaces, and no `.` or `..` part."
+      "pattern": "^(?!.*(^|/)\\.\\.?(/|$))(?!.*//)(?![\\s\\S]*[\\n\\r\\t])[^/\\s](.*[^\\s/])?$",
+      "description": "A path inside the repository, relative to its root, as git lists it: no leading or trailing slash, no empty, `.` or `..` part, no tab, and no space at either end. A space inside a name is allowed."
     },
     "bet": {
       "type": "object",
-      "description": "A choice that could have gone another way. One with no reason or no alternative stays and is counted as a gap.",
+      "description": "A choice that could have gone another way. One with no reason or no alternative stays and is counted as a gap; an owner's is counted on a line of its own, because only the owner can fill it.",
       "required": [
         "id",
         "bet",
@@ -413,15 +413,15 @@
         "bet": {
           "type": "string",
           "minLength": 1,
-          "description": "The choice, as a statement."
+          "description": "The choice, as a statement. An owner bet is the owner's sentence, word for word. An owner sentence that states no choice goes into the point of the node it describes, in the owner's words where they fit."
         },
         "instead_of": {
           "type": "string",
-          "description": "The option it replaced."
+          "description": "The option it replaced, when a source names it or plainly implies it. Otherwise leave it out: never invent one."
         },
         "why": {
           "type": "string",
-          "description": "The recorded reason. A research or document pointer goes here as file:<id> or file:<repository path>."
+          "description": "The recorded reason, when a source gives one. A research or document pointer goes here as file:<id> or file:<repository path>. For an unsigned statement, the quoted sentence. Where the research does not exist, say so here and mark the bet proposed."
         },
         "origin": {
           "enum": [
@@ -429,17 +429,17 @@
             "inferred",
             "proposed"
           ],
-          "description": "owner: their words and hedges. inferred: what the code or a document implies, in your words, or a quoted statement whose author is unknown. proposed: your own choice, with nothing in the sources behind it."
+          "description": "owner: a sentence the owner wrote, signed or said to you, or one in a document the owner gave you as theirs, such as the brief. inferred: what the code or a document implies, in your words, or a statement from a document that only sits in the repository and names no author, with the one sentence that states the choice quoted in `why`. proposed: your own choice, with nothing in the sources behind it. One owner question asks which of the unsigned documents are the owner's own."
         },
         "source": {
           "type": "string",
-          "description": "Where the wording came from."
+          "description": "Where the wording came from: the document and the place in it, such as brief.md, paragraph 2."
         }
       }
     },
     "subject": {
       "type": "object",
-      "description": "A subject: something a person would change that has its own reason to exist.",
+      "description": "A subject: something a person would change that has its own reason to exist. Not cut by folder or size: one file can be a subject, and so can a whole client; a folder that holds two subjects is split, each naming its files.",
       "required": [
         "id",
         "name",
@@ -472,7 +472,7 @@
         },
         "parts": {
           "type": "array",
-          "description": "The things inside the subject a reader would name, each with its point.",
+          "description": "The things inside the subject a reader would name, each with its point: its records, its main modules; for an Interface subject, its screens.",
           "items": {
             "type": "object",
             "description": "One part of a subject.",
@@ -492,13 +492,17 @@
               "point": {
                 "type": "string",
                 "minLength": 1
+              },
+              "schema": {
+                "$ref": "#/$defs/path",
+                "description": "The file that defines this part's shape, its fields and types: a table definition, a type file or a schema file; a file, not a folder. The map points to it and never restates fields. While it is not written, an open item of the current release names this path itself and comes before the other open items of this subject. The tool checks that much; the order across subjects is the builder's to keep."
               }
             }
           }
         },
         "guarantees": {
           "type": "array",
-          "description": "What must stay true. On the QA subject that holds the user journeys, if the product has one: one per journey goal with its acceptance, in lifecycle order.",
+          "description": "What must stay true: a rule a source states or the code enforces. For code not yet built, write it now as the acceptance of the item that builds it. On the QA subject that holds the user journeys, if the product has one: one per journey goal with its acceptance (what the user sees when the goal is reached), in lifecycle order.",
           "items": {
             "type": "object",
             "description": "One thing that must stay true.",
@@ -516,7 +520,7 @@
               },
               "test": {
                 "$ref": "#/$defs/path",
-                "description": "The test file that proves it. Leave out until the file exists."
+                "description": "The test file that proves it. Leave out until the file exists and you have read that it proves the sentence."
               }
             }
           }
@@ -527,11 +531,11 @@
           "items": {
             "$ref": "#/$defs/path"
           },
-          "description": "The paths this subject owns, relative to the repository root, each a file or a folder with no trailing slash. Its own tests and documents go here when they are separate files; a test suite or a document shared by many subjects belongs to the QA or Interface subject that keeps it. When paths nest, the longest matching path owns the file. A path that does not exist yet must be named by an item of the current release."
+          "description": "The paths this subject owns, each a file or a folder. One subject owns a path. When paths nest, the longest matching path owns the file. A file that draws a screen or declares a route stays with the client's Interface subject, even when it also holds a rule; a logic subject names the files that hold only its rules and records, in every client and layer: a file a second client could import unchanged. A subject names its own test files inside a shared test folder; the rest, with CI and build scripts, stays with the QA subject that runs them. A document belongs to the subject it is about; one about several subjects, the brief included, belongs to no subject. The README, agent instruction files, package and ignore files and the map's own folder belong to no subject: unowned files are expected. A path that does not exist yet must be named by an item of the current release. A path that states no point renders \"no point stated\": leave the map so; the fix is the file's own first line, in the project's own change."
         },
         "tools": {
           "type": "array",
-          "description": "Commands or callable operations defined in this subject's own code. The renderer does not find these; list them.",
+          "description": "Commands or callable operations defined in this subject's own code: a script the package file names, a CLI command, a served operation. The tool does not find these; list them when you list the subject.",
           "items": {
             "type": "object",
             "description": "One command or operation.",
@@ -561,7 +565,7 @@
     },
     "dimension": {
       "type": "object",
-      "description": "A dimension subject.",
+      "description": "A dimension subject: a part of how the product is engineered that answers one question.",
       "required": [
         "id",
         "name",
@@ -590,11 +594,11 @@
           "items": {
             "$ref": "#/$defs/bet"
           },
-          "description": "This subject's own choices. May be empty."
+          "description": "This subject's own choices. May be empty. With a dimension register, the first is its label: differentiating or not, with the reason. With no register, leave out the label, the register ids and the owner, and ask for every dimension's label in one owner question."
         },
         "parts": {
           "type": "array",
-          "description": "The things inside the subject a reader would name, each with its point.",
+          "description": "The things inside the subject a reader would name, each with its point: its records, its main modules; for an Interface subject, its screens.",
           "items": {
             "type": "object",
             "description": "One part of a subject.",
@@ -614,13 +618,17 @@
               "point": {
                 "type": "string",
                 "minLength": 1
+              },
+              "schema": {
+                "$ref": "#/$defs/path",
+                "description": "The file that defines this part's shape, its fields and types: a table definition, a type file or a schema file; a file, not a folder. The map points to it and never restates fields. While it is not written, an open item of the current release names this path itself and comes before the other open items of this subject. The tool checks that much; the order across subjects is the builder's to keep."
               }
             }
           }
         },
         "guarantees": {
           "type": "array",
-          "description": "What must stay true. On the QA subject that holds the user journeys, if the product has one: one per journey goal with its acceptance, in lifecycle order.",
+          "description": "What must stay true: a rule a source states or the code enforces. For code not yet built, write it now as the acceptance of the item that builds it. On the QA subject that holds the user journeys, if the product has one: one per journey goal with its acceptance (what the user sees when the goal is reached), in lifecycle order.",
           "items": {
             "type": "object",
             "description": "One thing that must stay true.",
@@ -638,22 +646,28 @@
               },
               "test": {
                 "$ref": "#/$defs/path",
-                "description": "The test file that proves it. Leave out until the file exists."
+                "description": "The test file that proves it. Leave out until the file exists and you have read that it proves the sentence."
               }
             }
           }
         },
         "home": {
           "type": "array",
-          "minItems": 1,
           "items": {
             "$ref": "#/$defs/path"
           },
-          "description": "The paths this subject owns, relative to the repository root, each a file or a folder with no trailing slash. Its own tests and documents go here when they are separate files; a test suite or a document shared by many subjects belongs to the QA or Interface subject that keeps it. When paths nest, the longest matching path owns the file. A path that does not exist yet must be named by an item of the current release."
+          "description": "The paths this subject owns, each a file or a folder. One subject owns a path. When paths nest, the longest matching path owns the file. A file that draws a screen or declares a route stays with the client's Interface subject, even when it also holds a rule; a logic subject names the files that hold only its rules and records, in every client and layer: a file a second client could import unchanged. A subject names its own test files inside a shared test folder; the rest, with CI and build scripts, stays with the QA subject that runs them. A document belongs to the subject it is about; one about several subjects, the brief included, belongs to no subject. The README, agent instruction files, package and ignore files and the map's own folder belong to no subject: unowned files are expected. A path that does not exist yet must be named by an item of the current release. A path that states no point renders \"no point stated\": leave the map so; the fix is the file's own first line, in the project's own change. A dimension that owns no code of its own has an empty list and at least one `governs` path."
+        },
+        "governs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "description": "Paths another subject owns whose rules this dimension sets, such as the checks every route passes; never a path inside its own home. The dimension owns none of them: each shows on this card as governed, the owning card names this dimension, and its open work and traps show on both."
         },
         "tools": {
           "type": "array",
-          "description": "Commands or callable operations defined in this subject's own code. The renderer does not find these; list them.",
+          "description": "Commands or callable operations defined in this subject's own code: a script the package file names, a CLI command, a served operation. The tool does not find these; list them when you list the subject.",
           "items": {
             "type": "object",
             "description": "One command or operation.",

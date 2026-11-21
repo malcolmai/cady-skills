@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "29827937daa5a63e141f"
-  library: "4b91b8940460190e"
+  version: "fdcaaef9877417071748"
+  library: "6f009dfb3b71e749"
   function: "customer_success"
 ---
 # Customer Success
@@ -22,9 +22,6 @@ Shared by every role card: `references/role-card-common.md`.
 - Check the customer actually got the promised outcome; usage, satisfaction, payment and renewal are proxies. Instead of: Read high usage or a renewal as proof of value.
 - A support note or CRM reply is not a fix; close a gap only when the owner's effect is verified. Instead of: Mark an issue handled once the customer has been answered.
 - Route a recurring or consequential failure to the owner who can change its cause: promise, product, delivery or terms. Instead of: Absorb failures account by account with goodwill gestures and check-ins.
-
-## Every run
-
 
 ## Skills
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation.

@@ -4,6 +4,28 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 6f009dfb3b71e749 · 2026-11-21
+
+Since 4b91b8940460190e: 0 new, 0 dropped, 16 changed.
+
+Changed:
+- `cady-accounting-method`: removed Every run
+- `cady-company-method`: removed Every run
+- `cady-company-operations-method`: removed Every run
+- `cady-customer-success-method`: removed Every run
+- `cady-design-method`: removed Every run
+- `cady-engineering-method`: removed Every run
+- `cady-engineering-system-cycle`: reference engineering-cycle-dimensions.md, reference engineering-system-map.md
+- `cady-finance-method`: removed Every run
+- `cady-fundraise-method`: removed Every run
+- `cady-gtm-method`: removed Every run
+- `cady-marketing-method`: removed Every run
+- `cady-orchestrator-method`: removed Every run
+- `cady-product-manage`: reference engineering-cycle-dimensions.md, reference engineering-system-map.md
+- `cady-product-method`: Parent function, removed Every run, reference engineering-cycle-dimensions.md, reference engineering-system-map.md
+- `cady-qa-method`: removed Every run
+- `cady-sales-method`: removed Every run
+
 ## 4b91b8940460190e · 2026-11-21
 
 Since a16a9203b72d70d3: 0 new, 0 dropped, 4 changed.
