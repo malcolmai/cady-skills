@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.qa.triage"
   version: "26d443228b16c776c9cd"
-  library: "9d4bccbcaeac835f"
+  library: "2d8ff224740604ab"
   function: "qa"
 ---
 # Bug and flaky-test triage

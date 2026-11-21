@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.compliance_register"
   version: "786dd4274bf285bae299"
-  library: "9d4bccbcaeac835f"
+  library: "2d8ff224740604ab"
   function: "company_operations"
 ---
 # Compliance register and monthly filing review

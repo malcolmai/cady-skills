@@ -103,6 +103,7 @@ The skills you adopt are copied into your host and are your company's own: edit 
 | `library/` | The skills: function role cards, task skills and run guides, each folder self-contained with its own `references/` |
 | `plugins/cady/` | The Claude Code plugin: the Cady MCP server and the front door skill |
 | `install.py`, `roster.json` | The adopt helper: copies the agents you choose (role card and the skills it lists) into your host |
+| `assets/system-map/` | The system map tool: `render_map.py` and the schema of its source, `map.schema.json`, which the system map reference tells an agent to copy into a repository. Each skill that holds that reference carries the same two files in its own `assets/system-map/` |
 | `.claude-plugin/marketplace.json` | The marketplace entry for `plugins/cady` |
 | [`examples/`](examples/README.md) | Three example agents (GTM, finance, orchestrator), each preloading its role's method |
 | [`CHANGELOG.md`](CHANGELOG.md) | The material changes in each release; your Executive reads it |
@@ -114,7 +115,7 @@ The skills you adopt are copied into your host and are your company's own: edit 
 - In Claude Code the plugin also adds the Cady MCP server (`app.cadyworks.com/mcp`), so do not also run `claude mcp add`, and switch off the claude.ai Cady connector inside Claude Code so Cady is not connected twice. In other apps, connect Cady once as a connector. Sending email or LinkedIn messages, publishing and spending follow your company's approval rules in Cady, and every effect leaves a record you can inspect.
 - Agents report run results and usage to Cady. They never upload transcripts.
 - On Codex, only if the owner opts the host in, each scheduled run checks whether your most recent other local Codex session ended on a usage limit or sign-in error, and reports only that status.
-- The only script is `install.py`: it copies skill folders from your clone of this library into your host's skills folder and never overwrites one that is there. It fetches nothing, runs no hooks and sends nothing anywhere.
+- There are two scripts. `install.py` copies skill folders from your clone of this library into your host's skills folder and never overwrites one that is there. `assets/system-map/render_map.py` runs only when an agent copies it into a repository to render that repository's system map: it reads that repository's files and writes two Markdown files beside the map's source. Both use the Python standard library only, fetch nothing, run no hooks and send nothing anywhere.
 
 ## Contributing
 

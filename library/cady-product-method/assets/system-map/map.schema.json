@@ -1,0 +1,697 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cady.system-map.v1",
+  "title": "System map source",
+  "description": "The hand-written source of a product's system map (model.json). render_map.py checks a source against this file and renders the front page, the cards and the gaps list from it. Only points, bets, definitions and paths are written here; counts, each path's point, Touches and open work are derived at each render. A key that begins with x_ is the project's own and is ignored.",
+  "type": "object",
+  "required": [
+    "schema",
+    "product",
+    "framework",
+    "app",
+    "dimensions",
+    "loops",
+    "releases",
+    "questions"
+  ],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^x_": {}
+  },
+  "properties": {
+    "schema": {
+      "const": "cady.system-map.v1"
+    },
+    "product": {
+      "type": "object",
+      "description": "The product: the top of the tree.",
+      "required": [
+        "name",
+        "point",
+        "bets"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x_": {}
+      },
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "point": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Does [what] for [whom]; beats [the alternative] on [what]."
+        },
+        "frame": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A short paragraph on how the product runs, shown above the diagram."
+        },
+        "diagram": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "One simple architecture diagram as lines of plain text, drawn in a code block: the main parts and what flows between them."
+        },
+        "bets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/bet"
+          },
+          "description": "The product's bets, three to seven."
+        }
+      }
+    },
+    "framework": {
+      "type": "object",
+      "description": "The decision tree above the subjects.",
+      "required": [
+        "angles"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x_": {}
+      },
+      "properties": {
+        "angles": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 4,
+          "description": "For software: Business logic, Interface, Infrastructure, QA. Otherwise three or four that split the product the same way, with QA kept; the renderer flags a map with no angle named QA.",
+          "items": {
+            "type": "object",
+            "description": "One angle.",
+            "required": [
+              "id",
+              "name",
+              "point",
+              "areas"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+              "^x_": {}
+            },
+            "properties": {
+              "id": {
+                "$ref": "#/$defs/id"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "point": {
+                "type": "string",
+                "minLength": 1
+              },
+              "bets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/bet"
+                },
+                "description": "Bets that hold for everything under this angle. May be empty."
+              },
+              "areas": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 5,
+                "description": "The angle's key areas: where a change is decided. Two to five is usual; the renderer flags fewer than two.",
+                "items": {
+                  "type": "object",
+                  "description": "One key area.",
+                  "required": [
+                    "id",
+                    "name",
+                    "point",
+                    "subjects"
+                  ],
+                  "additionalProperties": false,
+                  "patternProperties": {
+                    "^x_": {}
+                  },
+                  "properties": {
+                    "id": {
+                      "$ref": "#/$defs/id"
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "point": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "subjects": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/id"
+                      },
+                      "description": "Ids of the subjects decided here; may be empty until a later release. Every subject is in exactly one key area."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "app": {
+      "type": "object",
+      "description": "The Business logic subjects. The renderer flags an angle that holds both these and dimensions.",
+      "required": [
+        "core",
+        "modules"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x_": {}
+      },
+      "properties": {
+        "core": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/subject"
+          },
+          "description": "What the product cannot run without: its base records and the logic built on them."
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/subject"
+          },
+          "description": "Parts that can be left out while the rest still works, such as a system of record of their own."
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dimension"
+      },
+      "description": "Parts of how the product is engineered: the Interface, Infrastructure and QA subjects. A quality (fast, secure) is not a subject."
+    },
+    "loops": {
+      "type": "array",
+      "description": "A loop is a flow that repeats and runs through several subjects, such as sign-up to first use, a sync or a release. May be empty.",
+      "items": {
+        "type": "object",
+        "description": "One loop.",
+        "required": [
+          "id",
+          "name",
+          "point",
+          "nodes"
+        ],
+        "additionalProperties": false,
+        "patternProperties": {
+          "^x_": {}
+        },
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "point": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/id"
+            },
+            "description": "Ids of the subjects it runs through, in order."
+          },
+          "watch": {
+            "type": "array",
+            "description": "Its known traps.",
+            "items": {
+              "type": "object",
+              "description": "One trap. It shows on the card of the subject that owns a cited file, or on every subject of the loop when no subject owns one.",
+              "required": [
+                "when",
+                "then"
+              ],
+              "additionalProperties": false,
+              "patternProperties": {
+                "^x_": {}
+              },
+              "properties": {
+                "when": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "The situation in which it goes wrong."
+                },
+                "then": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "What goes wrong, and what to do about it when that is known."
+                },
+                "src": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/path"
+                  },
+                  "description": "The files to see."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "releases": {
+      "type": "array",
+      "description": "Ordered, the first current. A release is a goal a user can reach end to end, with the items that reach it. With no tracker or roadmap to read, leave the list empty and ask the owner.",
+      "items": {
+        "type": "object",
+        "description": "One release.",
+        "required": [
+          "id",
+          "name",
+          "point",
+          "items"
+        ],
+        "additionalProperties": false,
+        "patternProperties": {
+          "^x_": {}
+        },
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "by": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Who set it and when. Leave out when unknown and ask the owner."
+          },
+          "point": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The release goal."
+          },
+          "bets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/bet"
+            }
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "description": "One piece of work.",
+              "required": [
+                "id",
+                "text",
+                "paths",
+                "status"
+              ],
+              "additionalProperties": false,
+              "patternProperties": {
+                "^x_": {}
+              },
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "The item's id as the tracker writes it, such as R1.2. No two items share one, in this release or another."
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "paths": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/path"
+                  },
+                  "description": "The paths it changes or will create. It shows as open work on the card of each subject that owns one."
+                },
+                "status": {
+                  "enum": [
+                    "next",
+                    "in progress",
+                    "done"
+                  ],
+                  "description": "next: not started, a decision still to make included. in progress: started, or built and not yet switched on. done: built and in the code, even when the release has not shipped."
+                }
+              }
+            },
+            "description": "In build order: the first item not done is the next build step."
+          }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "description": "Questions only the owner can answer. The gaps list shows at most seven, those that block the product's point, a release goal or a subject first.",
+      "items": {
+        "type": "object",
+        "description": "One owner question.",
+        "required": [
+          "id",
+          "text"
+        ],
+        "additionalProperties": false,
+        "patternProperties": {
+          "^x_": {}
+        },
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/id"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "blocks": {
+            "type": "string",
+            "description": "What it blocks: product, a release id, or a subject id. Leave out when it blocks none of these."
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._:-]*$",
+      "description": "An id: lower-case letters, digits, dot, underscore, colon or hyphen, starting with a letter or digit. No two angles, key areas, subjects, bets, loops, releases, items or questions share one."
+    },
+    "path": {
+      "type": "string",
+      "pattern": "^(?!.*(^|/)\\.\\.?(/|$))[^/\\s][^\\s]*$",
+      "description": "A path inside the repository, relative to its root: no leading slash, no spaces, and no `.` or `..` part."
+    },
+    "bet": {
+      "type": "object",
+      "description": "A choice that could have gone another way. One with no reason or no alternative stays and is counted as a gap.",
+      "required": [
+        "id",
+        "bet",
+        "origin"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x_": {}
+      },
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "bet": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The choice, as a statement."
+        },
+        "instead_of": {
+          "type": "string",
+          "description": "The option it replaced."
+        },
+        "why": {
+          "type": "string",
+          "description": "The recorded reason. A research or document pointer goes here as file:<id> or file:<repository path>."
+        },
+        "origin": {
+          "enum": [
+            "owner",
+            "inferred",
+            "proposed"
+          ],
+          "description": "owner: their words and hedges. inferred: what the code or a document implies, in your words, or a quoted statement whose author is unknown. proposed: your own choice, with nothing in the sources behind it."
+        },
+        "source": {
+          "type": "string",
+          "description": "Where the wording came from."
+        }
+      }
+    },
+    "subject": {
+      "type": "object",
+      "description": "A subject: something a person would change that has its own reason to exist.",
+      "required": [
+        "id",
+        "name",
+        "point",
+        "home"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x_": {}
+      },
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "point": {
+          "type": "string",
+          "minLength": 1,
+          "description": "One sentence: why this subject exists. A dimension's point answers its one question."
+        },
+        "bets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/bet"
+          },
+          "description": "This subject's own choices. May be empty."
+        },
+        "parts": {
+          "type": "array",
+          "description": "The things inside the subject a reader would name, each with its point.",
+          "items": {
+            "type": "object",
+            "description": "One part of a subject.",
+            "required": [
+              "name",
+              "point"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+              "^x_": {}
+            },
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "point": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "guarantees": {
+          "type": "array",
+          "description": "What must stay true. On the QA subject that holds the user journeys, if the product has one: one per journey goal with its acceptance, in lifecycle order.",
+          "items": {
+            "type": "object",
+            "description": "One thing that must stay true.",
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+              "^x_": {}
+            },
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "test": {
+                "$ref": "#/$defs/path",
+                "description": "The test file that proves it. Leave out until the file exists."
+              }
+            }
+          }
+        },
+        "home": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "description": "The paths this subject owns, relative to the repository root, each a file or a folder with no trailing slash. Its own tests and documents go here when they are separate files; a test suite or a document shared by many subjects belongs to the QA or Interface subject that keeps it. When paths nest, the longest matching path owns the file. A path that does not exist yet must be named by an item of the current release."
+        },
+        "tools": {
+          "type": "array",
+          "description": "Commands or callable operations defined in this subject's own code. The renderer does not find these; list them.",
+          "items": {
+            "type": "object",
+            "description": "One command or operation.",
+            "required": [
+              "name",
+              "point"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+              "^x_": {}
+            },
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The command as typed, or the operation's name."
+              },
+              "point": {
+                "type": "string",
+                "minLength": 1,
+                "description": "What it does."
+              }
+            }
+          }
+        }
+      }
+    },
+    "dimension": {
+      "type": "object",
+      "description": "A dimension subject.",
+      "required": [
+        "id",
+        "name",
+        "point",
+        "home"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x_": {}
+      },
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "point": {
+          "type": "string",
+          "minLength": 1,
+          "description": "One sentence: why this subject exists. A dimension's point answers its one question."
+        },
+        "bets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/bet"
+          },
+          "description": "This subject's own choices. May be empty."
+        },
+        "parts": {
+          "type": "array",
+          "description": "The things inside the subject a reader would name, each with its point.",
+          "items": {
+            "type": "object",
+            "description": "One part of a subject.",
+            "required": [
+              "name",
+              "point"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+              "^x_": {}
+            },
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "point": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "guarantees": {
+          "type": "array",
+          "description": "What must stay true. On the QA subject that holds the user journeys, if the product has one: one per journey goal with its acceptance, in lifecycle order.",
+          "items": {
+            "type": "object",
+            "description": "One thing that must stay true.",
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+              "^x_": {}
+            },
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "test": {
+                "$ref": "#/$defs/path",
+                "description": "The test file that proves it. Leave out until the file exists."
+              }
+            }
+          }
+        },
+        "home": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "description": "The paths this subject owns, relative to the repository root, each a file or a folder with no trailing slash. Its own tests and documents go here when they are separate files; a test suite or a document shared by many subjects belongs to the QA or Interface subject that keeps it. When paths nest, the longest matching path owns the file. A path that does not exist yet must be named by an item of the current release."
+        },
+        "tools": {
+          "type": "array",
+          "description": "Commands or callable operations defined in this subject's own code. The renderer does not find these; list them.",
+          "items": {
+            "type": "object",
+            "description": "One command or operation.",
+            "required": [
+              "name",
+              "point"
+            ],
+            "additionalProperties": false,
+            "patternProperties": {
+              "^x_": {}
+            },
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The command as typed, or the operation's name."
+              },
+              "point": {
+                "type": "string",
+                "minLength": 1,
+                "description": "What it does."
+              }
+            }
+          }
+        },
+        "register_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Its rows in the dimension register, where one exists."
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Its one owner, copied from the dimension register, where one exists."
+        }
+      }
+    }
+  }
+}
