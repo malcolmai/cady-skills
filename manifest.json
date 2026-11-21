@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-20T00:00:00Z",
+  "generatedAt": "2026-11-21T00:00:00Z",
   "bundle": {
-    "tag": "1c813a168890974c",
-    "version": "1c813a168890974c616a110c2fdf0f098ca90bc9adf1fc42e5d0c0aa1cf8fdb7",
-    "pluginVersion": "2026.11.20-1c813a16"
+    "tag": "9d4bccbcaeac835f",
+    "version": "9d4bccbcaeac835f164678342288ca473e1256401a8a0d40b561d8057c15a0c4",
+    "pluginVersion": "2026.11.21-9d4bccbc"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.20-1c813a16"
+    "version": "2026.11.21-9d4bccbc"
   },
   "skills": [
     {
@@ -165,7 +165,7 @@
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "6ba286f709aa8cc01283"
+      "version": "9f5e1fe35065f1f9f56e"
     },
     {
       "name": "cady-finance-budget-review",
@@ -351,13 +351,13 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "b950c6730e79df22034c"
+      "version": "0e89308c7116533d82ae"
     },
     {
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "bfd92b529b197048859d"
+      "version": "7ed781c9479c03144d3b"
     },
     {
       "name": "cady-product-research",
