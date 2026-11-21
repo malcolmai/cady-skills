@@ -21,7 +21,8 @@ Counted as gaps: a card bet with no reason or no alternative. An owner's bet is 
 line of its own: only the owner can fill it. One subject owns a path; a dimension's `governs` paths are owned by another subject, and their open work and
 traps show on both cards. A part's `schema` names the file that defines its shape, or the folder of migrations that does. While it is not written, an
 open item of the current release must name that path itself and come before the other open items of its subject. The order of items across subjects is
-not checked.
+not checked. A file that needs two owners is not placed twice: an open item of the current release lists it under `splits`, with the path its moved
+part goes to. The subject whose part stays owns the file, another subject owns the new path, and the file shows on both cards and is counted on a line of its own.
 
 Derived at each render and never stored: file counts, each path's point, Touches, open work and every count. Not derived: a
 subject's tools (the source lists them) and the diagram (the source holds it as text). A folder's point is the first line of its
@@ -210,6 +211,12 @@ class Map:
         self.owner_of_file = {f: self.owner_path(f) for f in self.files}
         releases = model["releases"]
         self.planned = [p.rstrip("/") for item in (releases[0]["items"] if releases else []) if item["status"] != "done" for p in item["paths"]]
+        # a file that needs two owners, by the open item that splits it: one row per file, the first item that lists it
+        self.split: list[tuple[str, str, dict]] = []
+        for item in (i for release in releases for i in release["items"] if i["status"] != "done"):
+            for row in item.get("splits") or []:
+                if row["file"].rstrip("/") not in [path for path, _, _ in self.split]:
+                    self.split.append((row["file"].rstrip("/"), row["to"].rstrip("/"), item))
         self.errors = self.check()
         self.flags = self.flag()
 
@@ -275,6 +282,7 @@ class Map:
         for release in self.m["releases"]:  # an item's paths are plans until it is done
             errors += [f"item {item['id']} is done but its path does not exist: {p}" for item in release["items"] if item["status"] == "done"
                        for p in item["paths"] if not (self.root / p.rstrip("/")).exists()]
+        errors += self.split_checks()
         for q in self.m["questions"]:
             if q.get("blocks") and q["blocks"] != "product" and q["blocks"] not in self.by_id and q["blocks"] not in [r["id"] for r in self.m["releases"]]:
                 errors.append(f"question {q['id']} blocks {q['blocks']}, which is not product, a release id or a subject id")
@@ -299,6 +307,45 @@ class Map:
             if early:
                 errors.append(f"{sid}: item {', '.join(early)} comes before {items[writes[0]]['id']}, which writes the schema file {path}; the schema item comes first")
         return errors
+
+    def item_cards(self, item: dict) -> list[str]:
+        """The subjects an item shows on: each that owns or governs one of its paths."""
+        return list(dict.fromkeys(o for p in item["paths"] for o in self.owners(p)))
+
+    def split_checks(self) -> list[str]:
+        """A row of an item's `splits` names a file that needs two owners and the path its moved part goes to. The item is open and in
+        the current release and names both in `paths`; the file exists and one subject owns it; a second subject owns the new path by its
+        `home`, so a dimension that only governs the file is not the second owner. Checked for each file, not for the item."""
+        errors = []
+        for number, release in enumerate(self.m["releases"]):
+            for item in release["items"]:
+                paths, listed = [p.rstrip("/") for p in item["paths"]], [row["file"].rstrip("/") for row in item.get("splits") or []]
+                for path, to in dict.fromkeys((row["file"].rstrip("/"), row["to"].rstrip("/")) for row in item.get("splits") or []):
+                    owner, second, mark = self.owner_path(path), self.owner_path(to), f"item {item['id']} lists {path} under `splits`"
+                    if item["status"] == "done":
+                        errors.append(f"{mark} and is done; a split that has landed leaves the list")
+                        continue
+                    if number:
+                        errors.append(f"{mark} and is not in the current release; the item that splits a file is an open item of the current release")
+                    errors += [f"{mark} and does not name {missing} in `paths`" for missing in (path, to) if missing not in paths]
+                    if not (self.root / path).is_file():
+                        errors.append(f"{mark}, which is not a file in the repository")
+                    elif not owner:
+                        errors.append(f"{mark}, which no subject owns; the subject whose part stays owns it")
+                    elif to in listed or not second or second[1] == owner[1]:
+                        errors.append(f"{mark} and moves its part to {to}, which " + ("is itself a file to split" if to in listed else "no subject owns" if not second
+                                      else f"{owner[1]} owns too") + "; a second subject names the new path as a `home`")
+        return errors
+
+    def split_rows(self, sid: str | None = None) -> list[str]:
+        """One line per file that needs two owners: who owns it, the item, and where the moved part goes. With a subject, only the two it concerns."""
+        rows = []
+        for path, to, item in self.split:
+            owner, second = self.owner_path(path), self.owner_path(to)
+            name = lambda found: self.by_id[found[1]]["name"] if found else "no subject"
+            if sid is None or sid in [found[1] for found in (owner, second) if found]:
+                rows.append(f"`{path}` needs two owners: {name(owner)} owns it; **{item['id']}** moves part of it to `{to}` ({name(second)}).")
+        return rows
 
     def flag(self) -> list[str]:
         flags = []
@@ -340,7 +387,7 @@ class Map:
         out = []
         for release in self.m["releases"]:
             for item in release["items"]:
-                cards = {o for p in item["paths"] for o in self.owners(p)}
+                cards = self.item_cards(item)
                 if item["status"] != "done" and ((sid is None and not cards) or sid in cards):
                     out.append(item)
         return out
@@ -356,7 +403,7 @@ class Map:
         return {"bets": len(bets), "no_reason": [x for x in mine if not x[1].get("why")], "no_instead": [x for x in mine if not x[1].get("instead_of")],
                 "owner_bare": [x for x in bets if x[1]["origin"] == "owner" and not (x[1].get("why") and x[1].get("instead_of"))],
                 "guarantees": len(guarantees), "no_test": [x for x in guarantees if not x[1].get("test")],
-                "items_no_card": self.open_items(None), "traps_no_card": self.traps(None),
+                "items_no_card": self.open_items(None), "traps_no_card": self.traps(None), "split": self.split_rows(),
                 "unowned": sum(1 for f in self.files if not self.owner_of_file[f])}
 
     def unowned_now(self) -> int:
@@ -370,7 +417,8 @@ class Map:
                 f"- Owner bets as written, with no reason or no \"instead of\": {len(c['owner_bare'])}.",
                 f"- Guarantees citing no test: {len(c['no_test'])} of {c['guarantees']}.",
                 f"- Open items on no card: {len(c['items_no_card'])}.",
-                f"- Traps on no card: {len(c['traps_no_card'])}."]
+                f"- Traps on no card: {len(c['traps_no_card'])}.",
+                f"- Files that need two owners, each with an item that splits it: {len(c['split'])}."]
 
     # the front page: five sections
     def front(self) -> str:
@@ -442,6 +490,7 @@ class Map:
         for path in (p.rstrip("/") for p in s.get("governs") or []):
             owner = self.owner_path(path)
             o.append(f"- `{path}` (governed" + (f", owned by {self.by_id[owner[1]]['name']}" if owner else "") + f"): {path_point(self.root, path) if (self.root / path).exists() else 'planned, not yet written'}")
+        o += [f"- {row}" for row in self.split_rows(sid)]
         o.append("")
         if tools:
             o += ["### Its tools", ""] + [f"- `{t['name']}`: {t['point']}" for t in tools] + [""]
@@ -482,7 +531,8 @@ class Map:
                             ("Owner bets as written, with no reason or no \"instead of\"", [f"{s['name']}: {b['bet']}" for s, b in c["owner_bare"]]),
                             ("Guarantees citing no test", [f"{s['name']}: {g['text']}" for s, g in c["no_test"]]),
                             ("Open items on no card", [f"**{i['id']}** ({i['status']}): {i['text']}" for i in c["items_no_card"]]),
-                            ("Traps on no card", [f"{lp['name']}: {w['when']}" for lp, w in c["traps_no_card"]])):
+                            ("Traps on no card", [f"{lp['name']}: {w['when']}" for lp, w in c["traps_no_card"]]),
+                            ("Files that need two owners", c["split"])):
             if rows:
                 o += [f"## {title}", ""] + [f"- {row}" for row in rows] + [""]
         questions, more = sorted(self.m["questions"], key=lambda q: not q.get("blocks"))[:MAX_QUESTIONS], len(self.m["questions"]) - MAX_QUESTIONS
