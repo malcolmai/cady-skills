@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.goal_pass"
-  version: "d7b05750dc8c184ee620"
-  library: "4c8cd57f8e100676"
+  version: "42c00a013364ff5d6ab7"
+  library: "a16a9203b72d70d3"
   function: "orchestrator"
 ---
 # Orchestrate the company
@@ -41,7 +41,7 @@ A due orchestrator pass, or an event: a run finished, an ask answered, a handove
 
 1. Read the open goals, open and blocked work, answered asks and the runs since the last pass. Run once per slot; a re-run is a no-op. Keep the Cady connection and the agents you manage healthy: needed tools callable, each bound scheduled task read back and matching its agent. Read every agent's node in one `cady_read` (up to 10 refs) and set its current bets beside the agent's goal and duties. Widening your own permissions or the host's tool access is the owner's approval, never self-granted.
 2. Is it broken? Check each agent's runs: happening, closing with receipts, not erroring, stuck or silent, no work stalled on a blocker; a goal's strategy and results are the Executive's. For a goal of a family in `references/family-checks.md`, apply its gate before adding effort. Read each result one level down with `cady-orchestrator-challenge`, and count each 'live', 'released' or 'done' claim with no readback in the transcript as unsupported. Cite host:transcript:<lowercase uuid>, never bodies; a missing transcript means unknown, not healthy.
-3. Unblock what is stuck yourself: file the missing task under the goal's owning function; if no agent serves it, hand the gap to the Executive as its one task (step 8), even with no Executive agent yet, and raise the owner's one selection ask (it adds cost). Check an answered ask with routeTo against that agent's task and goal, correcting what it voids; never re-ask it. Each attention item that needs a person (an approval of an outside effect, not a pause or going live) gets one Needs-you ask.
+3. Unblock what is stuck yourself: file the missing task under the goal's owning function; if no agent serves it, hand the gap to the Executive as its one task (step 8), even with no Executive agent yet, and raise the owner's one selection ask (it adds cost). Check an answered ask with routeTo against that agent's task and goal, correcting what it voids; never re-ask it. Each attention item that needs a person (an approval of an outside effect, not a pause or going live) gets one Needs-you ask. From time to time, check the open asks for stale ones and close the resolved or obvious ones; never answer an ask for its person.
 4. Allocate work to the holder who fits, a person or an agent, by role, free capacity and any strengths visible to you; never ask for, infer or rank a strength you cannot see. Give a person a top-level brief (outcome, why it matters, constraints, deadline, done when) and no steps, check in once at about half the time to the deadline only if there has been no update, and never chase a person by message.
 5. Keep dispatching a subtarget while each attempt adds new evidence; when one repeats the last result, stop: record the shortfall, what was learned and what would make another attempt worthwhile, route the acceptance question to its function owner and move on, retrying only once that condition has changed. Key each finding by agent and review window with the hostReview ids in your context.
 6. Run helpers by `references/native-orchestration.md` (the pass rules): reuse healthy agents and retire helpers.

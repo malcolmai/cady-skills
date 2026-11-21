@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "383c36a833087983238f"
-  library: "4c8cd57f8e100676"
+  version: "0bb85fe90de7cfb9054b"
+  library: "a16a9203b72d70d3"
   function: "company"
 ---
 # Manage company agents
@@ -53,7 +53,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 ## Procedure
 
-1. An agent is one ongoing responsibility; due tasks are work items and a one-off is a helper run. Read agents_read, work (cady_read), the node's point and bets and this host's automations first: if an agent already serves the outcome, reuse it or change it with agents_set (rebind if its host changed) and stop. Create one when none does; a goal or node may have several agents when their jobs differ. Put an agent on a node when that node's work needs its own regular pass. An agent sits on the node it serves, or on none (a personal agent). Parallel sessions and subagents are runs of that agent, not new agents.
+1. An agent is one ongoing responsibility; due tasks are work items and a one-off is a helper run. Read agents_read, work (cady_read), the node's point and bets and this host's automations first: if an agent already serves the outcome, reuse it or change it with agents_set and stop. Create one when none does; a goal or node may have several agents when their jobs differ. Put an agent on a node when that node's work needs its own regular pass. An agent sits on the node it serves, or on none (a personal agent). Parallel sessions and subagents are runs of that agent, not new agents.
 2. Responsibility and risk class. State the outcome, one measure with its data source, a cadence or trigger, approval limits and end condition; pass goal when it serves a goal. Critical: a hard-to-undo effect or reach outside the company, or drafts released automatically; every other agent is standard. Re-class on any grant, tool, access or trigger change.
 3. Fit. Read agents_read and the company tree (cady_read {}), and name the agent's skills as plain names, the skill folders the host holds (the library's roster.json lists each agent's skills), or leave them empty; Cady serves no skill index, so do not search for one. Reuse library skills unchanged; adapt only for an evidenced failure, tool mismatch or missing expert judgment.
 4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Its decision map: goal, node, trigger, decides alone, consults on, hands off.
@@ -62,7 +62,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 7. Authority. Read the company's permission modes first (cady_read {refs: ["company:values"]}, the permission modes line). Effects follow the core's approval rule. No mode lets you send without that approval or a grant; limits text is not enforcement. Never approve for the person: their own decision covers every grant (send, spend, publish, sign, file), an invite, share or outreach effect in approval mode, new access or capture, widening permissions, a design change to a grant-holding agent and raising cadence or cost; per grant when critical. An agent acts with its owner's permissions, and its lifecycle is the owner's. Going live, from draft, paused or retired, is agents_set status live, by the owner or the owner's own agent, with no approval asked; each outside effect keeps its own approval.
 8. Review this host's agents by risk class, with evidence from runs, receipts, cady_read changes {kind: agents} and transcripts (never bodies). Pause one that is not up to scratch (step 9); redesigning it is the Executive's (`cady-company-weekly-review` step 5), never the pausing agent's.
 9. Retire or pause an agent only when it is confirmed obsolete or met its end condition, and adopt an existing company scheduled task only on the owner's yes: read the agent design, setup, review and retirement reference (it confirms an unscheduled task with agents_set host {action: removed}).
-10. Host setup, for the orchestrator on its host. Once the owner has approved the agents the Executive designs, bind each live one to this host with agents_set host {action: bind} (a binding is this host's alone; another host binds its own), register its cadence with the exact localSchedule command the bind reply carries, and check every live agent has open work (cady_read), filing its next task under its goal or handing the gap to the Executive. Take a silent host's agents when the server names this host as its moveTo (the agent_hosts reference). Each run, remove or pause each triggersToRemove trigger here, then make its next call.
+10. Host setup, for the orchestrator on its host. Once the owner has approved the agents the Executive designs, bind each live one whose host.id (agents_read) is empty or is your own agent's host.id (agents_set host {action: bind}, expectedRevision as read). A bind moves an agent on another host here: leave it, and any you cannot tell, unless the owner asks you to move it. Register each bound agent's cadence with the exact localSchedule command the bind reply carries, and check every live agent has open work (cady_read), filing its next task under its goal or handing the gap to the Executive. When an agent's machine is not connected, note it and continue some other way (the agent_hosts reference). Each run, remove or pause each triggersToRemove trigger here, then make its next call.
 
 ## Acceptance
 
@@ -92,7 +92,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 - **Transition:** status live takes the agent live (draft, paused or retired to live), set by the owner or the owner's own agent
 
 ## References
-- Read [Agent host tasks, library and silent hosts](references/agent-hosts.md) when you install, change or review a recurring host task, adopt skills, or check hosts for agents whose host went silent.
+- Read [Agent host tasks, library and machines not connected](references/agent-hosts.md) when you install, change or review a recurring host task, adopt skills, or an agent's machine is not connected.
 - Read [Agent design, setup, review and retirement](references/agent-lifecycle.md) when you design an agent or change its responsibility, create, bind or take an agent live, review an agent or judge a reported result, pause or retire an agent, adopt a scheduled task, or install the baseline roster.
 - Read [Execution agent brief](references/execution-agent-brief.md) when you set up a channel execution agent.
 - Read [Model selection: model, effort and budget for scheduled work](references/model-selection.md) when you set up or change a scheduled run, or choose a model, effort or budget for work.

@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-21T00:00:00Z",
   "bundle": {
-    "tag": "4c8cd57f8e100676",
-    "version": "4c8cd57f8e1006767c56c3632f4578f168eb95d5a5c74f42e4672fda9f406860",
-    "pluginVersion": "2026.11.21-4c8cd57f"
+    "tag": "a16a9203b72d70d3",
+    "version": "a16a9203b72d70d34c62f7f08db6fdb4384a60ed9f77d5c50a65decc3d472d15",
+    "pluginVersion": "2026.11.21-a16a9203"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.21-4c8cd57f"
+    "version": "2026.11.21-a16a9203"
   },
   "skills": [
     {
@@ -51,7 +51,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "383c36a833087983238f"
+      "version": "0bb85fe90de7cfb9054b"
     },
     {
       "name": "cady-company-method",
@@ -165,7 +165,7 @@
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "21da40894ee989a079e4"
+      "version": "5b16bd36f6204b8e33ae"
     },
     {
       "name": "cady-finance-budget-review",
@@ -333,7 +333,7 @@
       "name": "cady-orchestrator-goal-pass",
       "path": "library/cady-orchestrator-goal-pass",
       "cadyId": "skill.orchestrator.goal_pass",
-      "version": "d7b05750dc8c184ee620"
+      "version": "42c00a013364ff5d6ab7"
     },
     {
       "name": "cady-orchestrator-method",
