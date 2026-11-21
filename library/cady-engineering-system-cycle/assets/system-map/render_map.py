@@ -19,9 +19,9 @@ Derived at each render and never stored: file counts, each path's point, Touches
 subject's tools (the source lists them) and the diagram (the source holds it as text). A folder's point is the first line of its
 README, or else the leading comment of its entry file (index.ts, __init__.py and the like); a file's is its leading comment.
 
-File counts change whenever a file is added anywhere. Where the rendered files are committed and many changes land at once, pass
---no-file-counts: the render then says nothing about how many files there are, nor how many of them the subjects own, so only a
-change to the map makes it stale.
+File counts and ownership read tracked files, so stage new files, then render. File counts change whenever a file is added
+anywhere. Where the render is committed, render and check with --no-file-counts: the render then says nothing about how many
+files there are, nor how many of them the subjects own, so an added file does not stale it.
 
 Standard library only. Options: --source, --schema, --root (the repository root), --out (where the two files go) and
 --no-file-counts.
@@ -427,7 +427,7 @@ class Map:
 
 def main(argv: list[str] | None = None) -> int:
     here = Path(__file__).resolve().parent
-    ap = argparse.ArgumentParser(description="Render a product's system map from model.json.")
+    ap = argparse.ArgumentParser(description="Render a product's system map from model.json. Stage new files, then render: file counts and ownership read tracked files.")
     ap.add_argument("--source", type=Path, default=here / "model.json", help="the map source (default: model.json beside this file)")
     ap.add_argument("--schema", type=Path, default=here / "map.schema.json", help="the schema (default: map.schema.json beside this file)")
     ap.add_argument("--root", type=Path, help="the repository root (default: two folders above the source)")
@@ -436,7 +436,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--list", action="store_true", help="print every subject id with its point")
     ap.add_argument("--front", action="store_true", help="print the front page")
     ap.add_argument("--card", metavar="ID", help="print one subject's card")
-    ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out, and with them how many of the repository's files the subjects own, so an added file does not make a committed render stale")
+    ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out, and with them how many of the repository's files the subjects own; where the render is committed, render and check with it, so an added file does not stale it")
     args = ap.parse_args(argv)
     source = args.source.resolve()
     root, out = (args.root or source.parent.parent.parent).resolve(), (args.out or source.parent).resolve()
