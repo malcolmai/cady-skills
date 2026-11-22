@@ -1,12 +1,12 @@
 ---
 name: "cady-product-manage"
-description: "Product management and discovery. Use when: Decide what to build and why; write its system map; run discovery; plan releases and go/no-go; run a goal to done. Not for: Engineering execution (use `cady-engineering-method`), QA runs (use `cady-qa-method`) or GTM campaigns (use `cady-gtm-method`)."
+description: "Product management and discovery. Use when: Decide what to build and why; run discovery; plan releases and go/no-go; run a goal to done. Not for: Engineering execution (use `cady-engineering-method`), QA runs (use `cady-qa-method`) or GTM campaigns (use `cady-gtm-method`)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.manage"
-  version: "6684b9bcd1a10bdf8099"
-  library: "ec73b70a2f595665"
+  version: "c4175659007df89d95d6"
+  library: "69901a6cfc418648"
   function: "product"
 ---
 # Product management and discovery
@@ -22,7 +22,7 @@ metadata:
 - When no ready item remains, review the system against the goal; only a review with no material finding ends the roadmap. Instead of: Report done when the backlog is empty.
 - End a goal only with a reading from its own source and the release live; delivered work with the target unmet keeps the goal open. Instead of: Close the goal when its items ship or the release goes out.
 
-Decide what to build and why; write its system map; run discovery; plan releases and go/no-go; run a goal to done.
+Decide what to build and why; run discovery; plan releases and go/no-go; run a goal to done.
 
 **Not for:** Engineering execution (use `cady-engineering-method`), QA runs (use `cady-qa-method`) or GTM campaigns (use `cady-gtm-method`).
 
@@ -56,7 +56,7 @@ Decide what to build and why; write its system map; run discovery; plan releases
 7. Scope from the ranked gap list against the bar; subtract before adding. Rank with the lightest frame that separates the options: for a few items, cost of delay (what each week of waiting loses in revenue, risk, learning or a deadline) divided by effort, highest first; RICE (reach x impact x confidence / effort) only for a longer list with comparable reach data. Label each estimate measured, evidence-based or guess, and never let precise-looking scores hide guesses; a fixed deadline or a blocker on a critical path overrides the score. Record the ranking rationale on the work item. File product work on the product's node with path. Plan each release as a work item with release {stage, buildBy, qaDays, thresholds}, per the release plan (`references/release-plan.md`).
 8. Check release thresholds against exact QA, engineering and customer evidence on the release work item. Go: record the go on that work (work_set {id, note: the go, with evidence refs}, then {id, next: 'ready to release'}); keep release stage 'qa'. No-go: status blocked with the unmet threshold and next action (work_set {id, status: blocked, result, next}). Stage 'released' is set by the agent that owns the release, once the deploy receipt reads back the deployed artifact and target, citing the receipt; whoever deployed.
 9. When the requested analysis includes validation work, create a scoped Projects item with its acceptance and next action. After verifying a specific successor or confirming the action is complete, update or clear the existing next action with work_set {id, next} when allowed; do not leave a superseded action current or create unrequested follow-on work.
-10. System map (product map) and dimension maps: when a decision needs one (step 3), a person asks for one or a new product's build is about to start, generate, publish and link it as `references/engineering-system-map.md` says.
+10. Product map and dimension maps: when a decision needs one (step 3), a person asks for one or a new product's build is about to start, apply `cady-product-map`.
 11. Run to done (the loop for a goal owner; only f ends it). a) Work the goal's ranked items (step 7) through Engineering and QA. b) Raise each call that stays controversial after testing and review, or owner-only fact, the roadmap needs once in this run, each with options, your recommendation, unlocks and `blocks` naming its own item (`references/asking.md`); decide the rest yourself and record it, and build what does not depend on it. c) When no ready item remains, run the `cady-engineering-system-cycle` review against the goal's doneWhen and the dimension register: findings become ranked items and you return to a; only a review with no material finding ends the roadmap, recorded as a checkpoint. d) Release per policy (read policy:release and the release grant in company:values (a root bet a person recorded, never an agent's), `cady-company-decision` step 4): under a covering grant, promote through the company's release route yourself; where the policy names who deploys, prepare the exact release (SHA, checks, rollback) and raise one approval ask to that person; with no policy, raise one ask recommending one. Never widen a grant. e) Verify by reading the live target back; cite the deploy receipt and set the release stage (step 8). f) Close the goal only from a reading you took of its target source, never a count you did not read: stop it as met only when the release is live, doneWhen holds and the target count is met; otherwise keep it open and make driving the target the next ranked item. The first-session and run-to-done reference holds the release routes and the close.
 
 ## Acceptance
@@ -86,4 +86,3 @@ Decide what to build and why; write its system map; run discovery; plan releases
 ## References
 - Read [Product first session and run to done](references/product-manage-detail.md) when you run a product's first session (product point, assumption, first goal), or run a goal through release, verification and close.
 - Read [Release plan](references/release-plan.md) when you plan a release or run its go/no-go.
-- Read [System map (product map) and dimension maps](references/engineering-system-map.md) when you generate, restructure, publish or check a product's system map (product map) or a dimension map.

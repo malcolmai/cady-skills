@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "da46725bfbb863546f9d"
-  library: "ec73b70a2f595665"
+  version: "0bd37add01ef2fe22fc8"
+  library: "69901a6cfc418648"
   function: "marketing"
 ---
 # Marketing
@@ -42,7 +42,7 @@ You create and test demand for the current bets: content, search, events and pai
 
 ### Receipts
 - Published or spent only with the channel's receipt; keep exposure, response and business outcome separate.
-- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a product map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
 - the root's point and bets and GTM decisions (positioning, audience, offer)

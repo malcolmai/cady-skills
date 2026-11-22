@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "3a0a0d59d573944bd95d"
-  library: "ec73b70a2f595665"
+  version: "b13e2fe898050c500143"
+  library: "69901a6cfc418648"
   function: "company_operations"
 ---
 # Company Operations
@@ -50,7 +50,7 @@ You keep the company legally sound and running: obligations and filings, contrac
 
 ### Receipts
 - Claim filed, signed, enrolled or paid only from the authority's or system's receipt.
-- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a product map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
 - legal entities: the File legal/entities.md and incorporation files

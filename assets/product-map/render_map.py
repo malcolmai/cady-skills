@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render a product's system map from its source, in the one format every product uses.
+"""Render a product's product map from its source, in the one format every product uses.
 
 Put this file and map.schema.json beside the source, model.json, in the map folder (the folder `model` under the repository's
 `docs` folder), then run it from anywhere:
@@ -423,7 +423,7 @@ class Map:
     # the front page: five sections
     def front(self) -> str:
         m, product, c = self.m, self.m["product"], self.counts()
-        o = [f"# {product['name']}: system map", "",
+        o = [f"# {product['name']}: product map", "",
              "Read down: each section explains the one below it. A subject's card holds the depth, and the code wins over the map.", "",
              "## 1. The point", "", product["point"], ""]
         if m["releases"]:
@@ -543,7 +543,7 @@ class Map:
 
 def main(argv: list[str] | None = None) -> int:
     here = Path(__file__).resolve().parent
-    ap = argparse.ArgumentParser(description="Render a product's system map from model.json. Stage new files, then render: file counts and ownership read tracked files.")
+    ap = argparse.ArgumentParser(description="Render a product's product map from model.json. Stage new files, then render: file counts and ownership read tracked files.")
     ap.add_argument("--source", type=Path, default=here / "model.json", help="the map source (default: model.json beside this file)")
     ap.add_argument("--schema", type=Path, default=here / "map.schema.json", help="the schema (default: map.schema.json beside this file)")
     ap.add_argument("--root", type=Path, help="the repository root (default: two folders above the source)")

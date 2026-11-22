@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.qa"
-  version: "62d1073308cf6feeba14"
-  library: "ec73b70a2f595665"
+  version: "cbb0e41bc976e1249f78"
+  library: "69901a6cfc418648"
   function: "qa"
 ---
 # QA
@@ -45,7 +45,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 - Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Record the answer in the task's result.
 
 ### Receipts
-- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a product map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 - For a story walk, follow `cady-qa-stories` for run and evidence references; other findings cite their original check or owner evidence.
 
 ### Company records
@@ -61,6 +61,7 @@ Know the purpose and pain point of each journey and each page. Journeys are walk
 
 ### Skills
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
+- `cady-product-map`: Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products.
 - `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step.
 
 ## Parent function

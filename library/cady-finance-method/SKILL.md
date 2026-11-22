@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "ffadedf62891ec5c86f8"
-  library: "ec73b70a2f595665"
+  version: "10fdd0e6429424729cba"
+  library: "69901a6cfc418648"
   function: "finance"
 ---
 # Finance
@@ -52,7 +52,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 
 ### Receipts
 - Read back accepted Finance plan and Projects checkpoints; cite the actual source and revision. Keep recommendations, approvals, reservations and paid effects as separate states.
-- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a product map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
 - current company point and bets and Finance plan
