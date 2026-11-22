@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.map"
-  version: "324d10ea7c87bdc59119"
-  library: "69901a6cfc418648"
+  version: "b65c5143f00f666e5e88"
+  library: "cbef3ed5927faeaf"
   function: "product"
 ---
 # Product map

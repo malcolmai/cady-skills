@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision"
   version: "2a050fb583d19707f7ac"
-  library: "69901a6cfc418648"
+  library: "cbef3ed5927faeaf"
   function: "company"
 ---
 # Who decides, and how to record it
