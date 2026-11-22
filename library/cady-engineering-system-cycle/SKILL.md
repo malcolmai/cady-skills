@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "a373c6bff22cc5d3e42b"
-  library: "cbef3ed5927faeaf"
+  version: "f45d23c29ede55e61114"
+  library: "bab6b095de21be67"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
@@ -39,7 +39,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 ### Evidence refs
 
 - the root's point and bets and current decisions
-- the product's product map and its owner nodes (the File named <product's node path>/product-map.md)
+- the product's product map and its owner nodes (the File named <product's node path>/product-map.json, the packet)
 - open findings and the last review checkpoint
 - file:<fileId> research notes
 
@@ -64,7 +64,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 
 ## Acceptance
 
-- [ ] one product map, published as the File named <product's node path>/product-map.md, holds journey goals and one simple architecture diagram
+- [ ] one product map, published as the File named <product's node path>/product-map.json (the packet), holds journey goals and one simple architecture diagram
 - [ ] the dimension register is MECE
 - [ ] each review gives every touched dimension a design verdict, and a recurring failure signature becomes an architecture finding rather than a rerun
 - [ ] each pass ends with a checkpoint: ranked review, reviewed delivery or a deduplicated finding list, ending with the close's two lines
