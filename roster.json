@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "ec73b70a2f595665",
-    "version": "ec73b70a2f59566515d58dd6925b77c7089a2b552e4949b5760eec60b9a6a120"
+    "tag": "69901a6cfc418648",
+    "version": "69901a6cfc4186488852fd89379c6a43065dc07f156b3247bbfb4d73796ad30d"
   },
   "core": [],
   "standalone": [
@@ -101,6 +101,7 @@
       "skills": [
         "cady-product-customer-interview",
         "cady-product-manage",
+        "cady-product-map",
         "cady-product-research",
         "cady-company-evidence",
         "cady-engineering-system-cycle",
@@ -126,7 +127,8 @@
         "cady-engineering-debugging",
         "cady-engineering-independent-review",
         "cady-engineering-integrations",
-        "cady-engineering-system-cycle"
+        "cady-engineering-system-cycle",
+        "cady-product-map"
       ]
     },
     "qa": {
@@ -137,7 +139,8 @@
       "skills": [
         "cady-qa-stories",
         "cady-qa-triage",
-        "cady-engineering-system-cycle"
+        "cady-engineering-system-cycle",
+        "cady-product-map"
       ]
     },
     "finance": {

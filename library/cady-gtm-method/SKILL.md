@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "94518d5189ad38605f33"
-  library: "ec73b70a2f595665"
+  version: "05ddd6bbb920f70eaeb9"
+  library: "69901a6cfc418648"
   function: "gtm"
 ---
 # GTM
@@ -45,7 +45,7 @@ Find the right persona and the offer and messaging for them; choose channels tha
 - Escalate any persona, offer or channel choice that remains controversial after testing and independent review through `cady-company-decision` step 4.
 
 ### Receipts
-- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a product map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
 - root point and bets

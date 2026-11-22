@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "e7a130b536450b1be11b"
-  library: "ec73b70a2f595665"
+  version: "e78b59c1811ec04e97ff"
+  library: "69901a6cfc418648"
   function: "fundraise"
 ---
 # Fundraise
@@ -45,7 +45,7 @@ You help the company decide whether, when and how much to raise, and run a round
 
 ### Receipts
 - A round is closed only when funds are received; a convertible instrument (a SAFE, ASA or note) is not issued shares.
-- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a product map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
 - rounds: one node per round below finance/raise, its point what the round is and its instrument, target and lead as bets, plus a round file under fundraising/ in Files that the bets cite (decisions_set, files_set)

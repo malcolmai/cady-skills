@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "5e1a0781135d6dfedb86"
-  library: "ec73b70a2f595665"
+  version: "6e2cbe4239adffcc65fb"
+  library: "69901a6cfc418648"
   function: "engineering"
 ---
 # Engineering
@@ -48,6 +48,7 @@ Check every change against the map before you build (the File named <product's n
 
 ### Skills
 - `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
+- `cady-product-map`: Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products.
 
 - Read [Receipts](references/receipts.md) when you close work, change the architecture or dimension register, or write product docs, specs or diagrams.
 

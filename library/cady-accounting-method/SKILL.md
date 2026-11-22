@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "7366615955f25c09ef01"
-  library: "ec73b70a2f595665"
+  version: "092a56bfc93b38baeaa9"
+  library: "69901a6cfc418648"
   function: "accounting"
 ---
 # Accounting
@@ -43,7 +43,7 @@ You keep the books true to their sources: you prepare each period close from the
 
 ### Receipts
 - Claim a closed period only from the lock read back with accounting_read and the reviewer's sign-off.
-- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a system map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
+- When a result, run close or goal call changes what the company already records (a goal's acceptance, a bet, a product map, a plan, an agent's binding), update that record in place and cite the evidence; open no parallel record and log no routine chat.
 
 ### Company records
 - the company's ledger and its period locks (accounting_read)

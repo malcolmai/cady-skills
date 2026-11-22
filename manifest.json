@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-21T00:00:00Z",
+  "generatedAt": "2026-11-22T00:00:00Z",
   "bundle": {
-    "tag": "ec73b70a2f595665",
-    "version": "ec73b70a2f59566515d58dd6925b77c7089a2b552e4949b5760eec60b9a6a120",
-    "pluginVersion": "2026.11.21-ec73b70a"
+    "tag": "69901a6cfc418648",
+    "version": "69901a6cfc4186488852fd89379c6a43065dc07f156b3247bbfb4d73796ad30d",
+    "pluginVersion": "2026.11.22-69901a6c"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.21-ec73b70a"
+    "version": "2026.11.22-69901a6c"
   },
   "skills": [
     {
@@ -21,7 +21,7 @@
       "name": "cady-accounting-method",
       "path": "library/cady-accounting-method",
       "cadyId": "company.method.accounting",
-      "version": "7366615955f25c09ef01"
+      "version": "092a56bfc93b38baeaa9"
     },
     {
       "name": "cady-accounting-period-close",
@@ -87,7 +87,7 @@
       "name": "cady-company-operations-method",
       "path": "library/cady-company-operations-method",
       "cadyId": "company.method.company_operations",
-      "version": "3a0a0d59d573944bd95d"
+      "version": "b13e2fe898050c500143"
     },
     {
       "name": "cady-company-operations-people-lifecycle",
@@ -159,13 +159,13 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "5e1a0781135d6dfedb86"
+      "version": "6e2cbe4239adffcc65fb"
     },
     {
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "3f9bff2e620b2006f10b"
+      "version": "a373c6bff22cc5d3e42b"
     },
     {
       "name": "cady-finance-budget-review",
@@ -177,7 +177,7 @@
       "name": "cady-finance-method",
       "path": "library/cady-finance-method",
       "cadyId": "company.method.finance",
-      "version": "ffadedf62891ec5c86f8"
+      "version": "10fdd0e6429424729cba"
     },
     {
       "name": "cady-finance-runway",
@@ -213,7 +213,7 @@
       "name": "cady-fundraise-method",
       "path": "library/cady-fundraise-method",
       "cadyId": "company.method.fundraise",
-      "version": "e7a130b536450b1be11b"
+      "version": "e78b59c1811ec04e97ff"
     },
     {
       "name": "cady-fundraise-raise-materials",
@@ -267,7 +267,7 @@
       "name": "cady-gtm-method",
       "path": "library/cady-gtm-method",
       "cadyId": "company.method.gtm",
-      "version": "94518d5189ad38605f33"
+      "version": "05ddd6bbb920f70eaeb9"
     },
     {
       "name": "cady-gtm-offer-and-segments",
@@ -315,7 +315,7 @@
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "da46725bfbb863546f9d"
+      "version": "0bd37add01ef2fe22fc8"
     },
     {
       "name": "cady-marketing-post",
@@ -351,13 +351,19 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "6684b9bcd1a10bdf8099"
+      "version": "c4175659007df89d95d6"
+    },
+    {
+      "name": "cady-product-map",
+      "path": "library/cady-product-map",
+      "cadyId": "skill.product.map",
+      "version": "324d10ea7c87bdc59119"
     },
     {
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "2d9c0af5fc4f220ca11a"
+      "version": "595e5a0be28c3837b35b"
     },
     {
       "name": "cady-product-research",
@@ -369,7 +375,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "62d1073308cf6feeba14"
+      "version": "cbb0e41bc976e1249f78"
     },
     {
       "name": "cady-qa-stories",
