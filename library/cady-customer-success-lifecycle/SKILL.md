@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
   version: "d6577732b9cd80bc6303"
-  library: "bab6b095de21be67"
+  library: "1d95950289cdf274"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal
