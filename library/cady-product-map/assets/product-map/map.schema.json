@@ -39,6 +39,37 @@
           "type": "string",
           "minLength": 1
         },
+        "line": {
+          "type": "object",
+          "description": "The product in one line. A new map writes it first; a map without it counts as a gap.",
+          "required": [
+            "text",
+            "origin"
+          ],
+          "additionalProperties": false,
+          "patternProperties": {
+            "^x_": {}
+          },
+          "properties": {
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "description": "In this form: \"[Product] solves [problem] for [users], and it is better because [why, versus the competition].\" Distilled from the research; never a guess."
+            },
+            "origin": {
+              "enum": [
+                "owner",
+                "proposed"
+              ],
+              "description": "owner: the owner said or signed it. proposed: written from the research for the owner to sign; drawn as proposed."
+            },
+            "source": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Where the owner said it, or the research it rests on."
+            }
+          }
+        },
         "point": {
           "type": "string",
           "minLength": 1,
@@ -65,13 +96,27 @@
         },
         "research": {
           "type": "object",
-          "description": "The paper plan's research, by kind. A kind with no pointer is counted as a gap.",
+          "description": "The research the plan rests on, by kind. A users, competition or technology kind with no pointer is counted as a gap; assets is optional.",
           "required": [],
           "additionalProperties": false,
           "patternProperties": {
             "^x_": {}
           },
           "properties": {
+            "users": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ref"
+              },
+              "description": "Who it is for and their problem: interviews, a synthesis, personas."
+            },
+            "competition": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ref"
+              },
+              "description": "What users use instead today, and how the product beats it."
+            },
             "technology": {
               "type": "array",
               "items": {
@@ -79,19 +124,12 @@
               },
               "description": "What the product is built with and why: research on the technology."
             },
-            "users": {
-              "type": "array",
-              "items": {
-                "$ref": "#/$defs/ref"
-              },
-              "description": "Who it is for: interviews, a synthesis, personas."
-            },
             "assets": {
               "type": "array",
               "items": {
                 "$ref": "#/$defs/ref"
               },
-              "description": "What the builders have: budget, people, machines."
+              "description": "Optional: what the builders have: budget, people, machines."
             }
           }
         }
@@ -642,7 +680,7 @@
         },
         "why": {
           "type": "string",
-          "description": "The recorded reason, when a source gives one. A research or document pointer goes here as file:<id> or file:<repository path>. For an unsigned statement, the quoted sentence. Where the research does not exist, say so here; the origin is still as `origin` says: inferred when a source shows the choice, proposed when none does."
+          "description": "The recorded reason, when a source gives one. A research or document pointer goes here as a ref: file:<id> or a repository path. For an unsigned statement, the quoted sentence. Where the research does not exist, say so here; the origin is still as `origin` says: inferred when a source shows the choice, proposed when none does."
         },
         "origin": {
           "enum": [

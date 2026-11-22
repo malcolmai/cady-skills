@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-22T00:00:00Z",
   "bundle": {
-    "tag": "1d95950289cdf274",
-    "version": "1d95950289cdf274e2a93df4439102ad6f0edcd7f5c1a90e3fc0b82684e66416",
-    "pluginVersion": "2026.11.22-1d959502"
+    "tag": "0cb96bab0209b821",
+    "version": "0cb96bab0209b8218c322474e79e3e5da7bad5bb1ac72b5e3ad7badbf3505526",
+    "pluginVersion": "2026.11.22-0cb96bab"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.22-1d959502"
+    "version": "2026.11.22-0cb96bab"
   },
   "skills": [
     {
@@ -129,7 +129,7 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "e1f74c02bffd180ac40b"
+      "version": "1e13016962e739e0ef4f"
     },
     {
       "name": "cady-design-wcag-audit",
@@ -147,7 +147,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "c2b0ac83194ac4fb4a3e"
+      "version": "2b5c3b7f4aca82783927"
     },
     {
       "name": "cady-engineering-integrations",
@@ -159,7 +159,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "7ba509d06e56413acfd4"
+      "version": "213800765b3995e7dcd5"
     },
     {
       "name": "cady-engineering-system-cycle",
@@ -357,13 +357,13 @@
       "name": "cady-product-map",
       "path": "library/cady-product-map",
       "cadyId": "skill.product.map",
-      "version": "47c38ee7fe1482e66a57"
+      "version": "f5121183cc4d83b9955e"
     },
     {
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "595e5a0be28c3837b35b"
+      "version": "f5df09bc74dd2ca23f0f"
     },
     {
       "name": "cady-product-research",
@@ -375,7 +375,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "cbb0e41bc976e1249f78"
+      "version": "89e80466b1d7fed8272c"
     },
     {
       "name": "cady-qa-stories",
