@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "c2b0ac83194ac4fb4a3e"
-  library: "1d95950289cdf274"
+  version: "2b5c3b7f4aca82783927"
+  library: "0cb96bab0209b821"
   function: "engineering"
 ---
 # Independent review
@@ -25,6 +25,7 @@ Independently review a diff, artifact or decision record: rerun its checks, rank
 - Treat unverified evidence as unrun, and rerun affected checks at the reviewed head on a clean tree. Instead of: Accept the producer's report that the tests pass.
 - Rank by consequence and look for authority, isolation and data-loss holes before style. Instead of: Comment on everything visible in the diff, style included, with equal weight.
 - Read beyond the changed lines to find and to prove or refute findings: callers, other writers of the same data, and missing tests, migrations or entry points. Instead of: Review only the lines in the diff.
+- Review asks whether a change adds anything the subject's level puts under not now. Instead of: Leaving the level to the producer alone.
 
 ## Independent review
 
@@ -32,7 +33,7 @@ Independently review a diff, artifact or decision record: rerun its checks, rank
 
 - **Authority and security:** Identity and tenant come from the verified credential, never from input; every query, list, count, export and cache key is scoped; access is denied by default and fails closed on error; inputs are validated at the boundary; secrets and personal data stay out of logs and errors; external effects are idempotent or reconciled. Evidence: negative tests (another tenant, a missing permission, an expired or forged token) that fail without the change, and a read of every new entry point.
 - **Data and migrations:** Shipped migrations are never edited; a change expands first and runs under both the old and the new code; drops and renames come later as their own contract step; backfills are bounded, resumable and idempotent; new query paths have indexes; long-running statements and full-table rewrites are avoided. Evidence: the migration applied to a copy from empty and from the last released state, with the resulting schema read back, and a stated rollback.
-- **Every change:** Edge cases (empty, null, duplicate, very large, concurrent, retried), error paths, a parallel path that duplicates an existing owner (search the same nouns and verbs), dead code and stale docs.
+- **Every change:** Edge cases (empty, null, duplicate, very large, concurrent, retried), error paths, a parallel path that duplicates an existing owner (search the same nouns and verbs), dead code and stale docs. Does this add anything the subject's level (on the product map) puts under not now?
 - **Tests:** Tests assert the contract, not the implementation, without sleeps, order dependence or live provider calls; a deleted, skipped or loosened test carries its reason. For a regression or guard claim, show the relevant test fails without the fix in a scratch copy or separate worktree, never the reviewed tree. Report check results and the evidence for the claim.
 - **Ui:** Loading, empty, error, denied and long-content states; keyboard operation, labels and focus; representative viewports; copy that says what happened and what to do next. Evidence: rendered captures of the changed states at representative viewports; code reading alone cannot prove a UI change. Accessibility depth follows `cady-design-wcag-audit`.
 - **Checks:** Inspect prior review and check evidence for the claims it covers. Reuse a check only when its relevant content, baseline/head relationship, selection, toolchain and environment remain valid; a producer assertion alone is not proof. Serious findings, conflicts, or stale, missing or doubtful evidence invalidate affected conclusions: investigate and rerun the affected checks at the reviewed head on a clean tree. Report commands, revisions and results; unverified evidence is unrun, not passed. Actual effect authority and live environment checks stay fresh. Read beyond changed lines to find and to prove or refute findings: callers, other writers of the same data and missing tests, migrations, docs or entry points. When a software brief names owner × quality cells, use them as lenses with `references/quality-classes.md`; otherwise use the change classes below. Those classes remain the evidence floor.

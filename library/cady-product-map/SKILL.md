@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.map"
-  version: "47c38ee7fe1482e66a57"
-  library: "1d95950289cdf274"
+  version: "f5121183cc4d83b9955e"
+  library: "0cb96bab0209b821"
   function: "product"
 ---
 # Product map
@@ -32,7 +32,7 @@ Generate, restructure, clean up, check or publish a product map or a dimension m
 ## Procedure
 
 1. Read the product map method (`references/product-map.md`) in full before you start: it holds the format, the steps, the tool and the checks.
-2. Find the map as its Drafting part says, then follow its Build steps in order. A dimension map follows its Dimension maps part and is saved with files_set.
+2. Find the map as its Drafting part says (files_read mode find), then follow its Build steps in order. A dimension map follows its Dimension maps part and is saved with files_set.
 
 ## Acceptance
 

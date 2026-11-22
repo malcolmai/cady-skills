@@ -25,7 +25,7 @@ compute without the repository (each path's point and owners, each card's size, 
 checks and level checks); `rendered` names the commit, the time and the writer (--writer, the URL where the map is edited). It holds no live task
 fact: an item with `work` names its task, and a page reads the task's status, headline and Done when itself.
 
-Counted as gaps: a card bet with no reason or no alternative. A kind of research (technology, users, assets) with no pointer, and a subject's level
+Counted as gaps: a card bet with no reason or no alternative. A missing product line, a kind of research (users, competition, technology) with no pointer, and a subject's level
 that is proposed and not yet signed by the owner, are gaps too. A subject over its level's budget is flagged, not failed; a render without
 file counts prints that flag and does not write it, so a size never makes the committed render stale. An item with `work` is a task: its
 status is in Cady, so the tool counts its paths as planned and draws it as "status in Cady". An owner's bet is the owner's sentence word for word, so one without them is counted on a
@@ -67,7 +67,8 @@ OUTPUTS = ("product-map.md", "gaps.md")
 UNOWNED_LINE = "- Files no subject owns: "  # in gaps.md of a render without file counts: counted at that render; --check compares the line with its number left out
 NO_COUNTS_MARK = "Rendered with `--no-file-counts`"  # how --check knows the form the render on disk was made in
 PACKET, PACKET_SCHEMA = "product-map.json", "cady.product-map-packet.v1"
-RESEARCH = ("technology", "users", "assets")  # the paper plan's kinds of research, in the order the front page lists them
+RESEARCH = ("users", "competition", "technology", "assets")  # the paper plan's kinds of research, in the order the front page lists them
+REQUIRED_RESEARCH = ("users", "competition", "technology")  # a missing one is a gap; assets is optional
 CODE_DEPTH = 2  # folder levels a code map lists below each root when the source does not say
 
 
@@ -520,7 +521,7 @@ class Map:
 
     def research_missing(self) -> list[str]:
         research = self.m["product"].get("research") or {}
-        return [kind for kind in RESEARCH if not research.get(kind)]
+        return [kind for kind in REQUIRED_RESEARCH if not research.get(kind)]
 
     def counts(self) -> dict:
         bets = [(s, b) for _, s in self.subjects for b in s.get("bets") or []]
@@ -532,7 +533,8 @@ class Map:
                 "items_no_card": self.open_items(None), "traps_no_card": self.traps(None), "split": self.split_rows(),
                 "unowned": sum(1 for f in self.files if not self.owner_of_file[f]),
                 "research_missing": self.research_missing(),
-                "levels_proposed": [s for _, s in self.subjects if (s.get("level") or {}).get("origin") == "proposed"]}
+                "levels_proposed": [s for _, s in self.subjects if (s.get("level") or {}).get("origin") == "proposed"],
+                "line_missing": [] if self.m["product"].get("line") else ["the product line"]}
 
     def unowned_now(self) -> int:
         """How many files no subject owns, read from the repository now, whether or not this render shows file counts."""
@@ -547,13 +549,15 @@ class Map:
                 f"- Open items on no card: {len(c['items_no_card'])}.",
                 f"- Traps on no card: {len(c['traps_no_card'])}.",
                 f"- Files that need two owners, each with an item that splits it: {len(c['split'])}.",
-                f"- Kinds of research with no pointer (technology, users, assets): {len(c['research_missing'])} of {len(RESEARCH)}.",
+                f"- Product line missing: {len(c['line_missing'])}.",
+                f"- Kinds of research with no pointer (users, competition, technology): {len(c['research_missing'])} of {len(REQUIRED_RESEARCH)}.",
                 f"- Levels proposed and not yet signed by the owner: {len(c['levels_proposed'])}."]
 
     # the front page: five sections
     def front(self) -> str:
         m, product, c = self.m, self.m["product"], self.counts()
-        o = [f"# {product['name']}: product map", "",
+        line = product.get("line")
+        o = [f"# {product['name']}: product map", ""] + ([f"**{line['text']}**" + (" (proposed)" if line["origin"] == "proposed" else ""), ""] if line else []) + [
              "Read down: each section explains the one below it. A subject's card holds the depth, and the code wins over the map.", "",
              "## 1. The point", "", product["point"], ""]
         if m["releases"]:
@@ -568,8 +572,9 @@ class Map:
                       plural(sum(1 for i in r["items"] if not i.get("work") and is_open(i)), "open item"),
                       plural(sum(1 for i in r["items"] if i.get("work")), "task") if any(i.get("work") for i in r["items"]) else "") if x) + ")" for r in m["releases"][1:]] + [""]
         research = product.get("research") or {}
-        o += ["### Paper plan", "", "The research the plan stands on, by kind. A kind with no pointer is a gap.", ""]
-        o += [f"- **{kind.title()}:** " + (", ".join(f"`{ref}`" for ref in research[kind]) if research.get(kind) else "missing.") for kind in RESEARCH] + [""]
+        o += ["### Paper plan", "", "The research the plan stands on, by kind; it comes before the build. A users, competition or technology kind with no pointer is a gap.", ""]
+        o += [f"- **{kind.title()}:** " + (", ".join(f"`{ref}`" for ref in research[kind]) if research.get(kind) else "missing." if kind in REQUIRED_RESEARCH else "none (optional).")
+              for kind in RESEARCH] + [""]
         o += ["## 2. How it runs, and why it is built this way", ""]
         o += [product["frame"], ""] if product.get("frame") else []
         o += ["```", *product["diagram"], "```", ""] if product.get("diagram") else []
@@ -726,6 +731,7 @@ class Map:
             ("items_no_card", "Open items on no card", [item_label(i) for i in c["items_no_card"]]),
             ("traps_no_card", "Traps on no card", [f"{lp['name']}: {w['when']}" for lp, w in c["traps_no_card"]]),
             ("split", "Files that need two owners", c["split"]),
+            ("line_missing", "Product line missing", c["line_missing"]),
             ("research_missing", "Kinds of research with no pointer", c["research_missing"]),
             ("levels_proposed", "Levels proposed and not yet signed by the owner", [s["name"] for s in c["levels_proposed"]]))]
 
