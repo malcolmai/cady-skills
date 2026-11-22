@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
   version: "a373c6bff22cc5d3e42b"
-  library: "69901a6cfc418648"
+  library: "cbef3ed5927faeaf"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions

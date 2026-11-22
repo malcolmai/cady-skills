@@ -9,15 +9,26 @@ Put this file and map.schema.json beside the source, model.json, in the map fold
     python3 render_map.py --list     # every subject id with its point
     python3 render_map.py --front    # print the front page
     python3 render_map.py --card ID  # print one subject's card
+    python3 render_map.py --packet   # check the source, then write product-map.json: the source with what only the repository can derive
 
-product-map.md is the front page (five sections; the current release's bets stand under its goal) followed by one card per subject (three opening
-lines, Point, Where it sits and Size, then up to eight headings, in a fixed order; one with nothing to say is left out). gaps.md holds the same counts as
+product-map.md is the front page (five sections; the current release's bets stand under its goal, then later releases and the paper plan), the
+optional sections the source holds (code map, pipelines, agent surface, terms, and any x_ section with a title and rows, drawn the same way for every
+product), then one card per subject (three opening lines, Point, Where it sits and Size, then up to nine headings, in a fixed order; one with nothing
+to say is left out). gaps.md holds the same counts as
 the front page's last section, what they count, and at most seven owner questions, with how many more the source holds. Nothing is written when the source does not match the schema. The
 exit code is 1 when the schema, a check or --check fails. A flag (a count outside the usual range, or a placing worth a look) is printed and does not fail.
 The tool writes these two files only: a project that wants sections of its own renders them into a file of its own, so --check still passes. It writes no
 line saying where the map is edited: `cady product map publish` adds that to the published File.
 
-Counted as gaps: a card bet with no reason or no alternative. An owner's bet is the owner's sentence word for word, so one without them is counted on a
+The packet (--packet) is product-map.json: {schema, source, derived, rendered}. `source` is the map as written; `derived` is what a page cannot
+compute without the repository (each path's point and owners, each card's size, Touches, traps and open work, the code map, the gaps, flags, failed
+checks and level checks); `rendered` names the commit, the time and the writer (--writer, the URL where the map is edited). It holds no live task
+fact: an item with `work` names its task, and a page reads the task's status, headline and Done when itself.
+
+Counted as gaps: a card bet with no reason or no alternative. A kind of research (technology, users, assets) with no pointer, and a subject's level
+that is proposed and not yet signed by the owner, are gaps too. A subject over its level's budget is flagged, not failed; a render without
+file counts prints that flag and does not write it, so a size never makes the committed render stale. An item with `work` is a task: its
+status is in Cady, so the tool counts its paths as planned and draws it as "status in Cady". An owner's bet is the owner's sentence word for word, so one without them is counted on a
 line of its own: only the owner can fill it. One subject owns a path; a dimension's `governs` paths are owned by another subject, and their open work and
 traps show on both cards. A part's `schema` names the file that defines its shape, or the folder of migrations that does. While it is not written, an
 open item of the current release must name that path itself and come before the other open items of its subject. The order of items across subjects is
@@ -34,8 +45,8 @@ many files there are, nor how many of them the subjects own, so an added file do
 was made that way and how many files no subject owned at that render; --check reads that, checks in the same form with or without
 the option, and compares that line with its number left out. The front page names the option in its "Using this map" section.
 
-Standard library only. Options: --source, --schema, --root (the repository root), --out (where the two files go) and
---no-file-counts.
+Standard library only. Options: --source, --schema, --root (the repository root), --out (where the files go), --no-file-counts,
+and for --packet: --writer, --sha and --at (both read from git and the clock when left out).
 """
 from __future__ import annotations
 
@@ -55,6 +66,47 @@ MAX_QUESTIONS = 7
 OUTPUTS = ("product-map.md", "gaps.md")
 UNOWNED_LINE = "- Files no subject owns: "  # in gaps.md of a render without file counts: counted at that render; --check compares the line with its number left out
 NO_COUNTS_MARK = "Rendered with `--no-file-counts`"  # how --check knows the form the render on disk was made in
+PACKET, PACKET_SCHEMA = "product-map.json", "cady.product-map-packet.v1"
+RESEARCH = ("technology", "users", "assets")  # the paper plan's kinds of research, in the order the front page lists them
+CODE_DEPTH = 2  # folder levels a code map lists below each root when the source does not say
+
+
+def is_open(item: dict) -> bool:
+    """An item not done. An item with `work` is open here: its task holds the status, and the page reads it there."""
+    return item.get("status") != "done"
+
+
+def item_label(item: dict) -> str:
+    return f"**{item['id']}** ({item['status']}): {item['text']}" if not item.get("work") else f"**{item['id']}** (task {item['work']}, status in Cady)"
+
+
+def item_rules(model: dict) -> list[str]:
+    """The item rules JSON Schema here cannot state: with `work`, the task holds the text and status; without it, the item states both."""
+    errors, seen = [], {}
+    for release in model.get("releases") or []:
+        for item in release.get("items") or []:
+            at = f"model.releases[{release.get('id')}].items[{item.get('id')}]"
+            if item.get("work"):
+                errors += [f"{at}: has `work`, so its {key} comes from the task; leave out {json.dumps(key)}" for key in ("text", "status") if key in item]
+                if seen.setdefault(item["work"], item.get("id")) != item.get("id"):
+                    errors.append(f"{at}: names the task {item['work']}, as item {seen[item['work']]} does; an item is one task")
+            else:
+                errors += [f"{at}: missing key {json.dumps(key)} (or name its task in `work`)" for key in ("text", "status") if key not in item]
+    return errors
+
+
+def sections_of(model: dict) -> list[tuple[str, dict | list]]:
+    """The optional sections the source holds, in the order they are drawn: the standard four, then each x_ section with a title and rows."""
+    out = [(key, model[key]) for key in ("code_map", "pipelines", "agent_surface", "terms") if model.get(key) or (key == "agent_surface" and key in model)]
+    return out + [(key, value) for key, value in model.items() if key.startswith("x_") and isinstance(value, dict)
+                  and isinstance(value.get("title"), str) and value["title"].strip() and isinstance(value.get("rows"), list)]
+
+
+def row_text(row: object) -> str:
+    """One row of an x_ section: text as written, or an object's text values joined."""
+    if isinstance(row, dict):
+        return "; ".join(f"{k}: {v}" for k, v in row.items() if isinstance(v, (str, int, float)) and not isinstance(v, bool))
+    return str(row)
 
 
 # ---- the schema: the part of JSON Schema that map.schema.json uses ----
@@ -74,6 +126,10 @@ def validate(value, schema: dict, root: dict, at: str = "model") -> list[str]:
         if "pattern" in schema and not re.search(schema["pattern"], value):
             return [f"{at}: {json.dumps(value)} is not allowed. {schema.get('description') or 'It must match ' + schema['pattern']}"]
         return []
+    if kind == "integer":
+        if not isinstance(value, int) or isinstance(value, bool):
+            return [f"{at}: must be a whole number"]
+        return [f"{at}: must be at least {schema['minimum']}"] if value < schema.get("minimum", value) else []
     if kind == "array":
         if not isinstance(value, list):
             return [f"{at}: must be a list"]
@@ -210,13 +266,15 @@ class Map:
                     self.place.setdefault(sid, []).append((angle, area))
         self.owner_of_file = {f: self.owner_path(f) for f in self.files}
         releases = model["releases"]
-        self.planned = [p.rstrip("/") for item in (releases[0]["items"] if releases else []) if item["status"] != "done" for p in item["paths"]]
+        self.planned = [p.rstrip("/") for item in (releases[0]["items"] if releases else []) if is_open(item) for p in item["paths"]]
         # a file that needs two owners, by the open item that splits it: one row per file, the first item that lists it
         self.split: list[tuple[str, str, dict]] = []
-        for item in (i for release in releases for i in release["items"] if i["status"] != "done"):
+        for item in (i for release in releases for i in release["items"] if is_open(i)):
             for row in item.get("splits") or []:
                 if row["file"].rstrip("/") not in [path for path, _, _ in self.split]:
                     self.split.append((row["file"].rstrip("/"), row["to"].rstrip("/"), item))
+        self._tracked: list[str] | None = None
+        self._sizes: dict[str, tuple[int, int]] = {}
         self.errors = self.check()
         self.flags = self.flag()
 
@@ -256,7 +314,8 @@ class Map:
         for kind, ids in (("subjects", [s["id"] for _, s in self.subjects]), ("angles", [a["id"] for a in angles]),
                           ("key areas", [area["id"] for a in angles for area in a["areas"]]), ("bets", [b["id"] for b in every_bet]),
                           ("loops", [lp["id"] for lp in self.m["loops"]]), ("releases", [r["id"] for r in releases]),
-                          ("items", [i["id"] for r in releases for i in r["items"]]), ("questions", [q["id"] for q in self.m["questions"]])):
+                          ("items", [i["id"] for r in releases for i in r["items"]]), ("questions", [q["id"] for q in self.m["questions"]]),
+                          ("pipelines", [pl["id"] for pl in self.m.get("pipelines") or []])):
             errors += [f"two {kind} share the id {i}; an id names one thing" for i in sorted({i for i in ids if ids.count(i) > 1})]
         for _, s in self.subjects:
             count = len(self.place.get(s["id"], []))
@@ -280,9 +339,10 @@ class Map:
             errors += [f"loop {loop['id']} names the unknown subject {sid}" for sid in loop["nodes"] if sid not in self.by_id]
             errors += [f"loop {loop['id']}: trap file does not exist: {p}" for w in loop.get("watch") or [] for p in w.get("src") or [] if not self.cited(p)]
         for release in self.m["releases"]:  # an item's paths are plans until it is done
-            errors += [f"item {item['id']} is done but its path does not exist: {p}" for item in release["items"] if item["status"] == "done"
+            errors += [f"item {item['id']} is done but its path does not exist: {p}" for item in release["items"] if item.get("status") == "done"
                        for p in item["paths"] if not (self.root / p.rstrip("/")).exists()]
         errors += self.split_checks()
+        errors += self.section_checks()
         for q in self.m["questions"]:
             if q.get("blocks") and q["blocks"] != "product" and q["blocks"] not in self.by_id and q["blocks"] not in [r["id"] for r in self.m["releases"]]:
                 errors.append(f"question {q['id']} blocks {q['blocks']}, which is not product, a release id or a subject id")
@@ -293,7 +353,7 @@ class Map:
         current release names that path itself, and that item comes before the other open items of this subject: the shape is settled before
         the code that builds on it. One message per path, however many parts share it. The order across subjects is not checked."""
         errors, sid = [], s["id"]
-        items = [i for i in (self.m["releases"][0]["items"] if self.m["releases"] else []) if i["status"] != "done"]
+        items = [i for i in (self.m["releases"][0]["items"] if self.m["releases"] else []) if is_open(i)]
         for path in dict.fromkeys((part.get("schema") or "").rstrip("/") for part in s.get("parts") or []):
             if not path:
                 continue
@@ -306,6 +366,21 @@ class Map:
             early = [i["id"] for i in items[:writes[0]] if sid in {o for p in i["paths"] for o in self.owners(p)}]
             if early:
                 errors.append(f"{sid}: item {', '.join(early)} comes before {items[writes[0]]['id']}, which writes the schema file {path}; the schema item comes first")
+        return errors
+
+    def section_checks(self) -> list[str]:
+        """The paths and subjects the optional sections and the research name exist, and a term is defined once."""
+        errors = []
+        research = self.m["product"].get("research") or {}
+        errors += [f"research ({kind}): path does not exist: {ref}" for kind in RESEARCH for ref in research.get(kind) or []
+                   if not ref.startswith("file:") and not (self.root / ref).exists()]
+        errors += [f"code map: root does not exist: {p}" for p in (self.m.get("code_map") or {}).get("roots") or [] if not (self.root / p).is_dir()]
+        errors += [f"pipeline {pl['id']} is owned by the unknown subject {pl['owner']}" for pl in self.m.get("pipelines") or []
+                   if pl.get("owner") and pl["owner"] not in self.by_id]
+        surface = self.m.get("agent_surface") or {}
+        errors += [f"agent surface: method {row['name']} is owned by the unknown subject {row['owner']}" for row in surface.get("methods") or [] if row["owner"] not in self.by_id]
+        words = [t["term"].strip().lower() for t in self.m.get("terms") or []]
+        errors += [f"the term {w!r} is defined twice; a word is defined once" for w in sorted({w for w in words if words.count(w) > 1})]
         return errors
 
     def item_cards(self, item: dict) -> list[str]:
@@ -322,7 +397,7 @@ class Map:
                 paths, listed = [p.rstrip("/") for p in item["paths"]], [row["file"].rstrip("/") for row in item.get("splits") or []]
                 for path, to in dict.fromkeys((row["file"].rstrip("/"), row["to"].rstrip("/")) for row in item.get("splits") or []):
                     owner, second, mark = self.owner_path(path), self.owner_path(to), f"item {item['id']} lists {path} under `splits`"
-                    if item["status"] == "done":
+                    if item.get("status") == "done":
                         errors.append(f"{mark} and is done; a split that has landed leaves the list")
                         continue
                     if number:
@@ -366,6 +441,7 @@ class Map:
             flags.append("the product has no diagram")
         flags += [f"{sid} governs {path}, which no subject owns; list it as a `home` of the subject that owns it" for path, sid in self.governs
                   if not self.owner_path(path) and not any(covers(path, home) for home, _ in self.homes)]
+        flags += self.budget_flags() if self.file_counts else []  # without file counts a size never changes the committed render
         size = len(self.front().encode("utf-8"))
         if size > FRONT_LIMIT:
             flags.append(f"the front page is {size} bytes; keep it under about {FRONT_LIMIT}")
@@ -388,13 +464,63 @@ class Map:
         for release in self.m["releases"]:
             for item in release["items"]:
                 cards = self.item_cards(item)
-                if item["status"] != "done" and ((sid is None and not cards) or sid in cards):
+                if is_open(item) and ((sid is None and not cards) or sid in cards):
                     out.append(item)
         return out
 
     def shares(self, sid: str) -> list[str]:
         mine = [p.rstrip("/") for p in self.by_id[sid]["home"]]
         return list(dict.fromkeys(other for path, other in self.homes if other != sid and any(covers(p, path) or covers(path, p) for p in mine)))
+
+    def tracked(self) -> list[str]:
+        """Every tracked file, read once whether or not this render shows file counts: sizes and the code map need them."""
+        if self._tracked is None:
+            self._tracked = self.files if self.file_counts else [f for f in list_files(self.root) if f not in self.skip]
+        return self._tracked
+
+    def size(self, sid: str) -> tuple[int, int]:
+        """The files and lines a subject owns (by the longest matching home), counted now. A file with a NUL byte counts no lines."""
+        if not self._sizes:
+            for f in self.tracked():
+                owner = self.owner_path(f)
+                if not owner:
+                    continue
+                try:
+                    data = (self.root / f).read_bytes()
+                except OSError:
+                    continue
+                files, lines = self._sizes.get(owner[1], (0, 0))
+                self._sizes[owner[1]] = (files + 1, lines + (0 if b"\0" in data[:4096] else data.count(b"\n") + (1 if data and not data.endswith(b"\n") else 0)))
+            self._sizes.setdefault("", (0, 0))
+        return self._sizes.get(sid, (0, 0))
+
+    def budget_flags(self) -> list[str]:
+        """A line per subject over its level's budget. In a render without file counts they are printed, not written."""
+        out = []
+        for sid, row in self.level_checks().items():
+            if row["over"]:
+                budget = self.by_id[sid]["level"].get("budget") or {}
+                said = f"{plural(row['files'], 'file')}, {plural(row['lines'], 'line')}; " if self.file_counts else ""
+                out.append(f"{self.by_id[sid]['name']} is over its level's budget ({said}budget "
+                           + ", ".join(plural(budget[k], k[:-1]) for k in ("files", "lines") if k in budget) + "); the PR that grows it says so")
+        return out
+
+    def level_checks(self) -> dict[str, dict]:
+        """Each subject with a level: its size now and whether it is over its budget (the budget itself is in the source)."""
+        out = {}
+        for _, s in self.subjects:
+            level = s.get("level")
+            if not level:
+                continue
+            files, lines = self.size(s["id"])
+            budget = level.get("budget") or {}
+            over = any(now > budget[k] for k, now in (("files", files), ("lines", lines)) if k in budget)
+            out[s["id"]] = {"files": files, "lines": lines, "over": over}
+        return out
+
+    def research_missing(self) -> list[str]:
+        research = self.m["product"].get("research") or {}
+        return [kind for kind in RESEARCH if not research.get(kind)]
 
     def counts(self) -> dict:
         bets = [(s, b) for _, s in self.subjects for b in s.get("bets") or []]
@@ -404,7 +530,9 @@ class Map:
                 "owner_bare": [x for x in bets if x[1]["origin"] == "owner" and not (x[1].get("why") and x[1].get("instead_of"))],
                 "guarantees": len(guarantees), "no_test": [x for x in guarantees if not x[1].get("test")],
                 "items_no_card": self.open_items(None), "traps_no_card": self.traps(None), "split": self.split_rows(),
-                "unowned": sum(1 for f in self.files if not self.owner_of_file[f])}
+                "unowned": sum(1 for f in self.files if not self.owner_of_file[f]),
+                "research_missing": self.research_missing(),
+                "levels_proposed": [s for _, s in self.subjects if (s.get("level") or {}).get("origin") == "proposed"]}
 
     def unowned_now(self) -> int:
         """How many files no subject owns, read from the repository now, whether or not this render shows file counts."""
@@ -418,7 +546,9 @@ class Map:
                 f"- Guarantees citing no test: {len(c['no_test'])} of {c['guarantees']}.",
                 f"- Open items on no card: {len(c['items_no_card'])}.",
                 f"- Traps on no card: {len(c['traps_no_card'])}.",
-                f"- Files that need two owners, each with an item that splits it: {len(c['split'])}."]
+                f"- Files that need two owners, each with an item that splits it: {len(c['split'])}.",
+                f"- Kinds of research with no pointer (technology, users, assets): {len(c['research_missing'])} of {len(RESEARCH)}.",
+                f"- Levels proposed and not yet signed by the owner: {len(c['levels_proposed'])}."]
 
     # the front page: five sections
     def front(self) -> str:
@@ -432,6 +562,14 @@ class Map:
             o += [bet_line(b) for b in release.get("bets") or []] + ([""] if release.get("bets") else [])
         else:
             o += ["No release is recorded.", ""]
+        if len(m["releases"]) > 1:
+            o += ["### Later releases", ""]
+            o += [f"- **{r['name']}:** {r['point']} (" + ", ".join(x for x in (
+                      plural(sum(1 for i in r["items"] if not i.get("work") and is_open(i)), "open item"),
+                      plural(sum(1 for i in r["items"] if i.get("work")), "task") if any(i.get("work") for i in r["items"]) else "") if x) + ")" for r in m["releases"][1:]] + [""]
+        research = product.get("research") or {}
+        o += ["### Paper plan", "", "The research the plan stands on, by kind. A kind with no pointer is a gap.", ""]
+        o += [f"- **{kind.title()}:** " + (", ".join(f"`{ref}`" for ref in research[kind]) if research.get(kind) else "missing.") for kind in RESEARCH] + [""]
         o += ["## 2. How it runs, and why it is built this way", ""]
         o += [product["frame"], ""] if product.get("frame") else []
         o += ["```", *product["diagram"], "```", ""] if product.get("diagram") else []
@@ -460,7 +598,7 @@ class Map:
         o += self.count_lines() + [f"- Checks: {'passed' if not self.errors else plural(len(self.errors), 'failure') + ', listed in `gaps.md`'}.", ""]
         return "\n".join(o)
 
-    # a card: three opening lines, then up to eight headings in this order; one with nothing to say is left out
+    # a card: three opening lines, then up to nine headings in this order; one with nothing to say is left out
     def card(self, sid: str) -> str:
         s = self.by_id[sid]
         placed = self.place.get(sid) or []
@@ -473,6 +611,14 @@ class Map:
         size = [plural(len(self.owned(sid)), "file")] if self.file_counts else []
         size += [plural(len(x), word) for x, word in ((tools, "tool"), (guarantees, "guarantee"), (bets, "bet")) if x]
         o = [f"## {s['name']}", "", f"**Point:** {s['point']}", "", f"**Where it sits:** {where}.", ""] + (["**Size:** " + ", ".join(size) + ".", ""] if size else [])
+        if s.get("level"):
+            level = s["level"]
+            o += ["### Level", "", f"**Simplest form:** {level['simplest']}", ""]
+            o += ["**Not now:** " + "; ".join(x.rstrip(".") for x in level["not_now"]) + ".", ""] if level["not_now"] else []
+            if level.get("budget"):
+                o += ["**Budget:** at most " + ", ".join(plural(level["budget"][k], k[:-1]) for k in ("files", "lines") if k in level["budget"]) + ".", ""]
+            o += [("Set by the owner" + (f" ({level['source']})" if level.get("source") else "") if level["origin"] == "owner"
+                   else "Proposed; the owner has not signed it") + ". Anything under Not now first needs an owner bet on this subject.", ""]
         if s.get("parts"):
             o += ["### What it is made of", ""] + [f"- **{p['name']}:** {p['point']}" + (f" Schema: `{p['schema']}`" if p.get("schema") else "") for p in s["parts"]] + [""]
         if bets:
@@ -495,7 +641,9 @@ class Map:
         if tools:
             o += ["### Its tools", ""] + [f"- `{t['name']}`: {t['point']}" for t in tools] + [""]
         loops, shares, rules = [lp for lp in self.m["loops"] if sid in lp["nodes"]], self.shares(sid), self.governed_by(sid)
-        if loops or shares or rules:
+        pipes = [pl for pl in self.m.get("pipelines") or [] if pl.get("owner") == sid]
+        methods = [r for r in (self.m.get("agent_surface") or {}).get("methods") or [] if r["owner"] == sid]
+        if loops or shares or rules or pipes or methods:
             o += ["### Touches", ""]
             for lp in loops:
                 others = ", ".join(self.by_id[x]["name"] for x in lp["nodes"] if x != sid and x in self.by_id)
@@ -504,16 +652,107 @@ class Map:
                 o.append("- Shares code with: " + ", ".join(self.by_id[x]["name"] for x in shares) + ".")
             if rules:
                 o.append("- Rules set by: " + ", ".join(self.by_id[x]["name"] for x in rules) + ".")
+            if pipes:
+                o.append("- Pipelines: " + ", ".join(pl["name"] for pl in pipes) + ".")
+            if methods:
+                o.append("- Agent surface: " + plural(len(methods), "method") + ".")
             o.append("")
         items = self.open_items(sid)
         if items:
-            o += ["### Open work", ""] + [f"- **{i['id']}** ({i['status']}): {i['text']}" for i in items] + [""]
+            o += ["### Open work", ""] + [f"- {item_label(i)}" for i in items] + [""]
         elif not self.m["releases"]:
             o += ["### Open work", "", "No tracker or roadmap is recorded.", ""]
         return "\n".join(o)
 
+    def code_map(self) -> list[dict]:
+        """Every folder under the code map's roots, to its depth: path, depth below its root, point and owning subject."""
+        spec = self.m.get("code_map") or {}
+        depth, rows = spec.get("depth") or CODE_DEPTH, []
+        for root in (r.rstrip("/") for r in spec.get("roots") or []):
+            found = {root: 0}
+            for f in self.tracked():
+                if covers(root, f) and f != root:
+                    parts = f[len(root) + 1:].split("/")[:-1]
+                    for n in range(1, min(depth, len(parts)) + 1):
+                        found.setdefault(root + "/" + "/".join(parts[:n]), n)
+            for path in sorted(found):
+                owner = self.owner_path(path)
+                rows.append({"path": path, "depth": found[path], "point": path_point(self.root, path), "owner": owner[1] if owner else None})
+        return rows
+
+    def sections(self) -> str:
+        """The optional sections, each drawn only when the source holds it, the same way for every product."""
+        o: list[str] = []
+        name = lambda sid: self.by_id[sid]["name"] if sid in self.by_id else sid
+        for key, value in sections_of(self.m):
+            if key == "code_map":
+                o += ["## Code map", "", "Every folder under the roots, with its point and the subject that owns it.", ""]
+                o += [f"{'  ' * row['depth']}- `{row['path']}`" + (f" ({name(row['owner'])})" if row["owner"] else "") + f": {row['point']}" for row in self.code_map()] + [""]
+            elif key == "pipelines":
+                o += ["## Pipelines", "", "The stages from a change to a release, each check with how it runs and what a red blocks.", ""]
+                for pl in value:
+                    o += [f"### {pl['name']}", ""] + ([" ".join(x for x in (pl.get("point", ""), f"Owned by {name(pl['owner'])}." if pl.get("owner") else "") if x), ""]
+                                                     if pl.get("point") or pl.get("owner") else [])
+                    for stage in pl["stages"]:
+                        o += [f"**{stage['name']}**", ""] + [f"- {c['name']}" + (f": `{c['command']}`" if c.get("command") else "") + f". Gate: {c['gate']}."
+                                                             + (f" {c['point']}" if c.get("point") else "") for c in stage["checks"]] + [""]
+            elif key == "agent_surface":
+                o += ["## Agent surface", "", "What the product ships to agents, each owned by a subject.", ""]
+                holders = [(s["name"], s["tools"]) for _, s in self.subjects if s.get("tools")]
+                if holders:  # a tool is written once, on its subject: listed here by name, with its point on that card
+                    o += ["### Tools", "", "Each subject's tools, by name; the subject's card says what each does.", ""]
+                    o += [f"- **{holder}:** " + ", ".join(f"`{t['name']}`" for t in tools) for holder, tools in holders] + [""]
+                if value.get("methods"):
+                    o += ["### Methods", ""] + [f"- `{r['name']}` ({name(r['owner'])}): {r['point']}" for r in value["methods"]] + [""]
+            elif key == "terms":
+                o += ["## Terms", ""] + [f"- **{t['term']}:** {t['definition']}" for t in value] + [""]
+            else:
+                o += [f"## {value['title'].strip()}", ""] + ([value["point"], ""] if isinstance(value.get("point"), str) and value["point"] else [])
+                o += [f"- {row_text(row)}" for row in value["rows"]] + [""]
+        return "\n".join(o)
+
     def product_map(self) -> str:
-        return self.front() + "\n" + "\n".join(self.card(s["id"]) for _, s in self.subjects)
+        extra = self.sections()
+        return self.front() + "\n" + (extra + "\n" if extra else "") + "\n".join(self.card(s["id"]) for _, s in self.subjects)
+
+    def gap_rows(self) -> list[dict]:
+        """The gaps as rows a page can draw: each kind with its count and the lines it counts."""
+        c = self.counts()
+        return [{"id": gid, "label": label, "count": len(rows), "rows": rows} for gid, label, rows in (
+            ("no_reason", "Bets with no recorded reason", [f"{s['name']}: {b['bet']}" for s, b in c["no_reason"]]),
+            ("no_instead", "Bets with no \"instead of\"", [f"{s['name']}: {b['bet']}" for s, b in c["no_instead"]]),
+            ("owner_bare", "Owner bets as written, with no reason or no \"instead of\"", [f"{s['name']}: {b['bet']}" for s, b in c["owner_bare"]]),
+            ("no_test", "Guarantees citing no test", [f"{s['name']}: {g['text']}" for s, g in c["no_test"]]),
+            ("items_no_card", "Open items on no card", [item_label(i) for i in c["items_no_card"]]),
+            ("traps_no_card", "Traps on no card", [f"{lp['name']}: {w['when']}" for lp, w in c["traps_no_card"]]),
+            ("split", "Files that need two owners", c["split"]),
+            ("research_missing", "Kinds of research with no pointer", c["research_missing"]),
+            ("levels_proposed", "Levels proposed and not yet signed by the owner", [s["name"] for s in c["levels_proposed"]]))]
+
+    def packet(self, sha: str | None, at: str, writer: str | None) -> dict:
+        """product-map.json: the source as written, what only the repository can derive, and who rendered it. No live task fact."""
+        research = [ref for refs in (self.m["product"].get("research") or {}).values() for ref in refs if not ref.startswith("file:")]
+        items = [i for r in self.m["releases"] for i in r["items"]]
+        cited = [p.rstrip("/") for _, s in self.subjects for p in s["home"] + (s.get("governs") or [])]
+        cited += [p.rstrip("/") for i in items for p in i["paths"]] + [p for lp in self.m["loops"] for w in lp.get("watch") or [] for p in w.get("src") or []]
+        cited += research + [row["file"] for i in items for row in i.get("splits") or []]
+        code = self.code_map()
+        cited = list(dict.fromkeys(cited + [row["path"] for row in code]))
+        cards = {}
+        for kind, s in self.subjects:
+            sid, placed = s["id"], self.place.get(s["id"]) or []
+            files, lines = self.size(sid)
+            cards[sid] = {"kind": kind, "where": [placed[0][0]["id"], placed[0][1]["id"]] if placed else None, "size": {"files": files, "lines": lines},
+                          "touches": {"loops": [lp["id"] for lp in self.m["loops"] if sid in lp["nodes"]], "shares": self.shares(sid), "rules": self.governed_by(sid)},
+                          "traps": [{"loop": lp["id"], "watch": lp["watch"].index(w)} for lp, w in self.traps(sid)],
+                          "open_items": [i["id"] for i in self.open_items(sid)], "splits": self.split_rows(sid)}
+        return {"schema": PACKET_SCHEMA, "source": self.m,
+                "derived": {"points": {p: (path_point(self.root, p) if (self.root / p).exists() else None) for p in cited},
+                            "owners": {p: self.owners(p) for p in cited}, "cards": cards,
+                            "items": {i["id"]: {"cards": self.item_cards(i)} for i in items},
+                            "code_map": code, "gaps": self.gap_rows(), "flags": self.flags, "errors": self.errors,
+                            "levels": self.level_checks()},
+                "rendered": {"sha": sha, "at": at, "writer": writer}}
 
     def gaps(self, unowned_note: bool = False) -> str:
         """The gaps list. With `unowned_note`, a render without file counts still says how many files no subject owned when it was made."""
@@ -526,19 +765,26 @@ class Map:
             o += ["## Failed checks", ""] + [f"- {e}" for e in self.errors] + [""]
         if self.flags:
             o += ["## Flags", ""] + [f"- {f}" for f in self.flags] + [""]
-        for title, rows in (("Bets with no recorded reason", [f"{s['name']}: {b['bet']}" for s, b in c["no_reason"]]),
-                            ("Bets with no \"instead of\"", [f"{s['name']}: {b['bet']}" for s, b in c["no_instead"]]),
-                            ("Owner bets as written, with no reason or no \"instead of\"", [f"{s['name']}: {b['bet']}" for s, b in c["owner_bare"]]),
-                            ("Guarantees citing no test", [f"{s['name']}: {g['text']}" for s, g in c["no_test"]]),
-                            ("Open items on no card", [f"**{i['id']}** ({i['status']}): {i['text']}" for i in c["items_no_card"]]),
-                            ("Traps on no card", [f"{lp['name']}: {w['when']}" for lp, w in c["traps_no_card"]]),
-                            ("Files that need two owners", c["split"])):
+        for title, rows in ((g["label"], g["rows"]) for g in self.gap_rows()):
             if rows:
                 o += [f"## {title}", ""] + [f"- {row}" for row in rows] + [""]
         questions, more = sorted(self.m["questions"], key=lambda q: not q.get("blocks"))[:MAX_QUESTIONS], len(self.m["questions"]) - MAX_QUESTIONS
         o += ["## Owner questions", ""] + ([f"{n}. {q['text']}" + (f" (blocks {q['blocks']})" if q.get("blocks") else "") for n, q in enumerate(questions, 1)] or ["None recorded."]) + [""]
         o += [f"{more} more in `model.json`.", ""] if more > 0 else []
         return "\n".join(o)
+
+
+def head_sha(root: Path) -> str | None:
+    try:
+        run = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True)
+    except OSError:
+        return None
+    return run.stdout.strip() if run.returncode == 0 and run.stdout.strip() else None
+
+
+def now_iso() -> str:
+    import datetime
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -552,6 +798,10 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--list", action="store_true", help="print every subject id with its point")
     ap.add_argument("--front", action="store_true", help="print the front page")
     ap.add_argument("--card", metavar="ID", help="print one subject's card")
+    ap.add_argument("--packet", action="store_true", help="write product-map.json (the source, what the repository derives, and who rendered it) instead of the two Markdown files")
+    ap.add_argument("--writer", help="with --packet: the https URL where the map is edited, kept in the packet")
+    ap.add_argument("--sha", help="with --packet: the commit rendered (default: git's HEAD under the root)")
+    ap.add_argument("--at", help="with --packet: when it was rendered, as an ISO time (default: now, UTC)")
     ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out of the front page and the cards; where the render is committed, render with it, so an added file does not make it stale (gaps.md keeps the count of files no subject owns, as of the render)")
     args = ap.parse_args(argv)
     source = args.source.resolve()
@@ -562,6 +812,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"render_map: {exc}", file=sys.stderr)
         return 1
     problems = validate(model, schema, schema)
+    problems += item_rules(model) if not problems else []
     if problems:
         print(f"render_map: {source.name} does not match {args.schema.name}; nothing written:", file=sys.stderr)
         print("\n".join(f"  {p}" for p in problems), file=sys.stderr)
@@ -576,6 +827,19 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         print("\n".join(f"{s['id']}\t{kind}\t{s['point']}" for kind, s in built.subjects) if args.list else built.front() if args.front else built.card(args.card))
         return 0
+    if args.packet:
+        if args.writer and not re.match(r"^https://[^\s/@]+(/\S*)?$", args.writer):
+            print("render_map: --writer takes an https URL without credentials", file=sys.stderr)
+            return 1
+        out.mkdir(parents=True, exist_ok=True)
+        packet = built.packet(args.sha or head_sha(root), args.at or now_iso(), args.writer)
+        (out / PACKET).write_text(json.dumps(packet, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"render_map: packet of {plural(len(built.subjects), 'card')} written to {out / PACKET}")
+        for line in built.flags:
+            print(f"flag (not a failure): {line}")
+        for line in built.errors:
+            print(f"check failed: {line}", file=sys.stderr)
+        return 1 if built.errors else 0
     rendered = {"product-map.md": built.product_map(), "gaps.md": built.gaps(unowned_note=True)}
     # without file counts only the number on the unowned line is free to differ: the line must be there, once, with the rest of its text
     compared = lambda text: re.sub(rf"(?m)^({re.escape(UNOWNED_LINE)})\d+", r"\1N", text) if no_counts else text
@@ -590,7 +854,7 @@ def main(argv: list[str] | None = None) -> int:
             (out / name).write_text(text, encoding="utf-8")
     print(f"render_map: {plural(len(built.subjects), 'card')}, front page {len(built.front().encode('utf-8'))} bytes" + ("" if args.check else f", written to {out}")
           + (f"; no file counts, {plural(built.unowned_now(), 'file')} owned by no subject" if no_counts else ""))
-    for line in built.flags:
+    for line in built.flags + ([] if built.file_counts else built.budget_flags()):
         print(f"flag (not a failure): {line}")
     for line in built.errors:
         print(f"check failed: {line}", file=sys.stderr)
