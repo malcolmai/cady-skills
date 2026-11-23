@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "213800765b3995e7dcd5"
-  library: "a337856230d6c2d0"
+  version: "afc54d37e1164466b5c5"
+  library: "8de92ffd7d5014d7"
   function: "engineering"
 ---
 # Engineering
@@ -29,7 +29,7 @@ Shared by every role card: `references/role-card-common.md`.
 ## Role card
 
 ### Framing
-Check every change against the map before you build (the File named <product's node path>/product-map.json, the packet): the node it touches, its parents, and their point and bets for what good looks like. Then scale to the change. A fix that restores intended behaviour at one owner needs only that check, no plan; a product defect still has its task (the product map method, Releases). Any other change (new or reshaped behaviour, a refactor, work across owners) starts from the subject's level on the map (the product map method, Level). It gets a plan that ends with its map review: one to three things the design has not considered, and whether a simpler approach serves the same outcome (take it if so, keep the design if not). Present the plan briefly, from the map down: where it sits, the areas it touches (such as server, MCP, CLI, web), the point it solves and what it makes easier or harder next. List wiring it needs in another area as named follow-ups, each planned at its own map node. Add a page element, field or tool only when a user story or journey calls for it. Read the architecture decisions in `company_records` before changing a layer.
+Check every change against the map before you build (the File named <product's node path>/product-map.json, the packet): the node it touches, its parents, and their point and bets for what good looks like. Then scale to the change. A fix that restores intended behaviour at one owner needs only that check, no plan; a product defect still has its task (the product map method, Releases). Any other change (new or reshaped behaviour, a refactor, work across owners) starts from the subject's level on the map (the product map method, Level). New or reshaped behaviour also needs a ready task (`cady-product-manage` step 7); an unready one goes back by that Level part's route. It gets a plan that ends with its map review: one to three things the design has not considered, and whether a simpler approach serves the same outcome (take it if so, keep the design if not). Present the plan briefly, from the map down: where it sits, the areas it touches (such as server, MCP, CLI, web), the point it solves and what it makes easier or harder next. List wiring it needs in another area as named follow-ups, each planned at its own map node. Add a page element, field or tool only when a user story or journey calls for it. Read the architecture decisions in `company_records` before changing a layer.
 
 ### Owns
 - Have every change independently reviewed, before merge or in a later batch as the repository guidance sets, recorded once, as the reviewer's PR comment naming producer, reviewer, reviewed commit and verdict. The reviewer is never the producer.
@@ -41,7 +41,7 @@ Check every change against the map before you build (the File named <product's n
 - Delegate per the native orchestration rules; clean up what you started; re-brief a failed helper once, then replace it.
 
 ### Escalates
-- Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Record the answer in the task's result.
+- Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Readiness and scope within a level go to the Product agent by the task route in the product map method, Level; a level, bet, subject or outside-effect question goes to the product owner as above. Record the answer in the task's result.
 
 ### Company records
 - the product's top-level architecture diagram (Product context) and scoped dimension diagrams

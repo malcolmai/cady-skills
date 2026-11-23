@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.system_cycle"
-  version: "f45d23c29ede55e61114"
-  library: "a337856230d6c2d0"
+  version: "2ef01caef2ea314d3d18"
+  library: "8de92ffd7d5014d7"
   function: "engineering"
 ---
 # Recurring system cycle: map, dimensions, routed motions
@@ -16,7 +16,7 @@ metadata:
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
 **Bets** (where this differs from the default):
-- Choose the motion from current state: review when the ranked plan is stale, engineer when ready items exist, hunt after a dimension closes. Instead of: Run a fixed rotation of review, build and test phases each cycle.
+- Choose the motion from current state: review when the ranked plan is stale, engineer when ready tasks exist, hunt after a dimension closes. Instead of: Run a fixed rotation of review, build and test phases each cycle.
 - Label each dimension differentiating or not; take the standard approach on the rest and give the differentiators reviewed design and research. Instead of: Give every part of the system the same review and research depth.
 - Group several issues into families by architectural cause and fix each family at the lowest owner that can hold the target. Instead of: Fix each reported issue on its own, in the order filed.
 - A failure signature that persists across three runs or three days becomes an architecture finding, not another rerun. Instead of: Keep rerunning the failing check until it passes.
@@ -52,7 +52,7 @@ Clear a product's engineering backlog in recurring cycles from its goal map, sys
 
 ## Procedure
 
-1. Objective. Clear the product's engineering backlog by the motion its current state calls for: review, engineer or hunt, routed from current state, not a fixed rotation. Review when there is no ranked plan, when the goals, a dimension label or a research scan changed since it was written, or when findings contradict it. Engineer when the ranked plan is current and ready items exist, under the engineering role card. Hunt, under the QA role card and by an agent that did not build what it hunts, after a dimension closes, across seams after the end-to-end tests (step 7), or when the finding list is empty or stale. With a short queue one agent reviews and engineers in the same pass, its diffs still getting the engineering role's independent review; give a motion its own agent only when its queue justifies it, and never let two agents share a claim.
+1. Objective. Clear the product's engineering backlog by the motion its current state calls for: review, engineer or hunt, routed from current state, not a fixed rotation. Review when there is no ranked plan, when the goals, a dimension label or a research scan changed since it was written, or when findings contradict it. Engineer when the ranked plan is current and ready tasks exist (`cady-product-manage` step 7), under the engineering role card. Hunt, under the QA role card and by an agent that did not build what it hunts, after a dimension closes, across seams after the end-to-end tests (step 7), or when the finding list is empty or stale. With a short queue one agent reviews and engineers in the same pass, its diffs still getting the engineering role's independent review; give a motion its own agent only when its queue justifies it, and never let two agents share a claim.
 2. Map once, update in place: keep one product map at its single writer and publish it as `cady-product-map` says. On the map: journey goals as user outcomes in lifecycle order and architecture as one simple diagram. Features and implementation choices are decisions, not goals. Read the current decisions (cady_read search kinds decision) first; never restate what a decision already holds.
 3. Name high-level, mutually exclusive, collectively exhaustive dimensions that every goal crosses, each with one question, owner and boundary. Before users or revenue, name only the 3 to 5 a goal actually crosses. With users, expect 8 to 14. For a product you build in code, every code area has exactly one owner, including a module’s SQL, pages and tests; do not register qualities such as cost, isolation, verification or efficiency as owners (`references/quality-classes.md`). Keep only what has its own owner, question and test. Label each differentiating or not on the owner's node in the map; only a real choice becomes a decision. The dimensions reference holds the rest of the register rules.
 4. Depth follows the label. A non-differentiating dimension takes the most reliable widely used approach with the least custom code; deviation needs a named reason. A differentiating dimension gets a reviewed architecture (apply the Product card’s depth judgement on the decisive problem from the first session, including before users or revenue) and, only after the first users or revenue, a weekly research scan with `cady-product-research`; test a promising idea with `cady-company-evidence` before it changes the architecture; before then, research only where that judgement calls for it. The dimensions reference holds the research rules.

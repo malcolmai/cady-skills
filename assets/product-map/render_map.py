@@ -503,7 +503,7 @@ class Map:
                 budget = self.by_id[sid]["level"].get("budget") or {}
                 said = f"{plural(row['files'], 'file')}, {plural(row['lines'], 'line')}; " if self.file_counts else ""
                 out.append(f"{self.by_id[sid]['name']} is over its level's budget ({said}budget "
-                           + ", ".join(plural(budget[k], k[:-1]) for k in ("files", "lines") if k in budget) + "); the PR that grows it says so")
+                           + ", ".join(plural(budget[k], k[:-1]) for k in ("files", "lines") if k in budget) + "); growing it further is a task to rank first")
         return out
 
     def level_checks(self) -> dict[str, dict]:
