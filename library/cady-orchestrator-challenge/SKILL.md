@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.challenge"
   version: "6aff801c0ca4738d2e2e"
-  library: "ac732f52521ede61"
+  library: "9cb59dc004199ad9"
   function: "orchestrator"
 ---
 # Challenge a result by its stakes

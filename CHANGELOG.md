@@ -4,6 +4,46 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 9cb59dc004199ad9 · 2026-11-23
+
+Since ac732f52521ede61: 0 new, 0 dropped, 34 changed.
+
+Changed:
+- `cady-accounting-method`: reference agent-stop.md
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-method`: reference agent-stop.md
+- `cady-company-operations-inbox-follow-through`: reference outreach-release.md
+- `cady-company-operations-method`: reference agent-stop.md
+- `cady-customer-success-lifecycle`: reference agent-stop.md, reference outreach-release.md
+- `cady-customer-success-method`: reference agent-stop.md
+- `cady-design-method`: reference agent-stop.md
+- `cady-engineering-method`: reference agent-stop.md
+- `cady-finance-method`: reference agent-stop.md
+- `cady-fundraise-investor-list`: reference agent-stop.md
+- `cady-fundraise-investor-outreach`: reference agent-stop.md, reference outreach-release.md
+- `cady-fundraise-method`: reference agent-stop.md
+- `cady-fundraise-raise-materials`: reference agent-stop.md
+- `cady-gtm-calls`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-channel-plan`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-cold-email-cycle`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-events`: reference agent-stop.md
+- `cady-gtm-launch`: reference outreach-release.md
+- `cady-gtm-linkedin-message`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-method`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-persona-profile`: reference agent-stop.md
+- `cady-gtm-pipeline-pass`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-reply`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-voice-pack`: reference agent-stop.md
+- `cady-gtm-warm-email`: reference agent-stop.md, reference outreach-release.md
+- `cady-marketing-method`: reference agent-stop.md
+- `cady-marketing-post`: reference agent-stop.md
+- `cady-orchestrator-goal-pass`: reference agent-stop.md, reference goals-and-work.md
+- `cady-orchestrator-method`: reference agent-stop.md
+- `cady-product-method`: reference agent-stop.md
+- `cady-qa-method`: reference agent-stop.md
+- `cady-sales-deal-motion`: reference agent-stop.md, reference outreach-release.md
+- `cady-sales-method`: reference agent-stop.md
+
 ## ac732f52521ede61 · 2026-11-23
 
 Since ca70dc11f50ab180: 0 new, 0 dropped, 0 changed.
