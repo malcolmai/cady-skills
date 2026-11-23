@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "b321ed5b2ac289a08d22"
-  library: "eecea95663a9deaf"
+  version: "6857d9db2b3fce0c95e3"
+  library: "74d469977cd513e9"
   function: "design"
 ---
 # Design
@@ -38,7 +38,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - Make design decisions yourself; take product questions to the PM.
 
 ### Escalates
-- Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. A product question the map does not answer goes to the product manager as a note on the task, or to the person when no one holds that role; the product manager asks the person only what the person alone can decide. Readiness and scope within a level go to the product manager by the task route in the product map method, Level. Record the answer in the task's result.
+- Read the product map first: never ask what its points, bets or levels already answer. An outside effect, a spend, or an irreversible or privileged step needs a person's quoted yes or a standing approval. For a product question the map does not answer, set the task blocked with its next step starting `Product question:` (send no result or note in that call); the product manager answers it, and where no agent holds that role, also ask the person; the product manager asks the person only what the person alone can decide. The answer is a note on the task.
 
 ### Company records
 - the design system Files

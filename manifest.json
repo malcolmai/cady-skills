@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-23T00:00:00Z",
   "bundle": {
-    "tag": "eecea95663a9deaf",
-    "version": "eecea95663a9deaff5eceedb574e2c5f9539096a9d4f16ac0d59f3dcc70444b0",
-    "pluginVersion": "2026.11.23-eecea956"
+    "tag": "74d469977cd513e9",
+    "version": "74d469977cd513e93efa7ac474736e250509cd3096dc7be2f46f46e45bf51744",
+    "pluginVersion": "2026.11.23-74d46997"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.23-eecea956"
+    "version": "2026.11.23-74d46997"
   },
   "skills": [
     {
@@ -129,13 +129,13 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "b321ed5b2ac289a08d22"
+      "version": "6857d9db2b3fce0c95e3"
     },
     {
       "name": "cady-devops-method",
       "path": "library/cady-devops-method",
       "cadyId": "company.method.devops",
-      "version": "001086078c4af207187a"
+      "version": "937c2b338fabb6df612d"
     },
     {
       "name": "cady-devops-stories",
@@ -159,7 +159,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "98c27b3e197b5ff0db52"
+      "version": "573f0d2f7f75401178fb"
     },
     {
       "name": "cady-engineering-integrations",
@@ -171,7 +171,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "d997634a63c24332767b"
+      "version": "45bb081829b6bdc20b7b"
     },
     {
       "name": "cady-finance-budget-review",
@@ -357,7 +357,7 @@
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "f990621570fc361dea0b"
+      "version": "c6be2be929b20a3b9b20"
     },
     {
       "name": "cady-product-research",
