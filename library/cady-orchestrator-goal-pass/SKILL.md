@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.orchestrator.goal_pass"
-  version: "e6453c6af380006aae20"
-  library: "9cb59dc004199ad9"
+  version: "6d3a716c75f657bb7189"
+  library: "c141a0e7fa51c493"
   function: "orchestrator"
 ---
 # Orchestrate the company
@@ -49,7 +49,7 @@ A due orchestrator pass, or an event: a run finished, an ask answered, a handove
 8. When an agent fails, trace it before judging it: the tool it called, the owner check or refusal that stopped it, or the instruction that sent it there; name the failing link with its evidence ref. The same failure in two comparable windows goes to the Executive, as does every agent design need, pause and extended system work, as one Projects task under "Keep the system sharp". Pause an agent that is broken or clearly detrimental, keeping its state, and file the handover in the same run (`cady-company-manage-agents` steps 8-9); an agent working what a current bet ruled out is broken: cite the bet.
 9. Host setup for the agents the Executive designs, once approved, is `cady-company-manage-agents` step 10.
 10. Pass observations through: every run reports what it learned; an agent records or replaces a point or a bet, and the owner is told (`cady-company-decision` step 4). File one task per nonzero count of your read (items on the tree, goals without a node) under the owning function; never change a point or a bet to move a count.
-11. Close each slot once with work_set, its run part recording what you found broken and what you did, the calls with the node each cites, the handovers, the unsupported-claim count, the challenges made with the share that changed the work and the observations passed through; for a family goal also its report line. Evidence and usage follow `references/run-reporting.md`; update any record a result or call changes in place.
+11. Close each slot once with work_set, its result recording what you found broken and what you did, the calls with the node each cites, the handovers, the unsupported-claim count, the challenges made with the share that changed the work and the observations passed through; for a family goal also its report line. Evidence and usage follow `references/run-reporting.md`; update any record a result or call changes in place.
 
 ## Acceptance
 

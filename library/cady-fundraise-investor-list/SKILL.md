@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_list"
-  version: "af69726791a66dc10935"
-  library: "9cb59dc004199ad9"
+  version: "a4a900668312be9ec2f2"
+  library: "c141a0e7fa51c493"
   function: "fundraise"
 ---
 # Ranked investor list

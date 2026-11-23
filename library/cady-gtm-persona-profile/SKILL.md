@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.persona_profile"
-  version: "09c57e08270d20adc2b7"
-  library: "9cb59dc004199ad9"
+  version: "f1e2522e6f3ce56a6a63"
+  library: "c141a0e7fa51c493"
   function: "gtm"
 ---
 # Persona profile

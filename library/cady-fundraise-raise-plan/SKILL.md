@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_plan"
   version: "3bfc1930b2b9dfe624c0"
-  library: "9cb59dc004199ad9"
+  library: "c141a0e7fa51c493"
   function: "fundraise"
 ---
 # Raise plan: amount, instrument, dilution and process

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "efff5940296f52e4360d"
-  library: "9cb59dc004199ad9"
+  version: "d659aaab6811c27b1562"
+  library: "c141a0e7fa51c493"
   function: "customer_success"
 ---
 # Customer Success
