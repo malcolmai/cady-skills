@@ -1,29 +1,23 @@
 ---
 name: "cady-product-research"
-description: "Research. Use when: Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology. Not for: Product plans, roadmaps, architecture implementation plans, task reports or company policy; keep these with Product and Company Work. Raw notes belong in Files linked from work. Use `cady-product-manage` for product strategy; Research supports it with evidence. Vendor choice for the company's own tools: `cady-engineering-integrations` (vendor reference)."
+description: "Research. Use when: Write or update a research file on how users see the product and its alternatives, or on a technology. Not for: Deciding the roadmap or writing a plan: research supplies evidence, not policy."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.research"
-  version: "edaacdfe676d93602145"
-  library: "11f84d7fc246e41c"
+  version: "59a911b406809a7c44c1"
+  library: "eecea95663a9deaf"
   function: "product"
 ---
 # Research
 
-**Point:** Map the approaches to a question, their tradeoffs and evidence, so an owner can decide without redoing the analysis.
+**Point:** Lay out the options for one question, with evidence and tradeoffs, so the owner can decide without redoing the analysis.
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-**Bets** (where this differs from the default):
-- Count manual workarounds, doing nothing and staying put as alternatives, scoped to the customer's job and circumstance. Instead of: List the named competitors in the category and compare their features.
-- Compare a technology against the no-build and existing-capability baseline, measured at the real workload. Instead of: Compare candidate vendors with each other from their published benchmarks and demos.
-- Update the same-question piece and keep it short; research is an intermediate record that feeds a decision. Instead of: Write a new, comprehensive report for each request.
-- Map the approaches and their tradeoffs, and end with the test that would tell them apart. Instead of: Rank the options and end with a verdict.
+Write or update a research file on how users see the product and its alternatives, or on a technology.
 
-Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology.
-
-**Not for:** Product plans, roadmaps, architecture implementation plans, task reports or company policy; keep these with Product and Company Work. Raw notes belong in Files linked from work. Use `cady-product-manage` for product strategy; Research supports it with evidence. Vendor choice for the company's own tools: `cady-engineering-integrations` (vendor reference).
+**Not for:** Deciding the roadmap or writing a plan: research supplies evidence, not policy.
 
 **Unit of work:** one research question and its evolving research file. **Kind:** strategy. **Parallel:** no. 
 
@@ -31,47 +25,27 @@ Write or update a research file (research/<title>.md) on competitors and alterna
 
 ### Evidence refs
 
-- company question or decision
-- existing research file
+- the question and the decision it serves
+- the existing research file, if any
 - dated source references
-
-### Work fields
-
-- question
-- scope
-- product relevance
 
 ## Procedure
 
-1. State the question, scope, audience and product relevance in a sentence. Research is truth-seeking and independent of company priorities; research the decision-relevant uncertainty and keep the piece second-layer evidence.
-2. Search Files for the same question and dimension (cady_read search kinds ["file"], query research/ plus the topic). Update that file when it exists, preserving its history and useful structure; create another only for a distinct question or dimension.
-3. Competition (who the alternatives are and how they price, position and win) or Technology (a product use case and technical feasibility)? Read the matching reference before gathering evidence.
-4. Prefer attributable primary evidence close to the claim: product documentation, customer or user evidence, standards, filings, datasets, technical reports or direct measurements. Date each source and identify what it supports. Treat vendor claims as claims until independently measured or corroborated; note credible contrary evidence and missing coverage.
-5. Map the approaches, not verdicts: what each buys and costs and when each wins. Challenge your own account until the simple and the detailed accounts agree, and open with the simple one. Separate sourced observations, interpretation and recommendations. Mark estimates, assumptions and inference explicitly; state uncertainty where it could change the conclusion. Recommendations are analysis for the relevant owner, never policy or authority.
-6. Write Markdown with useful headings and real tables. Include question, scope, approaches, evidence and counterevidence where useful; omit empty sections. Cite customer quotes as quote:<id> (research_set records and checks a quote against its public page) and sources by URL or file:<id>.
-7. A research piece is a File named research/<title>.md; its first line is `Node: <path>`, the company node it is about (technical research: product; competitors: go-to-market). Create it with files_set mode save_text (text up to 24576 bytes; split longer pieces by question), and revise the same file with files_set mode patch at its expectedGeneration after reading it with cady_read file:<id>. Discover their current schemas and generation rules with find_cady_tools before writing. Never assume operation names or claim a write succeeded without its receipt and readback. Use only authorized provider reads; research does not authorize signup, payment, contact, access changes or other external effects.
+1. State the question and the decision it serves in one sentence.
+2. Search Files for the same question (`cady_read`, kinds file); update that file, never start a second.
+3. Users: go through the product as a new user would, from its public pages to first value, and record what they would understand, expect and get. Then list what they can really choose for the job instead, a manual workaround and doing nothing included; compare on dated evidence and say when each wins.
+4. Technology, assets and value chain: say what the best version needs and who supplies each part; compare against the no-build and existing-capability baseline at the real workload. A vendor's claim stays a claim until measured.
+5. Keep observation, interpretation and recommendation apart, mark guesses, and include the evidence against your leading view.
+6. End with the test that would tell the options apart.
+7. Save one File named `research/<title>.md`, first line `Node: <path>` (`files_set`); read it back and cite it on the task.
 
 ## Acceptance
 
-- [ ] (check) the piece cites dated sources for each claim and the file's write receipt and readback are on the work item
-- [ ] (fresh) a reader who sees only the piece can compare the alternatives on the stated dimension, or the technology against its no-build baseline, and find the decision-relevant implication or open gap
-- [ ] (fresh) claims separate observed evidence from vendor claims and inference; scope, uncertainty and counterevidence are visible; the piece adds evidence without becoming policy
-
-## Owner checks
-
-- current operation schema and file generation checked
-- alternatives are real for the scoped customer choice, or the baseline and no-build path are explicit
-- counterevidence and limits included; implications conditional rather than policy
+- [ ] (fresh) a reader of the file alone can compare the options and name the test that would separate them
 
 ## Result
 
 ### Artifact refs
 
-- research file reference (file:<id>)
-- source references
-- **Transition:** updated research file with verified owner receipt
-
-## References
-- Read [Competition](references/competition.md) when the question is about competitors, alternatives, pricing or positioning.
-- Read [Technology](references/technology.md) when the question is about choosing or assessing a technology, vendor, library or approach for a product use case.
-- Read [Competitor profile](references/competitor-profile.md) when you profile, compare or keep a competitor or alternative analysis current.
+- file:<fileId>
+- **Transition:** the research file is saved, read back and cited on its task

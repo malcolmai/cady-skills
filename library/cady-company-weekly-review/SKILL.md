@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.weekly_review"
-  version: "722d139fa0e464b4285b"
-  library: "11f84d7fc246e41c"
+  version: "5dee8005e0a3fcb189f8"
+  library: "eecea95663a9deaf"
   function: "company"
 ---
 # Weekly review

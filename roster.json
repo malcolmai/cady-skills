@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "11f84d7fc246e41c",
-    "version": "11f84d7fc246e41c32fcebb51b7ecd252e38012ab30f5690e74440442f40898a"
+    "tag": "eecea95663a9deaf",
+    "version": "eecea95663a9deaff5eceedb574e2c5f9539096a9d4f16ac0d59f3dcc70444b0"
   },
   "core": [],
   "standalone": [
@@ -91,19 +91,15 @@
       ]
     },
     "product": {
-      "label": "Product",
+      "label": "Product manager",
       "family": "product",
-      "purpose": "Decides what to build and for whom, and qualifies releases",
+      "purpose": "Researches how users see the product, keeps its map true and sets the roadmap",
       "card": "cady-product-method",
       "skills": [
         "cady-product-customer-interview",
-        "cady-product-manage",
         "cady-product-map",
         "cady-product-research",
-        "cady-company-evidence",
-        "cady-engineering-system-cycle",
-        "cady-company-decision",
-        "cady-qa-stories"
+        "cady-company-taste-review"
       ]
     },
     "design": {
@@ -112,32 +108,30 @@
       "purpose": "Designs the customer experience: flows, interfaces and copy",
       "card": "cady-design-method",
       "skills": [
-        "cady-design-wcag-audit"
+        "cady-company-taste-review"
       ]
     },
     "engineering": {
       "label": "Engineering",
       "family": "product",
-      "purpose": "Builds and runs the product: architecture, code, integrations and releases",
+      "purpose": "Builds production-ready code for each task against the product map",
       "card": "cady-engineering-method",
       "skills": [
-        "cady-engineering-debugging",
+        "cady-engineering-fix",
         "cady-engineering-independent-review",
         "cady-engineering-integrations",
-        "cady-engineering-system-cycle",
-        "cady-product-map"
+        "cady-product-map",
+        "cady-company-taste-review"
       ]
     },
-    "qa": {
-      "label": "QA",
+    "devops": {
+      "label": "DevOps",
       "family": "product",
-      "purpose": "Independently assesses quality, test evidence and release readiness",
-      "card": "cady-qa-method",
+      "purpose": "Improves the codebase, checks and verification engineering works in, and keeps Stories current",
+      "card": "cady-devops-method",
       "skills": [
-        "cady-qa-stories",
-        "cady-qa-triage",
-        "cady-engineering-system-cycle",
-        "cady-product-map"
+        "cady-devops-stories",
+        "cady-devops-wcag-audit"
       ]
     },
     "finance": {

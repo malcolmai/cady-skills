@@ -1,12 +1,12 @@
 ---
 name: "cady-product-map"
-description: "Product map. Use when: Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products. Not for: Deciding what to build and for whom (`cady-product-manage`) or running the engineering cycle on a map (`cady-engineering-system-cycle`)."
+description: "Product map. Use when: Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products. Not for: Deciding what to build and in what order (the product manager card), or building a task against the map (the engineering card)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.map"
-  version: "1fefddf5ad578061d56b"
-  library: "11f84d7fc246e41c"
+  version: "26c89fd3ff740ea4b033"
+  library: "eecea95663a9deaf"
   function: "product"
 ---
 # Product map
@@ -17,7 +17,7 @@ metadata:
 
 Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products.
 
-**Not for:** Deciding what to build and for whom (`cady-product-manage`) or running the engineering cycle on a map (`cady-engineering-system-cycle`).
+**Not for:** Deciding what to build and in what order (the product manager card), or building a task against the map (the engineering card).
 
 **Unit of work:** one product's map, or one dimension map, and the change that lands it. **Kind:** execution. **Parallel:** no. 
 
@@ -27,29 +27,27 @@ Generate, restructure, clean up, check or publish a product map or a dimension m
 
 - the product's node path and its current map, if any
 - the repository, or for a new product the brief and its research
-- the tracker or roadmap, if any
 
 ## Procedure
 
-1. Read the product map method (`references/product-map.md`) in full before you start: it holds the format, the steps, the tool and the checks.
-2. Find the map as its Drafting part says (files_read mode find), then follow its Build steps in order. A dimension map follows its Dimension maps part and is saved with files_set.
+1. Read the product map method (`references/product-map.md`) in full: it holds the format, the steps, the tool and the checks.
+2. Find the map (`files_read` mode find: `<product node path>/product-map.json`). Update it where it is edited; never start a second.
+3. Follow the method's build steps. Every bet keeps its origin (owner, inferred or proposed); a missing decision is a question to the owner (`asks_set`), never a written decision.
+4. Run the map's check until it passes, then publish the packet as the method's Drafting part says.
+5. In the change, list what clean-up removed, what now points at the map and what was kept.
 
 ## Acceptance
 
 - [ ] (check) `render_map.py --check` passes on the map's source
-- [ ] the map's change lists what clean-up removed, what now points at the map and what was kept, and the reorganisation change lists what it moved and what it left as items, or each says there was nothing to do
-- [ ] on first generation or a format change, blind use ran, or the change says it was not run
-
-## Owner checks
-
-- each bet keeps its origin; a missing decision is an owner question, never a written decision
+- [ ] (fresh) on first generation or a format change, blind use ran, or the change says it was not run
 
 ## Result
 
 ### Artifact refs
 
 - file:<fileId>
-- **Transition:** the map's change lands through the project's review, then the map is published
+- **Transition:** the map's change is reviewed, then the map is published
 
 ## References
+- Read [Dimension register and research](references/engineering-cycle-dimensions.md) when you name or label a product's Interface, Infrastructure or QA subjects.
 - Read [Product map and dimension maps](references/product-map.md) when you generate, restructure, clean up, check or publish a product map or a dimension map.
