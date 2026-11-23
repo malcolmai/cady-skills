@@ -479,6 +479,17 @@ class Map:
             self._tracked = self.files if self.file_counts else [f for f in list_files(self.root) if f not in self.skip]
         return self._tracked
 
+    def lines_of(self, path: str) -> int:
+        """A tracked file's line count, read once; a file with a NUL byte, or one that cannot be read, counts no lines."""
+        cache = self.__dict__.setdefault("_lines", {})
+        if path not in cache:
+            try:
+                data = (self.root / path).read_bytes()
+            except OSError:
+                data = b""
+            cache[path] = 0 if b"\0" in data[:4096] else data.count(b"\n") + (1 if data and not data.endswith(b"\n") else 0)
+        return cache[path]
+
     def size(self, sid: str) -> tuple[int, int]:
         """The files and lines a subject owns (by the longest matching home), counted now. A file with a NUL byte counts no lines."""
         if not self._sizes:
@@ -486,12 +497,10 @@ class Map:
                 owner = self.owner_path(f)
                 if not owner:
                     continue
-                try:
-                    data = (self.root / f).read_bytes()
-                except OSError:
+                if not (self.root / f).is_file():
                     continue
                 files, lines = self._sizes.get(owner[1], (0, 0))
-                self._sizes[owner[1]] = (files + 1, lines + (0 if b"\0" in data[:4096] else data.count(b"\n") + (1 if data and not data.endswith(b"\n") else 0)))
+                self._sizes[owner[1]] = (files + 1, lines + self.lines_of(f))
             self._sizes.setdefault("", (0, 0))
         return self._sizes.get(sid, (0, 0))
 
@@ -670,9 +679,17 @@ class Map:
         return "\n".join(o)
 
     def code_map(self) -> list[dict]:
-        """Every folder under the code map's roots, to its depth: path, depth below its root, point and owning subject."""
+        """Every folder under the code map's roots, to its depth, in the roots' order: path, depth below its root, point, owning subject and
+        how many tracked files it holds (all levels below it)."""
         spec = self.m.get("code_map") or {}
         depth, rows = spec.get("depth") or CODE_DEPTH, []
+        below: dict[str, list[str]] = {}  # each folder's files at every level below it, in one pass over the tracked files
+        for f in self.tracked():
+            parts = f.split("/")[:-1]
+            for n in range(1, len(parts) + 1):
+                below.setdefault("/".join(parts[:n]), []).append(f)
+        counts = {path: len(files) for path, files in below.items()}
+        under = lambda path: below.get(path, [])
         for root in (r.rstrip("/") for r in spec.get("roots") or []):
             found = {root: 0}
             for f in self.tracked():
@@ -682,7 +699,13 @@ class Map:
                         found.setdefault(root + "/" + "/".join(parts[:n]), n)
             for path in sorted(found):
                 owner = self.owner_path(path)
-                rows.append({"path": path, "depth": found[path], "point": path_point(self.root, path), "owner": owner[1] if owner else None})
+                row = {"path": path, "depth": found[path], "point": path_point(self.root, path), "owner": owner[1] if owner else None,
+                       "files": counts.get(path, 0)}
+                # Lines and the largest files go into the packet only: the Markdown draws a folder's path, owner and point, so it stays stable.
+                sized = sorted(((f, self.lines_of(f)) for f in under(path)), key=lambda x: (-x[1], x[0]))
+                row["lines"] = sum(n for _, n in sized)
+                row["largest"] = [{"path": f, "lines": n} for f, n in sized[:5] if n]
+                rows.append(row)
         return rows
 
     def sections(self) -> str:
