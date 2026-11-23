@@ -559,7 +559,7 @@ class Map:
         line = product.get("line")
         o = [f"# {product['name']}: product map", ""] + ([f"**{line['text']}**" + (" (proposed)" if line["origin"] == "proposed" else ""), ""] if line else []) + [
              "Read down: each section explains the one below it. A subject's card holds the depth, and the code wins over the map.", "",
-             "## 1. The point", "", product["point"], ""]
+             "## 1. The point", ""] + ([] if line and line["text"].strip() == product["point"].strip() else [product["point"], ""])  # a line that is the point shows once
         if m["releases"]:
             release = m["releases"][0]
             o += [f"**Current release, {release['name']}**" + (f" (set by {release['by']})" if release.get("by") else "") + f": {release['point']}", ""]
