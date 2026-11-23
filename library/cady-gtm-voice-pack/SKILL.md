@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.voice_pack"
-  version: "56104436ddca69943ebc"
-  library: "c141a0e7fa51c493"
+  version: "1fc715160b5deaaed9c3"
+  library: "62f704ff1e1e9bc0"
   function: "gtm"
 ---
 # Build or refresh a texture-only voice pack
