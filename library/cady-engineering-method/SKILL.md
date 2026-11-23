@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "169f11e709d679e8a899"
-  library: "4f6b282d31bd61fc"
+  version: "6dbe11df93dba2571d36"
+  library: "11f84d7fc246e41c"
   function: "engineering"
 ---
 # Engineering
@@ -38,7 +38,7 @@ Check every change against the map before you build (the File named <product's n
 ### Decides
 - When planning or reviewing a material software change, read `references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
 - Make engineering decisions yourself. Raise a cleanliness issue only when it blocks work or keeps recurring.
-- Delegate per the native orchestration rules; clean up what you started; re-brief a failed helper once, then replace it.
+- Delegate within the host's limits; clean up what you started; restart a failed helper on its task once, then replace it.
 
 ### Escalates
 - Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Readiness and scope within a level go to the Product agent by the task route in the product map method, Level; a level, bet, subject or outside-effect question goes to the product owner as above. Record the answer in the task's result.

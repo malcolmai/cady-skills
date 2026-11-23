@@ -1,6 +1,6 @@
 # Cady agent library
 
-64 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+63 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
 
@@ -14,10 +14,9 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-company-method`: Executive role card: its point and key bets (`library/cady-company-method/SKILL.md`)
 - `cady-company-onboarding`: A new company has no Cady setup yet: record it from what the owner says and set up its Executive agent. (`library/cady-company-onboarding/SKILL.md`)
 - `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check). (`library/cady-company-taste-review/SKILL.md`)
-- `cady-company-weekly-review`: The weekly review: judge effectiveness, call every goal and initiative, re-test bets, hand changes to the orchestrator. (`library/cady-company-weekly-review/SKILL.md`)
-- `cady-orchestrator-challenge`: Reading a result one level down before accepting it, as the orchestrator. (`library/cady-orchestrator-challenge/SKILL.md`)
-- `cady-orchestrator-goal-pass`: A due orchestrator pass, or an event: a run finished, an ask answered, a handover returned or a family trigger. (`library/cady-orchestrator-goal-pass/SKILL.md`)
-- `cady-orchestrator-method`: Orchestrator role card: its point and key bets (`library/cady-orchestrator-method/SKILL.md`)
+- `cady-company-weekly-review`: The weekly review: judge effectiveness, call every goal and initiative, re-test bets, hand changes to the manager. (`library/cady-company-weekly-review/SKILL.md`)
+- `cady-manager-method`: Manager role card: its point and key bets (`library/cady-manager-method/SKILL.md`)
+- `cady-manager-sense-check`: Reading an agent's final response before accepting it, as the manager. (`library/cady-manager-sense-check/SKILL.md`)
 
 ## gtm
 - `cady-customer-success-lifecycle`: Run one customer account after the sale: onboarding to first value, health, risk, renewal, expansion or cancellation. (`library/cady-customer-success-lifecycle/SKILL.md`)

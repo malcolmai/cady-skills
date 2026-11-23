@@ -20,9 +20,9 @@ Run your whole company across Claude and ChatGPT. These are the skills your agen
 
 ## What is Cady?
 
-Cady is your agent orchestrator. Connect your Claude Code, Codex, Claude or ChatGPT account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
+Cady is your agent manager. Connect your Claude Code, Codex, Claude or ChatGPT account once, keep asking for work in the same chat you use today, and Cady gives your agent your company's goals, owners and context, plus the tools to do company work. Your ChatGPT and a colleague's Claude work from the same company, goals and records, so work handed between them needs no explaining again.
 
-This repository is Cady's **method library**: 64 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
+This repository is Cady's **method library**: 63 skills for running a company, from finding customers and writing outreach to month-end close, raising money, compliance and shipping software. Methods live here, versioned and open; your company's facts never do.
 
 ## How it works
 
@@ -43,7 +43,7 @@ git clone --depth 1 https://github.com/malcolmai/cady-skills "$HOME/.cady-skills
 python3 "$HOME/.cady-skills/install.py" --host claude-code
 ```
 
-`cady` adds the Cady MCP server and the front door skill. The last command copies, into this project's `.claude/`, the company system (the Executive and the orchestrator) and the core skills every agent reads. Once setup has designed your agents, adopt each one with `python3 "$HOME/.cady-skills/install.py" --host claude-code --add <agent>` (`--list` names them): it copies that agent's role card, its function's skills and the skills the card lists, and never overwrites a folder you already have. Only installed skills join the host's skill list.
+`cady` adds the Cady MCP server and the front door skill. The last command copies, into this project's `.claude/`, the company system (the Executive and the manager) and the core skills every agent reads. Once setup has designed your agents, adopt each one with `python3 "$HOME/.cady-skills/install.py" --host claude-code --add <agent>` (`--list` names them): it copies that agent's role card, its function's skills and the skills the card lists, and never overwrites a folder you already have. Only installed skills join the host's skill list.
 
 **Codex**
 
@@ -53,7 +53,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex
 codex mcp add cady --url https://app.cadyworks.com/mcp && codex mcp login cady
 ```
 
-The install copies the front door, the company system (the Executive and the orchestrator) and the core skills into `${CODEX_HOME:-$HOME/.codex}/skills`; adopt each agent setup designs with `python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex --add <agent>` (`--list` names them). A folder you already have is never overwritten.
+The install copies the front door, the company system (the Executive and the manager) and the core skills into `${CODEX_HOME:-$HOME/.codex}/skills`; adopt each agent setup designs with `python3 "${CODEX_HOME:-$HOME/.codex}/cady-skills/install.py" --host codex --add <agent>` (`--list` names them). A folder you already have is never overwritten.
 
 **claude.ai**
 
@@ -105,7 +105,7 @@ The skills you adopt are copied into your host and are your company's own: edit 
 | `install.py`, `roster.json` | The adopt helper: copies the agents you choose (role card and the skills it lists) into your host |
 | `assets/product-map/` | The product map tool: `render_map.py` and the schema of its source, `map.schema.json`, which the product map reference tells an agent to copy into a repository. The product map skill, `library/cady-product-map`, carries the same two files in its own `assets/product-map/` |
 | `.claude-plugin/marketplace.json` | The marketplace entry for `plugins/cady` |
-| [`examples/`](examples/README.md) | Three example agents (GTM, finance, orchestrator), each preloading its role's method |
+| [`examples/`](examples/README.md) | Three example agents (GTM, finance, manager), each preloading its role's method |
 | [`CHANGELOG.md`](CHANGELOG.md) | The material changes in each release; your Executive reads it |
 | `manifest.json` | The library version and each skill's version |
 

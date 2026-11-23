@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Adopt the Cady agents your company runs: copy each agent's skill folders from this library into your host.
 
-Run it from a clone of the library. The first run also copies the company system (the Executive and the orchestrator).
+Run it from a clone of the library. The first run also copies the company system (the Executive and the manager).
 A folder you already have is never overwritten ("kept yours"), so a re-run changes nothing.
 
   python3 install.py --list                                   # the agents this library holds
@@ -64,7 +64,7 @@ def main(argv: list[str] | None = None) -> int:
     if add and remove:
         ap.error("pass --add or --remove, not both")
     if [k for k in remove if k in roster["system"]]:
-        ap.error("the company system (company, orchestrator) always runs and cannot be removed")
+        ap.error("the company system (company, manager) always runs and cannot be removed")
     dest = (args.dest or (Path(os.environ.get("CODEX_HOME") or Path.home() / ".codex") if args.host == "codex" else Path.cwd() / ".claude")).expanduser()
     skills = dest / "skills"
     if skills.is_symlink():

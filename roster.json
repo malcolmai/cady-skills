@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "4f6b282d31bd61fc",
-    "version": "4f6b282d31bd61fc6e1c2ad63ef9f56911a4f8c93a6d15722a6d29822ecf7660"
+    "tag": "11f84d7fc246e41c",
+    "version": "11f84d7fc246e41c32fcebb51b7ecd252e38012ab30f5690e74440442f40898a"
   },
   "core": [],
   "standalone": [
@@ -10,7 +10,7 @@
   ],
   "system": [
     "company",
-    "orchestrator"
+    "manager"
   ],
   "front_door": "plugins/cady/skills/cady",
   "agents": {
@@ -28,16 +28,13 @@
         "cady-company-weekly-review"
       ]
     },
-    "orchestrator": {
-      "label": "Orchestrator",
+    "manager": {
+      "label": "Manager",
       "family": "company",
-      "purpose": "Keeps every goal moving across the families: progress, conflicts by point, allocation and pausing",
-      "card": "cady-orchestrator-method",
+      "purpose": "Gets each task to the right agent, keeps agents unstuck and sense-checks what comes back",
+      "card": "cady-manager-method",
       "skills": [
-        "cady-orchestrator-challenge",
-        "cady-orchestrator-goal-pass",
-        "cady-company-manage-agents",
-        "cady-company-decision"
+        "cady-manager-sense-check"
       ]
     },
     "gtm": {

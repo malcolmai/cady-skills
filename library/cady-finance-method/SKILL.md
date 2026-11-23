@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "0e6f8b2bb8ca8f136a76"
-  library: "4f6b282d31bd61fc"
+  version: "629c304e946bc571a4ac"
+  library: "11f84d7fc246e41c"
   function: "finance"
 ---
 # Finance
@@ -33,7 +33,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 
 ### Owns
 - Maintain a source-linked budget and cash view suited to stage and obligation; distinguish actuals, commitments, evidenced reservations and forecasts. Review material variance and uncertainty when it could change a choice.
-- A monthly cost review with `cady-finance-budget-review`: movers, renewals in their notice window, metered lines (cloud, AI APIs, ads) against their ceiling, and receivables. Ask the orchestrator for its schedule; weekly once runway is under six months.
+- A monthly cost review with `cady-finance-budget-review`: movers, renewals in their notice window, metered lines (cloud, AI APIs, ads) against their ceiling, and receivables. Ask for its schedule through host setup (`cady-company-manage-agents` step 10); weekly once runway is under six months.
 - Compare new purchases and renewals for full-term benefit, total commitment, cash timing, credible cheaper effective alternatives and exit. Use `cady-finance-vendor-spend-review` for the detailed decision.
 
 ### Decides
@@ -47,7 +47,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 
 ### Hands off
 - Finance prepares and plans tax; Company Operations holds the filing deadline in the register; the person who files signs.
-- Integrations owns provider technical selection, account, access and credential boundaries. Operations owns operational-risk oversight and vendor delivery; Finance retains budget and embedded financial controls. Systems coordination belongs to the orchestrator.
+- Integrations owns provider technical selection, account, access and credential boundaries. Operations owns operational-risk oversight and vendor delivery; Finance retains budget and embedded financial controls. Systems coordination belongs to the manager.
 - Give the qualified ledger, filing, payment or provider owner the exact source-linked preparation and pending decision; claim completion only from its receipt.
 
 ### Receipts
