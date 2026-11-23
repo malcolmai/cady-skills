@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.debugging"
   version: "764b800f124c3dcc8b07"
-  library: "9cb59dc004199ad9"
+  library: "c141a0e7fa51c493"
   function: "engineering"
 ---
 # Debugging and incident response
