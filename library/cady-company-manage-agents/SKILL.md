@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "203efe0f7c79257d85ca"
-  library: "4f6b282d31bd61fc"
+  version: "3d53034b6b6a10615361"
+  library: "11f84d7fc246e41c"
   function: "company"
 ---
 # Manage company agents
@@ -62,7 +62,7 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 7. Authority. Read the company's permission modes first (cady_read {refs: ["company:values"]}, the permission modes line). Effects follow the core's approval rule. No mode lets you send without that approval or a grant; limits text is not enforcement. Never approve for the person: their own decision covers every grant (send, spend, publish, sign, file), an invite, share or outreach effect in approval mode, new access or capture, widening permissions, a design change to a grant-holding agent and raising cadence or cost; per grant when critical. An agent acts with its owner's permissions, and its lifecycle is the owner's. Going live, from draft, paused or retired, is agents_set status live, by the owner or the owner's own agent, with no approval asked; each outside effect keeps its own approval.
 8. Review this host's agents by risk class, with evidence from runs, receipts, cady_read changes {kind: agents} and transcripts (never bodies). Pause one that is not up to scratch (step 9); redesigning it is the Executive's (`cady-company-weekly-review` step 5), never the pausing agent's.
 9. Retire or pause an agent only when it is confirmed obsolete or met its end condition, and adopt an existing company scheduled task only on the owner's yes: read the agent design, setup, review and retirement reference (it confirms an unscheduled task with agents_set host {action: removed}).
-10. Host setup, for the orchestrator on its host. Once the owner has approved the agents the Executive designs, bind each live one whose host.id (agents_read) is empty or is your own agent's host.id (agents_set host {action: bind}, expectedRevision as read). A bind moves an agent on another host here: leave it, and any you cannot tell, unless the owner asks you to move it. Register each bound agent's cadence with the exact localSchedule command the bind reply carries, and check every live agent has open work (cady_read), filing its next task under its goal or handing the gap to the Executive. When an agent's machine is not connected, note it and continue some other way (the agent_hosts reference). Each run, remove or pause each triggersToRemove trigger here, then make its next call.
+10. Host setup, on the host that runs the agents. Once the owner has approved the agents the Executive designs, bind each live one whose host.id (agents_read) is empty or is your own agent's host.id (agents_set host {action: bind}, expectedRevision as read). A bind moves an agent on another host here: leave it, and any you cannot tell, unless the owner asks you to move it. Register each bound agent's cadence with the exact localSchedule command the bind reply carries, and check every live agent has open work (cady_read), filing its next task under its goal or handing the gap to the Executive. When an agent's machine is not connected, note it and continue some other way (the agent_hosts reference). Each run, remove or pause each triggersToRemove trigger here, then make its next call.
 
 ## Acceptance
 

@@ -422,9 +422,9 @@
 - **Status:** current
 - **Tier:** workhorse
 - **Use cases:** cheap coding writer: mechanical edits, bulk deletions, test fixes
-- **Refresh:** The orchestrator re-checks this registry every 7 days, sooner when a new model ships. Find new releases on https://aireleasetracker.com/, read general early feedback to judge whether a new model is good, and weight our own measured experience on real tasks above both. Drop a model from the registry once a newer one covers its work; do not keep exclusion lists. Past stale_after_days the registry is served with stale: true; treat its prices and picks as possibly out of date, never as a refusal.
+- **Refresh:** The library's maintainers re-check this registry every 7 days, sooner when a new model ships. Find new releases on https://aireleasetracker.com/, read general early feedback to judge whether a new model is good, and weight our own measured experience on real tasks above both. Drop a model from the registry once a newer one covers its work; do not keep exclusion lists. Past stale_after_days the registry is served with stale: true; treat its prices and picks as possibly out of date, never as a refusal.
 - **Refresh every days:** 7
-- **Refresh owner:** orchestrator
+- **Refresh owner:** library maintainers
 - **Selection criterion:** None: the host chooses. The registry only prices what was used.
 - **Stale after days:** 14
 

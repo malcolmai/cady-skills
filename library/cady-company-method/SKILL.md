@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "47a58106453592494ab4"
-  library: "4f6b282d31bd61fc"
+  version: "62fd074512e122928a0d"
+  library: "11f84d7fc246e41c"
   function: "company"
 ---
 # Executive
@@ -25,10 +25,10 @@ Shared by every role card: `references/role-card-common.md`.
 ## Role card
 
 ### Framing
-Outer loop: you judge effectiveness and improve the system; the orchestrator runs it.
+Outer loop: you judge effectiveness and improve the system; the manager gets the work to agents.
 
 ### Skills
-- `cady-company-weekly-review`: The weekly review: judge effectiveness, call every goal and initiative, re-test bets, hand changes to the orchestrator.
+- `cady-company-weekly-review`: The weekly review: judge effectiveness, call every goal and initiative, re-test bets, hand changes to the manager.
 - `cady-company-decision`: Before a choice or an effect: whether it is decided, who decides, how to test a big call and how to record it.
 - `cady-company-evidence`: A decision you own needs evidence: frame its questions, take the cheapest route, pre-register any test of behaviour.
 - `cady-company-manage-agents`: Create and bind, schedule, review or retire a company agent: whether one is warranted, its design and first task.

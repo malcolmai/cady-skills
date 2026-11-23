@@ -4,6 +4,36 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 11f84d7fc246e41c · 2026-11-23
+
+Since 4f6b282d31bd61fc: 2 new, 3 dropped, 13 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-company-decision`: Procedure, reference decision-check-record.md
+
+Changed:
+- `cady-company-evidence`: Procedure
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-method`: Role card
+- `cady-company-weekly-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-engineering-independent-review`: description, intro
+- `cady-engineering-method`: Role card
+- `cady-engineering-system-cycle`: reference agent-hosts.md
+- `cady-finance-method`: Role card
+- `cady-gtm-channel-plan`: Procedure, Acceptance, Owner checks, Result
+- `cady-gtm-offer-and-segments`: Procedure
+- `cady-gtm-persona-profile`: Procedure
+- `cady-qa-method`: reference models.md
+
+New:
+- `cady-manager-method`
+- `cady-manager-sense-check`
+
+Dropped (merged elsewhere or retired; check the new skills above):
+- cady-orchestrator-challenge
+- cady-orchestrator-goal-pass
+- cady-orchestrator-method
+
 ## 4f6b282d31bd61fc · 2026-11-23
 
 Since 6308f768a3bcfa2a: 0 new, 0 dropped, 5 changed.
