@@ -505,6 +505,16 @@
           "type": "integer",
           "minimum": 1,
           "description": "How many folder levels below each root to list; 2 when left out."
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The section's name where the map is drawn, such as Backend; Code when left out. List the roots in the order a reader should meet them (for example lowest layer first)."
+        },
+        "point": {
+          "type": "string",
+          "minLength": 1,
+          "description": "One line on how to read the roots' order, such as the rule that orders them (lowest layer first)."
         }
       }
     },
