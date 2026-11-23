@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-23T00:00:00Z",
   "bundle": {
-    "tag": "6308f768a3bcfa2a",
-    "version": "6308f768a3bcfa2a11222a5c83f36e52fd5378bf74df60ddbb83185eb31d55df",
-    "pluginVersion": "2026.11.23-6308f768"
+    "tag": "4f6b282d31bd61fc",
+    "version": "4f6b282d31bd61fc6e1c2ad63ef9f56911a4f8c93a6d15722a6d29822ecf7660",
+    "pluginVersion": "2026.11.23-4f6b282d"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.23-6308f768"
+    "version": "2026.11.23-4f6b282d"
   },
   "skills": [
     {
@@ -51,7 +51,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "9e85f22d486074a944c9"
+      "version": "203efe0f7c79257d85ca"
     },
     {
       "name": "cady-company-method",
@@ -81,7 +81,7 @@
       "name": "cady-company-operations-inbox-follow-through",
       "path": "library/cady-company-operations-inbox-follow-through",
       "cadyId": "skill.company_operations.inbox_follow_through",
-      "version": "83d6b498dc842578693c"
+      "version": "e62f921bb41c62f105eb"
     },
     {
       "name": "cady-company-operations-method",
@@ -93,7 +93,7 @@
       "name": "cady-company-operations-people-lifecycle",
       "path": "library/cady-company-operations-people-lifecycle",
       "cadyId": "skill.company_operations.people_lifecycle",
-      "version": "105a722e68e6da92fcbb"
+      "version": "e27447781444efa92ad9"
     },
     {
       "name": "cady-company-operations-requirement-register",
@@ -333,7 +333,7 @@
       "name": "cady-orchestrator-goal-pass",
       "path": "library/cady-orchestrator-goal-pass",
       "cadyId": "skill.orchestrator.goal_pass",
-      "version": "6d3a716c75f657bb7189"
+      "version": "a4f5dfb267560c2765bd"
     },
     {
       "name": "cady-orchestrator-method",
@@ -351,7 +351,7 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "6dd40b36dd3bf60403a5"
+      "version": "21169e8df19e17dc4b7b"
     },
     {
       "name": "cady-product-map",
