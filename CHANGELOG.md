@@ -4,6 +4,41 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## eecea95663a9deaf · 2026-11-23
+
+Since 11f84d7fc246e41c: 4 new, 7 dropped, 14 changed.
+
+Changed:
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-taste-review`: reference taste-check.md
+- `cady-company-weekly-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-design-method`: Role card, removed Skills, reference engineering-cycle-dimensions.md, reference quality-classes.md, reference taste-check.md
+- `cady-engineering-independent-review`: Independent review, reference engineering-cycle-dimensions.md, reference quality-classes.md
+- `cady-engineering-method`: description, intro, Role card, Parent function, reference agent-stop.md, reference asking.md, reference domain-method.md, reference quality-classes.md, reference receipts.md, reference role-card-common.md, reference run-reporting.md, reference selected-judgment.md
+- `cady-finance-method`: Role card
+- `cady-fundraise-investor-outreach`: reference taste-check.md
+- `cady-fundraise-raise-materials`: reference taste-check.md
+- `cady-gtm-voice-pack`: reference taste-check.md
+- `cady-product-customer-interview`: description, intro, Inputs, Procedure, Acceptance, Result, removed Owner checks, removed References, reference intro-request.md
+- `cady-product-map`: description, intro, Inputs, Procedure, Acceptance, Result, References, removed Owner checks, reference engineering-cycle-dimensions.md, reference product-map.md, reference quality-classes.md
+- `cady-product-method`: description, intro, Role card, Parent function, reference agent-stop.md, reference asking.md, reference company-goals.md, reference domain-method.md, reference quality-classes.md, reference role-card-common.md, reference run-reporting.md, reference selected-judgment.md
+- `cady-product-research`: description, intro, Inputs, Procedure, Acceptance, Result, removed Owner checks, removed References, reference competition.md, reference competitor-profile.md, reference technology.md
+
+New:
+- `cady-devops-method`
+- `cady-devops-stories`
+- `cady-devops-wcag-audit`
+- `cady-engineering-fix`
+
+Dropped (merged elsewhere or retired; check the new skills above):
+- cady-design-wcag-audit
+- cady-engineering-debugging
+- cady-engineering-system-cycle
+- cady-product-manage
+- cady-qa-method
+- cady-qa-stories
+- cady-qa-triage
+
 ## 11f84d7fc246e41c · 2026-11-23
 
 Since 4f6b282d31bd61fc: 2 new, 3 dropped, 13 changed.

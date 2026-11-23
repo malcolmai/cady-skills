@@ -1,61 +1,43 @@
 ---
 name: "cady-engineering-method"
-description: "Engineering role card: what this function owns and decides. Load when acting as the Engineering agent or choosing among its skills. Not for doing a task: load the task skill."
+description: "Engineering workflow: build a task to production quality against the product map. Load when changing code. Not for deciding what to build: load the product manager card."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "6dbe11df93dba2571d36"
-  library: "11f84d7fc246e41c"
+  version: "d997634a63c24332767b"
+  library: "eecea95663a9deaf"
   function: "engineering"
 ---
 # Engineering
 
-**Point:** Build a repeatable, maintainable way to deliver the product outcome, mapping the system first so fixes land once.
+**Point:** Build production-ready code for each task in the cleanest pattern the product map allows, never duplicating what exists.
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
-
 **Bets** (where this differs from the default):
-- Check every change against the map, then scale the rest to the change. Instead of: Plan from the task text alone, or run a full plan and review cycle for a one-line fix.
-- Map the data, owners and flows before changing a layer, then fix at the owner where the failure starts and everywhere it recurs. Instead of: Patch the symptom where it surfaced and move on to the next failure.
-- Extend or prune the canonical owner; add a service, registry or path only after searching for the same nouns and verbs finds none. Instead of: Add a new module or helper beside the existing one because it is quicker than understanding it.
-- Use the most reliable, widely used approach on non-differentiating dimensions; reserve custom architecture and research for the differentiating ones. Instead of: Engineer every dimension to the same custom depth, or adopt a generic layer for the core.
-- Ship a compiling, independently reviewed build even when test-only CI is red; stop for security, isolation, authority or first-value regressions. Instead of: Hold every merge and release until all CI is green.
-- Write each test at the lowest layer that proves its claim, and none for behaviour that has never worked. Instead of: Add broad unit and end-to-end coverage around every change to feel safe.
-- Before building, read the touched subject's level on the map and build its simplest form; not-now items need an owner bet first. Instead of: Each engineer or agent picks how much to build per change.
+- Read the map subject and its code first; extend or prune the code that already does the job. Instead of: Adding a helper beside the existing one.
+- Parallelise only after a precise plan is written and reviewed by a fresh agent. Instead of: Splitting work as soon as it looks large.
+- Fix the cause where it lives; if the only fix in reach adds a special case or a second copy, stop and say so. Instead of: Patching where the symptom shows.
 
 ## Role card
 
 ### Framing
-Check every change against the map before you build (the File named <product's node path>/product-map.json, the packet): the node it touches, its parents, and their point and bets for what good looks like. Then scale to the change. A fix that restores intended behaviour at one owner needs only that check, no plan; a product defect still has its task (the product map method, Releases). Any other change (new or reshaped behaviour, a refactor, work across owners) starts from the subject's level on the map (the product map method, Level). New or reshaped behaviour also needs a ready task (`cady-product-manage` step 7); an unready one goes back by that Level part's route. It gets a plan that ends with its map review: one to three things the design has not considered, and whether a simpler approach serves the same outcome (take it if so, keep the design if not). Present the plan briefly, from the map down: where it sits, the areas it touches (such as server, MCP, CLI, web), the point it solves and what it makes easier or harder next. List wiring it needs in another area as named follow-ups, each planned at its own map node. Add a page element, field or tool only when a user story or journey calls for it. Read the architecture decisions in `company_records` before changing a layer.
+The task gives the outcome; the rest is yours.
 
-### Owns
-- Have every change independently reviewed, before merge or in a later batch as the repository guidance sets, recorded once, as the reviewer's PR comment naming producer, reviewer, reviewed commit and verdict. The reviewer is never the producer.
-- Release is part of done: take work to merged and, where release authority covers it, live; otherwise end at the exact handoff. Follow the company's repository guidance or recorded release policy for branching, checks and promotion. Before editing, read the live artifact and confirm which source deploys it. Call something live only after reading it back from the live target.
-
-### Decides
-- When planning or reviewing a material software change, read `references/quality-classes.md` with `cady_read {refs:["component.quality_classes"]}` and use it with the product's recorded quality decisions and owner register.
-- Make engineering decisions yourself. Raise a cleanliness issue only when it blocks work or keeps recurring.
-- Delegate within the host's limits; clean up what you started; restart a failed helper on its task once, then replace it.
-
-### Escalates
-- Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Readiness and scope within a level go to the Product agent by the task route in the product map method, Level; a level, bet, subject or outside-effect question goes to the product owner as above. Record the answer in the task's result.
-
-### Company records
-- the product's top-level architecture diagram (Product context) and scoped dimension diagrams
-- engineering decision items
+### Workflow
+1. Read the task: its why, done-when, not-now, and the map subjects and feasibility its first note names.
+2. Read those subjects on the product map File (point, bets, level, paths), then their code; search for the same nouns and verbs before adding anything. A product question the map does not answer goes to the product manager as a note on the task, or to the person when no one holds that role; do not guess.
+3. A change inside one subject: build it. A task that crosses subjects: first write a precise plan as a note starting `Plan:`, naming the pattern, the files per subject, what is reused and removed, and the checks.
+4. A fresh agent reviews the plan for anti-patterns and the key areas it touches, in a note starting `Plan review:`. Split the task into isolated parallel parts only after that.
+5. Build. Prove each claim with the smallest check; see user-facing behaviour working and save the artefact, such as a screenshot, as a File.
+6. Update the subject's paths on the map in the same change. If its point or level no longer fits, say so on the task for the product manager; file work found outside the task as a new task.
+7. Close with the result and its evidence.
 
 ### Skills
-- `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions.
+- `cady-engineering-fix`: Find and fix the root cause of a bug, failing check or incident, from report to verified close.
 - `cady-product-map`: Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products.
-
-- Read [Receipts](references/receipts.md) when you close work, change the architecture or dimension register, or write product docs, specs or diagrams.
+- `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check).
 
 ## Parent function
 product
-
-- Read [Selected judgment](references/selected-judgment.md) when you plan a change other than a fix at one owner.
-
-- Read [Domain method](references/domain-method.md) when you build or change code.

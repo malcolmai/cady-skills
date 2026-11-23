@@ -24,7 +24,7 @@
 
 Place a whole-outcome failure under the journey. Other findings go to the class of their root cause, using the boundary sentences. If two classes still apply, use the lower-numbered class. A finding that moves cost between resources is judged under QC6 as a whole.
 
-For owner boundaries and active or folded owners, use `cady-engineering-system-cycle` step 3.
+For owner boundaries and active or folded owners, use the dimension register (`engineering-cycle-dimensions.md`).
 
 | Change touches | Default classes |
 |---|---|
@@ -36,8 +36,6 @@ For owner boundaries and active or folded owners, use `cady-engineering-system-c
 | schema, migration or export | QC12, QC15, QC8 |
 | an external provider or route | QC10, QC11, QC7, QC4 |
 | release, config, deploy | QC15, QC9, QC8 |
-
-For bug-fix planning, use `cady-engineering-system-cycle` step 5.
 
 Measures are proxies and evidence, never targets; budgets set by us stay flags, while external hard limits remain hard: choose the correct, proper solution even when it misses a number. A release threshold may cite a differentiating class measure as evidence; judge a miss against the scenario. Decision concerns map outcome_workflow to journeys, authority_security_privacy to Trust, data_performance_reliability to Operation, architecture_maintainability to Coherence and interface_accessibility to Understanding.
 

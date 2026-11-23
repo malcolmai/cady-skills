@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "e514ccfd53614dcb59b1"
-  library: "11f84d7fc246e41c"
+  version: "b321ed5b2ac289a08d22"
+  library: "eecea95663a9deaf"
   function: "design"
 ---
 # Design
@@ -38,7 +38,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - Make design decisions yourself; take product questions to the PM.
 
 ### Escalates
-- Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Readiness and scope within a level go to the Product agent by the task route in the product map method, Level; a level, bet, subject or outside-effect question goes to the product owner as above. Record the answer in the task's result.
+- Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. A product question the map does not answer goes to the product manager as a note on the task, or to the person when no one holds that role; the product manager asks the person only what the person alone can decide. Readiness and scope within a level go to the product manager by the task route in the product map method, Level. Record the answer in the task's result.
 
 ### Company records
 - the design system Files
@@ -49,8 +49,8 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - workhorse
 - vision
 
-## Skills
-- `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
+### Skills
+- `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check).
 
 ## Parent function
 product

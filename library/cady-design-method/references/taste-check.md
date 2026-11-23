@@ -14,8 +14,8 @@
 
 ## Ui
 
-- Tools: render each changed state at desktop and narrow widths; run the accessibility and keyboard pass (cady-design-wcag-audit); check contrast, overflow and clipping, the project's lints, and a downscaled render for hierarchy. Code cannot prove a UI.
-- Judge: a vision-capable fresh judge writes its first impression before it sees the flow goal, then compares. Walk the journeys blind (cady-qa-stories). Close visual choices go to the owner as rendered pairs.
+- Tools: render each changed state at desktop and narrow widths; run the accessibility and keyboard pass (cady-devops-wcag-audit); check contrast, overflow and clipping, the project's lints, and a downscaled render for hierarchy. Code cannot prove a UI.
+- Judge: a vision-capable fresh judge writes its first impression before it sees the flow goal, then compares. Capture the journeys fresh (cady-devops-stories). Close visual choices go to the owner as rendered pairs.
 
 ## Visual
 

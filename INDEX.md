@@ -1,6 +1,6 @@
 # Cady agent library
 
-63 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
+60 skills. Each line: name, when to use it, and its path from the repository root at this release tag.
 
 Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/cady/SKILL.md`); the other skills are at `library/<name>/SKILL.md`.
 
@@ -42,20 +42,17 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 
 ## product
 - `cady-design-method`: Design role card: what this function owns and decides (`library/cady-design-method/SKILL.md`)
-- `cady-design-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings. (`library/cady-design-wcag-audit/SKILL.md`)
-- `cady-engineering-debugging`: Find and fix the root cause of a bug, failing check or production incident, then the regression test and postmortem. (`library/cady-engineering-debugging/SKILL.md`)
+- `cady-devops-method`: DevOps workflow, the QA card for a software business: improve the codebase, checks and verification engineering works in (`library/cady-devops-method/SKILL.md`)
+- `cady-devops-stories`: Write or edit a Story, capture its flow as screenshots for review, or file a failed step. (`library/cady-devops-stories/SKILL.md`)
+- `cady-devops-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and file ranked, reproducible findings. (`library/cady-devops-wcag-audit/SKILL.md`)
+- `cady-engineering-fix`: Find and fix the root cause of a bug, failing check or incident, from report to verified close. (`library/cady-engineering-fix/SKILL.md`)
 - `cady-engineering-independent-review`: a change needs review, before merge or in a later batch, or a decision others will build on before it is acted on. (`library/cady-engineering-independent-review/SKILL.md`)
 - `cady-engineering-integrations`: comparing, choosing or connecting a tool, data source or account. (`library/cady-engineering-integrations/SKILL.md`)
-- `cady-engineering-method`: Engineering role card: what this function owns and decides (`library/cady-engineering-method/SKILL.md`)
-- `cady-engineering-system-cycle`: Clear a product's engineering backlog in recurring cycles from its goal map, system dimensions and state-routed motions. (`library/cady-engineering-system-cycle/SKILL.md`)
+- `cady-engineering-method`: Engineering workflow: build a task to production quality against the product map (`library/cady-engineering-method/SKILL.md`)
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. (`library/cady-product-customer-interview/SKILL.md`)
-- `cady-product-manage`: Decide what to build and why; run discovery; plan releases and go/no-go; run a goal to done. (`library/cady-product-manage/SKILL.md`)
 - `cady-product-map`: Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products. (`library/cady-product-map/SKILL.md`)
-- `cady-product-method`: Product role card: what this function owns and decides (`library/cady-product-method/SKILL.md`)
-- `cady-product-research`: Write or update a research file (research/<title>.md) on competitors and alternatives, or on a technology. (`library/cady-product-research/SKILL.md`)
-- `cady-qa-method`: QA role card: what this function owns and decides (`library/cady-qa-method/SKILL.md`)
-- `cady-qa-stories`: Edit or retire a user story, walk one blind as a fresh user, read story status, or file a finding on a step. (`library/cady-qa-stories/SKILL.md`)
-- `cady-qa-triage`: Rate a bug's severity, write a reproducible report, triage a flaky test, or verify a fix before closing it. (`library/cady-qa-triage/SKILL.md`)
+- `cady-product-method`: Product manager workflow: research, the product map and the roadmap (`library/cady-product-method/SKILL.md`)
+- `cady-product-research`: Write or update a research file on how users see the product and its alternatives, or on a technology. (`library/cady-product-research/SKILL.md`)
 
 ## finance
 - `cady-accounting-method`: Accounting role card: what this function owns and decides (`library/cady-accounting-method/SKILL.md`)

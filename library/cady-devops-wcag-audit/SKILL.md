@@ -1,13 +1,13 @@
 ---
-name: "cady-design-wcag-audit"
-description: "Accessibility audit (WCAG 2.2 AA). Use when: Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings. Not for: Visual direction or layout critique (use `cady-design-method`), functional journey QA (use `cady-qa-method`) or a legal conformance statement (needs a qualified specialist)."
+name: "cady-devops-wcag-audit"
+description: "Accessibility audit (WCAG 2.2 AA). Use when: Audit a web or app interface against WCAG 2.2 AA with real tools and file ranked, reproducible findings. Not for: Visual direction or layout critique (`cady-company-taste-review`), capturing a journey (`cady-devops-stories`) or a legal conformance statement (needs a qualified specialist)."
 license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
-  cady-id: "skill.design.wcag_audit"
-  version: "33e5aa60916093312b08"
-  library: "11f84d7fc246e41c"
-  function: "design"
+  cady-id: "skill.devops.wcag_audit"
+  version: "7a2d310fc47eb2c02a0c"
+  library: "eecea95663a9deaf"
+  function: "devops"
 ---
 # Accessibility audit (WCAG 2.2 AA)
 
@@ -21,9 +21,9 @@ metadata:
 - Fix with native elements and visible labels before reaching for ARIA. Instead of: Add aria-label and roles wherever the scanner complains.
 - State the scope and build audited and never call a sampled audit 'WCAG compliant'. Instead of: Summarise a clean audit as conformance.
 
-Audit a web or app interface against WCAG 2.2 AA with real tools and report ranked, reproducible findings.
+Audit a web or app interface against WCAG 2.2 AA with real tools and file ranked, reproducible findings.
 
-**Not for:** Visual direction or layout critique (use `cady-design-method`), functional journey QA (use `cady-qa-method`) or a legal conformance statement (needs a qualified specialist).
+**Not for:** Visual direction or layout critique (`cady-company-taste-review`), capturing a journey (`cady-devops-stories`) or a legal conformance statement (needs a qualified specialist).
 
 **Unit of work:** one product surface or journey at one build. **Kind:** execution. **Parallel:** yes. 
 
@@ -46,7 +46,7 @@ Audit a web or app interface against WCAG 2.2 AA with real tools and report rank
 8. Pointer and touch (2.5.7, 2.5.8): targets are at least 24 by 24 CSS px or spaced so a 24px circle fits; aim for 44px on primary touch controls. Any drag has a single-pointer alternative.
 9. Zoom and reflow (1.4.4, 1.4.10, 1.4.12, 1.3.4): at 200% zoom nothing is lost; at 320 CSS px wide (1280px at 400%) text content needs no horizontal scrolling; the text-spacing override clips nothing; orientation is not locked.
 10. WCAG 2.2 additions: help appears in a consistent place (3.2.6); users are not asked to re-enter what they already gave in the same process (3.3.7); sign-in needs no cognitive test, so paste and password managers work (3.3.8).
-11. Report one finding per issue per component, merging repeats of a shared component into one finding with its instances. Each finding: criterion number and name, location (page, state and selector, or story:<slug>#<stepId>), steps with the tool or screen reader used, expected versus actual, who is blocked, a severity from `cady-qa-triage` and a suggested fix. A keyboard trap or an unlabelled primary action on a core journey is a blocker; failing body-text contrast is critical or major. Keep captures as Files and record findings as Projects items. List what passed, what failed and what was not tested with the reason.
+11. File one task per issue per component, merging repeats of a shared component into one task with its instances. Each task: criterion number and name, location (page, state and selector, or story:<slug>#<stepId>), steps with the tool or screen reader used, expected versus actual, who is blocked, a severity by user impact and a suggested fix. A keyboard trap or an unlabelled primary action on a core journey is a blocker; failing body-text contrast is critical or major. Keep captures as Files. In the audit task's result, list what passed, what failed and what was not tested, with the reason.
 12. Also check: text alternatives for images, with empty alt for decorative ones and names for icons (1.1.1); autocomplete tokens on personal-data fields (1.3.5); tooltips and hover or focus menus are dismissible, hoverable and persistent (1.4.13); link text states its purpose (2.4.4); captions and transcripts for media (1.2.x); no context change on focus or input (3.2.1, 3.2.2); a skip link or landmarks bypass repeated blocks (2.4.1).
 13. Verify fixes with the same tool and screen reader that found them, then rerun the automated pass.
 14. Gotchas: adding aria-label everywhere is not a fix and can hide visible text; aria-hidden on a focusable element creates a ghost stop; an overlay widget does not make a site conformant; a sampled audit never supports a 'WCAG compliant' claim, so state the scope and build audited.
@@ -69,4 +69,4 @@ Audit a web or app interface against WCAG 2.2 AA with real tools and report rank
 
 - company:work:<workId>
 - file:<fileId>
-- **Transition:** findings go to the design or engineering owner; QA verifies each fix
+- **Transition:** findings are filed as tasks for their fix owner; each fix is verified with the tool that found it
