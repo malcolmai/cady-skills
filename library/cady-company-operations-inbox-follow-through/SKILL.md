@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "83d6b498dc842578693c"
-  library: "6308f768a3bcfa2a"
+  version: "e62f921bb41c62f105eb"
+  library: "4f6b282d31bd61fc"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
@@ -53,7 +53,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 8. Record only material communication evidence with crm_interactions_set (kind reply for an actual response, note for an observation, provider message id as sourceRef (for pasted mail, a stable host reference or deterministic digest, never a raw subject), sender party, time and one-line outcome). Never put body, subject or attachments in Cady. Resolve an unknown sender using authorized CRM/source evidence; if identity remains unknown, do not invent a party or permission. Create a party through crm_set only when identity is sufficiently evidenced and durable CRM identity is useful; otherwise ask only if the ambiguity changes a consequential next action.
 9. For material threads, identify outcome and owner/work; check latest counterparty mail against unresolved older requests. Generic status does not complete the goal. Finish useful investigation/preparation within mandate: deliver the assessment or draft, then ask only for the missing decision/approval. No request does not mean done.
 10. Reuse existing work or a native reminder; never create per-email or duplicate work. Add obligation metadata only when useful for retrieval or fulfillment. Preserve source, certainty, promisor and date precision; never infer them. Use the supported reporting or focused-update route. See [Commitment updates and takeaway routing](references/inbox-follow-through-details.md) for owner routes.
-11. Reconcile due awaiting commitments even without new mail: record who acts next and a justified chase date. Awaiting is not blocked or Needs-you without a person action. Keep unfinished outcomes open and completed work terminal; cancellation is not fulfillment. Stop denied mutations and continue independent work. Route material takeaways once; routine mail writes nothing. Use the commitment reference for corrections and CRM-specific routes.
+11. Reconcile due awaiting commitments even without new mail: record who acts next and a justified chase date. Awaiting is not blocked or a Todo item without a person action. Keep unfinished outcomes open and completed work terminal; cancellation is not fulfillment. Stop denied mutations and continue independent work. Route material takeaways once; routine mail writes nothing. Use the commitment reference for corrections and CRM-specific routes.
 12. For mailbox maintenance, audit a random 2% of previously suppressed mail (at least 5, or all if fewer). This default is not proof of safety. One that needed action is a misfile: demote that group to read-individually, pull the message out, handle it, and count it as misfiled.
 13. Unread archive rules remain company decisions under inbox.suppress:<sender-or-list-slug>, with sample evidence and reviewBy at most 30 days away. Marketing keep/ignore policy is a separate inbox:marketing-treatment decision; preserve its existing choice, and ask once only when a relevant item exposes a missing decision.
 14. Report user actions (type, owner, deadline, earliest first), owed-by/to items and waits. Include run counters: groups, sampled, pulledOut, suppressed, audited, misfiled, obligations written, superseded, refused.
@@ -63,7 +63,7 @@ Bounded inbox maintenance or thread triage for follow-through, marketing handlin
 - [ ] no message was suppressed from headers alone: every suppressed group was sampled and outlier-scanned
 - [ ] known parties, people the user has written to and threads the user is on were read individually
 - [ ] material outcomes and dependencies remain open until evidenced complete; work or reminders are reused and optional terms preserve source, known promisor and supplied date precision without duplicating the outcome
-- [ ] an awaiting obligation carries waitingOn and chaseAt and is not in Needs-you
+- [ ] an awaiting obligation carries waitingOn and chaseAt and is not in Todo
 - [ ] completed work stays terminal on replay; genuinely new commitments use explicit successor lineage, while an erroneous completion follows the supported correction route
 - [ ] takeaways reach their owner only when important: routine mail writes nothing to the CRM or context; a deferral is a track, a stop is a permission, an owner decision is a quoted decision
 
