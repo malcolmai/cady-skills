@@ -688,8 +688,6 @@ class Map:
             parts = f.split("/")[:-1]
             for n in range(1, len(parts) + 1):
                 below.setdefault("/".join(parts[:n]), []).append(f)
-        counts = {path: len(files) for path, files in below.items()}
-        under = lambda path: below.get(path, [])
         for root in (r.rstrip("/") for r in spec.get("roots") or []):
             found = {root: 0}
             for f in self.tracked():
@@ -699,14 +697,18 @@ class Map:
                         found.setdefault(root + "/" + "/".join(parts[:n]), n)
             for path in sorted(found):
                 owner = self.owner_path(path)
-                row = {"path": path, "depth": found[path], "point": path_point(self.root, path), "owner": owner[1] if owner else None,
-                       "files": counts.get(path, 0)}
+                facts = self.path_facts(path, below.get(path, []))
                 # Lines and the largest files go into the packet only: the Markdown draws a folder's path, owner and point, so it stays stable.
-                sized = sorted(((f, self.lines_of(f)) for f in under(path)), key=lambda x: (-x[1], x[0]))
-                row["lines"] = sum(n for _, n in sized)
-                row["largest"] = [{"path": f, "lines": n} for f, n in sized[:5] if n]
-                rows.append(row)
+                rows.append({"path": path, "depth": found[path], "point": facts["point"], "owner": owner[1] if owner else None,
+                             "files": facts["files"], "lines": facts["lines"], "largest": facts["largest"]})
         return rows
+
+    def path_facts(self, path: str, files: list[str]) -> dict:
+        """What the repository proves about one path over the files counted for it: its point, how many files and lines, and its five
+        largest files. The code map counts every file below a folder; a caller that attributes files elsewhere passes its own list."""
+        sized = sorted(((f, self.lines_of(f)) for f in files), key=lambda x: (-x[1], x[0]))
+        return {"path": path, "files": len(sized), "lines": sum(n for _, n in sized), "point": path_point(self.root, path),
+                "largest": [{"path": f, "lines": n} for f, n in sized[:5] if n]}
 
     def sections(self) -> str:
         """The optional sections, each drawn only when the source holds it, the same way for every product."""
