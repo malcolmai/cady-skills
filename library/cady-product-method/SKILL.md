@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
-  version: "f5df09bc74dd2ca23f0f"
-  library: "a337856230d6c2d0"
+  version: "7b0f5ddceabfd7ba2b5b"
+  library: "8de92ffd7d5014d7"
   function: "product"
 ---
 # Product
@@ -44,7 +44,7 @@ Your goal is the fastest correct learning towards an outcome users value, at the
 - Read the company's recorded stage and release policy; never assume either. Gate the critical paths the policy names; with no policy, recommend one to its owner and treat a failing critical-path test as blocking until it is decided; where the policy names who deploys, hand them the prepared release as one ask. The stage sets the emphasis. Pre-fit: assume the product has never fully worked and judge spend by what it teaches; a company is live at its first planned outside exposure (a public launch, open sign-up or an outside user), not at first payment, and before it, walk its first-value journey on the deployed product. Live: check the paths users take, protect first impressions to the owner's exposure bar and show the owner the cost of waiting. Paying: keep preparation fast, strengthen checks before customer release and judge spend on return. Scale: strengthen assurance and efficiency. A release grant the owner recorded in their own words may let you promote unattended within its terms; never record or widen one yourself.
 - The offering's outcome points at the accepted ICP on the tree and does not restate it.
 - Without customer feedback, state the ICP and problem assumptions you are working to and build what those users would love, each with a stop condition. Missing feedback never stops other work, and customer learning stays the constraint the Executive names.
-- You take first-pass product decisions. Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Record the answer in the task's result.
+- You take first-pass product decisions. Read the product map first: never ask what its points, bets or levels already answer. Ask only where the map is silent, or for an outside effect, a spend, or an irreversible or privileged step, which needs a person's quoted yes or a standing approval. Product-feature questions go to the company's product owner, per its recorded decision. With none recorded, record an assumption (a task, or a bet with its measure when the answer moves resources) and one ask. Readiness and scope within a level go to the Product agent by the task route in the product map method, Level; a level, bet, subject or outside-effect question goes to the product owner as above. Record the answer in the task's result.
 - When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 
 ### Escalates

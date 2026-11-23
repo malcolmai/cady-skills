@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-23T00:00:00Z",
   "bundle": {
-    "tag": "a337856230d6c2d0",
-    "version": "a337856230d6c2d0a40b08124f9f050d55f8c28c33d51f10f1b9e6ae83ba042a",
-    "pluginVersion": "2026.11.23-a3378562"
+    "tag": "8de92ffd7d5014d7",
+    "version": "8de92ffd7d5014d759071e4a176f38e63bf6d6c562de89d4bd363a24558c954c",
+    "pluginVersion": "2026.11.23-8de92ffd"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.23-a3378562"
+    "version": "2026.11.23-8de92ffd"
   },
   "skills": [
     {
@@ -129,7 +129,7 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "1e13016962e739e0ef4f"
+      "version": "d962c597b43efefcbf84"
     },
     {
       "name": "cady-design-wcag-audit",
@@ -147,7 +147,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "2b5c3b7f4aca82783927"
+      "version": "fce3699e90075971520a"
     },
     {
       "name": "cady-engineering-integrations",
@@ -159,13 +159,13 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "213800765b3995e7dcd5"
+      "version": "afc54d37e1164466b5c5"
     },
     {
       "name": "cady-engineering-system-cycle",
       "path": "library/cady-engineering-system-cycle",
       "cadyId": "skill.engineering.system_cycle",
-      "version": "f45d23c29ede55e61114"
+      "version": "2ef01caef2ea314d3d18"
     },
     {
       "name": "cady-finance-budget-review",
@@ -351,19 +351,19 @@
       "name": "cady-product-manage",
       "path": "library/cady-product-manage",
       "cadyId": "skill.product.manage",
-      "version": "c4175659007df89d95d6"
+      "version": "6dd40b36dd3bf60403a5"
     },
     {
       "name": "cady-product-map",
       "path": "library/cady-product-map",
       "cadyId": "skill.product.map",
-      "version": "899a0e2b4240dd8a939d"
+      "version": "20d7debc09aecc6b89f1"
     },
     {
       "name": "cady-product-method",
       "path": "library/cady-product-method",
       "cadyId": "company.method.product",
-      "version": "f5df09bc74dd2ca23f0f"
+      "version": "7b0f5ddceabfd7ba2b5b"
     },
     {
       "name": "cady-product-research",
@@ -375,7 +375,7 @@
       "name": "cady-qa-method",
       "path": "library/cady-qa-method",
       "cadyId": "company.method.qa",
-      "version": "89e80466b1d7fed8272c"
+      "version": "a1a27bf1c86c2d6a4b6b"
     },
     {
       "name": "cady-qa-stories",
