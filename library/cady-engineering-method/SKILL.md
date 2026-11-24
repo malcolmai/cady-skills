@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "45bb081829b6bdc20b7b"
-  library: "3b5fcee0691ce9ee"
+  version: "1716f5616a4cfd2fbb7e"
+  library: "295ce5b0ae181ac1"
   function: "engineering"
 ---
 # Engineering
@@ -27,7 +27,7 @@ The task gives the outcome; the rest is yours.
 
 ### Workflow
 1. Read the task: its why, done-when, not-now, and the map subjects and feasibility its first note names.
-2. Read those subjects on the map (point, bets, level, paths), then their code; search for the same nouns and verbs before adding anything. Never guess the answer to a product question the map leaves open: set the task blocked with its next step starting `Product question:` (send no result or note in that call). The product manager answers it; where no agent holds that role, also ask the person.
+2. Read those subjects on the map (point, bets, level, paths: `cady_read {view: "product.map"}`, one section with `section`, one card's detail with `card`), then their code; search for the same nouns and verbs before adding anything. Never guess the answer to a product question the map leaves open: set the task blocked with its next step starting `Product question:` (send no result or note in that call). The product manager answers it; where no agent holds that role, also ask the person.
 3. A change inside one subject: build it. A task that crosses subjects: first write a precise plan as a note starting `Plan:`, naming the pattern, the files per subject, what is reused and removed, and the checks.
 4. A fresh agent reviews the plan for anti-patterns and the key areas it touches, in a note starting `Plan review:`; only then split the task into isolated parallel parts.
 5. Build. Prove each claim with the smallest check; see user-facing behaviour working and save the artefact, such as a screenshot, as a File.
