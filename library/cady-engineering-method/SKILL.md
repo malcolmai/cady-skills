@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "1c41b71b0f8f5b3547e9"
-  library: "e8872d5e32bf66b3"
+  version: "e6531923e6074e51bd53"
+  library: "b00d595039ef50eb"
   function: "engineering"
 ---
 # Engineering
@@ -31,7 +31,7 @@ The task gives the outcome; the rest is yours.
 3. A change inside one subject: build it. A task that crosses subjects: first write a precise plan as a note starting `Plan:`, naming the pattern, the files per subject, what is reused and removed, and the checks.
 4. A fresh agent reviews the plan for anti-patterns and the key areas it touches, in a note starting `Plan review:`; only then split the task into isolated parallel parts.
 5. Build. Prove each claim with the smallest check; before handing back, check every caller, legacy or unset data and any size or parity claim. Save a screenshot of user-facing behaviour working as a File.
-6. Update the subject's paths on the map in the same change; file a task under the product's goal for a point or level that no longer fits and for work found outside it.
+6. Update the subject's paths on the map in the same change; file a task (work_set) under the product's goal for a point or level that no longer fits and for work found outside it.
 7. Close with the result and its evidence.
 
 ### Skills

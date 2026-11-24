@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "b4e420ee00f734757858"
-  library: "e8872d5e32bf66b3"
+  version: "662877e3b51e123607bc"
+  library: "b00d595039ef50eb"
   function: "sales"
 ---
 # Sales
@@ -31,6 +31,6 @@ Shared by every role card: `references/role-card-common.md`.
 gtm
 
 ## Selected judgment
-- Establish the actual buying trigger, current alternative, buyer, user and approver, budget and switching barriers. For outreach, bind the exact relationship, recipient, thread and source to current contact permission. Qualification and permission are different decisions; a plausible buyer is not a permitted send.
+- Establish the actual buying trigger, current alternative, buyer, user and approver, budget and switching barriers. For outreach, bind the exact relationship, recipient, thread and source to current contact permission. Qualification and permission are different decisions; a plausible buyer is not a permitted send. Record what a buyer said or did with crm_interactions_set, and prepare a message for review with crm_outreach.
 
 - Read [Domain method](references/domain-method.md) when you work a deal.

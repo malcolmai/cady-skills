@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.devops"
-  version: "071efffd9581fb163f70"
-  library: "e8872d5e32bf66b3"
+  version: "047be92a391b19079bed"
+  library: "b00d595039ef50eb"
   function: "devops"
 ---
 # DevOps
@@ -31,7 +31,7 @@ You run the system pass: occasional, but it must happen. Product and taste calls
 3. Pick each fix's layer from the pyramid of trust, highest first. Codebase: agents copy the code, so keep imports one-way and one owner per job, remove or ban what is only safe with care, delete what excuses a quick fix, let folders carry context. Static analysis: eliminate the class of mistake, or lint it with a message naming the root fix. Verification: tests, screenshots, one name per feature on the map, and small command-line tools that save tokens. Prompts: last and short.
 4. Slowest step first: current fast tooling once it runs clean, checks cached by input hash, tests cloning one migrated template, shards by measured time, generated files off the merge path, patch-bound review, landing held only by manual production changes.
 5. Keep Stories current: each key flow captured as screenshots for a person to review.
-6. Change checks, lint rules, tests and tools yourself; for product code, file a task under the product's goal with the evidence and the layer you chose.
+6. Change checks, lint rules, tests and tools yourself; for product code, file a work_set task under the product's goal with the evidence and layer you chose.
 7. Update the map's QA subjects so each guarantee names its check; close with what can no longer go wrong and the time saved.
 
 ### Skills
