@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.decision"
-  version: "21130d5822f0744e0138"
-  library: "c88a1381819f2e20"
+  version: "172a53d3a3c616b57512"
+  library: "3b5fcee0691ce9ee"
   function: "company"
 ---
 # Who decides, and how to record it
@@ -42,7 +42,7 @@ Before a choice or an effect: whether it is decided, who decides, how to test a 
 4. A point or a bet on any node is yours to record, replace or rule out; it is current at once and the owner is told. A top-level call the owner has not stated, still contested after step 5's review, is an ask, not yours to pick. A grant, an approval, a payment, a one-way door and any outside effect (send, spend, sign, file, publish, share, invite, change access, delete or export data, anything irreversible) stay the person's unless a grant covers it: prepare it whole and raise one batched ask (asks_set) with a recommendation and options. An effect they asked for (switch on auto-send) is carried in that ask prepared exactly as it would run, never enabled by you: grants are the only standing permissions and the person's to give, through their answer on the approval route; record none in a goal, decision, schedule or role card. A payment or one-way-door ask leads with step 3's frame: the status quo, the outside view (or 'none') and the prediction, then the recommendation. An L1 goal change is yours only in notify mode. Asked by the manager, answer in that run with a recommendation, its reasons and the strongest alternative.
 5. For a decision others will build on, or one with real risk, get an independent review before acting (`cady-engineering-independent-review`): a fresh-context reviewer that did not produce the choice, given only the record (goal served, choice, alternatives, key assumption, evidence, tests run); for a one-way door a pre-mortem and a red team given the frame and evidence, never your recommendation. Fix what it finds and note it in rechecked; ask only what it cannot resolve.
 6. Record it in place (the record reference holds the fields). A settled call the person states in chat is company state now, even with no work item: record it at once as a bet (decisions_set {path, bet}; the tool says what a bet is and where it goes), read it back, and never infer a grant or ask it again. A premise they state with no record behind it is recorded as resting on their word, said so in why: not refused and never presented as verified. It releases no send, spend or permission; each keeps its own check or approval. What a node is for is decisions_set {path, point}; the by-subject form is not for strategy. A goal call is work_set {id, call, note}; a narrow call is the work result. A consequential call is also written whole as a File (files_set) the work result cites.
-7. Replace a wrong bet or rule it out in one call, anyone's, the owner's included; no reason or quote is needed. This never undoes an owner's stop. Record an owner's correction of an agent's work at the scope they gave it, never widened (a correction of one headline is not a rule for every draft). The record reference holds the calls and what replacing a bet never grants.
+7. Replace a wrong bet or rule it out in one call, anyone's, the owner's included; no reason or quote is needed. Then update, without asking, the open tasks that still state the old choice. This never undoes an owner's stop. Record an owner's correction of an agent's work at the scope they gave it, never widened (a correction of one headline is not a rule for every draft). The record reference holds the calls and what replacing a bet never grants.
 
 ## Acceptance
 

@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.fix"
   version: "41a6d0eace03d0c3ad24"
-  library: "c88a1381819f2e20"
+  library: "3b5fcee0691ce9ee"
   function: "engineering"
 ---
 # Fix a bug or failing check
