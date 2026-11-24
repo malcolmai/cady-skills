@@ -1,14 +1,14 @@
 {
   "schema": "cady.skills-export.v2",
-  "generatedAt": "2026-11-23T00:00:00Z",
+  "generatedAt": "2026-11-24T00:00:00Z",
   "bundle": {
-    "tag": "74d469977cd513e9",
-    "version": "74d469977cd513e93efa7ac474736e250509cd3096dc7be2f46f46e45bf51744",
-    "pluginVersion": "2026.11.23-74d46997"
+    "tag": "af69265a86507662",
+    "version": "af69265a86507662ed3c347178c854b50872a7cef37e6794931d10b37b8dfe16",
+    "pluginVersion": "2026.11.24-af69265a"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.23-74d46997"
+    "version": "2026.11.24-af69265a"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "31b0cbcb33ba6d0266c9"
+      "version": "6b10a9bddd5bb4123f0a"
     },
     {
       "name": "cady-company-decision",
@@ -111,7 +111,7 @@
       "name": "cady-company-weekly-review",
       "path": "library/cady-company-weekly-review",
       "cadyId": "skill.company.weekly_review",
-      "version": "5dee8005e0a3fcb189f8"
+      "version": "69d2ded9bcecce676363"
     },
     {
       "name": "cady-customer-success-lifecycle",
@@ -159,7 +159,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "573f0d2f7f75401178fb"
+      "version": "e4eadc6f528632f5e7cb"
     },
     {
       "name": "cady-engineering-integrations",

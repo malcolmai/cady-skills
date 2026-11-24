@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
   version: "66dcc3460fa07f19dfd9"
-  library: "74d469977cd513e9"
+  library: "af69265a86507662"
   function: "fundraise"
 ---
 # Fundraise
