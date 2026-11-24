@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-24T00:00:00Z",
   "bundle": {
-    "tag": "295ce5b0ae181ac1",
-    "version": "295ce5b0ae181ac13a5b3c0c8f3f06bbe58cd9ecf35722f8d24246098bd2965e",
-    "pluginVersion": "2026.11.24-295ce5b0"
+    "tag": "faa72b04bb0d3f10",
+    "version": "faa72b04bb0d3f1043aece59a268f4ae3e7537e19e2ec4fd7d6897522789bf74",
+    "pluginVersion": "2026.11.24-faa72b04"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.24-295ce5b0"
+    "version": "2026.11.24-faa72b04"
   },
   "skills": [
     {
@@ -51,7 +51,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "1a0279375b30f8b55248"
+      "version": "7412f631ab6b8e267255"
     },
     {
       "name": "cady-company-method",
@@ -63,7 +63,7 @@
       "name": "cady-company-onboarding",
       "path": "library/cady-company-onboarding",
       "cadyId": "skill.company.onboarding",
-      "version": "5676d608facb1c087e83"
+      "version": "9593a5d89120ac27f56e"
     },
     {
       "name": "cady-company-operations-compliance-register",

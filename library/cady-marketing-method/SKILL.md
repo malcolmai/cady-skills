@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
   version: "bc4530f031741e68783c"
-  library: "295ce5b0ae181ac1"
+  library: "faa72b04bb0d3f10"
   function: "marketing"
 ---
 # Marketing
