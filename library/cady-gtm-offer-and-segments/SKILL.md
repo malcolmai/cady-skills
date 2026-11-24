@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.offer_and_segments"
   version: "cf9f6e961d5a5cdb280a"
-  library: "1cfe41ed7fc8d3a1"
+  library: "243de32f67a754e0"
   function: "gtm"
 ---
 # Offer and persona

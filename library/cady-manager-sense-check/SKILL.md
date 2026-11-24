@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.manager.sense_check"
-  version: "9a80fd59247669184fd4"
-  library: "1cfe41ed7fc8d3a1"
+  version: "2ec9811ae8e7627644e4"
+  library: "243de32f67a754e0"
   function: "manager"
 ---
 # Sense-check a final response

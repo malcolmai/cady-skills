@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-24T00:00:00Z",
   "bundle": {
-    "tag": "1cfe41ed7fc8d3a1",
-    "version": "1cfe41ed7fc8d3a11de487cdd82c34297e723de937a8ba32af523b7b1af528aa",
-    "pluginVersion": "2026.11.24-1cfe41ed"
+    "tag": "243de32f67a754e0",
+    "version": "243de32f67a754e060aea8c7ae37bf1f86911617be17ecc19d748f377d100826",
+    "pluginVersion": "2026.11.24-243de32f"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.24-1cfe41ed"
+    "version": "2026.11.24-243de32f"
   },
   "skills": [
     {
@@ -327,7 +327,7 @@
       "name": "cady-manager-sense-check",
       "path": "library/cady-manager-sense-check",
       "cadyId": "skill.manager.sense_check",
-      "version": "9a80fd59247669184fd4"
+      "version": "2ec9811ae8e7627644e4"
     },
     {
       "name": "cady-marketing-method",
