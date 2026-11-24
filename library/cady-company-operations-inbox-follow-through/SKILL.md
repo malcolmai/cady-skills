@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
   version: "e62f921bb41c62f105eb"
-  library: "295ce5b0ae181ac1"
+  library: "faa72b04bb0d3f10"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
