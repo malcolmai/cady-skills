@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-24T00:00:00Z",
   "bundle": {
-    "tag": "c88a1381819f2e20",
-    "version": "c88a1381819f2e20bf7a5b4c69dcfc5aeb5b93b3f16fb10aa5ce6aa7e4b0b251",
-    "pluginVersion": "2026.11.24-c88a1381"
+    "tag": "3b5fcee0691ce9ee",
+    "version": "3b5fcee0691ce9ee2e91926bb7d32e90e2d8049337509c283ae2698a0eefeefc",
+    "pluginVersion": "2026.11.24-3b5fcee0"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.24-c88a1381"
+    "version": "2026.11.24-3b5fcee0"
   },
   "skills": [
     {
@@ -39,7 +39,7 @@
       "name": "cady-company-decision",
       "path": "library/cady-company-decision",
       "cadyId": "skill.company.decision",
-      "version": "21130d5822f0744e0138"
+      "version": "172a53d3a3c616b57512"
     },
     {
       "name": "cady-company-evidence",
@@ -297,7 +297,7 @@
       "name": "cady-gtm-reply",
       "path": "library/cady-gtm-reply",
       "cadyId": "skill.gtm.reply",
-      "version": "6346ef9f4922454d47c8"
+      "version": "53d7fc7d37aa07bb8cbb"
     },
     {
       "name": "cady-gtm-tam-map",
