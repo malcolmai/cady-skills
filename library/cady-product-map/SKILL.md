@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.map"
-  version: "26c89fd3ff740ea4b033"
-  library: "3b5fcee0691ce9ee"
+  version: "1839848eef7242c5c1e3"
+  library: "295ce5b0ae181ac1"
   function: "product"
 ---
 # Product map
@@ -31,7 +31,7 @@ Generate, restructure, clean up, check or publish a product map or a dimension m
 ## Procedure
 
 1. Read the product map method (`references/product-map.md`) in full: it holds the format, the steps, the tool and the checks.
-2. Find the map (`files_read` mode find: `<product node path>/product-map.json`). Update it where it is edited; never start a second.
+2. Read the map with `cady_read {view: "product.map"}`; to change it, find its File (`files_read` mode find: `<product node path>/product-map.json`). Update it where it is edited; never start a second.
 3. Follow the method's build steps. Every bet keeps its origin (owner, inferred or proposed); a missing decision is a question to the owner (`asks_set`), never a written decision.
 4. Run the map's check until it passes, then publish the packet as the method's Drafting part says.
 5. In the change, list what clean-up removed, what now points at the map and what was kept.
