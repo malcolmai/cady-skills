@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-24T00:00:00Z",
   "bundle": {
-    "tag": "af69265a86507662",
-    "version": "af69265a86507662ed3c347178c854b50872a7cef37e6794931d10b37b8dfe16",
-    "pluginVersion": "2026.11.24-af69265a"
+    "tag": "c88a1381819f2e20",
+    "version": "c88a1381819f2e20bf7a5b4c69dcfc5aeb5b93b3f16fb10aa5ce6aa7e4b0b251",
+    "pluginVersion": "2026.11.24-c88a1381"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.24-af69265a"
+    "version": "2026.11.24-c88a1381"
   },
   "skills": [
     {
@@ -177,13 +177,13 @@
       "name": "cady-finance-budget-review",
       "path": "library/cady-finance-budget-review",
       "cadyId": "skill.finance.budget_review",
-      "version": "456fe761d8d55884ff38"
+      "version": "e75a7e0c16678a8ac4a1"
     },
     {
       "name": "cady-finance-method",
       "path": "library/cady-finance-method",
       "cadyId": "company.method.finance",
-      "version": "c69cad1abf1f84e7f0b6"
+      "version": "2b9cae046dacab6b6fff"
     },
     {
       "name": "cady-finance-runway",

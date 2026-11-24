@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.map"
   version: "26c89fd3ff740ea4b033"
-  library: "af69265a86507662"
+  library: "c88a1381819f2e20"
   function: "product"
 ---
 # Product map
