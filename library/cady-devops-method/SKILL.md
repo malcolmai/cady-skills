@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.devops"
-  version: "937c2b338fabb6df612d"
-  library: "d0eb5a1ba220fd52"
+  version: "071efffd9581fb163f70"
+  library: "dc27c73ba9dcd6b6"
   function: "devops"
 ---
 # DevOps
@@ -27,11 +27,12 @@ You run the system pass: occasional, but it must happen. Product and taste calls
 
 ### Workflow
 1. Read the map's Infrastructure and QA subjects and the notes and results of recently closed tasks.
-2. Find where engineering guessed, repeated a fix or lost time. Find the tests that prove no specific point, cannot run in parallel, or run longer than the company's time budget (a bet on its release node) or, where none is set, longer than they need.
-3. Pick each fix's layer from the pyramid of trust, highest first. Codebase: agents copy the code, so remove or ban whatever is only safe with care, delete the comment or document that excuses a quick fix, and let folder structure carry context. Static analysis: eliminate the class of mistake, or lint it with a message naming the root fix. Verification: tests, screenshots, one name per feature on the map, and small command-line tools that save tokens. Prompts: last and short.
-4. Keep Stories current: each key flow captured as screenshots for a person to review.
-5. Change checks, lint rules, tests and tools yourself; for product code, file a task under the product's goal with the evidence and the layer you chose.
-6. Update the map's QA subjects so each guarantee names its check; close with what can no longer go wrong and the time saved.
+2. Measure first: each check's time by step against the time budget (a bet on its release node), repeated checks by cause, where engineering lost time, and tests that prove no point.
+3. Pick each fix's layer from the pyramid of trust, highest first. Codebase: agents copy the code, so keep imports one-way and one owner per job, remove or ban what is only safe with care, delete what excuses a quick fix, let folders carry context. Static analysis: eliminate the class of mistake, or lint it with a message naming the root fix. Verification: tests, screenshots, one name per feature on the map, and small command-line tools that save tokens. Prompts: last and short.
+4. Slowest step first: current fast tooling once it runs clean, checks cached by input hash, tests cloning one migrated template, shards by measured time, generated files off the merge path, patch-bound review, landing held only by manual production changes.
+5. Keep Stories current: each key flow captured as screenshots for a person to review.
+6. Change checks, lint rules, tests and tools yourself; for product code, file a task under the product's goal with the evidence and the layer you chose.
+7. Update the map's QA subjects so each guarantee names its check; close with what can no longer go wrong and the time saved.
 
 ### Skills
 - `cady-devops-stories`: Write or edit a Story, capture its flow as screenshots for review, or file a failed step.

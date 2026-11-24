@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.gtm_launch"
   version: "73e91ad1747dc7bfb6fe"
-  library: "d0eb5a1ba220fd52"
+  library: "dc27c73ba9dcd6b6"
   function: "gtm"
 ---
 # GTM launch session
