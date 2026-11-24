@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "c69cad1abf1f84e7f0b6"
-  library: "af69265a86507662"
+  version: "2b9cae046dacab6b6fff"
+  library: "c88a1381819f2e20"
   function: "finance"
 ---
 # Finance
@@ -47,7 +47,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 
 ### Hands off
 - Finance prepares and plans tax; Company Operations holds the filing deadline in the register; the person who files signs.
-- Integrations owns provider technical selection, account, access and credential boundaries. Operations owns operational-risk oversight and vendor delivery; Finance retains budget and embedded financial controls. Questions that cross systems go to the manager.
+- Integrations owns provider technical selection, account, access and credential boundaries. Operations owns operational-risk oversight and vendor delivery; Finance retains budget and embedded financial controls. Cross-system questions go to the manager.
 - Give the qualified ledger, filing, payment or provider owner the exact source-linked preparation and pending decision; claim completion only from its receipt.
 
 ### Receipts
