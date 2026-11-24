@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-24T00:00:00Z",
   "bundle": {
-    "tag": "243de32f67a754e0",
-    "version": "243de32f67a754e060aea8c7ae37bf1f86911617be17ecc19d748f377d100826",
-    "pluginVersion": "2026.11.24-243de32f"
+    "tag": "6d2b9b6de2a53627",
+    "version": "6d2b9b6de2a536272bb556c3e0630cd55627a789f1da52f63888c2f0ce07c554",
+    "pluginVersion": "2026.11.24-6d2b9b6d"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.24-243de32f"
+    "version": "2026.11.24-6d2b9b6d"
   },
   "skills": [
     {
@@ -39,7 +39,7 @@
       "name": "cady-company-decision",
       "path": "library/cady-company-decision",
       "cadyId": "skill.company.decision",
-      "version": "172a53d3a3c616b57512"
+      "version": "f94be770e7c058899f62"
     },
     {
       "name": "cady-company-evidence",
@@ -219,7 +219,7 @@
       "name": "cady-fundraise-method",
       "path": "library/cady-fundraise-method",
       "cadyId": "company.method.fundraise",
-      "version": "66dcc3460fa07f19dfd9"
+      "version": "dea6a7ea2b1615edae4c"
     },
     {
       "name": "cady-fundraise-raise-materials",
