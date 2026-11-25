@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
   version: "d186d24d60002665297c"
-  library: "ebffd87e9975af3a"
+  library: "b72c9cef2f399184"
   function: "core"
 ---
 # Cady
