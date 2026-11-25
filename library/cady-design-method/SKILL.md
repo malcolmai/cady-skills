@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "410e4d25535302f18182"
-  library: "17097b92df471691"
+  version: "bd03cdd7121c7743805d"
+  library: "420ee7c3b26ee692"
   function: "design"
 ---
 # Design
@@ -45,9 +45,8 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 - product and design decision items
 
 ### Model tiers
-- lead
-- workhorse
-- vision
+- smart
+- fast
 
 ### Skills
 - `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check).

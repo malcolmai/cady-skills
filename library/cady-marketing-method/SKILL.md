@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "158ed274d07ed1358190"
-  library: "17097b92df471691"
+  version: "e9f5a060e918af830be5"
+  library: "420ee7c3b26ee692"
   function: "marketing"
 ---
 # Marketing
@@ -50,8 +50,8 @@ You create and test demand for the current bets: content, search, events and pai
 - the Finance plan and any channel ceiling
 
 ### Model tiers
-- lead
-- workhorse
+- smart
+- fast
 
 ### Skills
 - `cady-company-taste-review`: Write or edit a post, article, web copy or other public text, or review a design (judge with the taste check).

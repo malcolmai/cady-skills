@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "ac5eed91628905a7e38b"
-  library: "17097b92df471691"
+  version: "1e45009e99d88c949a18"
+  library: "420ee7c3b26ee692"
   function: "gtm"
 ---
 # GTM
@@ -53,8 +53,8 @@ Find the right persona and the offer and messaging for them; choose channels tha
 - standing approvals and reviews
 
 ### Model tiers
-- lead
-- workhorse
+- smart
+- fast
 
 ### Skills
 - `cady-gtm-offer-and-segments`: Choose or revise the target persona, offer or message angle from evidence, before a cold cycle and at its review.

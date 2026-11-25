@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "e3e44b0aa10b15c4553b"
-  library: "17097b92df471691"
+  version: "4f66c0dad5d686d088ab"
+  library: "420ee7c3b26ee692"
   function: "finance"
 ---
 # Finance
@@ -62,9 +62,8 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 - this agent’s goal, duties, limits and run receipts
 
 ### Model tiers
-- workhorse
-- lead
-- review
+- smart
+- fast
 
 ### Skills
 - `cady-finance-runway`: Work out burn, runway months and default alive or dead from actual cash, then decide when to cut and what first.
