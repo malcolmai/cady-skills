@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.engineering.fix"
-  version: "5dc5a55274cc498c7a85"
-  library: "7c586d55fc6731ca"
+  version: "9e9264b041fc60dd18c9"
+  library: "17097b92df471691"
   function: "engineering"
 ---
 # Fix a bug or failing check
@@ -35,7 +35,7 @@ Find and fix the root cause of a bug, failing check or incident, from report to 
 3. Reproduce on the exact build at the lowest layer that shows it; confirm the code you think is running is running.
 4. Rate by user impact, higher when silent, irreversible or widespread. If users are affected now, mitigate first by turning the change off or back, not by patching around it.
 5. Write one candidate cause and the observation that would disprove it. After three misses, re-read the error.
-6. Write the test that fails first, fix the cause where it lives, and fix or list every other place with the same cause. That list is the fix's risks to watch, in place of a plan review; the change review checks the cause and the list. If the fix needs a design change, stop: it becomes a task with a plan (the engineering card).
+6. Write the test that fails first, fix the cause where it lives, and fix or list every other place with the same cause. That list is the fix's risks to watch, in place of a plan review; the change review checks the cause and the list. If those places are symptoms of one layer's design (each fix would patch a caller), or the fix needs a design change, stop before fixing them: it becomes a task with a plan (the engineering card).
 7. Close by rerunning the original steps on the fixed build; put the root cause and evidence in the result (`work_set`).
 
 ## Acceptance
