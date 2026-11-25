@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "5d69f28c646b4e2e0697"
-  library: "47de76558e13273c"
+  version: "6eca13d4f8d7ef0cb625"
+  library: "c1735d756a4aef24"
   function: "engineering"
 ---
 # Engineering
@@ -32,7 +32,7 @@ The task gives the outcome; the rest is yours.
 4. A fresh agent settles the design against the map and completes the risks in a `Plan review:` note; build to it, stating any departure, then parallelise cross-subject work.
 5. Build, testing what you touched; end with one final cycle, fixing only new reds. Check every caller, legacy or unset data and any size or parity claim. Save working user-facing behaviour as a screenshot File.
 6. Update the subject's paths on the map in the same change; file a task (work_set) under the product's goal for a point or level that no longer fits and for work found outside it.
-7. Close once the change is open, with the result, evidence and each risk's handling; never wait for checks or a verdict.
+7. Push, queue it on the repository's landing route, close with result, evidence and each risk's handling; never wait for checks or verdicts.
 
 ### Skills
 - `cady-engineering-fix`: Find and fix the root cause of a bug, failing check or incident, from report to verified close.

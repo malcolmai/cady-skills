@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-25T00:00:00Z",
   "bundle": {
-    "tag": "47de76558e13273c",
-    "version": "47de76558e13273cdfbc2d5fc27dbaafc72641db4034cc7d0927c36bd7abf55f",
-    "pluginVersion": "2026.11.25-47de7655"
+    "tag": "c1735d756a4aef24",
+    "version": "c1735d756a4aef243213075a340d3974de337cf53ab637c7d7ad02a50ac369d4",
+    "pluginVersion": "2026.11.25-c1735d75"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.25-47de7655"
+    "version": "2026.11.25-c1735d75"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "6b10a9bddd5bb4123f0a"
+      "version": "c410893ebb31391e75df"
     },
     {
       "name": "cady-company-decision",
@@ -159,7 +159,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "6906adcee7543daf3140"
+      "version": "7ea16bb6c4e19484845b"
     },
     {
       "name": "cady-engineering-integrations",
@@ -171,7 +171,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "5d69f28c646b4e2e0697"
+      "version": "6eca13d4f8d7ef0cb625"
     },
     {
       "name": "cady-finance-budget-review",
@@ -321,7 +321,7 @@
       "name": "cady-manager-method",
       "path": "library/cady-manager-method",
       "cadyId": "company.method.manager",
-      "version": "3288ce4db68bdf28b5f2"
+      "version": "971239404b374afc1996"
     },
     {
       "name": "cady-manager-sense-check",
