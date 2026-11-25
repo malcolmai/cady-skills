@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.inbox_follow_through"
-  version: "e62f921bb41c62f105eb"
-  library: "9c65239114606fe7"
+  version: "d57c9e84d7802c1be0c4"
+  library: "14ca9cefdac5d293"
   function: "company_operations"
 ---
 # Inbox follow-through: group, triage, track commitments
