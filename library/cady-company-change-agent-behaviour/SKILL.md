@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.change_agent_behaviour"
-  version: "0a27d609b3fa5329ef36"
-  library: "884158ce4d72aa44"
+  version: "a621072f5b726bf4817d"
+  library: "f7b2c03517058d73"
   function: "company"
 ---
 # Change agent behaviour
@@ -26,12 +26,6 @@ Change what agents do: edit a skill, role card, run sequence, tool text or an ag
 **Not for:** Making, scheduling or retiring an agent (`cady-company-manage-agents`), or writing or judging a post or design.
 
 **Unit of work:** one behaviour change and its record. **Kind:** execution. **Parallel:** no. 
-
-## Always
-
-- Place the rule and follow what it touches before you edit.
-- A rule has one home. Fix the check in code before adding a sentence.
-- Add always-on text only by removing a line.
 
 ## Inputs
 

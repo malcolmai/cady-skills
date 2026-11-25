@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-25T00:00:00Z",
   "bundle": {
-    "tag": "884158ce4d72aa44",
-    "version": "884158ce4d72aa44b2a33b0f63657afbcf1fd0c6333187c34fd96c5b1b69e237",
-    "pluginVersion": "2026.11.25-884158ce"
+    "tag": "f7b2c03517058d73",
+    "version": "f7b2c03517058d73740ecd2c112e6b83f350939f62627b9c2d8e4b311106cf5f",
+    "pluginVersion": "2026.11.25-f7b2c035"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.25-884158ce"
+    "version": "2026.11.25-f7b2c035"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "0a27d609b3fa5329ef36"
+      "version": "a621072f5b726bf4817d"
     },
     {
       "name": "cady-company-decision",
@@ -105,7 +105,7 @@
       "name": "cady-company-taste-review",
       "path": "library/cady-company-taste-review",
       "cadyId": "skill.company.taste_review",
-      "version": "cdf767fa1b24501a0431"
+      "version": "38d9fd20b4938fe2a622"
     },
     {
       "name": "cady-company-weekly-review",
@@ -129,7 +129,7 @@
       "name": "cady-design-method",
       "path": "library/cady-design-method",
       "cadyId": "company.method.design",
-      "version": "bd03cdd7121c7743805d"
+      "version": "edef665ef23924a7b835"
     },
     {
       "name": "cady-devops-method",
@@ -321,7 +321,7 @@
       "name": "cady-manager-method",
       "path": "library/cady-manager-method",
       "cadyId": "company.method.manager",
-      "version": "8d7b58795fc8023af5d6"
+      "version": "48d98d33e510daaede81"
     },
     {
       "name": "cady-manager-sense-check",

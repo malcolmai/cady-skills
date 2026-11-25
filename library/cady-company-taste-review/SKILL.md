@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.taste_review"
-  version: "cdf767fa1b24501a0431"
-  library: "884158ce4d72aa44"
+  version: "38d9fd20b4938fe2a622"
+  library: "f7b2c03517058d73"
   function: "company"
 ---
 # Writing craft and taste decisions
@@ -25,11 +25,6 @@ Write or edit a post, article, web copy or other public text, or review a design
 **Not for:** Pass/fail checks a script or test can decide (run those first), a direct message to one person, or writing a prompt or skill and changing how agents behave (`cady-company-change-agent-behaviour`).
 
 **Unit of work:** one artifact and its decision. **Kind:** execution. **Parallel:** no. 
-
-## Always
-
-- Start from the reader: who gets the work and what it must get them to do or decide.
-- Judge your own draft with the taste check, not by rereading it; say what was not judged.
 
 ## Inputs
 

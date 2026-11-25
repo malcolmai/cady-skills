@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.design"
-  version: "bd03cdd7121c7743805d"
-  library: "884158ce4d72aa44"
+  version: "edef665ef23924a7b835"
+  library: "f7b2c03517058d73"
   function: "design"
 ---
 # Design
@@ -42,7 +42,7 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 
 ### Company records
 - the design system Files (files_set)
-- product and design decision items
+- the design choices as points and bets on their node
 
 ### Model tiers
 - smart
@@ -53,8 +53,5 @@ You own the craft of the product: how each surface looks, reads and feels. Explo
 
 ## Parent function
 product
-
-## Selected judgment
-- Design the complete user flow through understanding, action, feedback, accessibility, failure and recovery. Test representative use and trust at consequential steps; a finished feature or attractive screen alone does not prove the intended experience.
 
 - Read [Domain method](references/domain-method.md) when you design or review a surface.
