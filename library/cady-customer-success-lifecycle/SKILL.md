@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.customer_success.lifecycle"
-  version: "024d3c53cb3dcbe6ae0d"
-  library: "b172e4ad1ac48044"
+  version: "48f0b77bddbb739418c6"
+  library: "7c586d55fc6731ca"
   function: "customer_success"
 ---
 # Customer lifecycle: first value to renewal

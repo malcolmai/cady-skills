@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
-  version: "fd04278e56f88661e8a0"
-  library: "b172e4ad1ac48044"
+  version: "71939e0d7b7512790644"
+  library: "7c586d55fc6731ca"
   function: "gtm"
 ---
 # Events: attend or host

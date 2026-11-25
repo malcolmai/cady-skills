@@ -25,7 +25,7 @@
 ## Investor
 
 - Tools: reconcile every number to a dated source, and keep metric definitions identical across deck, model and data room.
-- Tests for a partner seeing it cold: in two minutes, what does the company do, what is the evidence, what is the ask? Judge slides rendered as slides.
+- Tests for a partner seeing it cold: in two minutes, what does the company do, what is the evidence, what is the todo? Judge slides rendered as slides.
 - Judge: the fresh judge gets only the material and "a seed partner, cold". The founder approves; investor replies are the signal.
 
 ## Tells

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "8b4776769dd2cd5a8dd8"
-  library: "b172e4ad1ac48044"
+  version: "7b0da9b3ccef5cfc1e97"
+  library: "7c586d55fc6731ca"
   function: "accounting"
 ---
 # Accounting

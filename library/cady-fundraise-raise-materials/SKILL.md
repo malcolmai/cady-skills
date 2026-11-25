@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.raise_materials"
-  version: "d425eadfbc4a554ebb61"
-  library: "b172e4ad1ac48044"
+  version: "df2ff0448caaf78f5ce2"
+  library: "7c586d55fc6731ca"
   function: "fundraise"
 ---
 # Raise materials, data room and investor updates
@@ -54,7 +54,7 @@ Draft or revise an investor memo, deck narrative, data room or monthly investor 
 
 - [ ] (check) the requested document is usable and linked from work
 - [ ] (check) material claims and metrics reconcile to source, date and one definition
-- [ ] (fresh) a partner seeing it cold can say in two minutes what the company does, the evidence and the ask
+- [ ] (fresh) a partner seeing it cold can say in two minutes what the company does, the evidence and the todo
 - [ ] (person) the founder approves the document, and any update is explicitly unsent
 
 ## Owner checks

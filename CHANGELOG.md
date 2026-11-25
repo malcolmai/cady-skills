@@ -4,6 +4,53 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 7c586d55fc6731ca · 2026-11-25
+
+Since b172e4ad1ac48044: 0 new, 0 dropped, 39 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-company-decision`: Procedure, reference asking.md
+
+Changed:
+- `cady-accounting-method`: reference agent-stop.md, reference asking.md, reference run-reporting.md
+- `cady-company-evidence`: Procedure
+- `cady-company-manage-agents`: Agent design names skills as plain names, or none, and goes straight to agents_set; Cady serves no skill index.
+- `cady-company-method`: reference agent-stop.md, reference asking.md, reference run-reporting.md
+- `cady-company-operations-compliance-register`: Procedure
+- `cady-company-operations-contract-checks`: Procedure
+- `cady-company-operations-inbox-follow-through`: reference outreach-release.md
+- `cady-company-operations-method`: Role card, reference agent-stop.md, reference asking.md, reference run-reporting.md
+- `cady-company-operations-people-lifecycle`: Procedure
+- `cady-company-taste-review`: reference taste-check.md
+- `cady-company-weekly-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-customer-success-lifecycle`: reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-customer-success-method`: reference agent-stop.md, reference asking.md, reference run-reporting.md
+- `cady-design-method`: reference agent-stop.md, reference asking.md, reference engineering-cycle-dimensions.md, reference run-reporting.md, reference taste-check.md
+- `cady-engineering-independent-review`: reference engineering-cycle-dimensions.md
+- `cady-engineering-integrations`: reference integrations.md
+- `cady-finance-method`: reference agent-stop.md, reference asking.md, reference run-reporting.md
+- `cady-fundraise-investor-list`: reference agent-stop.md, reference run-reporting.md
+- `cady-fundraise-investor-outreach`: reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-check.md
+- `cady-fundraise-method`: reference agent-stop.md, reference asking.md, reference run-reporting.md
+- `cady-fundraise-raise-materials`: Acceptance, reference agent-stop.md, reference outreach-drafting.md, reference taste-check.md
+- `cady-gtm-calls`: reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-gtm-channel-plan`: reference agent-stop.md, reference outreach-release.md
+- `cady-gtm-cold-email-cycle`: intro, reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-gtm-events`: reference agent-stop.md
+- `cady-gtm-launch`: reference first-offering.md, reference outreach-release.md
+- `cady-gtm-linkedin-message`: reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-gtm-method`: reference agent-stop.md, reference asking.md, reference company-goals.md, reference outreach-release.md, reference run-reporting.md
+- `cady-gtm-persona-profile`: reference agent-stop.md, reference run-reporting.md
+- `cady-gtm-pipeline-pass`: reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-gtm-reply`: reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-gtm-voice-pack`: reference agent-stop.md, reference outreach-drafting.md, reference taste-check.md
+- `cady-gtm-warm-email`: Procedure, reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-marketing-method`: reference agent-stop.md, reference asking.md, reference outreach-drafting.md, reference run-reporting.md
+- `cady-marketing-post`: reference agent-stop.md, reference outreach-drafting.md
+- `cady-product-map`: Procedure, reference engineering-cycle-dimensions.md, reference product-map.md
+- `cady-sales-deal-motion`: reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md
+- `cady-sales-method`: reference agent-stop.md, reference asking.md, reference run-reporting.md
+
 ## b172e4ad1ac48044 · 2026-11-25
 
 Since fb5b9f09b7ab510f: 0 new, 0 dropped, 1 changed.
