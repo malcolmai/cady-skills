@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company_operations.people_lifecycle"
   version: "e27447781444efa92ad9"
-  library: "f3033500260d6445"
+  library: "9c65239114606fe7"
   function: "company_operations"
 ---
 # Joiners, movers and leavers

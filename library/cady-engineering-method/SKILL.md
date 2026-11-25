@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "fee84f0d09d1613bc42d"
-  library: "f3033500260d6445"
+  version: "53fb125a08b2b19e61dc"
+  library: "9c65239114606fe7"
   function: "engineering"
 ---
 # Engineering
@@ -30,7 +30,7 @@ The task gives the outcome; the rest is yours.
 2. Read those subjects on the map (point, bets, level, paths: `cady_read {view: "product.map"}`), then their code; search for the same nouns and verbs before adding anything. Never guess the answer to a product question the map leaves open: set the task blocked with its next step starting `Product question:` (send no result or note in that call). The product manager answers it; where no agent holds that role, also ask the person.
 3. A change inside one subject: build it. A task that crosses subjects: first write a precise plan as a note starting `Plan:`, naming the pattern, the files per subject, what is reused and removed, and the checks.
 4. A fresh agent reviews the plan for anti-patterns and the key areas it touches, in a note starting `Plan review:`; only then split the task into isolated parallel parts.
-5. Build, testing what you touched; end with one full cycle, fixing only new reds. Check every caller, legacy or unset data and any size or parity claim. Save working user-facing behaviour as a screenshot File.
+5. Build, testing what you touched; end with one final cycle, fixing only new reds. Check every caller, legacy or unset data and any size or parity claim. Save working user-facing behaviour as a screenshot File.
 6. Update the subject's paths on the map in the same change; file a task (work_set) under the product's goal for a point or level that no longer fits and for work found outside it.
 7. Close with the result and its evidence.
 
