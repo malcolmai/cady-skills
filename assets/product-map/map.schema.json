@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "cady.product-map.v1",
   "title": "Product map source",
-  "description": "The hand-written source of a product's product map (model.json). render_map.py checks a source against this file and renders the front page, the optional sections, the cards and the gaps list from it, and with --packet the JSON packet a web page draws. Only points, bets, definitions and paths are written here; counts, each path's point, sizes, Touches and open work are derived at each render. Research goes in product.research, and a bet cites it in `why`. A key that begins with x_ is the project's own: at the top level, one holding a title and rows is drawn as a section of its own; any other is ignored.",
+  "description": "The hand-written source of a product's product map (model.json). render_map.py checks a source against this file and renders the front page, the optional sections, the cards and the gaps list from it, and with --packet the JSON packet a web page draws. Only points, bets, definitions and paths are written here; counts, each path's point, sizes, Touches and open work are derived at each render. Research goes in product.research, and a bet cites it in `why`. A key that begins with x_ is the project's own: at the top level, one holding a title and rows is drawn as a section of its own; any other is ignored, but a subject's x_node, the path of its node in the product tree, which keys the packet's facts.",
   "type": "object",
   "required": [
     "schema",
@@ -708,7 +708,7 @@
     },
     "subject": {
       "type": "object",
-      "description": "A subject: something a person would change that has its own reason to exist. Not cut by folder or size: one file can be a subject, and so can a whole client; a folder that holds two subjects is split, each naming its files.",
+      "description": "A subject: something a person would change that has its own reason to exist. Not cut by folder or size: one file can be a subject, and so can a whole client; a folder that holds two subjects is split, each naming its files. `x_node` names its node in the product tree, where `render_map.py --packet` keys its facts; leave it out to key the node whose key ends with the subject's id.",
       "required": [
         "id",
         "name",
