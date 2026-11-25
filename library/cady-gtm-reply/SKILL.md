@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.reply"
-  version: "101a170f84d04c78220d"
-  library: "420ee7c3b26ee692"
+  version: "84b453e88e072c4394af"
+  library: "c91d6e88bba02c68"
   function: "gtm"
 ---
 # Reply in a live thread

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "61b75a850c9abe936892"
-  library: "420ee7c3b26ee692"
+  version: "eba2dba91017d199fe80"
+  library: "c91d6e88bba02c68"
   function: "gtm"
 ---
 # Warm email and follow-ups
