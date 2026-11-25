@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-25T00:00:00Z",
   "bundle": {
-    "tag": "fb5b9f09b7ab510f",
-    "version": "fb5b9f09b7ab510f7691f5e52afe516ceed374a2f8a0e879328b894f444ae687",
-    "pluginVersion": "2026.11.25-fb5b9f09"
+    "tag": "b172e4ad1ac48044",
+    "version": "b172e4ad1ac48044b22f0df99d248be0baa647bfab3e3b4ca7a99d370cf50215",
+    "pluginVersion": "2026.11.25-b172e4ad"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.25-fb5b9f09"
+    "version": "2026.11.25-b172e4ad"
   },
   "skills": [
     {
@@ -159,7 +159,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "730f370caa8fe38397a8"
+      "version": "52c9c854b83e7dbe612d"
     },
     {
       "name": "cady-engineering-integrations",

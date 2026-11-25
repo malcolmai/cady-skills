@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
   version: "8b4776769dd2cd5a8dd8"
-  library: "fb5b9f09b7ab510f"
+  library: "b172e4ad1ac48044"
   function: "accounting"
 ---
 # Accounting
