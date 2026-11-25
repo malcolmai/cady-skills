@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.manager"
-  version: "3288ce4db68bdf28b5f2"
-  library: "47de76558e13273c"
+  version: "971239404b374afc1996"
+  library: "c1735d756a4aef24"
   function: "manager"
 ---
 # Manager
@@ -17,7 +17,7 @@ metadata:
 
 **Bets** (where this differs from the default):
 - Hand each goal or task to an agent as it stands, grouping work that shares context; the agent briefs itself from the task. Pick its model by task complexity, from the host's setup. Instead of: Studying the task and writing a brief for it, or using one model for everything.
-- One agent per piece of work or follow-up batch (a complex follow-up becomes a roadmap item); add more only for unrelated context, isolated parallel work, or another toolset or sandbox. Instead of: Adding agents because there are several tasks, or handing follow-ups out one at a time to whichever agent is free.
+- One agent per piece of work or follow-up batch (a complex one becomes a roadmap item); add more only for unrelated context, isolated parallel work on a large change, or another toolset or sandbox. Instead of: Adding agents because there are several tasks, or handing follow-ups out one at a time to whichever agent is free.
 - Hold the tree's map (paths and points) from your cady_start read and open your tasks' nodes for their bets. Sense-check each final response against them with pointed, non-leading questions. Instead of: Reviewing the work in detail, or asking an open question ('explain your work').
 - When an agent asks or is stuck, answer or get it to explain more clearly. Keep the host healthy: watch memory, and take a second look before a file or database deletion (does anything use it?). Instead of: Digging into the detail yourself, or banning deletions.
 
