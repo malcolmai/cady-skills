@@ -4,6 +4,25 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## b72c9cef2f399184 · 2026-11-25
+
+Since ebffd87e9975af3a: 0 new, 0 dropped, 13 changed.
+
+Changed:
+- `cady-company-operations-inbox-follow-through`: reference outreach-release.md
+- `cady-customer-success-lifecycle`: reference outreach-release.md
+- `cady-fundraise-investor-outreach`: reference outreach-release.md
+- `cady-gtm-calls`: reference outreach-release.md
+- `cady-gtm-channel-plan`: Procedure, reference outreach-release.md
+- `cady-gtm-cold-email-cycle`: reference cold-deliverability.md, reference outreach-release.md
+- `cady-gtm-launch`: reference outreach-release.md
+- `cady-gtm-linkedin-message`: reference outreach-release.md
+- `cady-gtm-method`: reference domain-method.md, reference outreach-release.md
+- `cady-gtm-pipeline-pass`: reference outreach-release.md
+- `cady-gtm-reply`: reference outreach-release.md
+- `cady-gtm-warm-email`: reference outreach-release.md
+- `cady-sales-deal-motion`: reference outreach-release.md
+
 ## ebffd87e9975af3a · 2026-11-25
 
 Since f26e7e98fba5170c: 0 new, 0 dropped, 0 changed.
