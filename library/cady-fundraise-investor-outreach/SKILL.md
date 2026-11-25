@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.fundraise.investor_outreach"
-  version: "dc80b59fd2b70fe1ad67"
-  library: "14ca9cefdac5d293"
+  version: "0cbb08b175a18bb52e9d"
+  library: "7690dfdab582541e"
   function: "fundraise"
 ---
 # Investor outreach and updates

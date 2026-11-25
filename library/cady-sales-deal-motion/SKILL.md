@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.sales.deal_motion"
-  version: "8e015f451913c00342b3"
-  library: "14ca9cefdac5d293"
+  version: "788a9e29acef43f80813"
+  library: "7690dfdab582541e"
   function: "sales"
 ---
 # Deal motion: discovery to close and handoff
