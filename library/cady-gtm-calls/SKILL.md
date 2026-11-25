@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
-  version: "7bfdc7a12783cdb459a1"
-  library: "14ca9cefdac5d293"
+  version: "bf2aa1c58baa0021a71d"
+  library: "7690dfdab582541e"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up

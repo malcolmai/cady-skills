@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.voice_pack"
   version: "573c570561f1dd3ea4a5"
-  library: "14ca9cefdac5d293"
+  library: "7690dfdab582541e"
   function: "gtm"
 ---
 # Build or refresh a texture-only voice pack

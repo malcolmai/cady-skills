@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "1e58bc3f7bb358d45d30"
-  library: "14ca9cefdac5d293"
+  version: "2f0295bc83bb46a079f7"
+  library: "7690dfdab582541e"
   function: "gtm"
 ---
 # Cold email cycle
