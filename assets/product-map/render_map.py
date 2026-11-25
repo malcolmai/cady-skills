@@ -10,6 +10,8 @@ Put this file and map.schema.json beside the source, model.json, in the map fold
     python3 render_map.py --front    # print the front page
     python3 render_map.py --card ID  # print one subject's card
     python3 render_map.py --packet   # check the source, then write product-map.json: the source with what only the repository can derive
+    python3 render_map.py --packet --tree product-tree.json   # the same packet, its facts keyed by that tree's own node paths
+    python3 render_map.py --packet --packet-version 1         # the v1 packet, which a page joins by subject id
 
 product-map.md is the front page (five sections; the current release's bets stand under its goal, then later releases and the paper plan), the
 optional sections the source holds (code map, pipelines, agent surface, terms, and any x_ section with a title and rows, drawn the same way for every
@@ -24,6 +26,15 @@ The packet (--packet) is product-map.json: {schema, source, derived, rendered}. 
 compute without the repository (each path's point and owners, each card's size, Touches, traps and open work, the code map, the gaps, flags, failed
 checks and level checks); `rendered` names the commit, the time and the writer (--writer, the URL where the map is edited). It holds no live task
 fact: an item with `work` names its task, and a page reads the task's status, headline and Done when itself.
+
+The packet is v2 by default (cady.product-map-packet.v2): those four keys, plus `tree` and `facts`. `tree` is the product's decision tree the packet
+caches ({root, at, nodes}; a node's path, key, parent and point), and `facts` is what the code proves, keyed by a node's path in that tree: the
+code a subject owns (each path it names, with the files that resolve to it), its guarantees as tests, its tools and its parts. So a page joins the
+packet to the live decision tree by node path. With `--tree FILE` the cache is the product tree pulled from where it lives, in that same shape: a
+subject is keyed by its own `x_node`, else by the one node whose key ends with its id (`<product>.<id>`), and a subject the tree does not name keeps
+no facts and is listed in the packet's flags. Without `--tree` the tool caches the tree the source's framework draws (root `product/<product>`, then
+each angle, each key area and each subject under it): that tree is the tool's own reading of the source, so a live tree that differs gets no facts
+until the map names its own with `--tree`. `--packet-version 1` writes the v1 packet, which a page still joins by subject id.
 
 Counted as gaps: a card bet with no reason or no alternative. A missing product line, a kind of research (users, competition, technology) with no pointer, and a subject's level
 that is proposed and not yet signed by the owner, are gaps too. A subject over its level's budget is flagged, not failed; a render without
@@ -46,7 +57,7 @@ was made that way and how many files no subject owned at that render; --check re
 the option, and compares that line with its number left out. The front page names the option in its "Using this map" section.
 
 Standard library only. Options: --source, --schema, --root (the repository root), --out (where the files go), --no-file-counts,
-and for --packet: --writer, --sha and --at (both read from git and the clock when left out).
+and for --packet: --packet-version, --tree, --writer, --sha and --at (both read from git and the clock when left out).
 """
 from __future__ import annotations
 
@@ -67,6 +78,7 @@ OUTPUTS = ("product-map.md", "gaps.md")
 UNOWNED_LINE = "- Files no subject owns: "  # in gaps.md of a render without file counts: counted at that render; --check compares the line with its number left out
 NO_COUNTS_MARK = "Rendered with `--no-file-counts`"  # how --check knows the form the render on disk was made in
 PACKET, PACKET_SCHEMA = "product-map.json", "cady.product-map-packet.v1"
+PACKET_SCHEMA_V2 = "cady.product-map-packet.v2"  # v1's four keys, plus `tree` (the tree cached) and `facts` (keyed by node path)
 RESEARCH = ("users", "competition", "technology", "assets")  # the paper plan's kinds of research, in the order the front page lists them
 REQUIRED_RESEARCH = ("users", "competition", "technology")  # a missing one is a gap; assets is optional
 CODE_DEPTH = 2  # folder levels a code map lists below each root when the source does not say
@@ -177,6 +189,11 @@ def list_files(root: Path) -> list[str]:
 
 def covers(path: str, target: str) -> bool:
     return target == path or target.startswith(path + "/")
+
+
+def parent_of(path: str) -> str | None:
+    """The path a node sits under, by the path itself: `product/cady` sits under `product`."""
+    return path.rsplit("/", 1)[0] if "/" in path else None
 
 
 def first_sentence(text: str, limit: int = 180) -> str:
@@ -710,6 +727,121 @@ class Map:
         return {"path": path, "files": len(sized), "lines": sum(n for _, n in sized), "point": path_point(self.root, path),
                 "largest": [{"path": f, "lines": n} for f, n in sized[:5] if n]}
 
+    # the v2 packet: the tree cached, and what each node of it owns
+    def slug(self) -> str:
+        """The product's name as its tree keys it: lowercase, every run of other characters one dash."""
+        return re.sub(r"[^a-z0-9]+", "-", self.m["product"]["name"].lower()).strip("-") or "product"
+
+    def node_id(self, ident: str) -> str:
+        """An id as a tree key ends with it: its `mod:` or `dim:` namespace dropped, lowercase, its runs of other characters one dash."""
+        base = ident.rsplit(":", 1)[-1]
+        return re.sub(r"[^a-z0-9._-]+", "-", base.lower()).strip("-")
+
+    def node_key(self, ident: str) -> str:
+        """A subject's, angle's or key area's node key: the product's slug, a dot, then its id."""
+        return f"{self.slug()}.{self.node_id(ident)}"
+
+    def tree_cache(self, tree: dict | None = None) -> tuple[dict, list[str]]:
+        """The tree the packet caches and what is worth flagging about it: the one given (--tree: the product tree pulled from where it
+        lives, already in the packet's shape), else the tree this source's own framework draws, root `product/<product>`, then each angle,
+        each key area and each subject under it, each keyed `<product>.<id>`."""
+        if tree is not None:
+            nodes = []
+            for node in tree["nodes"]:
+                kept = {"path": node["path"], "key": node["key"], "parent": node.get("parent") or parent_of(node["path"]), "point": node["point"]}
+                nodes.append({**kept, **({"root": True} if node.get("root") else {})})
+            root = tree.get("root") or next((n["path"] for n in nodes if n.get("root")), nodes[0]["path"])
+            return {"root": root, "at": tree.get("at"), "nodes": nodes}, []
+        root, flags = f"product/{self.slug()}", []
+        nodes = [{"path": root, "key": self.slug(), "parent": "product", "point": self.m["product"]["point"], "root": True}]
+        seen = {root}
+
+        def add(node: dict) -> None:
+            if node["path"] in seen:
+                flags.append(f"the tree the source draws holds {node['path']} twice; its second node is left out")
+                return
+            seen.add(node["path"])
+            nodes.append(node)
+
+        for angle in self.m["framework"]["angles"]:
+            akey, apath = self.node_key(angle["id"]), f"{root}/{self.node_key(angle['id'])}"
+            add({"path": apath, "key": akey, "parent": root, "point": angle["point"]})
+            for area in angle["areas"]:
+                rkey, rpath = self.node_key(area["id"]), f"{apath}/{self.node_key(area['id'])}"
+                add({"path": rpath, "key": rkey, "parent": apath, "point": area["point"]})
+                for sid in area["subjects"]:
+                    subject = self.by_id.get(sid)
+                    if subject:
+                        add({"path": f"{rpath}/{self.node_key(sid)}", "key": self.node_key(sid), "parent": rpath, "point": subject["point"]})
+        return {"root": root, "at": None, "nodes": nodes}, flags
+
+    def subject_paths(self, cache: dict) -> tuple[dict[str, str], list[str]]:
+        """Each subject's node path in the cached tree, and the subjects it leaves out: the subject's own `x_node` where it names one,
+        else the one node whose key ends with its id (none where several do, and none where none does). Two subjects on one path: the
+        first keeps it."""
+        tails: dict[str, list[str]] = {}
+        for node in cache["nodes"]:
+            if node["path"] != cache["root"]:
+                tails.setdefault(node["key"].rsplit(".", 1)[-1], []).append(node["path"])
+        paths = {node["path"] for node in cache["nodes"]}
+        out: dict[str, str] = {}
+        left_out: list[str] = []
+        for _, subject in self.subjects:
+            sid, named = subject["id"], subject.get("x_node")
+            if named:
+                found = [named] if named in paths else []
+            else:
+                found = tails.get(self.node_id(sid), [])
+            if len(found) != 1:
+                left_out.append(f"{sid} names the node {named}, which the tree does not hold; its facts are left out" if named
+                                else f"the tree names {len(found) or 'no'} node for {sid}; its facts are left out")
+                continue
+            if found[0] in out.values():
+                left_out.append(f"{sid} and another subject name the node {found[0]}; only the first keeps its facts")
+                continue
+            out[sid] = found[0]
+        return out, left_out
+
+    def resolved_files(self) -> dict[tuple[str, str], list[str]]:
+        """Every tracked file by the home that owns it: the longest matching path of a subject."""
+        if "_resolved" not in self.__dict__:
+            out: dict[tuple[str, str], list[str]] = {}
+            for name in self.tracked():
+                owner = self.owner_path(name)
+                if owner:
+                    out.setdefault(owner, []).append(name)
+            self._resolved = out
+        return self._resolved
+
+    def files_for(self, path: str, sid: str) -> list[str]:
+        """The tracked files a path owns: those whose longest matching home is this path of this subject."""
+        return self.resolved_files().get((path.rstrip("/"), sid), [])
+
+    def subject_code(self, subject: dict, rows: list[dict] | None = None) -> list[dict]:
+        """The code rows that prove a subject: each path it names, with the files that resolve to it (a nested home takes its files with
+        it), and any code map row it owns that no home of its covers."""
+        sid, paths = subject["id"], [p.rstrip("/") for p in subject["home"]]
+        paths += [row["path"] for row in (self.code_map() if rows is None else rows)
+                  if row["owner"] == sid and not any(covers(home, row["path"]) for home in paths)]
+        return [self.path_facts(path, self.files_for(path, sid)) for path in dict.fromkeys(paths)]
+
+    def facts(self, cache: dict, subject_paths: dict[str, str]) -> dict[str, dict]:
+        """What the repository proves about each node of the tree, keyed by its path: a subject's code, guarantees as tests, tools and
+        parts; every other node (the root, an angle, a key area) holds none of the four."""
+        empty = lambda: {"code": [], "tests": [], "tools": [], "parts": []}
+        out = {node["path"]: empty() for node in cache["nodes"]}
+        rows = self.code_map()  # once for every subject: each row is its folder's point, counts and largest files
+        for _, subject in self.subjects:
+            path = subject_paths.get(subject["id"])
+            if not path:
+                continue
+            row = out.setdefault(path, empty())
+            row["code"] = self.subject_code(subject, rows)
+            row["tests"] = [{"text": g["text"], **({"test": g["test"]} if g.get("test") else {})} for g in subject.get("guarantees") or []]
+            row["tools"] = [{"name": t["name"], "point": t["point"]} for t in subject.get("tools") or []]
+            row["parts"] = [{"name": p["name"], "point": p["point"], **({"schema": p["schema"]} if p.get("schema") else {})} for p in subject.get("parts") or []]
+        return out
+
     def sections(self) -> str:
         """The optional sections, each drawn only when the source holds it, the same way for every product."""
         o: list[str] = []
@@ -760,8 +892,9 @@ class Map:
             ("research_missing", "Kinds of research with no pointer", c["research_missing"]),
             ("levels_proposed", "Levels proposed and not yet signed by the owner", [s["name"] for s in c["levels_proposed"]]))]
 
-    def packet(self, sha: str | None, at: str, writer: str | None) -> dict:
-        """product-map.json: the source as written, what only the repository can derive, and who rendered it. No live task fact."""
+    def packet(self, sha: str | None, at: str, writer: str | None, version: int = 2, tree: dict | None = None) -> dict:
+        """product-map.json: the source as written, what only the repository can derive, and who rendered it. No live task fact.
+        Version 2 adds the tree the packet caches and what each node of it owns, keyed by node path; version 1 joins by subject id."""
         research = [ref for refs in (self.m["product"].get("research") or {}).values() for ref in refs if not ref.startswith("file:")]
         items = [i for r in self.m["releases"] for i in r["items"]]
         cited = [p.rstrip("/") for _, s in self.subjects for p in s["home"] + (s.get("governs") or [])]
@@ -777,13 +910,20 @@ class Map:
                           "touches": {"loops": [lp["id"] for lp in self.m["loops"] if sid in lp["nodes"]], "shares": self.shares(sid), "rules": self.governed_by(sid)},
                           "traps": [{"loop": lp["id"], "watch": lp["watch"].index(w)} for lp, w in self.traps(sid)],
                           "open_items": [i["id"] for i in self.open_items(sid)], "splits": self.split_rows(sid)}
-        return {"schema": PACKET_SCHEMA, "source": self.m,
-                "derived": {"points": {p: (path_point(self.root, p) if (self.root / p).exists() else None) for p in cited},
-                            "owners": {p: self.owners(p) for p in cited}, "cards": cards,
-                            "items": {i["id"]: {"cards": self.item_cards(i)} for i in items},
-                            "code_map": code, "gaps": self.gap_rows(), "flags": self.flags, "errors": self.errors,
-                            "levels": self.level_checks()},
-                "rendered": {"sha": sha, "at": at, "writer": writer}}
+        out = {"schema": PACKET_SCHEMA if version == 1 else PACKET_SCHEMA_V2, "source": self.m,
+               "derived": {"points": {p: (path_point(self.root, p) if (self.root / p).exists() else None) for p in cited},
+                           "owners": {p: self.owners(p) for p in cited}, "cards": cards,
+                           "items": {i["id"]: {"cards": self.item_cards(i)} for i in items},
+                           "code_map": code, "gaps": self.gap_rows(), "flags": self.flags, "errors": self.errors,
+                           "levels": self.level_checks()},
+               "rendered": {"sha": sha, "at": at, "writer": writer}}
+        if version == 2:
+            cache, tree_flags = self.tree_cache(tree)
+            paths, left_out = self.subject_paths(cache)
+            out["derived"] = {**out["derived"], "flags": [*self.flags, *tree_flags, *left_out]}
+            out["tree"] = cache
+            out["facts"] = self.facts(cache, paths)
+        return out
 
     def gaps(self, unowned_note: bool = False) -> str:
         """The gaps list. With `unowned_note`, a render without file counts still says how many files no subject owned when it was made."""
@@ -803,6 +943,34 @@ class Map:
         o += ["## Owner questions", ""] + ([f"{n}. {q['text']}" + (f" (blocks {q['blocks']})" if q.get("blocks") else "") for n, q in enumerate(questions, 1)] or ["None recorded."]) + [""]
         o += [f"{more} more in `model.json`.", ""] if more > 0 else []
         return "\n".join(o)
+
+
+def read_tree(path: Path) -> tuple[dict | None, str | None]:
+    """The product tree a packet is keyed by: the same shape the packet caches ({root, at, nodes}), each node a path, a key and a point,
+    one node per path, and a node's parent the path it sits under. Returns the tree, or why it cannot key a packet."""
+    try:
+        tree = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return None, f"{path}: {exc}"
+    nodes = tree.get("nodes") if isinstance(tree, dict) else None
+    if not isinstance(nodes, list) or not nodes:
+        return None, f"{path}: a product tree is an object holding a root and a non-empty list of nodes"
+    paths = []
+    for n, node in enumerate(nodes):
+        if not isinstance(node, dict):
+            return None, f"{path}: node {n} is not an object"
+        missing = [key for key in ("path", "key", "point") if not isinstance(node.get(key), str)]
+        if missing:
+            return None, f"{path}: node {n} has no text {', '.join(missing)}"
+        if node["path"] in paths:
+            return None, f"{path}: two nodes share the path {node['path']}"
+        if node.get("parent") not in (None, parent_of(node["path"])):
+            return None, f"{path}: node {node['path']} names {node['parent']} as its parent; its path sits under {parent_of(node['path'])}"
+        paths.append(node["path"])
+    root = tree.get("root")
+    if root is not None and (not isinstance(root, str) or root not in paths):
+        return None, f"{path}: root {root!r} is not a node of the tree"
+    return tree, None
 
 
 def head_sha(root: Path) -> str | None:
@@ -830,11 +998,19 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--front", action="store_true", help="print the front page")
     ap.add_argument("--card", metavar="ID", help="print one subject's card")
     ap.add_argument("--packet", action="store_true", help="write product-map.json (the source, what the repository derives, and who rendered it) instead of the two Markdown files")
+    ap.add_argument("--packet-version", type=int, choices=(1, 2), default=2, help="with --packet: 2 (the default) writes the tree the packet caches and what each node owns, keyed by node path; 1 writes the v1 packet, which a page joins by subject id")
+    ap.add_argument("--tree", type=Path, help="with --packet: a JSON file holding the product tree the facts are keyed by, in the packet's own shape ({root, at, nodes}); without it the packet caches the tree the source's framework draws, whose paths may not be the live tree's")
     ap.add_argument("--writer", help="with --packet: the https URL where the map is edited, kept in the packet")
     ap.add_argument("--sha", help="with --packet: the commit rendered (default: git's HEAD under the root)")
     ap.add_argument("--at", help="with --packet: when it was rendered, as an ISO time (default: now, UTC)")
     ap.add_argument("--no-file-counts", action="store_true", help="leave file counts out of the front page and the cards; where the render is committed, render with it, so an added file does not make it stale (gaps.md keeps the count of files no subject owns, as of the render)")
     args = ap.parse_args(argv)
+    if args.tree and not args.packet:
+        print("render_map: --tree is read with --packet; nothing written", file=sys.stderr)
+        return 1
+    if args.tree and args.packet_version == 1:
+        print("render_map: --tree keys the v2 packet's facts; a v1 packet has no facts, so nothing written", file=sys.stderr)
+        return 1
     source = args.source.resolve()
     root, out = (args.root or source.parent.parent.parent).resolve(), (args.out or source.parent).resolve()
     try:
@@ -862,11 +1038,18 @@ def main(argv: list[str] | None = None) -> int:
         if args.writer and not re.match(r"^https://[^\s/@]+(/\S*)?$", args.writer):
             print("render_map: --writer takes an https URL without credentials", file=sys.stderr)
             return 1
+        tree = None
+        if args.tree:
+            tree, reason = read_tree(args.tree)
+            if reason:
+                print(f"render_map: {reason}; nothing written", file=sys.stderr)
+                return 1
         out.mkdir(parents=True, exist_ok=True)
-        packet = built.packet(args.sha or head_sha(root), args.at or now_iso(), args.writer)
+        packet = built.packet(args.sha or head_sha(root), args.at or now_iso(), args.writer, version=args.packet_version, tree=tree)
         (out / PACKET).write_text(json.dumps(packet, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        print(f"render_map: packet of {plural(len(built.subjects), 'card')} written to {out / PACKET}")
-        for line in built.flags:
+        print(f"render_map: packet of {plural(len(built.subjects), 'card')} written to {out / PACKET}"
+              + (f", facts keyed by the {plural(len(packet['tree']['nodes']), 'node')} of {args.tree.name}" if tree else ""))
+        for line in packet["derived"]["flags"]:
             print(f"flag (not a failure): {line}")
         for line in built.errors:
             print(f"check failed: {line}", file=sys.stderr)

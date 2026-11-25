@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-25T00:00:00Z",
   "bundle": {
-    "tag": "c91d6e88bba02c68",
-    "version": "c91d6e88bba02c68e8af623445c9741ba90ff159945af79bc3c0599998543f0e",
-    "pluginVersion": "2026.11.25-c91d6e88"
+    "tag": "f26e7e98fba5170c",
+    "version": "f26e7e98fba5170cce3a0875a542b520f97bbecb9f2bba358b00c368faa79fa3",
+    "pluginVersion": "2026.11.25-f26e7e98"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.25-c91d6e88"
+    "version": "2026.11.25-f26e7e98"
   },
   "skills": [
     {
@@ -351,7 +351,7 @@
       "name": "cady-product-map",
       "path": "library/cady-product-map",
       "cadyId": "skill.product.map",
-      "version": "8563fa55e69679749073"
+      "version": "6801c7e6be22baaa8b27"
     },
     {
       "name": "cady-product-method",
