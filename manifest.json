@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-25T00:00:00Z",
   "bundle": {
-    "tag": "f54ac10cd82d96f8",
-    "version": "f54ac10cd82d96f873e87e09717eddc1e330edbeabfcb8c9e1cbc8851fe47363",
-    "pluginVersion": "2026.11.25-f54ac10c"
+    "tag": "bff495952413386a",
+    "version": "bff495952413386af614040f57a7ed15927e36e27c038a9b9b1d4994be05081a",
+    "pluginVersion": "2026.11.25-bff49595"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.25-f54ac10c"
+    "version": "2026.11.25-bff49595"
   },
   "skills": [
     {
@@ -124,12 +124,6 @@
       "path": "library/cady-customer-success-method",
       "cadyId": "company.method.customer_success",
       "version": "51d72c06d080901fd317"
-    },
-    {
-      "name": "cady-design-method",
-      "path": "library/cady-design-method",
-      "cadyId": "company.method.design",
-      "version": "edef665ef23924a7b835"
     },
     {
       "name": "cady-devops-method",
@@ -261,7 +255,7 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "7500228836198d14128f"
+      "version": "f702a5dcc10642a0647d"
     },
     {
       "name": "cady-gtm-linkedin-message",
@@ -333,7 +327,7 @@
       "name": "cady-marketing-method",
       "path": "library/cady-marketing-method",
       "cadyId": "company.method.marketing",
-      "version": "ffab697b89325a2cc481"
+      "version": "f76d0ef63861a7a3863e"
     },
     {
       "name": "cady-marketing-post",
@@ -346,6 +340,12 @@
       "path": "library/cady-product-customer-interview",
       "cadyId": "skill.product.customer_interview",
       "version": "f459752ba67ab92d6e3f"
+    },
+    {
+      "name": "cady-product-design",
+      "path": "library/cady-product-design",
+      "cadyId": "skill.product.design",
+      "version": "50940a2e44df8a7f53bf"
     },
     {
       "name": "cady-product-map",
