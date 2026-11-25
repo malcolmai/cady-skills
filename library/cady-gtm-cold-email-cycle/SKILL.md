@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.cold_email_cycle"
-  version: "2f0295bc83bb46a079f7"
-  library: "b172e4ad1ac48044"
+  version: "7b696e62218af6d7a90b"
+  library: "7c586d55fc6731ca"
   function: "gtm"
 ---
 # Cold email cycle
@@ -18,7 +18,7 @@ metadata:
 **Bets** (where this differs from the default):
 - Open with the recipient's situation in their words; never a self-introduction, praise or an invented reaction. Instead of: Open with 'I'm X from Y' or a compliment on their recent post.
 - An inferred or unknown line becomes the message's question, never a claim about the recipient. Instead of: State the guessed pain as fact ('you're struggling with X').
-- Size the ask to the evidence: with only title and company size, ask for a one-word reply or offer a link, not a call. Instead of: Ask every cold prospect for a 15-minute call.
+- Size the todo to the evidence: with only title and company size, ask for a one-word reply or offer a link, not a call. Instead of: Ask every cold prospect for a 15-minute call.
 - Protect the sending domain before volume: verify addresses, keep catch-all small, never buy a list. Instead of: Send to a bought or scraped list and clean up bounces afterwards.
 - Give each candidate a one-line reason for inclusion or exclusion. Instead of: Exclude or include candidates without explaining the decision.
 - Pass motion 'customer' on the prepare call. Instead of: Leave the relationship type to inference.

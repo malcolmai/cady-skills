@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.evidence"
-  version: "bb6bd3341e238c5cae3a"
-  library: "b172e4ad1ac48044"
+  version: "e819a8ce01f76d86ccc8"
+  library: "7c586d55fc6731ca"
   function: "company"
 ---
 # Key questions and behaviour tests
@@ -38,7 +38,7 @@ A decision you own needs evidence: frame its questions, take the cheapest route,
 ## Procedure
 
 1. Start from the decision, not the data (the Executive owns strategy, you your function's decisions, and this skill decides nothing). Name the few questions whose answers would change a goal or decision you own: what must be true, what would reverse it, and by when you need to know. Drop a question no decision depends on. Look up existing ones first with cady_read and continue them; never record one twice.
-2. Record each question as a task (work_set {kind: task, goal, headline: the question, next, due: when the decision needs the answer, brief: {why: the decision or goal it serves, your current belief and confidence, and which answer would change the decision}}), with a File for detail. These are work records, not tree items: only an assumption whose answer would change where resources go becomes a bet with its measure, what would confirm or reject it (decisions_set). Owner-only facts go in asks (asks_set).
+2. Record each question as a task (work_set {kind: task, goal, headline: the question, next, due: when the decision needs the answer, brief: {why: the decision or goal it serves, your current belief and confidence, and which answer would change the decision}}), with a File for detail. These are work records, not tree items: only an assumption whose answer would change where resources go becomes a bet with its measure, what would confirm or reject it (decisions_set). Owner-only facts go in asks (todos_set).
 3. Take the cheapest route that could settle it: evidence the company already holds, then a feed from work already happening, then desk research, then primary research. Fit the route to the question: why people buy or leave needs interviews about what they did, not opinions; whether they will act needs a behaviour test (step 6); how many needs a sample big enough to tell; what the alternatives offer follows `cady-product-research`. With little traffic, prefer interviews and behaviour tests to A/B tests the sample cannot settle.
 4. Feeds stay with their owners: to have another agent capture something, ask for that agent to be changed (`cady-company-manage-agents`). Primary research is an outside effect: interview requests go through outreach checks, and pages, ads and spend need their existing authority, with a ready packet at that boundary. Be honest about who you are, ask consent before recording, and never seek a rival's confidential information.
 5. Staff it to its size: a one-off synthesis goes to a fresh-context subagent with a self-contained prompt, its findings checked against the sources; evidence that must stay fresh, or many questions, become a duty on your responsibility or a dedicated agent (`cady-company-manage-agents`). You keep the decisions.

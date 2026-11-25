@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.marketing.post"
-  version: "f1765b59d7a0b3937660"
-  library: "b172e4ad1ac48044"
+  version: "fbc686728913b88299d3"
+  library: "7c586d55fc6731ca"
   function: "marketing"
 ---
 # Post one piece

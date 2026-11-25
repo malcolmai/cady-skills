@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "09bb894b2e47600180c0"
-  library: "b172e4ad1ac48044"
+  version: "61b75a850c9abe936892"
+  library: "7c586d55fc6731ca"
   function: "gtm"
 ---
 # Warm email and follow-ups
@@ -52,7 +52,7 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 2. For a follow-up, a trial nudge or a reply, read the existing exchange with crm_activities_read mode interactions and cady_read communication:<id>. Before a trial nudge about a product link, check sign-up with cady_read party:<partyId> and respond to it. Ask the owner for a price, commitment, availability or relationship call. For a supplier cancellation, order or commitment, obtain the exact user review required by `cady-finance-vendor-spend-review`; an outreach grant does not substitute.
 3. For a follow-up, say which follow-up this is (first or second), run the outcome check (`references/outreach-release.md`, Outcome check) first, then apply `references/outreach-release.md`, Follow up. For an introduction request, use `references/intro-request.md`. File external clicks with crm_interactions_set; a human click nudge uses the warm_email copy reference.
 4. Draft one message per person, meeting them where they are in their own record or thread. Use `references/outreach-drafting.md`, Brief, Sender voice, Framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; the relationship type carried by the review decides the lane. Run the draft check in `references/outreach-drafting.md` before `references/taste-message.md`.
-5. Prepare the review with release: true (its reply carries it once) and act on each hold: where outreach is automatic the same call sends it; when it comes back held, give the person the reviewUrl and leave it pending (an ask cannot approve it); then report the review, any advisories the result carries and the track update. To send a file, pass fileIds (email only, up to 5 files, 2 MiB in all; the person approves the exact versions and the recipient keeps a copy Cady cannot revoke); a larger file, or any other channel, goes as a dataroom share (datarooms_shares_set) linked in the message.
+5. Prepare the review with release: true (its reply carries it once) and act on each hold: where outreach is automatic the same call sends it; when it comes back held, give the person the reviewUrl and leave it pending (a todo cannot approve it); then report the review, any advisories the result carries and the track update. To send a file, pass fileIds (email only, up to 5 files, 2 MiB in all; the person approves the exact versions and the recipient keeps a copy Cady cannot revoke); a larger file, or any other channel, goes as a dataroom share (datarooms_shares_set) linked in the message.
 6. Stop: on any condition in `references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance

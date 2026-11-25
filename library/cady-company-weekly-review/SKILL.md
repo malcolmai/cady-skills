@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.weekly_review"
-  version: "69d2ded9bcecce676363"
-  library: "b172e4ad1ac48044"
+  version: "16ab40944d73b68bfe12"
+  library: "7c586d55fc6731ca"
   function: "company"
 ---
 # Weekly review
@@ -50,7 +50,7 @@ The weekly review: judge effectiveness, call every goal and initiative, re-test 
 4. Initiatives (`references/executive-weekly.md`, initiatives): give each open one a verdict, start, fold or decline, with its reason.
 5. Agents (`references/executive-weekly.md`, handovers): answer each open task under "Keep the system sharp", judge each agent's quality from its results, flag one acting outside its loop on the methods node, and read the library CHANGELOG.md since your last agent review; change an agent only through `cady-company-change-agent-behaviour`.
 6. Bets and older decisions: re-test each current bet (the root's bets and betsToCheck in your cady_start read) and decision whose evidence aged or readings contradict it; keep, replace or drop it (`cady-company-decision` step 6). A contradicting reading is work_set observations [{nodeKey, text, sourceRef}] on that bet's node; a bet with no reading is unknown, so name the read that would get one.
-7. Load (`references/executive-weekly.md`, load and fit): hand work that should move to the manager under step 8.
+7. Load (`references/executive-weekly.md`, load and fit): hand work that should move to the manager under step 8. Archive the todos that are stale, with a reason each (todos_change {archive}; read them with cady_read view work.todos).
 8. Hand the changes to the manager as one instruction (`references/executive-weekly.md`, hand-off): each change names the goal or decision it serves and the outcome, not how. Designing an agent stays yours (step 5).
 9. Close the result with two lines. Next: each change to the next runs, naming the agent, method or goal it changes, routed as step 8 says. Check: whether this review judged from readings against the point, where it went deep, and what to judge differently.
 
