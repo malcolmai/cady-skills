@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.onboarding"
   version: "9593a5d89120ac27f56e"
-  library: "f7b2c03517058d73"
+  library: "9d546548db3ae461"
   function: "company"
 ---
 # Set up a company and hand over to its Executive
