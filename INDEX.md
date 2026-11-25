@@ -41,7 +41,6 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-sales-method`: Sales role card: what this function owns and decides (`library/cady-sales-method/SKILL.md`)
 
 ## product
-- `cady-design-method`: Design role card: what this function owns and decides (`library/cady-design-method/SKILL.md`)
 - `cady-devops-method`: DevOps workflow, the QA card for a software business: improve the codebase, checks and verification engineering works in (`library/cady-devops-method/SKILL.md`)
 - `cady-devops-stories`: Write or edit a Story, capture its flow as screenshots for review, or file a failed step. (`library/cady-devops-stories/SKILL.md`)
 - `cady-devops-wcag-audit`: Audit a web or app interface against WCAG 2.2 AA with real tools and file ranked, reproducible findings. (`library/cady-devops-wcag-audit/SKILL.md`)
@@ -50,6 +49,7 @@ Front door: [`cady`](plugins/cady/skills/cady/SKILL.md) (`plugins/cady/skills/ca
 - `cady-engineering-integrations`: comparing, choosing or connecting a tool, data source or account. (`library/cady-engineering-integrations/SKILL.md`)
 - `cady-engineering-method`: Engineering workflow: build a task to production quality against the product map (`library/cady-engineering-method/SKILL.md`)
 - `cady-product-customer-interview`: Plan, run and synthesise customer discovery interviews about past behaviour, without leading questions. (`library/cady-product-customer-interview/SKILL.md`)
+- `cady-product-design`: Produce design work (an interface, page, asset, motion piece or deck) and hand it on buildable. (`library/cady-product-design/SKILL.md`)
 - `cady-product-map`: Generate, restructure, clean up, check or publish a product map or a dimension map, for existing or new products. (`library/cady-product-map/SKILL.md`)
 - `cady-product-method`: Product manager workflow: research, the product map and the roadmap (`library/cady-product-method/SKILL.md`)
 - `cady-product-research`: Write or update a research file on how users see the product and its alternatives, or on a technology. (`library/cady-product-research/SKILL.md`)

@@ -1,8 +1,8 @@
 {
   "schema": "cady.roster.v1",
   "library": {
-    "tag": "f54ac10cd82d96f8",
-    "version": "f54ac10cd82d96f873e87e09717eddc1e330edbeabfcb8c9e1cbc8851fe47363"
+    "tag": "bff495952413386a",
+    "version": "bff495952413386af614040f57a7ed15927e36e27c038a9b9b1d4994be05081a"
   },
   "core": [],
   "standalone": [
@@ -97,17 +97,9 @@
       "card": "cady-product-method",
       "skills": [
         "cady-product-customer-interview",
+        "cady-product-design",
         "cady-product-map",
         "cady-product-research",
-        "cady-company-taste-review"
-      ]
-    },
-    "design": {
-      "label": "Design",
-      "family": "product",
-      "purpose": "Designs the customer experience: flows, interfaces and copy",
-      "card": "cady-design-method",
-      "skills": [
         "cady-company-taste-review"
       ]
     },
