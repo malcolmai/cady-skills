@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-25T00:00:00Z",
   "bundle": {
-    "tag": "f3033500260d6445",
-    "version": "f3033500260d6445c6a4bac1976b0e6f259de935c11f75d3b320585069a76a9b",
-    "pluginVersion": "2026.11.25-f3033500"
+    "tag": "9c65239114606fe7",
+    "version": "9c65239114606fe70c1c42913ba402868cca5a759d929120b788f4644c4096e9",
+    "pluginVersion": "2026.11.25-9c652391"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.25-f3033500"
+    "version": "2026.11.25-9c652391"
   },
   "skills": [
     {
@@ -171,7 +171,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "fee84f0d09d1613bc42d"
+      "version": "53fb125a08b2b19e61dc"
     },
     {
       "name": "cady-finance-budget-review",

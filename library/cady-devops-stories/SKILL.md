@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.devops.stories"
   version: "a270cdd170f8c7ec9ce7"
-  library: "f3033500260d6445"
+  library: "9c65239114606fe7"
   function: "devops"
 ---
 # Stories: keep and capture
