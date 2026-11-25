@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
   version: "e1e9886ea8c243635ac0"
-  library: "fb5b9f09b7ab510f"
+  library: "b172e4ad1ac48044"
   function: "gtm"
 ---
 # Social direct message
