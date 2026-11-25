@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "58180eb5e88dee7ac3bb"
-  library: "17097b92df471691"
+  version: "2e24fa86042635f39164"
+  library: "420ee7c3b26ee692"
   function: "company_operations"
 ---
 # Company Operations
@@ -59,8 +59,8 @@ You keep the company legally sound and running: obligations and filings, contrac
 - CRM counterparty and vendor parties (cady_read party:<id>; crm_set)
 
 ### Model tiers
-- workhorse
-- lead
+- smart
+- fast
 
 ### Skills
 - `cady-company-operations-compliance-register`: What statutory and registry filings the company owes and when (annual returns, confirmation statements, state reports).

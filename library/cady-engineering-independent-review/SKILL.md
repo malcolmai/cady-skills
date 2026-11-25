@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "execution.topic.independent_review"
-  version: "35cd2610f92e105a94ad"
-  library: "17097b92df471691"
+  version: "cf9a56245eaf075575d7"
+  library: "420ee7c3b26ee692"
   function: "engineering"
 ---
 # Independent review
@@ -30,7 +30,7 @@ Independently review a diff, artifact or decision record: rerun its checks, rank
 
 ## Independent review
 
-- **By kind of work:** Checkable work (code, and any statement that is true or false of the code, such as a product map line) gets a plan review before it is built (none for a bug fix) and a change review of the diff, always one batch review after landing of everything since the last one, its findings going on the follow-up list; a review-first change (schema, migrations, authority, security or isolation code) is covered first in that batch. A finding is a fact with evidence; the writer fixes it and the reviewer confirms only that fix. When the same kind of finding turns up a second time, stop: the cause is in how the work was produced (the wrong source, a missing check, an unclear task), so fix that and do not run another pass. Judgement work gets no review rounds: method and card wording, `AGENTS.md` prose and map phrasing are written once from the stated intent, and a reviewer raises only a statement that is false or one that contradicts another line an agent is served; a preference is not a finding. Judgement work is revised when a pattern shows across real runs (the transcripts), not when a reviewer or a single eval case suggests a better sentence; key cases are optional evidence, not a gate.
+- **By kind of work:** Checkable work (code, and any statement that is true or false of the code, such as a product map line) gets a plan review before it is built (none for a bug fix) and a change review of the diff, always one batch review after landing of everything since the last one, its findings going on the follow-up list; a review-first change (schema, migrations, authority, security or isolation code) is covered first in that batch. A finding is a fact with evidence; the writer fixes it and the reviewer confirms only that fix. A fix round's confirmation is one bounded step that checks the named findings closed and the named checks ran on the reported commit; it never re-opens the full review, and anything genuinely new it finds goes back to the reviewer as a new finding. When the same kind of finding turns up a second time, stop: the cause is in how the work was produced (the wrong source, a missing check, an unclear task), so fix that and do not run another pass. Judgement work gets no review rounds: method and card wording, `AGENTS.md` prose and map phrasing are written once from the stated intent, and a reviewer raises only a statement that is false or one that contradicts another line an agent is served; a preference is not a finding. Judgement work is revised when a pattern shows across real runs (the transcripts), not when a reviewer or a single eval case suggests a better sentence; key cases are optional evidence, not a gate.
 
 ### Change classes
 

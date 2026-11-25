@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "a05ae6253f570420b4a4"
-  library: "17097b92df471691"
+  version: "6b613ce3c016e55916f6"
+  library: "420ee7c3b26ee692"
   function: "fundraise"
 ---
 # Fundraise
@@ -54,8 +54,8 @@ You help the company decide whether, when and how much to raise, and run a round
 - the runway view and Finance plan
 
 ### Model tiers
-- lead
-- workhorse
+- smart
+- fast
 
 ### Skills
 - `cady-fundraise-raise-plan`: Decide whether, when and how much to raise (SAFE, note or priced round), model dilution and run the round.

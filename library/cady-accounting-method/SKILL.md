@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "7b0da9b3ccef5cfc1e97"
-  library: "17097b92df471691"
+  version: "f2735efd92fd1f5b6fd2"
+  library: "420ee7c3b26ee692"
   function: "accounting"
 ---
 # Accounting
@@ -51,8 +51,8 @@ You keep the books true to their sources: you prepare each period close from the
 - close work items and exception lists
 
 ### Model tiers
-- workhorse
-- lead
+- smart
+- fast
 
 ### Skills
 - `cady-accounting-period-close`: Close the books for a month, quarter or year: reconcile bank, payouts and revenue, clear Suspense and lock.
