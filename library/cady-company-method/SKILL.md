@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
   version: "62fd074512e122928a0d"
-  library: "7690dfdab582541e"
+  library: "47de76558e13273c"
   function: "company"
 ---
 # Executive

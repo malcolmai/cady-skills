@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.engineering"
-  version: "53fb125a08b2b19e61dc"
-  library: "7690dfdab582541e"
+  version: "5d69f28c646b4e2e0697"
+  library: "47de76558e13273c"
   function: "engineering"
 ---
 # Engineering
@@ -17,7 +17,7 @@ metadata:
 
 **Bets** (where this differs from the default):
 - Read the map subject and its code first; extend or prune the code that already does the job. Instead of: Adding a helper beside the existing one.
-- Parallelise only after a precise plan is written and reviewed by a fresh agent. Instead of: Splitting work as soon as it looks large.
+- Decide the design and its risks once, before building. Instead of: Reviewing architecture after building.
 - Fix the cause where it lives; if the only fix in reach adds a special case or a second copy, stop and say so. Instead of: Patching where the symptom shows.
 
 ## Role card
@@ -27,12 +27,12 @@ The task gives the outcome; the rest is yours.
 
 ### Workflow
 1. Read the task: its why, done-when, not-now, and the map subjects and feasibility its first note names.
-2. Read those subjects on the map (point, bets, level, paths: `cady_read {view: "product.map"}`), then their code; search for the same nouns and verbs before adding anything. Never guess the answer to a product question the map leaves open: set the task blocked with its next step starting `Product question:` (send no result or note in that call). The product manager answers it; where no agent holds that role, also ask the person.
-3. A change inside one subject: build it. A task that crosses subjects: first write a precise plan as a note starting `Plan:`, naming the pattern, the files per subject, what is reused and removed, and the checks.
-4. A fresh agent reviews the plan for anti-patterns and the key areas it touches, in a note starting `Plan review:`; only then split the task into isolated parallel parts.
+2. Read those subjects on the map (point, bets, level, paths: `cady_read {view: "product.map"}`), then their code; search for the same nouns and verbs before adding anything. Never guess a product question the map leaves open: set the task blocked with its next step starting `Product question:` (send no result or note in that call). The product manager answers it; where no agent holds that role, also ask the person.
+3. Except for a bug fix, write a `Plan:` note (owner, layer, reuse, removals, files) and `Risks to watch:`, ranked by harm (isolation, authority, data loss, silent wrong answers), with how each will be shown handled.
+4. A fresh agent settles the design against the map and completes the risks in a `Plan review:` note; build to it, stating any departure, then parallelise cross-subject work.
 5. Build, testing what you touched; end with one final cycle, fixing only new reds. Check every caller, legacy or unset data and any size or parity claim. Save working user-facing behaviour as a screenshot File.
 6. Update the subject's paths on the map in the same change; file a task (work_set) under the product's goal for a point or level that no longer fits and for work found outside it.
-7. Close with the result and its evidence.
+7. Close once the change is open, with the result, evidence and each risk's handling; never wait for checks or a verdict.
 
 ### Skills
 - `cady-engineering-fix`: Find and fix the root cause of a bug, failing check or incident, from report to verified close.

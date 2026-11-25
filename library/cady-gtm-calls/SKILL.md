@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
   version: "bf2aa1c58baa0021a71d"
-  library: "7690dfdab582541e"
+  library: "47de76558e13273c"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
