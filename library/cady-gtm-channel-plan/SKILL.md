@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
   version: "b7fc67bc26be141df514"
-  library: "e4ba52aee675a0ac"
+  library: "2fb387da2a2556e3"
   function: "gtm"
 ---
 # Channel plan
