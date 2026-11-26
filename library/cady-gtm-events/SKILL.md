@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.events"
   version: "71939e0d7b7512790644"
-  library: "7450fad49f36e3d5"
+  library: "e96226efa6ff40d1"
   function: "gtm"
 ---
 # Events: attend or host
