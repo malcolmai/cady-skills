@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-26T00:00:00Z",
   "bundle": {
-    "tag": "2fb387da2a2556e3",
-    "version": "2fb387da2a2556e3d271e41c45bd41933ccc638d1b95a46990080908efeec9b3",
-    "pluginVersion": "2026.11.26-2fb387da"
+    "tag": "7450fad49f36e3d5",
+    "version": "7450fad49f36e3d59e8e08951a3732e96a55653fa5e3f26e4ffbe5e9705e8eba",
+    "pluginVersion": "2026.11.26-7450fad4"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.26-2fb387da"
+    "version": "2026.11.26-7450fad4"
   },
   "skills": [
     {
@@ -33,7 +33,7 @@
       "name": "cady-company-change-agent-behaviour",
       "path": "library/cady-company-change-agent-behaviour",
       "cadyId": "skill.company.change_agent_behaviour",
-      "version": "a15dd9a04e2572ca01ce"
+      "version": "ed3f981e9876be3b8590"
     },
     {
       "name": "cady-company-decision",
@@ -129,7 +129,7 @@
       "name": "cady-devops-method",
       "path": "library/cady-devops-method",
       "cadyId": "company.method.devops",
-      "version": "047be92a391b19079bed"
+      "version": "16dc54db6623d018ad4f"
     },
     {
       "name": "cady-devops-stories",
@@ -153,7 +153,7 @@
       "name": "cady-engineering-independent-review",
       "path": "library/cady-engineering-independent-review",
       "cadyId": "execution.topic.independent_review",
-      "version": "6066229fe3b5b14bf491"
+      "version": "33ca1bf5ab217521c1ed"
     },
     {
       "name": "cady-engineering-integrations",
@@ -165,7 +165,7 @@
       "name": "cady-engineering-method",
       "path": "library/cady-engineering-method",
       "cadyId": "company.method.engineering",
-      "version": "d03852d6f64246e1da80"
+      "version": "2dc82582059274c264f2"
     },
     {
       "name": "cady-finance-budget-review",
@@ -315,7 +315,7 @@
       "name": "cady-manager-method",
       "path": "library/cady-manager-method",
       "cadyId": "company.method.manager",
-      "version": "48d98d33e510daaede81"
+      "version": "7faed5e4a7570ed40555"
     },
     {
       "name": "cady-manager-sense-check",
