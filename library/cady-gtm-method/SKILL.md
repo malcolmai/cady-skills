@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
   version: "5f43231e00c2132746ba"
-  library: "bff495952413386a"
+  library: "e4ba52aee675a0ac"
   function: "gtm"
 ---
 # GTM
