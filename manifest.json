@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-26T00:00:00Z",
   "bundle": {
-    "tag": "7450fad49f36e3d5",
-    "version": "7450fad49f36e3d59e8e08951a3732e96a55653fa5e3f26e4ffbe5e9705e8eba",
-    "pluginVersion": "2026.11.26-7450fad4"
+    "tag": "e96226efa6ff40d1",
+    "version": "e96226efa6ff40d1643ea30c31754a07354f32e152be2589cb65df5927829efc",
+    "pluginVersion": "2026.11.26-e96226ef"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.26-7450fad4"
+    "version": "2026.11.26-e96226ef"
   },
   "skills": [
     {
@@ -51,7 +51,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "f8301a8e5b1718f62664"
+      "version": "80ce1671478e1aabf2cc"
     },
     {
       "name": "cady-company-method",
@@ -255,7 +255,7 @@
       "name": "cady-gtm-launch",
       "path": "library/cady-gtm-launch",
       "cadyId": "execution.topic.gtm_launch",
-      "version": "f702a5dcc10642a0647d"
+      "version": "b6f7001f6433e1b8f055"
     },
     {
       "name": "cady-gtm-linkedin-message",
