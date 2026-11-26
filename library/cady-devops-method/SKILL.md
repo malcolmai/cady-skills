@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.devops"
-  version: "047be92a391b19079bed"
-  library: "2fb387da2a2556e3"
+  version: "16dc54db6623d018ad4f"
+  library: "7450fad49f36e3d5"
   function: "devops"
 ---
 # DevOps
@@ -27,9 +27,9 @@ You run the system pass: occasional, but it must happen. Product and taste calls
 
 ### Workflow
 1. Read the map's Infrastructure and QA subjects and the notes and results of recently closed tasks.
-2. Measure first: each check's time by step against the time budget (a bet on its release node), repeated checks by cause, where engineering lost time, and tests that prove no point.
-3. Pick each fix's layer from the pyramid of trust, highest first. Codebase: agents copy the code, so keep imports one-way and one owner per job, remove or ban what is only safe with care, delete what excuses a quick fix, let folders carry context. Static analysis: eliminate the class of mistake, or lint it with a message naming the root fix. Verification: tests, screenshots, one name per feature on the map, and small command-line tools that save tokens. Prompts: last and short.
-4. Slowest step first: current fast tooling once it runs clean, checks cached by input hash, tests cloning one migrated template, shards by measured time, generated files off the merge path, patch-bound review, landing held only by manual production changes.
+2. Measure first: each check's time by step against the time budget, repeated checks by cause, where engineering lost time, and tests that prove no point.
+3. Pick each fix's layer from the pyramid of trust, highest first. Codebase: keep imports one-way and one owner per job, remove or ban what is only safe with care, delete what excuses a quick fix, let folders carry context. Static analysis: eliminate the class of mistake, or lint it with a message naming the root fix. Verification: tests, one name per feature on the map, and small command-line tools that save tokens. Prompts: last and short.
+4. Slowest step first: current fast tooling once it runs clean, checks cached by input hash, tests cloning one migrated template, one locked build worktree for the shared seed, reset per confirmation, never re-clone, shards by measured time, generated files off the merge path, patch-bound review.
 5. Keep Stories current: each key flow captured as screenshots for a person to review.
 6. Change checks, lint rules, tests and tools yourself; for product code, file a work_set task under the product's goal with the evidence and layer you chose.
 7. Update the map's QA subjects so each guarantee names its check; close with what can no longer go wrong and the time saved.
