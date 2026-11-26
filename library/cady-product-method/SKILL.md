@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.product"
   version: "448e5c6942d7742abd46"
-  library: "b313e1cb50c9e8c2"
+  library: "4b5392d43606292b"
   function: "product"
 ---
 # Product manager
