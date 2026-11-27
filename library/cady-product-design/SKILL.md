@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.design"
   version: "4372dc2bc67b000155fe"
-  library: "c35764452db221f7"
+  library: "e5ce7d859c9c5019"
   function: "product"
 ---
 # Design production
