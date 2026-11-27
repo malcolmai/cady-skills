@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.weekly_review"
-  version: "16ab40944d73b68bfe12"
-  library: "15b8d39c5370adce"
+  version: "feadfda15624569c42b0"
+  library: "44160400595e069c"
   function: "company"
 ---
 # Weekly review
@@ -48,7 +48,7 @@ The weekly review: judge effectiveness, call every goal and initiative, re-test 
 2. Effectiveness: judge each goal's and task's results and dates against intended conditions, not task counts, and whether they serve the root's point and bets (keeping agents unstuck is the manager's).
 3. Goals (`references/company-goals.md`, `references/executive-weekly.md`, goal calls): call every open goal at each review, sooner when its callReasons name an event (no fixed clock). Score its reading against the last prediction (unknown when there is none, with a scheduled run or reminder to read it), then persist, pivot, parallel or stop it, aimed at the goal's binding constraint (the step with the longest wait, the lowest throughput or the missing input; before product-market fit it is usually customer evidence: check the GTM pipeline from list to calls for the proposed ICP before adding product work).
 4. Initiatives (`references/executive-weekly.md`, initiatives): give each open one a verdict, start, fold or decline, with its reason.
-5. Agents (`references/executive-weekly.md`, handovers): answer each open task under "Keep the system sharp", judge each agent's quality from its results, flag one acting outside its loop on the methods node, and read the library CHANGELOG.md since your last agent review; change an agent only through `cady-company-change-agent-behaviour`.
+5. Systems and agents (`references/executive-weekly.md`, handovers): judge each system from cady_start's systems (its goal's reading, a live agent for every role; a missing role gets the design rerun cady_start serves), answer each open task under "Keep the system sharp", judge each agent's quality from its results, flag one acting outside its loop on the methods node, and read the library CHANGELOG.md since your last agent review; change an agent only through `cady-company-change-agent-behaviour`.
 6. Bets and older decisions: re-test each current bet (the root's bets and betsToCheck in your cady_start read) and decision whose evidence aged or readings contradict it; keep, replace or drop it (`cady-company-decision` step 6). A contradicting reading is work_set observations [{nodeKey, text, sourceRef}] on that bet's node; a bet with no reading is unknown, so name the read that would get one.
 7. Load (`references/executive-weekly.md`, load and fit): hand work that should move to the manager under step 8. Archive the todos that are stale, with a reason each (todos_change {archive}; read them with cady_read view work.todos).
 8. Hand the changes to the manager as one instruction (`references/executive-weekly.md`, hand-off): each change names the goal or decision it serves and the outcome, not how. Designing an agent stays yours (step 5).

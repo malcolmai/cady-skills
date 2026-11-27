@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-27T00:00:00Z",
   "bundle": {
-    "tag": "15b8d39c5370adce",
-    "version": "15b8d39c5370adce2692096e664aa14bd3aedc5211ac4db062ba3327ba7dc41a",
-    "pluginVersion": "2026.11.27-15b8d39c"
+    "tag": "44160400595e069c",
+    "version": "44160400595e069c3b759c1790c55243a717b3d3ee7f03e590419bdceefbcf2b",
+    "pluginVersion": "2026.11.27-44160400"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.27-15b8d39c"
+    "version": "2026.11.27-44160400"
   },
   "skills": [
     {
@@ -63,7 +63,7 @@
       "name": "cady-company-onboarding",
       "path": "library/cady-company-onboarding",
       "cadyId": "skill.company.onboarding",
-      "version": "9593a5d89120ac27f56e"
+      "version": "cbfece4dfc87ba4d43b2"
     },
     {
       "name": "cady-company-operations-compliance-register",
@@ -111,7 +111,7 @@
       "name": "cady-company-weekly-review",
       "path": "library/cady-company-weekly-review",
       "cadyId": "skill.company.weekly_review",
-      "version": "16ab40944d73b68bfe12"
+      "version": "feadfda15624569c42b0"
     },
     {
       "name": "cady-customer-success-lifecycle",
