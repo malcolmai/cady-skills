@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.weekly_review"
   version: "279b75d0dceba66112e4"
-  library: "5fb4dd0b9c9d1817"
+  library: "be33cb4841a22c36"
   function: "company"
 ---
 # Weekly review
