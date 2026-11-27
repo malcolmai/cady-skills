@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.finance.budget_review"
   version: "e75a7e0c16678a8ac4a1"
-  library: "5fb4dd0b9c9d1817"
+  library: "be33cb4841a22c36"
   function: "finance"
 ---
 # Budget and cost review
