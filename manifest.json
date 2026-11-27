@@ -2,13 +2,13 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-27T00:00:00Z",
   "bundle": {
-    "tag": "c35764452db221f7",
-    "version": "c35764452db221f7180edafd73d88830c2ebc9f5525d2f165f181dc6481cfdf6",
-    "pluginVersion": "2026.11.27-c3576445"
+    "tag": "e5ce7d859c9c5019",
+    "version": "e5ce7d859c9c501928a6753011d081d497f68b845fae0b576802b472fb89e8a9",
+    "pluginVersion": "2026.11.27-e5ce7d85"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.27-c3576445"
+    "version": "2026.11.27-e5ce7d85"
   },
   "skills": [
     {
@@ -39,7 +39,7 @@
       "name": "cady-company-decision",
       "path": "library/cady-company-decision",
       "cadyId": "skill.company.decision",
-      "version": "60acdd73218891019fef"
+      "version": "0377f10ada02c93da81a"
     },
     {
       "name": "cady-company-evidence",
@@ -51,7 +51,7 @@
       "name": "cady-company-manage-agents",
       "path": "library/cady-company-manage-agents",
       "cadyId": "skill.company.manage_agents",
-      "version": "25792c9e83afbbdffecc"
+      "version": "703c837def7f689e1973"
     },
     {
       "name": "cady-company-method",
@@ -237,7 +237,7 @@
       "name": "cady-gtm-channel-plan",
       "path": "library/cady-gtm-channel-plan",
       "cadyId": "skill.gtm.channel_plan",
-      "version": "41648784b322a9b474e0"
+      "version": "76b17d960041f0482745"
     },
     {
       "name": "cady-gtm-cold-email-cycle",

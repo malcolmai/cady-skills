@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.manager"
   version: "7faed5e4a7570ed40555"
-  library: "c35764452db221f7"
+  library: "e5ce7d859c9c5019"
   function: "manager"
 ---
 # Manager
