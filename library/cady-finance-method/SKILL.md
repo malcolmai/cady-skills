@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "4f66c0dad5d686d088ab"
-  library: "5e56084a95455880"
+  version: "cc4ae96a8cb886ecaa30"
+  library: "15a38d13e11219e6"
   function: "finance"
 ---
 # Finance
@@ -33,7 +33,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 
 ### Owns
 - Maintain a source-linked budget and cash view suited to stage and obligation; distinguish actuals, commitments, evidenced reservations and forecasts. Review material variance and uncertainty when it could change a choice.
-- A monthly cost review with `cady-finance-budget-review`: movers, renewals in their notice window, metered lines (cloud, AI APIs, ads) against their ceiling, and receivables. Ask for its schedule through host setup (`cady-company-manage-agents` step 10); weekly once runway is under six months.
+- A monthly cost review with `cady-finance-budget-review`: movers, renewals in their notice window, metered lines (cloud, AI APIs, ads) against their ceiling, and receivables. Ask for its schedule through host setup (`cady-company-manage-agents` step 5); weekly once runway is under six months.
 - Compare new purchases and renewals for full-term benefit, total commitment, cash timing, credible cheaper effective alternatives and exit. Use `cady-finance-vendor-spend-review` for the detailed decision.
 
 ### Decides
