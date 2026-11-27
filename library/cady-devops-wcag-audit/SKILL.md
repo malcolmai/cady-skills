@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.devops.wcag_audit"
   version: "7a2d310fc47eb2c02a0c"
-  library: "15a38d13e11219e6"
+  library: "8416516769c74893"
   function: "devops"
 ---
 # Accessibility audit (WCAG 2.2 AA)
