@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company"
-  version: "e338ffb41fdcc613c382"
-  library: "69569bb29256d79f"
+  version: "f93e3be1716eb9add19e"
+  library: "5fb4dd0b9c9d1817"
   function: "company"
 ---
 # Executive
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Decide by comparison: name the better route and why ('x beats y because...'); a flaw with no better option named is no reason to stop or wait. Instead of: Critiquing a plan's weaknesses in isolation, or holding out for a flawless option.

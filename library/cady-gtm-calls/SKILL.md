@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.calls"
-  version: "4a87cf17dcc742f88d2d"
-  library: "69569bb29256d79f"
+  version: "f56157a5118bf86812cf"
+  library: "5fb4dd0b9c9d1817"
   function: "gtm"
 ---
 # Sales calls: prepare and follow up
@@ -51,12 +51,12 @@ Prepare for a sales or customer call (account brief, agenda, questions), then re
 
 ## Procedure
 
-1. Read the brief and its refs (`references/outreach-drafting.md`, Brief), including qualification criteria from offerRef; read cady_read party:<partyId> for each exact person. Keep cold and warm context distinct. For cold calls, remind the user that they decide lawfulness and UK numbers may need Telephone Preference Service (TPS) and Corporate Telephone Preference Service (CTPS) screening; this is not clearance.
+1. Read the brief and its refs (`../cady/references/outreach-drafting.md`, Brief), including qualification criteria from offerRef; read cady_read party:<partyId> for each exact person. Keep cold and warm context distinct. For cold calls, remind the user that they decide lawfulness and UK numbers may need Telephone Preference Service (TPS) and Corporate Telephone Preference Service (CTPS) screening; this is not clearance.
 2. Prepare one sheet per call using `references/call-prep.md`, sheet; save it to Files with files_set, with upload begin and complete, verify the receipt and reference it on the work item. Report unavailable steps outside the sheet. The user makes the call; Cady never dials and never records audio.
 3. After the call, match the notes-system record to the exact party, date and participants (`references/call-follow-up.md`, match); hold an uncertain match. Record one interaction with crm_interactions_set, interaction kind call, with occurredAt and sourceRef citing the call note id; keep only connected/not connected, qualified yes/no and next step in note. Never store a transcript, phone number or audio. Preserve sourceRef on retry.
-4. Separate what the buyer said from inference and commitments (`references/call-follow-up.md`, separate); handle commitments and act versus ask under `references/outreach-drafting.md`, Authority. A connected conversation makes the party engaged; set a stage with crm_interactions_set (the interaction's motion and stage) only when the user states it. Record supported ICP learning on the work item for the brief’s author (channel strategy).
-5. Draft the follow-up using `references/call-follow-up.md`, draft and `references/outreach-drafting.md`, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `references/taste-message.md`. Show the exact unsent proposal for user review; route it through cady-gtm-warm-email. Report the prepared outcome and linked work and source refs with work_set after owner readbacks; do not claim delivery.
-6. Stop: on any condition in `references/agent-stop.md`, stop and report as it says.
+4. Separate what the buyer said from inference and commitments (`references/call-follow-up.md`, separate); handle commitments and act versus ask under `../cady/references/outreach-drafting.md`, Authority. A connected conversation makes the party engaged; set a stage with crm_interactions_set (the interaction's motion and stage) only when the user states it. Record supported ICP learning on the work item for the brief’s author (channel strategy).
+5. Draft the follow-up using `references/call-follow-up.md`, draft and `../cady/references/outreach-drafting.md`, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; run Draft check before `../cady/references/taste-message.md`. Show the exact unsent proposal for user review; route it through cady-gtm-warm-email. Report the prepared outcome and linked work and source refs with work_set after owner readbacks; do not claim delivery.
+6. Stop: on any condition in `../cady/references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance
 
@@ -86,8 +86,8 @@ Prepare for a sales or customer call (account brief, agenda, questions), then re
 - **Transition:** report the saved sheet and verified interaction receipts
 
 ## References
-- Read [Agent stop](references/agent-stop.md) when before acting and whenever a stop condition arises.
+- Read [Agent stop](../cady/references/agent-stop.md) when before acting and whenever a stop condition arises.
 - Read [Call follow-up](references/call-follow-up.md) when matching a call note, separating evidence and drafting the follow-up.
 - Read [Call prep: the call sheet](references/call-prep.md) when preparing a sheet before a call.
-- Read [Outreach drafting](references/outreach-drafting.md) when use the named parts for drafting and authority.
-- Read [Taste check: message](references/taste-message.md) when after the draft check, when judging the follow-up.
+- Read [Outreach drafting](../cady/references/outreach-drafting.md) when use the named parts for drafting and authority.
+- Read [Taste check: message](../cady/references/taste-message.md) when after the draft check, when judging the follow-up.

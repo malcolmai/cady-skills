@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.warm_email"
-  version: "bdcbe519c6243369b683"
-  library: "69569bb29256d79f"
+  version: "52970b501203be689efa"
+  library: "5fb4dd0b9c9d1817"
   function: "gtm"
 ---
 # Warm email and follow-ups
@@ -50,18 +50,18 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 
 1. One named person and a plain purpose (a thanks, a proposed time, an answer) needs only the party (crm_read) and voice:me before the draft: prepare at step 4. Otherwise read the party and its record or thread to establish the relationship: confirm engagement or an introduction from evidence; a partner or supplier first approach may proceed even without prior engagement using its sourced purpose, without claiming an exchange.
 2. For a follow-up, a trial nudge or a reply, read the existing exchange with crm_activities_read mode interactions and cady_read communication:<id>. Before a trial nudge about a product link, check sign-up with cady_read party:<partyId> and respond to it. Ask the owner for a price, commitment, availability or relationship call. For a supplier cancellation, order or commitment, obtain the exact user review required by `cady-finance-vendor-spend-review`; an outreach grant does not substitute.
-3. For a follow-up, say which follow-up this is (first or second), run the outcome check (`references/outreach-release.md`, Outcome check) first, then apply `references/outreach-release.md`, Follow up. For an introduction request, use `references/intro-request.md`. File external clicks with crm_interactions_set; a human click nudge uses the warm_email copy reference.
-4. Draft one message per person, meeting them where they are in their own record or thread. Use `references/outreach-drafting.md`, Brief, Sender voice, Framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; the relationship type carried by the review decides the lane. Run the draft check in `references/outreach-drafting.md` before `references/taste-message.md`.
+3. For a follow-up, say which follow-up this is (first or second), run the outcome check (`../cady/references/outreach-release.md`, Outcome check) first, then apply `../cady/references/outreach-release.md`, Follow up. For an introduction request, use `../cady/references/intro-request.md`. File external clicks with crm_interactions_set; a human click nudge uses the warm_email copy reference.
+4. Draft one message per person, meeting them where they are in their own record or thread. Use `../cady/references/outreach-drafting.md`, Brief, Sender voice, Framing, Truth and grounding, Claims, Format, Easy yes, Booking and Unknowns; the relationship type carried by the review decides the lane. Run the draft check in `../cady/references/outreach-drafting.md` before `../cady/references/taste-message.md`.
 5. Prepare the review with release: true (its reply carries it once) and act on each hold: where outreach is automatic the same call sends it; when it comes back held, give the person the reviewUrl and leave it pending (a todo cannot approve it); then report the review, any advisories the result carries and the track update. To send a file, pass fileIds (email only, up to 5 files, 2 MiB in all; the person approves the exact versions and the recipient keeps a copy Cady cannot revoke); a larger file, or any other channel, goes as a dataroom share (datarooms_shares_set) linked in the message.
-6. Stop: on any condition in `references/agent-stop.md`, stop and report as it says.
+6. Stop: on any condition in `../cady/references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance
 
 - [ ] (check) readable evidence supports the relationship or sourced partner/supplier purpose, and sign-up is checked before a trial nudge
 - [ ] (check) each recipient has one personal message and next step grounded in their record or thread
-- [ ] (check) a follow-up has an outcome check and follows `references/outreach-release.md`, Follow up
+- [ ] (check) a follow-up has an outcome check and follows `../cady/references/outreach-release.md`, Follow up
 - [ ] (check) the review carries the relationship type and the track stage and next action are evidence-backed
-- [ ] (person) release follows `references/outreach-release.md`, Release
+- [ ] (person) release follows `../cady/references/outreach-release.md`, Release
 
 ## Owner checks
 
@@ -79,8 +79,8 @@ Write email follow-ups, engaged notes, or partner, organiser and supplier busine
 
 ## References
 - Read [Warm email copy](references/warm-email-copy.md) when drafting a warm email or click nudge.
-- Read [Agent stop](references/agent-stop.md) when throughout the run.
-- Read [Introduction request](references/intro-request.md) when asking for an introduction.
-- Read [Outreach drafting](references/outreach-drafting.md) when before drafting beyond one plain note to a named person.
-- Read [Outreach release](references/outreach-release.md) when before releasing or checking outreach and before follow-ups; preparing one note needs no read first.
-- Read [Taste check: message](references/taste-message.md) when after the draft check and before review.
+- Read [Agent stop](../cady/references/agent-stop.md) when throughout the run.
+- Read [Introduction request](../cady/references/intro-request.md) when asking for an introduction.
+- Read [Outreach drafting](../cady/references/outreach-drafting.md) when before drafting beyond one plain note to a named person.
+- Read [Outreach release](../cady/references/outreach-release.md) when before releasing or checking outreach and before follow-ups; preparing one note needs no read first.
+- Read [Taste check: message](../cady/references/taste-message.md) when after the draft check and before review.

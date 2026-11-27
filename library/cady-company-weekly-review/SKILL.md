@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.weekly_review"
-  version: "93d46251e9475d729335"
-  library: "69569bb29256d79f"
+  version: "279b75d0dceba66112e4"
+  library: "5fb4dd0b9c9d1817"
   function: "company"
 ---
 # Weekly review
@@ -46,7 +46,7 @@ The weekly review: judge effectiveness, call every goal and initiative, re-test 
 
 1. Assess. cady_start {loop: "outer"} returns the goals, event-due first, the bets to check, the open handovers and the agents. Between reviews take only an event's call or the one decision with the highest cost of delay (`cady-company-decision`), or write nothing and end with 'goals stand'. Disclose incomplete coverage; work first on the one or two problems that decide whether the company wins.
 2. Effectiveness: judge each goal's and task's results and dates against intended conditions, not task counts, and whether they serve the root's point and bets (keeping agents unstuck is the manager's).
-3. Goals (`references/company-goals.md`, `references/executive-weekly.md`, goal calls): call every open goal at each review, sooner when its callReasons name an event (no fixed clock). Score its reading against the last prediction (unknown when there is none, with a scheduled run or reminder to read it), then persist, pivot, parallel or stop it, aimed at the goal's binding constraint (the step with the longest wait, the lowest throughput or the missing input; before product-market fit it is usually customer evidence: check the GTM pipeline from list to calls for the proposed ICP before adding product work).
+3. Goals (`../cady/references/company-goals.md`, `references/executive-weekly.md`, goal calls): call every open goal at each review, sooner when its callReasons name an event (no fixed clock). Score its reading against the last prediction (unknown when there is none, with a scheduled run or reminder to read it), then persist, pivot, parallel or stop it, aimed at the goal's binding constraint (the step with the longest wait, the lowest throughput or the missing input; before product-market fit it is usually customer evidence: check the GTM pipeline from list to calls for the proposed ICP before adding product work).
 4. Initiatives (`references/executive-weekly.md`, initiatives): give each open one a verdict, start, fold or decline, with its reason.
 5. Systems and agents (`references/executive-weekly.md`, handovers): judge each system from cady_start's systems (its goal's reading, a live agent for every role; a missing role gets the design rerun cady_start serves), answer each open task under "Keep the system sharp", judge each agent's quality from its results, flag one acting outside its loop on the methods node, and read the library CHANGELOG.md since your last agent review; change an agent only through `cady-company-change-agent-behaviour`.
 6. Bets and older decisions: re-test each current bet (the root's bets and betsToCheck in your cady_start read) and decision whose evidence aged or readings contradict it; keep, replace or drop it (`cady-company-decision` step 6). A contradicting reading is work_set observations [{nodeKey, text, sourceRef}] on that bet's node; a bet with no reading is unknown, so name the read that would get one.
@@ -74,5 +74,5 @@ The weekly review: judge effectiveness, call every goal and initiative, re-test 
 - **Transition:** the Executive records its calls and verdicts; the manager acts on its one instruction
 
 ## References
-- Read [Company goals](references/company-goals.md) when you start, reshape or stop a goal, or an idea becomes one.
+- Read [Company goals](../cady/references/company-goals.md) when you start, reshape or stop a goal, or an idea becomes one.
 - Read [Executive weekly review: goal calls, initiatives, handovers, load and hand-off](references/executive-weekly.md) when you run the weekly review's goal calls, initiative verdicts, handovers, load and fit, or the hand-off to the manager.

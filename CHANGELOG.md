@@ -4,6 +4,48 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 5fb4dd0b9c9d1817 · 2026-11-27
+
+Since 69569bb29256d79f: 0 new, 0 dropped, 34 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-company-decision`: Procedure, References, reference asking.md
+
+Changed:
+- `cady-accounting-method`: intro, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-company-method`: intro, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-company-operations-inbox-follow-through`: reference inbox-follow-through-details.md, reference outreach-release.md
+- `cady-company-operations-method`: intro, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-company-taste-review`: Procedure, References, reference taste-check.md, reference taste-message.md, reference taste-post.md
+- `cady-company-weekly-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-customer-success-lifecycle`: Procedure, Owner checks, References, reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-customer-success-method`: intro, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-engineering-independent-review`: Independent review, reference engineering-cycle-dimensions.md, reference quality-classes.md
+- `cady-finance-method`: intro, Role card, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-fundraise-investor-list`: Procedure, reference agent-stop.md, reference run-reporting.md
+- `cady-fundraise-investor-outreach`: Procedure, Acceptance, References, reference agent-stop.md, reference intro-request.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-check.md, reference taste-message.md
+- `cady-fundraise-method`: intro, Selected judgment, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+- `cady-fundraise-raise-materials`: Procedure, References, reference agent-stop.md, reference outreach-drafting.md, reference taste-check.md, reference taste-message.md
+- `cady-gtm-calls`: Procedure, References, reference agent-stop.md, reference call-follow-up.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-gtm-channel-plan`: Procedure, References, reference agent-stop.md, reference execution-agent-brief.md, reference gtm-channels.md, reference outreach-release.md
+- `cady-gtm-cold-email-cycle`: Procedure, Acceptance, References, reference agent-stop.md, reference cold-deliverability.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-gtm-events`: Procedure, References, reference agent-stop.md, reference events-host.md, reference intro-request.md, reference tam-map-import.md
+- `cady-gtm-launch`: Gtm launch, reference outreach-release.md, reference tam-map-import.md
+- `cady-gtm-linkedin-message`: Procedure, Acceptance, References, reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-gtm-method`: intro, Role card, reference agent-stop.md, reference asking.md, reference company-goals.md, reference domain-method.md, reference gtm-channels.md, reference outreach-release.md, reference role-card-common.md, reference run-reporting.md
+- `cady-gtm-persona-profile`: Procedure, reference agent-stop.md, reference run-reporting.md
+- `cady-gtm-pipeline-pass`: Procedure, References, reference agent-stop.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-gtm-reply`: Procedure, Acceptance, References, reference agent-stop.md, reference intro-request.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-gtm-tam-map`: Procedure, References, reference tam-map-import.md
+- `cady-gtm-voice-pack`: description, intro, Procedure, References, reference agent-stop.md, reference outreach-drafting.md, reference taste-check.md, reference taste-message.md, reference taste-post.md
+- `cady-gtm-warm-email`: Procedure, Acceptance, References, reference agent-stop.md, reference intro-request.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-marketing-method`: intro, Selected judgment, reference agent-stop.md, reference asking.md, reference domain-method.md, reference gtm-channels.md, reference outreach-drafting.md, reference role-card-common.md, reference run-reporting.md, reference taste-message.md, reference taste-post.md
+- `cady-marketing-post`: Procedure, References, reference agent-stop.md, reference outreach-drafting.md, reference taste-message.md, reference taste-post.md
+- `cady-product-design`: Procedure, reference agent-stop.md, reference run-reporting.md
+- `cady-product-map`: References, reference engineering-cycle-dimensions.md, reference product-map.md, reference quality-classes.md
+- `cady-sales-deal-motion`: Procedure, Owner checks, References, reference agent-stop.md, reference deal-motion-stages.md, reference outreach-drafting.md, reference outreach-release.md, reference taste-message.md
+- `cady-sales-method`: intro, reference agent-stop.md, reference asking.md, reference role-card-common.md, reference run-reporting.md
+
 ## 69569bb29256d79f · 2026-11-27
 
 Since 8416516769c74893: 0 new, 0 dropped, 28 changed.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.linkedin_message"
-  version: "02b94df18a00eccbc93d"
-  library: "69569bb29256d79f"
+  version: "0d87b6bed59a19e6069c"
+  library: "5fb4dd0b9c9d1817"
   function: "gtm"
 ---
 # Social direct message
@@ -48,21 +48,21 @@ Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
 
 ## Procedure
 
-1. Read the brief’s profileRef and recipient context; use the profile’s words and name it in the justification (`references/outreach-drafting.md`, Brief). If the profile is unchecked, stop and report under `references/agent-stop.md`. Read each party and act on holds as `references/outreach-release.md`, Permission says.
+1. Read the brief’s profileRef and recipient context; use the profile’s words and name it in the justification (`../cady/references/outreach-drafting.md`, Brief). If the profile is unchecked, stop and report under `../cady/references/agent-stop.md`. Read each party and act on holds as `../cady/references/outreach-release.md`, Permission says.
 2. Choose a connection note, first direct message or follow-up; keep each in a distinct cohort. A connection note gives one honest reason to connect, with no pitch, ask or company name. A first DM gives a subtle personal note about what you are working on, why it may matter now and that you would be glad to chat; omit product names and links. Use only common ground the recipient would recognise; mention a mutual connection only when they identified it. 
-3. For LinkedIn, pace at most 20 messages per rolling day and 100 per rolling week, including messages the owner sends by hand, spread across working hours. Tell the owner which invitations have been pending over three weeks. A falling acceptance rate calls for revised targeting or notes, not higher volume. An identity check, restriction or rate-limit notice is a stop (`references/agent-stop.md`).
-4. Apply `references/outreach-release.md`, Outcome check and Follow up for a follow-up; hand a replier to `cady-gtm-reply`.
-5. Run the draft check (`references/outreach-drafting.md`, Draft check), then the taste check (`references/taste-message.md`). Prepare and read the review as `references/outreach-release.md`, Preparation says, with a one-line justification for why this send now. On the prepare call, pass motion when the person is new to every board.
-6. Follow `references/outreach-release.md`, Release for this route's mechanics; the sending rule is in that reference.
-7. Stop: on any condition in `references/agent-stop.md`, stop and report as it says.
+3. For LinkedIn, pace at most 20 messages per rolling day and 100 per rolling week, including messages the owner sends by hand, spread across working hours. Tell the owner which invitations have been pending over three weeks. A falling acceptance rate calls for revised targeting or notes, not higher volume. An identity check, restriction or rate-limit notice is a stop (`../cady/references/agent-stop.md`).
+4. Apply `../cady/references/outreach-release.md`, Outcome check and Follow up for a follow-up; hand a replier to `cady-gtm-reply`.
+5. Run the draft check (`../cady/references/outreach-drafting.md`, Draft check), then the taste check (`../cady/references/taste-message.md`). Prepare and read the review as `../cady/references/outreach-release.md`, Preparation says, with a one-line justification for why this send now. On the prepare call, pass motion when the person is new to every board.
+6. Follow `../cady/references/outreach-release.md`, Release for this route's mechanics; the sending rule is in that reference.
+7. Stop: on any condition in `../cady/references/agent-stop.md`, stop and report as it says.
 
 ## Acceptance
 
 - [ ] (check) the connection note or first DM follows its channel-specific form and uses recognised common ground
 - [ ] (check) LinkedIn sends stay within rolling caps and are spread across working hours
-- [ ] (check) at most one LinkedIn follow-up is prepared under `references/outreach-release.md`, Follow up
+- [ ] (check) at most one LinkedIn follow-up is prepared under `../cady/references/outreach-release.md`, Follow up
 - [ ] (check) the draft check precedes the taste check and the review is readable
-- [ ] (person) release follows `references/outreach-release.md`, Release and its sending rule
+- [ ] (person) release follows `../cady/references/outreach-release.md`, Release and its sending rule
 
 ## Owner checks
 
@@ -76,7 +76,7 @@ Draft a first social DM, LinkedIn connection note or one no-reply follow-up.
 - **Transition:** report the prepared review
 
 ## References
-- Read [Agent stop](references/agent-stop.md) when recognising and reporting a stop.
-- Read [Outreach drafting](references/outreach-drafting.md) when before drafting, including the brief and draft check.
-- Read [Outreach release](references/outreach-release.md) when checking permission, preparing, releasing or checking outcomes and follow-ups.
-- Read [Taste check: message](references/taste-message.md) when judging a draft after its draft check.
+- Read [Agent stop](../cady/references/agent-stop.md) when recognising and reporting a stop.
+- Read [Outreach drafting](../cady/references/outreach-drafting.md) when before drafting, including the brief and draft check.
+- Read [Outreach release](../cady/references/outreach-release.md) when checking permission, preparing, releasing or checking outcomes and follow-ups.
+- Read [Taste check: message](../cady/references/taste-message.md) when judging a draft after its draft check.

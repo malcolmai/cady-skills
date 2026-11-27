@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.sales"
-  version: "3513c2d5c7597c244d5f"
-  library: "69569bb29256d79f"
+  version: "1e92d9733215fdc52131"
+  library: "5fb4dd0b9c9d1817"
   function: "sales"
 ---
 # Sales
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Establish the buying trigger, current alternative and who decides from what the buyer said or did; unknown beats a model-completed field. Instead of: Fill a qualification framework (BANT, MEDDIC, SPICED) from one friendly call and the account's profile.

@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.accounting"
-  version: "bdf6d940b5ddfca37d6b"
-  library: "69569bb29256d79f"
+  version: "b857862d33d908a8fa92"
+  library: "5fb4dd0b9c9d1817"
   function: "accounting"
 ---
 # Accounting
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Prepare the close with proposed entries, post only what a source supports, and lock only after someone other than the preparer signs off; closed only on lock readback. Instead of: Post fixes without a source to get the close done, lock when the work looks finished, and report it closed.

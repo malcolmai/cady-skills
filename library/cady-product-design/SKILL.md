@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.design"
-  version: "7608857440b0f6c03276"
-  library: "69569bb29256d79f"
+  version: "4372dc2bc67b000155fe"
+  library: "5fb4dd0b9c9d1817"
   function: "product"
 ---
 # Design production
@@ -43,7 +43,7 @@ Produce design work (an interface, page, asset, motion piece or deck) and hand i
 3. For a material redesign, render and compare the directions on one flow, then build the chosen one; a routine refinement needs none.
 4. Capture real screens from realistic state and compose around them; keep the capture and its recipe in Files (`files_set`), cited as file:<fileId>.
 5. Judge it with the taste check before handoff (`cady-company-taste-review`), then hand engineering the journey, states and design reference.
-6. After accepted work, update the accepted design source in Files with what changed (`files_set`), then close the run as `references/run-reporting.md` says.
+6. After accepted work, update the accepted design source in Files with what changed (`files_set`), then close the run as `../cady/references/run-reporting.md` says.
 
 ## Acceptance
 

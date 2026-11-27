@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.fundraise"
-  version: "c8ace4521d4d2812a996"
-  library: "69569bb29256d79f"
+  version: "85518ebb52728e6c127e"
+  library: "5fb4dd0b9c9d1817"
   function: "fundraise"
 ---
 # Fundraise
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Treat not raising as a valid answer: compare revenue, prepayments, grants and a smaller round first, and let no active round create any deadline. Instead of: Treat a raise as the default next step once runway shortens or peers announce rounds.
@@ -69,6 +69,6 @@ finance
 ## Selected judgment
 - Compare capital needed for specific milestones with lower-capital alternatives and timing. Assess investor fit, evidence, diligence readiness and the exact relationship before authorized communication. No active round is not an overdue round; preparation does not authorize launch or investor contact.
 - Size scenarios against cash timing, milestone proof and the cost of delay. Distinguish the internal round objective, investor thesis, materials, pipeline and external launch; evidence can support preparation without establishing terms or send authority.
-- Produce the smallest useful investor or materials result with source-backed claims and exact owner references. Follow the finish line in `references/run-reporting.md`; record the next decision and accountable checkpoint where authorized; verify any saved result and keep uncertain investor responses separate from commitments.
+- Produce the smallest useful investor or materials result with source-backed claims and exact owner references. Follow the finish line in `../cady/references/run-reporting.md`; record the next decision and accountable checkpoint where authorized; verify any saved result and keep uncertain investor responses separate from commitments.
 
 - Read [Domain method](references/domain-method.md) when you take on fundraise work.
