@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.manager.sense_check"
   version: "2ec9811ae8e7627644e4"
-  library: "7bf126ff6bc82cee"
+  library: "5e56084a95455880"
   function: "manager"
 ---
 # Sense-check a final response
