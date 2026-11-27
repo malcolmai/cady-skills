@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
-  version: "b7fc67bc26be141df514"
-  library: "5e56084a95455880"
+  version: "4e9f4e13d7541638b1b5"
+  library: "15a38d13e11219e6"
   function: "gtm"
 ---
 # Channel plan
@@ -50,7 +50,7 @@ Turn accepted persona, offer and chosen channels into channel plays and executio
 5. Choose one to three variants with large angle differences: about 40/30/30 early, then 70/20/10 only after a winner holds two cycles. Before the cycle use `cady-company-evidence` to pre-register the behavioural metric, pass and fail lines, sample, time box and keep, scale or kill decision. Read the cycle's outreach reviews (cady_read review:outreach/<approvalId>, each approvalId the work reported) at mid-cycle and end by variant and persona with denominators; use the GTM domain method's small-sample rule before treating evidence as decisive. A channel failing its line twice the same way goes to the strategy goal call: persist, pivot, parallel or stop.
 6. For each channel identify the standing approval the person may set up in Cady: the List or motion it covers, the agents that hold the work, an optional end and an optional daily cap. A standing approval is a person's yes that agents cite with crm_outreach {id, status: sending, grantId}: propose it (quoted_approval, profileId crm.outreach.standing.v1, grant {list or motion, agentIds, expiresAt?, dailyCap?}) and the person accepts it on Home in Cady (see the authority section). The first cycle supplies the one to five rendered examples for the owner’s decision; nothing sends before that approval. Never treat a proposal as accepted, and never resume one yourself: the person accepts and resumes them, in Cady.
 7. Create one execution agent per channel in use with `references/execution-agent-brief.md`.
-8. Hand over the agent and first work item IDs with a recommended cadence and why it suits reply timing; whoever sets up the run chooses schedule or tracked one-off dispatch and binds it (`cady-company-manage-agents` step 10); the agent is set live once bound (no go-ahead asked).
+8. Hand over the agent and first work item IDs with a recommended cadence and why it suits reply timing; whoever sets up the run chooses schedule or tracked one-off dispatch and binds it (`cady-company-manage-agents` step 5); the agent is set live once bound (no go-ahead asked).
 9. Before accepting an execution agent's result, read its held review (cady_read review:outreach/<approvalId>) and the List shortfall; send back what fails the brief's doneWhen.
 
 ## Acceptance

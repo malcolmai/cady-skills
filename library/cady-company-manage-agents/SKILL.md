@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "06e62aa173e06931fe74"
-  library: "5e56084a95455880"
+  version: "25792c9e83afbbdffecc"
+  library: "15a38d13e11219e6"
   function: "company"
 ---
 # Manage company agents
@@ -18,7 +18,6 @@ metadata:
 **Bets** (where this differs from the default):
 - An agent is one recurring responsibility on a node or on none; reuse or update the agent that serves the outcome before creating one, but several agents may share a goal or node. Instead of: Create a new agent for each new need or parallel stream of work.
 - Class risk by reach and reversibility, and make the first task one real cycle at its finish line. Instead of: Class agents by how important their work is, and start with a trivial smoke task.
-- Authority comes only from the person's approval or a grant; never write approval limits into an agent's text and treat them as control. Instead of: Write the limits into the agent's instructions and trust it to stay inside them.
 - Count a schedule, pause or retirement as real only after reading the host scheduler back. Instead of: Treat the agent record in Cady, or a successful create call, as the schedule's state.
 - Judge an agent by what it changed for its goal and the rigour of its decisions; fix the tool, check or placement before its duties. Instead of: Judge by runs completed and records written, and rewrite the agent's prompt when it fails.
 
@@ -30,14 +29,6 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 ## Inputs
 
-### Authority
-
-- verified member credential
-- host identity from the current Cady connection
-- decisionId and nonce are the server's: to retry, repeat the exact call
-- expectedRevision null for a new agent or run, else the current revision
-- current agentId for changes
-
 ### Design
 
 - agent name and function
@@ -45,7 +36,6 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 - risk class (critical or standard)
 - measure and its data (on the goal it serves)
 - cadence or trigger, with why
-- approval limits
 - skills
 - owner member
 - first task, its checks and evaluation criteria
@@ -53,33 +43,27 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 
 ## Procedure
 
-1. An agent is one ongoing responsibility; due tasks are work items and a one-off is a helper run. Read agents_read, work (cady_read), the node's point and bets and this host's automations first: if an agent already serves the outcome, reuse it or change it with agents_set and stop. Create one when none does; a goal or node may have several agents when their jobs differ. Put an agent on a node when that node's work needs its own regular pass. An agent sits on the node it serves, or on none (a personal agent). Parallel sessions and subagents are runs of that agent, not new agents.
-2. Responsibility and risk class. State the outcome, one measure with its data source, a cadence or trigger, approval limits and end condition; pass goal when it serves a goal. Critical: a hard-to-undo effect or reach outside the company, or drafts released automatically; every other agent is standard. Re-class on any grant, tool, access or trigger change.
-3. Fit. Read agents_read and the company tree (cady_read {}), and name the agent's skills as plain names, the skill folders the host holds (the library's roster.json lists each agent's skills), or leave them empty; Cady serves no skill index, so do not search for one. Reuse library skills unchanged; adapt only for an evidenced failure, tool mismatch or missing expert judgment.
-4. First task. One cycle of the real deliverable at its finish line; it exercises its hardest judgement. Its decision map: goal, node, trigger, decides alone, consults on, hands off.
-5. Evaluation. The criteria live on the first task, not the agent record: brief.doneWhen holds 2-5 reader tests tagged (check), (fresh) or (person), and brief.stopIf the early-stop limit; a completed run is not a reported result.
-6. Create and bind the agent with agents_set (host {action: bind}), file the first task with work_set, and set it live with agents_set status live: no approval is asked (each outside effect it prepares still waits for the person's yes or a standing approval). A returned schedule stays configured_unconfirmed until a host readback. Change visibility or sharing only on request; it applies at once and the owner is told.
-7. Authority. Read the company's permission modes first (cady_read {refs: ["company:values"]}, the permission modes line). Effects follow the core's approval rule. Every outside effect has one mode: person-strict (it waits until the person approves it on its review page), person-quoted (the person's approval given in chat releases it; an approval lasts 24 hours), agent-confirm (prepare, then confirm), agent-notify (one call, then relay the result's report line) or agent-easy (one call). Spend and creating a standing approval are always person-strict. Limits text is not enforcement. Never approve for the person: their own decision covers every grant (send, spend, publish, sign, file), an invite, share or outreach effect in approval mode, new access or capture, widening permissions, a design change to a grant-holding agent and raising cadence or cost; per grant when critical. An agent acts with its owner's permissions, and its lifecycle is the owner's. Going live, from draft, paused or retired, is agents_set status live, by the owner or the owner's own agent, with no approval asked; each outside effect keeps its own approval.
-8. Review this host's agents by risk class, with evidence from runs, receipts, cady_read changes {kind: agents} and transcripts (never bodies). Pause one that is not up to scratch (step 9); redesigning it is the Executive's (`cady-company-weekly-review` step 5), never the pausing agent's.
-9. Retire or pause an agent only when it is confirmed obsolete or met its end condition, and adopt an existing company scheduled task only on the owner's yes: read the agent design, setup, review and retirement reference (it confirms an unscheduled task with agents_set host {action: removed}).
-10. Host setup, on the host that runs the agents. Bind each drafted or live agent whose host.id (agents_read) is empty or is your own agent's host.id (agents_set host {action: bind}, expectedRevision as read). A bind moves an agent on another host here: leave it, and any you cannot tell, unless the owner asks you to move it. Register each bound agent's cadence with the exact localSchedule command the bind reply carries, and check every live agent has open work (cady_read), filing its next task under its goal or handing the gap to the Executive. When an agent's machine is not connected, note it and continue some other way (the agent_hosts reference). Each run, remove or pause each triggersToRemove trigger here, then make its next call.
+1. Reuse first. An agent is one ongoing responsibility nobody serves; due tasks are work items and a one-off is a helper run. Read agents_read, work and the node's point and bets: if an agent serves the outcome, change it with agents_set and stop. An agent sits on the node it serves or on none; several may share a goal or node when their jobs differ. Parallel sessions and subagents are runs of that agent.
+2. Scope and class. State the outcome, one measure with its data on the goal it serves, a cadence or trigger with why, and an end condition. Critical: sending or publishing to non-members, spending, signing, filing, sharing data externally, changing external access, deleting owner records, or drafts released automatically; every other agent is standard. Re-class on any grant, tool, access or trigger change.
+3. Skills. Name the agent's skills as the plain folder names the host holds (the library's roster.json lists them), or none; reuse them unchanged unless a failure, tool mismatch or missing judgement is evidenced.
+4. First task: one cycle of the real deliverable at its finish line that exercises its hardest judgement and touches each tool the duty needs. Its brief.doneWhen holds 2-5 reader tests tagged (check), (fresh) or (person), and brief.stopIf the early-stop limit.
+5. Set up with agents_set (agents_systems_set for a published system), file the first task with cady_start calls.work, and follow each result's next to bind and go live. Bind only an agent with no host or on your own host; one on another host moves only when the owner asks. Count a schedule, pause or retirement only after the host readback the result asks for.
+6. Review by class. Critical: the effects of its first released cycle, then a sample. Standard: after its first task, then only on a signal (owner correction, refusals, missed or empty runs, a cost spike, a claim without readback). Evidence is runs, receipts and transcripts cited host:transcript:<uuid>, never bodies; a missing transcript means unknown, and a done claim without readback is unsupported. Judge by what it changed for its goal and the rigour of its decisions, not activity.
+7. Pause and hand over. Pause an agent that is not up to scratch and file one handover task under the Executive's goal "Keep the system sharp", naming the agent, the evidence and what was paused; never rewrite its brief or skills yourself. Resume it unchanged only for an external cause, with evidence. Retire only an obsolete agent or one that met its end condition.
+8. Wake for use. Wake an agent for a useful action or signal, never to keep it busy; fit cadence to duty, deadlines and evidence freshness. When an agent's machine is not connected, note it in your run record and continue some other way. Every live agent has open work: file its next task under its goal, or hand the gap to the Executive. A scheduled task you adopt with secrets in its prompt: tell the owner, never upload them.
 
 ## Acceptance
 
 - [ ] one responsibility that its work items cite
-- [ ] the first task carries its evaluation criteria and stopIf; nothing was released before the agent was live
-- [ ] every grant has the owner's own approval for its exact terms; a no-grant agent's policy approval is recorded and the owner notified
+- [ ] the first task carries its evaluation criteria and stopIf
 - [ ] the Cady binding and any recurring host task are read back
 
 ## Owner checks
 
 - current company and member grant
 - the agent's node or none, and the owner who holds its lifecycle
-- the agent is live before it runs; each outside action it prepares still waits for the person's yes or a standing approval
-- agent.approve:<agentId> (policy only while no grant is held)
 - host schedule readback
 - reviewed receipt
-- anomaly grant gate
 
 ## Result
 
@@ -92,6 +76,4 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 - **Transition:** status live takes the agent live (draft, paused or retired to live), set by the owner or the owner's own agent
 
 ## References
-- Read [Agent host tasks, library and machines not connected](references/agent-hosts.md) when you install, change or review a recurring host task, adopt skills, or an agent's machine is not connected.
-- Read [Agent design, setup, review and retirement](references/agent-lifecycle.md) when you design an agent or change its responsibility, create, bind or take an agent live, review an agent or judge a reported result, pause or retire an agent, adopt a scheduled task, or install the baseline roster.
 - Read [Model selection: model, effort and budget for scheduled work](references/model-selection.md) when you set up or change a scheduled run, or choose a model, effort or budget for work.
