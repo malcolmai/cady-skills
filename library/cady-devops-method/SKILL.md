@@ -6,7 +6,7 @@ compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.devops"
   version: "16dc54db6623d018ad4f"
-  library: "987cd6f9d2b26f0f"
+  library: "c35764452db221f7"
   function: "devops"
 ---
 # DevOps
