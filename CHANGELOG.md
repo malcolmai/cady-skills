@@ -4,6 +4,12 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## d493e3230725f90b · 2026-11-27
+
+Since 44160400595e069c: 0 new, 0 dropped, 0 changed.
+
+No skill text changed; release metadata only.
+
 ## 44160400595e069c · 2026-11-27
 
 Since 15b8d39c5370adce: 0 new, 0 dropped, 2 changed.
