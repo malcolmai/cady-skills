@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.gtm.channel_plan"
-  version: "041392cfd6107ea9b633"
-  library: "69569bb29256d79f"
+  version: "41648784b322a9b474e0"
+  library: "5fb4dd0b9c9d1817"
   function: "gtm"
 ---
 # Channel plan
@@ -43,9 +43,9 @@ Turn accepted persona, offer and chosen channels into channel plays and executio
 
 ## Procedure
 
-1. Read the accepted strategy decisions by ref (cady_read decision:<subject>): persona File, offer and message, chosen channels and daily targets. Plan only those channels; no agent, brief or standing-approval ask for an unchosen channel. A missing or contradictory decision goes back to strategy. When fit needs rechecking, refer it to strategy with `references/gtm-channels.md`; do not re-decide it here.
+1. Read the accepted strategy decisions by ref (cady_read decision:<subject>): persona File, offer and message, chosen channels and daily targets. Plan only those channels; no agent, brief or standing-approval ask for an unchosen channel. A missing or contradictory decision goes back to strategy. When fit needs rechecking, refer it to strategy with `../cady/references/gtm-channels.md`; do not re-decide it here.
 2. File prospect sourcing as execution work under `cady-gtm-tam-map`, with the persona and decision refs, requested identity and coverage; apply the persona disqualifiers there. A List shorter than the planned cohort is reported to strategy. Do not research parties here.
-3. Set each chosen channel’s play in its brief: audience, offer, proof, stop and review condition. A cold first touch is once per party per cycle. A reply leaves the sequence and is answered first: a recorded reply goes to cady-gtm-reply first; a positive reply then hands off to cady-gtm-calls. Follow-ups are their own reviews after the outcome check; use `references/outreach-release.md`, Follow up for the counts and spacing. For events choose by fit, conversation density, cost and founder time; for posting choose topic, pillar and distribution from the accepted strategy.
+3. Set each chosen channel’s play in its brief: audience, offer, proof, stop and review condition. A cold first touch is once per party per cycle. A reply leaves the sequence and is answered first: a recorded reply goes to cady-gtm-reply first; a positive reply then hands off to cady-gtm-calls. Follow-ups are their own reviews after the outcome check; use `../cady/references/outreach-release.md`, Follow up for the counts and spacing. For events choose by fit, conversation density, cost and founder time; for posting choose topic, pillar and distribution from the accepted strategy.
 4. Size the sending cohort as the least of eligible parties, the sending mailbox's cold emails left today (a warning from the company's cold email warning line, 50 a day by default, and a hard cap of 100 per UTC day), the standing approval's daily cap and 50 (one review's limit). There is no company volume cap and no warm-up: every mailbox has the same warning line and cap from its first day, and only cold email counts (a reply, an invitation, a notification or a follow-up to someone already engaged is paced but not counted). Spread LinkedIn sends across working hours. A standing approval's daily cap only narrows these limits. The strategy daily target is a ceiling, never a quota; planned daily sends never exceed the mailbox's room left today.
 5. Choose one to three variants with large angle differences: about 40/30/30 early, then 70/20/10 only after a winner holds two cycles. Before the cycle use `cady-company-evidence` to pre-register the behavioural metric, pass and fail lines, sample, time box and keep, scale or kill decision. Read the cycle's outreach reviews (cady_read review:outreach/<approvalId>, each approvalId the work reported) at mid-cycle and end by variant and persona with denominators; use the GTM domain method's small-sample rule before treating evidence as decisive. A channel failing its line twice the same way goes to the strategy goal call: persist, pivot, parallel or stop.
 6. For each channel identify the standing approval the person may set up in Cady: the List or motion it covers, the agents that hold the work, an optional end and an optional daily cap. A standing approval is a person's yes that agents cite with crm_outreach {id, status: sending, grantId}: propose it (quoted_approval, profileId crm.outreach.standing.v1, grant {list or motion, agentIds, expiresAt?, dailyCap?}) and the person accepts it on Home in Cady (see the authority section). The first cycle supplies the one to five rendered examples for the owner’s decision; nothing sends before that approval. Never treat a proposal as accepted, and never resume one yourself: the person accepts and resumes them, in Cady.
@@ -74,4 +74,4 @@ Turn accepted persona, offer and chosen channels into channel plays and executio
 ## References
 - Read [Execution agent brief](references/execution-agent-brief.md) when creating each channel agent and its first task.
 - Apply `cady-company-evidence` when pre-registering each channel test.
-- Read [GTM channel comparison](references/gtm-channels.md) when a chosen channel’s fit needs rechecking by strategy.
+- Read [GTM channel comparison](../cady/references/gtm-channels.md) when a chosen channel’s fit needs rechecking by strategy.

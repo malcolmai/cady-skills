@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.customer_success"
-  version: "604a2ca104cc2794cc0b"
-  library: "69569bb29256d79f"
+  version: "94c53b4764a1ef28bed4"
+  library: "5fb4dd0b9c9d1817"
   function: "customer_success"
 ---
 # Customer Success
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Judge outcome, adoption, relationship and commercial health separately, each from its own evidence. Instead of: Blend usage, satisfaction and payment into one health score with thresholds.

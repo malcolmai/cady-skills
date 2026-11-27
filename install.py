@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Adopt the Cady agents your company runs: copy each agent's skill folders from this library into your host.
 
-Run it from a clone of the library. The first run also copies the company system (the Executive and the manager).
-A folder you already have is never overwritten ("kept yours"), so a re-run changes nothing.
+Run it from a clone of the library. The first run also copies the company system (the Executive and the manager), and every run
+copies the references several skills share into <skills>/cady/references (on Claude Code a references-only folder beside the plugin).
+A folder or shared reference you already have is never overwritten ("kept yours"), so a re-run changes nothing.
 
   python3 install.py --list                                   # the agents this library holds
   python3 install.py --host claude-code --add gtm,marketing   # into ./.claude/skills
@@ -103,6 +104,15 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 shutil.copytree(src, target)
                 print(f"  added {name}")
+        shared, home = HERE / "library" / "cady" / "references", inside(skills, "cady") / "references"
+        for ref in sorted(shared.glob("*.md")) if shared.is_dir() else []:
+            target = home / ref.name
+            if target.is_symlink() or (target.exists() and target.read_bytes() != ref.read_bytes()):
+                print(f"  kept yours: cady/references/{ref.name}")
+            elif not target.exists():
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(ref, target)
+                print(f"  added cady/references/{ref.name}")
     return 0
 
 

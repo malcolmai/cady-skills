@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.company_operations"
-  version: "fc7620132b9a51413a53"
-  library: "69569bb29256d79f"
+  version: "cf8db19cb5c5e4b61f58"
+  library: "5fb4dd0b9c9d1817"
   function: "company_operations"
 ---
 # Company Operations
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Rank obligations by what missing one would cost against what preventing it costs, and record each that does not apply with its reason. Instead of: Work through a generic compliance checklist in order, giving every item equal weight.

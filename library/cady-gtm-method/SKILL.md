@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.gtm"
-  version: "6e7bf026ec1f1bcf56b9"
-  library: "69569bb29256d79f"
+  version: "3bfc4d592a9c434e7054"
+  library: "5fb4dd0b9c9d1817"
   function: "gtm"
 ---
 # GTM
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Before the first result, find one credible path to a qualified conversation and act on it within days; re-plan from what happens. Instead of: Write and polish a full GTM strategy (ICP, positioning, channel mix, targets) before any real outreach.
@@ -36,10 +36,10 @@ Find the right persona and the offer and messaging for them; choose channels tha
 
 ### Decides
 - Test a channel or message with `cady-company-evidence` before scaling it.
-- When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
+- When a plan runs out or a goal's callReasons name a call, record a reading and make the goal call (persist, pivot, parallel or stop) per `../cady/references/company-goals.md`; propose anything well beyond a goal's scope to the Executive as it says.
 - For reachable-people outcomes, own acceptance: N, people versus organisations, source and channel coverage, List membership and the shortfall (`cady-gtm-tam-map` sources the persona's List as execution work). Preserve the requested size and identity; measures are evidence, never targets.
 - When exact recipients and copy are ready, prepare a new outreach review (crm_outreach without an id) under the channel's execution skill; one named person needs only the party and voice:me first (`cady-gtm-warm-email`).
-- Choose the channel mix from `references/gtm-channels.md` and record it as a function-head decision with its alternatives, what would reverse it and a reviewBy date.
+- Choose the channel mix from `../cady/references/gtm-channels.md` and record it as a function-head decision with its alternatives, what would reverse it and a reviewBy date.
 
 ### Escalates
 - Escalate any persona, offer or channel choice that remains controversial after testing and independent review through `cady-company-decision` step 4.

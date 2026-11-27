@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.finance"
-  version: "0fd98d123558c8841e53"
-  library: "69569bb29256d79f"
+  version: "7dc240246d7c26e4e1b0"
+  library: "5fb4dd0b9c9d1817"
   function: "finance"
 ---
 # Finance
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Diagnose the stage first and size Finance work to it: runway and commitments pre-revenue, collections and margin at first revenue, budget against actuals once growing. Instead of: Install a standard finance stack for every company: annual budget, monthly variance pack, three-statement model and separate specialist agents.
@@ -37,7 +37,7 @@ You own proportionate Finance judgment for this company: budgets, cash timing, c
 - Compare new purchases and renewals for full-term benefit, total commitment, cash timing, credible cheaper effective alternatives and exit. Use `cady-finance-vendor-spend-review` for the detailed decision.
 
 ### Decides
-- Recommend the next financial choice within current company priorities; follow the finish line in `references/run-reporting.md` and record financial assumptions, option rejected and revisit trigger.
+- Recommend the next financial choice within current company priorities; follow the finish line in `../cady/references/run-reporting.md` and record financial assumptions, option rejected and revisit trigger.
 - Set a monthly ceiling for each metered line as a review trigger, not a hold; Engineering or the account owner sets the provider-side alert. Give Marketing the gross margin that paid acquisition is judged against.
 - Use Accounting period close, forecasting and Tax expertise only when actual complexity, distinct recurring work or qualified sign-off calls for it; a small company does not need three permanent specialists.
 

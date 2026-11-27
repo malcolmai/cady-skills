@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.product.map"
-  version: "c157723a026a122b7708"
-  library: "69569bb29256d79f"
+  version: "0622db9aac3a98d39992"
+  library: "5fb4dd0b9c9d1817"
   function: "product"
 ---
 # Product map
@@ -49,5 +49,5 @@ Generate, restructure, clean up, check or publish a product map or a dimension m
 - **Transition:** the map's change is reviewed, then the map is published
 
 ## References
-- Read [Dimension register and research](references/engineering-cycle-dimensions.md) when you name or label a product's Interface, Infrastructure or QA subjects.
+- Read [Dimension register and research](../cady/references/engineering-cycle-dimensions.md) when you name or label a product's Interface, Infrastructure or QA subjects.
 - Read [Product map and dimension maps](references/product-map.md) when you generate, restructure, clean up, check or publish a product map or a dimension map.

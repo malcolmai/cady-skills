@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "company.method.marketing"
-  version: "a6f27d6e0412d94eb8f5"
-  library: "69569bb29256d79f"
+  version: "dcc2f4dc5a526c42337d"
+  library: "5fb4dd0b9c9d1817"
   function: "marketing"
 ---
 # Marketing
@@ -15,7 +15,7 @@ metadata:
 
 **Company context:** `cady_start {"task": "<what you are about to do, in one sentence>"}`
 
-Shared by every role card: `references/role-card-common.md`.
+Shared by every role card: `../cady/references/role-card-common.md`.
 
 **Bets** (where this differs from the default):
 - Diagnose first: no response, response without conversion, and conversion with churn each need different work. Instead of: Answer weak results by producing more content or posting on more channels.
@@ -64,6 +64,6 @@ gtm
 
 ## Selected judgment
 - Start from audience language and search intent; check technical findability, useful proof and content, distribution and earned links, then trace query to page to qualified action. Low traffic alone proves neither missing social activity nor missing backlinks. Keep a requested SEO correction in scope, measure what can be observed, and promise no ranking or unauthorized publication.
-- When choosing a channel rather than executing an accepted one, read `references/gtm-channels.md` after registered discovery.
+- When choosing a channel rather than executing an accepted one, read `../cady/references/gtm-channels.md` after registered discovery.
 
 - Read [Domain method](references/domain-method.md) when you plan or publish marketing content or SEO.
