@@ -4,6 +4,42 @@
 
 The material changes to these skills in each release, newest first. The Executive reads the entries since its last agent review and adopts what helps. Urgent marks a change to a core skill, the front door or `cady-company-decision`.
 
+## 69569bb29256d79f · 2026-11-27
+
+Since 8416516769c74893: 0 new, 0 dropped, 28 changed.
+
+Urgent (core skill, front door or decision check changed):
+- `cady-company-decision`: reference asking.md
+
+Changed:
+- `cady-accounting-method`: reference agent-stop.md, reference asking.md
+- `cady-company-method`: reference agent-stop.md, reference asking.md
+- `cady-company-operations-method`: reference agent-stop.md, reference asking.md
+- `cady-company-weekly-review`: The Executive now reads the library changelog weekly and adopts what helps; setup adopts the approved agents' skills itself.
+- `cady-customer-success-lifecycle`: reference agent-stop.md
+- `cady-customer-success-method`: reference agent-stop.md, reference asking.md
+- `cady-finance-method`: reference agent-stop.md, reference asking.md
+- `cady-fundraise-investor-list`: reference agent-stop.md
+- `cady-fundraise-investor-outreach`: reference agent-stop.md
+- `cady-fundraise-method`: reference agent-stop.md, reference asking.md
+- `cady-fundraise-raise-materials`: reference agent-stop.md
+- `cady-gtm-calls`: reference agent-stop.md
+- `cady-gtm-channel-plan`: reference agent-stop.md
+- `cady-gtm-cold-email-cycle`: reference agent-stop.md
+- `cady-gtm-events`: reference agent-stop.md
+- `cady-gtm-linkedin-message`: reference agent-stop.md
+- `cady-gtm-method`: reference agent-stop.md, reference asking.md, reference company-goals.md
+- `cady-gtm-persona-profile`: reference agent-stop.md
+- `cady-gtm-pipeline-pass`: reference agent-stop.md
+- `cady-gtm-reply`: reference agent-stop.md
+- `cady-gtm-voice-pack`: reference agent-stop.md
+- `cady-gtm-warm-email`: reference agent-stop.md
+- `cady-marketing-method`: reference agent-stop.md, reference asking.md
+- `cady-marketing-post`: reference agent-stop.md
+- `cady-product-design`: reference agent-stop.md
+- `cady-sales-deal-motion`: reference agent-stop.md
+- `cady-sales-method`: reference agent-stop.md, reference asking.md
+
 ## 8416516769c74893 · 2026-11-27
 
 Since 15a38d13e11219e6: 0 new, 0 dropped, 1 changed.
