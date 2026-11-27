@@ -2,20 +2,20 @@
   "schema": "cady.skills-export.v2",
   "generatedAt": "2026-11-27T00:00:00Z",
   "bundle": {
-    "tag": "e5ce7d859c9c5019",
-    "version": "e5ce7d859c9c501928a6753011d081d497f68b845fae0b576802b472fb89e8a9",
-    "pluginVersion": "2026.11.27-e5ce7d85"
+    "tag": "54f86855dca98768",
+    "version": "54f86855dca98768baa0421f2d61b7de0b3e9a38f814bff3f8d140684750206e",
+    "pluginVersion": "2026.11.27-54f86855"
   },
   "plugin": {
     "name": "cady",
-    "version": "2026.11.27-e5ce7d85"
+    "version": "2026.11.27-54f86855"
   },
   "skills": [
     {
       "name": "cady",
       "path": "plugins/cady/skills/cady",
       "cadyId": "cady.front-door",
-      "version": "d186d24d60002665297c"
+      "version": "8a680c5c0fb42050e5f8"
     },
     {
       "name": "cady-accounting-method",

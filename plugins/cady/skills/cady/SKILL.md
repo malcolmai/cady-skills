@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "cady.front-door"
-  version: "d186d24d60002665297c"
-  library: "e5ce7d859c9c5019"
+  version: "8a680c5c0fb42050e5f8"
+  library: "54f86855dca98768"
   function: "core"
 ---
 # Cady
@@ -17,7 +17,7 @@ metadata:
 
     cady_start {"task": "<your request, verbatim>"}
 
-It returns the state and the exact calls for what is open. A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-onboarding`).
+A new company, or one with no direction yet, starts at `ops/onboarding` (`cady-company-onboarding`).
 
 | Area | For |
 |---|---|
