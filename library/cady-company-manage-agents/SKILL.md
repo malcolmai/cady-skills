@@ -5,8 +5,8 @@ license: "MPL-2.0"
 compatibility: "Requires Cady (app.cadyworks.com/mcp)"
 metadata:
   cady-id: "skill.company.manage_agents"
-  version: "30d99c7b985eb35f244c"
-  library: "d493e3230725f90b"
+  version: "ad9a9fa9b4eaa139f6ef"
+  library: "7bf126ff6bc82cee"
   function: "company"
 ---
 # Manage company agents
@@ -94,5 +94,4 @@ Create and bind, schedule, review or retire a company agent: whether one is warr
 ## References
 - Read [Agent host tasks, library and machines not connected](references/agent-hosts.md) when you install, change or review a recurring host task, adopt skills, or an agent's machine is not connected.
 - Read [Agent design, setup, review and retirement](references/agent-lifecycle.md) when you design an agent or change its responsibility, create, bind or take an agent live, review an agent or judge a reported result, pause or retire an agent, adopt a scheduled task, or install the baseline roster.
-- Read [Execution agent brief](references/execution-agent-brief.md) when you set up a channel execution agent.
 - Read [Model selection: model, effort and budget for scheduled work](references/model-selection.md) when you set up or change a scheduled run, or choose a model, effort or budget for work.
